@@ -1,0 +1,45 @@
+compiler directives
+ 	#include <c8051_SDCC.h>
+	#include <stdio.h>
+declare global variables
+ 	sbit PB1, PB2, SS, LED0, BILED0, BILED1, BUZZER
+function prototypes
+ 	void Port_Init(void)
+ 	void Set_Outputs(void)
+main function
+ 	declare local variables
+ 		(NONE)
+ 	initialization functions
+ 		Sys_Init();
+ 		putchar(' ');
+ 		Port_Init();
+ 	while (TRUE)
+ 		execute Set_Outputs(void) function to read sbit inputs 		and set sbit
+ 			outputs
+ 	end while
+end main function
+
+Functions
+
+ 	void Port_Init(void)
+ 		Set SFRs P2, P3, P2MDOUT & P3MDOUT so P2.0, P3.0 & P3.1 		are inputs,
+ 		P3.3, P3.4, P3.6 & P3.7 are outputs
+ 	end Port_Init
+
+ 	void Set_Outputs(void)
+ 		If SS is off then
+ 			LED0 is on, BILED0 is off, BILED1 is off, 			BUZZER is off
+ 			Print "Slide Switch is OFF"
+ 		Else 	(this means SS is on)
+ 			Print "Slide Switch is ON"
+ 			If (PB1 is pushed and PB2 is pushed) then
+ 				LED0 is off, BILED0 is off, BILED1 is 				off, BUZZER is on
+ 				Print "Pushbutton 1 and 2 ACTIVATED"
+ 		Else if (PB1 is pushed and PB2 is released) then
+ 			LED0 is off, BILED0 is off, BILED1 is on, 			BUZZER is off
+ 			Print "Pushbutton 1 ACTIVATED"
+ 		Else if (PB1 is released and PB2 is pushed) then
+ 			LED0 is off, BILED0 is on, BILED1 is off, 			BUZZER is off
+ 			Print "Pushbutton 2 ACTIVATED"
+ 		Else LED0 is off, BILED0 is off, BILED1 is off, BUZZER 		is off
+ 	end Set_Outputs

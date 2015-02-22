@@ -1,0 +1,52 @@
+compiler directives
+ 	#include <c8051_SDCC.h>
+	#include <stdio.h>
+	#include <stdlib.h>
+declare global variables
+ 	sbit BILED1, BILED2, PB1, PB2, SS, LED0, BUZZER, Counts
+function prototypes
+ 	void Port_Init(void)
+	void Timer_Init(void)
+	void Interrupt_Init(void)
+	void Timer0_ISR (void) interrupt 1
+	unsigned char random(void)
+main function
+ 	declare local variables
+ 		(NONE)
+ 	initialization functions
+ 		Sys_Init();
+ 		putchar(' ');
+ 		Port_Init();
+		Interrupt_Init();
+		Timer_Init();
+ 	while (TRUE)
+ 		Execute SS, PB1, and PB2 functions to print overflow 		time for BILED1 and BILED2 to light
+ 	end while
+end main function
+
+Functions
+
+ 	void Port_Init(void)
+ 		Set SFRs P2, P3, P2MDOUT & P3MDOUT so P2.0, P3.0 & P3.1 		are inputs,
+ 		P3.3, P3.4, 3.5, P3.6 & P3.7 are outputs
+ 	end Port_Init
+
+ 	void Interrupt_Init(void)
+		Enable Timer0 interrupt request
+		Enable global interrupts
+	end Interrupt_Init
+
+	void Timer_Init(void)
+		Configure CKCON
+		Configure TMOD
+		Stop Timer0
+		Clear low and high byte of T0
+	end Timer_Init
+
+	void Timer0_ISR(void)
+		Interrupt and increment Counts
+	end Timer0_ISR
+
+	random(void)
+		Returns either 0 or 1
+	end random
