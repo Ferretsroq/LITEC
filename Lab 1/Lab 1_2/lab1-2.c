@@ -43,7 +43,7 @@ __sbit __at 0xA0 SS;    // Slide Switch associated with Port 2 Pin 0
 // sbit settings are incomplete, include those developed 
 // in Lab 1-1 and add the sbit setting for LED1
 unsigned int Counts = 0;
-
+unsigned char Seconds = 0;
 
 //***************
 void main(void)
@@ -67,14 +67,14 @@ void main(void)
         while (PB1); // wait until PB1 is pressed
         Counts = 0;  // set overflow counter to zero
 
-        BILED1 = 1;  // while button is down, turn ON the BILED
-        BILED2 = 0;
+        BILED0 = 1;  // while button is down, turn ON the BILED
+        BILED1 = 0;
 
         while (!PB1);// wait until PB1 is released
         TR0 = 0;     // Timer 0 disabled
 
-        BILED1 = 0;  // Turn OFF the BILED
-        BILED2 = 0;
+        BILED0 = 0;  // Turn OFF the BILED
+        BILED1 = 0;
         printf("\rNumber of Overflows = %d\n", Counts);
 
     }
@@ -83,23 +83,28 @@ void main(void)
 //***************
 void Port_Init(void)
 {
-    // use Port configuration from Lab 1-1
-    // adding the output bit for LED1
+    // Port 3
+	P3MDOUT |= 0xF8;// set Port 3 output pins to push-pull mode 
+	P3MDOUT &= 0xFC; // set Port 3 input pins to open drain mode 
+	P3 |= ~0xFC; // set Port 3 input pins to high impedance state 
+	// Port 2
+	P2MDOUT &= 0xFE; // set Port 2 input pins to push-pull mode
+	P2 |= ~0xFE; // set Port 2 input pins to high impedance state
 
 }
 
 void Interrupt_Init(void)
 {
-//    IE |= ____;      // enable Timer0 Interrupt request
-//    EA = ____;       // enable global interrupts
+    ET0 = 1;      // enable Timer0 Interrupt request
+    EA = 1;       // enable global interrupts
 }
 //***************
 void Timer_Init(void)
 {
 
-//    CKCON |= _____;  // Timer0 uses SYSCLK as source
-//    TMOD &= _____;   // clear the 4 least significant bits
-//    TMOD |= _____;   // Timer0 in mode 1
+    CKCON |= 0x08;  // Timer0 uses SYSCLK as source
+    TMOD &= 0xF0;   // clear the 4 least significant bits
+    TMOD |= 0x01;   // Timer0 in mode 1
     TR0 = 0;           // Stop Timer0
     TL0 = 0;           // Clear low byte of register T0
     TH0 = 0;           // Clear high byte of register T0
@@ -110,8 +115,12 @@ void Timer_Init(void)
 //***************
 void Timer0_ISR(void) __interrupt 1
 {
-// add interrupt code here, in this lab, the code will increment the 
-// global variable 'counts'
+	Counts++;
+	if(Counts == 337)
+	{
+		Seconds ++;
+		Counts = 0;
+	}
 }
 
 /******************************************************************************/
