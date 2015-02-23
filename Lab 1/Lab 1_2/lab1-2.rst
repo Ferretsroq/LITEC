@@ -903,26 +903,26 @@
                                     903 ;--------------------------------------------------------
                                     904 	.area DSEG    (DATA)
                            000000   905 G$Counts$0$0==.
-      000000                        906 _Counts::
-      000000                        907 	.ds 2
+      000008                        906 _Counts::
+      000008                        907 	.ds 2
                            000002   908 G$Seconds$0$0==.
-      000002                        909 _Seconds::
-      000002                        910 	.ds 1
+      00000A                        909 _Seconds::
+      00000A                        910 	.ds 1
                            000003   911 G$previousRNG$0$0==.
-      000003                        912 _previousRNG::
-      000003                        913 	.ds 1
+      00000B                        912 _previousRNG::
+      00000B                        913 	.ds 1
                            000004   914 G$RNG$0$0==.
-      000004                        915 _RNG::
-      000004                        916 	.ds 1
+      00000C                        915 _RNG::
+      00000C                        916 	.ds 1
                            000005   917 G$turns$0$0==.
-      000005                        918 _turns::
-      000005                        919 	.ds 1
+      00000D                        918 _turns::
+      00000D                        919 	.ds 1
                            000006   920 G$correctAnswerCount$0$0==.
-      000006                        921 _correctAnswerCount::
-      000006                        922 	.ds 1
+      00000E                        921 _correctAnswerCount::
+      00000E                        922 	.ds 1
                            000007   923 G$flag$0$0==.
-      000007                        924 _flag::
-      000007                        925 	.ds 1
+      00000F                        924 _flag::
+      00000F                        925 	.ds 1
                                     926 ;--------------------------------------------------------
                                     927 ; overlayable items in internal ram 
                                     928 ;--------------------------------------------------------
@@ -932,8 +932,8 @@
                                     932 ; Stack segment in internal ram 
                                     933 ;--------------------------------------------------------
                                     934 	.area	SSEG
-      000000                        935 __start__stack:
-      000000                        936 	.ds	1
+      000042                        935 __start__stack:
+      000042                        936 	.ds	1
                                     937 
                                     938 ;--------------------------------------------------------
                                     939 ; indirectly addressable internal ram data
@@ -979,10 +979,10 @@
                                     979 ;--------------------------------------------------------
                                     980 	.area HOME    (CODE)
       000000                        981 __interrupt_vect:
-      000000 02r00r00         [24]  982 	ljmp	__sdcc_gsinit_startup
+      000000 02 00 11         [24]  982 	ljmp	__sdcc_gsinit_startup
       000003 32               [24]  983 	reti
       000004                        984 	.ds	7
-      00000B 02r01rF9         [24]  985 	ljmp	_Timer0_ISR
+      00000B 02 02 82         [24]  985 	ljmp	_Timer0_ISR
                                     986 ;--------------------------------------------------------
                                     987 ; global & static initialisations
                                     988 ;--------------------------------------------------------
@@ -998,41 +998,41 @@
                                     998 	.globl __mcs51_genRAMCLEAR
                            000000   999 	C$lab1_2.c$45$1$84 ==.
                                    1000 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:45: unsigned int Counts = 0;
-      000000 E4               [12] 1001 	clr	a
-      000001 F5*00            [12] 1002 	mov	_Counts,a
-      000003 F5*01            [12] 1003 	mov	(_Counts + 1),a
+      00006A E4               [12] 1001 	clr	a
+      00006B F5 08            [12] 1002 	mov	_Counts,a
+      00006D F5 09            [12] 1003 	mov	(_Counts + 1),a
                            000005  1004 	C$lab1_2.c$46$1$84 ==.
                                    1005 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:46: unsigned char Seconds = 0;
                                    1006 ;	1-genFromRTrack replaced	mov	_Seconds,#0x00
-      000005 F5*02            [12] 1007 	mov	_Seconds,a
+      00006F F5 0A            [12] 1007 	mov	_Seconds,a
                            000007  1008 	C$lab1_2.c$47$1$84 ==.
                                    1009 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:47: unsigned char previousRNG = 7; 
-      000007 75*03 07         [24] 1010 	mov	_previousRNG,#0x07
+      000071 75 0B 07         [24] 1010 	mov	_previousRNG,#0x07
                            00000A  1011 	C$lab1_2.c$48$1$84 ==.
                                    1012 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:48: unsigned char RNG = 0;
                                    1013 ;	1-genFromRTrack replaced	mov	_RNG,#0x00
-      00000A F5*04            [12] 1014 	mov	_RNG,a
+      000074 F5 0C            [12] 1014 	mov	_RNG,a
                            00000C  1015 	C$lab1_2.c$49$1$84 ==.
                                    1016 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:49: unsigned char turns = 0;
                                    1017 ;	1-genFromRTrack replaced	mov	_turns,#0x00
-      00000C F5*05            [12] 1018 	mov	_turns,a
+      000076 F5 0D            [12] 1018 	mov	_turns,a
                            00000E  1019 	C$lab1_2.c$50$1$84 ==.
                                    1020 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:50: unsigned char correctAnswerCount = 0;
                                    1021 ;	1-genFromRTrack replaced	mov	_correctAnswerCount,#0x00
-      00000E F5*06            [12] 1022 	mov	_correctAnswerCount,a
+      000078 F5 0E            [12] 1022 	mov	_correctAnswerCount,a
                            000010  1023 	C$lab1_2.c$51$1$84 ==.
                                    1024 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:51: unsigned char flag = 0;
                                    1025 ;	1-genFromRTrack replaced	mov	_flag,#0x00
-      000010 F5*07            [12] 1026 	mov	_flag,a
+      00007A F5 0F            [12] 1026 	mov	_flag,a
                                    1027 	.area GSFINAL (CODE)
-      000000 02r00r0E         [24] 1028 	ljmp	__sdcc_program_startup
+      000086 02 00 0E         [24] 1028 	ljmp	__sdcc_program_startup
                                    1029 ;--------------------------------------------------------
                                    1030 ; Home
                                    1031 ;--------------------------------------------------------
                                    1032 	.area HOME    (CODE)
                                    1033 	.area HOME    (CODE)
       00000E                       1034 __sdcc_program_startup:
-      00000E 02r00r5C         [24] 1035 	ljmp	_main
+      00000E 02 00 E5         [24] 1035 	ljmp	_main
                                    1036 ;	return from main will return to caller
                                    1037 ;--------------------------------------------------------
                                    1038 ; code
@@ -1049,7 +1049,7 @@
                                    1049 ;	-----------------------------------------
                                    1050 ;	 function SYSCLK_Init
                                    1051 ;	-----------------------------------------
-      000000                       1052 _SYSCLK_Init:
+      000089                       1052 _SYSCLK_Init:
                            000007  1053 	ar7 = 0x07
                            000006  1054 	ar6 = 0x06
                            000005  1055 	ar5 = 0x05
@@ -1060,30 +1060,30 @@
                            000000  1060 	ar0 = 0x00
                            000000  1061 	C$c8051_SDCC.h$46$1$2 ==.
                                    1062 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:46: OSCXCN = 0x67;                      // start external oscillator with
-      000000 75 B1 67         [24] 1063 	mov	_OSCXCN,#0x67
+      000089 75 B1 67         [24] 1063 	mov	_OSCXCN,#0x67
                            000003  1064 	C$c8051_SDCC.h$49$1$2 ==.
                                    1065 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:49: for (i=0; i < 256; i++);            // wait for oscillator to start
-      000003 7E 00            [12] 1066 	mov	r6,#0x00
-      000005 7F 01            [12] 1067 	mov	r7,#0x01
-      000007                       1068 00107$:
-      000007 1E               [12] 1069 	dec	r6
-      000008 BE FF 01         [24] 1070 	cjne	r6,#0xFF,00121$
-      00000B 1F               [12] 1071 	dec	r7
-      00000C                       1072 00121$:
-      00000C EE               [12] 1073 	mov	a,r6
-      00000D 4F               [12] 1074 	orl	a,r7
-      00000E 70 F7            [24] 1075 	jnz	00107$
+      00008C 7E 00            [12] 1066 	mov	r6,#0x00
+      00008E 7F 01            [12] 1067 	mov	r7,#0x01
+      000090                       1068 00107$:
+      000090 1E               [12] 1069 	dec	r6
+      000091 BE FF 01         [24] 1070 	cjne	r6,#0xFF,00121$
+      000094 1F               [12] 1071 	dec	r7
+      000095                       1072 00121$:
+      000095 EE               [12] 1073 	mov	a,r6
+      000096 4F               [12] 1074 	orl	a,r7
+      000097 70 F7            [24] 1075 	jnz	00107$
                            000010  1076 	C$c8051_SDCC.h$51$1$2 ==.
                                    1077 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:51: while (!(OSCXCN & 0x80));           // Wait for crystal osc. to settle
-      000010                       1078 00102$:
-      000010 E5 B1            [12] 1079 	mov	a,_OSCXCN
-      000012 30 E7 FB         [24] 1080 	jnb	acc.7,00102$
+      000099                       1078 00102$:
+      000099 E5 B1            [12] 1079 	mov	a,_OSCXCN
+      00009B 30 E7 FB         [24] 1080 	jnb	acc.7,00102$
                            000015  1081 	C$c8051_SDCC.h$53$1$2 ==.
                                    1082 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:53: OSCICN = 0x88;                      // select external oscillator as SYSCLK
-      000015 75 B2 88         [24] 1083 	mov	_OSCICN,#0x88
+      00009E 75 B2 88         [24] 1083 	mov	_OSCICN,#0x88
                            000018  1084 	C$c8051_SDCC.h$56$1$2 ==.
                            000018  1085 	XG$SYSCLK_Init$0$0 ==.
-      000018 22               [24] 1086 	ret
+      0000A1 22               [24] 1086 	ret
                                    1087 ;------------------------------------------------------------
                                    1088 ;Allocation info for local variables in function 'UART0_Init'
                                    1089 ;------------------------------------------------------------
@@ -1093,34 +1093,34 @@
                                    1093 ;	-----------------------------------------
                                    1094 ;	 function UART0_Init
                                    1095 ;	-----------------------------------------
-      000019                       1096 _UART0_Init:
+      0000A2                       1096 _UART0_Init:
                            000019  1097 	C$c8051_SDCC.h$66$1$4 ==.
                                    1098 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:66: SCON0  = 0x50;                      // SCON0: mode 1, 8-bit UART, enable RX
-      000019 75 98 50         [24] 1099 	mov	_SCON0,#0x50
+      0000A2 75 98 50         [24] 1099 	mov	_SCON0,#0x50
                            00001C  1100 	C$c8051_SDCC.h$67$1$4 ==.
                                    1101 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:67: TMOD   = 0x20;                      // TMOD: timer 1, mode 2, 8-bit reload
-      00001C 75 89 20         [24] 1102 	mov	_TMOD,#0x20
+      0000A5 75 89 20         [24] 1102 	mov	_TMOD,#0x20
                            00001F  1103 	C$c8051_SDCC.h$68$1$4 ==.
                                    1104 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:68: TH1    = -(SYSCLK/BAUDRATE/16);     // set Timer1 reload value for baudrate
-      00001F 75 8D DC         [24] 1105 	mov	_TH1,#0xDC
+      0000A8 75 8D DC         [24] 1105 	mov	_TH1,#0xDC
                            000022  1106 	C$c8051_SDCC.h$69$1$4 ==.
                                    1107 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:69: TR1    = 1;                         // start Timer1
-      000022 D2 8E            [12] 1108 	setb	_TR1
+      0000AB D2 8E            [12] 1108 	setb	_TR1
                            000024  1109 	C$c8051_SDCC.h$70$1$4 ==.
                                    1110 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:70: CKCON |= 0x10;                      // Timer1 uses SYSCLK as time base
-      000024 43 8E 10         [24] 1111 	orl	_CKCON,#0x10
+      0000AD 43 8E 10         [24] 1111 	orl	_CKCON,#0x10
                            000027  1112 	C$c8051_SDCC.h$71$1$4 ==.
                                    1113 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:71: PCON  |= 0x80;                      // SMOD00 = 1 (disable baud rate 
-      000027 43 87 80         [24] 1114 	orl	_PCON,#0x80
+      0000B0 43 87 80         [24] 1114 	orl	_PCON,#0x80
                            00002A  1115 	C$c8051_SDCC.h$73$1$4 ==.
                                    1116 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:73: TI0    = 1;                         // Indicate TX0 ready
-      00002A D2 99            [12] 1117 	setb	_TI0
+      0000B3 D2 99            [12] 1117 	setb	_TI0
                            00002C  1118 	C$c8051_SDCC.h$74$1$4 ==.
                                    1119 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:74: P0MDOUT |= 0x01;                    // Set TX0 to push/pull
-      00002C 43 A4 01         [24] 1120 	orl	_P0MDOUT,#0x01
+      0000B5 43 A4 01         [24] 1120 	orl	_P0MDOUT,#0x01
                            00002F  1121 	C$c8051_SDCC.h$75$1$4 ==.
                            00002F  1122 	XG$UART0_Init$0$0 ==.
-      00002F 22               [24] 1123 	ret
+      0000B8 22               [24] 1123 	ret
                                    1124 ;------------------------------------------------------------
                                    1125 ;Allocation info for local variables in function 'Sys_Init'
                                    1126 ;------------------------------------------------------------
@@ -1130,28 +1130,28 @@
                                    1130 ;	-----------------------------------------
                                    1131 ;	 function Sys_Init
                                    1132 ;	-----------------------------------------
-      000030                       1133 _Sys_Init:
+      0000B9                       1133 _Sys_Init:
                            000030  1134 	C$c8051_SDCC.h$85$1$6 ==.
                                    1135 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:85: WDTCN = 0xde;			// disable watchdog timer
-      000030 75 FF DE         [24] 1136 	mov	_WDTCN,#0xDE
+      0000B9 75 FF DE         [24] 1136 	mov	_WDTCN,#0xDE
                            000033  1137 	C$c8051_SDCC.h$86$1$6 ==.
                                    1138 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:86: WDTCN = 0xad;
-      000033 75 FF AD         [24] 1139 	mov	_WDTCN,#0xAD
+      0000BC 75 FF AD         [24] 1139 	mov	_WDTCN,#0xAD
                            000036  1140 	C$c8051_SDCC.h$88$1$6 ==.
                                    1141 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:88: SYSCLK_Init();			// initialize oscillator
-      000036 12r00r00         [24] 1142 	lcall	_SYSCLK_Init
+      0000BF 12 00 89         [24] 1142 	lcall	_SYSCLK_Init
                            000039  1143 	C$c8051_SDCC.h$89$1$6 ==.
                                    1144 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:89: UART0_Init();			// initialize UART0
-      000039 12r00r19         [24] 1145 	lcall	_UART0_Init
+      0000C2 12 00 A2         [24] 1145 	lcall	_UART0_Init
                            00003C  1146 	C$c8051_SDCC.h$91$1$6 ==.
                                    1147 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:91: XBR0 |= 0x04;
-      00003C 43 E1 04         [24] 1148 	orl	_XBR0,#0x04
+      0000C5 43 E1 04         [24] 1148 	orl	_XBR0,#0x04
                            00003F  1149 	C$c8051_SDCC.h$92$1$6 ==.
                                    1150 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:92: XBR2 |= 0x40;                    	// Enable crossbar and weak pull-ups
-      00003F 43 E3 40         [24] 1151 	orl	_XBR2,#0x40
+      0000C8 43 E3 40         [24] 1151 	orl	_XBR2,#0x40
                            000042  1152 	C$c8051_SDCC.h$93$1$6 ==.
                            000042  1153 	XG$Sys_Init$0$0 ==.
-      000042 22               [24] 1154 	ret
+      0000CB 22               [24] 1154 	ret
                                    1155 ;------------------------------------------------------------
                                    1156 ;Allocation info for local variables in function 'putchar'
                                    1157 ;------------------------------------------------------------
@@ -1163,22 +1163,22 @@
                                    1163 ;	-----------------------------------------
                                    1164 ;	 function putchar
                                    1165 ;	-----------------------------------------
-      000043                       1166 _putchar:
-      000043 AF 82            [24] 1167 	mov	r7,dpl
+      0000CC                       1166 _putchar:
+      0000CC AF 82            [24] 1167 	mov	r7,dpl
                            000045  1168 	C$c8051_SDCC.h$100$1$8 ==.
                                    1169 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:100: while (!TI0); 
-      000045                       1170 00101$:
+      0000CE                       1170 00101$:
                            000045  1171 	C$c8051_SDCC.h$101$1$8 ==.
                                    1172 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:101: TI0 = 0;
-      000045 10 99 02         [24] 1173 	jbc	_TI0,00112$
-      000048 80 FB            [24] 1174 	sjmp	00101$
-      00004A                       1175 00112$:
+      0000CE 10 99 02         [24] 1173 	jbc	_TI0,00112$
+      0000D1 80 FB            [24] 1174 	sjmp	00101$
+      0000D3                       1175 00112$:
                            00004A  1176 	C$c8051_SDCC.h$102$1$8 ==.
                                    1177 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:102: SBUF0 = c;
-      00004A 8F 99            [24] 1178 	mov	_SBUF0,r7
+      0000D3 8F 99            [24] 1178 	mov	_SBUF0,r7
                            00004C  1179 	C$c8051_SDCC.h$103$1$8 ==.
                            00004C  1180 	XG$putchar$0$0 ==.
-      00004C 22               [24] 1181 	ret
+      0000D5 22               [24] 1181 	ret
                                    1182 ;------------------------------------------------------------
                                    1183 ;Allocation info for local variables in function 'getchar'
                                    1184 ;------------------------------------------------------------
@@ -1190,27 +1190,27 @@
                                    1190 ;	-----------------------------------------
                                    1191 ;	 function getchar
                                    1192 ;	-----------------------------------------
-      00004D                       1193 _getchar:
+      0000D6                       1193 _getchar:
                            00004D  1194 	C$c8051_SDCC.h$111$1$10 ==.
                                    1195 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:111: while (!RI0);
-      00004D                       1196 00101$:
+      0000D6                       1196 00101$:
                            00004D  1197 	C$c8051_SDCC.h$112$1$10 ==.
                                    1198 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:112: RI0 = 0;
-      00004D 10 98 02         [24] 1199 	jbc	_RI0,00112$
-      000050 80 FB            [24] 1200 	sjmp	00101$
-      000052                       1201 00112$:
+      0000D6 10 98 02         [24] 1199 	jbc	_RI0,00112$
+      0000D9 80 FB            [24] 1200 	sjmp	00101$
+      0000DB                       1201 00112$:
                            000052  1202 	C$c8051_SDCC.h$113$1$10 ==.
                                    1203 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:113: c = SBUF0;
-      000052 85 99 82         [24] 1204 	mov	dpl,_SBUF0
+      0000DB 85 99 82         [24] 1204 	mov	dpl,_SBUF0
                            000055  1205 	C$c8051_SDCC.h$114$1$10 ==.
                                    1206 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:114: putchar(c);                          // echo to terminal
-      000055 12r00r43         [24] 1207 	lcall	_putchar
+      0000DE 12 00 CC         [24] 1207 	lcall	_putchar
                            000058  1208 	C$c8051_SDCC.h$115$1$10 ==.
                                    1209 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:115: return SBUF0;
-      000058 85 99 82         [24] 1210 	mov	dpl,_SBUF0
+      0000E1 85 99 82         [24] 1210 	mov	dpl,_SBUF0
                            00005B  1211 	C$c8051_SDCC.h$116$1$10 ==.
                            00005B  1212 	XG$getchar$0$0 ==.
-      00005B 22               [24] 1213 	ret
+      0000E4 22               [24] 1213 	ret
                                    1214 ;------------------------------------------------------------
                                    1215 ;Allocation info for local variables in function 'main'
                                    1216 ;------------------------------------------------------------
@@ -1220,316 +1220,316 @@
                                    1220 ;	-----------------------------------------
                                    1221 ;	 function main
                                    1222 ;	-----------------------------------------
-      00005C                       1223 _main:
+      0000E5                       1223 _main:
                            00005C  1224 	C$lab1_2.c$56$1$49 ==.
                                    1225 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:56: Sys_Init();      // System Initialization
-      00005C 12r00r30         [24] 1226 	lcall	_Sys_Init
+      0000E5 12 00 B9         [24] 1226 	lcall	_Sys_Init
                            00005F  1227 	C$lab1_2.c$57$1$49 ==.
                                    1228 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:57: Port_Init();     // Initialize ports 2 and 3 
-      00005F 12r01rCA         [24] 1229 	lcall	_Port_Init
+      0000E8 12 02 53         [24] 1229 	lcall	_Port_Init
                            000062  1230 	C$lab1_2.c$58$1$49 ==.
                                    1231 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:58: Interrupt_Init();
-      000062 12r01rE2         [24] 1232 	lcall	_Interrupt_Init
+      0000EB 12 02 6B         [24] 1232 	lcall	_Interrupt_Init
                            000065  1233 	C$lab1_2.c$59$1$49 ==.
                                    1234 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:59: Timer_Init();    // Initialize Timer 0 
-      000065 12r01rE7         [24] 1235 	lcall	_Timer_Init
+      0000EE 12 02 70         [24] 1235 	lcall	_Timer_Init
                            000068  1236 	C$lab1_2.c$61$1$49 ==.
                                    1237 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:61: putchar(' ');    // the quote fonts may not copy correctly into SiLabs IDE
-      000068 75 82 20         [24] 1238 	mov	dpl,#0x20
-      00006B 12r00r43         [24] 1239 	lcall	_putchar
+      0000F1 75 82 20         [24] 1238 	mov	dpl,#0x20
+      0000F4 12 00 CC         [24] 1239 	lcall	_putchar
                            00006E  1240 	C$lab1_2.c$62$1$49 ==.
                                    1241 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:62: printf("Start\r\n");
-      00006E 74r00            [12] 1242 	mov	a,#___str_0
-      000070 C0 E0            [24] 1243 	push	acc
-      000072 74s00            [12] 1244 	mov	a,#(___str_0 >> 8)
-      000074 C0 E0            [24] 1245 	push	acc
-      000076 74 80            [12] 1246 	mov	a,#0x80
-      000078 C0 E0            [24] 1247 	push	acc
-      00007A 12r00r00         [24] 1248 	lcall	_printf
-      00007D 15 81            [12] 1249 	dec	sp
-      00007F 15 81            [12] 1250 	dec	sp
-      000081 15 81            [12] 1251 	dec	sp
+      0000F7 74 49            [12] 1242 	mov	a,#___str_0
+      0000F9 C0 E0            [24] 1243 	push	acc
+      0000FB 74 0A            [12] 1244 	mov	a,#(___str_0 >> 8)
+      0000FD C0 E0            [24] 1245 	push	acc
+      0000FF 74 80            [12] 1246 	mov	a,#0x80
+      000101 C0 E0            [24] 1247 	push	acc
+      000103 12 03 FF         [24] 1248 	lcall	_printf
+      000106 15 81            [12] 1249 	dec	sp
+      000108 15 81            [12] 1250 	dec	sp
+      00010A 15 81            [12] 1251 	dec	sp
                            000083  1252 	C$lab1_2.c$69$2$50 ==.
                                    1253 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:69: while(Switch()) // while SS is OFF (high), wait for SS to be set ON
-      000083                       1254 00101$:
-      000083 12r02r40         [24] 1255 	lcall	_Switch
-      000086 E5 82            [12] 1256 	mov	a,dpl
-      000088 85 83 F0         [24] 1257 	mov	b,dph
-      00008B 45 F0            [12] 1258 	orl	a,b
-      00008D 60 17            [24] 1259 	jz	00103$
+      00010C                       1254 00101$:
+      00010C 12 02 C9         [24] 1255 	lcall	_Switch
+      00010F E5 82            [12] 1256 	mov	a,dpl
+      000111 85 83 F0         [24] 1257 	mov	b,dph
+      000114 45 F0            [12] 1258 	orl	a,b
+      000116 60 17            [24] 1259 	jz	00103$
                            00008F  1260 	C$lab1_2.c$71$3$51 ==.
                                    1261 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:71: printf("Switch is off!");
-      00008F 74r08            [12] 1262 	mov	a,#___str_1
-      000091 C0 E0            [24] 1263 	push	acc
-      000093 74s00            [12] 1264 	mov	a,#(___str_1 >> 8)
-      000095 C0 E0            [24] 1265 	push	acc
-      000097 74 80            [12] 1266 	mov	a,#0x80
-      000099 C0 E0            [24] 1267 	push	acc
-      00009B 12r00r00         [24] 1268 	lcall	_printf
-      00009E 15 81            [12] 1269 	dec	sp
-      0000A0 15 81            [12] 1270 	dec	sp
-      0000A2 15 81            [12] 1271 	dec	sp
-      0000A4 80 DD            [24] 1272 	sjmp	00101$
-      0000A6                       1273 00103$:
+      000118 74 51            [12] 1262 	mov	a,#___str_1
+      00011A C0 E0            [24] 1263 	push	acc
+      00011C 74 0A            [12] 1264 	mov	a,#(___str_1 >> 8)
+      00011E C0 E0            [24] 1265 	push	acc
+      000120 74 80            [12] 1266 	mov	a,#0x80
+      000122 C0 E0            [24] 1267 	push	acc
+      000124 12 03 FF         [24] 1268 	lcall	_printf
+      000127 15 81            [12] 1269 	dec	sp
+      000129 15 81            [12] 1270 	dec	sp
+      00012B 15 81            [12] 1271 	dec	sp
+      00012D 80 DD            [24] 1272 	sjmp	00101$
+      00012F                       1273 00103$:
                            0000A6  1274 	C$lab1_2.c$73$2$50 ==.
                                    1275 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:73: printf("This is just a test");
-      0000A6 74r17            [12] 1276 	mov	a,#___str_2
-      0000A8 C0 E0            [24] 1277 	push	acc
-      0000AA 74s00            [12] 1278 	mov	a,#(___str_2 >> 8)
-      0000AC C0 E0            [24] 1279 	push	acc
-      0000AE 74 80            [12] 1280 	mov	a,#0x80
-      0000B0 C0 E0            [24] 1281 	push	acc
-      0000B2 12r00r00         [24] 1282 	lcall	_printf
-      0000B5 15 81            [12] 1283 	dec	sp
-      0000B7 15 81            [12] 1284 	dec	sp
-      0000B9 15 81            [12] 1285 	dec	sp
+      00012F 74 60            [12] 1276 	mov	a,#___str_2
+      000131 C0 E0            [24] 1277 	push	acc
+      000133 74 0A            [12] 1278 	mov	a,#(___str_2 >> 8)
+      000135 C0 E0            [24] 1279 	push	acc
+      000137 74 80            [12] 1280 	mov	a,#0x80
+      000139 C0 E0            [24] 1281 	push	acc
+      00013B 12 03 FF         [24] 1282 	lcall	_printf
+      00013E 15 81            [12] 1283 	dec	sp
+      000140 15 81            [12] 1284 	dec	sp
+      000142 15 81            [12] 1285 	dec	sp
                            0000BB  1286 	C$lab1_2.c$74$2$50 ==.
                                    1287 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:74: TR0 = 1;     // Timer 0 Enabled
-      0000BB D2 8C            [12] 1288 	setb	_TR0
+      000144 D2 8C            [12] 1288 	setb	_TR0
                            0000BD  1289 	C$lab1_2.c$75$2$50 ==.
                                    1290 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:75: printf("Overflows: %u", Counts);
-      0000BD C0*00            [24] 1291 	push	_Counts
-      0000BF C0*01            [24] 1292 	push	(_Counts + 1)
-      0000C1 74r2B            [12] 1293 	mov	a,#___str_3
-      0000C3 C0 E0            [24] 1294 	push	acc
-      0000C5 74s00            [12] 1295 	mov	a,#(___str_3 >> 8)
-      0000C7 C0 E0            [24] 1296 	push	acc
-      0000C9 74 80            [12] 1297 	mov	a,#0x80
-      0000CB C0 E0            [24] 1298 	push	acc
-      0000CD 12r00r00         [24] 1299 	lcall	_printf
-      0000D0 E5 81            [12] 1300 	mov	a,sp
-      0000D2 24 FB            [12] 1301 	add	a,#0xfb
-      0000D4 F5 81            [12] 1302 	mov	sp,a
+      000146 C0 08            [24] 1291 	push	_Counts
+      000148 C0 09            [24] 1292 	push	(_Counts + 1)
+      00014A 74 74            [12] 1293 	mov	a,#___str_3
+      00014C C0 E0            [24] 1294 	push	acc
+      00014E 74 0A            [12] 1295 	mov	a,#(___str_3 >> 8)
+      000150 C0 E0            [24] 1296 	push	acc
+      000152 74 80            [12] 1297 	mov	a,#0x80
+      000154 C0 E0            [24] 1298 	push	acc
+      000156 12 03 FF         [24] 1299 	lcall	_printf
+      000159 E5 81            [12] 1300 	mov	a,sp
+      00015B 24 FB            [12] 1301 	add	a,#0xfb
+      00015D F5 81            [12] 1302 	mov	sp,a
                            0000D6  1303 	C$lab1_2.c$76$3$52 ==.
                                    1304 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:76: while(turns <= 10)
-      0000D6                       1305 00136$:
-      0000D6 E5*05            [12] 1306 	mov	a,_turns
-      0000D8 24 F5            [12] 1307 	add	a,#0xff - 0x0A
-      0000DA 50 03            [24] 1308 	jnc	00226$
-      0000DC 02r01r98         [24] 1309 	ljmp	00139$
-      0000DF                       1310 00226$:
+      00015F                       1305 00136$:
+      00015F E5 0D            [12] 1306 	mov	a,_turns
+      000161 24 F5            [12] 1307 	add	a,#0xff - 0x0A
+      000163 50 03            [24] 1308 	jnc	00226$
+      000165 02 02 21         [24] 1309 	ljmp	00139$
+      000168                       1310 00226$:
                            0000DF  1311 	C$lab1_2.c$78$3$52 ==.
                                    1312 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:78: RNG = random(); //
-      0000DF 12r02r1B         [24] 1313 	lcall	_random
-      0000E2 85 82*04         [24] 1314 	mov	_RNG,dpl
+      000168 12 02 A4         [24] 1313 	lcall	_random
+      00016B 85 82 0C         [24] 1314 	mov	_RNG,dpl
                            0000E5  1315 	C$lab1_2.c$79$3$52 ==.
                                    1316 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:79: if (RNG != previousRNG) // Ensure numbers don't repeat
-      0000E5 E5*03            [12] 1317 	mov	a,_previousRNG
-      0000E7 B5*04 03         [24] 1318 	cjne	a,_RNG,00227$
-      0000EA 02r01r78         [24] 1319 	ljmp	00135$
-      0000ED                       1320 00227$:
+      00016E E5 0B            [12] 1317 	mov	a,_previousRNG
+      000170 B5 0C 03         [24] 1318 	cjne	a,_RNG,00227$
+      000173 02 02 01         [24] 1319 	ljmp	00135$
+      000176                       1320 00227$:
                            0000ED  1321 	C$lab1_2.c$81$4$53 ==.
                                    1322 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:81: if(RNG == 0) 
-      0000ED E5*04            [12] 1323 	mov	a,_RNG
-      0000EF 70 29            [24] 1324 	jnz	00132$
+      000176 E5 0C            [12] 1323 	mov	a,_RNG
+      000178 70 29            [24] 1324 	jnz	00132$
                            0000F1  1325 	C$lab1_2.c$83$5$54 ==.
                                    1326 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:83: LED0 = 0; // Turn on LED0
-      0000F1 C2 B6            [12] 1327 	clr	_LED0
+      00017A C2 B6            [12] 1327 	clr	_LED0
                            0000F3  1328 	C$lab1_2.c$84$5$54 ==.
                                    1329 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:84: LED1 = 1; // Turn off LED1
-      0000F3 D2 B5            [12] 1330 	setb	_LED1
+      00017C D2 B5            [12] 1330 	setb	_LED1
                            0000F5  1331 	C$lab1_2.c$85$5$54 ==.
                                    1332 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:85: while(Seconds == 0 && flag == 0) // Within the first second
-      0000F5                       1333 00108$:
-      0000F5 E5*02            [12] 1334 	mov	a,_Seconds
-      0000F7 60 03            [24] 1335 	jz	00229$
-      0000F9 02r01r70         [24] 1336 	ljmp	00133$
-      0000FC                       1337 00229$:
-      0000FC E5*07            [12] 1338 	mov	a,_flag
-      0000FE 60 03            [24] 1339 	jz	00230$
-      000100 02r01r70         [24] 1340 	ljmp	00133$
-      000103                       1341 00230$:
+      00017E                       1333 00108$:
+      00017E E5 0A            [12] 1334 	mov	a,_Seconds
+      000180 60 03            [24] 1335 	jz	00229$
+      000182 02 01 F9         [24] 1336 	ljmp	00133$
+      000185                       1337 00229$:
+      000185 E5 0F            [12] 1338 	mov	a,_flag
+      000187 60 03            [24] 1339 	jz	00230$
+      000189 02 01 F9         [24] 1340 	ljmp	00133$
+      00018C                       1341 00230$:
                            000103  1342 	C$lab1_2.c$87$6$55 ==.
                                    1343 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:87: if(Button0) // If the correct button is pushed
-      000103 74r28            [12] 1344 	mov	a,#_Button0
-      000105 44s02            [12] 1345 	orl	a,#(_Button0 >> 8)
-      000107 60 0B            [24] 1346 	jz	00105$
+      00018C 74 B1            [12] 1344 	mov	a,#_Button0
+      00018E 44 02            [12] 1345 	orl	a,#(_Button0 >> 8)
+      000190 60 0B            [24] 1346 	jz	00105$
                            000109  1347 	C$lab1_2.c$89$7$56 ==.
                                    1348 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:89: correctAnswerCount++; // Log the correct answer
-      000109 05*06            [12] 1349 	inc	_correctAnswerCount
+      000192 05 0E            [12] 1349 	inc	_correctAnswerCount
                            00010B  1350 	C$lab1_2.c$90$7$56 ==.
                                    1351 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:90: BILED0 = 1;			  // Make BILED green
-      00010B D2 B3            [12] 1352 	setb	_BILED0
+      000194 D2 B3            [12] 1352 	setb	_BILED0
                            00010D  1353 	C$lab1_2.c$91$7$56 ==.
                                    1354 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:91: BILED1 = 0;	
-      00010D C2 B4            [12] 1355 	clr	_BILED1
+      000196 C2 B4            [12] 1355 	clr	_BILED1
                            00010F  1356 	C$lab1_2.c$92$7$56 ==.
                                    1357 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:92: flag = 1;
-      00010F 75*07 01         [24] 1358 	mov	_flag,#0x01
-      000112 80 E1            [24] 1359 	sjmp	00108$
-      000114                       1360 00105$:
+      000198 75 0F 01         [24] 1358 	mov	_flag,#0x01
+      00019B 80 E1            [24] 1359 	sjmp	00108$
+      00019D                       1360 00105$:
                            000114  1361 	C$lab1_2.c$96$7$57 ==.
                                    1362 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:96: BILED0 = 0;			// Make BILED red
-      000114 C2 B3            [12] 1363 	clr	_BILED0
+      00019D C2 B3            [12] 1363 	clr	_BILED0
                            000116  1364 	C$lab1_2.c$97$7$57 ==.
                                    1365 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:97: BILED1 = 1;
-      000116 D2 B4            [12] 1366 	setb	_BILED1
-      000118 80 DB            [24] 1367 	sjmp	00108$
-      00011A                       1368 00132$:
+      00019F D2 B4            [12] 1366 	setb	_BILED1
+      0001A1 80 DB            [24] 1367 	sjmp	00108$
+      0001A3                       1368 00132$:
                            00011A  1369 	C$lab1_2.c$101$4$53 ==.
                                    1370 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:101: else if(RNG == 1)
-      00011A 74 01            [12] 1371 	mov	a,#0x01
-      00011C B5*04 23         [24] 1372 	cjne	a,_RNG,00129$
+      0001A3 74 01            [12] 1371 	mov	a,#0x01
+      0001A5 B5 0C 23         [24] 1372 	cjne	a,_RNG,00129$
                            00011F  1373 	C$lab1_2.c$103$5$58 ==.
                                    1374 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:103: LED1 = 0; //Turn on LED1
-      00011F C2 B5            [12] 1375 	clr	_LED1
+      0001A8 C2 B5            [12] 1375 	clr	_LED1
                            000121  1376 	C$lab1_2.c$104$5$58 ==.
                                    1377 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:104: LED0 = 1; //Turn off LED0
-      000121 D2 B6            [12] 1378 	setb	_LED0
+      0001AA D2 B6            [12] 1378 	setb	_LED0
                            000123  1379 	C$lab1_2.c$105$5$58 ==.
                                    1380 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:105: while(Seconds == 0 && flag == 0) // Within the first second
-      000123                       1381 00115$:
-      000123 E5*02            [12] 1382 	mov	a,_Seconds
-      000125 70 49            [24] 1383 	jnz	00133$
-      000127 E5*07            [12] 1384 	mov	a,_flag
-      000129 70 45            [24] 1385 	jnz	00133$
+      0001AC                       1381 00115$:
+      0001AC E5 0A            [12] 1382 	mov	a,_Seconds
+      0001AE 70 49            [24] 1383 	jnz	00133$
+      0001B0 E5 0F            [12] 1384 	mov	a,_flag
+      0001B2 70 45            [24] 1385 	jnz	00133$
                            00012B  1386 	C$lab1_2.c$107$6$59 ==.
                                    1387 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:107: if(Button1) // If the correct button is pushed
-      00012B 74r34            [12] 1388 	mov	a,#_Button1
-      00012D 44s02            [12] 1389 	orl	a,#(_Button1 >> 8)
-      00012F 60 0B            [24] 1390 	jz	00112$
+      0001B4 74 BD            [12] 1388 	mov	a,#_Button1
+      0001B6 44 02            [12] 1389 	orl	a,#(_Button1 >> 8)
+      0001B8 60 0B            [24] 1390 	jz	00112$
                            000131  1391 	C$lab1_2.c$109$7$60 ==.
                                    1392 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:109: correctAnswerCount++; // Log the correct answer
-      000131 05*06            [12] 1393 	inc	_correctAnswerCount
+      0001BA 05 0E            [12] 1393 	inc	_correctAnswerCount
                            000133  1394 	C$lab1_2.c$110$7$60 ==.
                                    1395 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:110: BILED0 = 1;			  // Make BILED green
-      000133 D2 B3            [12] 1396 	setb	_BILED0
+      0001BC D2 B3            [12] 1396 	setb	_BILED0
                            000135  1397 	C$lab1_2.c$111$7$60 ==.
                                    1398 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:111: BILED1 = 0;	
-      000135 C2 B4            [12] 1399 	clr	_BILED1
+      0001BE C2 B4            [12] 1399 	clr	_BILED1
                            000137  1400 	C$lab1_2.c$112$7$60 ==.
                                    1401 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:112: flag = 1;
-      000137 75*07 01         [24] 1402 	mov	_flag,#0x01
-      00013A 80 E7            [24] 1403 	sjmp	00115$
-      00013C                       1404 00112$:
+      0001C0 75 0F 01         [24] 1402 	mov	_flag,#0x01
+      0001C3 80 E7            [24] 1403 	sjmp	00115$
+      0001C5                       1404 00112$:
                            00013C  1405 	C$lab1_2.c$116$7$61 ==.
                                    1406 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:116: BILED0 = 0;			// Make BILED red
-      00013C C2 B3            [12] 1407 	clr	_BILED0
+      0001C5 C2 B3            [12] 1407 	clr	_BILED0
                            00013E  1408 	C$lab1_2.c$117$7$61 ==.
                                    1409 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:117: BILED1 = 1;
-      00013E D2 B4            [12] 1410 	setb	_BILED1
-      000140 80 E1            [24] 1411 	sjmp	00115$
-      000142                       1412 00129$:
+      0001C7 D2 B4            [12] 1410 	setb	_BILED1
+      0001C9 80 E1            [24] 1411 	sjmp	00115$
+      0001CB                       1412 00129$:
                            000142  1413 	C$lab1_2.c$121$4$53 ==.
                                    1414 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:121: else if (RNG == 2)
-      000142 74 02            [12] 1415 	mov	a,#0x02
-      000144 B5*04 29         [24] 1416 	cjne	a,_RNG,00133$
+      0001CB 74 02            [12] 1415 	mov	a,#0x02
+      0001CD B5 0C 29         [24] 1416 	cjne	a,_RNG,00133$
                            000147  1417 	C$lab1_2.c$123$5$62 ==.
                                    1418 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:123: LED0 = 0; //Turn on LED0
-      000147 C2 B6            [12] 1419 	clr	_LED0
+      0001D0 C2 B6            [12] 1419 	clr	_LED0
                            000149  1420 	C$lab1_2.c$124$5$62 ==.
                                    1421 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:124: LED1 = 0; //Turn on 
-      000149 C2 B5            [12] 1422 	clr	_LED1
+      0001D2 C2 B5            [12] 1422 	clr	_LED1
                            00014B  1423 	C$lab1_2.c$125$5$62 ==.
                                    1424 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:125: while(Seconds == 0 && flag == 0) // Within the first second
-      00014B                       1425 00123$:
-      00014B E5*02            [12] 1426 	mov	a,_Seconds
-      00014D 70 21            [24] 1427 	jnz	00133$
-      00014F E5*07            [12] 1428 	mov	a,_flag
-      000151 70 1D            [24] 1429 	jnz	00133$
+      0001D4                       1425 00123$:
+      0001D4 E5 0A            [12] 1426 	mov	a,_Seconds
+      0001D6 70 21            [24] 1427 	jnz	00133$
+      0001D8 E5 0F            [12] 1428 	mov	a,_flag
+      0001DA 70 1D            [24] 1429 	jnz	00133$
                            000153  1430 	C$lab1_2.c$127$6$63 ==.
                                    1431 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:127: if(Button0 && Button1) // If the correct button is pushed
-      000153 74r28            [12] 1432 	mov	a,#_Button0
-      000155 44s02            [12] 1433 	orl	a,#(_Button0 >> 8)
-      000157 60 11            [24] 1434 	jz	00119$
-      000159 74r34            [12] 1435 	mov	a,#_Button1
-      00015B 44s02            [12] 1436 	orl	a,#(_Button1 >> 8)
-      00015D 60 0B            [24] 1437 	jz	00119$
+      0001DC 74 B1            [12] 1432 	mov	a,#_Button0
+      0001DE 44 02            [12] 1433 	orl	a,#(_Button0 >> 8)
+      0001E0 60 11            [24] 1434 	jz	00119$
+      0001E2 74 BD            [12] 1435 	mov	a,#_Button1
+      0001E4 44 02            [12] 1436 	orl	a,#(_Button1 >> 8)
+      0001E6 60 0B            [24] 1437 	jz	00119$
                            00015F  1438 	C$lab1_2.c$129$7$64 ==.
                                    1439 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:129: correctAnswerCount++; // Log the correct answer
-      00015F 05*06            [12] 1440 	inc	_correctAnswerCount
+      0001E8 05 0E            [12] 1440 	inc	_correctAnswerCount
                            000161  1441 	C$lab1_2.c$130$7$64 ==.
                                    1442 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:130: BILED0 = 1;			  // Make BILED green
-      000161 D2 B3            [12] 1443 	setb	_BILED0
+      0001EA D2 B3            [12] 1443 	setb	_BILED0
                            000163  1444 	C$lab1_2.c$131$7$64 ==.
                                    1445 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:131: BILED1 = 0;	
-      000163 C2 B4            [12] 1446 	clr	_BILED1
+      0001EC C2 B4            [12] 1446 	clr	_BILED1
                            000165  1447 	C$lab1_2.c$132$7$64 ==.
                                    1448 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:132: flag = 1;
-      000165 75*07 01         [24] 1449 	mov	_flag,#0x01
-      000168 80 E1            [24] 1450 	sjmp	00123$
-      00016A                       1451 00119$:
+      0001EE 75 0F 01         [24] 1449 	mov	_flag,#0x01
+      0001F1 80 E1            [24] 1450 	sjmp	00123$
+      0001F3                       1451 00119$:
                            00016A  1452 	C$lab1_2.c$136$7$65 ==.
                                    1453 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:136: BILED0 = 0;			// Make BILED red
-      00016A C2 B3            [12] 1454 	clr	_BILED0
+      0001F3 C2 B3            [12] 1454 	clr	_BILED0
                            00016C  1455 	C$lab1_2.c$137$7$65 ==.
                                    1456 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:137: BILED1 = 1;
-      00016C D2 B4            [12] 1457 	setb	_BILED1
-      00016E 80 DB            [24] 1458 	sjmp	00123$
-      000170                       1459 00133$:
+      0001F5 D2 B4            [12] 1457 	setb	_BILED1
+      0001F7 80 DB            [24] 1458 	sjmp	00123$
+      0001F9                       1459 00133$:
                            000170  1460 	C$lab1_2.c$141$4$53 ==.
                                    1461 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:141: turns++;
-      000170 05*05            [12] 1462 	inc	_turns
+      0001F9 05 0D            [12] 1462 	inc	_turns
                            000172  1463 	C$lab1_2.c$142$4$53 ==.
                                    1464 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:142: previousRNG = RNG;
-      000172 85*04*03         [24] 1465 	mov	_previousRNG,_RNG
+      0001FB 85 0C 0B         [24] 1465 	mov	_previousRNG,_RNG
                            000175  1466 	C$lab1_2.c$143$4$53 ==.
                                    1467 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:143: flag = 0;	
-      000175 75*07 00         [24] 1468 	mov	_flag,#0x00
-      000178                       1469 00135$:
+      0001FE 75 0F 00         [24] 1468 	mov	_flag,#0x00
+      000201                       1469 00135$:
                            000178  1470 	C$lab1_2.c$145$3$52 ==.
                                    1471 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:145: printf("Correct responses: %u", correctAnswerCount);
-      000178 AE*06            [24] 1472 	mov	r6,_correctAnswerCount
-      00017A 7F 00            [12] 1473 	mov	r7,#0x00
-      00017C C0 06            [24] 1474 	push	ar6
-      00017E C0 07            [24] 1475 	push	ar7
-      000180 74r39            [12] 1476 	mov	a,#___str_4
-      000182 C0 E0            [24] 1477 	push	acc
-      000184 74s00            [12] 1478 	mov	a,#(___str_4 >> 8)
-      000186 C0 E0            [24] 1479 	push	acc
-      000188 74 80            [12] 1480 	mov	a,#0x80
-      00018A C0 E0            [24] 1481 	push	acc
-      00018C 12r00r00         [24] 1482 	lcall	_printf
-      00018F E5 81            [12] 1483 	mov	a,sp
-      000191 24 FB            [12] 1484 	add	a,#0xfb
-      000193 F5 81            [12] 1485 	mov	sp,a
-      000195 02r00rD6         [24] 1486 	ljmp	00136$
+      000201 AE 0E            [24] 1472 	mov	r6,_correctAnswerCount
+      000203 7F 00            [12] 1473 	mov	r7,#0x00
+      000205 C0 06            [24] 1474 	push	ar6
+      000207 C0 07            [24] 1475 	push	ar7
+      000209 74 82            [12] 1476 	mov	a,#___str_4
+      00020B C0 E0            [24] 1477 	push	acc
+      00020D 74 0A            [12] 1478 	mov	a,#(___str_4 >> 8)
+      00020F C0 E0            [24] 1479 	push	acc
+      000211 74 80            [12] 1480 	mov	a,#0x80
+      000213 C0 E0            [24] 1481 	push	acc
+      000215 12 03 FF         [24] 1482 	lcall	_printf
+      000218 E5 81            [12] 1483 	mov	a,sp
+      00021A 24 FB            [12] 1484 	add	a,#0xfb
+      00021C F5 81            [12] 1485 	mov	sp,a
+      00021E 02 01 5F         [24] 1486 	ljmp	00136$
                            000198  1487 	C$lab1_2.c$147$2$50 ==.
                                    1488 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:147: while (PB0); // wait until PB1 is pressed
-      000198                       1489 00139$:
-      000198 20 B0 FD         [24] 1490 	jb	_PB0,00139$
+      000221                       1489 00139$:
+      000221 20 B0 FD         [24] 1490 	jb	_PB0,00139$
                            00019B  1491 	C$lab1_2.c$148$2$50 ==.
                                    1492 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:148: Counts = 0;  // set overflow counter to zero
-      00019B E4               [12] 1493 	clr	a
-      00019C F5*00            [12] 1494 	mov	_Counts,a
-      00019E F5*01            [12] 1495 	mov	(_Counts + 1),a
+      000224 E4               [12] 1493 	clr	a
+      000225 F5 08            [12] 1494 	mov	_Counts,a
+      000227 F5 09            [12] 1495 	mov	(_Counts + 1),a
                            0001A0  1496 	C$lab1_2.c$150$2$50 ==.
                                    1497 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:150: BILED0 = 1;  // while button is down, turn ON the BILED
-      0001A0 D2 B3            [12] 1498 	setb	_BILED0
+      000229 D2 B3            [12] 1498 	setb	_BILED0
                            0001A2  1499 	C$lab1_2.c$151$2$50 ==.
                                    1500 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:151: BILED1 = 0;
-      0001A2 C2 B4            [12] 1501 	clr	_BILED1
+      00022B C2 B4            [12] 1501 	clr	_BILED1
                            0001A4  1502 	C$lab1_2.c$153$2$50 ==.
                                    1503 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:153: while (!PB0);// wait until PB1 is released
-      0001A4                       1504 00142$:
-      0001A4 30 B0 FD         [24] 1505 	jnb	_PB0,00142$
+      00022D                       1504 00142$:
+      00022D 30 B0 FD         [24] 1505 	jnb	_PB0,00142$
                            0001A7  1506 	C$lab1_2.c$154$2$50 ==.
                                    1507 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:154: TR0 = 0;     // Timer 0 disabled
-      0001A7 C2 8C            [12] 1508 	clr	_TR0
+      000230 C2 8C            [12] 1508 	clr	_TR0
                            0001A9  1509 	C$lab1_2.c$156$2$50 ==.
                                    1510 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:156: BILED0 = 0;  // Turn OFF the BILED
-      0001A9 C2 B3            [12] 1511 	clr	_BILED0
+      000232 C2 B3            [12] 1511 	clr	_BILED0
                            0001AB  1512 	C$lab1_2.c$157$2$50 ==.
                                    1513 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:157: BILED1 = 0;
-      0001AB C2 B4            [12] 1514 	clr	_BILED1
+      000234 C2 B4            [12] 1514 	clr	_BILED1
                            0001AD  1515 	C$lab1_2.c$158$2$50 ==.
                                    1516 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:158: printf("\rNumber of Overflows = %d\n", Counts);
-      0001AD C0*00            [24] 1517 	push	_Counts
-      0001AF C0*01            [24] 1518 	push	(_Counts + 1)
-      0001B1 74r4F            [12] 1519 	mov	a,#___str_5
-      0001B3 C0 E0            [24] 1520 	push	acc
-      0001B5 74s00            [12] 1521 	mov	a,#(___str_5 >> 8)
-      0001B7 C0 E0            [24] 1522 	push	acc
-      0001B9 74 80            [12] 1523 	mov	a,#0x80
-      0001BB C0 E0            [24] 1524 	push	acc
-      0001BD 12r00r00         [24] 1525 	lcall	_printf
-      0001C0 E5 81            [12] 1526 	mov	a,sp
-      0001C2 24 FB            [12] 1527 	add	a,#0xfb
-      0001C4 F5 81            [12] 1528 	mov	sp,a
-      0001C6 02r00r83         [24] 1529 	ljmp	00101$
+      000236 C0 08            [24] 1517 	push	_Counts
+      000238 C0 09            [24] 1518 	push	(_Counts + 1)
+      00023A 74 98            [12] 1519 	mov	a,#___str_5
+      00023C C0 E0            [24] 1520 	push	acc
+      00023E 74 0A            [12] 1521 	mov	a,#(___str_5 >> 8)
+      000240 C0 E0            [24] 1522 	push	acc
+      000242 74 80            [12] 1523 	mov	a,#0x80
+      000244 C0 E0            [24] 1524 	push	acc
+      000246 12 03 FF         [24] 1525 	lcall	_printf
+      000249 E5 81            [12] 1526 	mov	a,sp
+      00024B 24 FB            [12] 1527 	add	a,#0xfb
+      00024D F5 81            [12] 1528 	mov	sp,a
+      00024F 02 01 0C         [24] 1529 	ljmp	00101$
                            0001C9  1530 	C$lab1_2.c$161$1$49 ==.
                            0001C9  1531 	XG$main$0$0 ==.
-      0001C9 22               [24] 1532 	ret
+      000252 22               [24] 1532 	ret
                                    1533 ;------------------------------------------------------------
                                    1534 ;Allocation info for local variables in function 'Port_Init'
                                    1535 ;------------------------------------------------------------
@@ -1539,31 +1539,31 @@
                                    1539 ;	-----------------------------------------
                                    1540 ;	 function Port_Init
                                    1541 ;	-----------------------------------------
-      0001CA                       1542 _Port_Init:
+      000253                       1542 _Port_Init:
                            0001CA  1543 	C$lab1_2.c$167$1$67 ==.
                                    1544 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:167: P3MDOUT |= 0xF8;// set Port 3 output pins to push-pull mode 
-      0001CA 43 A7 F8         [24] 1545 	orl	_P3MDOUT,#0xF8
+      000253 43 A7 F8         [24] 1545 	orl	_P3MDOUT,#0xF8
                            0001CD  1546 	C$lab1_2.c$168$1$67 ==.
                                    1547 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:168: P3MDOUT &= 0xFC; // set Port 3 input pins to open drain mode 
-      0001CD 53 A7 FC         [24] 1548 	anl	_P3MDOUT,#0xFC
+      000256 53 A7 FC         [24] 1548 	anl	_P3MDOUT,#0xFC
                            0001D0  1549 	C$lab1_2.c$169$1$67 ==.
                                    1550 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:169: P3 |= ~0xFC; // set Port 3 input pins to high impedance state 
-      0001D0 AF B0            [24] 1551 	mov	r7,_P3
-      0001D2 74 03            [12] 1552 	mov	a,#0x03
-      0001D4 4F               [12] 1553 	orl	a,r7
-      0001D5 F5 B0            [12] 1554 	mov	_P3,a
+      000259 AF B0            [24] 1551 	mov	r7,_P3
+      00025B 74 03            [12] 1552 	mov	a,#0x03
+      00025D 4F               [12] 1553 	orl	a,r7
+      00025E F5 B0            [12] 1554 	mov	_P3,a
                            0001D7  1555 	C$lab1_2.c$171$1$67 ==.
                                    1556 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:171: P2MDOUT &= 0xFE; // set Port 2 input pins to push-pull mode
-      0001D7 53 A6 FE         [24] 1557 	anl	_P2MDOUT,#0xFE
+      000260 53 A6 FE         [24] 1557 	anl	_P2MDOUT,#0xFE
                            0001DA  1558 	C$lab1_2.c$172$1$67 ==.
                                    1559 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:172: P2 |= ~0xFE; // set Port 2 input pins to high impedance state
-      0001DA AF A0            [24] 1560 	mov	r7,_P2
-      0001DC 74 01            [12] 1561 	mov	a,#0x01
-      0001DE 4F               [12] 1562 	orl	a,r7
-      0001DF F5 A0            [12] 1563 	mov	_P2,a
+      000263 AF A0            [24] 1560 	mov	r7,_P2
+      000265 74 01            [12] 1561 	mov	a,#0x01
+      000267 4F               [12] 1562 	orl	a,r7
+      000268 F5 A0            [12] 1563 	mov	_P2,a
                            0001E1  1564 	C$lab1_2.c$174$1$67 ==.
                            0001E1  1565 	XG$Port_Init$0$0 ==.
-      0001E1 22               [24] 1566 	ret
+      00026A 22               [24] 1566 	ret
                                    1567 ;------------------------------------------------------------
                                    1568 ;Allocation info for local variables in function 'Interrupt_Init'
                                    1569 ;------------------------------------------------------------
@@ -1573,16 +1573,16 @@
                                    1573 ;	-----------------------------------------
                                    1574 ;	 function Interrupt_Init
                                    1575 ;	-----------------------------------------
-      0001E2                       1576 _Interrupt_Init:
+      00026B                       1576 _Interrupt_Init:
                            0001E2  1577 	C$lab1_2.c$178$1$69 ==.
                                    1578 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:178: ET0 = 1;      // enable Timer0 Interrupt request
-      0001E2 D2 A9            [12] 1579 	setb	_ET0
+      00026B D2 A9            [12] 1579 	setb	_ET0
                            0001E4  1580 	C$lab1_2.c$179$1$69 ==.
                                    1581 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:179: EA = 1;       // enable global interrupts
-      0001E4 D2 AF            [12] 1582 	setb	_EA
+      00026D D2 AF            [12] 1582 	setb	_EA
                            0001E6  1583 	C$lab1_2.c$180$1$69 ==.
                            0001E6  1584 	XG$Interrupt_Init$0$0 ==.
-      0001E6 22               [24] 1585 	ret
+      00026F 22               [24] 1585 	ret
                                    1586 ;------------------------------------------------------------
                                    1587 ;Allocation info for local variables in function 'Timer_Init'
                                    1588 ;------------------------------------------------------------
@@ -1592,28 +1592,28 @@
                                    1592 ;	-----------------------------------------
                                    1593 ;	 function Timer_Init
                                    1594 ;	-----------------------------------------
-      0001E7                       1595 _Timer_Init:
+      000270                       1595 _Timer_Init:
                            0001E7  1596 	C$lab1_2.c$185$1$71 ==.
                                    1597 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:185: CKCON |= 0x08;  // Timer0 uses SYSCLK as source
-      0001E7 43 8E 08         [24] 1598 	orl	_CKCON,#0x08
+      000270 43 8E 08         [24] 1598 	orl	_CKCON,#0x08
                            0001EA  1599 	C$lab1_2.c$186$1$71 ==.
                                    1600 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:186: TMOD &= 0xF0;   // clear the 4 least significant bits
-      0001EA 53 89 F0         [24] 1601 	anl	_TMOD,#0xF0
+      000273 53 89 F0         [24] 1601 	anl	_TMOD,#0xF0
                            0001ED  1602 	C$lab1_2.c$187$1$71 ==.
                                    1603 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:187: TMOD |= 0x01;   // Timer0 in mode 1
-      0001ED 43 89 01         [24] 1604 	orl	_TMOD,#0x01
+      000276 43 89 01         [24] 1604 	orl	_TMOD,#0x01
                            0001F0  1605 	C$lab1_2.c$188$1$71 ==.
                                    1606 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:188: TR0 = 0;           // Stop Timer0
-      0001F0 C2 8C            [12] 1607 	clr	_TR0
+      000279 C2 8C            [12] 1607 	clr	_TR0
                            0001F2  1608 	C$lab1_2.c$189$1$71 ==.
                                    1609 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:189: TL0 = 0;           // Clear low byte of register T0
-      0001F2 75 8A 00         [24] 1610 	mov	_TL0,#0x00
+      00027B 75 8A 00         [24] 1610 	mov	_TL0,#0x00
                            0001F5  1611 	C$lab1_2.c$190$1$71 ==.
                                    1612 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:190: TH0 = 0;           // Clear high byte of register T0
-      0001F5 75 8C 00         [24] 1613 	mov	_TH0,#0x00
+      00027E 75 8C 00         [24] 1613 	mov	_TH0,#0x00
                            0001F8  1614 	C$lab1_2.c$192$1$71 ==.
                            0001F8  1615 	XG$Timer_Init$0$0 ==.
-      0001F8 22               [24] 1616 	ret
+      000281 22               [24] 1616 	ret
                                    1617 ;------------------------------------------------------------
                                    1618 ;Allocation info for local variables in function 'Timer0_ISR'
                                    1619 ;------------------------------------------------------------
@@ -1623,36 +1623,36 @@
                                    1623 ;	-----------------------------------------
                                    1624 ;	 function Timer0_ISR
                                    1625 ;	-----------------------------------------
-      0001F9                       1626 _Timer0_ISR:
-      0001F9 C0 E0            [24] 1627 	push	acc
-      0001FB C0 D0            [24] 1628 	push	psw
+      000282                       1626 _Timer0_ISR:
+      000282 C0 E0            [24] 1627 	push	acc
+      000284 C0 D0            [24] 1628 	push	psw
                            0001FD  1629 	C$lab1_2.c$198$1$73 ==.
                                    1630 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:198: Counts++;
-      0001FD 05*00            [12] 1631 	inc	_Counts
-      0001FF E4               [12] 1632 	clr	a
-      000200 B5*00 02         [24] 1633 	cjne	a,_Counts,00108$
-      000203 05*01            [12] 1634 	inc	(_Counts + 1)
-      000205                       1635 00108$:
+      000286 05 08            [12] 1631 	inc	_Counts
+      000288 E4               [12] 1632 	clr	a
+      000289 B5 08 02         [24] 1633 	cjne	a,_Counts,00108$
+      00028C 05 09            [12] 1634 	inc	(_Counts + 1)
+      00028E                       1635 00108$:
                            000205  1636 	C$lab1_2.c$199$1$73 ==.
                                    1637 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:199: if(Counts == 337)
-      000205 74 51            [12] 1638 	mov	a,#0x51
-      000207 B5*00 0C         [24] 1639 	cjne	a,_Counts,00103$
-      00020A 74 01            [12] 1640 	mov	a,#0x01
-      00020C B5*01 07         [24] 1641 	cjne	a,(_Counts + 1),00103$
+      00028E 74 51            [12] 1638 	mov	a,#0x51
+      000290 B5 08 0C         [24] 1639 	cjne	a,_Counts,00103$
+      000293 74 01            [12] 1640 	mov	a,#0x01
+      000295 B5 09 07         [24] 1641 	cjne	a,(_Counts + 1),00103$
                            00020F  1642 	C$lab1_2.c$201$2$74 ==.
                                    1643 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:201: Seconds ++;
-      00020F 05*02            [12] 1644 	inc	_Seconds
+      000298 05 0A            [12] 1644 	inc	_Seconds
                            000211  1645 	C$lab1_2.c$202$2$74 ==.
                                    1646 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:202: Counts = 0;
-      000211 E4               [12] 1647 	clr	a
-      000212 F5*00            [12] 1648 	mov	_Counts,a
-      000214 F5*01            [12] 1649 	mov	(_Counts + 1),a
-      000216                       1650 00103$:
-      000216 D0 D0            [24] 1651 	pop	psw
-      000218 D0 E0            [24] 1652 	pop	acc
+      00029A E4               [12] 1647 	clr	a
+      00029B F5 08            [12] 1648 	mov	_Counts,a
+      00029D F5 09            [12] 1649 	mov	(_Counts + 1),a
+      00029F                       1650 00103$:
+      00029F D0 D0            [24] 1651 	pop	psw
+      0002A1 D0 E0            [24] 1652 	pop	acc
                            00021A  1653 	C$lab1_2.c$204$1$73 ==.
                            00021A  1654 	XG$Timer0_ISR$0$0 ==.
-      00021A 32               [24] 1655 	reti
+      0002A3 32               [24] 1655 	reti
                                    1656 ;	eliminated unneeded mov psw,# (no regs used in bank)
                                    1657 ;	eliminated unneeded push/pop dpl
                                    1658 ;	eliminated unneeded push/pop dph
@@ -1666,16 +1666,16 @@
                                    1666 ;	-----------------------------------------
                                    1667 ;	 function random
                                    1668 ;	-----------------------------------------
-      00021B                       1669 _random:
+      0002A4                       1669 _random:
                            00021B  1670 	C$lab1_2.c$215$1$76 ==.
                                    1671 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:215: return (rand()%3);  // rand returns a random number between 0 and 32767.
-      00021B 12r00r00         [24] 1672 	lcall	_rand
-      00021E 75*00 03         [24] 1673 	mov	__modsint_PARM_2,#0x03
-      000221 75*01 00         [24] 1674 	mov	(__modsint_PARM_2 + 1),#0x00
-      000224 12r00r00         [24] 1675 	lcall	__modsint
+      0002A4 12 02 D5         [24] 1672 	lcall	_rand
+      0002A7 75 16 03         [24] 1673 	mov	__modsint_PARM_2,#0x03
+      0002AA 75 17 00         [24] 1674 	mov	(__modsint_PARM_2 + 1),#0x00
+      0002AD 12 0A 0F         [24] 1675 	lcall	__modsint
                            000227  1676 	C$lab1_2.c$219$1$76 ==.
                            000227  1677 	XG$random$0$0 ==.
-      000227 22               [24] 1678 	ret
+      0002B0 22               [24] 1678 	ret
                                    1679 ;------------------------------------------------------------
                                    1680 ;Allocation info for local variables in function 'Button0'
                                    1681 ;------------------------------------------------------------
@@ -1685,22 +1685,22 @@
                                    1685 ;	-----------------------------------------
                                    1686 ;	 function Button0
                                    1687 ;	-----------------------------------------
-      000228                       1688 _Button0:
+      0002B1                       1688 _Button0:
                            000228  1689 	C$lab1_2.c$228$1$78 ==.
                                    1690 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:228: if (!PB0)
-      000228 20 B0 05         [24] 1691 	jb	_PB0,00102$
+      0002B1 20 B0 05         [24] 1691 	jb	_PB0,00102$
                            00022B  1692 	C$lab1_2.c$230$2$79 ==.
                                    1693 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:230: return 1;
-      00022B 90 00 01         [24] 1694 	mov	dptr,#0x0001
-      00022E 80 03            [24] 1695 	sjmp	00104$
-      000230                       1696 00102$:
+      0002B4 90 00 01         [24] 1694 	mov	dptr,#0x0001
+      0002B7 80 03            [24] 1695 	sjmp	00104$
+      0002B9                       1696 00102$:
                            000230  1697 	C$lab1_2.c$232$1$78 ==.
                                    1698 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:232: else return 0;
-      000230 90 00 00         [24] 1699 	mov	dptr,#0x0000
-      000233                       1700 00104$:
+      0002B9 90 00 00         [24] 1699 	mov	dptr,#0x0000
+      0002BC                       1700 00104$:
                            000233  1701 	C$lab1_2.c$233$1$78 ==.
                            000233  1702 	XG$Button0$0$0 ==.
-      000233 22               [24] 1703 	ret
+      0002BC 22               [24] 1703 	ret
                                    1704 ;------------------------------------------------------------
                                    1705 ;Allocation info for local variables in function 'Button1'
                                    1706 ;------------------------------------------------------------
@@ -1710,22 +1710,22 @@
                                    1710 ;	-----------------------------------------
                                    1711 ;	 function Button1
                                    1712 ;	-----------------------------------------
-      000234                       1713 _Button1:
+      0002BD                       1713 _Button1:
                            000234  1714 	C$lab1_2.c$237$1$81 ==.
                                    1715 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:237: if (!PB1)
-      000234 20 B1 05         [24] 1716 	jb	_PB1,00102$
+      0002BD 20 B1 05         [24] 1716 	jb	_PB1,00102$
                            000237  1717 	C$lab1_2.c$239$2$82 ==.
                                    1718 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:239: return 1;
-      000237 90 00 01         [24] 1719 	mov	dptr,#0x0001
-      00023A 80 03            [24] 1720 	sjmp	00104$
-      00023C                       1721 00102$:
+      0002C0 90 00 01         [24] 1719 	mov	dptr,#0x0001
+      0002C3 80 03            [24] 1720 	sjmp	00104$
+      0002C5                       1721 00102$:
                            00023C  1722 	C$lab1_2.c$241$1$81 ==.
                                    1723 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:241: else return 0;
-      00023C 90 00 00         [24] 1724 	mov	dptr,#0x0000
-      00023F                       1725 00104$:
+      0002C5 90 00 00         [24] 1724 	mov	dptr,#0x0000
+      0002C8                       1725 00104$:
                            00023F  1726 	C$lab1_2.c$242$1$81 ==.
                            00023F  1727 	XG$Button1$0$0 ==.
-      00023F 22               [24] 1728 	ret
+      0002C8 22               [24] 1728 	ret
                                    1729 ;------------------------------------------------------------
                                    1730 ;Allocation info for local variables in function 'Switch'
                                    1731 ;------------------------------------------------------------
@@ -1735,58 +1735,58 @@
                                    1735 ;	-----------------------------------------
                                    1736 ;	 function Switch
                                    1737 ;	-----------------------------------------
-      000240                       1738 _Switch:
+      0002C9                       1738 _Switch:
                            000240  1739 	C$lab1_2.c$249$1$84 ==.
                                    1740 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:249: if (!SS) return 1;
-      000240 20 A0 05         [24] 1741 	jb	_SS,00102$
-      000243 90 00 01         [24] 1742 	mov	dptr,#0x0001
-      000246 80 03            [24] 1743 	sjmp	00104$
-      000248                       1744 00102$:
+      0002C9 20 A0 05         [24] 1741 	jb	_SS,00102$
+      0002CC 90 00 01         [24] 1742 	mov	dptr,#0x0001
+      0002CF 80 03            [24] 1743 	sjmp	00104$
+      0002D1                       1744 00102$:
                            000248  1745 	C$lab1_2.c$250$1$84 ==.
                                    1746 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:250: else return 0;
-      000248 90 00 00         [24] 1747 	mov	dptr,#0x0000
-      00024B                       1748 00104$:
+      0002D1 90 00 00         [24] 1747 	mov	dptr,#0x0000
+      0002D4                       1748 00104$:
                            00024B  1749 	C$lab1_2.c$251$1$84 ==.
                            00024B  1750 	XG$Switch$0$0 ==.
-      00024B 22               [24] 1751 	ret
+      0002D4 22               [24] 1751 	ret
                                    1752 	.area CSEG    (CODE)
                                    1753 	.area CONST   (CODE)
                            000000  1754 Flab1_2$__str_0$0$0 == .
-      000000                       1755 ___str_0:
-      000000 53 74 61 72 74        1756 	.ascii "Start"
-      000005 0D                    1757 	.db 0x0D
-      000006 0A                    1758 	.db 0x0A
-      000007 00                    1759 	.db 0x00
+      000A49                       1755 ___str_0:
+      000A49 53 74 61 72 74        1756 	.ascii "Start"
+      000A4E 0D                    1757 	.db 0x0D
+      000A4F 0A                    1758 	.db 0x0A
+      000A50 00                    1759 	.db 0x00
                            000008  1760 Flab1_2$__str_1$0$0 == .
-      000008                       1761 ___str_1:
-      000008 53 77 69 74 63 68 20  1762 	.ascii "Switch is off!"
+      000A51                       1761 ___str_1:
+      000A51 53 77 69 74 63 68 20  1762 	.ascii "Switch is off!"
              69 73 20 6F 66 66 21
-      000016 00                    1763 	.db 0x00
+      000A5F 00                    1763 	.db 0x00
                            000017  1764 Flab1_2$__str_2$0$0 == .
-      000017                       1765 ___str_2:
-      000017 54 68 69 73 20 69 73  1766 	.ascii "This is just a test"
+      000A60                       1765 ___str_2:
+      000A60 54 68 69 73 20 69 73  1766 	.ascii "This is just a test"
              20 6A 75 73 74 20 61
              20 74 65 73 74
-      00002A 00                    1767 	.db 0x00
+      000A73 00                    1767 	.db 0x00
                            00002B  1768 Flab1_2$__str_3$0$0 == .
-      00002B                       1769 ___str_3:
-      00002B 4F 76 65 72 66 6C 6F  1770 	.ascii "Overflows: %u"
+      000A74                       1769 ___str_3:
+      000A74 4F 76 65 72 66 6C 6F  1770 	.ascii "Overflows: %u"
              77 73 3A 20 25 75
-      000038 00                    1771 	.db 0x00
+      000A81 00                    1771 	.db 0x00
                            000039  1772 Flab1_2$__str_4$0$0 == .
-      000039                       1773 ___str_4:
-      000039 43 6F 72 72 65 63 74  1774 	.ascii "Correct responses: %u"
+      000A82                       1773 ___str_4:
+      000A82 43 6F 72 72 65 63 74  1774 	.ascii "Correct responses: %u"
              20 72 65 73 70 6F 6E
              73 65 73 3A 20 25 75
-      00004E 00                    1775 	.db 0x00
+      000A97 00                    1775 	.db 0x00
                            00004F  1776 Flab1_2$__str_5$0$0 == .
-      00004F                       1777 ___str_5:
-      00004F 0D                    1778 	.db 0x0D
-      000050 4E 75 6D 62 65 72 20  1779 	.ascii "Number of Overflows = %d"
+      000A98                       1777 ___str_5:
+      000A98 0D                    1778 	.db 0x0D
+      000A99 4E 75 6D 62 65 72 20  1779 	.ascii "Number of Overflows = %d"
              6F 66 20 4F 76 65 72
              66 6C 6F 77 73 20 3D
              20 25 64
-      000068 0A                    1780 	.db 0x0A
-      000069 00                    1781 	.db 0x00
+      000AB1 0A                    1780 	.db 0x0A
+      000AB2 00                    1781 	.db 0x00
                                    1782 	.area XINIT   (CODE)
                                    1783 	.area CABS    (ABS,CODE)
