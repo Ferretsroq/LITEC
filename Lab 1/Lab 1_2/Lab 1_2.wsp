@@ -462,7 +462,7 @@ MRUDockRightPos=774778414
 MRUDockBottomPos=774778414
 MRUFloatStyle=4
 MRUFloatXPos=-2147483648
-MRUFloatYPos=774778414
+MRUFloatYPos=868
 Style=20372
 ExStyle=3857
 PrevFloating=False
@@ -493,7 +493,7 @@ MRUDockRightPos=808464432
 MRUDockBottomPos=808464432
 MRUFloatStyle=4
 MRUFloatXPos=-2147483648
-MRUFloatYPos=808464432
+MRUFloatYPos=868
 Style=20372
 ExStyle=3857
 PrevFloating=False
@@ -524,7 +524,7 @@ MRUDockRightPos=808464432
 MRUDockBottomPos=808464432
 MRUFloatStyle=4
 MRUFloatXPos=-2147483648
-MRUFloatYPos=808464432
+MRUFloatYPos=868
 Style=20372
 ExStyle=3857
 PrevFloating=False
@@ -555,7 +555,7 @@ MRUDockRightPos=774778414
 MRUDockBottomPos=774778414
 MRUFloatStyle=4
 MRUFloatXPos=-2147483648
-MRUFloatYPos=774778414
+MRUFloatYPos=868
 Style=20372
 ExStyle=3857
 PrevFloating=False
@@ -803,7 +803,7 @@ MRUDockRightPos=37774272
 MRUDockBottomPos=0
 MRUFloatStyle=4
 MRUFloatXPos=-2147483648
-MRUFloatYPos=986639
+MRUFloatYPos=868
 Style=20372
 ExStyle=3857
 PrevFloating=False
@@ -1267,7 +1267,7 @@ MRUDockRightPos=37460672
 MRUDockBottomPos=37459832
 MRUFloatStyle=4
 MRUFloatXPos=-2147483648
-MRUFloatYPos=38266120
+MRUFloatYPos=868
 Style=20372
 ExStyle=3857
 PrevFloating=False
@@ -1815,6 +1815,7 @@ WindowPlacement=MCAAAAAACAAAAAAADAAAAAAAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPJBAAAAAA
 Title=Silicon Laboratories IDE - [lab1-2.c]
 [WorkState_v1_1.Frames.ChildFrames]
 ptn_Child1=Document-0
+ptn_Child2=Document-1
 [WorkState_v1_1.Frames.ChildFrames.Document-0]
 ptn_Child1=ViewFrame-0
 [WorkState_v1_1.Frames.ChildFrames.Document-0.ViewFrame-0]
@@ -1823,6 +1824,14 @@ DocumentString=Source File
 DocTemplateIndex=0
 WindowPlacement=MCAAAAAACAAAAAAADAAAAAAAPPPPPPPPPPPPPPPPIPPPPPPPCOPPPPPPAAAAAAAAAAAAAAAAJLEAAAAAOIBAAAAA
 IsActiveChildFrame=True
+[WorkState_v1_1.Frames.ChildFrames.Document-1]
+ptn_Child1=ViewFrame-0
+[WorkState_v1_1.Frames.ChildFrames.Document-1.ViewFrame-0]
+DocPathName=..\Lab 1_1\Lab1_1.c
+DocumentString=Source File
+DocTemplateIndex=0
+WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPIPPPPPPPCOPPPPPPIEBAAAAAABAAAAAABAGAAAAAOJBAAAAA
+IsActiveChildFrame=False
 [WorkState_v1_1.SerialPort]
 SerialPort=1
 [WorkState_v1_1.StepInc]
@@ -1885,7 +1894,7 @@ BitsBeforeTargetIR=0
 [WorkState_v1_1.BankingPN]
 BankingPN=32767
 [WorkState_v1_1.OutputFile]
-OutputFile=Lab 1_2
+OutputFile=Lab 1_2.omf
 [WorkState_v1_1.MakeFile]
 MakeFile=
 [WorkState_v1_1.HexGenerator]

@@ -19,7 +19,7 @@ void Timer_Init(void); // Initialize Timer 0
 void Interrupt_Init(void); //Initialize interrupts
 void Timer0_ISR (void) __interrupt 1;
 void Debugging(void);
-int Button1(void); //i am the swankiest of duckies
+int Button1(void);
 int Button2(void);
 int Switch(void);
 unsigned char random(void);

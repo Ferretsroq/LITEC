@@ -22,8 +22,8 @@ void Port_Init(void);      // Initialize ports for input and output
 void Timer_Init(void);     // Initialize Timer 0 
 void Interrupt_Init(void); //Initialize interrupts
 void Timer0_ISR(void) __interrupt 1;
+int Button0(void);
 int Button1(void);
-int Button2(void);
 int Switch(void);
 unsigned char random(void);
 
@@ -36,14 +36,19 @@ __sbit __at 0xB3 BILED0; // BILED0, associated with Port 3 Pin 3
 __sbit __at 0xB4 BILED1; // BILED1, associated with Port 3 Pin 4
 __sbit __at 0xB7 Buzzer; // Buzzer, associated with Port 3 Pin 7
 __sbit __at 0xA0 SS; // Slide switch, associated with Port 2 Pin 0
-__sbit __at 0xB0 PB1; // Push button 1, associated with Port 3 Pin 0
-__sbit __at 0xB1 PB2; // Push button 2, associated with Port 3 Pin 1
+__sbit __at 0xB0 PB0; // Push button 1, associated with Port 3 Pin 0
+__sbit __at 0xB1 PB1; // Push button 2, associated with Port 3 Pin 1
 __sbit __at 0xA0 SS;    // Slide Switch associated with Port 2 Pin 0
 
 // sbit settings are incomplete, include those developed 
 // in Lab 1-1 and add the sbit setting for LED1
 unsigned int Counts = 0;
 unsigned char Seconds = 0;
+unsigned char previousRNG = 7; 
+unsigned char RNG = 0;
+unsigned char turns = 0;
+unsigned char correctAnswerCount = 0;
+unsigned char flag = 0;
 
 //***************
 void main(void)
@@ -62,15 +67,85 @@ void main(void)
     {
 
         while( SS ); // while SS is OFF (high), wait for SS to be set ON
-
-        TR0 = 1;     // Timer 0 enabled
-        while (PB1); // wait until PB1 is pressed
+        TR0 = 1;     // Timer 0 Enabled
+		while(turns <= 10)
+		{
+			RNG = random(); //
+			if (RNG != previousRNG) // Ensure numbers don't repeat
+			{
+				if(RNG == 0) 
+				{
+					LED0 = 0; // Turn on LED0
+					LED1 = 1; // Turn off LED1
+					while(Seconds == 0 && flag == 0) // Within the first second
+					{
+						if(Button0) // If the correct button is pushed
+						{
+							correctAnswerCount++; // Log the correct answer
+							BILED0 = 1;			  // Make BILED green
+							BILED1 = 0;	
+							flag = 1;
+						}	
+						else 
+						{
+							BILED0 = 0;			// Make BILED red
+							BILED1 = 1;
+						}
+					}	
+				}
+				else if(RNG == 1)
+				{
+				 	LED1 = 0; //Turn on LED1
+				 	LED0 = 1; //Turn off LED0
+					while(Seconds == 0 && flag == 0) // Within the first second
+					{
+						if(Button1) // If the correct button is pushed
+						{
+							correctAnswerCount++; // Log the correct answer
+							BILED0 = 1;			  // Make BILED green
+							BILED1 = 0;	
+							flag = 1;
+						}	
+						else 
+						{
+							BILED0 = 0;			// Make BILED red
+							BILED1 = 1;
+						}
+					}	
+				}
+				else if (RNG == 2)
+				{
+					LED0 = 0; //Turn on LED0
+					LED1 = 0; //Turn on 
+					while(Seconds == 0 && flag == 0) // Within the first second
+					{
+						if(Button0 && Button1) // If the correct button is pushed
+						{
+							correctAnswerCount++; // Log the correct answer
+							BILED0 = 1;			  // Make BILED green
+							BILED1 = 0;	
+							flag = 1;
+						}	
+						else 
+						{
+							BILED0 = 0;			// Make BILED red
+							BILED1 = 1;
+						}
+					}	
+				}
+				turns++;
+				previousRNG = RNG;
+				flag = 0;	
+			}
+			printf("Correct responses: %u", correctAnswerCount);
+		}
+        while (PB0); // wait until PB1 is pressed
         Counts = 0;  // set overflow counter to zero
 
         BILED0 = 1;  // while button is down, turn ON the BILED
         BILED1 = 0;
 
-        while (!PB1);// wait until PB1 is released
+        while (!PB0);// wait until PB1 is released
         TR0 = 0;     // Timer 0 disabled
 
         BILED0 = 0;  // Turn OFF the BILED
@@ -132,10 +207,10 @@ void Timer0_ISR(void) __interrupt 1
 /*return a random integer number between 0 and 1*/
 unsigned char random(void)
 {
-    return (rand()%2);  // rand returns a random number between 0 and 32767.
+    return (rand()%3);  // rand returns a random number between 0 and 32767.
                         // the mod operation (%) returns the remainder of 
-                        // dividing this value by 2 and returns the result,
-                        // a value of either 0 or 1.
+                        // dividing this value by 3 and returns the result,
+                        // a value of either 0, 1, or 2.
 }
 
 //***************
@@ -143,18 +218,18 @@ unsigned char random(void)
 // or a 1 if Pushbutton 1 is activated.
 // This code reads a single input only, associated with PB1
 // Note this code is not used by function yet, you must incorporate it
-int Button1(void)
+int Button0(void)
 {
-	if (!PB1)
+	if (!PB0)
 	{
 		return 1;
 	}
 	else return 0;
 }
 
-int Button2(void)
+int Button1(void)
 {
-	if (!PB2)
+	if (!PB1)
 	{
 		return 1;
 	}

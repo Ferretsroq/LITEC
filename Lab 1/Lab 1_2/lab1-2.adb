@@ -10,12 +10,17 @@ F:G$Interrupt_Init$0$0({2}DF,SV:S),Z,0,0,0,0,0
 F:G$Timer_Init$0$0({2}DF,SV:S),Z,0,0,0,0,0
 F:G$Timer0_ISR$0$0({2}DF,SV:S),Z,0,0,1,1,0
 F:G$random$0$0({2}DF,SC:U),Z,0,0,0,0,0
+F:G$Button0$0$0({2}DF,SI:S),Z,0,0,0,0,0
 F:G$Button1$0$0({2}DF,SI:S),Z,0,0,0,0,0
-F:G$Button2$0$0({2}DF,SI:S),Z,0,0,0,0,0
 F:G$Switch$0$0({2}DF,SI:S),Z,0,0,0,0,0
 S:Llab1_2.getchar$c$1$10({1}SC:S),R,0,0,[]
 S:G$Counts$0$0({2}SI:U),E,0,0
 S:G$Seconds$0$0({1}SC:U),E,0,0
+S:G$previousRNG$0$0({1}SC:U),E,0,0
+S:G$RNG$0$0({1}SC:U),E,0,0
+S:G$turns$0$0({1}SC:U),E,0,0
+S:G$correctAnswerCount$0$0({1}SC:U),E,0,0
+S:G$flag$0$0({1}SC:U),E,0,0
 S:G$P0$0$0({1}SC:U),I,0,0
 S:G$SP$0$0({1}SC:U),I,0,0
 S:G$DPL$0$0({1}SC:U),I,0,0
@@ -297,8 +302,8 @@ S:G$LED0$0$0({1}SX:U),J,0,0
 S:G$BILED0$0$0({1}SX:U),J,0,0
 S:G$BILED1$0$0({1}SX:U),J,0,0
 S:G$Buzzer$0$0({1}SX:U),J,0,0
+S:G$PB0$0$0({1}SX:U),J,0,0
 S:G$PB1$0$0({1}SX:U),J,0,0
-S:G$PB2$0$0({1}SX:U),J,0,0
 S:G$SS$0$0({1}SX:U),J,0,0
 S:G$SYSCLK_Init$0$0({2}DF,SV:S),C,0,0
 S:G$UART0_Init$0$0({2}DF,SV:S),C,0,0
@@ -333,4 +338,5 @@ S:G$rand$0$0({2}DF,SI:S),C,0,0
 S:G$srand$0$0({2}DF,SV:S),C,0,0
 S:G$main$0$0({2}DF,SV:S),C,0,0
 S:Flab1_2$__str_0$0$0({8}DA8d,SC:S),D,0,0
-S:Flab1_2$__str_1$0$0({27}DA27d,SC:S),D,0,0
+S:Flab1_2$__str_1$0$0({22}DA22d,SC:S),D,0,0
+S:Flab1_2$__str_2$0$0({27}DA27d,SC:S),D,0,0
