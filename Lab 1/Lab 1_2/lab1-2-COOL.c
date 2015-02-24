@@ -171,7 +171,6 @@ void main(void)
 								{
 									Counts = 0;
 									while (Counts <= countvariable);
-									printf("\rYou pressed Button 0 and Button 1\n");
 									correctAnswerCount++; // Log the correct answer
 									BILED0 = 1;			  // Make BILED green
 									BILED1 = 0;	

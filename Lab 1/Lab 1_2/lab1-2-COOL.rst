@@ -1,7 +1,7 @@
                                       1 ;--------------------------------------------------------
                                       2 ; File Created by SDCC : free open source ANSI-C Compiler
                                       3 ; Version 3.4.0 #8981 (Apr  5 2014) (MINGW32)
-                                      4 ; This file was generated Mon Feb 23 20:31:12 2015
+                                      4 ; This file was generated Tue Feb 24 12:09:53 2015
                                       5 ;--------------------------------------------------------
                                       6 	.module lab1_2_COOL
                                       7 	.optsdcc -mmcs51 --model-small
@@ -998,7 +998,7 @@
       000000 02 00 11         [24]  998 	ljmp	__sdcc_gsinit_startup
       000003 32               [24]  999 	reti
       000004                       1000 	.ds	7
-      00000B 02 03 EE         [24] 1001 	ljmp	_Timer0_ISR
+      00000B 02 03 7B         [24] 1001 	ljmp	_Timer0_ISR
                                    1002 ;--------------------------------------------------------
                                    1003 ; global & static initialisations
                                    1004 ;--------------------------------------------------------
@@ -1012,45 +1012,45 @@
                                    1012 	.globl __mcs51_genXINIT
                                    1013 	.globl __mcs51_genXRAMCLEAR
                                    1014 	.globl __mcs51_genRAMCLEAR
-                           000000  1015 	C$lab1_2_COOL.c$45$1$89 ==.
-                                   1016 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:45: unsigned int Counts = 0;
+                           000000  1015 	C$lab1_2_COOL.c$41$1$92 ==.
+                                   1016 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:41: unsigned int Counts = 0;
       00006A E4               [12] 1017 	clr	a
       00006B F5 08            [12] 1018 	mov	_Counts,a
       00006D F5 09            [12] 1019 	mov	(_Counts + 1),a
-                           000005  1020 	C$lab1_2_COOL.c$46$1$89 ==.
-                                   1021 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:46: unsigned char Seconds = 0;
+                           000005  1020 	C$lab1_2_COOL.c$42$1$92 ==.
+                                   1021 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:42: unsigned char Seconds = 0;
                                    1022 ;	1-genFromRTrack replaced	mov	_Seconds,#0x00
       00006F F5 0A            [12] 1023 	mov	_Seconds,a
-                           000007  1024 	C$lab1_2_COOL.c$47$1$89 ==.
-                                   1025 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:47: unsigned char previousRNG = 7; 
+                           000007  1024 	C$lab1_2_COOL.c$43$1$92 ==.
+                                   1025 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:43: unsigned char previousRNG = 7; 
       000071 75 0B 07         [24] 1026 	mov	_previousRNG,#0x07
-                           00000A  1027 	C$lab1_2_COOL.c$48$1$89 ==.
-                                   1028 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:48: unsigned char RNG = 0;
+                           00000A  1027 	C$lab1_2_COOL.c$44$1$92 ==.
+                                   1028 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:44: unsigned char RNG = 0;
                                    1029 ;	1-genFromRTrack replaced	mov	_RNG,#0x00
       000074 F5 0C            [12] 1030 	mov	_RNG,a
-                           00000C  1031 	C$lab1_2_COOL.c$49$1$89 ==.
-                                   1032 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:49: unsigned char turns = 1;
+                           00000C  1031 	C$lab1_2_COOL.c$45$1$92 ==.
+                                   1032 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:45: unsigned char turns = 1;
       000076 75 0D 01         [24] 1033 	mov	_turns,#0x01
-                           00000F  1034 	C$lab1_2_COOL.c$50$1$89 ==.
-                                   1035 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:50: unsigned char correctAnswerCount = 0;
+                           00000F  1034 	C$lab1_2_COOL.c$46$1$92 ==.
+                                   1035 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:46: unsigned char correctAnswerCount = 0;
                                    1036 ;	1-genFromRTrack replaced	mov	_correctAnswerCount,#0x00
       000079 F5 0E            [12] 1037 	mov	_correctAnswerCount,a
-                           000011  1038 	C$lab1_2_COOL.c$51$1$89 ==.
-                                   1039 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:51: unsigned char flag = 0;
+                           000011  1038 	C$lab1_2_COOL.c$47$1$92 ==.
+                                   1039 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:47: unsigned char flag = 0;
                                    1040 ;	1-genFromRTrack replaced	mov	_flag,#0x00
       00007B F5 0F            [12] 1041 	mov	_flag,a
-                           000013  1042 	C$lab1_2_COOL.c$52$1$89 ==.
-                                   1043 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:52: unsigned char programflag = 0; //ends the program once it's completed
+                           000013  1042 	C$lab1_2_COOL.c$48$1$92 ==.
+                                   1043 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:48: unsigned char programflag = 0; //ends the program once it's completed
                                    1044 ;	1-genFromRTrack replaced	mov	_programflag,#0x00
       00007D F5 10            [12] 1045 	mov	_programflag,a
-                           000015  1046 	C$lab1_2_COOL.c$53$1$89 ==.
-                                   1047 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:53: unsigned char countvariable = 50; // Adjusts the delay on repeated button inputs
+                           000015  1046 	C$lab1_2_COOL.c$49$1$92 ==.
+                                   1047 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:49: unsigned char countvariable = 50; // Adjusts the delay on repeated button inputs
       00007F 75 11 32         [24] 1048 	mov	_countvariable,#0x32
-                           000018  1049 	C$lab1_2_COOL.c$54$1$89 ==.
-                                   1050 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:54: unsigned char secondvariable = 1; // Adjusts the seconds allowed per turn
+                           000018  1049 	C$lab1_2_COOL.c$50$1$92 ==.
+                                   1050 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:50: unsigned char secondvariable = 1; // Adjusts the seconds allowed per turn
       000082 75 12 01         [24] 1051 	mov	_secondvariable,#0x01
-                           00001B  1052 	C$lab1_2_COOL.c$55$1$89 ==.
-                                   1053 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:55: unsigned char doublecountvariable = 100; // Only for double-button pushes
+                           00001B  1052 	C$lab1_2_COOL.c$51$1$92 ==.
+                                   1053 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:51: unsigned char doublecountvariable = 100; // Only for double-button pushes
       000085 75 13 64         [24] 1054 	mov	_doublecountvariable,#0x64
                                    1055 	.area GSFINAL (CODE)
       000092 02 00 0E         [24] 1056 	ljmp	__sdcc_program_startup
@@ -1243,859 +1243,770 @@
                                    1243 ;Allocation info for local variables in function 'main'
                                    1244 ;------------------------------------------------------------
                            00005C  1245 	G$main$0$0 ==.
-                           00005C  1246 	C$lab1_2_COOL.c$58$1$10 ==.
-                                   1247 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:58: void main(void)
+                           00005C  1246 	C$lab1_2_COOL.c$54$1$10 ==.
+                                   1247 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:54: void main(void)
                                    1248 ;	-----------------------------------------
                                    1249 ;	 function main
                                    1250 ;	-----------------------------------------
       0000F1                       1251 _main:
-                           00005C  1252 	C$lab1_2_COOL.c$60$1$49 ==.
-                                   1253 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:60: Sys_Init();      // System Initialization
+                           00005C  1252 	C$lab1_2_COOL.c$56$1$49 ==.
+                                   1253 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:56: Sys_Init();      // System Initialization
       0000F1 12 00 C5         [24] 1254 	lcall	_Sys_Init
-                           00005F  1255 	C$lab1_2_COOL.c$61$1$49 ==.
-                                   1256 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:61: Port_Init();     // Initialize ports 2 and 3 
-      0000F4 12 03 BF         [24] 1257 	lcall	_Port_Init
-                           000062  1258 	C$lab1_2_COOL.c$62$1$49 ==.
-                                   1259 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:62: Interrupt_Init();
-      0000F7 12 03 D7         [24] 1260 	lcall	_Interrupt_Init
-                           000065  1261 	C$lab1_2_COOL.c$63$1$49 ==.
-                                   1262 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:63: Timer_Init();    // Initialize Timer 0 
-      0000FA 12 03 DC         [24] 1263 	lcall	_Timer_Init
-                           000068  1264 	C$lab1_2_COOL.c$65$1$49 ==.
-                                   1265 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:65: putchar(' ');    // the quote fonts may not copy correctly into SiLabs IDE
+                           00005F  1255 	C$lab1_2_COOL.c$57$1$49 ==.
+                                   1256 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:57: Port_Init();     // Initialize ports 2 and 3 
+      0000F4 12 03 4C         [24] 1257 	lcall	_Port_Init
+                           000062  1258 	C$lab1_2_COOL.c$58$1$49 ==.
+                                   1259 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:58: Interrupt_Init();
+      0000F7 12 03 64         [24] 1260 	lcall	_Interrupt_Init
+                           000065  1261 	C$lab1_2_COOL.c$59$1$49 ==.
+                                   1262 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:59: Timer_Init();    // Initialize Timer 0 
+      0000FA 12 03 69         [24] 1263 	lcall	_Timer_Init
+                           000068  1264 	C$lab1_2_COOL.c$61$1$49 ==.
+                                   1265 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:61: putchar(' ');    // the quote fonts may not copy correctly into SiLabs IDE
       0000FD 75 82 20         [24] 1266 	mov	dpl,#0x20
       000100 12 00 D8         [24] 1267 	lcall	_putchar
-                           00006E  1268 	C$lab1_2_COOL.c$66$1$49 ==.
-                                   1269 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:66: printf("Start\r\n");
-      000103 74 B5            [12] 1270 	mov	a,#___str_0
+                           00006E  1268 	C$lab1_2_COOL.c$62$1$49 ==.
+                                   1269 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:62: printf("Start\r\n");
+      000103 74 42            [12] 1270 	mov	a,#___str_0
       000105 C0 E0            [24] 1271 	push	acc
       000107 74 0B            [12] 1272 	mov	a,#(___str_0 >> 8)
       000109 C0 E0            [24] 1273 	push	acc
       00010B 74 80            [12] 1274 	mov	a,#0x80
       00010D C0 E0            [24] 1275 	push	acc
-      00010F 12 05 6B         [24] 1276 	lcall	_printf
+      00010F 12 04 F8         [24] 1276 	lcall	_printf
       000112 15 81            [12] 1277 	dec	sp
       000114 15 81            [12] 1278 	dec	sp
       000116 15 81            [12] 1279 	dec	sp
-                           000083  1280 	C$lab1_2_COOL.c$68$1$49 ==.
-                                   1281 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:68: while (1) /* the following loop prints the number of overflows that occur
-      000118                       1282 00180$:
-                           000083  1283 	C$lab1_2_COOL.c$73$2$50 ==.
-                                   1284 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:73: if (programflag == 0)
+                           000083  1280 	C$lab1_2_COOL.c$64$1$49 ==.
+                                   1281 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:64: while (1) /* the following loop prints the number of overflows that occur
+      000118                       1282 00183$:
+                           000083  1283 	C$lab1_2_COOL.c$68$2$50 ==.
+                                   1284 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:68: if (programflag == 0)
       000118 E5 10            [12] 1285 	mov	a,_programflag
-      00011A 60 03            [24] 1286 	jz	00316$
-      00011C 02 03 B9         [24] 1287 	ljmp	00178$
-      00011F                       1288 00316$:
-                           00008A  1289 	C$lab1_2_COOL.c$75$3$51 ==.
-                                   1290 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:75: while(Switch()); // while SS is OFF (high), wait for SS to be set ON
+      00011A 60 03            [24] 1286 	jz	00319$
+      00011C 02 03 46         [24] 1287 	ljmp	00181$
+      00011F                       1288 00319$:
+                           00008A  1289 	C$lab1_2_COOL.c$70$3$51 ==.
+                                   1290 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:70: while(Switch()); // while SS is OFF (high), wait for SS to be set ON
       00011F                       1291 00101$:
-      00011F 12 04 35         [24] 1292 	lcall	_Switch
+      00011F 12 03 C2         [24] 1292 	lcall	_Switch
       000122 E5 82            [12] 1293 	mov	a,dpl
       000124 85 83 F0         [24] 1294 	mov	b,dph
       000127 45 F0            [12] 1295 	orl	a,b
       000129 70 F4            [24] 1296 	jnz	00101$
-                           000096  1297 	C$lab1_2_COOL.c$76$3$51 ==.
-                                   1298 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:76: TR0 = 1;     // Timer 0 Enabled
+                           000096  1297 	C$lab1_2_COOL.c$71$3$51 ==.
+                                   1298 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:71: TR0 = 1;     // Timer 0 Enabled
       00012B D2 8C            [12] 1299 	setb	_TR0
-                           000098  1300 	C$lab1_2_COOL.c$78$8$62 ==.
-                                   1301 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:78: while(turns <= 10)
-      00012D                       1302 00171$:
+                           000098  1300 	C$lab1_2_COOL.c$72$9$71 ==.
+                                   1301 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:72: while(turns <= 10)
+      00012D                       1302 00174$:
       00012D E5 0D            [12] 1303 	mov	a,_turns
       00012F 24 F5            [12] 1304 	add	a,#0xff - 0x0A
-      000131 50 03            [24] 1305 	jnc	00318$
-      000133 02 03 79         [24] 1306 	ljmp	00173$
-      000136                       1307 00318$:
-                           0000A1  1308 	C$lab1_2_COOL.c$80$4$52 ==.
-                                   1309 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:80: RNG = random(); //
-      000136 12 04 10         [24] 1310 	lcall	_random
+      000131 50 03            [24] 1305 	jnc	00321$
+      000133 02 03 06         [24] 1306 	ljmp	00176$
+      000136                       1307 00321$:
+                           0000A1  1308 	C$lab1_2_COOL.c$74$4$52 ==.
+                                   1309 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:74: RNG = random(); //
+      000136 12 03 9D         [24] 1310 	lcall	_random
       000139 85 82 0C         [24] 1311 	mov	_RNG,dpl
-                           0000A7  1312 	C$lab1_2_COOL.c$81$4$52 ==.
-                                   1313 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:81: if (RNG != previousRNG) // Ensure numbers don't repeat
+                           0000A7  1312 	C$lab1_2_COOL.c$75$4$52 ==.
+                                   1313 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:75: if (RNG != previousRNG) // Ensure numbers don't repeat
       00013C E5 0B            [12] 1314 	mov	a,_previousRNG
-      00013E B5 0C 03         [24] 1315 	cjne	a,_RNG,00319$
-      000141 02 03 59         [24] 1316 	ljmp	00170$
-      000144                       1317 00319$:
-                           0000AF  1318 	C$lab1_2_COOL.c$83$5$53 ==.
-                                   1319 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:83: printf("\rNumber is %u\n", RNG);
-      000144 AE 0C            [24] 1320 	mov	r6,_RNG
-      000146 7F 00            [12] 1321 	mov	r7,#0x00
-      000148 C0 06            [24] 1322 	push	ar6
-      00014A C0 07            [24] 1323 	push	ar7
-      00014C 74 BD            [12] 1324 	mov	a,#___str_1
-      00014E C0 E0            [24] 1325 	push	acc
-      000150 74 0B            [12] 1326 	mov	a,#(___str_1 >> 8)
-      000152 C0 E0            [24] 1327 	push	acc
-      000154 74 80            [12] 1328 	mov	a,#0x80
-      000156 C0 E0            [24] 1329 	push	acc
-      000158 12 05 6B         [24] 1330 	lcall	_printf
-      00015B E5 81            [12] 1331 	mov	a,sp
-      00015D 24 FB            [12] 1332 	add	a,#0xfb
-      00015F F5 81            [12] 1333 	mov	sp,a
-                           0000CC  1334 	C$lab1_2_COOL.c$84$5$53 ==.
-                                   1335 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:84: if(RNG == 0) 
-      000161 E5 0C            [12] 1336 	mov	a,_RNG
-      000163 60 03            [24] 1337 	jz	00320$
-      000165 02 02 0B         [24] 1338 	ljmp	00167$
-      000168                       1339 00320$:
-                           0000D3  1340 	C$lab1_2_COOL.c$86$6$54 ==.
-                                   1341 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:86: LED0 = 0; // Turn on LED0
-      000168 C2 B6            [12] 1342 	clr	_LED0
-                           0000D5  1343 	C$lab1_2_COOL.c$87$6$54 ==.
-                                   1344 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:87: LED1 = 1; // Turn off LED1
-      00016A D2 B5            [12] 1345 	setb	_LED1
-                           0000D7  1346 	C$lab1_2_COOL.c$89$6$54 ==.
-                                   1347 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:89: Seconds = 0;
-      00016C 75 0A 00         [24] 1348 	mov	_Seconds,#0x00
-                           0000DA  1349 	C$lab1_2_COOL.c$90$6$54 ==.
-                                   1350 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:90: while((Seconds <= secondvariable) && (flag == 0)) // Within the alotted time
-      00016F                       1351 00124$:
-      00016F C3               [12] 1352 	clr	c
-      000170 E5 12            [12] 1353 	mov	a,_secondvariable
-      000172 95 0A            [12] 1354 	subb	a,_Seconds
-      000174 50 03            [24] 1355 	jnc	00321$
-      000176 02 03 34         [24] 1356 	ljmp	00168$
-      000179                       1357 00321$:
-      000179 E5 0F            [12] 1358 	mov	a,_flag
-      00017B 60 03            [24] 1359 	jz	00322$
-      00017D 02 03 34         [24] 1360 	ljmp	00168$
-      000180                       1361 00322$:
-                           0000EB  1362 	C$lab1_2_COOL.c$94$7$55 ==.
-                                   1363 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:94: if(Button0()) // If the correct button is pushed
-      000180 12 04 1D         [24] 1364 	lcall	_Button0
-      000183 E5 82            [12] 1365 	mov	a,dpl
-      000185 85 83 F0         [24] 1366 	mov	b,dph
-      000188 45 F0            [12] 1367 	orl	a,b
-      00018A 60 1D            [24] 1368 	jz	00121$
-                           0000F7  1369 	C$lab1_2_COOL.c$96$8$56 ==.
-                                   1370 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:96: Counts = 0;
-      00018C E4               [12] 1371 	clr	a
-      00018D F5 08            [12] 1372 	mov	_Counts,a
-      00018F F5 09            [12] 1373 	mov	(_Counts + 1),a
-                           0000FC  1374 	C$lab1_2_COOL.c$97$8$56 ==.
-                                   1375 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:97: while (Counts <= countvariable);
-      000191                       1376 00104$:
-      000191 AE 11            [24] 1377 	mov	r6,_countvariable
-      000193 7F 00            [12] 1378 	mov	r7,#0x00
-      000195 C3               [12] 1379 	clr	c
-      000196 EE               [12] 1380 	mov	a,r6
-      000197 95 08            [12] 1381 	subb	a,_Counts
-      000199 EF               [12] 1382 	mov	a,r7
-      00019A 95 09            [12] 1383 	subb	a,(_Counts + 1)
-      00019C 50 F3            [24] 1384 	jnc	00104$
-                           000109  1385 	C$lab1_2_COOL.c$99$8$56 ==.
-                                   1386 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:99: correctAnswerCount++; // Log the correct answer
-      00019E 05 0E            [12] 1387 	inc	_correctAnswerCount
-                           00010B  1388 	C$lab1_2_COOL.c$100$8$56 ==.
-                                   1389 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:100: BILED0 = 1;			  // Make BILED green
-      0001A0 D2 B3            [12] 1390 	setb	_BILED0
-                           00010D  1391 	C$lab1_2_COOL.c$101$8$56 ==.
-                                   1392 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:101: BILED1 = 0;	
-      0001A2 C2 B4            [12] 1393 	clr	_BILED1
-                           00010F  1394 	C$lab1_2_COOL.c$102$8$56 ==.
-                                   1395 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:102: flag = 1;
-      0001A4 75 0F 01         [24] 1396 	mov	_flag,#0x01
-      0001A7 80 C6            [24] 1397 	sjmp	00124$
-      0001A9                       1398 00121$:
-                           000114  1399 	C$lab1_2_COOL.c$104$7$55 ==.
-                                   1400 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:104: else if(Button1()) // If the incorrect button is pressed
-      0001A9 12 04 29         [24] 1401 	lcall	_Button1
-      0001AC E5 82            [12] 1402 	mov	a,dpl
-      0001AE 85 83 F0         [24] 1403 	mov	b,dph
-      0001B1 45 F0            [12] 1404 	orl	a,b
-      0001B3 60 1B            [24] 1405 	jz	00118$
-                           000120  1406 	C$lab1_2_COOL.c$106$8$57 ==.
-                                   1407 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:106: Counts = 0;
-      0001B5 E4               [12] 1408 	clr	a
-      0001B6 F5 08            [12] 1409 	mov	_Counts,a
-      0001B8 F5 09            [12] 1410 	mov	(_Counts + 1),a
-                           000125  1411 	C$lab1_2_COOL.c$107$8$57 ==.
-                                   1412 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:107: while (Counts <= countvariable);
-      0001BA                       1413 00107$:
-      0001BA AE 11            [24] 1414 	mov	r6,_countvariable
-      0001BC 7F 00            [12] 1415 	mov	r7,#0x00
-      0001BE C3               [12] 1416 	clr	c
-      0001BF EE               [12] 1417 	mov	a,r6
-      0001C0 95 08            [12] 1418 	subb	a,_Counts
-      0001C2 EF               [12] 1419 	mov	a,r7
-      0001C3 95 09            [12] 1420 	subb	a,(_Counts + 1)
-      0001C5 50 F3            [24] 1421 	jnc	00107$
-                           000132  1422 	C$lab1_2_COOL.c$108$8$57 ==.
-                                   1423 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:108: flag = 1;
-      0001C7 75 0F 01         [24] 1424 	mov	_flag,#0x01
-                           000135  1425 	C$lab1_2_COOL.c$109$8$57 ==.
-                                   1426 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:109: BILED0 = 0;			// Make BILED red
-      0001CA C2 B3            [12] 1427 	clr	_BILED0
-                           000137  1428 	C$lab1_2_COOL.c$110$8$57 ==.
-                                   1429 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:110: BILED1 = 1;
-      0001CC D2 B4            [12] 1430 	setb	_BILED1
-      0001CE 80 9F            [24] 1431 	sjmp	00124$
-      0001D0                       1432 00118$:
-                           00013B  1433 	C$lab1_2_COOL.c$112$7$55 ==.
-                                   1434 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:112: else if(Button0() && Button1()) // If the incorrect button is pressed
-      0001D0 12 04 1D         [24] 1435 	lcall	_Button0
-      0001D3 E5 82            [12] 1436 	mov	a,dpl
-      0001D5 85 83 F0         [24] 1437 	mov	b,dph
-      0001D8 45 F0            [12] 1438 	orl	a,b
-      0001DA 60 28            [24] 1439 	jz	00114$
-      0001DC 12 04 29         [24] 1440 	lcall	_Button1
-      0001DF E5 82            [12] 1441 	mov	a,dpl
-      0001E1 85 83 F0         [24] 1442 	mov	b,dph
-      0001E4 45 F0            [12] 1443 	orl	a,b
-      0001E6 60 1C            [24] 1444 	jz	00114$
-                           000153  1445 	C$lab1_2_COOL.c$114$8$58 ==.
-                                   1446 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:114: Counts = 0;
-      0001E8 E4               [12] 1447 	clr	a
-      0001E9 F5 08            [12] 1448 	mov	_Counts,a
-      0001EB F5 09            [12] 1449 	mov	(_Counts + 1),a
-                           000158  1450 	C$lab1_2_COOL.c$115$8$58 ==.
-                                   1451 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:115: while (Counts <= countvariable);
-      0001ED                       1452 00110$:
-      0001ED AE 11            [24] 1453 	mov	r6,_countvariable
-      0001EF 7F 00            [12] 1454 	mov	r7,#0x00
-      0001F1 C3               [12] 1455 	clr	c
-      0001F2 EE               [12] 1456 	mov	a,r6
-      0001F3 95 08            [12] 1457 	subb	a,_Counts
-      0001F5 EF               [12] 1458 	mov	a,r7
-      0001F6 95 09            [12] 1459 	subb	a,(_Counts + 1)
-      0001F8 50 F3            [24] 1460 	jnc	00110$
-                           000165  1461 	C$lab1_2_COOL.c$116$8$58 ==.
-                                   1462 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:116: flag = 1;
-      0001FA 75 0F 01         [24] 1463 	mov	_flag,#0x01
-                           000168  1464 	C$lab1_2_COOL.c$117$8$58 ==.
-                                   1465 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:117: BILED0 = 0;			// Make BILED red
-      0001FD C2 B3            [12] 1466 	clr	_BILED0
-                           00016A  1467 	C$lab1_2_COOL.c$118$8$58 ==.
-                                   1468 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:118: BILED1 = 1;
-      0001FF D2 B4            [12] 1469 	setb	_BILED1
-      000201 02 01 6F         [24] 1470 	ljmp	00124$
-      000204                       1471 00114$:
-                           00016F  1472 	C$lab1_2_COOL.c$122$8$59 ==.
-                                   1473 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:122: BILED0 = 0;			// Make BILED red
-      000204 C2 B3            [12] 1474 	clr	_BILED0
-                           000171  1475 	C$lab1_2_COOL.c$123$8$59 ==.
-                                   1476 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:123: BILED1 = 1;
-      000206 D2 B4            [12] 1477 	setb	_BILED1
-      000208 02 01 6F         [24] 1478 	ljmp	00124$
-      00020B                       1479 00167$:
-                           000176  1480 	C$lab1_2_COOL.c$127$5$53 ==.
-                                   1481 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:127: else if(RNG == 1)
-      00020B 74 01            [12] 1482 	mov	a,#0x01
-      00020D B5 0C 02         [24] 1483 	cjne	a,_RNG,00330$
-      000210 80 03            [24] 1484 	sjmp	00331$
-      000212                       1485 00330$:
-      000212 02 02 CD         [24] 1486 	ljmp	00164$
-      000215                       1487 00331$:
-                           000180  1488 	C$lab1_2_COOL.c$129$6$60 ==.
-                                   1489 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:129: LED1 = 0; //Turn on LED1
-      000215 C2 B5            [12] 1490 	clr	_LED1
-                           000182  1491 	C$lab1_2_COOL.c$130$6$60 ==.
-                                   1492 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:130: LED0 = 1; //Turn off LED0
-      000217 D2 B6            [12] 1493 	setb	_LED0
-                           000184  1494 	C$lab1_2_COOL.c$131$6$60 ==.
-                                   1495 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:131: Seconds = 0;
-      000219 75 0A 00         [24] 1496 	mov	_Seconds,#0x00
-                           000187  1497 	C$lab1_2_COOL.c$132$6$60 ==.
-                                   1498 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:132: while((Seconds <= secondvariable) && (flag == 0)) // Within the alotted time
-      00021C                       1499 00147$:
-      00021C C3               [12] 1500 	clr	c
-      00021D E5 12            [12] 1501 	mov	a,_secondvariable
-      00021F 95 0A            [12] 1502 	subb	a,_Seconds
-      000221 50 03            [24] 1503 	jnc	00332$
-      000223 02 03 34         [24] 1504 	ljmp	00168$
-      000226                       1505 00332$:
-      000226 E5 0F            [12] 1506 	mov	a,_flag
-      000228 60 03            [24] 1507 	jz	00333$
-      00022A 02 03 34         [24] 1508 	ljmp	00168$
-      00022D                       1509 00333$:
-                           000198  1510 	C$lab1_2_COOL.c$136$7$61 ==.
-                                   1511 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:136: if(Button1()) // If the correct button is pushed
-      00022D 12 04 29         [24] 1512 	lcall	_Button1
-      000230 E5 82            [12] 1513 	mov	a,dpl
-      000232 85 83 F0         [24] 1514 	mov	b,dph
-      000235 45 F0            [12] 1515 	orl	a,b
-      000237 60 32            [24] 1516 	jz	00144$
-                           0001A4  1517 	C$lab1_2_COOL.c$138$8$62 ==.
-                                   1518 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:138: Counts = 0;
-      000239 E4               [12] 1519 	clr	a
-      00023A F5 08            [12] 1520 	mov	_Counts,a
-      00023C F5 09            [12] 1521 	mov	(_Counts + 1),a
-                           0001A9  1522 	C$lab1_2_COOL.c$139$8$62 ==.
-                                   1523 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:139: while (Counts <= countvariable);
-      00023E                       1524 00127$:
-      00023E AE 11            [24] 1525 	mov	r6,_countvariable
-      000240 7F 00            [12] 1526 	mov	r7,#0x00
-      000242 C3               [12] 1527 	clr	c
-      000243 EE               [12] 1528 	mov	a,r6
-      000244 95 08            [12] 1529 	subb	a,_Counts
-      000246 EF               [12] 1530 	mov	a,r7
-      000247 95 09            [12] 1531 	subb	a,(_Counts + 1)
-      000249 50 F3            [24] 1532 	jnc	00127$
-                           0001B6  1533 	C$lab1_2_COOL.c$140$8$62 ==.
-                                   1534 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:140: printf("\rYou pushed Button 1\n");
-      00024B 74 CC            [12] 1535 	mov	a,#___str_2
-      00024D C0 E0            [24] 1536 	push	acc
-      00024F 74 0B            [12] 1537 	mov	a,#(___str_2 >> 8)
-      000251 C0 E0            [24] 1538 	push	acc
-      000253 74 80            [12] 1539 	mov	a,#0x80
-      000255 C0 E0            [24] 1540 	push	acc
-      000257 12 05 6B         [24] 1541 	lcall	_printf
-      00025A 15 81            [12] 1542 	dec	sp
-      00025C 15 81            [12] 1543 	dec	sp
-      00025E 15 81            [12] 1544 	dec	sp
-                           0001CB  1545 	C$lab1_2_COOL.c$141$8$62 ==.
-                                   1546 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:141: correctAnswerCount++; // Log the correct answer
-      000260 05 0E            [12] 1547 	inc	_correctAnswerCount
-                           0001CD  1548 	C$lab1_2_COOL.c$142$8$62 ==.
-                                   1549 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:142: BILED0 = 1;			  // Make BILED green
-      000262 D2 B3            [12] 1550 	setb	_BILED0
-                           0001CF  1551 	C$lab1_2_COOL.c$143$8$62 ==.
-                                   1552 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:143: BILED1 = 0;	
-      000264 C2 B4            [12] 1553 	clr	_BILED1
-                           0001D1  1554 	C$lab1_2_COOL.c$144$8$62 ==.
-                                   1555 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:144: flag = 1;
-      000266 75 0F 01         [24] 1556 	mov	_flag,#0x01
-      000269 80 B1            [24] 1557 	sjmp	00147$
-      00026B                       1558 00144$:
-                           0001D6  1559 	C$lab1_2_COOL.c$146$7$61 ==.
-                                   1560 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:146: else if(Button0()) // If the incorrect button is pressed
-      00026B 12 04 1D         [24] 1561 	lcall	_Button0
-      00026E E5 82            [12] 1562 	mov	a,dpl
-      000270 85 83 F0         [24] 1563 	mov	b,dph
-      000273 45 F0            [12] 1564 	orl	a,b
-      000275 60 1B            [24] 1565 	jz	00141$
-                           0001E2  1566 	C$lab1_2_COOL.c$148$8$63 ==.
-                                   1567 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:148: Counts = 0;
-      000277 E4               [12] 1568 	clr	a
-      000278 F5 08            [12] 1569 	mov	_Counts,a
-      00027A F5 09            [12] 1570 	mov	(_Counts + 1),a
-                           0001E7  1571 	C$lab1_2_COOL.c$149$8$63 ==.
-                                   1572 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:149: while (Counts <= countvariable);
-      00027C                       1573 00130$:
-      00027C AE 11            [24] 1574 	mov	r6,_countvariable
-      00027E 7F 00            [12] 1575 	mov	r7,#0x00
-      000280 C3               [12] 1576 	clr	c
-      000281 EE               [12] 1577 	mov	a,r6
-      000282 95 08            [12] 1578 	subb	a,_Counts
-      000284 EF               [12] 1579 	mov	a,r7
-      000285 95 09            [12] 1580 	subb	a,(_Counts + 1)
-      000287 50 F3            [24] 1581 	jnc	00130$
-                           0001F4  1582 	C$lab1_2_COOL.c$150$8$63 ==.
-                                   1583 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:150: flag = 1;
-      000289 75 0F 01         [24] 1584 	mov	_flag,#0x01
-                           0001F7  1585 	C$lab1_2_COOL.c$151$8$63 ==.
-                                   1586 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:151: BILED0 = 0;			// Make BILED red
-      00028C C2 B3            [12] 1587 	clr	_BILED0
-                           0001F9  1588 	C$lab1_2_COOL.c$152$8$63 ==.
-                                   1589 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:152: BILED1 = 1;
-      00028E D2 B4            [12] 1590 	setb	_BILED1
-      000290 80 8A            [24] 1591 	sjmp	00147$
-      000292                       1592 00141$:
-                           0001FD  1593 	C$lab1_2_COOL.c$154$7$61 ==.
-                                   1594 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:154: else if(Button0() && Button1()) // If the incorrect button is pressed
-      000292 12 04 1D         [24] 1595 	lcall	_Button0
-      000295 E5 82            [12] 1596 	mov	a,dpl
-      000297 85 83 F0         [24] 1597 	mov	b,dph
-      00029A 45 F0            [12] 1598 	orl	a,b
-      00029C 60 28            [24] 1599 	jz	00137$
-      00029E 12 04 29         [24] 1600 	lcall	_Button1
-      0002A1 E5 82            [12] 1601 	mov	a,dpl
-      0002A3 85 83 F0         [24] 1602 	mov	b,dph
-      0002A6 45 F0            [12] 1603 	orl	a,b
-      0002A8 60 1C            [24] 1604 	jz	00137$
-                           000215  1605 	C$lab1_2_COOL.c$156$8$64 ==.
-                                   1606 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:156: Counts = 0;
-      0002AA E4               [12] 1607 	clr	a
-      0002AB F5 08            [12] 1608 	mov	_Counts,a
-      0002AD F5 09            [12] 1609 	mov	(_Counts + 1),a
-                           00021A  1610 	C$lab1_2_COOL.c$157$8$64 ==.
-                                   1611 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:157: while (Counts <= countvariable);
-      0002AF                       1612 00133$:
-      0002AF AE 11            [24] 1613 	mov	r6,_countvariable
-      0002B1 7F 00            [12] 1614 	mov	r7,#0x00
-      0002B3 C3               [12] 1615 	clr	c
-      0002B4 EE               [12] 1616 	mov	a,r6
-      0002B5 95 08            [12] 1617 	subb	a,_Counts
-      0002B7 EF               [12] 1618 	mov	a,r7
-      0002B8 95 09            [12] 1619 	subb	a,(_Counts + 1)
-      0002BA 50 F3            [24] 1620 	jnc	00133$
-                           000227  1621 	C$lab1_2_COOL.c$158$8$64 ==.
-                                   1622 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:158: flag = 1;
-      0002BC 75 0F 01         [24] 1623 	mov	_flag,#0x01
-                           00022A  1624 	C$lab1_2_COOL.c$159$8$64 ==.
-                                   1625 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:159: BILED0 = 0;			// Make BILED red
-      0002BF C2 B3            [12] 1626 	clr	_BILED0
-                           00022C  1627 	C$lab1_2_COOL.c$160$8$64 ==.
-                                   1628 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:160: BILED1 = 1;
-      0002C1 D2 B4            [12] 1629 	setb	_BILED1
-      0002C3 02 02 1C         [24] 1630 	ljmp	00147$
-      0002C6                       1631 00137$:
-                           000231  1632 	C$lab1_2_COOL.c$164$8$65 ==.
-                                   1633 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:164: BILED0 = 0;			// Make BILED red
-      0002C6 C2 B3            [12] 1634 	clr	_BILED0
-                           000233  1635 	C$lab1_2_COOL.c$165$8$65 ==.
-                                   1636 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:165: BILED1 = 1;
-      0002C8 D2 B4            [12] 1637 	setb	_BILED1
-      0002CA 02 02 1C         [24] 1638 	ljmp	00147$
-      0002CD                       1639 00164$:
-                           000238  1640 	C$lab1_2_COOL.c$169$5$53 ==.
-                                   1641 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:169: else if (RNG == 2)
-      0002CD 74 02            [12] 1642 	mov	a,#0x02
-      0002CF B5 0C 62         [24] 1643 	cjne	a,_RNG,00168$
-                           00023D  1644 	C$lab1_2_COOL.c$171$6$66 ==.
-                                   1645 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:171: LED0 = 0; //Turn on LED0
-      0002D2 C2 B6            [12] 1646 	clr	_LED0
-                           00023F  1647 	C$lab1_2_COOL.c$172$6$66 ==.
-                                   1648 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:172: LED1 = 0; //Turn on 
-      0002D4 C2 B5            [12] 1649 	clr	_LED1
-                           000241  1650 	C$lab1_2_COOL.c$173$6$66 ==.
-                                   1651 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:173: Seconds = 0;
-      0002D6 75 0A 00         [24] 1652 	mov	_Seconds,#0x00
-                           000244  1653 	C$lab1_2_COOL.c$174$6$66 ==.
-                                   1654 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:174: while((Seconds <= secondvariable) && (flag == 0)) // Within the alotted time
-      0002D9                       1655 00158$:
-      0002D9 C3               [12] 1656 	clr	c
-      0002DA E5 12            [12] 1657 	mov	a,_secondvariable
-      0002DC 95 0A            [12] 1658 	subb	a,_Seconds
-      0002DE 40 54            [24] 1659 	jc	00168$
-      0002E0 E5 0F            [12] 1660 	mov	a,_flag
-      0002E2 70 50            [24] 1661 	jnz	00168$
-                           00024F  1662 	C$lab1_2_COOL.c$178$7$67 ==.
-                                   1663 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:178: if(Button0() && Button1()) // If the correct button is pushed
-      0002E4 12 04 1D         [24] 1664 	lcall	_Button0
-      0002E7 E5 82            [12] 1665 	mov	a,dpl
-      0002E9 85 83 F0         [24] 1666 	mov	b,dph
-      0002EC 45 F0            [12] 1667 	orl	a,b
-      0002EE 60 3E            [24] 1668 	jz	00154$
-      0002F0 12 04 29         [24] 1669 	lcall	_Button1
-      0002F3 E5 82            [12] 1670 	mov	a,dpl
-      0002F5 85 83 F0         [24] 1671 	mov	b,dph
-      0002F8 45 F0            [12] 1672 	orl	a,b
-      0002FA 60 32            [24] 1673 	jz	00154$
-                           000267  1674 	C$lab1_2_COOL.c$180$8$68 ==.
-                                   1675 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:180: Counts = 0;
-      0002FC E4               [12] 1676 	clr	a
-      0002FD F5 08            [12] 1677 	mov	_Counts,a
-      0002FF F5 09            [12] 1678 	mov	(_Counts + 1),a
-                           00026C  1679 	C$lab1_2_COOL.c$181$8$68 ==.
-                                   1680 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:181: while (Counts <= countvariable);
-      000301                       1681 00150$:
-      000301 AE 11            [24] 1682 	mov	r6,_countvariable
-      000303 7F 00            [12] 1683 	mov	r7,#0x00
-      000305 C3               [12] 1684 	clr	c
-      000306 EE               [12] 1685 	mov	a,r6
-      000307 95 08            [12] 1686 	subb	a,_Counts
-      000309 EF               [12] 1687 	mov	a,r7
-      00030A 95 09            [12] 1688 	subb	a,(_Counts + 1)
-      00030C 50 F3            [24] 1689 	jnc	00150$
-                           000279  1690 	C$lab1_2_COOL.c$182$8$68 ==.
-                                   1691 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:182: printf("\rYou pressed Button 0 and Button 1\n");
-      00030E 74 E2            [12] 1692 	mov	a,#___str_3
-      000310 C0 E0            [24] 1693 	push	acc
-      000312 74 0B            [12] 1694 	mov	a,#(___str_3 >> 8)
-      000314 C0 E0            [24] 1695 	push	acc
-      000316 74 80            [12] 1696 	mov	a,#0x80
-      000318 C0 E0            [24] 1697 	push	acc
-      00031A 12 05 6B         [24] 1698 	lcall	_printf
-      00031D 15 81            [12] 1699 	dec	sp
-      00031F 15 81            [12] 1700 	dec	sp
-      000321 15 81            [12] 1701 	dec	sp
-                           00028E  1702 	C$lab1_2_COOL.c$183$8$68 ==.
-                                   1703 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:183: correctAnswerCount++; // Log the correct answer
-      000323 05 0E            [12] 1704 	inc	_correctAnswerCount
-                           000290  1705 	C$lab1_2_COOL.c$184$8$68 ==.
-                                   1706 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:184: BILED0 = 1;			  // Make BILED green
-      000325 D2 B3            [12] 1707 	setb	_BILED0
-                           000292  1708 	C$lab1_2_COOL.c$185$8$68 ==.
-                                   1709 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:185: BILED1 = 0;	
-      000327 C2 B4            [12] 1710 	clr	_BILED1
-                           000294  1711 	C$lab1_2_COOL.c$186$8$68 ==.
-                                   1712 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:186: flag = 1;
-      000329 75 0F 01         [24] 1713 	mov	_flag,#0x01
-      00032C 80 AB            [24] 1714 	sjmp	00158$
-      00032E                       1715 00154$:
-                           000299  1716 	C$lab1_2_COOL.c$206$8$69 ==.
-                                   1717 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:206: BILED0 = 0;			// Make BILED red
-      00032E C2 B3            [12] 1718 	clr	_BILED0
-                           00029B  1719 	C$lab1_2_COOL.c$207$8$69 ==.
-                                   1720 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:207: BILED1 = 1;
-      000330 D2 B4            [12] 1721 	setb	_BILED1
-      000332 80 A5            [24] 1722 	sjmp	00158$
-      000334                       1723 00168$:
-                           00029F  1724 	C$lab1_2_COOL.c$211$5$53 ==.
-                                   1725 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:211: turns++;
-      000334 05 0D            [12] 1726 	inc	_turns
-                           0002A1  1727 	C$lab1_2_COOL.c$212$5$53 ==.
-                                   1728 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:212: printf("\rIt is turn %u\n", turns);
-      000336 AE 0D            [24] 1729 	mov	r6,_turns
-      000338 7F 00            [12] 1730 	mov	r7,#0x00
-      00033A C0 06            [24] 1731 	push	ar6
-      00033C C0 07            [24] 1732 	push	ar7
-      00033E 74 06            [12] 1733 	mov	a,#___str_4
-      000340 C0 E0            [24] 1734 	push	acc
-      000342 74 0C            [12] 1735 	mov	a,#(___str_4 >> 8)
-      000344 C0 E0            [24] 1736 	push	acc
-      000346 74 80            [12] 1737 	mov	a,#0x80
-      000348 C0 E0            [24] 1738 	push	acc
-      00034A 12 05 6B         [24] 1739 	lcall	_printf
-      00034D E5 81            [12] 1740 	mov	a,sp
-      00034F 24 FB            [12] 1741 	add	a,#0xfb
-      000351 F5 81            [12] 1742 	mov	sp,a
-                           0002BE  1743 	C$lab1_2_COOL.c$213$5$53 ==.
-                                   1744 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:213: previousRNG = RNG;
-      000353 85 0C 0B         [24] 1745 	mov	_previousRNG,_RNG
-                           0002C1  1746 	C$lab1_2_COOL.c$214$5$53 ==.
-                                   1747 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:214: flag = 0;
-      000356 75 0F 00         [24] 1748 	mov	_flag,#0x00
-      000359                       1749 00170$:
-                           0002C4  1750 	C$lab1_2_COOL.c$216$4$52 ==.
-                                   1751 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:216: printf("\rCorrect responses: %u\n", correctAnswerCount);
-      000359 AE 0E            [24] 1752 	mov	r6,_correctAnswerCount
-      00035B 7F 00            [12] 1753 	mov	r7,#0x00
-      00035D C0 06            [24] 1754 	push	ar6
-      00035F C0 07            [24] 1755 	push	ar7
-      000361 74 16            [12] 1756 	mov	a,#___str_5
-      000363 C0 E0            [24] 1757 	push	acc
-      000365 74 0C            [12] 1758 	mov	a,#(___str_5 >> 8)
-      000367 C0 E0            [24] 1759 	push	acc
-      000369 74 80            [12] 1760 	mov	a,#0x80
-      00036B C0 E0            [24] 1761 	push	acc
-      00036D 12 05 6B         [24] 1762 	lcall	_printf
-      000370 E5 81            [12] 1763 	mov	a,sp
-      000372 24 FB            [12] 1764 	add	a,#0xfb
-      000374 F5 81            [12] 1765 	mov	sp,a
-      000376 02 01 2D         [24] 1766 	ljmp	00171$
-      000379                       1767 00173$:
-                           0002E4  1768 	C$lab1_2_COOL.c$219$3$51 ==.
-                                   1769 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:219: Seconds = 0;
-      000379 75 0A 00         [24] 1770 	mov	_Seconds,#0x00
-                           0002E7  1771 	C$lab1_2_COOL.c$220$3$51 ==.
-                                   1772 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:220: while (Seconds == 0)
-      00037C                       1773 00174$:
-      00037C E5 0A            [12] 1774 	mov	a,_Seconds
-      00037E 70 04            [24] 1775 	jnz	00176$
-                           0002EB  1776 	C$lab1_2_COOL.c$222$4$70 ==.
-                                   1777 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:222: Buzzer = 0; // Bzzzzt
-      000380 C2 B7            [12] 1778 	clr	_Buzzer
-      000382 80 F8            [24] 1779 	sjmp	00174$
-      000384                       1780 00176$:
-                           0002EF  1781 	C$lab1_2_COOL.c$226$3$51 ==.
-                                   1782 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:226: printf("\rFINAL RESULTS: %u", correctAnswerCount);
-      000384 AE 0E            [24] 1783 	mov	r6,_correctAnswerCount
-      000386 7F 00            [12] 1784 	mov	r7,#0x00
-      000388 C0 06            [24] 1785 	push	ar6
-      00038A C0 07            [24] 1786 	push	ar7
-      00038C 74 2E            [12] 1787 	mov	a,#___str_6
-      00038E C0 E0            [24] 1788 	push	acc
-      000390 74 0C            [12] 1789 	mov	a,#(___str_6 >> 8)
-      000392 C0 E0            [24] 1790 	push	acc
-      000394 74 80            [12] 1791 	mov	a,#0x80
-      000396 C0 E0            [24] 1792 	push	acc
-      000398 12 05 6B         [24] 1793 	lcall	_printf
-      00039B E5 81            [12] 1794 	mov	a,sp
-      00039D 24 FB            [12] 1795 	add	a,#0xfb
-      00039F F5 81            [12] 1796 	mov	sp,a
-                           00030C  1797 	C$lab1_2_COOL.c$227$3$51 ==.
-                                   1798 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:227: printf(" out of 10\n");
-      0003A1 74 41            [12] 1799 	mov	a,#___str_7
-      0003A3 C0 E0            [24] 1800 	push	acc
-      0003A5 74 0C            [12] 1801 	mov	a,#(___str_7 >> 8)
-      0003A7 C0 E0            [24] 1802 	push	acc
-      0003A9 74 80            [12] 1803 	mov	a,#0x80
-      0003AB C0 E0            [24] 1804 	push	acc
-      0003AD 12 05 6B         [24] 1805 	lcall	_printf
-      0003B0 15 81            [12] 1806 	dec	sp
-      0003B2 15 81            [12] 1807 	dec	sp
-      0003B4 15 81            [12] 1808 	dec	sp
-                           000321  1809 	C$lab1_2_COOL.c$228$3$51 ==.
-                                   1810 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:228: programflag = 1;
-      0003B6 75 10 01         [24] 1811 	mov	_programflag,#0x01
-      0003B9                       1812 00178$:
-                           000324  1813 	C$lab1_2_COOL.c$230$2$50 ==.
-                                   1814 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:230: Buzzer = 1; //Bzt--
-      0003B9 D2 B7            [12] 1815 	setb	_Buzzer
-      0003BB 02 01 18         [24] 1816 	ljmp	00180$
-                           000329  1817 	C$lab1_2_COOL.c$245$1$49 ==.
-                           000329  1818 	XG$main$0$0 ==.
-      0003BE 22               [24] 1819 	ret
-                                   1820 ;------------------------------------------------------------
-                                   1821 ;Allocation info for local variables in function 'Port_Init'
-                                   1822 ;------------------------------------------------------------
-                           00032A  1823 	G$Port_Init$0$0 ==.
-                           00032A  1824 	C$lab1_2_COOL.c$248$1$49 ==.
-                                   1825 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:248: void Port_Init(void)
-                                   1826 ;	-----------------------------------------
-                                   1827 ;	 function Port_Init
-                                   1828 ;	-----------------------------------------
-      0003BF                       1829 _Port_Init:
-                           00032A  1830 	C$lab1_2_COOL.c$251$1$72 ==.
-                                   1831 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:251: P3MDOUT |= 0xF8;// set Port 3 output pins to push-pull mode 
-      0003BF 43 A7 F8         [24] 1832 	orl	_P3MDOUT,#0xF8
-                           00032D  1833 	C$lab1_2_COOL.c$252$1$72 ==.
-                                   1834 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:252: P3MDOUT &= 0xFC; // set Port 3 input pins to open drain mode 
-      0003C2 53 A7 FC         [24] 1835 	anl	_P3MDOUT,#0xFC
-                           000330  1836 	C$lab1_2_COOL.c$253$1$72 ==.
-                                   1837 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:253: P3 |= ~0xFC; // set Port 3 input pins to high impedance state 
-      0003C5 AF B0            [24] 1838 	mov	r7,_P3
-      0003C7 74 03            [12] 1839 	mov	a,#0x03
-      0003C9 4F               [12] 1840 	orl	a,r7
-      0003CA F5 B0            [12] 1841 	mov	_P3,a
-                           000337  1842 	C$lab1_2_COOL.c$255$1$72 ==.
-                                   1843 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:255: P2MDOUT &= 0xFE; // set Port 2 input pins to push-pull mode
-      0003CC 53 A6 FE         [24] 1844 	anl	_P2MDOUT,#0xFE
-                           00033A  1845 	C$lab1_2_COOL.c$256$1$72 ==.
-                                   1846 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:256: P2 |= ~0xFE; // set Port 2 input pins to high impedance state
-      0003CF AF A0            [24] 1847 	mov	r7,_P2
-      0003D1 74 01            [12] 1848 	mov	a,#0x01
-      0003D3 4F               [12] 1849 	orl	a,r7
-      0003D4 F5 A0            [12] 1850 	mov	_P2,a
-                           000341  1851 	C$lab1_2_COOL.c$258$1$72 ==.
-                           000341  1852 	XG$Port_Init$0$0 ==.
-      0003D6 22               [24] 1853 	ret
-                                   1854 ;------------------------------------------------------------
-                                   1855 ;Allocation info for local variables in function 'Interrupt_Init'
-                                   1856 ;------------------------------------------------------------
-                           000342  1857 	G$Interrupt_Init$0$0 ==.
-                           000342  1858 	C$lab1_2_COOL.c$260$1$72 ==.
-                                   1859 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:260: void Interrupt_Init(void)
-                                   1860 ;	-----------------------------------------
-                                   1861 ;	 function Interrupt_Init
-                                   1862 ;	-----------------------------------------
-      0003D7                       1863 _Interrupt_Init:
-                           000342  1864 	C$lab1_2_COOL.c$262$1$74 ==.
-                                   1865 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:262: ET0 = 1;      // enable Timer0 Interrupt request
-      0003D7 D2 A9            [12] 1866 	setb	_ET0
-                           000344  1867 	C$lab1_2_COOL.c$263$1$74 ==.
-                                   1868 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:263: EA = 1;       // enable global interrupts
-      0003D9 D2 AF            [12] 1869 	setb	_EA
-                           000346  1870 	C$lab1_2_COOL.c$264$1$74 ==.
-                           000346  1871 	XG$Interrupt_Init$0$0 ==.
-      0003DB 22               [24] 1872 	ret
-                                   1873 ;------------------------------------------------------------
-                                   1874 ;Allocation info for local variables in function 'Timer_Init'
-                                   1875 ;------------------------------------------------------------
-                           000347  1876 	G$Timer_Init$0$0 ==.
-                           000347  1877 	C$lab1_2_COOL.c$266$1$74 ==.
-                                   1878 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:266: void Timer_Init(void)
-                                   1879 ;	-----------------------------------------
-                                   1880 ;	 function Timer_Init
-                                   1881 ;	-----------------------------------------
-      0003DC                       1882 _Timer_Init:
-                           000347  1883 	C$lab1_2_COOL.c$269$1$76 ==.
-                                   1884 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:269: CKCON |= 0x08;  // Timer0 uses SYSCLK as source
-      0003DC 43 8E 08         [24] 1885 	orl	_CKCON,#0x08
-                           00034A  1886 	C$lab1_2_COOL.c$270$1$76 ==.
-                                   1887 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:270: TMOD &= 0xF0;   // clear the 4 least significant bits
-      0003DF 53 89 F0         [24] 1888 	anl	_TMOD,#0xF0
-                           00034D  1889 	C$lab1_2_COOL.c$271$1$76 ==.
-                                   1890 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:271: TMOD |= 0x01;   // Timer0 in mode 1
-      0003E2 43 89 01         [24] 1891 	orl	_TMOD,#0x01
-                           000350  1892 	C$lab1_2_COOL.c$272$1$76 ==.
-                                   1893 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:272: TR0 = 0;           // Stop Timer0
-      0003E5 C2 8C            [12] 1894 	clr	_TR0
-                           000352  1895 	C$lab1_2_COOL.c$273$1$76 ==.
-                                   1896 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:273: TL0 = 0;           // Clear low byte of register T0
-      0003E7 75 8A 00         [24] 1897 	mov	_TL0,#0x00
-                           000355  1898 	C$lab1_2_COOL.c$274$1$76 ==.
-                                   1899 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:274: TH0 = 0;           // Clear high byte of register T0
-      0003EA 75 8C 00         [24] 1900 	mov	_TH0,#0x00
-                           000358  1901 	C$lab1_2_COOL.c$276$1$76 ==.
-                           000358  1902 	XG$Timer_Init$0$0 ==.
-      0003ED 22               [24] 1903 	ret
-                                   1904 ;------------------------------------------------------------
-                                   1905 ;Allocation info for local variables in function 'Timer0_ISR'
-                                   1906 ;------------------------------------------------------------
-                           000359  1907 	G$Timer0_ISR$0$0 ==.
-                           000359  1908 	C$lab1_2_COOL.c$280$1$76 ==.
-                                   1909 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:280: void Timer0_ISR(void) __interrupt 1
-                                   1910 ;	-----------------------------------------
-                                   1911 ;	 function Timer0_ISR
-                                   1912 ;	-----------------------------------------
-      0003EE                       1913 _Timer0_ISR:
-      0003EE C0 E0            [24] 1914 	push	acc
-      0003F0 C0 D0            [24] 1915 	push	psw
-                           00035D  1916 	C$lab1_2_COOL.c$282$1$78 ==.
-                                   1917 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:282: Counts++;
-      0003F2 05 08            [12] 1918 	inc	_Counts
-      0003F4 E4               [12] 1919 	clr	a
-      0003F5 B5 08 02         [24] 1920 	cjne	a,_Counts,00108$
-      0003F8 05 09            [12] 1921 	inc	(_Counts + 1)
-      0003FA                       1922 00108$:
-                           000365  1923 	C$lab1_2_COOL.c$283$1$78 ==.
-                                   1924 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:283: if(Counts == 337)
-      0003FA 74 51            [12] 1925 	mov	a,#0x51
-      0003FC B5 08 0C         [24] 1926 	cjne	a,_Counts,00103$
-      0003FF 74 01            [12] 1927 	mov	a,#0x01
-      000401 B5 09 07         [24] 1928 	cjne	a,(_Counts + 1),00103$
-                           00036F  1929 	C$lab1_2_COOL.c$285$2$79 ==.
-                                   1930 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:285: Seconds ++;
-      000404 05 0A            [12] 1931 	inc	_Seconds
-                           000371  1932 	C$lab1_2_COOL.c$286$2$79 ==.
-                                   1933 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:286: Counts = 0;
-      000406 E4               [12] 1934 	clr	a
-      000407 F5 08            [12] 1935 	mov	_Counts,a
-      000409 F5 09            [12] 1936 	mov	(_Counts + 1),a
-      00040B                       1937 00103$:
-      00040B D0 D0            [24] 1938 	pop	psw
-      00040D D0 E0            [24] 1939 	pop	acc
-                           00037A  1940 	C$lab1_2_COOL.c$288$1$78 ==.
-                           00037A  1941 	XG$Timer0_ISR$0$0 ==.
-      00040F 32               [24] 1942 	reti
-                                   1943 ;	eliminated unneeded mov psw,# (no regs used in bank)
-                                   1944 ;	eliminated unneeded push/pop dpl
-                                   1945 ;	eliminated unneeded push/pop dph
-                                   1946 ;	eliminated unneeded push/pop b
-                                   1947 ;------------------------------------------------------------
-                                   1948 ;Allocation info for local variables in function 'random'
-                                   1949 ;------------------------------------------------------------
-                           00037B  1950 	G$random$0$0 ==.
-                           00037B  1951 	C$lab1_2_COOL.c$297$1$78 ==.
-                                   1952 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:297: unsigned char random(void)
-                                   1953 ;	-----------------------------------------
-                                   1954 ;	 function random
-                                   1955 ;	-----------------------------------------
-      000410                       1956 _random:
-                           00037B  1957 	C$lab1_2_COOL.c$299$1$81 ==.
-                                   1958 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:299: return (rand()%3);  // rand returns a random number between 0 and 32767.
-      000410 12 04 41         [24] 1959 	lcall	_rand
-      000413 75 1A 03         [24] 1960 	mov	__modsint_PARM_2,#0x03
-      000416 75 1B 00         [24] 1961 	mov	(__modsint_PARM_2 + 1),#0x00
-      000419 12 0B 7B         [24] 1962 	lcall	__modsint
-                           000387  1963 	C$lab1_2_COOL.c$303$1$81 ==.
-                           000387  1964 	XG$random$0$0 ==.
-      00041C 22               [24] 1965 	ret
-                                   1966 ;------------------------------------------------------------
-                                   1967 ;Allocation info for local variables in function 'Button0'
-                                   1968 ;------------------------------------------------------------
-                           000388  1969 	G$Button0$0$0 ==.
-                           000388  1970 	C$lab1_2_COOL.c$310$1$81 ==.
-                                   1971 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:310: int Button0(void)
-                                   1972 ;	-----------------------------------------
-                                   1973 ;	 function Button0
-                                   1974 ;	-----------------------------------------
-      00041D                       1975 _Button0:
-                           000388  1976 	C$lab1_2_COOL.c$312$1$83 ==.
-                                   1977 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:312: if (!PB0)
-      00041D 20 B0 05         [24] 1978 	jb	_PB0,00102$
-                           00038B  1979 	C$lab1_2_COOL.c$314$2$84 ==.
-                                   1980 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:314: return 1;
-      000420 90 00 01         [24] 1981 	mov	dptr,#0x0001
-      000423 80 03            [24] 1982 	sjmp	00104$
-      000425                       1983 00102$:
-                           000390  1984 	C$lab1_2_COOL.c$316$1$83 ==.
-                                   1985 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:316: else return 0;
-      000425 90 00 00         [24] 1986 	mov	dptr,#0x0000
-      000428                       1987 00104$:
-                           000393  1988 	C$lab1_2_COOL.c$317$1$83 ==.
-                           000393  1989 	XG$Button0$0$0 ==.
-      000428 22               [24] 1990 	ret
-                                   1991 ;------------------------------------------------------------
-                                   1992 ;Allocation info for local variables in function 'Button1'
-                                   1993 ;------------------------------------------------------------
-                           000394  1994 	G$Button1$0$0 ==.
-                           000394  1995 	C$lab1_2_COOL.c$319$1$83 ==.
-                                   1996 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:319: int Button1(void)
-                                   1997 ;	-----------------------------------------
-                                   1998 ;	 function Button1
-                                   1999 ;	-----------------------------------------
-      000429                       2000 _Button1:
-                           000394  2001 	C$lab1_2_COOL.c$321$1$86 ==.
-                                   2002 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:321: if (!PB1)
-      000429 20 B1 05         [24] 2003 	jb	_PB1,00102$
-                           000397  2004 	C$lab1_2_COOL.c$323$2$87 ==.
-                                   2005 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:323: return 1;
-      00042C 90 00 01         [24] 2006 	mov	dptr,#0x0001
-      00042F 80 03            [24] 2007 	sjmp	00104$
-      000431                       2008 00102$:
-                           00039C  2009 	C$lab1_2_COOL.c$325$1$86 ==.
-                                   2010 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:325: else return 0;
-      000431 90 00 00         [24] 2011 	mov	dptr,#0x0000
-      000434                       2012 00104$:
-                           00039F  2013 	C$lab1_2_COOL.c$326$1$86 ==.
-                           00039F  2014 	XG$Button1$0$0 ==.
-      000434 22               [24] 2015 	ret
-                                   2016 ;------------------------------------------------------------
-                                   2017 ;Allocation info for local variables in function 'Switch'
-                                   2018 ;------------------------------------------------------------
-                           0003A0  2019 	G$Switch$0$0 ==.
-                           0003A0  2020 	C$lab1_2_COOL.c$331$1$86 ==.
-                                   2021 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:331: int Switch(void)
-                                   2022 ;	-----------------------------------------
-                                   2023 ;	 function Switch
-                                   2024 ;	-----------------------------------------
-      000435                       2025 _Switch:
-                           0003A0  2026 	C$lab1_2_COOL.c$333$1$89 ==.
-                                   2027 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:333: if (!SS) return 1;
-      000435 20 A0 05         [24] 2028 	jb	_SS,00102$
-      000438 90 00 01         [24] 2029 	mov	dptr,#0x0001
-      00043B 80 03            [24] 2030 	sjmp	00104$
-      00043D                       2031 00102$:
-                           0003A8  2032 	C$lab1_2_COOL.c$334$1$89 ==.
-                                   2033 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:334: else return 0;
-      00043D 90 00 00         [24] 2034 	mov	dptr,#0x0000
-      000440                       2035 00104$:
-                           0003AB  2036 	C$lab1_2_COOL.c$335$1$89 ==.
-                           0003AB  2037 	XG$Switch$0$0 ==.
-      000440 22               [24] 2038 	ret
-                                   2039 	.area CSEG    (CODE)
-                                   2040 	.area CONST   (CODE)
-                           000000  2041 Flab1_2_COOL$__str_0$0$0 == .
-      000BB5                       2042 ___str_0:
-      000BB5 53 74 61 72 74        2043 	.ascii "Start"
-      000BBA 0D                    2044 	.db 0x0D
-      000BBB 0A                    2045 	.db 0x0A
-      000BBC 00                    2046 	.db 0x00
-                           000008  2047 Flab1_2_COOL$__str_1$0$0 == .
-      000BBD                       2048 ___str_1:
-      000BBD 0D                    2049 	.db 0x0D
-      000BBE 4E 75 6D 62 65 72 20  2050 	.ascii "Number is %u"
-             69 73 20 25 75
-      000BCA 0A                    2051 	.db 0x0A
-      000BCB 00                    2052 	.db 0x00
-                           000017  2053 Flab1_2_COOL$__str_2$0$0 == .
-      000BCC                       2054 ___str_2:
-      000BCC 0D                    2055 	.db 0x0D
-      000BCD 59 6F 75 20 70 75 73  2056 	.ascii "You pushed Button 1"
-             68 65 64 20 42 75 74
-             74 6F 6E 20 31
-      000BE0 0A                    2057 	.db 0x0A
-      000BE1 00                    2058 	.db 0x00
-                           00002D  2059 Flab1_2_COOL$__str_3$0$0 == .
-      000BE2                       2060 ___str_3:
-      000BE2 0D                    2061 	.db 0x0D
-      000BE3 59 6F 75 20 70 72 65  2062 	.ascii "You pressed Button 0 and Button 1"
+      00013E B5 0C 02         [24] 1315 	cjne	a,_RNG,00322$
+      000141 80 EA            [24] 1316 	sjmp	00174$
+      000143                       1317 00322$:
+                           0000AE  1318 	C$lab1_2_COOL.c$77$5$53 ==.
+                                   1319 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:77: if(RNG == 0) 
+      000143 E5 0C            [12] 1320 	mov	a,_RNG
+      000145 60 03            [24] 1321 	jz	00323$
+      000147 02 01 EA         [24] 1322 	ljmp	00170$
+      00014A                       1323 00323$:
+                           0000B5  1324 	C$lab1_2_COOL.c$79$6$54 ==.
+                                   1325 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:79: LED0 = 0; // Turn on LED0
+      00014A C2 B6            [12] 1326 	clr	_LED0
+                           0000B7  1327 	C$lab1_2_COOL.c$80$6$54 ==.
+                                   1328 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:80: LED1 = 1; // Turn off LED1						
+      00014C D2 B5            [12] 1329 	setb	_LED1
+                           0000B9  1330 	C$lab1_2_COOL.c$81$6$54 ==.
+                                   1331 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:81: Seconds = 0;
+      00014E 75 0A 00         [24] 1332 	mov	_Seconds,#0x00
+                           0000BC  1333 	C$lab1_2_COOL.c$82$6$54 ==.
+                                   1334 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:82: while(Seconds <= secondvariable) // Within the alotted time
+      000151                       1335 00125$:
+      000151 C3               [12] 1336 	clr	c
+      000152 E5 12            [12] 1337 	mov	a,_secondvariable
+      000154 95 0A            [12] 1338 	subb	a,_Seconds
+      000156 50 03            [24] 1339 	jnc	00324$
+      000158 02 02 FB         [24] 1340 	ljmp	00171$
+      00015B                       1341 00324$:
+                           0000C6  1342 	C$lab1_2_COOL.c$84$7$55 ==.
+                                   1343 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:84: if (flag == 0)
+      00015B E5 0F            [12] 1344 	mov	a,_flag
+      00015D 70 F2            [24] 1345 	jnz	00125$
+                           0000CA  1346 	C$lab1_2_COOL.c$86$8$56 ==.
+                                   1347 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:86: if(Button0()) // If the correct button is pushed
+      00015F 12 03 AA         [24] 1348 	lcall	_Button0
+      000162 E5 82            [12] 1349 	mov	a,dpl
+      000164 85 83 F0         [24] 1350 	mov	b,dph
+      000167 45 F0            [12] 1351 	orl	a,b
+      000169 60 1D            [24] 1352 	jz	00121$
+                           0000D6  1353 	C$lab1_2_COOL.c$88$9$57 ==.
+                                   1354 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:88: Counts = 0;
+      00016B E4               [12] 1355 	clr	a
+      00016C F5 08            [12] 1356 	mov	_Counts,a
+      00016E F5 09            [12] 1357 	mov	(_Counts + 1),a
+                           0000DB  1358 	C$lab1_2_COOL.c$89$9$57 ==.
+                                   1359 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:89: while (Counts <= countvariable);
+      000170                       1360 00104$:
+      000170 AE 11            [24] 1361 	mov	r6,_countvariable
+      000172 7F 00            [12] 1362 	mov	r7,#0x00
+      000174 C3               [12] 1363 	clr	c
+      000175 EE               [12] 1364 	mov	a,r6
+      000176 95 08            [12] 1365 	subb	a,_Counts
+      000178 EF               [12] 1366 	mov	a,r7
+      000179 95 09            [12] 1367 	subb	a,(_Counts + 1)
+      00017B 50 F3            [24] 1368 	jnc	00104$
+                           0000E8  1369 	C$lab1_2_COOL.c$90$9$57 ==.
+                                   1370 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:90: correctAnswerCount++; // Log the correct answer
+      00017D 05 0E            [12] 1371 	inc	_correctAnswerCount
+                           0000EA  1372 	C$lab1_2_COOL.c$91$9$57 ==.
+                                   1373 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:91: BILED0 = 1;			  // Make BILED green
+      00017F D2 B3            [12] 1374 	setb	_BILED0
+                           0000EC  1375 	C$lab1_2_COOL.c$92$9$57 ==.
+                                   1376 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:92: BILED1 = 0;	
+      000181 C2 B4            [12] 1377 	clr	_BILED1
+                           0000EE  1378 	C$lab1_2_COOL.c$93$9$57 ==.
+                                   1379 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:93: flag = 1;
+      000183 75 0F 01         [24] 1380 	mov	_flag,#0x01
+      000186 80 C9            [24] 1381 	sjmp	00125$
+      000188                       1382 00121$:
+                           0000F3  1383 	C$lab1_2_COOL.c$95$8$56 ==.
+                                   1384 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:95: else if(Button1()) // If the incorrect button is pressed
+      000188 12 03 B6         [24] 1385 	lcall	_Button1
+      00018B E5 82            [12] 1386 	mov	a,dpl
+      00018D 85 83 F0         [24] 1387 	mov	b,dph
+      000190 45 F0            [12] 1388 	orl	a,b
+      000192 60 1B            [24] 1389 	jz	00118$
+                           0000FF  1390 	C$lab1_2_COOL.c$97$9$58 ==.
+                                   1391 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:97: Counts = 0;
+      000194 E4               [12] 1392 	clr	a
+      000195 F5 08            [12] 1393 	mov	_Counts,a
+      000197 F5 09            [12] 1394 	mov	(_Counts + 1),a
+                           000104  1395 	C$lab1_2_COOL.c$98$9$58 ==.
+                                   1396 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:98: while (Counts <= countvariable);
+      000199                       1397 00107$:
+      000199 AE 11            [24] 1398 	mov	r6,_countvariable
+      00019B 7F 00            [12] 1399 	mov	r7,#0x00
+      00019D C3               [12] 1400 	clr	c
+      00019E EE               [12] 1401 	mov	a,r6
+      00019F 95 08            [12] 1402 	subb	a,_Counts
+      0001A1 EF               [12] 1403 	mov	a,r7
+      0001A2 95 09            [12] 1404 	subb	a,(_Counts + 1)
+      0001A4 50 F3            [24] 1405 	jnc	00107$
+                           000111  1406 	C$lab1_2_COOL.c$99$9$58 ==.
+                                   1407 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:99: flag = 1;
+      0001A6 75 0F 01         [24] 1408 	mov	_flag,#0x01
+                           000114  1409 	C$lab1_2_COOL.c$100$9$58 ==.
+                                   1410 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:100: BILED0 = 0;			// Make BILED red
+      0001A9 C2 B3            [12] 1411 	clr	_BILED0
+                           000116  1412 	C$lab1_2_COOL.c$101$9$58 ==.
+                                   1413 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:101: BILED1 = 1;
+      0001AB D2 B4            [12] 1414 	setb	_BILED1
+      0001AD 80 A2            [24] 1415 	sjmp	00125$
+      0001AF                       1416 00118$:
+                           00011A  1417 	C$lab1_2_COOL.c$103$8$56 ==.
+                                   1418 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:103: else if(Button0() && Button1()) // If the incorrect button is pressed
+      0001AF 12 03 AA         [24] 1419 	lcall	_Button0
+      0001B2 E5 82            [12] 1420 	mov	a,dpl
+      0001B4 85 83 F0         [24] 1421 	mov	b,dph
+      0001B7 45 F0            [12] 1422 	orl	a,b
+      0001B9 60 28            [24] 1423 	jz	00114$
+      0001BB 12 03 B6         [24] 1424 	lcall	_Button1
+      0001BE E5 82            [12] 1425 	mov	a,dpl
+      0001C0 85 83 F0         [24] 1426 	mov	b,dph
+      0001C3 45 F0            [12] 1427 	orl	a,b
+      0001C5 60 1C            [24] 1428 	jz	00114$
+                           000132  1429 	C$lab1_2_COOL.c$105$9$59 ==.
+                                   1430 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:105: Counts = 0;
+      0001C7 E4               [12] 1431 	clr	a
+      0001C8 F5 08            [12] 1432 	mov	_Counts,a
+      0001CA F5 09            [12] 1433 	mov	(_Counts + 1),a
+                           000137  1434 	C$lab1_2_COOL.c$106$9$59 ==.
+                                   1435 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:106: while (Counts <= countvariable);
+      0001CC                       1436 00110$:
+      0001CC AE 11            [24] 1437 	mov	r6,_countvariable
+      0001CE 7F 00            [12] 1438 	mov	r7,#0x00
+      0001D0 C3               [12] 1439 	clr	c
+      0001D1 EE               [12] 1440 	mov	a,r6
+      0001D2 95 08            [12] 1441 	subb	a,_Counts
+      0001D4 EF               [12] 1442 	mov	a,r7
+      0001D5 95 09            [12] 1443 	subb	a,(_Counts + 1)
+      0001D7 50 F3            [24] 1444 	jnc	00110$
+                           000144  1445 	C$lab1_2_COOL.c$107$9$59 ==.
+                                   1446 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:107: flag = 1;
+      0001D9 75 0F 01         [24] 1447 	mov	_flag,#0x01
+                           000147  1448 	C$lab1_2_COOL.c$108$9$59 ==.
+                                   1449 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:108: BILED0 = 0;			// Make BILED red
+      0001DC C2 B3            [12] 1450 	clr	_BILED0
+                           000149  1451 	C$lab1_2_COOL.c$109$9$59 ==.
+                                   1452 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:109: BILED1 = 1;
+      0001DE D2 B4            [12] 1453 	setb	_BILED1
+      0001E0 02 01 51         [24] 1454 	ljmp	00125$
+      0001E3                       1455 00114$:
+                           00014E  1456 	C$lab1_2_COOL.c$113$9$60 ==.
+                                   1457 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:113: BILED0 = 0;			// Make BILED red
+      0001E3 C2 B3            [12] 1458 	clr	_BILED0
+                           000150  1459 	C$lab1_2_COOL.c$114$9$60 ==.
+                                   1460 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:114: BILED1 = 1;
+      0001E5 D2 B4            [12] 1461 	setb	_BILED1
+      0001E7 02 01 51         [24] 1462 	ljmp	00125$
+      0001EA                       1463 00170$:
+                           000155  1464 	C$lab1_2_COOL.c$119$5$53 ==.
+                                   1465 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:119: else if(RNG == 1)
+      0001EA 74 01            [12] 1466 	mov	a,#0x01
+      0001EC B5 0C 02         [24] 1467 	cjne	a,_RNG,00333$
+      0001EF 80 03            [24] 1468 	sjmp	00334$
+      0001F1                       1469 00333$:
+      0001F1 02 02 94         [24] 1470 	ljmp	00167$
+      0001F4                       1471 00334$:
+                           00015F  1472 	C$lab1_2_COOL.c$121$6$61 ==.
+                                   1473 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:121: LED1 = 0; //Turn on LED1
+      0001F4 C2 B5            [12] 1474 	clr	_LED1
+                           000161  1475 	C$lab1_2_COOL.c$122$6$61 ==.
+                                   1476 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:122: LED0 = 1; //Turn off LED0
+      0001F6 D2 B6            [12] 1477 	setb	_LED0
+                           000163  1478 	C$lab1_2_COOL.c$123$6$61 ==.
+                                   1479 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:123: Seconds = 0;
+      0001F8 75 0A 00         [24] 1480 	mov	_Seconds,#0x00
+                           000166  1481 	C$lab1_2_COOL.c$124$6$61 ==.
+                                   1482 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:124: while(Seconds <= secondvariable) // Within the alotted time
+      0001FB                       1483 00149$:
+      0001FB C3               [12] 1484 	clr	c
+      0001FC E5 12            [12] 1485 	mov	a,_secondvariable
+      0001FE 95 0A            [12] 1486 	subb	a,_Seconds
+      000200 50 03            [24] 1487 	jnc	00335$
+      000202 02 02 FB         [24] 1488 	ljmp	00171$
+      000205                       1489 00335$:
+                           000170  1490 	C$lab1_2_COOL.c$126$7$62 ==.
+                                   1491 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:126: if (flag == 0)
+      000205 E5 0F            [12] 1492 	mov	a,_flag
+      000207 70 F2            [24] 1493 	jnz	00149$
+                           000174  1494 	C$lab1_2_COOL.c$128$8$63 ==.
+                                   1495 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:128: if(Button1()) // If the correct button is pushed
+      000209 12 03 B6         [24] 1496 	lcall	_Button1
+      00020C E5 82            [12] 1497 	mov	a,dpl
+      00020E 85 83 F0         [24] 1498 	mov	b,dph
+      000211 45 F0            [12] 1499 	orl	a,b
+      000213 60 1D            [24] 1500 	jz	00145$
+                           000180  1501 	C$lab1_2_COOL.c$130$9$64 ==.
+                                   1502 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:130: Counts = 0;
+      000215 E4               [12] 1503 	clr	a
+      000216 F5 08            [12] 1504 	mov	_Counts,a
+      000218 F5 09            [12] 1505 	mov	(_Counts + 1),a
+                           000185  1506 	C$lab1_2_COOL.c$131$9$64 ==.
+                                   1507 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:131: while (Counts <= countvariable);
+      00021A                       1508 00128$:
+      00021A AE 11            [24] 1509 	mov	r6,_countvariable
+      00021C 7F 00            [12] 1510 	mov	r7,#0x00
+      00021E C3               [12] 1511 	clr	c
+      00021F EE               [12] 1512 	mov	a,r6
+      000220 95 08            [12] 1513 	subb	a,_Counts
+      000222 EF               [12] 1514 	mov	a,r7
+      000223 95 09            [12] 1515 	subb	a,(_Counts + 1)
+      000225 50 F3            [24] 1516 	jnc	00128$
+                           000192  1517 	C$lab1_2_COOL.c$132$9$64 ==.
+                                   1518 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:132: correctAnswerCount++; // Log the correct answer
+      000227 05 0E            [12] 1519 	inc	_correctAnswerCount
+                           000194  1520 	C$lab1_2_COOL.c$133$9$64 ==.
+                                   1521 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:133: BILED0 = 1;			  // Make BILED green
+      000229 D2 B3            [12] 1522 	setb	_BILED0
+                           000196  1523 	C$lab1_2_COOL.c$134$9$64 ==.
+                                   1524 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:134: BILED1 = 0;	
+      00022B C2 B4            [12] 1525 	clr	_BILED1
+                           000198  1526 	C$lab1_2_COOL.c$135$9$64 ==.
+                                   1527 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:135: flag = 1;
+      00022D 75 0F 01         [24] 1528 	mov	_flag,#0x01
+      000230 80 C9            [24] 1529 	sjmp	00149$
+      000232                       1530 00145$:
+                           00019D  1531 	C$lab1_2_COOL.c$137$8$63 ==.
+                                   1532 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:137: else if(Button0()) // If the incorrect button is pressed
+      000232 12 03 AA         [24] 1533 	lcall	_Button0
+      000235 E5 82            [12] 1534 	mov	a,dpl
+      000237 85 83 F0         [24] 1535 	mov	b,dph
+      00023A 45 F0            [12] 1536 	orl	a,b
+      00023C 60 1B            [24] 1537 	jz	00142$
+                           0001A9  1538 	C$lab1_2_COOL.c$139$9$65 ==.
+                                   1539 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:139: Counts = 0;
+      00023E E4               [12] 1540 	clr	a
+      00023F F5 08            [12] 1541 	mov	_Counts,a
+      000241 F5 09            [12] 1542 	mov	(_Counts + 1),a
+                           0001AE  1543 	C$lab1_2_COOL.c$140$9$65 ==.
+                                   1544 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:140: while (Counts <= countvariable);
+      000243                       1545 00131$:
+      000243 AE 11            [24] 1546 	mov	r6,_countvariable
+      000245 7F 00            [12] 1547 	mov	r7,#0x00
+      000247 C3               [12] 1548 	clr	c
+      000248 EE               [12] 1549 	mov	a,r6
+      000249 95 08            [12] 1550 	subb	a,_Counts
+      00024B EF               [12] 1551 	mov	a,r7
+      00024C 95 09            [12] 1552 	subb	a,(_Counts + 1)
+      00024E 50 F3            [24] 1553 	jnc	00131$
+                           0001BB  1554 	C$lab1_2_COOL.c$141$9$65 ==.
+                                   1555 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:141: flag = 1;
+      000250 75 0F 01         [24] 1556 	mov	_flag,#0x01
+                           0001BE  1557 	C$lab1_2_COOL.c$142$9$65 ==.
+                                   1558 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:142: BILED0 = 0;			// Make BILED red
+      000253 C2 B3            [12] 1559 	clr	_BILED0
+                           0001C0  1560 	C$lab1_2_COOL.c$143$9$65 ==.
+                                   1561 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:143: BILED1 = 1;
+      000255 D2 B4            [12] 1562 	setb	_BILED1
+      000257 80 A2            [24] 1563 	sjmp	00149$
+      000259                       1564 00142$:
+                           0001C4  1565 	C$lab1_2_COOL.c$145$8$63 ==.
+                                   1566 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:145: else if(Button0() && Button1()) // If the incorrect button is pressed
+      000259 12 03 AA         [24] 1567 	lcall	_Button0
+      00025C E5 82            [12] 1568 	mov	a,dpl
+      00025E 85 83 F0         [24] 1569 	mov	b,dph
+      000261 45 F0            [12] 1570 	orl	a,b
+      000263 60 28            [24] 1571 	jz	00138$
+      000265 12 03 B6         [24] 1572 	lcall	_Button1
+      000268 E5 82            [12] 1573 	mov	a,dpl
+      00026A 85 83 F0         [24] 1574 	mov	b,dph
+      00026D 45 F0            [12] 1575 	orl	a,b
+      00026F 60 1C            [24] 1576 	jz	00138$
+                           0001DC  1577 	C$lab1_2_COOL.c$147$9$66 ==.
+                                   1578 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:147: Counts = 0;
+      000271 E4               [12] 1579 	clr	a
+      000272 F5 08            [12] 1580 	mov	_Counts,a
+      000274 F5 09            [12] 1581 	mov	(_Counts + 1),a
+                           0001E1  1582 	C$lab1_2_COOL.c$148$9$66 ==.
+                                   1583 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:148: while (Counts <= countvariable);
+      000276                       1584 00134$:
+      000276 AE 11            [24] 1585 	mov	r6,_countvariable
+      000278 7F 00            [12] 1586 	mov	r7,#0x00
+      00027A C3               [12] 1587 	clr	c
+      00027B EE               [12] 1588 	mov	a,r6
+      00027C 95 08            [12] 1589 	subb	a,_Counts
+      00027E EF               [12] 1590 	mov	a,r7
+      00027F 95 09            [12] 1591 	subb	a,(_Counts + 1)
+      000281 50 F3            [24] 1592 	jnc	00134$
+                           0001EE  1593 	C$lab1_2_COOL.c$149$9$66 ==.
+                                   1594 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:149: flag = 1;
+      000283 75 0F 01         [24] 1595 	mov	_flag,#0x01
+                           0001F1  1596 	C$lab1_2_COOL.c$150$9$66 ==.
+                                   1597 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:150: BILED0 = 0;			// Make BILED red
+      000286 C2 B3            [12] 1598 	clr	_BILED0
+                           0001F3  1599 	C$lab1_2_COOL.c$151$9$66 ==.
+                                   1600 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:151: BILED1 = 1;
+      000288 D2 B4            [12] 1601 	setb	_BILED1
+      00028A 02 01 FB         [24] 1602 	ljmp	00149$
+      00028D                       1603 00138$:
+                           0001F8  1604 	C$lab1_2_COOL.c$155$9$67 ==.
+                                   1605 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:155: BILED0 = 0;			// Make BILED red
+      00028D C2 B3            [12] 1606 	clr	_BILED0
+                           0001FA  1607 	C$lab1_2_COOL.c$156$9$67 ==.
+                                   1608 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:156: BILED1 = 1;
+      00028F D2 B4            [12] 1609 	setb	_BILED1
+      000291 02 01 FB         [24] 1610 	ljmp	00149$
+      000294                       1611 00167$:
+                           0001FF  1612 	C$lab1_2_COOL.c$161$5$53 ==.
+                                   1613 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:161: else if (RNG == 2)
+      000294 74 02            [12] 1614 	mov	a,#0x02
+      000296 B5 0C 62         [24] 1615 	cjne	a,_RNG,00171$
+                           000204  1616 	C$lab1_2_COOL.c$163$6$68 ==.
+                                   1617 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:163: LED0 = 0; //Turn on LED0
+      000299 C2 B6            [12] 1618 	clr	_LED0
+                           000206  1619 	C$lab1_2_COOL.c$164$6$68 ==.
+                                   1620 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:164: LED1 = 0; //Turn on 
+      00029B C2 B5            [12] 1621 	clr	_LED1
+                           000208  1622 	C$lab1_2_COOL.c$165$6$68 ==.
+                                   1623 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:165: Seconds = 0;
+      00029D 75 0A 00         [24] 1624 	mov	_Seconds,#0x00
+                           00020B  1625 	C$lab1_2_COOL.c$166$6$68 ==.
+                                   1626 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:166: while(Seconds <= secondvariable) // Within the alotted time
+      0002A0                       1627 00161$:
+      0002A0 C3               [12] 1628 	clr	c
+      0002A1 E5 12            [12] 1629 	mov	a,_secondvariable
+      0002A3 95 0A            [12] 1630 	subb	a,_Seconds
+      0002A5 40 54            [24] 1631 	jc	00171$
+                           000212  1632 	C$lab1_2_COOL.c$168$7$69 ==.
+                                   1633 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:168: if (flag == 0)
+      0002A7 E5 0F            [12] 1634 	mov	a,_flag
+      0002A9 70 F5            [24] 1635 	jnz	00161$
+                           000216  1636 	C$lab1_2_COOL.c$170$8$70 ==.
+                                   1637 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:170: if(Button0() && Button1()) // If the correct button is pushed
+      0002AB 12 03 AA         [24] 1638 	lcall	_Button0
+      0002AE E5 82            [12] 1639 	mov	a,dpl
+      0002B0 85 83 F0         [24] 1640 	mov	b,dph
+      0002B3 45 F0            [12] 1641 	orl	a,b
+      0002B5 60 3E            [24] 1642 	jz	00156$
+      0002B7 12 03 B6         [24] 1643 	lcall	_Button1
+      0002BA E5 82            [12] 1644 	mov	a,dpl
+      0002BC 85 83 F0         [24] 1645 	mov	b,dph
+      0002BF 45 F0            [12] 1646 	orl	a,b
+      0002C1 60 32            [24] 1647 	jz	00156$
+                           00022E  1648 	C$lab1_2_COOL.c$172$9$71 ==.
+                                   1649 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:172: Counts = 0;
+      0002C3 E4               [12] 1650 	clr	a
+      0002C4 F5 08            [12] 1651 	mov	_Counts,a
+      0002C6 F5 09            [12] 1652 	mov	(_Counts + 1),a
+                           000233  1653 	C$lab1_2_COOL.c$173$9$71 ==.
+                                   1654 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:173: while (Counts <= countvariable);
+      0002C8                       1655 00152$:
+      0002C8 AE 11            [24] 1656 	mov	r6,_countvariable
+      0002CA 7F 00            [12] 1657 	mov	r7,#0x00
+      0002CC C3               [12] 1658 	clr	c
+      0002CD EE               [12] 1659 	mov	a,r6
+      0002CE 95 08            [12] 1660 	subb	a,_Counts
+      0002D0 EF               [12] 1661 	mov	a,r7
+      0002D1 95 09            [12] 1662 	subb	a,(_Counts + 1)
+      0002D3 50 F3            [24] 1663 	jnc	00152$
+                           000240  1664 	C$lab1_2_COOL.c$174$9$71 ==.
+                                   1665 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:174: printf("\rYou pressed Button 0 and Button 1\n");
+      0002D5 74 4A            [12] 1666 	mov	a,#___str_1
+      0002D7 C0 E0            [24] 1667 	push	acc
+      0002D9 74 0B            [12] 1668 	mov	a,#(___str_1 >> 8)
+      0002DB C0 E0            [24] 1669 	push	acc
+      0002DD 74 80            [12] 1670 	mov	a,#0x80
+      0002DF C0 E0            [24] 1671 	push	acc
+      0002E1 12 04 F8         [24] 1672 	lcall	_printf
+      0002E4 15 81            [12] 1673 	dec	sp
+      0002E6 15 81            [12] 1674 	dec	sp
+      0002E8 15 81            [12] 1675 	dec	sp
+                           000255  1676 	C$lab1_2_COOL.c$175$9$71 ==.
+                                   1677 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:175: correctAnswerCount++; // Log the correct answer
+      0002EA 05 0E            [12] 1678 	inc	_correctAnswerCount
+                           000257  1679 	C$lab1_2_COOL.c$176$9$71 ==.
+                                   1680 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:176: BILED0 = 1;			  // Make BILED green
+      0002EC D2 B3            [12] 1681 	setb	_BILED0
+                           000259  1682 	C$lab1_2_COOL.c$177$9$71 ==.
+                                   1683 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:177: BILED1 = 0;	
+      0002EE C2 B4            [12] 1684 	clr	_BILED1
+                           00025B  1685 	C$lab1_2_COOL.c$178$9$71 ==.
+                                   1686 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:178: flag = 1;
+      0002F0 75 0F 01         [24] 1687 	mov	_flag,#0x01
+      0002F3 80 AB            [24] 1688 	sjmp	00161$
+      0002F5                       1689 00156$:
+                           000260  1690 	C$lab1_2_COOL.c$182$9$72 ==.
+                                   1691 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:182: BILED0 = 0;			// Make BILED red
+      0002F5 C2 B3            [12] 1692 	clr	_BILED0
+                           000262  1693 	C$lab1_2_COOL.c$183$9$72 ==.
+                                   1694 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:183: BILED1 = 1;
+      0002F7 D2 B4            [12] 1695 	setb	_BILED1
+      0002F9 80 A5            [24] 1696 	sjmp	00161$
+      0002FB                       1697 00171$:
+                           000266  1698 	C$lab1_2_COOL.c$188$5$53 ==.
+                                   1699 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:188: turns++;
+      0002FB 05 0D            [12] 1700 	inc	_turns
+                           000268  1701 	C$lab1_2_COOL.c$189$5$53 ==.
+                                   1702 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:189: previousRNG = RNG;
+      0002FD 85 0C 0B         [24] 1703 	mov	_previousRNG,_RNG
+                           00026B  1704 	C$lab1_2_COOL.c$190$5$53 ==.
+                                   1705 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:190: flag = 0;
+      000300 75 0F 00         [24] 1706 	mov	_flag,#0x00
+      000303 02 01 2D         [24] 1707 	ljmp	00174$
+      000306                       1708 00176$:
+                           000271  1709 	C$lab1_2_COOL.c$194$3$51 ==.
+                                   1710 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:194: Seconds = 0;
+      000306 75 0A 00         [24] 1711 	mov	_Seconds,#0x00
+                           000274  1712 	C$lab1_2_COOL.c$195$3$51 ==.
+                                   1713 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:195: while (Seconds == 0)
+      000309                       1714 00177$:
+      000309 E5 0A            [12] 1715 	mov	a,_Seconds
+      00030B 70 04            [24] 1716 	jnz	00179$
+                           000278  1717 	C$lab1_2_COOL.c$197$4$73 ==.
+                                   1718 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:197: Buzzer = 0; // Start buzzer
+      00030D C2 B7            [12] 1719 	clr	_Buzzer
+      00030F 80 F8            [24] 1720 	sjmp	00177$
+      000311                       1721 00179$:
+                           00027C  1722 	C$lab1_2_COOL.c$199$3$51 ==.
+                                   1723 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:199: printf("\rFINAL RESULTS: %u", correctAnswerCount);
+      000311 AE 0E            [24] 1724 	mov	r6,_correctAnswerCount
+      000313 7F 00            [12] 1725 	mov	r7,#0x00
+      000315 C0 06            [24] 1726 	push	ar6
+      000317 C0 07            [24] 1727 	push	ar7
+      000319 74 6E            [12] 1728 	mov	a,#___str_2
+      00031B C0 E0            [24] 1729 	push	acc
+      00031D 74 0B            [12] 1730 	mov	a,#(___str_2 >> 8)
+      00031F C0 E0            [24] 1731 	push	acc
+      000321 74 80            [12] 1732 	mov	a,#0x80
+      000323 C0 E0            [24] 1733 	push	acc
+      000325 12 04 F8         [24] 1734 	lcall	_printf
+      000328 E5 81            [12] 1735 	mov	a,sp
+      00032A 24 FB            [12] 1736 	add	a,#0xfb
+      00032C F5 81            [12] 1737 	mov	sp,a
+                           000299  1738 	C$lab1_2_COOL.c$200$3$51 ==.
+                                   1739 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:200: printf(" out of 10\n");
+      00032E 74 81            [12] 1740 	mov	a,#___str_3
+      000330 C0 E0            [24] 1741 	push	acc
+      000332 74 0B            [12] 1742 	mov	a,#(___str_3 >> 8)
+      000334 C0 E0            [24] 1743 	push	acc
+      000336 74 80            [12] 1744 	mov	a,#0x80
+      000338 C0 E0            [24] 1745 	push	acc
+      00033A 12 04 F8         [24] 1746 	lcall	_printf
+      00033D 15 81            [12] 1747 	dec	sp
+      00033F 15 81            [12] 1748 	dec	sp
+      000341 15 81            [12] 1749 	dec	sp
+                           0002AE  1750 	C$lab1_2_COOL.c$201$3$51 ==.
+                                   1751 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:201: programflag = 1;
+      000343 75 10 01         [24] 1752 	mov	_programflag,#0x01
+      000346                       1753 00181$:
+                           0002B1  1754 	C$lab1_2_COOL.c$203$2$50 ==.
+                                   1755 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:203: Buzzer = 1; // Stop buzzer
+      000346 D2 B7            [12] 1756 	setb	_Buzzer
+      000348 02 01 18         [24] 1757 	ljmp	00183$
+                           0002B6  1758 	C$lab1_2_COOL.c$221$1$49 ==.
+                           0002B6  1759 	XG$main$0$0 ==.
+      00034B 22               [24] 1760 	ret
+                                   1761 ;------------------------------------------------------------
+                                   1762 ;Allocation info for local variables in function 'Port_Init'
+                                   1763 ;------------------------------------------------------------
+                           0002B7  1764 	G$Port_Init$0$0 ==.
+                           0002B7  1765 	C$lab1_2_COOL.c$224$1$49 ==.
+                                   1766 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:224: void Port_Init(void)
+                                   1767 ;	-----------------------------------------
+                                   1768 ;	 function Port_Init
+                                   1769 ;	-----------------------------------------
+      00034C                       1770 _Port_Init:
+                           0002B7  1771 	C$lab1_2_COOL.c$227$1$75 ==.
+                                   1772 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:227: P3MDOUT |= 0xF8;// set Port 3 output pins to push-pull mode 
+      00034C 43 A7 F8         [24] 1773 	orl	_P3MDOUT,#0xF8
+                           0002BA  1774 	C$lab1_2_COOL.c$228$1$75 ==.
+                                   1775 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:228: P3MDOUT &= 0xFC; // set Port 3 input pins to open drain mode 
+      00034F 53 A7 FC         [24] 1776 	anl	_P3MDOUT,#0xFC
+                           0002BD  1777 	C$lab1_2_COOL.c$229$1$75 ==.
+                                   1778 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:229: P3 |= ~0xFC; // set Port 3 input pins to high impedance state 
+      000352 AF B0            [24] 1779 	mov	r7,_P3
+      000354 74 03            [12] 1780 	mov	a,#0x03
+      000356 4F               [12] 1781 	orl	a,r7
+      000357 F5 B0            [12] 1782 	mov	_P3,a
+                           0002C4  1783 	C$lab1_2_COOL.c$231$1$75 ==.
+                                   1784 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:231: P2MDOUT &= 0xFE; // set Port 2 input pins to push-pull mode
+      000359 53 A6 FE         [24] 1785 	anl	_P2MDOUT,#0xFE
+                           0002C7  1786 	C$lab1_2_COOL.c$232$1$75 ==.
+                                   1787 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:232: P2 |= ~0xFE; // set Port 2 input pins to high impedance state
+      00035C AF A0            [24] 1788 	mov	r7,_P2
+      00035E 74 01            [12] 1789 	mov	a,#0x01
+      000360 4F               [12] 1790 	orl	a,r7
+      000361 F5 A0            [12] 1791 	mov	_P2,a
+                           0002CE  1792 	C$lab1_2_COOL.c$234$1$75 ==.
+                           0002CE  1793 	XG$Port_Init$0$0 ==.
+      000363 22               [24] 1794 	ret
+                                   1795 ;------------------------------------------------------------
+                                   1796 ;Allocation info for local variables in function 'Interrupt_Init'
+                                   1797 ;------------------------------------------------------------
+                           0002CF  1798 	G$Interrupt_Init$0$0 ==.
+                           0002CF  1799 	C$lab1_2_COOL.c$236$1$75 ==.
+                                   1800 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:236: void Interrupt_Init(void)
+                                   1801 ;	-----------------------------------------
+                                   1802 ;	 function Interrupt_Init
+                                   1803 ;	-----------------------------------------
+      000364                       1804 _Interrupt_Init:
+                           0002CF  1805 	C$lab1_2_COOL.c$238$1$77 ==.
+                                   1806 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:238: ET0 = 1;      // enable Timer0 Interrupt request
+      000364 D2 A9            [12] 1807 	setb	_ET0
+                           0002D1  1808 	C$lab1_2_COOL.c$239$1$77 ==.
+                                   1809 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:239: EA = 1;       // enable global interrupts
+      000366 D2 AF            [12] 1810 	setb	_EA
+                           0002D3  1811 	C$lab1_2_COOL.c$240$1$77 ==.
+                           0002D3  1812 	XG$Interrupt_Init$0$0 ==.
+      000368 22               [24] 1813 	ret
+                                   1814 ;------------------------------------------------------------
+                                   1815 ;Allocation info for local variables in function 'Timer_Init'
+                                   1816 ;------------------------------------------------------------
+                           0002D4  1817 	G$Timer_Init$0$0 ==.
+                           0002D4  1818 	C$lab1_2_COOL.c$242$1$77 ==.
+                                   1819 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:242: void Timer_Init(void)
+                                   1820 ;	-----------------------------------------
+                                   1821 ;	 function Timer_Init
+                                   1822 ;	-----------------------------------------
+      000369                       1823 _Timer_Init:
+                           0002D4  1824 	C$lab1_2_COOL.c$245$1$79 ==.
+                                   1825 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:245: CKCON |= 0x08;  // Timer0 uses SYSCLK as source
+      000369 43 8E 08         [24] 1826 	orl	_CKCON,#0x08
+                           0002D7  1827 	C$lab1_2_COOL.c$246$1$79 ==.
+                                   1828 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:246: TMOD &= 0xF0;   // clear the 4 least significant bits
+      00036C 53 89 F0         [24] 1829 	anl	_TMOD,#0xF0
+                           0002DA  1830 	C$lab1_2_COOL.c$247$1$79 ==.
+                                   1831 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:247: TMOD |= 0x01;   // Timer0 in mode 1
+      00036F 43 89 01         [24] 1832 	orl	_TMOD,#0x01
+                           0002DD  1833 	C$lab1_2_COOL.c$248$1$79 ==.
+                                   1834 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:248: TR0 = 0;           // Stop Timer0
+      000372 C2 8C            [12] 1835 	clr	_TR0
+                           0002DF  1836 	C$lab1_2_COOL.c$249$1$79 ==.
+                                   1837 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:249: TL0 = 0;           // Clear low byte of register T0
+      000374 75 8A 00         [24] 1838 	mov	_TL0,#0x00
+                           0002E2  1839 	C$lab1_2_COOL.c$250$1$79 ==.
+                                   1840 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:250: TH0 = 0;           // Clear high byte of register T0
+      000377 75 8C 00         [24] 1841 	mov	_TH0,#0x00
+                           0002E5  1842 	C$lab1_2_COOL.c$252$1$79 ==.
+                           0002E5  1843 	XG$Timer_Init$0$0 ==.
+      00037A 22               [24] 1844 	ret
+                                   1845 ;------------------------------------------------------------
+                                   1846 ;Allocation info for local variables in function 'Timer0_ISR'
+                                   1847 ;------------------------------------------------------------
+                           0002E6  1848 	G$Timer0_ISR$0$0 ==.
+                           0002E6  1849 	C$lab1_2_COOL.c$256$1$79 ==.
+                                   1850 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:256: void Timer0_ISR(void) __interrupt 1
+                                   1851 ;	-----------------------------------------
+                                   1852 ;	 function Timer0_ISR
+                                   1853 ;	-----------------------------------------
+      00037B                       1854 _Timer0_ISR:
+      00037B C0 E0            [24] 1855 	push	acc
+      00037D C0 D0            [24] 1856 	push	psw
+                           0002EA  1857 	C$lab1_2_COOL.c$258$1$81 ==.
+                                   1858 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:258: Counts++;
+      00037F 05 08            [12] 1859 	inc	_Counts
+      000381 E4               [12] 1860 	clr	a
+      000382 B5 08 02         [24] 1861 	cjne	a,_Counts,00108$
+      000385 05 09            [12] 1862 	inc	(_Counts + 1)
+      000387                       1863 00108$:
+                           0002F2  1864 	C$lab1_2_COOL.c$259$1$81 ==.
+                                   1865 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:259: if(Counts == 337)
+      000387 74 51            [12] 1866 	mov	a,#0x51
+      000389 B5 08 0C         [24] 1867 	cjne	a,_Counts,00103$
+      00038C 74 01            [12] 1868 	mov	a,#0x01
+      00038E B5 09 07         [24] 1869 	cjne	a,(_Counts + 1),00103$
+                           0002FC  1870 	C$lab1_2_COOL.c$261$2$82 ==.
+                                   1871 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:261: Seconds ++;
+      000391 05 0A            [12] 1872 	inc	_Seconds
+                           0002FE  1873 	C$lab1_2_COOL.c$262$2$82 ==.
+                                   1874 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:262: Counts = 0;
+      000393 E4               [12] 1875 	clr	a
+      000394 F5 08            [12] 1876 	mov	_Counts,a
+      000396 F5 09            [12] 1877 	mov	(_Counts + 1),a
+      000398                       1878 00103$:
+      000398 D0 D0            [24] 1879 	pop	psw
+      00039A D0 E0            [24] 1880 	pop	acc
+                           000307  1881 	C$lab1_2_COOL.c$264$1$81 ==.
+                           000307  1882 	XG$Timer0_ISR$0$0 ==.
+      00039C 32               [24] 1883 	reti
+                                   1884 ;	eliminated unneeded mov psw,# (no regs used in bank)
+                                   1885 ;	eliminated unneeded push/pop dpl
+                                   1886 ;	eliminated unneeded push/pop dph
+                                   1887 ;	eliminated unneeded push/pop b
+                                   1888 ;------------------------------------------------------------
+                                   1889 ;Allocation info for local variables in function 'random'
+                                   1890 ;------------------------------------------------------------
+                           000308  1891 	G$random$0$0 ==.
+                           000308  1892 	C$lab1_2_COOL.c$273$1$81 ==.
+                                   1893 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:273: unsigned char random(void)
+                                   1894 ;	-----------------------------------------
+                                   1895 ;	 function random
+                                   1896 ;	-----------------------------------------
+      00039D                       1897 _random:
+                           000308  1898 	C$lab1_2_COOL.c$275$1$84 ==.
+                                   1899 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:275: return (rand()%3);  // rand returns a random number between 0 and 32767.
+      00039D 12 03 CE         [24] 1900 	lcall	_rand
+      0003A0 75 1A 03         [24] 1901 	mov	__modsint_PARM_2,#0x03
+      0003A3 75 1B 00         [24] 1902 	mov	(__modsint_PARM_2 + 1),#0x00
+      0003A6 12 0B 08         [24] 1903 	lcall	__modsint
+                           000314  1904 	C$lab1_2_COOL.c$279$1$84 ==.
+                           000314  1905 	XG$random$0$0 ==.
+      0003A9 22               [24] 1906 	ret
+                                   1907 ;------------------------------------------------------------
+                                   1908 ;Allocation info for local variables in function 'Button0'
+                                   1909 ;------------------------------------------------------------
+                           000315  1910 	G$Button0$0$0 ==.
+                           000315  1911 	C$lab1_2_COOL.c$286$1$84 ==.
+                                   1912 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:286: int Button0(void)
+                                   1913 ;	-----------------------------------------
+                                   1914 ;	 function Button0
+                                   1915 ;	-----------------------------------------
+      0003AA                       1916 _Button0:
+                           000315  1917 	C$lab1_2_COOL.c$288$1$86 ==.
+                                   1918 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:288: if (!PB0)
+      0003AA 20 B0 05         [24] 1919 	jb	_PB0,00102$
+                           000318  1920 	C$lab1_2_COOL.c$290$2$87 ==.
+                                   1921 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:290: return 1;
+      0003AD 90 00 01         [24] 1922 	mov	dptr,#0x0001
+      0003B0 80 03            [24] 1923 	sjmp	00104$
+      0003B2                       1924 00102$:
+                           00031D  1925 	C$lab1_2_COOL.c$292$1$86 ==.
+                                   1926 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:292: else return 0;
+      0003B2 90 00 00         [24] 1927 	mov	dptr,#0x0000
+      0003B5                       1928 00104$:
+                           000320  1929 	C$lab1_2_COOL.c$293$1$86 ==.
+                           000320  1930 	XG$Button0$0$0 ==.
+      0003B5 22               [24] 1931 	ret
+                                   1932 ;------------------------------------------------------------
+                                   1933 ;Allocation info for local variables in function 'Button1'
+                                   1934 ;------------------------------------------------------------
+                           000321  1935 	G$Button1$0$0 ==.
+                           000321  1936 	C$lab1_2_COOL.c$295$1$86 ==.
+                                   1937 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:295: int Button1(void)
+                                   1938 ;	-----------------------------------------
+                                   1939 ;	 function Button1
+                                   1940 ;	-----------------------------------------
+      0003B6                       1941 _Button1:
+                           000321  1942 	C$lab1_2_COOL.c$297$1$89 ==.
+                                   1943 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:297: if (!PB1)
+      0003B6 20 B1 05         [24] 1944 	jb	_PB1,00102$
+                           000324  1945 	C$lab1_2_COOL.c$299$2$90 ==.
+                                   1946 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:299: return 1;
+      0003B9 90 00 01         [24] 1947 	mov	dptr,#0x0001
+      0003BC 80 03            [24] 1948 	sjmp	00104$
+      0003BE                       1949 00102$:
+                           000329  1950 	C$lab1_2_COOL.c$301$1$89 ==.
+                                   1951 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:301: else return 0;
+      0003BE 90 00 00         [24] 1952 	mov	dptr,#0x0000
+      0003C1                       1953 00104$:
+                           00032C  1954 	C$lab1_2_COOL.c$302$1$89 ==.
+                           00032C  1955 	XG$Button1$0$0 ==.
+      0003C1 22               [24] 1956 	ret
+                                   1957 ;------------------------------------------------------------
+                                   1958 ;Allocation info for local variables in function 'Switch'
+                                   1959 ;------------------------------------------------------------
+                           00032D  1960 	G$Switch$0$0 ==.
+                           00032D  1961 	C$lab1_2_COOL.c$307$1$89 ==.
+                                   1962 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:307: int Switch(void)
+                                   1963 ;	-----------------------------------------
+                                   1964 ;	 function Switch
+                                   1965 ;	-----------------------------------------
+      0003C2                       1966 _Switch:
+                           00032D  1967 	C$lab1_2_COOL.c$309$1$92 ==.
+                                   1968 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:309: if (!SS) return 1;
+      0003C2 20 A0 05         [24] 1969 	jb	_SS,00102$
+      0003C5 90 00 01         [24] 1970 	mov	dptr,#0x0001
+      0003C8 80 03            [24] 1971 	sjmp	00104$
+      0003CA                       1972 00102$:
+                           000335  1973 	C$lab1_2_COOL.c$310$1$92 ==.
+                                   1974 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:310: else return 0;
+      0003CA 90 00 00         [24] 1975 	mov	dptr,#0x0000
+      0003CD                       1976 00104$:
+                           000338  1977 	C$lab1_2_COOL.c$311$1$92 ==.
+                           000338  1978 	XG$Switch$0$0 ==.
+      0003CD 22               [24] 1979 	ret
+                                   1980 	.area CSEG    (CODE)
+                                   1981 	.area CONST   (CODE)
+                           000000  1982 Flab1_2_COOL$__str_0$0$0 == .
+      000B42                       1983 ___str_0:
+      000B42 53 74 61 72 74        1984 	.ascii "Start"
+      000B47 0D                    1985 	.db 0x0D
+      000B48 0A                    1986 	.db 0x0A
+      000B49 00                    1987 	.db 0x00
+                           000008  1988 Flab1_2_COOL$__str_1$0$0 == .
+      000B4A                       1989 ___str_1:
+      000B4A 0D                    1990 	.db 0x0D
+      000B4B 59 6F 75 20 70 72 65  1991 	.ascii "You pressed Button 0 and Button 1"
              73 73 65 64 20 42 75
              74 74 6F 6E 20 30 20
              61 6E 64 20 42 75 74
              74 6F 6E 20 31
-      000C04 0A                    2063 	.db 0x0A
-      000C05 00                    2064 	.db 0x00
-                           000051  2065 Flab1_2_COOL$__str_4$0$0 == .
-      000C06                       2066 ___str_4:
-      000C06 0D                    2067 	.db 0x0D
-      000C07 49 74 20 69 73 20 74  2068 	.ascii "It is turn %u"
-             75 72 6E 20 25 75
-      000C14 0A                    2069 	.db 0x0A
-      000C15 00                    2070 	.db 0x00
-                           000061  2071 Flab1_2_COOL$__str_5$0$0 == .
-      000C16                       2072 ___str_5:
-      000C16 0D                    2073 	.db 0x0D
-      000C17 43 6F 72 72 65 63 74  2074 	.ascii "Correct responses: %u"
-             20 72 65 73 70 6F 6E
-             73 65 73 3A 20 25 75
-      000C2C 0A                    2075 	.db 0x0A
-      000C2D 00                    2076 	.db 0x00
-                           000079  2077 Flab1_2_COOL$__str_6$0$0 == .
-      000C2E                       2078 ___str_6:
-      000C2E 0D                    2079 	.db 0x0D
-      000C2F 46 49 4E 41 4C 20 52  2080 	.ascii "FINAL RESULTS: %u"
+      000B6C 0A                    1992 	.db 0x0A
+      000B6D 00                    1993 	.db 0x00
+                           00002C  1994 Flab1_2_COOL$__str_2$0$0 == .
+      000B6E                       1995 ___str_2:
+      000B6E 0D                    1996 	.db 0x0D
+      000B6F 46 49 4E 41 4C 20 52  1997 	.ascii "FINAL RESULTS: %u"
              45 53 55 4C 54 53 3A
              20 25 75
-      000C40 00                    2081 	.db 0x00
-                           00008C  2082 Flab1_2_COOL$__str_7$0$0 == .
-      000C41                       2083 ___str_7:
-      000C41 20 6F 75 74 20 6F 66  2084 	.ascii " out of 10"
+      000B80 00                    1998 	.db 0x00
+                           00003F  1999 Flab1_2_COOL$__str_3$0$0 == .
+      000B81                       2000 ___str_3:
+      000B81 20 6F 75 74 20 6F 66  2001 	.ascii " out of 10"
              20 31 30
-      000C4B 0A                    2085 	.db 0x0A
-      000C4C 00                    2086 	.db 0x00
-                                   2087 	.area XINIT   (CODE)
-                                   2088 	.area CABS    (ABS,CODE)
+      000B8B 0A                    2002 	.db 0x0A
+      000B8C 00                    2003 	.db 0x00
+                                   2004 	.area XINIT   (CODE)
+                                   2005 	.area CABS    (ABS,CODE)

@@ -72,17 +72,17 @@ C:   0000002A  l_GSINIT4
 C:   0000003C  s_ISEG                          
 C:   00000040  s_GSINIT4                       
 C:   00000042  s_SSEG                          
+C:   00000056  l_CONST                         
 C:   0000006A  s_GSINIT                        
 C:   0000006A  s_GSINIT5                       
 C:   00000080  l_DSEG                          
 C:   00000092  s_GSFINAL                       
 C:   00000095  s_CSEG                          
-C:   000000A3  l_CONST                         
 C:   000000BE  l_SSEG                          
 C:   00000100  l_IRAM                          
-C:   00000B20  l_CSEG                          
-C:   00000BB5  s_CONST                         
-C:   00000C58  s_XINIT                         
+C:   00000AAD  l_CSEG                          
+C:   00000B42  s_CONST                         
+C:   00000B98  s_XINIT                         
 
 ASxxxx Linker V03.00 + NoICE + sdld,  page 3.
 Hexadecimal  [32-Bits]
@@ -919,29 +919,29 @@ GSINIT                              0000006A    00000028 =          40. bytes (R
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
 C:   0000006A  A$lab1-2-COOL$1017                 lab1_2_COOL
-C:   0000006A  C$lab1_2_COOL.c$45$1$89            lab1_2_COOL
+C:   0000006A  C$lab1_2_COOL.c$41$1$92            lab1_2_COOL
 C:   0000006B  A$lab1-2-COOL$1018                 lab1_2_COOL
 C:   0000006D  A$lab1-2-COOL$1019                 lab1_2_COOL
 C:   0000006F  A$lab1-2-COOL$1023                 lab1_2_COOL
-C:   0000006F  C$lab1_2_COOL.c$46$1$89            lab1_2_COOL
+C:   0000006F  C$lab1_2_COOL.c$42$1$92            lab1_2_COOL
 C:   00000071  A$lab1-2-COOL$1026                 lab1_2_COOL
-C:   00000071  C$lab1_2_COOL.c$47$1$89            lab1_2_COOL
+C:   00000071  C$lab1_2_COOL.c$43$1$92            lab1_2_COOL
 C:   00000074  A$lab1-2-COOL$1030                 lab1_2_COOL
-C:   00000074  C$lab1_2_COOL.c$48$1$89            lab1_2_COOL
+C:   00000074  C$lab1_2_COOL.c$44$1$92            lab1_2_COOL
 C:   00000076  A$lab1-2-COOL$1033                 lab1_2_COOL
-C:   00000076  C$lab1_2_COOL.c$49$1$89            lab1_2_COOL
+C:   00000076  C$lab1_2_COOL.c$45$1$92            lab1_2_COOL
 C:   00000079  A$lab1-2-COOL$1037                 lab1_2_COOL
-C:   00000079  C$lab1_2_COOL.c$50$1$89            lab1_2_COOL
+C:   00000079  C$lab1_2_COOL.c$46$1$92            lab1_2_COOL
 C:   0000007B  A$lab1-2-COOL$1041                 lab1_2_COOL
-C:   0000007B  C$lab1_2_COOL.c$51$1$89            lab1_2_COOL
+C:   0000007B  C$lab1_2_COOL.c$47$1$92            lab1_2_COOL
 C:   0000007D  A$lab1-2-COOL$1045                 lab1_2_COOL
-C:   0000007D  C$lab1_2_COOL.c$52$1$89            lab1_2_COOL
+C:   0000007D  C$lab1_2_COOL.c$48$1$92            lab1_2_COOL
 C:   0000007F  A$lab1-2-COOL$1048                 lab1_2_COOL
-C:   0000007F  C$lab1_2_COOL.c$53$1$89            lab1_2_COOL
+C:   0000007F  C$lab1_2_COOL.c$49$1$92            lab1_2_COOL
 C:   00000082  A$lab1-2-COOL$1051                 lab1_2_COOL
-C:   00000082  C$lab1_2_COOL.c$54$1$89            lab1_2_COOL
+C:   00000082  C$lab1_2_COOL.c$50$1$92            lab1_2_COOL
 C:   00000085  A$lab1-2-COOL$1054                 lab1_2_COOL
-C:   00000085  C$lab1_2_COOL.c$55$1$89            lab1_2_COOL
+C:   00000085  C$lab1_2_COOL.c$51$1$92            lab1_2_COOL
 ASxxxx Linker V03.00 + NoICE + sdld,  page 27.
 Hexadecimal  [32-Bits]
 
@@ -958,7 +958,7 @@ Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                00000095    00000B20 =        2848. bytes (REL,CON,CODE)
+CSEG                                00000095    00000AAD =        2733. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
@@ -1017,7 +1017,7 @@ Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                00000095    00000B20 =        2848. bytes (REL,CON,CODE)
+CSEG                                00000095    00000AAD =        2733. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
@@ -1062,30 +1062,30 @@ C:   000000F0  A$lab1-2-COOL$1241                 lab1_2_COOL
 C:   000000F0  C$c8051_SDCC.h$116$1$10            lab1_2_COOL
 C:   000000F0  XG$getchar$0$0                     lab1_2_COOL
 C:   000000F1  A$lab1-2-COOL$1254                 lab1_2_COOL
-C:   000000F1  C$lab1_2_COOL.c$58$1$10            lab1_2_COOL
-C:   000000F1  C$lab1_2_COOL.c$60$1$49            lab1_2_COOL
+C:   000000F1  C$lab1_2_COOL.c$54$1$10            lab1_2_COOL
+C:   000000F1  C$lab1_2_COOL.c$56$1$49            lab1_2_COOL
 C:   000000F1  G$main$0$0                         lab1_2_COOL
 C:   000000F1  _main                              lab1_2_COOL
 C:   000000F4  A$lab1-2-COOL$1257                 lab1_2_COOL
-C:   000000F4  C$lab1_2_COOL.c$61$1$49            lab1_2_COOL
+C:   000000F4  C$lab1_2_COOL.c$57$1$49            lab1_2_COOL
 C:   000000F7  A$lab1-2-COOL$1260                 lab1_2_COOL
-C:   000000F7  C$lab1_2_COOL.c$62$1$49            lab1_2_COOL
+C:   000000F7  C$lab1_2_COOL.c$58$1$49            lab1_2_COOL
 C:   000000FA  A$lab1-2-COOL$1263                 lab1_2_COOL
-C:   000000FA  C$lab1_2_COOL.c$63$1$49            lab1_2_COOL
+C:   000000FA  C$lab1_2_COOL.c$59$1$49            lab1_2_COOL
 ASxxxx Linker V03.00 + NoICE + sdld,  page 30.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                00000095    00000B20 =        2848. bytes (REL,CON,CODE)
+CSEG                                00000095    00000AAD =        2733. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
 C:   000000FD  A$lab1-2-COOL$1266                 lab1_2_COOL
-C:   000000FD  C$lab1_2_COOL.c$65$1$49            lab1_2_COOL
+C:   000000FD  C$lab1_2_COOL.c$61$1$49            lab1_2_COOL
 C:   00000100  A$lab1-2-COOL$1267                 lab1_2_COOL
 C:   00000103  A$lab1-2-COOL$1270                 lab1_2_COOL
-C:   00000103  C$lab1_2_COOL.c$66$1$49            lab1_2_COOL
+C:   00000103  C$lab1_2_COOL.c$62$1$49            lab1_2_COOL
 C:   00000105  A$lab1-2-COOL$1271                 lab1_2_COOL
 C:   00000107  A$lab1-2-COOL$1272                 lab1_2_COOL
 C:   00000109  A$lab1-2-COOL$1273                 lab1_2_COOL
@@ -1096,678 +1096,602 @@ C:   00000112  A$lab1-2-COOL$1277                 lab1_2_COOL
 C:   00000114  A$lab1-2-COOL$1278                 lab1_2_COOL
 C:   00000116  A$lab1-2-COOL$1279                 lab1_2_COOL
 C:   00000118  A$lab1-2-COOL$1285                 lab1_2_COOL
-C:   00000118  C$lab1_2_COOL.c$68$1$49            lab1_2_COOL
-C:   00000118  C$lab1_2_COOL.c$73$2$50            lab1_2_COOL
+C:   00000118  C$lab1_2_COOL.c$64$1$49            lab1_2_COOL
+C:   00000118  C$lab1_2_COOL.c$68$2$50            lab1_2_COOL
 C:   0000011A  A$lab1-2-COOL$1286                 lab1_2_COOL
 C:   0000011C  A$lab1-2-COOL$1287                 lab1_2_COOL
 C:   0000011F  A$lab1-2-COOL$1292                 lab1_2_COOL
-C:   0000011F  C$lab1_2_COOL.c$75$3$51            lab1_2_COOL
+C:   0000011F  C$lab1_2_COOL.c$70$3$51            lab1_2_COOL
 C:   00000122  A$lab1-2-COOL$1293                 lab1_2_COOL
 C:   00000124  A$lab1-2-COOL$1294                 lab1_2_COOL
 C:   00000127  A$lab1-2-COOL$1295                 lab1_2_COOL
 C:   00000129  A$lab1-2-COOL$1296                 lab1_2_COOL
 C:   0000012B  A$lab1-2-COOL$1299                 lab1_2_COOL
-C:   0000012B  C$lab1_2_COOL.c$76$3$51            lab1_2_COOL
+C:   0000012B  C$lab1_2_COOL.c$71$3$51            lab1_2_COOL
 C:   0000012D  A$lab1-2-COOL$1303                 lab1_2_COOL
-C:   0000012D  C$lab1_2_COOL.c$78$8$62            lab1_2_COOL
+C:   0000012D  C$lab1_2_COOL.c$72$9$71            lab1_2_COOL
 C:   0000012F  A$lab1-2-COOL$1304                 lab1_2_COOL
 C:   00000131  A$lab1-2-COOL$1305                 lab1_2_COOL
 C:   00000133  A$lab1-2-COOL$1306                 lab1_2_COOL
 C:   00000136  A$lab1-2-COOL$1310                 lab1_2_COOL
-C:   00000136  C$lab1_2_COOL.c$80$4$52            lab1_2_COOL
+C:   00000136  C$lab1_2_COOL.c$74$4$52            lab1_2_COOL
 C:   00000139  A$lab1-2-COOL$1311                 lab1_2_COOL
 C:   0000013C  A$lab1-2-COOL$1314                 lab1_2_COOL
-C:   0000013C  C$lab1_2_COOL.c$81$4$52            lab1_2_COOL
+C:   0000013C  C$lab1_2_COOL.c$75$4$52            lab1_2_COOL
 C:   0000013E  A$lab1-2-COOL$1315                 lab1_2_COOL
 C:   00000141  A$lab1-2-COOL$1316                 lab1_2_COOL
-C:   00000144  A$lab1-2-COOL$1320                 lab1_2_COOL
-C:   00000144  C$lab1_2_COOL.c$83$5$53            lab1_2_COOL
-C:   00000146  A$lab1-2-COOL$1321                 lab1_2_COOL
-C:   00000148  A$lab1-2-COOL$1322                 lab1_2_COOL
-C:   0000014A  A$lab1-2-COOL$1323                 lab1_2_COOL
-C:   0000014C  A$lab1-2-COOL$1324                 lab1_2_COOL
-C:   0000014E  A$lab1-2-COOL$1325                 lab1_2_COOL
-C:   00000150  A$lab1-2-COOL$1326                 lab1_2_COOL
-C:   00000152  A$lab1-2-COOL$1327                 lab1_2_COOL
-C:   00000154  A$lab1-2-COOL$1328                 lab1_2_COOL
-C:   00000156  A$lab1-2-COOL$1329                 lab1_2_COOL
-C:   00000158  A$lab1-2-COOL$1330                 lab1_2_COOL
+C:   00000143  A$lab1-2-COOL$1320                 lab1_2_COOL
+C:   00000143  C$lab1_2_COOL.c$77$5$53            lab1_2_COOL
+C:   00000145  A$lab1-2-COOL$1321                 lab1_2_COOL
+C:   00000147  A$lab1-2-COOL$1322                 lab1_2_COOL
+C:   0000014A  A$lab1-2-COOL$1326                 lab1_2_COOL
+C:   0000014A  C$lab1_2_COOL.c$79$6$54            lab1_2_COOL
+C:   0000014C  A$lab1-2-COOL$1329                 lab1_2_COOL
+C:   0000014C  C$lab1_2_COOL.c$80$6$54            lab1_2_COOL
+C:   0000014E  A$lab1-2-COOL$1332                 lab1_2_COOL
+C:   0000014E  C$lab1_2_COOL.c$81$6$54            lab1_2_COOL
+C:   00000151  A$lab1-2-COOL$1336                 lab1_2_COOL
+C:   00000151  C$lab1_2_COOL.c$82$6$54            lab1_2_COOL
 ASxxxx Linker V03.00 + NoICE + sdld,  page 31.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                00000095    00000B20 =        2848. bytes (REL,CON,CODE)
+CSEG                                00000095    00000AAD =        2733. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   0000015B  A$lab1-2-COOL$1331                 lab1_2_COOL
-C:   0000015D  A$lab1-2-COOL$1332                 lab1_2_COOL
-C:   0000015F  A$lab1-2-COOL$1333                 lab1_2_COOL
-C:   00000161  A$lab1-2-COOL$1336                 lab1_2_COOL
-C:   00000161  C$lab1_2_COOL.c$84$5$53            lab1_2_COOL
-C:   00000163  A$lab1-2-COOL$1337                 lab1_2_COOL
-C:   00000165  A$lab1-2-COOL$1338                 lab1_2_COOL
-C:   00000168  A$lab1-2-COOL$1342                 lab1_2_COOL
-C:   00000168  C$lab1_2_COOL.c$86$6$54            lab1_2_COOL
-C:   0000016A  A$lab1-2-COOL$1345                 lab1_2_COOL
-C:   0000016A  C$lab1_2_COOL.c$87$6$54            lab1_2_COOL
-C:   0000016C  A$lab1-2-COOL$1348                 lab1_2_COOL
-C:   0000016C  C$lab1_2_COOL.c$89$6$54            lab1_2_COOL
-C:   0000016F  A$lab1-2-COOL$1352                 lab1_2_COOL
-C:   0000016F  C$lab1_2_COOL.c$90$6$54            lab1_2_COOL
-C:   00000170  A$lab1-2-COOL$1353                 lab1_2_COOL
-C:   00000172  A$lab1-2-COOL$1354                 lab1_2_COOL
-C:   00000174  A$lab1-2-COOL$1355                 lab1_2_COOL
-C:   00000176  A$lab1-2-COOL$1356                 lab1_2_COOL
-C:   00000179  A$lab1-2-COOL$1358                 lab1_2_COOL
-C:   0000017B  A$lab1-2-COOL$1359                 lab1_2_COOL
-C:   0000017D  A$lab1-2-COOL$1360                 lab1_2_COOL
-C:   00000180  A$lab1-2-COOL$1364                 lab1_2_COOL
-C:   00000180  C$lab1_2_COOL.c$94$7$55            lab1_2_COOL
-C:   00000183  A$lab1-2-COOL$1365                 lab1_2_COOL
-C:   00000185  A$lab1-2-COOL$1366                 lab1_2_COOL
-C:   00000188  A$lab1-2-COOL$1367                 lab1_2_COOL
-C:   0000018A  A$lab1-2-COOL$1368                 lab1_2_COOL
-C:   0000018C  A$lab1-2-COOL$1371                 lab1_2_COOL
-C:   0000018C  C$lab1_2_COOL.c$96$8$56            lab1_2_COOL
-C:   0000018D  A$lab1-2-COOL$1372                 lab1_2_COOL
-C:   0000018F  A$lab1-2-COOL$1373                 lab1_2_COOL
-C:   00000191  A$lab1-2-COOL$1377                 lab1_2_COOL
-C:   00000191  C$lab1_2_COOL.c$97$8$56            lab1_2_COOL
-C:   00000193  A$lab1-2-COOL$1378                 lab1_2_COOL
-C:   00000195  A$lab1-2-COOL$1379                 lab1_2_COOL
-C:   00000196  A$lab1-2-COOL$1380                 lab1_2_COOL
-C:   00000197  A$lab1-2-COOL$1381                 lab1_2_COOL
-C:   00000199  A$lab1-2-COOL$1382                 lab1_2_COOL
-C:   0000019A  A$lab1-2-COOL$1383                 lab1_2_COOL
-C:   0000019C  A$lab1-2-COOL$1384                 lab1_2_COOL
-C:   0000019E  A$lab1-2-COOL$1387                 lab1_2_COOL
-C:   0000019E  C$lab1_2_COOL.c$99$8$56            lab1_2_COOL
-C:   000001A0  A$lab1-2-COOL$1390                 lab1_2_COOL
-C:   000001A0  C$lab1_2_COOL.c$100$8$56           lab1_2_COOL
-C:   000001A2  A$lab1-2-COOL$1393                 lab1_2_COOL
-C:   000001A2  C$lab1_2_COOL.c$101$8$56           lab1_2_COOL
-C:   000001A4  A$lab1-2-COOL$1396                 lab1_2_COOL
-C:   000001A4  C$lab1_2_COOL.c$102$8$56           lab1_2_COOL
-C:   000001A7  A$lab1-2-COOL$1397                 lab1_2_COOL
-C:   000001A9  A$lab1-2-COOL$1401                 lab1_2_COOL
+C:   00000152  A$lab1-2-COOL$1337                 lab1_2_COOL
+C:   00000154  A$lab1-2-COOL$1338                 lab1_2_COOL
+C:   00000156  A$lab1-2-COOL$1339                 lab1_2_COOL
+C:   00000158  A$lab1-2-COOL$1340                 lab1_2_COOL
+C:   0000015B  A$lab1-2-COOL$1344                 lab1_2_COOL
+C:   0000015B  C$lab1_2_COOL.c$84$7$55            lab1_2_COOL
+C:   0000015D  A$lab1-2-COOL$1345                 lab1_2_COOL
+C:   0000015F  A$lab1-2-COOL$1348                 lab1_2_COOL
+C:   0000015F  C$lab1_2_COOL.c$86$8$56            lab1_2_COOL
+C:   00000162  A$lab1-2-COOL$1349                 lab1_2_COOL
+C:   00000164  A$lab1-2-COOL$1350                 lab1_2_COOL
+C:   00000167  A$lab1-2-COOL$1351                 lab1_2_COOL
+C:   00000169  A$lab1-2-COOL$1352                 lab1_2_COOL
+C:   0000016B  A$lab1-2-COOL$1355                 lab1_2_COOL
+C:   0000016B  C$lab1_2_COOL.c$88$9$57            lab1_2_COOL
+C:   0000016C  A$lab1-2-COOL$1356                 lab1_2_COOL
+C:   0000016E  A$lab1-2-COOL$1357                 lab1_2_COOL
+C:   00000170  A$lab1-2-COOL$1361                 lab1_2_COOL
+C:   00000170  C$lab1_2_COOL.c$89$9$57            lab1_2_COOL
+C:   00000172  A$lab1-2-COOL$1362                 lab1_2_COOL
+C:   00000174  A$lab1-2-COOL$1363                 lab1_2_COOL
+C:   00000175  A$lab1-2-COOL$1364                 lab1_2_COOL
+C:   00000176  A$lab1-2-COOL$1365                 lab1_2_COOL
+C:   00000178  A$lab1-2-COOL$1366                 lab1_2_COOL
+C:   00000179  A$lab1-2-COOL$1367                 lab1_2_COOL
+C:   0000017B  A$lab1-2-COOL$1368                 lab1_2_COOL
+C:   0000017D  A$lab1-2-COOL$1371                 lab1_2_COOL
+C:   0000017D  C$lab1_2_COOL.c$90$9$57            lab1_2_COOL
+C:   0000017F  A$lab1-2-COOL$1374                 lab1_2_COOL
+C:   0000017F  C$lab1_2_COOL.c$91$9$57            lab1_2_COOL
+C:   00000181  A$lab1-2-COOL$1377                 lab1_2_COOL
+C:   00000181  C$lab1_2_COOL.c$92$9$57            lab1_2_COOL
+C:   00000183  A$lab1-2-COOL$1380                 lab1_2_COOL
+C:   00000183  C$lab1_2_COOL.c$93$9$57            lab1_2_COOL
+C:   00000186  A$lab1-2-COOL$1381                 lab1_2_COOL
+C:   00000188  A$lab1-2-COOL$1385                 lab1_2_COOL
+C:   00000188  C$lab1_2_COOL.c$95$8$56            lab1_2_COOL
+C:   0000018B  A$lab1-2-COOL$1386                 lab1_2_COOL
+C:   0000018D  A$lab1-2-COOL$1387                 lab1_2_COOL
+C:   00000190  A$lab1-2-COOL$1388                 lab1_2_COOL
+C:   00000192  A$lab1-2-COOL$1389                 lab1_2_COOL
+C:   00000194  A$lab1-2-COOL$1392                 lab1_2_COOL
+C:   00000194  C$lab1_2_COOL.c$97$9$58            lab1_2_COOL
+C:   00000195  A$lab1-2-COOL$1393                 lab1_2_COOL
+C:   00000197  A$lab1-2-COOL$1394                 lab1_2_COOL
+C:   00000199  A$lab1-2-COOL$1398                 lab1_2_COOL
+C:   00000199  C$lab1_2_COOL.c$98$9$58            lab1_2_COOL
+C:   0000019B  A$lab1-2-COOL$1399                 lab1_2_COOL
+C:   0000019D  A$lab1-2-COOL$1400                 lab1_2_COOL
+C:   0000019E  A$lab1-2-COOL$1401                 lab1_2_COOL
+C:   0000019F  A$lab1-2-COOL$1402                 lab1_2_COOL
 ASxxxx Linker V03.00 + NoICE + sdld,  page 32.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                00000095    00000B20 =        2848. bytes (REL,CON,CODE)
+CSEG                                00000095    00000AAD =        2733. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   000001A9  C$lab1_2_COOL.c$104$7$55           lab1_2_COOL
-C:   000001AC  A$lab1-2-COOL$1402                 lab1_2_COOL
-C:   000001AE  A$lab1-2-COOL$1403                 lab1_2_COOL
-C:   000001B1  A$lab1-2-COOL$1404                 lab1_2_COOL
-C:   000001B3  A$lab1-2-COOL$1405                 lab1_2_COOL
-C:   000001B5  A$lab1-2-COOL$1408                 lab1_2_COOL
-C:   000001B5  C$lab1_2_COOL.c$106$8$57           lab1_2_COOL
-C:   000001B6  A$lab1-2-COOL$1409                 lab1_2_COOL
-C:   000001B8  A$lab1-2-COOL$1410                 lab1_2_COOL
-C:   000001BA  A$lab1-2-COOL$1414                 lab1_2_COOL
-C:   000001BA  C$lab1_2_COOL.c$107$8$57           lab1_2_COOL
-C:   000001BC  A$lab1-2-COOL$1415                 lab1_2_COOL
-C:   000001BE  A$lab1-2-COOL$1416                 lab1_2_COOL
-C:   000001BF  A$lab1-2-COOL$1417                 lab1_2_COOL
-C:   000001C0  A$lab1-2-COOL$1418                 lab1_2_COOL
-C:   000001C2  A$lab1-2-COOL$1419                 lab1_2_COOL
-C:   000001C3  A$lab1-2-COOL$1420                 lab1_2_COOL
-C:   000001C5  A$lab1-2-COOL$1421                 lab1_2_COOL
-C:   000001C7  A$lab1-2-COOL$1424                 lab1_2_COOL
-C:   000001C7  C$lab1_2_COOL.c$108$8$57           lab1_2_COOL
-C:   000001CA  A$lab1-2-COOL$1427                 lab1_2_COOL
-C:   000001CA  C$lab1_2_COOL.c$109$8$57           lab1_2_COOL
-C:   000001CC  A$lab1-2-COOL$1430                 lab1_2_COOL
-C:   000001CC  C$lab1_2_COOL.c$110$8$57           lab1_2_COOL
-C:   000001CE  A$lab1-2-COOL$1431                 lab1_2_COOL
-C:   000001D0  A$lab1-2-COOL$1435                 lab1_2_COOL
-C:   000001D0  C$lab1_2_COOL.c$112$7$55           lab1_2_COOL
-C:   000001D3  A$lab1-2-COOL$1436                 lab1_2_COOL
-C:   000001D5  A$lab1-2-COOL$1437                 lab1_2_COOL
-C:   000001D8  A$lab1-2-COOL$1438                 lab1_2_COOL
-C:   000001DA  A$lab1-2-COOL$1439                 lab1_2_COOL
-C:   000001DC  A$lab1-2-COOL$1440                 lab1_2_COOL
-C:   000001DF  A$lab1-2-COOL$1441                 lab1_2_COOL
-C:   000001E1  A$lab1-2-COOL$1442                 lab1_2_COOL
-C:   000001E4  A$lab1-2-COOL$1443                 lab1_2_COOL
-C:   000001E6  A$lab1-2-COOL$1444                 lab1_2_COOL
-C:   000001E8  A$lab1-2-COOL$1447                 lab1_2_COOL
-C:   000001E8  C$lab1_2_COOL.c$114$8$58           lab1_2_COOL
-C:   000001E9  A$lab1-2-COOL$1448                 lab1_2_COOL
-C:   000001EB  A$lab1-2-COOL$1449                 lab1_2_COOL
-C:   000001ED  A$lab1-2-COOL$1453                 lab1_2_COOL
-C:   000001ED  C$lab1_2_COOL.c$115$8$58           lab1_2_COOL
-C:   000001EF  A$lab1-2-COOL$1454                 lab1_2_COOL
-C:   000001F1  A$lab1-2-COOL$1455                 lab1_2_COOL
-C:   000001F2  A$lab1-2-COOL$1456                 lab1_2_COOL
-C:   000001F3  A$lab1-2-COOL$1457                 lab1_2_COOL
-C:   000001F5  A$lab1-2-COOL$1458                 lab1_2_COOL
-C:   000001F6  A$lab1-2-COOL$1459                 lab1_2_COOL
-C:   000001F8  A$lab1-2-COOL$1460                 lab1_2_COOL
-C:   000001FA  A$lab1-2-COOL$1463                 lab1_2_COOL
-C:   000001FA  C$lab1_2_COOL.c$116$8$58           lab1_2_COOL
+C:   000001A1  A$lab1-2-COOL$1403                 lab1_2_COOL
+C:   000001A2  A$lab1-2-COOL$1404                 lab1_2_COOL
+C:   000001A4  A$lab1-2-COOL$1405                 lab1_2_COOL
+C:   000001A6  A$lab1-2-COOL$1408                 lab1_2_COOL
+C:   000001A6  C$lab1_2_COOL.c$99$9$58            lab1_2_COOL
+C:   000001A9  A$lab1-2-COOL$1411                 lab1_2_COOL
+C:   000001A9  C$lab1_2_COOL.c$100$9$58           lab1_2_COOL
+C:   000001AB  A$lab1-2-COOL$1414                 lab1_2_COOL
+C:   000001AB  C$lab1_2_COOL.c$101$9$58           lab1_2_COOL
+C:   000001AD  A$lab1-2-COOL$1415                 lab1_2_COOL
+C:   000001AF  A$lab1-2-COOL$1419                 lab1_2_COOL
+C:   000001AF  C$lab1_2_COOL.c$103$8$56           lab1_2_COOL
+C:   000001B2  A$lab1-2-COOL$1420                 lab1_2_COOL
+C:   000001B4  A$lab1-2-COOL$1421                 lab1_2_COOL
+C:   000001B7  A$lab1-2-COOL$1422                 lab1_2_COOL
+C:   000001B9  A$lab1-2-COOL$1423                 lab1_2_COOL
+C:   000001BB  A$lab1-2-COOL$1424                 lab1_2_COOL
+C:   000001BE  A$lab1-2-COOL$1425                 lab1_2_COOL
+C:   000001C0  A$lab1-2-COOL$1426                 lab1_2_COOL
+C:   000001C3  A$lab1-2-COOL$1427                 lab1_2_COOL
+C:   000001C5  A$lab1-2-COOL$1428                 lab1_2_COOL
+C:   000001C7  A$lab1-2-COOL$1431                 lab1_2_COOL
+C:   000001C7  C$lab1_2_COOL.c$105$9$59           lab1_2_COOL
+C:   000001C8  A$lab1-2-COOL$1432                 lab1_2_COOL
+C:   000001CA  A$lab1-2-COOL$1433                 lab1_2_COOL
+C:   000001CC  A$lab1-2-COOL$1437                 lab1_2_COOL
+C:   000001CC  C$lab1_2_COOL.c$106$9$59           lab1_2_COOL
+C:   000001CE  A$lab1-2-COOL$1438                 lab1_2_COOL
+C:   000001D0  A$lab1-2-COOL$1439                 lab1_2_COOL
+C:   000001D1  A$lab1-2-COOL$1440                 lab1_2_COOL
+C:   000001D2  A$lab1-2-COOL$1441                 lab1_2_COOL
+C:   000001D4  A$lab1-2-COOL$1442                 lab1_2_COOL
+C:   000001D5  A$lab1-2-COOL$1443                 lab1_2_COOL
+C:   000001D7  A$lab1-2-COOL$1444                 lab1_2_COOL
+C:   000001D9  A$lab1-2-COOL$1447                 lab1_2_COOL
+C:   000001D9  C$lab1_2_COOL.c$107$9$59           lab1_2_COOL
+C:   000001DC  A$lab1-2-COOL$1450                 lab1_2_COOL
+C:   000001DC  C$lab1_2_COOL.c$108$9$59           lab1_2_COOL
+C:   000001DE  A$lab1-2-COOL$1453                 lab1_2_COOL
+C:   000001DE  C$lab1_2_COOL.c$109$9$59           lab1_2_COOL
+C:   000001E0  A$lab1-2-COOL$1454                 lab1_2_COOL
+C:   000001E3  A$lab1-2-COOL$1458                 lab1_2_COOL
+C:   000001E3  C$lab1_2_COOL.c$113$9$60           lab1_2_COOL
+C:   000001E5  A$lab1-2-COOL$1461                 lab1_2_COOL
+C:   000001E5  C$lab1_2_COOL.c$114$9$60           lab1_2_COOL
+C:   000001E7  A$lab1-2-COOL$1462                 lab1_2_COOL
+C:   000001EA  A$lab1-2-COOL$1466                 lab1_2_COOL
+C:   000001EA  C$lab1_2_COOL.c$119$5$53           lab1_2_COOL
+C:   000001EC  A$lab1-2-COOL$1467                 lab1_2_COOL
+C:   000001EF  A$lab1-2-COOL$1468                 lab1_2_COOL
+C:   000001F1  A$lab1-2-COOL$1470                 lab1_2_COOL
 ASxxxx Linker V03.00 + NoICE + sdld,  page 33.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                00000095    00000B20 =        2848. bytes (REL,CON,CODE)
+CSEG                                00000095    00000AAD =        2733. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   000001FD  A$lab1-2-COOL$1466                 lab1_2_COOL
-C:   000001FD  C$lab1_2_COOL.c$117$8$58           lab1_2_COOL
-C:   000001FF  A$lab1-2-COOL$1469                 lab1_2_COOL
-C:   000001FF  C$lab1_2_COOL.c$118$8$58           lab1_2_COOL
-C:   00000201  A$lab1-2-COOL$1470                 lab1_2_COOL
-C:   00000204  A$lab1-2-COOL$1474                 lab1_2_COOL
-C:   00000204  C$lab1_2_COOL.c$122$8$59           lab1_2_COOL
-C:   00000206  A$lab1-2-COOL$1477                 lab1_2_COOL
-C:   00000206  C$lab1_2_COOL.c$123$8$59           lab1_2_COOL
-C:   00000208  A$lab1-2-COOL$1478                 lab1_2_COOL
-C:   0000020B  A$lab1-2-COOL$1482                 lab1_2_COOL
-C:   0000020B  C$lab1_2_COOL.c$127$5$53           lab1_2_COOL
-C:   0000020D  A$lab1-2-COOL$1483                 lab1_2_COOL
-C:   00000210  A$lab1-2-COOL$1484                 lab1_2_COOL
-C:   00000212  A$lab1-2-COOL$1486                 lab1_2_COOL
-C:   00000215  A$lab1-2-COOL$1490                 lab1_2_COOL
-C:   00000215  C$lab1_2_COOL.c$129$6$60           lab1_2_COOL
-C:   00000217  A$lab1-2-COOL$1493                 lab1_2_COOL
-C:   00000217  C$lab1_2_COOL.c$130$6$60           lab1_2_COOL
-C:   00000219  A$lab1-2-COOL$1496                 lab1_2_COOL
-C:   00000219  C$lab1_2_COOL.c$131$6$60           lab1_2_COOL
-C:   0000021C  A$lab1-2-COOL$1500                 lab1_2_COOL
-C:   0000021C  C$lab1_2_COOL.c$132$6$60           lab1_2_COOL
-C:   0000021D  A$lab1-2-COOL$1501                 lab1_2_COOL
-C:   0000021F  A$lab1-2-COOL$1502                 lab1_2_COOL
-C:   00000221  A$lab1-2-COOL$1503                 lab1_2_COOL
-C:   00000223  A$lab1-2-COOL$1504                 lab1_2_COOL
-C:   00000226  A$lab1-2-COOL$1506                 lab1_2_COOL
-C:   00000228  A$lab1-2-COOL$1507                 lab1_2_COOL
-C:   0000022A  A$lab1-2-COOL$1508                 lab1_2_COOL
-C:   0000022D  A$lab1-2-COOL$1512                 lab1_2_COOL
-C:   0000022D  C$lab1_2_COOL.c$136$7$61           lab1_2_COOL
-C:   00000230  A$lab1-2-COOL$1513                 lab1_2_COOL
-C:   00000232  A$lab1-2-COOL$1514                 lab1_2_COOL
-C:   00000235  A$lab1-2-COOL$1515                 lab1_2_COOL
-C:   00000237  A$lab1-2-COOL$1516                 lab1_2_COOL
-C:   00000239  A$lab1-2-COOL$1519                 lab1_2_COOL
-C:   00000239  C$lab1_2_COOL.c$138$8$62           lab1_2_COOL
-C:   0000023A  A$lab1-2-COOL$1520                 lab1_2_COOL
-C:   0000023C  A$lab1-2-COOL$1521                 lab1_2_COOL
-C:   0000023E  A$lab1-2-COOL$1525                 lab1_2_COOL
-C:   0000023E  C$lab1_2_COOL.c$139$8$62           lab1_2_COOL
-C:   00000240  A$lab1-2-COOL$1526                 lab1_2_COOL
-C:   00000242  A$lab1-2-COOL$1527                 lab1_2_COOL
-C:   00000243  A$lab1-2-COOL$1528                 lab1_2_COOL
-C:   00000244  A$lab1-2-COOL$1529                 lab1_2_COOL
-C:   00000246  A$lab1-2-COOL$1530                 lab1_2_COOL
-C:   00000247  A$lab1-2-COOL$1531                 lab1_2_COOL
-C:   00000249  A$lab1-2-COOL$1532                 lab1_2_COOL
-C:   0000024B  A$lab1-2-COOL$1535                 lab1_2_COOL
-C:   0000024B  C$lab1_2_COOL.c$140$8$62           lab1_2_COOL
+C:   000001F4  A$lab1-2-COOL$1474                 lab1_2_COOL
+C:   000001F4  C$lab1_2_COOL.c$121$6$61           lab1_2_COOL
+C:   000001F6  A$lab1-2-COOL$1477                 lab1_2_COOL
+C:   000001F6  C$lab1_2_COOL.c$122$6$61           lab1_2_COOL
+C:   000001F8  A$lab1-2-COOL$1480                 lab1_2_COOL
+C:   000001F8  C$lab1_2_COOL.c$123$6$61           lab1_2_COOL
+C:   000001FB  A$lab1-2-COOL$1484                 lab1_2_COOL
+C:   000001FB  C$lab1_2_COOL.c$124$6$61           lab1_2_COOL
+C:   000001FC  A$lab1-2-COOL$1485                 lab1_2_COOL
+C:   000001FE  A$lab1-2-COOL$1486                 lab1_2_COOL
+C:   00000200  A$lab1-2-COOL$1487                 lab1_2_COOL
+C:   00000202  A$lab1-2-COOL$1488                 lab1_2_COOL
+C:   00000205  A$lab1-2-COOL$1492                 lab1_2_COOL
+C:   00000205  C$lab1_2_COOL.c$126$7$62           lab1_2_COOL
+C:   00000207  A$lab1-2-COOL$1493                 lab1_2_COOL
+C:   00000209  A$lab1-2-COOL$1496                 lab1_2_COOL
+C:   00000209  C$lab1_2_COOL.c$128$8$63           lab1_2_COOL
+C:   0000020C  A$lab1-2-COOL$1497                 lab1_2_COOL
+C:   0000020E  A$lab1-2-COOL$1498                 lab1_2_COOL
+C:   00000211  A$lab1-2-COOL$1499                 lab1_2_COOL
+C:   00000213  A$lab1-2-COOL$1500                 lab1_2_COOL
+C:   00000215  A$lab1-2-COOL$1503                 lab1_2_COOL
+C:   00000215  C$lab1_2_COOL.c$130$9$64           lab1_2_COOL
+C:   00000216  A$lab1-2-COOL$1504                 lab1_2_COOL
+C:   00000218  A$lab1-2-COOL$1505                 lab1_2_COOL
+C:   0000021A  A$lab1-2-COOL$1509                 lab1_2_COOL
+C:   0000021A  C$lab1_2_COOL.c$131$9$64           lab1_2_COOL
+C:   0000021C  A$lab1-2-COOL$1510                 lab1_2_COOL
+C:   0000021E  A$lab1-2-COOL$1511                 lab1_2_COOL
+C:   0000021F  A$lab1-2-COOL$1512                 lab1_2_COOL
+C:   00000220  A$lab1-2-COOL$1513                 lab1_2_COOL
+C:   00000222  A$lab1-2-COOL$1514                 lab1_2_COOL
+C:   00000223  A$lab1-2-COOL$1515                 lab1_2_COOL
+C:   00000225  A$lab1-2-COOL$1516                 lab1_2_COOL
+C:   00000227  A$lab1-2-COOL$1519                 lab1_2_COOL
+C:   00000227  C$lab1_2_COOL.c$132$9$64           lab1_2_COOL
+C:   00000229  A$lab1-2-COOL$1522                 lab1_2_COOL
+C:   00000229  C$lab1_2_COOL.c$133$9$64           lab1_2_COOL
+C:   0000022B  A$lab1-2-COOL$1525                 lab1_2_COOL
+C:   0000022B  C$lab1_2_COOL.c$134$9$64           lab1_2_COOL
+C:   0000022D  A$lab1-2-COOL$1528                 lab1_2_COOL
+C:   0000022D  C$lab1_2_COOL.c$135$9$64           lab1_2_COOL
+C:   00000230  A$lab1-2-COOL$1529                 lab1_2_COOL
+C:   00000232  A$lab1-2-COOL$1533                 lab1_2_COOL
+C:   00000232  C$lab1_2_COOL.c$137$8$63           lab1_2_COOL
+C:   00000235  A$lab1-2-COOL$1534                 lab1_2_COOL
+C:   00000237  A$lab1-2-COOL$1535                 lab1_2_COOL
+C:   0000023A  A$lab1-2-COOL$1536                 lab1_2_COOL
+C:   0000023C  A$lab1-2-COOL$1537                 lab1_2_COOL
+C:   0000023E  A$lab1-2-COOL$1540                 lab1_2_COOL
+C:   0000023E  C$lab1_2_COOL.c$139$9$65           lab1_2_COOL
 ASxxxx Linker V03.00 + NoICE + sdld,  page 34.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                00000095    00000B20 =        2848. bytes (REL,CON,CODE)
+CSEG                                00000095    00000AAD =        2733. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   0000024D  A$lab1-2-COOL$1536                 lab1_2_COOL
-C:   0000024F  A$lab1-2-COOL$1537                 lab1_2_COOL
-C:   00000251  A$lab1-2-COOL$1538                 lab1_2_COOL
-C:   00000253  A$lab1-2-COOL$1539                 lab1_2_COOL
-C:   00000255  A$lab1-2-COOL$1540                 lab1_2_COOL
-C:   00000257  A$lab1-2-COOL$1541                 lab1_2_COOL
-C:   0000025A  A$lab1-2-COOL$1542                 lab1_2_COOL
-C:   0000025C  A$lab1-2-COOL$1543                 lab1_2_COOL
-C:   0000025E  A$lab1-2-COOL$1544                 lab1_2_COOL
-C:   00000260  A$lab1-2-COOL$1547                 lab1_2_COOL
-C:   00000260  C$lab1_2_COOL.c$141$8$62           lab1_2_COOL
-C:   00000262  A$lab1-2-COOL$1550                 lab1_2_COOL
-C:   00000262  C$lab1_2_COOL.c$142$8$62           lab1_2_COOL
-C:   00000264  A$lab1-2-COOL$1553                 lab1_2_COOL
-C:   00000264  C$lab1_2_COOL.c$143$8$62           lab1_2_COOL
-C:   00000266  A$lab1-2-COOL$1556                 lab1_2_COOL
-C:   00000266  C$lab1_2_COOL.c$144$8$62           lab1_2_COOL
-C:   00000269  A$lab1-2-COOL$1557                 lab1_2_COOL
-C:   0000026B  A$lab1-2-COOL$1561                 lab1_2_COOL
-C:   0000026B  C$lab1_2_COOL.c$146$7$61           lab1_2_COOL
-C:   0000026E  A$lab1-2-COOL$1562                 lab1_2_COOL
-C:   00000270  A$lab1-2-COOL$1563                 lab1_2_COOL
-C:   00000273  A$lab1-2-COOL$1564                 lab1_2_COOL
-C:   00000275  A$lab1-2-COOL$1565                 lab1_2_COOL
-C:   00000277  A$lab1-2-COOL$1568                 lab1_2_COOL
-C:   00000277  C$lab1_2_COOL.c$148$8$63           lab1_2_COOL
-C:   00000278  A$lab1-2-COOL$1569                 lab1_2_COOL
-C:   0000027A  A$lab1-2-COOL$1570                 lab1_2_COOL
-C:   0000027C  A$lab1-2-COOL$1574                 lab1_2_COOL
-C:   0000027C  C$lab1_2_COOL.c$149$8$63           lab1_2_COOL
-C:   0000027E  A$lab1-2-COOL$1575                 lab1_2_COOL
-C:   00000280  A$lab1-2-COOL$1576                 lab1_2_COOL
-C:   00000281  A$lab1-2-COOL$1577                 lab1_2_COOL
-C:   00000282  A$lab1-2-COOL$1578                 lab1_2_COOL
-C:   00000284  A$lab1-2-COOL$1579                 lab1_2_COOL
-C:   00000285  A$lab1-2-COOL$1580                 lab1_2_COOL
-C:   00000287  A$lab1-2-COOL$1581                 lab1_2_COOL
-C:   00000289  A$lab1-2-COOL$1584                 lab1_2_COOL
-C:   00000289  C$lab1_2_COOL.c$150$8$63           lab1_2_COOL
-C:   0000028C  A$lab1-2-COOL$1587                 lab1_2_COOL
-C:   0000028C  C$lab1_2_COOL.c$151$8$63           lab1_2_COOL
-C:   0000028E  A$lab1-2-COOL$1590                 lab1_2_COOL
-C:   0000028E  C$lab1_2_COOL.c$152$8$63           lab1_2_COOL
-C:   00000290  A$lab1-2-COOL$1591                 lab1_2_COOL
-C:   00000292  A$lab1-2-COOL$1595                 lab1_2_COOL
-C:   00000292  C$lab1_2_COOL.c$154$7$61           lab1_2_COOL
-C:   00000295  A$lab1-2-COOL$1596                 lab1_2_COOL
-C:   00000297  A$lab1-2-COOL$1597                 lab1_2_COOL
-C:   0000029A  A$lab1-2-COOL$1598                 lab1_2_COOL
-C:   0000029C  A$lab1-2-COOL$1599                 lab1_2_COOL
-C:   0000029E  A$lab1-2-COOL$1600                 lab1_2_COOL
+C:   0000023F  A$lab1-2-COOL$1541                 lab1_2_COOL
+C:   00000241  A$lab1-2-COOL$1542                 lab1_2_COOL
+C:   00000243  A$lab1-2-COOL$1546                 lab1_2_COOL
+C:   00000243  C$lab1_2_COOL.c$140$9$65           lab1_2_COOL
+C:   00000245  A$lab1-2-COOL$1547                 lab1_2_COOL
+C:   00000247  A$lab1-2-COOL$1548                 lab1_2_COOL
+C:   00000248  A$lab1-2-COOL$1549                 lab1_2_COOL
+C:   00000249  A$lab1-2-COOL$1550                 lab1_2_COOL
+C:   0000024B  A$lab1-2-COOL$1551                 lab1_2_COOL
+C:   0000024C  A$lab1-2-COOL$1552                 lab1_2_COOL
+C:   0000024E  A$lab1-2-COOL$1553                 lab1_2_COOL
+C:   00000250  A$lab1-2-COOL$1556                 lab1_2_COOL
+C:   00000250  C$lab1_2_COOL.c$141$9$65           lab1_2_COOL
+C:   00000253  A$lab1-2-COOL$1559                 lab1_2_COOL
+C:   00000253  C$lab1_2_COOL.c$142$9$65           lab1_2_COOL
+C:   00000255  A$lab1-2-COOL$1562                 lab1_2_COOL
+C:   00000255  C$lab1_2_COOL.c$143$9$65           lab1_2_COOL
+C:   00000257  A$lab1-2-COOL$1563                 lab1_2_COOL
+C:   00000259  A$lab1-2-COOL$1567                 lab1_2_COOL
+C:   00000259  C$lab1_2_COOL.c$145$8$63           lab1_2_COOL
+C:   0000025C  A$lab1-2-COOL$1568                 lab1_2_COOL
+C:   0000025E  A$lab1-2-COOL$1569                 lab1_2_COOL
+C:   00000261  A$lab1-2-COOL$1570                 lab1_2_COOL
+C:   00000263  A$lab1-2-COOL$1571                 lab1_2_COOL
+C:   00000265  A$lab1-2-COOL$1572                 lab1_2_COOL
+C:   00000268  A$lab1-2-COOL$1573                 lab1_2_COOL
+C:   0000026A  A$lab1-2-COOL$1574                 lab1_2_COOL
+C:   0000026D  A$lab1-2-COOL$1575                 lab1_2_COOL
+C:   0000026F  A$lab1-2-COOL$1576                 lab1_2_COOL
+C:   00000271  A$lab1-2-COOL$1579                 lab1_2_COOL
+C:   00000271  C$lab1_2_COOL.c$147$9$66           lab1_2_COOL
+C:   00000272  A$lab1-2-COOL$1580                 lab1_2_COOL
+C:   00000274  A$lab1-2-COOL$1581                 lab1_2_COOL
+C:   00000276  A$lab1-2-COOL$1585                 lab1_2_COOL
+C:   00000276  C$lab1_2_COOL.c$148$9$66           lab1_2_COOL
+C:   00000278  A$lab1-2-COOL$1586                 lab1_2_COOL
+C:   0000027A  A$lab1-2-COOL$1587                 lab1_2_COOL
+C:   0000027B  A$lab1-2-COOL$1588                 lab1_2_COOL
+C:   0000027C  A$lab1-2-COOL$1589                 lab1_2_COOL
+C:   0000027E  A$lab1-2-COOL$1590                 lab1_2_COOL
+C:   0000027F  A$lab1-2-COOL$1591                 lab1_2_COOL
+C:   00000281  A$lab1-2-COOL$1592                 lab1_2_COOL
+C:   00000283  A$lab1-2-COOL$1595                 lab1_2_COOL
+C:   00000283  C$lab1_2_COOL.c$149$9$66           lab1_2_COOL
+C:   00000286  A$lab1-2-COOL$1598                 lab1_2_COOL
+C:   00000286  C$lab1_2_COOL.c$150$9$66           lab1_2_COOL
+C:   00000288  A$lab1-2-COOL$1601                 lab1_2_COOL
+C:   00000288  C$lab1_2_COOL.c$151$9$66           lab1_2_COOL
+C:   0000028A  A$lab1-2-COOL$1602                 lab1_2_COOL
+C:   0000028D  A$lab1-2-COOL$1606                 lab1_2_COOL
+C:   0000028D  C$lab1_2_COOL.c$155$9$67           lab1_2_COOL
 ASxxxx Linker V03.00 + NoICE + sdld,  page 35.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                00000095    00000B20 =        2848. bytes (REL,CON,CODE)
+CSEG                                00000095    00000AAD =        2733. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   000002A1  A$lab1-2-COOL$1601                 lab1_2_COOL
-C:   000002A3  A$lab1-2-COOL$1602                 lab1_2_COOL
-C:   000002A6  A$lab1-2-COOL$1603                 lab1_2_COOL
-C:   000002A8  A$lab1-2-COOL$1604                 lab1_2_COOL
-C:   000002AA  A$lab1-2-COOL$1607                 lab1_2_COOL
-C:   000002AA  C$lab1_2_COOL.c$156$8$64           lab1_2_COOL
-C:   000002AB  A$lab1-2-COOL$1608                 lab1_2_COOL
-C:   000002AD  A$lab1-2-COOL$1609                 lab1_2_COOL
-C:   000002AF  A$lab1-2-COOL$1613                 lab1_2_COOL
-C:   000002AF  C$lab1_2_COOL.c$157$8$64           lab1_2_COOL
-C:   000002B1  A$lab1-2-COOL$1614                 lab1_2_COOL
-C:   000002B3  A$lab1-2-COOL$1615                 lab1_2_COOL
-C:   000002B4  A$lab1-2-COOL$1616                 lab1_2_COOL
-C:   000002B5  A$lab1-2-COOL$1617                 lab1_2_COOL
-C:   000002B7  A$lab1-2-COOL$1618                 lab1_2_COOL
-C:   000002B8  A$lab1-2-COOL$1619                 lab1_2_COOL
-C:   000002BA  A$lab1-2-COOL$1620                 lab1_2_COOL
-C:   000002BC  A$lab1-2-COOL$1623                 lab1_2_COOL
-C:   000002BC  C$lab1_2_COOL.c$158$8$64           lab1_2_COOL
-C:   000002BF  A$lab1-2-COOL$1626                 lab1_2_COOL
-C:   000002BF  C$lab1_2_COOL.c$159$8$64           lab1_2_COOL
-C:   000002C1  A$lab1-2-COOL$1629                 lab1_2_COOL
-C:   000002C1  C$lab1_2_COOL.c$160$8$64           lab1_2_COOL
-C:   000002C3  A$lab1-2-COOL$1630                 lab1_2_COOL
-C:   000002C6  A$lab1-2-COOL$1634                 lab1_2_COOL
-C:   000002C6  C$lab1_2_COOL.c$164$8$65           lab1_2_COOL
-C:   000002C8  A$lab1-2-COOL$1637                 lab1_2_COOL
-C:   000002C8  C$lab1_2_COOL.c$165$8$65           lab1_2_COOL
-C:   000002CA  A$lab1-2-COOL$1638                 lab1_2_COOL
-C:   000002CD  A$lab1-2-COOL$1642                 lab1_2_COOL
-C:   000002CD  C$lab1_2_COOL.c$169$5$53           lab1_2_COOL
-C:   000002CF  A$lab1-2-COOL$1643                 lab1_2_COOL
-C:   000002D2  A$lab1-2-COOL$1646                 lab1_2_COOL
-C:   000002D2  C$lab1_2_COOL.c$171$6$66           lab1_2_COOL
-C:   000002D4  A$lab1-2-COOL$1649                 lab1_2_COOL
-C:   000002D4  C$lab1_2_COOL.c$172$6$66           lab1_2_COOL
-C:   000002D6  A$lab1-2-COOL$1652                 lab1_2_COOL
-C:   000002D6  C$lab1_2_COOL.c$173$6$66           lab1_2_COOL
-C:   000002D9  A$lab1-2-COOL$1656                 lab1_2_COOL
-C:   000002D9  C$lab1_2_COOL.c$174$6$66           lab1_2_COOL
-C:   000002DA  A$lab1-2-COOL$1657                 lab1_2_COOL
-C:   000002DC  A$lab1-2-COOL$1658                 lab1_2_COOL
-C:   000002DE  A$lab1-2-COOL$1659                 lab1_2_COOL
-C:   000002E0  A$lab1-2-COOL$1660                 lab1_2_COOL
-C:   000002E2  A$lab1-2-COOL$1661                 lab1_2_COOL
-C:   000002E4  A$lab1-2-COOL$1664                 lab1_2_COOL
-C:   000002E4  C$lab1_2_COOL.c$178$7$67           lab1_2_COOL
-C:   000002E7  A$lab1-2-COOL$1665                 lab1_2_COOL
-C:   000002E9  A$lab1-2-COOL$1666                 lab1_2_COOL
-C:   000002EC  A$lab1-2-COOL$1667                 lab1_2_COOL
-C:   000002EE  A$lab1-2-COOL$1668                 lab1_2_COOL
+C:   0000028F  A$lab1-2-COOL$1609                 lab1_2_COOL
+C:   0000028F  C$lab1_2_COOL.c$156$9$67           lab1_2_COOL
+C:   00000291  A$lab1-2-COOL$1610                 lab1_2_COOL
+C:   00000294  A$lab1-2-COOL$1614                 lab1_2_COOL
+C:   00000294  C$lab1_2_COOL.c$161$5$53           lab1_2_COOL
+C:   00000296  A$lab1-2-COOL$1615                 lab1_2_COOL
+C:   00000299  A$lab1-2-COOL$1618                 lab1_2_COOL
+C:   00000299  C$lab1_2_COOL.c$163$6$68           lab1_2_COOL
+C:   0000029B  A$lab1-2-COOL$1621                 lab1_2_COOL
+C:   0000029B  C$lab1_2_COOL.c$164$6$68           lab1_2_COOL
+C:   0000029D  A$lab1-2-COOL$1624                 lab1_2_COOL
+C:   0000029D  C$lab1_2_COOL.c$165$6$68           lab1_2_COOL
+C:   000002A0  A$lab1-2-COOL$1628                 lab1_2_COOL
+C:   000002A0  C$lab1_2_COOL.c$166$6$68           lab1_2_COOL
+C:   000002A1  A$lab1-2-COOL$1629                 lab1_2_COOL
+C:   000002A3  A$lab1-2-COOL$1630                 lab1_2_COOL
+C:   000002A5  A$lab1-2-COOL$1631                 lab1_2_COOL
+C:   000002A7  A$lab1-2-COOL$1634                 lab1_2_COOL
+C:   000002A7  C$lab1_2_COOL.c$168$7$69           lab1_2_COOL
+C:   000002A9  A$lab1-2-COOL$1635                 lab1_2_COOL
+C:   000002AB  A$lab1-2-COOL$1638                 lab1_2_COOL
+C:   000002AB  C$lab1_2_COOL.c$170$8$70           lab1_2_COOL
+C:   000002AE  A$lab1-2-COOL$1639                 lab1_2_COOL
+C:   000002B0  A$lab1-2-COOL$1640                 lab1_2_COOL
+C:   000002B3  A$lab1-2-COOL$1641                 lab1_2_COOL
+C:   000002B5  A$lab1-2-COOL$1642                 lab1_2_COOL
+C:   000002B7  A$lab1-2-COOL$1643                 lab1_2_COOL
+C:   000002BA  A$lab1-2-COOL$1644                 lab1_2_COOL
+C:   000002BC  A$lab1-2-COOL$1645                 lab1_2_COOL
+C:   000002BF  A$lab1-2-COOL$1646                 lab1_2_COOL
+C:   000002C1  A$lab1-2-COOL$1647                 lab1_2_COOL
+C:   000002C3  A$lab1-2-COOL$1650                 lab1_2_COOL
+C:   000002C3  C$lab1_2_COOL.c$172$9$71           lab1_2_COOL
+C:   000002C4  A$lab1-2-COOL$1651                 lab1_2_COOL
+C:   000002C6  A$lab1-2-COOL$1652                 lab1_2_COOL
+C:   000002C8  A$lab1-2-COOL$1656                 lab1_2_COOL
+C:   000002C8  C$lab1_2_COOL.c$173$9$71           lab1_2_COOL
+C:   000002CA  A$lab1-2-COOL$1657                 lab1_2_COOL
+C:   000002CC  A$lab1-2-COOL$1658                 lab1_2_COOL
+C:   000002CD  A$lab1-2-COOL$1659                 lab1_2_COOL
+C:   000002CE  A$lab1-2-COOL$1660                 lab1_2_COOL
+C:   000002D0  A$lab1-2-COOL$1661                 lab1_2_COOL
+C:   000002D1  A$lab1-2-COOL$1662                 lab1_2_COOL
+C:   000002D3  A$lab1-2-COOL$1663                 lab1_2_COOL
+C:   000002D5  A$lab1-2-COOL$1666                 lab1_2_COOL
+C:   000002D5  C$lab1_2_COOL.c$174$9$71           lab1_2_COOL
+C:   000002D7  A$lab1-2-COOL$1667                 lab1_2_COOL
+C:   000002D9  A$lab1-2-COOL$1668                 lab1_2_COOL
+C:   000002DB  A$lab1-2-COOL$1669                 lab1_2_COOL
+C:   000002DD  A$lab1-2-COOL$1670                 lab1_2_COOL
+C:   000002DF  A$lab1-2-COOL$1671                 lab1_2_COOL
 ASxxxx Linker V03.00 + NoICE + sdld,  page 36.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                00000095    00000B20 =        2848. bytes (REL,CON,CODE)
+CSEG                                00000095    00000AAD =        2733. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   000002F0  A$lab1-2-COOL$1669                 lab1_2_COOL
-C:   000002F3  A$lab1-2-COOL$1670                 lab1_2_COOL
-C:   000002F5  A$lab1-2-COOL$1671                 lab1_2_COOL
-C:   000002F8  A$lab1-2-COOL$1672                 lab1_2_COOL
-C:   000002FA  A$lab1-2-COOL$1673                 lab1_2_COOL
-C:   000002FC  A$lab1-2-COOL$1676                 lab1_2_COOL
-C:   000002FC  C$lab1_2_COOL.c$180$8$68           lab1_2_COOL
-C:   000002FD  A$lab1-2-COOL$1677                 lab1_2_COOL
-C:   000002FF  A$lab1-2-COOL$1678                 lab1_2_COOL
-C:   00000301  A$lab1-2-COOL$1682                 lab1_2_COOL
-C:   00000301  C$lab1_2_COOL.c$181$8$68           lab1_2_COOL
-C:   00000303  A$lab1-2-COOL$1683                 lab1_2_COOL
-C:   00000305  A$lab1-2-COOL$1684                 lab1_2_COOL
-C:   00000306  A$lab1-2-COOL$1685                 lab1_2_COOL
-C:   00000307  A$lab1-2-COOL$1686                 lab1_2_COOL
-C:   00000309  A$lab1-2-COOL$1687                 lab1_2_COOL
-C:   0000030A  A$lab1-2-COOL$1688                 lab1_2_COOL
-C:   0000030C  A$lab1-2-COOL$1689                 lab1_2_COOL
-C:   0000030E  A$lab1-2-COOL$1692                 lab1_2_COOL
-C:   0000030E  C$lab1_2_COOL.c$182$8$68           lab1_2_COOL
-C:   00000310  A$lab1-2-COOL$1693                 lab1_2_COOL
-C:   00000312  A$lab1-2-COOL$1694                 lab1_2_COOL
-C:   00000314  A$lab1-2-COOL$1695                 lab1_2_COOL
-C:   00000316  A$lab1-2-COOL$1696                 lab1_2_COOL
-C:   00000318  A$lab1-2-COOL$1697                 lab1_2_COOL
-C:   0000031A  A$lab1-2-COOL$1698                 lab1_2_COOL
-C:   0000031D  A$lab1-2-COOL$1699                 lab1_2_COOL
-C:   0000031F  A$lab1-2-COOL$1700                 lab1_2_COOL
-C:   00000321  A$lab1-2-COOL$1701                 lab1_2_COOL
-C:   00000323  A$lab1-2-COOL$1704                 lab1_2_COOL
-C:   00000323  C$lab1_2_COOL.c$183$8$68           lab1_2_COOL
-C:   00000325  A$lab1-2-COOL$1707                 lab1_2_COOL
-C:   00000325  C$lab1_2_COOL.c$184$8$68           lab1_2_COOL
-C:   00000327  A$lab1-2-COOL$1710                 lab1_2_COOL
-C:   00000327  C$lab1_2_COOL.c$185$8$68           lab1_2_COOL
-C:   00000329  A$lab1-2-COOL$1713                 lab1_2_COOL
-C:   00000329  C$lab1_2_COOL.c$186$8$68           lab1_2_COOL
-C:   0000032C  A$lab1-2-COOL$1714                 lab1_2_COOL
-C:   0000032E  A$lab1-2-COOL$1718                 lab1_2_COOL
-C:   0000032E  C$lab1_2_COOL.c$206$8$69           lab1_2_COOL
-C:   00000330  A$lab1-2-COOL$1721                 lab1_2_COOL
-C:   00000330  C$lab1_2_COOL.c$207$8$69           lab1_2_COOL
-C:   00000332  A$lab1-2-COOL$1722                 lab1_2_COOL
-C:   00000334  A$lab1-2-COOL$1726                 lab1_2_COOL
-C:   00000334  C$lab1_2_COOL.c$211$5$53           lab1_2_COOL
-C:   00000336  A$lab1-2-COOL$1729                 lab1_2_COOL
-C:   00000336  C$lab1_2_COOL.c$212$5$53           lab1_2_COOL
-C:   00000338  A$lab1-2-COOL$1730                 lab1_2_COOL
-C:   0000033A  A$lab1-2-COOL$1731                 lab1_2_COOL
-C:   0000033C  A$lab1-2-COOL$1732                 lab1_2_COOL
-C:   0000033E  A$lab1-2-COOL$1733                 lab1_2_COOL
+C:   000002E1  A$lab1-2-COOL$1672                 lab1_2_COOL
+C:   000002E4  A$lab1-2-COOL$1673                 lab1_2_COOL
+C:   000002E6  A$lab1-2-COOL$1674                 lab1_2_COOL
+C:   000002E8  A$lab1-2-COOL$1675                 lab1_2_COOL
+C:   000002EA  A$lab1-2-COOL$1678                 lab1_2_COOL
+C:   000002EA  C$lab1_2_COOL.c$175$9$71           lab1_2_COOL
+C:   000002EC  A$lab1-2-COOL$1681                 lab1_2_COOL
+C:   000002EC  C$lab1_2_COOL.c$176$9$71           lab1_2_COOL
+C:   000002EE  A$lab1-2-COOL$1684                 lab1_2_COOL
+C:   000002EE  C$lab1_2_COOL.c$177$9$71           lab1_2_COOL
+C:   000002F0  A$lab1-2-COOL$1687                 lab1_2_COOL
+C:   000002F0  C$lab1_2_COOL.c$178$9$71           lab1_2_COOL
+C:   000002F3  A$lab1-2-COOL$1688                 lab1_2_COOL
+C:   000002F5  A$lab1-2-COOL$1692                 lab1_2_COOL
+C:   000002F5  C$lab1_2_COOL.c$182$9$72           lab1_2_COOL
+C:   000002F7  A$lab1-2-COOL$1695                 lab1_2_COOL
+C:   000002F7  C$lab1_2_COOL.c$183$9$72           lab1_2_COOL
+C:   000002F9  A$lab1-2-COOL$1696                 lab1_2_COOL
+C:   000002FB  A$lab1-2-COOL$1700                 lab1_2_COOL
+C:   000002FB  C$lab1_2_COOL.c$188$5$53           lab1_2_COOL
+C:   000002FD  A$lab1-2-COOL$1703                 lab1_2_COOL
+C:   000002FD  C$lab1_2_COOL.c$189$5$53           lab1_2_COOL
+C:   00000300  A$lab1-2-COOL$1706                 lab1_2_COOL
+C:   00000300  C$lab1_2_COOL.c$190$5$53           lab1_2_COOL
+C:   00000303  A$lab1-2-COOL$1707                 lab1_2_COOL
+C:   00000306  A$lab1-2-COOL$1711                 lab1_2_COOL
+C:   00000306  C$lab1_2_COOL.c$194$3$51           lab1_2_COOL
+C:   00000309  A$lab1-2-COOL$1715                 lab1_2_COOL
+C:   00000309  C$lab1_2_COOL.c$195$3$51           lab1_2_COOL
+C:   0000030B  A$lab1-2-COOL$1716                 lab1_2_COOL
+C:   0000030D  A$lab1-2-COOL$1719                 lab1_2_COOL
+C:   0000030D  C$lab1_2_COOL.c$197$4$73           lab1_2_COOL
+C:   0000030F  A$lab1-2-COOL$1720                 lab1_2_COOL
+C:   00000311  A$lab1-2-COOL$1724                 lab1_2_COOL
+C:   00000311  C$lab1_2_COOL.c$199$3$51           lab1_2_COOL
+C:   00000313  A$lab1-2-COOL$1725                 lab1_2_COOL
+C:   00000315  A$lab1-2-COOL$1726                 lab1_2_COOL
+C:   00000317  A$lab1-2-COOL$1727                 lab1_2_COOL
+C:   00000319  A$lab1-2-COOL$1728                 lab1_2_COOL
+C:   0000031B  A$lab1-2-COOL$1729                 lab1_2_COOL
+C:   0000031D  A$lab1-2-COOL$1730                 lab1_2_COOL
+C:   0000031F  A$lab1-2-COOL$1731                 lab1_2_COOL
+C:   00000321  A$lab1-2-COOL$1732                 lab1_2_COOL
+C:   00000323  A$lab1-2-COOL$1733                 lab1_2_COOL
+C:   00000325  A$lab1-2-COOL$1734                 lab1_2_COOL
+C:   00000328  A$lab1-2-COOL$1735                 lab1_2_COOL
+C:   0000032A  A$lab1-2-COOL$1736                 lab1_2_COOL
+C:   0000032C  A$lab1-2-COOL$1737                 lab1_2_COOL
+C:   0000032E  A$lab1-2-COOL$1740                 lab1_2_COOL
+C:   0000032E  C$lab1_2_COOL.c$200$3$51           lab1_2_COOL
+C:   00000330  A$lab1-2-COOL$1741                 lab1_2_COOL
 ASxxxx Linker V03.00 + NoICE + sdld,  page 37.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                00000095    00000B20 =        2848. bytes (REL,CON,CODE)
+CSEG                                00000095    00000AAD =        2733. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   00000340  A$lab1-2-COOL$1734                 lab1_2_COOL
-C:   00000342  A$lab1-2-COOL$1735                 lab1_2_COOL
-C:   00000344  A$lab1-2-COOL$1736                 lab1_2_COOL
-C:   00000346  A$lab1-2-COOL$1737                 lab1_2_COOL
-C:   00000348  A$lab1-2-COOL$1738                 lab1_2_COOL
-C:   0000034A  A$lab1-2-COOL$1739                 lab1_2_COOL
-C:   0000034D  A$lab1-2-COOL$1740                 lab1_2_COOL
-C:   0000034F  A$lab1-2-COOL$1741                 lab1_2_COOL
-C:   00000351  A$lab1-2-COOL$1742                 lab1_2_COOL
-C:   00000353  A$lab1-2-COOL$1745                 lab1_2_COOL
-C:   00000353  C$lab1_2_COOL.c$213$5$53           lab1_2_COOL
-C:   00000356  A$lab1-2-COOL$1748                 lab1_2_COOL
-C:   00000356  C$lab1_2_COOL.c$214$5$53           lab1_2_COOL
-C:   00000359  A$lab1-2-COOL$1752                 lab1_2_COOL
-C:   00000359  C$lab1_2_COOL.c$216$4$52           lab1_2_COOL
-C:   0000035B  A$lab1-2-COOL$1753                 lab1_2_COOL
-C:   0000035D  A$lab1-2-COOL$1754                 lab1_2_COOL
-C:   0000035F  A$lab1-2-COOL$1755                 lab1_2_COOL
-C:   00000361  A$lab1-2-COOL$1756                 lab1_2_COOL
-C:   00000363  A$lab1-2-COOL$1757                 lab1_2_COOL
-C:   00000365  A$lab1-2-COOL$1758                 lab1_2_COOL
-C:   00000367  A$lab1-2-COOL$1759                 lab1_2_COOL
-C:   00000369  A$lab1-2-COOL$1760                 lab1_2_COOL
-C:   0000036B  A$lab1-2-COOL$1761                 lab1_2_COOL
-C:   0000036D  A$lab1-2-COOL$1762                 lab1_2_COOL
-C:   00000370  A$lab1-2-COOL$1763                 lab1_2_COOL
-C:   00000372  A$lab1-2-COOL$1764                 lab1_2_COOL
-C:   00000374  A$lab1-2-COOL$1765                 lab1_2_COOL
-C:   00000376  A$lab1-2-COOL$1766                 lab1_2_COOL
-C:   00000379  A$lab1-2-COOL$1770                 lab1_2_COOL
-C:   00000379  C$lab1_2_COOL.c$219$3$51           lab1_2_COOL
-C:   0000037C  A$lab1-2-COOL$1774                 lab1_2_COOL
-C:   0000037C  C$lab1_2_COOL.c$220$3$51           lab1_2_COOL
-C:   0000037E  A$lab1-2-COOL$1775                 lab1_2_COOL
-C:   00000380  A$lab1-2-COOL$1778                 lab1_2_COOL
-C:   00000380  C$lab1_2_COOL.c$222$4$70           lab1_2_COOL
-C:   00000382  A$lab1-2-COOL$1779                 lab1_2_COOL
-C:   00000384  A$lab1-2-COOL$1783                 lab1_2_COOL
-C:   00000384  C$lab1_2_COOL.c$226$3$51           lab1_2_COOL
-C:   00000386  A$lab1-2-COOL$1784                 lab1_2_COOL
-C:   00000388  A$lab1-2-COOL$1785                 lab1_2_COOL
-C:   0000038A  A$lab1-2-COOL$1786                 lab1_2_COOL
-C:   0000038C  A$lab1-2-COOL$1787                 lab1_2_COOL
-C:   0000038E  A$lab1-2-COOL$1788                 lab1_2_COOL
-C:   00000390  A$lab1-2-COOL$1789                 lab1_2_COOL
-C:   00000392  A$lab1-2-COOL$1790                 lab1_2_COOL
-C:   00000394  A$lab1-2-COOL$1791                 lab1_2_COOL
-C:   00000396  A$lab1-2-COOL$1792                 lab1_2_COOL
-C:   00000398  A$lab1-2-COOL$1793                 lab1_2_COOL
-C:   0000039B  A$lab1-2-COOL$1794                 lab1_2_COOL
-C:   0000039D  A$lab1-2-COOL$1795                 lab1_2_COOL
+C:   00000332  A$lab1-2-COOL$1742                 lab1_2_COOL
+C:   00000334  A$lab1-2-COOL$1743                 lab1_2_COOL
+C:   00000336  A$lab1-2-COOL$1744                 lab1_2_COOL
+C:   00000338  A$lab1-2-COOL$1745                 lab1_2_COOL
+C:   0000033A  A$lab1-2-COOL$1746                 lab1_2_COOL
+C:   0000033D  A$lab1-2-COOL$1747                 lab1_2_COOL
+C:   0000033F  A$lab1-2-COOL$1748                 lab1_2_COOL
+C:   00000341  A$lab1-2-COOL$1749                 lab1_2_COOL
+C:   00000343  A$lab1-2-COOL$1752                 lab1_2_COOL
+C:   00000343  C$lab1_2_COOL.c$201$3$51           lab1_2_COOL
+C:   00000346  A$lab1-2-COOL$1756                 lab1_2_COOL
+C:   00000346  C$lab1_2_COOL.c$203$2$50           lab1_2_COOL
+C:   00000348  A$lab1-2-COOL$1757                 lab1_2_COOL
+C:   0000034B  A$lab1-2-COOL$1760                 lab1_2_COOL
+C:   0000034B  C$lab1_2_COOL.c$221$1$49           lab1_2_COOL
+C:   0000034B  XG$main$0$0                        lab1_2_COOL
+C:   0000034C  A$lab1-2-COOL$1773                 lab1_2_COOL
+C:   0000034C  C$lab1_2_COOL.c$224$1$49           lab1_2_COOL
+C:   0000034C  C$lab1_2_COOL.c$227$1$75           lab1_2_COOL
+C:   0000034C  G$Port_Init$0$0                    lab1_2_COOL
+C:   0000034C  _Port_Init                         lab1_2_COOL
+C:   0000034F  A$lab1-2-COOL$1776                 lab1_2_COOL
+C:   0000034F  C$lab1_2_COOL.c$228$1$75           lab1_2_COOL
+C:   00000352  A$lab1-2-COOL$1779                 lab1_2_COOL
+C:   00000352  C$lab1_2_COOL.c$229$1$75           lab1_2_COOL
+C:   00000354  A$lab1-2-COOL$1780                 lab1_2_COOL
+C:   00000356  A$lab1-2-COOL$1781                 lab1_2_COOL
+C:   00000357  A$lab1-2-COOL$1782                 lab1_2_COOL
+C:   00000359  A$lab1-2-COOL$1785                 lab1_2_COOL
+C:   00000359  C$lab1_2_COOL.c$231$1$75           lab1_2_COOL
+C:   0000035C  A$lab1-2-COOL$1788                 lab1_2_COOL
+C:   0000035C  C$lab1_2_COOL.c$232$1$75           lab1_2_COOL
+C:   0000035E  A$lab1-2-COOL$1789                 lab1_2_COOL
+C:   00000360  A$lab1-2-COOL$1790                 lab1_2_COOL
+C:   00000361  A$lab1-2-COOL$1791                 lab1_2_COOL
+C:   00000363  A$lab1-2-COOL$1794                 lab1_2_COOL
+C:   00000363  C$lab1_2_COOL.c$234$1$75           lab1_2_COOL
+C:   00000363  XG$Port_Init$0$0                   lab1_2_COOL
+C:   00000364  A$lab1-2-COOL$1807                 lab1_2_COOL
+C:   00000364  C$lab1_2_COOL.c$236$1$75           lab1_2_COOL
+C:   00000364  C$lab1_2_COOL.c$238$1$77           lab1_2_COOL
+C:   00000364  G$Interrupt_Init$0$0               lab1_2_COOL
+C:   00000364  _Interrupt_Init                    lab1_2_COOL
+C:   00000366  A$lab1-2-COOL$1810                 lab1_2_COOL
+C:   00000366  C$lab1_2_COOL.c$239$1$77           lab1_2_COOL
+C:   00000368  A$lab1-2-COOL$1813                 lab1_2_COOL
+C:   00000368  C$lab1_2_COOL.c$240$1$77           lab1_2_COOL
+C:   00000368  XG$Interrupt_Init$0$0              lab1_2_COOL
+C:   00000369  A$lab1-2-COOL$1826                 lab1_2_COOL
+C:   00000369  C$lab1_2_COOL.c$242$1$77           lab1_2_COOL
+C:   00000369  C$lab1_2_COOL.c$245$1$79           lab1_2_COOL
 ASxxxx Linker V03.00 + NoICE + sdld,  page 38.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                00000095    00000B20 =        2848. bytes (REL,CON,CODE)
+CSEG                                00000095    00000AAD =        2733. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   0000039F  A$lab1-2-COOL$1796                 lab1_2_COOL
-C:   000003A1  A$lab1-2-COOL$1799                 lab1_2_COOL
-C:   000003A1  C$lab1_2_COOL.c$227$3$51           lab1_2_COOL
-C:   000003A3  A$lab1-2-COOL$1800                 lab1_2_COOL
-C:   000003A5  A$lab1-2-COOL$1801                 lab1_2_COOL
-C:   000003A7  A$lab1-2-COOL$1802                 lab1_2_COOL
-C:   000003A9  A$lab1-2-COOL$1803                 lab1_2_COOL
-C:   000003AB  A$lab1-2-COOL$1804                 lab1_2_COOL
-C:   000003AD  A$lab1-2-COOL$1805                 lab1_2_COOL
-C:   000003B0  A$lab1-2-COOL$1806                 lab1_2_COOL
-C:   000003B2  A$lab1-2-COOL$1807                 lab1_2_COOL
-C:   000003B4  A$lab1-2-COOL$1808                 lab1_2_COOL
-C:   000003B6  A$lab1-2-COOL$1811                 lab1_2_COOL
-C:   000003B6  C$lab1_2_COOL.c$228$3$51           lab1_2_COOL
-C:   000003B9  A$lab1-2-COOL$1815                 lab1_2_COOL
-C:   000003B9  C$lab1_2_COOL.c$230$2$50           lab1_2_COOL
-C:   000003BB  A$lab1-2-COOL$1816                 lab1_2_COOL
-C:   000003BE  A$lab1-2-COOL$1819                 lab1_2_COOL
-C:   000003BE  C$lab1_2_COOL.c$245$1$49           lab1_2_COOL
-C:   000003BE  XG$main$0$0                        lab1_2_COOL
-C:   000003BF  A$lab1-2-COOL$1832                 lab1_2_COOL
-C:   000003BF  C$lab1_2_COOL.c$248$1$49           lab1_2_COOL
-C:   000003BF  C$lab1_2_COOL.c$251$1$72           lab1_2_COOL
-C:   000003BF  G$Port_Init$0$0                    lab1_2_COOL
-C:   000003BF  _Port_Init                         lab1_2_COOL
-C:   000003C2  A$lab1-2-COOL$1835                 lab1_2_COOL
-C:   000003C2  C$lab1_2_COOL.c$252$1$72           lab1_2_COOL
-C:   000003C5  A$lab1-2-COOL$1838                 lab1_2_COOL
-C:   000003C5  C$lab1_2_COOL.c$253$1$72           lab1_2_COOL
-C:   000003C7  A$lab1-2-COOL$1839                 lab1_2_COOL
-C:   000003C9  A$lab1-2-COOL$1840                 lab1_2_COOL
-C:   000003CA  A$lab1-2-COOL$1841                 lab1_2_COOL
-C:   000003CC  A$lab1-2-COOL$1844                 lab1_2_COOL
-C:   000003CC  C$lab1_2_COOL.c$255$1$72           lab1_2_COOL
-C:   000003CF  A$lab1-2-COOL$1847                 lab1_2_COOL
-C:   000003CF  C$lab1_2_COOL.c$256$1$72           lab1_2_COOL
-C:   000003D1  A$lab1-2-COOL$1848                 lab1_2_COOL
-C:   000003D3  A$lab1-2-COOL$1849                 lab1_2_COOL
-C:   000003D4  A$lab1-2-COOL$1850                 lab1_2_COOL
-C:   000003D6  A$lab1-2-COOL$1853                 lab1_2_COOL
-C:   000003D6  C$lab1_2_COOL.c$258$1$72           lab1_2_COOL
-C:   000003D6  XG$Port_Init$0$0                   lab1_2_COOL
-C:   000003D7  A$lab1-2-COOL$1866                 lab1_2_COOL
-C:   000003D7  C$lab1_2_COOL.c$260$1$72           lab1_2_COOL
-C:   000003D7  C$lab1_2_COOL.c$262$1$74           lab1_2_COOL
-C:   000003D7  G$Interrupt_Init$0$0               lab1_2_COOL
-C:   000003D7  _Interrupt_Init                    lab1_2_COOL
-C:   000003D9  A$lab1-2-COOL$1869                 lab1_2_COOL
-C:   000003D9  C$lab1_2_COOL.c$263$1$74           lab1_2_COOL
-C:   000003DB  A$lab1-2-COOL$1872                 lab1_2_COOL
-C:   000003DB  C$lab1_2_COOL.c$264$1$74           lab1_2_COOL
+C:   00000369  G$Timer_Init$0$0                   lab1_2_COOL
+C:   00000369  _Timer_Init                        lab1_2_COOL
+C:   0000036C  A$lab1-2-COOL$1829                 lab1_2_COOL
+C:   0000036C  C$lab1_2_COOL.c$246$1$79           lab1_2_COOL
+C:   0000036F  A$lab1-2-COOL$1832                 lab1_2_COOL
+C:   0000036F  C$lab1_2_COOL.c$247$1$79           lab1_2_COOL
+C:   00000372  A$lab1-2-COOL$1835                 lab1_2_COOL
+C:   00000372  C$lab1_2_COOL.c$248$1$79           lab1_2_COOL
+C:   00000374  A$lab1-2-COOL$1838                 lab1_2_COOL
+C:   00000374  C$lab1_2_COOL.c$249$1$79           lab1_2_COOL
+C:   00000377  A$lab1-2-COOL$1841                 lab1_2_COOL
+C:   00000377  C$lab1_2_COOL.c$250$1$79           lab1_2_COOL
+C:   0000037A  A$lab1-2-COOL$1844                 lab1_2_COOL
+C:   0000037A  C$lab1_2_COOL.c$252$1$79           lab1_2_COOL
+C:   0000037A  XG$Timer_Init$0$0                  lab1_2_COOL
+C:   0000037B  A$lab1-2-COOL$1855                 lab1_2_COOL
+C:   0000037B  C$lab1_2_COOL.c$256$1$79           lab1_2_COOL
+C:   0000037B  G$Timer0_ISR$0$0                   lab1_2_COOL
+C:   0000037B  _Timer0_ISR                        lab1_2_COOL
+C:   0000037D  A$lab1-2-COOL$1856                 lab1_2_COOL
+C:   0000037F  A$lab1-2-COOL$1859                 lab1_2_COOL
+C:   0000037F  C$lab1_2_COOL.c$258$1$81           lab1_2_COOL
+C:   00000381  A$lab1-2-COOL$1860                 lab1_2_COOL
+C:   00000382  A$lab1-2-COOL$1861                 lab1_2_COOL
+C:   00000385  A$lab1-2-COOL$1862                 lab1_2_COOL
+C:   00000387  A$lab1-2-COOL$1866                 lab1_2_COOL
+C:   00000387  C$lab1_2_COOL.c$259$1$81           lab1_2_COOL
+C:   00000389  A$lab1-2-COOL$1867                 lab1_2_COOL
+C:   0000038C  A$lab1-2-COOL$1868                 lab1_2_COOL
+C:   0000038E  A$lab1-2-COOL$1869                 lab1_2_COOL
+C:   00000391  A$lab1-2-COOL$1872                 lab1_2_COOL
+C:   00000391  C$lab1_2_COOL.c$261$2$82           lab1_2_COOL
+C:   00000393  A$lab1-2-COOL$1875                 lab1_2_COOL
+C:   00000393  C$lab1_2_COOL.c$262$2$82           lab1_2_COOL
+C:   00000394  A$lab1-2-COOL$1876                 lab1_2_COOL
+C:   00000396  A$lab1-2-COOL$1877                 lab1_2_COOL
+C:   00000398  A$lab1-2-COOL$1879                 lab1_2_COOL
+C:   0000039A  A$lab1-2-COOL$1880                 lab1_2_COOL
+C:   0000039C  A$lab1-2-COOL$1883                 lab1_2_COOL
+C:   0000039C  C$lab1_2_COOL.c$264$1$81           lab1_2_COOL
+C:   0000039C  XG$Timer0_ISR$0$0                  lab1_2_COOL
+C:   0000039D  A$lab1-2-COOL$1900                 lab1_2_COOL
+C:   0000039D  C$lab1_2_COOL.c$273$1$81           lab1_2_COOL
+C:   0000039D  C$lab1_2_COOL.c$275$1$84           lab1_2_COOL
+C:   0000039D  G$random$0$0                       lab1_2_COOL
+C:   0000039D  _random                            lab1_2_COOL
+C:   000003A0  A$lab1-2-COOL$1901                 lab1_2_COOL
+C:   000003A3  A$lab1-2-COOL$1902                 lab1_2_COOL
+C:   000003A6  A$lab1-2-COOL$1903                 lab1_2_COOL
+C:   000003A9  A$lab1-2-COOL$1906                 lab1_2_COOL
+C:   000003A9  C$lab1_2_COOL.c$279$1$84           lab1_2_COOL
 ASxxxx Linker V03.00 + NoICE + sdld,  page 39.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                00000095    00000B20 =        2848. bytes (REL,CON,CODE)
+CSEG                                00000095    00000AAD =        2733. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   000003DB  XG$Interrupt_Init$0$0              lab1_2_COOL
-C:   000003DC  A$lab1-2-COOL$1885                 lab1_2_COOL
-C:   000003DC  C$lab1_2_COOL.c$266$1$74           lab1_2_COOL
-C:   000003DC  C$lab1_2_COOL.c$269$1$76           lab1_2_COOL
-C:   000003DC  G$Timer_Init$0$0                   lab1_2_COOL
-C:   000003DC  _Timer_Init                        lab1_2_COOL
-C:   000003DF  A$lab1-2-COOL$1888                 lab1_2_COOL
-C:   000003DF  C$lab1_2_COOL.c$270$1$76           lab1_2_COOL
-C:   000003E2  A$lab1-2-COOL$1891                 lab1_2_COOL
-C:   000003E2  C$lab1_2_COOL.c$271$1$76           lab1_2_COOL
-C:   000003E5  A$lab1-2-COOL$1894                 lab1_2_COOL
-C:   000003E5  C$lab1_2_COOL.c$272$1$76           lab1_2_COOL
-C:   000003E7  A$lab1-2-COOL$1897                 lab1_2_COOL
-C:   000003E7  C$lab1_2_COOL.c$273$1$76           lab1_2_COOL
-C:   000003EA  A$lab1-2-COOL$1900                 lab1_2_COOL
-C:   000003EA  C$lab1_2_COOL.c$274$1$76           lab1_2_COOL
-C:   000003ED  A$lab1-2-COOL$1903                 lab1_2_COOL
-C:   000003ED  C$lab1_2_COOL.c$276$1$76           lab1_2_COOL
-C:   000003ED  XG$Timer_Init$0$0                  lab1_2_COOL
-C:   000003EE  A$lab1-2-COOL$1914                 lab1_2_COOL
-C:   000003EE  C$lab1_2_COOL.c$280$1$76           lab1_2_COOL
-C:   000003EE  G$Timer0_ISR$0$0                   lab1_2_COOL
-C:   000003EE  _Timer0_ISR                        lab1_2_COOL
-C:   000003F0  A$lab1-2-COOL$1915                 lab1_2_COOL
-C:   000003F2  A$lab1-2-COOL$1918                 lab1_2_COOL
-C:   000003F2  C$lab1_2_COOL.c$282$1$78           lab1_2_COOL
-C:   000003F4  A$lab1-2-COOL$1919                 lab1_2_COOL
-C:   000003F5  A$lab1-2-COOL$1920                 lab1_2_COOL
-C:   000003F8  A$lab1-2-COOL$1921                 lab1_2_COOL
-C:   000003FA  A$lab1-2-COOL$1925                 lab1_2_COOL
-C:   000003FA  C$lab1_2_COOL.c$283$1$78           lab1_2_COOL
-C:   000003FC  A$lab1-2-COOL$1926                 lab1_2_COOL
-C:   000003FF  A$lab1-2-COOL$1927                 lab1_2_COOL
-C:   00000401  A$lab1-2-COOL$1928                 lab1_2_COOL
-C:   00000404  A$lab1-2-COOL$1931                 lab1_2_COOL
-C:   00000404  C$lab1_2_COOL.c$285$2$79           lab1_2_COOL
-C:   00000406  A$lab1-2-COOL$1934                 lab1_2_COOL
-C:   00000406  C$lab1_2_COOL.c$286$2$79           lab1_2_COOL
-C:   00000407  A$lab1-2-COOL$1935                 lab1_2_COOL
-C:   00000409  A$lab1-2-COOL$1936                 lab1_2_COOL
-C:   0000040B  A$lab1-2-COOL$1938                 lab1_2_COOL
-C:   0000040D  A$lab1-2-COOL$1939                 lab1_2_COOL
-C:   0000040F  A$lab1-2-COOL$1942                 lab1_2_COOL
-C:   0000040F  C$lab1_2_COOL.c$288$1$78           lab1_2_COOL
-C:   0000040F  XG$Timer0_ISR$0$0                  lab1_2_COOL
-C:   00000410  A$lab1-2-COOL$1959                 lab1_2_COOL
-C:   00000410  C$lab1_2_COOL.c$297$1$78           lab1_2_COOL
-C:   00000410  C$lab1_2_COOL.c$299$1$81           lab1_2_COOL
-C:   00000410  G$random$0$0                       lab1_2_COOL
-C:   00000410  _random                            lab1_2_COOL
-C:   00000413  A$lab1-2-COOL$1960                 lab1_2_COOL
+C:   000003A9  XG$random$0$0                      lab1_2_COOL
+C:   000003AA  A$lab1-2-COOL$1919                 lab1_2_COOL
+C:   000003AA  C$lab1_2_COOL.c$286$1$84           lab1_2_COOL
+C:   000003AA  C$lab1_2_COOL.c$288$1$86           lab1_2_COOL
+C:   000003AA  G$Button0$0$0                      lab1_2_COOL
+C:   000003AA  _Button0                           lab1_2_COOL
+C:   000003AD  A$lab1-2-COOL$1922                 lab1_2_COOL
+C:   000003AD  C$lab1_2_COOL.c$290$2$87           lab1_2_COOL
+C:   000003B0  A$lab1-2-COOL$1923                 lab1_2_COOL
+C:   000003B2  A$lab1-2-COOL$1927                 lab1_2_COOL
+C:   000003B2  C$lab1_2_COOL.c$292$1$86           lab1_2_COOL
+C:   000003B5  A$lab1-2-COOL$1931                 lab1_2_COOL
+C:   000003B5  C$lab1_2_COOL.c$293$1$86           lab1_2_COOL
+C:   000003B5  XG$Button0$0$0                     lab1_2_COOL
+C:   000003B6  A$lab1-2-COOL$1944                 lab1_2_COOL
+C:   000003B6  C$lab1_2_COOL.c$295$1$86           lab1_2_COOL
+C:   000003B6  C$lab1_2_COOL.c$297$1$89           lab1_2_COOL
+C:   000003B6  G$Button1$0$0                      lab1_2_COOL
+C:   000003B6  _Button1                           lab1_2_COOL
+C:   000003B9  A$lab1-2-COOL$1947                 lab1_2_COOL
+C:   000003B9  C$lab1_2_COOL.c$299$2$90           lab1_2_COOL
+C:   000003BC  A$lab1-2-COOL$1948                 lab1_2_COOL
+C:   000003BE  A$lab1-2-COOL$1952                 lab1_2_COOL
+C:   000003BE  C$lab1_2_COOL.c$301$1$89           lab1_2_COOL
+C:   000003C1  A$lab1-2-COOL$1956                 lab1_2_COOL
+C:   000003C1  C$lab1_2_COOL.c$302$1$89           lab1_2_COOL
+C:   000003C1  XG$Button1$0$0                     lab1_2_COOL
+C:   000003C2  A$lab1-2-COOL$1969                 lab1_2_COOL
+C:   000003C2  C$lab1_2_COOL.c$307$1$89           lab1_2_COOL
+C:   000003C2  C$lab1_2_COOL.c$309$1$92           lab1_2_COOL
+C:   000003C2  G$Switch$0$0                       lab1_2_COOL
+C:   000003C2  _Switch                            lab1_2_COOL
+C:   000003C5  A$lab1-2-COOL$1970                 lab1_2_COOL
+C:   000003C8  A$lab1-2-COOL$1971                 lab1_2_COOL
+C:   000003CA  A$lab1-2-COOL$1975                 lab1_2_COOL
+C:   000003CA  C$lab1_2_COOL.c$310$1$92           lab1_2_COOL
+C:   000003CD  A$lab1-2-COOL$1979                 lab1_2_COOL
+C:   000003CD  C$lab1_2_COOL.c$311$1$92           lab1_2_COOL
+C:   000003CD  XG$Switch$0$0                      lab1_2_COOL
+C:   000003CE  _rand                              rand
+C:   0000040A  _srand                             rand
+C:   00000419  __mullong                          _mullong
+C:   00000419  __mullong_dummy                    _mullong
+C:   00000487  __moduint                          _moduint
+C:   000004DF  _vprintf                           vprintf
+C:   000004F8  _printf                            vprintf
+C:   000005CA  __print_format                     printf_large
+C:   00000AD4  _strlen                            _strlen
+C:   00000AEC  __gptrget                          _gptrget
+C:   00000B08  __modsint                          _modsint
+C:   00000B3E  __sdcc_external_startup            _startup
+
 ASxxxx Linker V03.00 + NoICE + sdld,  page 40.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                00000095    00000B20 =        2848. bytes (REL,CON,CODE)
+CONST                               00000B42    00000056 =          86. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   00000416  A$lab1-2-COOL$1961                 lab1_2_COOL
-C:   00000419  A$lab1-2-COOL$1962                 lab1_2_COOL
-C:   0000041C  A$lab1-2-COOL$1965                 lab1_2_COOL
-C:   0000041C  C$lab1_2_COOL.c$303$1$81           lab1_2_COOL
-C:   0000041C  XG$random$0$0                      lab1_2_COOL
-C:   0000041D  A$lab1-2-COOL$1978                 lab1_2_COOL
-C:   0000041D  C$lab1_2_COOL.c$310$1$81           lab1_2_COOL
-C:   0000041D  C$lab1_2_COOL.c$312$1$83           lab1_2_COOL
-C:   0000041D  G$Button0$0$0                      lab1_2_COOL
-C:   0000041D  _Button0                           lab1_2_COOL
-C:   00000420  A$lab1-2-COOL$1981                 lab1_2_COOL
-C:   00000420  C$lab1_2_COOL.c$314$2$84           lab1_2_COOL
-C:   00000423  A$lab1-2-COOL$1982                 lab1_2_COOL
-C:   00000425  A$lab1-2-COOL$1986                 lab1_2_COOL
-C:   00000425  C$lab1_2_COOL.c$316$1$83           lab1_2_COOL
-C:   00000428  A$lab1-2-COOL$1990                 lab1_2_COOL
-C:   00000428  C$lab1_2_COOL.c$317$1$83           lab1_2_COOL
-C:   00000428  XG$Button0$0$0                     lab1_2_COOL
-C:   00000429  A$lab1-2-COOL$2003                 lab1_2_COOL
-C:   00000429  C$lab1_2_COOL.c$319$1$83           lab1_2_COOL
-C:   00000429  C$lab1_2_COOL.c$321$1$86           lab1_2_COOL
-C:   00000429  G$Button1$0$0                      lab1_2_COOL
-C:   00000429  _Button1                           lab1_2_COOL
-C:   0000042C  A$lab1-2-COOL$2006                 lab1_2_COOL
-C:   0000042C  C$lab1_2_COOL.c$323$2$87           lab1_2_COOL
-C:   0000042F  A$lab1-2-COOL$2007                 lab1_2_COOL
-C:   00000431  A$lab1-2-COOL$2011                 lab1_2_COOL
-C:   00000431  C$lab1_2_COOL.c$325$1$86           lab1_2_COOL
-C:   00000434  A$lab1-2-COOL$2015                 lab1_2_COOL
-C:   00000434  C$lab1_2_COOL.c$326$1$86           lab1_2_COOL
-C:   00000434  XG$Button1$0$0                     lab1_2_COOL
-C:   00000435  A$lab1-2-COOL$2028                 lab1_2_COOL
-C:   00000435  C$lab1_2_COOL.c$331$1$86           lab1_2_COOL
-C:   00000435  C$lab1_2_COOL.c$333$1$89           lab1_2_COOL
-C:   00000435  G$Switch$0$0                       lab1_2_COOL
-C:   00000435  _Switch                            lab1_2_COOL
-C:   00000438  A$lab1-2-COOL$2029                 lab1_2_COOL
-C:   0000043B  A$lab1-2-COOL$2030                 lab1_2_COOL
-C:   0000043D  A$lab1-2-COOL$2034                 lab1_2_COOL
-C:   0000043D  C$lab1_2_COOL.c$334$1$89           lab1_2_COOL
-C:   00000440  A$lab1-2-COOL$2038                 lab1_2_COOL
-C:   00000440  C$lab1_2_COOL.c$335$1$89           lab1_2_COOL
-C:   00000440  XG$Switch$0$0                      lab1_2_COOL
-C:   00000441  _rand                              rand
-C:   0000047D  _srand                             rand
-C:   0000048C  __mullong                          _mullong
-C:   0000048C  __mullong_dummy                    _mullong
-C:   000004FA  __moduint                          _moduint
-C:   00000552  _vprintf                           vprintf
-C:   0000056B  _printf                            vprintf
-C:   0000063D  __print_format                     printf_large
+C:   00000B42  Flab1_2_COOL$__str_0$0$0           lab1_2_COOL
+C:   00000B4A  Flab1_2_COOL$__str_1$0$0           lab1_2_COOL
+C:   00000B6E  Flab1_2_COOL$__str_2$0$0           lab1_2_COOL
+C:   00000B81  Flab1_2_COOL$__str_3$0$0           lab1_2_COOL
+
 ASxxxx Linker V03.00 + NoICE + sdld,  page 41.
-Hexadecimal  [32-Bits]
-
-Area                                    Addr        Size        Decimal Bytes (Attributes)
---------------------------------        ----        ----        ------- ----- ------------
-CSEG                                00000095    00000B20 =        2848. bytes (REL,CON,CODE)
-
-      Value  Global                              Global Defined In Module
-      -----  --------------------------------   ------------------------
-C:   00000B47  _strlen                            _strlen
-C:   00000B5F  __gptrget                          _gptrget
-C:   00000B7B  __modsint                          _modsint
-C:   00000BB1  __sdcc_external_startup            _startup
-ASxxxx Linker V03.00 + NoICE + sdld,  page 42.
-Hexadecimal  [32-Bits]
-
-Area                                    Addr        Size        Decimal Bytes (Attributes)
---------------------------------        ----        ----        ------- ----- ------------
-CONST                               00000BB5    000000A3 =         163. bytes (REL,CON,CODE)
-
-      Value  Global                              Global Defined In Module
-      -----  --------------------------------   ------------------------
-C:   00000BB5  Flab1_2_COOL$__str_0$0$0           lab1_2_COOL
-C:   00000BBD  Flab1_2_COOL$__str_1$0$0           lab1_2_COOL
-C:   00000BCC  Flab1_2_COOL$__str_2$0$0           lab1_2_COOL
-C:   00000BE2  Flab1_2_COOL$__str_3$0$0           lab1_2_COOL
-C:   00000C06  Flab1_2_COOL$__str_4$0$0           lab1_2_COOL
-C:   00000C16  Flab1_2_COOL$__str_5$0$0           lab1_2_COOL
-C:   00000C2E  Flab1_2_COOL$__str_6$0$0           lab1_2_COOL
-C:   00000C41  Flab1_2_COOL$__str_7$0$0           lab1_2_COOL
-
-ASxxxx Linker V03.00 + NoICE + sdld,  page 43.
 
 Files Linked                              [ module(s) ]
 
-C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.rel
+C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.rel
                                           [  ]
 
 
@@ -1802,7 +1726,7 @@ C:\Program Files (x86)\SDCC\bin\..\lib\small/libsdcc.lib
 C:\Program Files (x86)\SDCC\bin\..\lib\small/libsdcc.lib
                                           [ _bp.rel ]
 
-ASxxxx Linker V03.00 + NoICE + sdld,  page 44.
+ASxxxx Linker V03.00 + NoICE + sdld,  page 42.
 
 User Base Address Definitions
 
