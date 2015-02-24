@@ -21,7 +21,6 @@ S:G$RNG$0$0({1}SC:U),E,0,0
 S:G$turns$0$0({1}SC:U),E,0,0
 S:G$correctAnswerCount$0$0({1}SC:U),E,0,0
 S:G$flag$0$0({1}SC:U),E,0,0
-S:G$programflag$0$0({1}SC:U),E,0,0
 S:G$P0$0$0({1}SC:U),I,0,0
 S:G$SP$0$0({1}SC:U),I,0,0
 S:G$DPL$0$0({1}SC:U),I,0,0
@@ -339,11 +338,5 @@ S:G$rand$0$0({2}DF,SI:S),C,0,0
 S:G$srand$0$0({2}DF,SV:S),C,0,0
 S:G$main$0$0({2}DF,SV:S),C,0,0
 S:Flab1_2$__str_0$0$0({8}DA8d,SC:S),D,0,0
-S:Flab1_2$__str_1$0$0({15}DA15d,SC:S),D,0,0
-S:Flab1_2$__str_2$0$0({23}DA23d,SC:S),D,0,0
-S:Flab1_2$__str_3$0$0({22}DA22d,SC:S),D,0,0
-S:Flab1_2$__str_4$0$0({36}DA36d,SC:S),D,0,0
-S:Flab1_2$__str_5$0$0({16}DA16d,SC:S),D,0,0
-S:Flab1_2$__str_6$0$0({24}DA24d,SC:S),D,0,0
-S:Flab1_2$__str_7$0$0({19}DA19d,SC:S),D,0,0
-S:Flab1_2$__str_8$0$0({12}DA12d,SC:S),D,0,0
+S:Flab1_2$__str_1$0$0({22}DA22d,SC:S),D,0,0
+S:Flab1_2$__str_2$0$0({27}DA27d,SC:S),D,0,0

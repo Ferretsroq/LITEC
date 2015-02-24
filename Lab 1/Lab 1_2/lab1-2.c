@@ -46,10 +46,9 @@ unsigned int Counts = 0;
 unsigned char Seconds = 0;
 unsigned char previousRNG = 7; 
 unsigned char RNG = 0;
-unsigned char turns = 1;
+unsigned char turns = 0;
 unsigned char correctAnswerCount = 0;
 unsigned char flag = 0;
-unsigned char programflag = 0; //ends the program once it's completed
 
 //***************
 void main(void)
@@ -67,146 +66,80 @@ void main(void)
                 button is pressed */
     {
 
-        if (programflag == 0)
+        while( SS ); // while SS is OFF (high), wait for SS to be set ON
+        TR0 = 1;     // Timer 0 Enabled
+		while(turns <= 10)
 		{
-			while(Switch()); // while SS is OFF (high), wait for SS to be set ON
-	        TR0 = 1;     // Timer 0 Enabled
-			//printf("\rSeconds held: %u\n", Seconds);
-			while(turns <= 10)
+			RNG = random(); //
+			if (RNG != previousRNG) // Ensure numbers don't repeat
 			{
-				RNG = random(); //
-				if (RNG != previousRNG) // Ensure numbers don't repeat
+				if(RNG == 0) 
 				{
-					printf("\rNumber is %u\n", RNG);
-					if(RNG == 0) 
+					LED0 = 0; // Turn on LED0
+					LED1 = 1; // Turn off LED1
+					while(Seconds == 0 && flag == 0) // Within the first second
 					{
-						LED0 = 0; // Turn on LED0
-						LED1 = 1; // Turn off LED1
-						Seconds = 0;
-						while((Seconds == 0) && (flag == 0)) // Within the first second
+						if(Button0) // If the correct button is pushed
 						{
-						//	printf("\rHIII!!!!\n");
-							//while((PB0 && PB1) || (PB0) || (PB1) || (Seconds == 0));  // Wait for PB0 to be pushed
-							if(Button0) // If the correct button is pushed
-							{
-								//printf("\rYou pressed Button 0\n");
-								correctAnswerCount++; // Log the correct answer
-								BILED0 = 1;			  // Make BILED green
-								BILED1 = 0;	
-								flag = 1;
-							}
-							else if(Button1) // If the incorrect button is pressed
-							{
-								flag = 1;
-								BILED0 = 0;			// Make BILED red
-								BILED1 = 1;
-							}
-							else if(Button0 && Button1) // If the incorrect button is pressed
-							{
-								flag = 1;
-								BILED0 = 0;			// Make BILED red
-								BILED1 = 1;
-							}
-							else 
-							{
-								BILED0 = 0;			// Make BILED red
-								BILED1 = 1;
-							}
+							correctAnswerCount++; // Log the correct answer
+							BILED0 = 1;			  // Make BILED green
+							BILED1 = 0;	
+							flag = 1;
 						}	
-					}
-					else if(RNG == 1)
-					{
-					 	LED1 = 0; //Turn on LED1
-					 	LED0 = 1; //Turn off LED0
-						Seconds = 0;
-						while((Seconds == 0) && (flag == 0)) // Within the first second
+						else 
 						{
-						//	printf("\rHELLOOOOOO!!!!\n");
-							//while((PB0 && PB1) || (PB0) || (PB1) || (Seconds == 0)); // Wait for PB1 to be pushed
-							if(Button1) // If the correct button is pushed
-							{
-								printf("\rYou pushed Button 1\n");
-								correctAnswerCount++; // Log the correct answer
-								BILED0 = 1;			  // Make BILED green
-								BILED1 = 0;	
-								flag = 1;
-							}
-							else if(Button0) // If the incorrect button is pressed
-							{
-								flag = 1;
-								BILED0 = 0;			// Make BILED red
-								BILED1 = 1;
-							}
-							else if(Button0 && Button1) // If the incorrect button is pressed
-							{
-								flag = 1;
-								BILED0 = 0;			// Make BILED red
-								BILED1 = 1;
-							}	
-							else 
-							{
-								BILED0 = 0;			// Make BILED red
-								BILED1 = 1;
-							}
-						}	
-					}
-					else if (RNG == 2)
-					{
-						LED0 = 0; //Turn on LED0
-						LED1 = 0; //Turn on 
-						Seconds = 0;
-						while((Seconds == 0) && (flag == 0)) // Within the first second
-						{
-						//	printf("\rREBECCCCCCCAAAAAAAA!!!\n");
-							//while ((PB0 && PB1) || (PB0) || (PB1) || (Seconds == 0)); // Wait for correct buttons to be pushed
-							if(Button0 && Button1) // If the correct button is pushed
-							{
-								printf("\rYou pressed Button 0 and Button 1\n");
-								correctAnswerCount++; // Log the correct answer
-								BILED0 = 1;			  // Make BILED green
-								BILED1 = 0;	
-								flag = 1;
-							}	
-							else if(Button0) // If the incorrect button is pressed
-							{
-								flag = 1;
-								BILED0 = 0;			// Make BILED red
-								BILED1 = 1;
-							}
-							else if(Button1) // If the incorrect button is pressed
-							{
-								flag = 1;
-								BILED0 = 0;			// Make BILED red
-								BILED1 = 1;
-							}
-							else 
-							{
-								BILED0 = 0;			// Make BILED red
-								BILED1 = 1;
-							}
-						}	
-					}
-					turns++;
-					printf("\rIt is turn %u\n", turns);
-					previousRNG = RNG;
-					flag = 0;
+							BILED0 = 0;			// Make BILED red
+							BILED1 = 1;
+						}
+					}	
 				}
-				printf("\rCorrect responses: %u\n", correctAnswerCount);
-			
+				else if(RNG == 1)
+				{
+				 	LED1 = 0; //Turn on LED1
+				 	LED0 = 1; //Turn off LED0
+					while(Seconds == 0 && flag == 0) // Within the first second
+					{
+						if(Button1) // If the correct button is pushed
+						{
+							correctAnswerCount++; // Log the correct answer
+							BILED0 = 1;			  // Make BILED green
+							BILED1 = 0;	
+							flag = 1;
+						}	
+						else 
+						{
+							BILED0 = 0;			// Make BILED red
+							BILED1 = 1;
+						}
+					}	
+				}
+				else if (RNG == 2)
+				{
+					LED0 = 0; //Turn on LED0
+					LED1 = 0; //Turn on 
+					while(Seconds == 0 && flag == 0) // Within the first second
+					{
+						if(Button0 && Button1) // If the correct button is pushed
+						{
+							correctAnswerCount++; // Log the correct answer
+							BILED0 = 1;			  // Make BILED green
+							BILED1 = 0;	
+							flag = 1;
+						}	
+						else 
+						{
+							BILED0 = 0;			// Make BILED red
+							BILED1 = 1;
+						}
+					}	
+				}
+				turns++;
+				previousRNG = RNG;
+				flag = 0;	
 			}
-			Seconds = 0;
-			while (Seconds == 0)
-			{
-				Buzzer = 0; // Bzzzzt
-	//			printf("\rSeconds: %u\n", Seconds);
-	//			printf("\rtimerthingy: %u\n", timerthingy);
-			}
-			printf("\rFINAL RESULTS: %u", correctAnswerCount);
-			printf(" out of 10\n");
-			programflag = 1;
+			printf("Correct responses: %u", correctAnswerCount);
 		}
-		Buzzer = 1; //Bzt--
-        /*while (PB0); // wait until PB1 is pressed
+        while (PB0); // wait until PB1 is pressed
         Counts = 0;  // set overflow counter to zero
 
         BILED0 = 1;  // while button is down, turn ON the BILED
@@ -216,8 +149,8 @@ void main(void)
         TR0 = 0;     // Timer 0 disabled
 
         BILED0 = 0;  // Turn OFF the BILED
-        BILED1 = 0;*/
-        //printf("\rNumber of Overflows = %d\n", Counts);
+        BILED1 = 0;
+        printf("\rNumber of Overflows = %d\n", Counts);
 
     }
 }
