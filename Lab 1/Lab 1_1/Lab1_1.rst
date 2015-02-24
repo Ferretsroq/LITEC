@@ -1,7 +1,7 @@
                                       1 ;--------------------------------------------------------
                                       2 ; File Created by SDCC : free open source ANSI-C Compiler
                                       3 ; Version 3.4.0 #8981 (Apr  5 2014) (MINGW32)
-                                      4 ; This file was generated Fri Feb 20 12:10:29 2015
+                                      4 ; This file was generated Mon Feb 23 19:37:46 2015
                                       5 ;--------------------------------------------------------
                                       6 	.module Lab1_1
                                       7 	.optsdcc -mmcs51 --model-small
@@ -1151,29 +1151,29 @@
                                    1151 ;------------------------------------------------------------
                            00005C  1152 	G$main$0$0 ==.
                            00005C  1153 	C$Lab1_1.c$37$1$10 ==.
-                                   1154 ;	C:\Users\rutmas\Documents\LITEC\Lab 1\Lab 1_1\Lab1_1.c:37: void main(void)
+                                   1154 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_1\Lab1_1.c:37: void main(void)
                                    1155 ;	-----------------------------------------
                                    1156 ;	 function main
                                    1157 ;	-----------------------------------------
       0000BE                       1158 _main:
                            00005C  1159 	C$Lab1_1.c$39$1$32 ==.
-                                   1160 ;	C:\Users\rutmas\Documents\LITEC\Lab 1\Lab 1_1\Lab1_1.c:39: Sys_Init(); // System Initialization
+                                   1160 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_1\Lab1_1.c:39: Sys_Init(); // System Initialization
       0000BE 12 00 92         [24] 1161 	lcall	_Sys_Init
                            00005F  1162 	C$Lab1_1.c$40$1$32 ==.
-                                   1163 ;	C:\Users\rutmas\Documents\LITEC\Lab 1\Lab 1_1\Lab1_1.c:40: putchar(' '); // the quote fonts may not copy correctly into SiLabs IDE
+                                   1163 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_1\Lab1_1.c:40: putchar(' '); // the quote fonts may not copy correctly into SiLabs IDE
       0000C1 75 82 20         [24] 1164 	mov	dpl,#0x20
       0000C4 12 00 A5         [24] 1165 	lcall	_putchar
                            000065  1166 	C$Lab1_1.c$41$1$32 ==.
-                                   1167 ;	C:\Users\rutmas\Documents\LITEC\Lab 1\Lab 1_1\Lab1_1.c:41: Port_Init(); // Initialize ports 2 and 3
+                                   1167 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_1\Lab1_1.c:41: Port_Init(); // Initialize ports 2 and 3
       0000C7 12 00 D3         [24] 1168 	lcall	_Port_Init
                            000068  1169 	C$Lab1_1.c$42$1$32 ==.
-                                   1170 ;	C:\Users\rutmas\Documents\LITEC\Lab 1\Lab 1_1\Lab1_1.c:42: while (1) // infinite loop
+                                   1170 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_1\Lab1_1.c:42: while (1) // infinite loop
       0000CA                       1171 00102$:
                            000068  1172 	C$Lab1_1.c$45$2$33 ==.
-                                   1173 ;	C:\Users\rutmas\Documents\LITEC\Lab 1\Lab 1_1\Lab1_1.c:45: Set_outputs();
+                                   1173 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_1\Lab1_1.c:45: Set_outputs();
       0000CA 12 00 EB         [24] 1174 	lcall	_Set_outputs
                            00006B  1175 	C$Lab1_1.c$46$2$33 ==.
-                                   1176 ;	C:\Users\rutmas\Documents\LITEC\Lab 1\Lab 1_1\Lab1_1.c:46: Debugging();
+                                   1176 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_1\Lab1_1.c:46: Debugging();
       0000CD 12 01 66         [24] 1177 	lcall	_Debugging
       0000D0 80 F8            [24] 1178 	sjmp	00102$
                            000070  1179 	C$Lab1_1.c$48$1$32 ==.
@@ -1184,28 +1184,28 @@
                                    1184 ;------------------------------------------------------------
                            000071  1185 	G$Port_Init$0$0 ==.
                            000071  1186 	C$Lab1_1.c$51$1$32 ==.
-                                   1187 ;	C:\Users\rutmas\Documents\LITEC\Lab 1\Lab 1_1\Lab1_1.c:51: void Port_Init(void)
+                                   1187 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_1\Lab1_1.c:51: void Port_Init(void)
                                    1188 ;	-----------------------------------------
                                    1189 ;	 function Port_Init
                                    1190 ;	-----------------------------------------
       0000D3                       1191 _Port_Init:
                            000071  1192 	C$Lab1_1.c$54$1$35 ==.
-                                   1193 ;	C:\Users\rutmas\Documents\LITEC\Lab 1\Lab 1_1\Lab1_1.c:54: P3MDOUT |= 0xD8;// set Port 3 output pins to push-pull mode 
+                                   1193 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_1\Lab1_1.c:54: P3MDOUT |= 0xD8;// set Port 3 output pins to push-pull mode 
       0000D3 43 A7 D8         [24] 1194 	orl	_P3MDOUT,#0xD8
                            000074  1195 	C$Lab1_1.c$55$1$35 ==.
-                                   1196 ;	C:\Users\rutmas\Documents\LITEC\Lab 1\Lab 1_1\Lab1_1.c:55: P3MDOUT &= 0xFC; // set Port 3 input pins to open drain mode 
+                                   1196 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_1\Lab1_1.c:55: P3MDOUT &= 0xFC; // set Port 3 input pins to open drain mode 
       0000D6 53 A7 FC         [24] 1197 	anl	_P3MDOUT,#0xFC
                            000077  1198 	C$Lab1_1.c$56$1$35 ==.
-                                   1199 ;	C:\Users\rutmas\Documents\LITEC\Lab 1\Lab 1_1\Lab1_1.c:56: P3 |= ~0xFC; // set Port 3 input pins to high impedance state 
+                                   1199 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_1\Lab1_1.c:56: P3 |= ~0xFC; // set Port 3 input pins to high impedance state 
       0000D9 AF B0            [24] 1200 	mov	r7,_P3
       0000DB 74 03            [12] 1201 	mov	a,#0x03
       0000DD 4F               [12] 1202 	orl	a,r7
       0000DE F5 B0            [12] 1203 	mov	_P3,a
                            00007E  1204 	C$Lab1_1.c$58$1$35 ==.
-                                   1205 ;	C:\Users\rutmas\Documents\LITEC\Lab 1\Lab 1_1\Lab1_1.c:58: P2MDOUT &= 0xFE; // set Port 2 input pins to push-pull mode
+                                   1205 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_1\Lab1_1.c:58: P2MDOUT &= 0xFE; // set Port 2 input pins to push-pull mode
       0000E0 53 A6 FE         [24] 1206 	anl	_P2MDOUT,#0xFE
                            000081  1207 	C$Lab1_1.c$59$1$35 ==.
-                                   1208 ;	C:\Users\rutmas\Documents\LITEC\Lab 1\Lab 1_1\Lab1_1.c:59: P2 |= ~0xFE; // set Port 2 input pins to high impedance state
+                                   1208 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_1\Lab1_1.c:59: P2 |= ~0xFE; // set Port 2 input pins to high impedance state
       0000E3 AF A0            [24] 1209 	mov	r7,_P2
       0000E5 74 01            [12] 1210 	mov	a,#0x01
       0000E7 4F               [12] 1211 	orl	a,r7
@@ -1218,28 +1218,28 @@
                                    1218 ;------------------------------------------------------------
                            000089  1219 	G$Set_outputs$0$0 ==.
                            000089  1220 	C$Lab1_1.c$65$1$35 ==.
-                                   1221 ;	C:\Users\rutmas\Documents\LITEC\Lab 1\Lab 1_1\Lab1_1.c:65: void Set_outputs(void)
+                                   1221 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_1\Lab1_1.c:65: void Set_outputs(void)
                                    1222 ;	-----------------------------------------
                                    1223 ;	 function Set_outputs
                                    1224 ;	-----------------------------------------
       0000EB                       1225 _Set_outputs:
                            000089  1226 	C$Lab1_1.c$67$1$37 ==.
-                                   1227 ;	C:\Users\rutmas\Documents\LITEC\Lab 1\Lab 1_1\Lab1_1.c:67: if (Switch()) // if Slide switch is not activated (off)
+                                   1227 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_1\Lab1_1.c:67: if (Switch()) // if Slide switch is not activated (off)
       0000EB 12 01 F9         [24] 1228 	lcall	_Switch
       0000EE E5 82            [12] 1229 	mov	a,dpl
       0000F0 85 83 F0         [24] 1230 	mov	b,dph
       0000F3 45 F0            [12] 1231 	orl	a,b
       0000F5 60 04            [24] 1232 	jz	00114$
                            000095  1233 	C$Lab1_1.c$69$2$38 ==.
-                                   1234 ;	C:\Users\rutmas\Documents\LITEC\Lab 1\Lab 1_1\Lab1_1.c:69: LED0 = 0; // Light LED
+                                   1234 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_1\Lab1_1.c:69: LED0 = 0; // Light LED
       0000F7 C2 B6            [12] 1235 	clr	_LED0
       0000F9 80 6A            [24] 1236 	sjmp	00116$
       0000FB                       1237 00114$:
                            000099  1238 	C$Lab1_1.c$74$2$39 ==.
-                                   1239 ;	C:\Users\rutmas\Documents\LITEC\Lab 1\Lab 1_1\Lab1_1.c:74: LED0 = 1; // turn off LED
+                                   1239 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_1\Lab1_1.c:74: LED0 = 1; // turn off LED
       0000FB D2 B6            [12] 1240 	setb	_LED0
                            00009B  1241 	C$Lab1_1.c$91$2$39 ==.
-                                   1242 ;	C:\Users\rutmas\Documents\LITEC\Lab 1\Lab 1_1\Lab1_1.c:91: if (Button1() && Button2()) // if both buttons are pushed
+                                   1242 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_1\Lab1_1.c:91: if (Button1() && Button2()) // if both buttons are pushed
       0000FD 12 01 E1         [24] 1243 	lcall	_Button1
       000100 E5 82            [12] 1244 	mov	a,dpl
       000102 85 83 F0         [24] 1245 	mov	b,dph
@@ -1251,21 +1251,21 @@
       000111 45 F0            [12] 1251 	orl	a,b
       000113 60 08            [24] 1252 	jz	00110$
                            0000B3  1253 	C$Lab1_1.c$93$3$40 ==.
-                                   1254 ;	C:\Users\rutmas\Documents\LITEC\Lab 1\Lab 1_1\Lab1_1.c:93: Buzzer = 0; //make buzzer noise
+                                   1254 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_1\Lab1_1.c:93: Buzzer = 0; //make buzzer noise
       000115 C2 B7            [12] 1255 	clr	_Buzzer
                            0000B5  1256 	C$Lab1_1.c$94$3$40 ==.
-                                   1257 ;	C:\Users\rutmas\Documents\LITEC\Lab 1\Lab 1_1\Lab1_1.c:94: BILED0 = 1; //shut BILED off altogether
+                                   1257 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_1\Lab1_1.c:94: BILED0 = 1; //shut BILED off altogether
       000117 D2 B3            [12] 1258 	setb	_BILED0
                            0000B7  1259 	C$Lab1_1.c$95$3$40 ==.
-                                   1260 ;	C:\Users\rutmas\Documents\LITEC\Lab 1\Lab 1_1\Lab1_1.c:95: BILED1 = 1;
+                                   1260 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_1\Lab1_1.c:95: BILED1 = 1;
       000119 D2 B4            [12] 1261 	setb	_BILED1
       00011B 80 48            [24] 1262 	sjmp	00116$
       00011D                       1263 00110$:
                            0000BB  1264 	C$Lab1_1.c$99$3$41 ==.
-                                   1265 ;	C:\Users\rutmas\Documents\LITEC\Lab 1\Lab 1_1\Lab1_1.c:99: Buzzer = 1; //SHUT UP BUZZER
+                                   1265 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_1\Lab1_1.c:99: Buzzer = 1; //SHUT UP BUZZER
       00011D D2 B7            [12] 1266 	setb	_Buzzer
                            0000BD  1267 	C$Lab1_1.c$100$3$41 ==.
-                                   1268 ;	C:\Users\rutmas\Documents\LITEC\Lab 1\Lab 1_1\Lab1_1.c:100: if (Button1()&&!Button2()) //shut off buzzer and make led green
+                                   1268 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_1\Lab1_1.c:100: if (Button1()&&!Button2()) //shut off buzzer and make led green
       00011F 12 01 E1         [24] 1269 	lcall	_Button1
       000122 E5 82            [12] 1270 	mov	a,dpl
       000124 85 83 F0         [24] 1271 	mov	b,dph
@@ -1277,18 +1277,18 @@
       000133 45 F0            [12] 1277 	orl	a,b
       000135 70 08            [24] 1278 	jnz	00106$
                            0000D5  1279 	C$Lab1_1.c$102$4$42 ==.
-                                   1280 ;	C:\Users\rutmas\Documents\LITEC\Lab 1\Lab 1_1\Lab1_1.c:102: Buzzer = 1; 
+                                   1280 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_1\Lab1_1.c:102: Buzzer = 1; 
       000137 D2 B7            [12] 1281 	setb	_Buzzer
                            0000D7  1282 	C$Lab1_1.c$103$4$42 ==.
-                                   1283 ;	C:\Users\rutmas\Documents\LITEC\Lab 1\Lab 1_1\Lab1_1.c:103: BILED0 = 1; 
+                                   1283 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_1\Lab1_1.c:103: BILED0 = 1; 
       000139 D2 B3            [12] 1284 	setb	_BILED0
                            0000D9  1285 	C$Lab1_1.c$104$4$42 ==.
-                                   1286 ;	C:\Users\rutmas\Documents\LITEC\Lab 1\Lab 1_1\Lab1_1.c:104: BILED1 = 0; 
+                                   1286 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_1\Lab1_1.c:104: BILED1 = 0; 
       00013B C2 B4            [12] 1287 	clr	_BILED1
       00013D 80 26            [24] 1288 	sjmp	00116$
       00013F                       1289 00106$:
                            0000DD  1290 	C$Lab1_1.c$112$3$41 ==.
-                                   1291 ;	C:\Users\rutmas\Documents\LITEC\Lab 1\Lab 1_1\Lab1_1.c:112: else if (Button2()&&!Button1()) //shut off buzzer and make led red
+                                   1291 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_1\Lab1_1.c:112: else if (Button2()&&!Button1()) //shut off buzzer and make led red
       00013F 12 01 ED         [24] 1292 	lcall	_Button2
       000142 E5 82            [12] 1293 	mov	a,dpl
       000144 85 83 F0         [24] 1294 	mov	b,dph
@@ -1300,24 +1300,24 @@
       000153 45 F0            [12] 1300 	orl	a,b
       000155 70 08            [24] 1301 	jnz	00102$
                            0000F5  1302 	C$Lab1_1.c$114$4$43 ==.
-                                   1303 ;	C:\Users\rutmas\Documents\LITEC\Lab 1\Lab 1_1\Lab1_1.c:114: Buzzer = 1;
+                                   1303 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_1\Lab1_1.c:114: Buzzer = 1;
       000157 D2 B7            [12] 1304 	setb	_Buzzer
                            0000F7  1305 	C$Lab1_1.c$115$4$43 ==.
-                                   1306 ;	C:\Users\rutmas\Documents\LITEC\Lab 1\Lab 1_1\Lab1_1.c:115: BILED0 = 0;
+                                   1306 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_1\Lab1_1.c:115: BILED0 = 0;
       000159 C2 B3            [12] 1307 	clr	_BILED0
                            0000F9  1308 	C$Lab1_1.c$116$4$43 ==.
-                                   1309 ;	C:\Users\rutmas\Documents\LITEC\Lab 1\Lab 1_1\Lab1_1.c:116: BILED1 = 1;
+                                   1309 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_1\Lab1_1.c:116: BILED1 = 1;
       00015B D2 B4            [12] 1310 	setb	_BILED1
       00015D 80 06            [24] 1311 	sjmp	00116$
       00015F                       1312 00102$:
                            0000FD  1313 	C$Lab1_1.c$120$4$44 ==.
-                                   1314 ;	C:\Users\rutmas\Documents\LITEC\Lab 1\Lab 1_1\Lab1_1.c:120: Buzzer = 1;
+                                   1314 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_1\Lab1_1.c:120: Buzzer = 1;
       00015F D2 B7            [12] 1315 	setb	_Buzzer
                            0000FF  1316 	C$Lab1_1.c$121$4$44 ==.
-                                   1317 ;	C:\Users\rutmas\Documents\LITEC\Lab 1\Lab 1_1\Lab1_1.c:121: BILED0 = 1;
+                                   1317 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_1\Lab1_1.c:121: BILED0 = 1;
       000161 D2 B3            [12] 1318 	setb	_BILED0
                            000101  1319 	C$Lab1_1.c$122$4$44 ==.
-                                   1320 ;	C:\Users\rutmas\Documents\LITEC\Lab 1\Lab 1_1\Lab1_1.c:122: BILED1 = 1;
+                                   1320 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_1\Lab1_1.c:122: BILED1 = 1;
       000163 D2 B4            [12] 1321 	setb	_BILED1
       000165                       1322 00116$:
                            000103  1323 	C$Lab1_1.c$129$1$37 ==.
@@ -1328,20 +1328,20 @@
                                    1328 ;------------------------------------------------------------
                            000104  1329 	G$Debugging$0$0 ==.
                            000104  1330 	C$Lab1_1.c$135$1$37 ==.
-                                   1331 ;	C:\Users\rutmas\Documents\LITEC\Lab 1\Lab 1_1\Lab1_1.c:135: void Debugging(void)
+                                   1331 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_1\Lab1_1.c:135: void Debugging(void)
                                    1332 ;	-----------------------------------------
                                    1333 ;	 function Debugging
                                    1334 ;	-----------------------------------------
       000166                       1335 _Debugging:
                            000104  1336 	C$Lab1_1.c$137$1$46 ==.
-                                   1337 ;	C:\Users\rutmas\Documents\LITEC\Lab 1\Lab 1_1\Lab1_1.c:137: if (Button1()) //if PB1 is pushed (on)
+                                   1337 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_1\Lab1_1.c:137: if (Button1()) //if PB1 is pushed (on)
       000166 12 01 E1         [24] 1338 	lcall	_Button1
       000169 E5 82            [12] 1339 	mov	a,dpl
       00016B 85 83 F0         [24] 1340 	mov	b,dph
       00016E 45 F0            [12] 1341 	orl	a,b
       000170 60 15            [24] 1342 	jz	00102$
                            000110  1343 	C$Lab1_1.c$139$2$47 ==.
-                                   1344 ;	C:\Users\rutmas\Documents\LITEC\Lab 1\Lab 1_1\Lab1_1.c:139: printf("\rPB1 is pushed \n");
+                                   1344 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_1\Lab1_1.c:139: printf("\rPB1 is pushed \n");
       000172 74 3D            [12] 1345 	mov	a,#___str_0
       000174 C0 E0            [24] 1346 	push	acc
       000176 74 08            [12] 1347 	mov	a,#(___str_0 >> 8)
@@ -1354,14 +1354,14 @@
       000185 15 81            [12] 1354 	dec	sp
       000187                       1355 00102$:
                            000125  1356 	C$Lab1_1.c$141$1$46 ==.
-                                   1357 ;	C:\Users\rutmas\Documents\LITEC\Lab 1\Lab 1_1\Lab1_1.c:141: if (Button2()) //if PB2 is pushed (on)
+                                   1357 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_1\Lab1_1.c:141: if (Button2()) //if PB2 is pushed (on)
       000187 12 01 ED         [24] 1358 	lcall	_Button2
       00018A E5 82            [12] 1359 	mov	a,dpl
       00018C 85 83 F0         [24] 1360 	mov	b,dph
       00018F 45 F0            [12] 1361 	orl	a,b
       000191 60 15            [24] 1362 	jz	00104$
                            000131  1363 	C$Lab1_1.c$143$2$48 ==.
-                                   1364 ;	C:\Users\rutmas\Documents\LITEC\Lab 1\Lab 1_1\Lab1_1.c:143: printf("\rPB2 is pushed \n");
+                                   1364 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_1\Lab1_1.c:143: printf("\rPB2 is pushed \n");
       000193 74 4E            [12] 1365 	mov	a,#___str_1
       000195 C0 E0            [24] 1366 	push	acc
       000197 74 08            [12] 1367 	mov	a,#(___str_1 >> 8)
@@ -1374,14 +1374,14 @@
       0001A6 15 81            [12] 1374 	dec	sp
       0001A8                       1375 00104$:
                            000146  1376 	C$Lab1_1.c$145$1$46 ==.
-                                   1377 ;	C:\Users\rutmas\Documents\LITEC\Lab 1\Lab 1_1\Lab1_1.c:145: if (Switch()) // if Slide switch is not activated (off)
+                                   1377 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_1\Lab1_1.c:145: if (Switch()) // if Slide switch is not activated (off)
       0001A8 12 01 F9         [24] 1378 	lcall	_Switch
       0001AB E5 82            [12] 1379 	mov	a,dpl
       0001AD 85 83 F0         [24] 1380 	mov	b,dph
       0001B0 45 F0            [12] 1381 	orl	a,b
       0001B2 60 17            [24] 1382 	jz	00106$
                            000152  1383 	C$Lab1_1.c$147$2$49 ==.
-                                   1384 ;	C:\Users\rutmas\Documents\LITEC\Lab 1\Lab 1_1\Lab1_1.c:147: printf("\rSlide switch is off \n");
+                                   1384 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_1\Lab1_1.c:147: printf("\rSlide switch is off \n");
       0001B4 74 5F            [12] 1385 	mov	a,#___str_2
       0001B6 C0 E0            [24] 1386 	push	acc
       0001B8 74 08            [12] 1387 	mov	a,#(___str_2 >> 8)
@@ -1395,7 +1395,7 @@
       0001C9 80 15            [24] 1395 	sjmp	00108$
       0001CB                       1396 00106$:
                            000169  1397 	C$Lab1_1.c$151$2$50 ==.
-                                   1398 ;	C:\Users\rutmas\Documents\LITEC\Lab 1\Lab 1_1\Lab1_1.c:151: printf("\rSlide switch is on \n");
+                                   1398 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_1\Lab1_1.c:151: printf("\rSlide switch is on \n");
       0001CB 74 76            [12] 1399 	mov	a,#___str_3
       0001CD C0 E0            [24] 1400 	push	acc
       0001CF 74 08            [12] 1401 	mov	a,#(___str_3 >> 8)
@@ -1415,21 +1415,21 @@
                                    1415 ;------------------------------------------------------------
                            00017F  1416 	G$Button1$0$0 ==.
                            00017F  1417 	C$Lab1_1.c$159$1$46 ==.
-                                   1418 ;	C:\Users\rutmas\Documents\LITEC\Lab 1\Lab 1_1\Lab1_1.c:159: int Button1(void)
+                                   1418 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_1\Lab1_1.c:159: int Button1(void)
                                    1419 ;	-----------------------------------------
                                    1420 ;	 function Button1
                                    1421 ;	-----------------------------------------
       0001E1                       1422 _Button1:
                            00017F  1423 	C$Lab1_1.c$161$1$52 ==.
-                                   1424 ;	C:\Users\rutmas\Documents\LITEC\Lab 1\Lab 1_1\Lab1_1.c:161: if (!PB1)
+                                   1424 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_1\Lab1_1.c:161: if (!PB1)
       0001E1 20 B0 05         [24] 1425 	jb	_PB1,00102$
                            000182  1426 	C$Lab1_1.c$163$2$53 ==.
-                                   1427 ;	C:\Users\rutmas\Documents\LITEC\Lab 1\Lab 1_1\Lab1_1.c:163: return 1;
+                                   1427 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_1\Lab1_1.c:163: return 1;
       0001E4 90 00 01         [24] 1428 	mov	dptr,#0x0001
       0001E7 80 03            [24] 1429 	sjmp	00104$
       0001E9                       1430 00102$:
                            000187  1431 	C$Lab1_1.c$165$1$52 ==.
-                                   1432 ;	C:\Users\rutmas\Documents\LITEC\Lab 1\Lab 1_1\Lab1_1.c:165: else return 0;
+                                   1432 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_1\Lab1_1.c:165: else return 0;
       0001E9 90 00 00         [24] 1433 	mov	dptr,#0x0000
       0001EC                       1434 00104$:
                            00018A  1435 	C$Lab1_1.c$166$1$52 ==.
@@ -1440,21 +1440,21 @@
                                    1440 ;------------------------------------------------------------
                            00018B  1441 	G$Button2$0$0 ==.
                            00018B  1442 	C$Lab1_1.c$168$1$52 ==.
-                                   1443 ;	C:\Users\rutmas\Documents\LITEC\Lab 1\Lab 1_1\Lab1_1.c:168: int Button2(void)
+                                   1443 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_1\Lab1_1.c:168: int Button2(void)
                                    1444 ;	-----------------------------------------
                                    1445 ;	 function Button2
                                    1446 ;	-----------------------------------------
       0001ED                       1447 _Button2:
                            00018B  1448 	C$Lab1_1.c$170$1$55 ==.
-                                   1449 ;	C:\Users\rutmas\Documents\LITEC\Lab 1\Lab 1_1\Lab1_1.c:170: if (!PB2)
+                                   1449 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_1\Lab1_1.c:170: if (!PB2)
       0001ED 20 B1 05         [24] 1450 	jb	_PB2,00102$
                            00018E  1451 	C$Lab1_1.c$172$2$56 ==.
-                                   1452 ;	C:\Users\rutmas\Documents\LITEC\Lab 1\Lab 1_1\Lab1_1.c:172: return 1;
+                                   1452 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_1\Lab1_1.c:172: return 1;
       0001F0 90 00 01         [24] 1453 	mov	dptr,#0x0001
       0001F3 80 03            [24] 1454 	sjmp	00104$
       0001F5                       1455 00102$:
                            000193  1456 	C$Lab1_1.c$174$1$55 ==.
-                                   1457 ;	C:\Users\rutmas\Documents\LITEC\Lab 1\Lab 1_1\Lab1_1.c:174: else return 0;
+                                   1457 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_1\Lab1_1.c:174: else return 0;
       0001F5 90 00 00         [24] 1458 	mov	dptr,#0x0000
       0001F8                       1459 00104$:
                            000196  1460 	C$Lab1_1.c$175$1$55 ==.
@@ -1465,19 +1465,19 @@
                                    1465 ;------------------------------------------------------------
                            000197  1466 	G$Switch$0$0 ==.
                            000197  1467 	C$Lab1_1.c$180$1$55 ==.
-                                   1468 ;	C:\Users\rutmas\Documents\LITEC\Lab 1\Lab 1_1\Lab1_1.c:180: int Switch(void)
+                                   1468 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_1\Lab1_1.c:180: int Switch(void)
                                    1469 ;	-----------------------------------------
                                    1470 ;	 function Switch
                                    1471 ;	-----------------------------------------
       0001F9                       1472 _Switch:
                            000197  1473 	C$Lab1_1.c$182$1$58 ==.
-                                   1474 ;	C:\Users\rutmas\Documents\LITEC\Lab 1\Lab 1_1\Lab1_1.c:182: if (!SS) return 1;
+                                   1474 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_1\Lab1_1.c:182: if (!SS) return 1;
       0001F9 20 A0 05         [24] 1475 	jb	_SS,00102$
       0001FC 90 00 01         [24] 1476 	mov	dptr,#0x0001
       0001FF 80 03            [24] 1477 	sjmp	00104$
       000201                       1478 00102$:
                            00019F  1479 	C$Lab1_1.c$183$1$58 ==.
-                                   1480 ;	C:\Users\rutmas\Documents\LITEC\Lab 1\Lab 1_1\Lab1_1.c:183: else return 0;
+                                   1480 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_1\Lab1_1.c:183: else return 0;
       000201 90 00 00         [24] 1481 	mov	dptr,#0x0000
       000204                       1482 00104$:
                            0001A2  1483 	C$Lab1_1.c$184$1$58 ==.

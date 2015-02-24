@@ -1,7 +1,7 @@
 ;--------------------------------------------------------
 ; File Created by SDCC : free open source ANSI-C Compiler
 ; Version 3.4.0 #8981 (Apr  5 2014) (MINGW32)
-; This file was generated Mon Feb 23 18:20:10 2015
+; This file was generated Mon Feb 23 19:46:15 2015
 ;--------------------------------------------------------
 	.module lab1_2
 	.optsdcc -mmcs51 --model-small
@@ -300,6 +300,7 @@
 	.globl _DPL
 	.globl _SP
 	.globl _P0
+	.globl _programflag
 	.globl _flag
 	.globl _correctAnswerCount
 	.globl _turns
@@ -923,6 +924,9 @@ _correctAnswerCount::
 G$flag$0$0==.
 _flag::
 	.ds 1
+G$programflag$0$0==.
+_programflag::
+	.ds 1
 ;--------------------------------------------------------
 ; overlayable items in internal ram 
 ;--------------------------------------------------------
@@ -996,34 +1000,37 @@ __interrupt_vect:
 	.globl __mcs51_genXINIT
 	.globl __mcs51_genXRAMCLEAR
 	.globl __mcs51_genRAMCLEAR
-	C$lab1_2.c$45$1$84 ==.
+	C$lab1_2.c$45$1$91 ==.
 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:45: unsigned int Counts = 0;
 	clr	a
 	mov	_Counts,a
 	mov	(_Counts + 1),a
-	C$lab1_2.c$46$1$84 ==.
+	C$lab1_2.c$46$1$91 ==.
 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:46: unsigned char Seconds = 0;
 ;	1-genFromRTrack replaced	mov	_Seconds,#0x00
 	mov	_Seconds,a
-	C$lab1_2.c$47$1$84 ==.
+	C$lab1_2.c$47$1$91 ==.
 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:47: unsigned char previousRNG = 7; 
 	mov	_previousRNG,#0x07
-	C$lab1_2.c$48$1$84 ==.
+	C$lab1_2.c$48$1$91 ==.
 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:48: unsigned char RNG = 0;
 ;	1-genFromRTrack replaced	mov	_RNG,#0x00
 	mov	_RNG,a
-	C$lab1_2.c$49$1$84 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:49: unsigned char turns = 0;
-;	1-genFromRTrack replaced	mov	_turns,#0x00
-	mov	_turns,a
-	C$lab1_2.c$50$1$84 ==.
+	C$lab1_2.c$49$1$91 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:49: unsigned char turns = 1;
+	mov	_turns,#0x01
+	C$lab1_2.c$50$1$91 ==.
 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:50: unsigned char correctAnswerCount = 0;
 ;	1-genFromRTrack replaced	mov	_correctAnswerCount,#0x00
 	mov	_correctAnswerCount,a
-	C$lab1_2.c$51$1$84 ==.
+	C$lab1_2.c$51$1$91 ==.
 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:51: unsigned char flag = 0;
 ;	1-genFromRTrack replaced	mov	_flag,#0x00
 	mov	_flag,a
+	C$lab1_2.c$52$1$91 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:52: unsigned char programflag = 0; //ends the program once it's completed
+;	1-genFromRTrack replaced	mov	_programflag,#0x00
+	mov	_programflag,a
 	.area GSFINAL (CODE)
 	ljmp	__sdcc_program_startup
 ;--------------------------------------------------------
@@ -1215,30 +1222,30 @@ _getchar:
 ;Allocation info for local variables in function 'main'
 ;------------------------------------------------------------
 	G$main$0$0 ==.
-	C$lab1_2.c$54$1$10 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:54: void main(void)
+	C$lab1_2.c$55$1$10 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:55: void main(void)
 ;	-----------------------------------------
 ;	 function main
 ;	-----------------------------------------
 _main:
-	C$lab1_2.c$56$1$49 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:56: Sys_Init();      // System Initialization
-	lcall	_Sys_Init
 	C$lab1_2.c$57$1$49 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:57: Port_Init();     // Initialize ports 2 and 3 
-	lcall	_Port_Init
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:57: Sys_Init();      // System Initialization
+	lcall	_Sys_Init
 	C$lab1_2.c$58$1$49 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:58: Interrupt_Init();
-	lcall	_Interrupt_Init
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:58: Port_Init();     // Initialize ports 2 and 3 
+	lcall	_Port_Init
 	C$lab1_2.c$59$1$49 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:59: Timer_Init();    // Initialize Timer 0 
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:59: Interrupt_Init();
+	lcall	_Interrupt_Init
+	C$lab1_2.c$60$1$49 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:60: Timer_Init();    // Initialize Timer 0 
 	lcall	_Timer_Init
-	C$lab1_2.c$61$1$49 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:61: putchar(' ');    // the quote fonts may not copy correctly into SiLabs IDE
+	C$lab1_2.c$62$1$49 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:62: putchar(' ');    // the quote fonts may not copy correctly into SiLabs IDE
 	mov	dpl,#0x20
 	lcall	_putchar
-	C$lab1_2.c$62$1$49 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:62: printf("Start\r\n");
+	C$lab1_2.c$63$1$49 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:63: printf("Start\r\n");
 	mov	a,#___str_0
 	push	acc
 	mov	a,#(___str_0 >> 8)
@@ -1249,16 +1256,50 @@ _main:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$lab1_2.c$69$2$50 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:69: while(Switch()) // while SS is OFF (high), wait for SS to be set ON
+	C$lab1_2.c$65$1$49 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:65: while (1) /* the following loop prints the number of overflows that occur
+00165$:
+	C$lab1_2.c$70$2$50 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:70: if (programflag == 0)
+	mov	a,_programflag
+	jz	00265$
+	ljmp	00163$
+00265$:
+	C$lab1_2.c$72$3$51 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:72: while(Switch()); // while SS is OFF (high), wait for SS to be set ON
 00101$:
 	lcall	_Switch
 	mov	a,dpl
 	mov	b,dph
 	orl	a,b
-	jz	00103$
-	C$lab1_2.c$71$3$51 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:71: printf("Switch is off!");
+	jnz	00101$
+	C$lab1_2.c$73$3$51 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:73: TR0 = 1;     // Timer 0 Enabled
+	setb	_TR0
+	C$lab1_2.c$75$8$56 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:75: while(turns <= 10)
+00156$:
+	mov	a,_turns
+	add	a,#0xff - 0x0A
+	jnc	00267$
+	ljmp	00158$
+00267$:
+	C$lab1_2.c$77$4$52 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:77: RNG = random(); //
+	lcall	_random
+	mov	_RNG,dpl
+	C$lab1_2.c$78$4$52 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:78: if (RNG != previousRNG) // Ensure numbers don't repeat
+	mov	a,_previousRNG
+	cjne	a,_RNG,00268$
+	ljmp	00155$
+00268$:
+	C$lab1_2.c$80$5$53 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:80: printf("\rNumber is %u\n", RNG);
+	mov	r6,_RNG
+	mov	r7,#0x00
+	push	ar6
+	push	ar7
 	mov	a,#___str_1
 	push	acc
 	mov	a,#(___str_1 >> 8)
@@ -1266,13 +1307,40 @@ _main:
 	mov	a,#0x80
 	push	acc
 	lcall	_printf
-	dec	sp
-	dec	sp
-	dec	sp
-	sjmp	00101$
-00103$:
-	C$lab1_2.c$73$2$50 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:73: printf("This is just a test");
+	mov	a,sp
+	add	a,#0xfb
+	mov	sp,a
+	C$lab1_2.c$81$5$53 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:81: if(RNG == 0) 
+	mov	a,_RNG
+	jnz	00152$
+	C$lab1_2.c$83$6$54 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:83: LED0 = 0; // Turn on LED0
+	clr	_LED0
+	C$lab1_2.c$84$6$54 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:84: LED1 = 1; // Turn off LED1
+	setb	_LED1
+	C$lab1_2.c$85$6$54 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:85: Seconds = 0;
+	mov	_Seconds,#0x00
+	C$lab1_2.c$86$6$54 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:86: while((Seconds == 0) && (flag == 0)) // Within the first second
+00115$:
+	mov	a,_Seconds
+	jz	00270$
+	ljmp	00153$
+00270$:
+	mov	a,_flag
+	jz	00271$
+	ljmp	00153$
+00271$:
+	C$lab1_2.c$90$7$55 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:90: if(Button0) // If the correct button is pushed
+	mov	a,#_Button0
+	orl	a,#(_Button0 >> 8)
+	jz	00112$
+	C$lab1_2.c$92$8$56 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:92: printf("\rYou pressed Button 0\n");
 	mov	a,#___str_2
 	push	acc
 	mov	a,#(___str_2 >> 8)
@@ -1283,13 +1351,94 @@ _main:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$lab1_2.c$74$2$50 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:74: TR0 = 1;     // Timer 0 Enabled
-	setb	_TR0
-	C$lab1_2.c$75$2$50 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:75: printf("Overflows: %u", Counts);
-	push	_Counts
-	push	(_Counts + 1)
+	C$lab1_2.c$93$8$56 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:93: correctAnswerCount++; // Log the correct answer
+	inc	_correctAnswerCount
+	C$lab1_2.c$94$8$56 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:94: BILED0 = 1;			  // Make BILED green
+	setb	_BILED0
+	C$lab1_2.c$95$8$56 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:95: BILED1 = 0;	
+	clr	_BILED1
+	C$lab1_2.c$96$8$56 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:96: flag = 1;
+	mov	_flag,#0x01
+	sjmp	00115$
+00112$:
+	C$lab1_2.c$98$7$55 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:98: else if(Button1) // If the incorrect button is pressed
+	mov	a,#_Button1
+	orl	a,#(_Button1 >> 8)
+	jz	00109$
+	C$lab1_2.c$100$8$57 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:100: flag = 1;
+	mov	_flag,#0x01
+	C$lab1_2.c$101$8$57 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:101: BILED0 = 0;			// Make BILED red
+	clr	_BILED0
+	C$lab1_2.c$102$8$57 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:102: BILED1 = 1;
+	setb	_BILED1
+	sjmp	00115$
+00109$:
+	C$lab1_2.c$104$7$55 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:104: else if(Button0 && Button1) // If the incorrect button is pressed
+	mov	a,#_Button0
+	orl	a,#(_Button0 >> 8)
+	jz	00105$
+	mov	a,#_Button1
+	orl	a,#(_Button1 >> 8)
+	jz	00105$
+	C$lab1_2.c$106$8$58 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:106: flag = 1;
+	mov	_flag,#0x01
+	C$lab1_2.c$107$8$58 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:107: BILED0 = 0;			// Make BILED red
+	clr	_BILED0
+	C$lab1_2.c$108$8$58 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:108: BILED1 = 1;
+	setb	_BILED1
+	sjmp	00115$
+00105$:
+	C$lab1_2.c$112$8$59 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:112: BILED0 = 0;			// Make BILED red
+	clr	_BILED0
+	C$lab1_2.c$113$8$59 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:113: BILED1 = 1;
+	setb	_BILED1
+	sjmp	00115$
+00152$:
+	C$lab1_2.c$117$5$53 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:117: else if(RNG == 1)
+	mov	a,#0x01
+	cjne	a,_RNG,00149$
+	C$lab1_2.c$119$6$60 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:119: LED1 = 0; //Turn on LED1
+	clr	_LED1
+	C$lab1_2.c$120$6$60 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:120: LED0 = 1; //Turn off LED0
+	setb	_LED0
+	C$lab1_2.c$121$6$60 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:121: Seconds = 0;
+	mov	_Seconds,#0x00
+	C$lab1_2.c$122$6$60 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:122: while((Seconds == 0) && (flag == 0)) // Within the first second
+00129$:
+	mov	a,_Seconds
+	jz	00278$
+	ljmp	00153$
+00278$:
+	mov	a,_flag
+	jz	00279$
+	ljmp	00153$
+00279$:
+	C$lab1_2.c$126$7$61 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:126: if(Button1) // If the correct button is pushed
+	mov	a,#_Button1
+	orl	a,#(_Button1 >> 8)
+	jz	00126$
+	C$lab1_2.c$128$8$62 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:128: printf("\rYou pushed Button 1\n");
 	mov	a,#___str_3
 	push	acc
 	mov	a,#(___str_3 >> 8)
@@ -1297,182 +1446,96 @@ _main:
 	mov	a,#0x80
 	push	acc
 	lcall	_printf
-	mov	a,sp
-	add	a,#0xfb
-	mov	sp,a
-	C$lab1_2.c$76$3$52 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:76: while(turns <= 10)
-00136$:
-	mov	a,_turns
-	add	a,#0xff - 0x0A
-	jnc	00226$
-	ljmp	00139$
-00226$:
-	C$lab1_2.c$78$3$52 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:78: RNG = random(); //
-	lcall	_random
-	mov	_RNG,dpl
-	C$lab1_2.c$79$3$52 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:79: if (RNG != previousRNG) // Ensure numbers don't repeat
-	mov	a,_previousRNG
-	cjne	a,_RNG,00227$
-	ljmp	00135$
-00227$:
-	C$lab1_2.c$81$4$53 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:81: if(RNG == 0) 
-	mov	a,_RNG
-	jnz	00132$
-	C$lab1_2.c$83$5$54 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:83: LED0 = 0; // Turn on LED0
-	clr	_LED0
-	C$lab1_2.c$84$5$54 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:84: LED1 = 1; // Turn off LED1
-	setb	_LED1
-	C$lab1_2.c$85$5$54 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:85: while(Seconds == 0 && flag == 0) // Within the first second
-00108$:
-	mov	a,_Seconds
-	jz	00229$
-	ljmp	00133$
-00229$:
-	mov	a,_flag
-	jz	00230$
-	ljmp	00133$
-00230$:
-	C$lab1_2.c$87$6$55 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:87: if(Button0) // If the correct button is pushed
-	mov	a,#_Button0
-	orl	a,#(_Button0 >> 8)
-	jz	00105$
-	C$lab1_2.c$89$7$56 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:89: correctAnswerCount++; // Log the correct answer
-	inc	_correctAnswerCount
-	C$lab1_2.c$90$7$56 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:90: BILED0 = 1;			  // Make BILED green
-	setb	_BILED0
-	C$lab1_2.c$91$7$56 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:91: BILED1 = 0;	
-	clr	_BILED1
-	C$lab1_2.c$92$7$56 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:92: flag = 1;
-	mov	_flag,#0x01
-	sjmp	00108$
-00105$:
-	C$lab1_2.c$96$7$57 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:96: BILED0 = 0;			// Make BILED red
-	clr	_BILED0
-	C$lab1_2.c$97$7$57 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:97: BILED1 = 1;
-	setb	_BILED1
-	sjmp	00108$
-00132$:
-	C$lab1_2.c$101$4$53 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:101: else if(RNG == 1)
-	mov	a,#0x01
-	cjne	a,_RNG,00129$
-	C$lab1_2.c$103$5$58 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:103: LED1 = 0; //Turn on LED1
-	clr	_LED1
-	C$lab1_2.c$104$5$58 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:104: LED0 = 1; //Turn off LED0
-	setb	_LED0
-	C$lab1_2.c$105$5$58 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:105: while(Seconds == 0 && flag == 0) // Within the first second
-00115$:
-	mov	a,_Seconds
-	jnz	00133$
-	mov	a,_flag
-	jnz	00133$
-	C$lab1_2.c$107$6$59 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:107: if(Button1) // If the correct button is pushed
-	mov	a,#_Button1
-	orl	a,#(_Button1 >> 8)
-	jz	00112$
-	C$lab1_2.c$109$7$60 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:109: correctAnswerCount++; // Log the correct answer
-	inc	_correctAnswerCount
-	C$lab1_2.c$110$7$60 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:110: BILED0 = 1;			  // Make BILED green
-	setb	_BILED0
-	C$lab1_2.c$111$7$60 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:111: BILED1 = 0;	
-	clr	_BILED1
-	C$lab1_2.c$112$7$60 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:112: flag = 1;
-	mov	_flag,#0x01
-	sjmp	00115$
-00112$:
-	C$lab1_2.c$116$7$61 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:116: BILED0 = 0;			// Make BILED red
-	clr	_BILED0
-	C$lab1_2.c$117$7$61 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:117: BILED1 = 1;
-	setb	_BILED1
-	sjmp	00115$
-00129$:
-	C$lab1_2.c$121$4$53 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:121: else if (RNG == 2)
-	mov	a,#0x02
-	cjne	a,_RNG,00133$
-	C$lab1_2.c$123$5$62 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:123: LED0 = 0; //Turn on LED0
-	clr	_LED0
-	C$lab1_2.c$124$5$62 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:124: LED1 = 0; //Turn on 
-	clr	_LED1
-	C$lab1_2.c$125$5$62 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:125: while(Seconds == 0 && flag == 0) // Within the first second
-00123$:
-	mov	a,_Seconds
-	jnz	00133$
-	mov	a,_flag
-	jnz	00133$
-	C$lab1_2.c$127$6$63 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:127: if(Button0 && Button1) // If the correct button is pushed
-	mov	a,#_Button0
-	orl	a,#(_Button0 >> 8)
-	jz	00119$
-	mov	a,#_Button1
-	orl	a,#(_Button1 >> 8)
-	jz	00119$
-	C$lab1_2.c$129$7$64 ==.
+	dec	sp
+	dec	sp
+	dec	sp
+	C$lab1_2.c$129$8$62 ==.
 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:129: correctAnswerCount++; // Log the correct answer
 	inc	_correctAnswerCount
-	C$lab1_2.c$130$7$64 ==.
+	C$lab1_2.c$130$8$62 ==.
 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:130: BILED0 = 1;			  // Make BILED green
 	setb	_BILED0
-	C$lab1_2.c$131$7$64 ==.
+	C$lab1_2.c$131$8$62 ==.
 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:131: BILED1 = 0;	
 	clr	_BILED1
-	C$lab1_2.c$132$7$64 ==.
+	C$lab1_2.c$132$8$62 ==.
 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:132: flag = 1;
 	mov	_flag,#0x01
-	sjmp	00123$
-00119$:
-	C$lab1_2.c$136$7$65 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:136: BILED0 = 0;			// Make BILED red
+	sjmp	00129$
+00126$:
+	C$lab1_2.c$134$7$61 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:134: else if(Button0) // If the incorrect button is pressed
+	mov	a,#_Button0
+	orl	a,#(_Button0 >> 8)
+	jz	00123$
+	C$lab1_2.c$136$8$63 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:136: flag = 1;
+	mov	_flag,#0x01
+	C$lab1_2.c$137$8$63 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:137: BILED0 = 0;			// Make BILED red
 	clr	_BILED0
-	C$lab1_2.c$137$7$65 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:137: BILED1 = 1;
+	C$lab1_2.c$138$8$63 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:138: BILED1 = 1;
 	setb	_BILED1
-	sjmp	00123$
-00133$:
-	C$lab1_2.c$141$4$53 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:141: turns++;
-	inc	_turns
-	C$lab1_2.c$142$4$53 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:142: previousRNG = RNG;
-	mov	_previousRNG,_RNG
-	C$lab1_2.c$143$4$53 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:143: flag = 0;	
-	mov	_flag,#0x00
-00135$:
-	C$lab1_2.c$145$3$52 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:145: printf("Correct responses: %u", correctAnswerCount);
-	mov	r6,_correctAnswerCount
-	mov	r7,#0x00
-	push	ar6
-	push	ar7
+	sjmp	00129$
+00123$:
+	C$lab1_2.c$140$7$61 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:140: else if(Button0 && Button1) // If the incorrect button is pressed
+	mov	a,#_Button0
+	orl	a,#(_Button0 >> 8)
+	jz	00119$
+	mov	a,#_Button1
+	orl	a,#(_Button1 >> 8)
+	jz	00119$
+	C$lab1_2.c$142$8$64 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:142: flag = 1;
+	mov	_flag,#0x01
+	C$lab1_2.c$143$8$64 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:143: BILED0 = 0;			// Make BILED red
+	clr	_BILED0
+	C$lab1_2.c$144$8$64 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:144: BILED1 = 1;
+	setb	_BILED1
+	sjmp	00129$
+00119$:
+	C$lab1_2.c$148$8$65 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:148: BILED0 = 0;			// Make BILED red
+	clr	_BILED0
+	C$lab1_2.c$149$8$65 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:149: BILED1 = 1;
+	setb	_BILED1
+	sjmp	00129$
+00149$:
+	C$lab1_2.c$153$5$53 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:153: else if (RNG == 2)
+	mov	a,#0x02
+	cjne	a,_RNG,00153$
+	C$lab1_2.c$155$6$66 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:155: LED0 = 0; //Turn on LED0
+	clr	_LED0
+	C$lab1_2.c$156$6$66 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:156: LED1 = 0; //Turn on 
+	clr	_LED1
+	C$lab1_2.c$157$6$66 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:157: Seconds = 0;
+	mov	_Seconds,#0x00
+	C$lab1_2.c$158$6$66 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:158: while((Seconds == 0) && (flag == 0)) // Within the first second
+00143$:
+	mov	a,_Seconds
+	jnz	00153$
+	mov	a,_flag
+	jnz	00153$
+	C$lab1_2.c$162$7$67 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:162: if(Button0 && Button1) // If the correct button is pushed
+	mov	a,#_Button0
+	orl	a,#(_Button0 >> 8)
+	jz	00139$
+	mov	a,#_Button1
+	orl	a,#(_Button1 >> 8)
+	jz	00139$
+	C$lab1_2.c$164$8$68 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:164: printf("\rYou pressed Button 0 and Button 1\n");
 	mov	a,#___str_4
 	push	acc
 	mov	a,#(___str_4 >> 8)
@@ -1480,42 +1543,72 @@ _main:
 	mov	a,#0x80
 	push	acc
 	lcall	_printf
-	mov	a,sp
-	add	a,#0xfb
-	mov	sp,a
-	ljmp	00136$
-	C$lab1_2.c$147$2$50 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:147: while (PB0); // wait until PB1 is pressed
-00139$:
-	jb	_PB0,00139$
-	C$lab1_2.c$148$2$50 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:148: Counts = 0;  // set overflow counter to zero
-	clr	a
-	mov	_Counts,a
-	mov	(_Counts + 1),a
-	C$lab1_2.c$150$2$50 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:150: BILED0 = 1;  // while button is down, turn ON the BILED
+	dec	sp
+	dec	sp
+	dec	sp
+	C$lab1_2.c$165$8$68 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:165: correctAnswerCount++; // Log the correct answer
+	inc	_correctAnswerCount
+	C$lab1_2.c$166$8$68 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:166: BILED0 = 1;			  // Make BILED green
 	setb	_BILED0
-	C$lab1_2.c$151$2$50 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:151: BILED1 = 0;
+	C$lab1_2.c$167$8$68 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:167: BILED1 = 0;	
 	clr	_BILED1
-	C$lab1_2.c$153$2$50 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:153: while (!PB0);// wait until PB1 is released
-00142$:
-	jnb	_PB0,00142$
-	C$lab1_2.c$154$2$50 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:154: TR0 = 0;     // Timer 0 disabled
-	clr	_TR0
-	C$lab1_2.c$156$2$50 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:156: BILED0 = 0;  // Turn OFF the BILED
+	C$lab1_2.c$168$8$68 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:168: flag = 1;
+	mov	_flag,#0x01
+	sjmp	00143$
+00139$:
+	C$lab1_2.c$170$7$67 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:170: else if(Button0) // If the incorrect button is pressed
+	mov	a,#_Button0
+	orl	a,#(_Button0 >> 8)
+	jz	00136$
+	C$lab1_2.c$172$8$69 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:172: flag = 1;
+	mov	_flag,#0x01
+	C$lab1_2.c$173$8$69 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:173: BILED0 = 0;			// Make BILED red
 	clr	_BILED0
-	C$lab1_2.c$157$2$50 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:157: BILED1 = 0;
-	clr	_BILED1
-	C$lab1_2.c$158$2$50 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:158: printf("\rNumber of Overflows = %d\n", Counts);
-	push	_Counts
-	push	(_Counts + 1)
+	C$lab1_2.c$174$8$69 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:174: BILED1 = 1;
+	setb	_BILED1
+	sjmp	00143$
+00136$:
+	C$lab1_2.c$176$7$67 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:176: else if(Button1) // If the incorrect button is pressed
+	mov	a,#_Button1
+	orl	a,#(_Button1 >> 8)
+	jz	00133$
+	C$lab1_2.c$178$8$70 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:178: flag = 1;
+	mov	_flag,#0x01
+	C$lab1_2.c$179$8$70 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:179: BILED0 = 0;			// Make BILED red
+	clr	_BILED0
+	C$lab1_2.c$180$8$70 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:180: BILED1 = 1;
+	setb	_BILED1
+	sjmp	00143$
+00133$:
+	C$lab1_2.c$184$8$71 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:184: BILED0 = 0;			// Make BILED red
+	clr	_BILED0
+	C$lab1_2.c$185$8$71 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:185: BILED1 = 1;
+	setb	_BILED1
+	sjmp	00143$
+00153$:
+	C$lab1_2.c$189$5$53 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:189: turns++;
+	inc	_turns
+	C$lab1_2.c$190$5$53 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:190: printf("\rIt is turn %u\n", turns);
+	mov	r6,_turns
+	mov	r7,#0x00
+	push	ar6
+	push	ar7
 	mov	a,#___str_5
 	push	acc
 	mov	a,#(___str_5 >> 8)
@@ -1526,131 +1619,204 @@ _main:
 	mov	a,sp
 	add	a,#0xfb
 	mov	sp,a
-	ljmp	00101$
-	C$lab1_2.c$161$1$49 ==.
+	C$lab1_2.c$191$5$53 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:191: previousRNG = RNG;
+	mov	_previousRNG,_RNG
+	C$lab1_2.c$192$5$53 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:192: flag = 0;
+	mov	_flag,#0x00
+00155$:
+	C$lab1_2.c$194$4$52 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:194: printf("\rCorrect responses: %u\n", correctAnswerCount);
+	mov	r6,_correctAnswerCount
+	mov	r7,#0x00
+	push	ar6
+	push	ar7
+	mov	a,#___str_6
+	push	acc
+	mov	a,#(___str_6 >> 8)
+	push	acc
+	mov	a,#0x80
+	push	acc
+	lcall	_printf
+	mov	a,sp
+	add	a,#0xfb
+	mov	sp,a
+	ljmp	00156$
+00158$:
+	C$lab1_2.c$197$3$51 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:197: Seconds = 0;
+	mov	_Seconds,#0x00
+	C$lab1_2.c$198$3$51 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:198: while (Seconds == 0)
+00159$:
+	mov	a,_Seconds
+	jnz	00161$
+	C$lab1_2.c$200$4$72 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:200: Buzzer = 0; // Bzzzzt
+	clr	_Buzzer
+	sjmp	00159$
+00161$:
+	C$lab1_2.c$204$3$51 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:204: printf("\rFINAL RESULTS: %u", correctAnswerCount);
+	mov	r6,_correctAnswerCount
+	mov	r7,#0x00
+	push	ar6
+	push	ar7
+	mov	a,#___str_7
+	push	acc
+	mov	a,#(___str_7 >> 8)
+	push	acc
+	mov	a,#0x80
+	push	acc
+	lcall	_printf
+	mov	a,sp
+	add	a,#0xfb
+	mov	sp,a
+	C$lab1_2.c$205$3$51 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:205: printf(" out of 10\n");
+	mov	a,#___str_8
+	push	acc
+	mov	a,#(___str_8 >> 8)
+	push	acc
+	mov	a,#0x80
+	push	acc
+	lcall	_printf
+	dec	sp
+	dec	sp
+	dec	sp
+	C$lab1_2.c$206$3$51 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:206: programflag = 1;
+	mov	_programflag,#0x01
+00163$:
+	C$lab1_2.c$208$2$50 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:208: Buzzer = 1; //Bzt--
+	setb	_Buzzer
+	ljmp	00165$
+	C$lab1_2.c$223$1$49 ==.
 	XG$main$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'Port_Init'
 ;------------------------------------------------------------
 	G$Port_Init$0$0 ==.
-	C$lab1_2.c$164$1$49 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:164: void Port_Init(void)
+	C$lab1_2.c$226$1$49 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:226: void Port_Init(void)
 ;	-----------------------------------------
 ;	 function Port_Init
 ;	-----------------------------------------
 _Port_Init:
-	C$lab1_2.c$167$1$67 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:167: P3MDOUT |= 0xF8;// set Port 3 output pins to push-pull mode 
+	C$lab1_2.c$229$1$74 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:229: P3MDOUT |= 0xF8;// set Port 3 output pins to push-pull mode 
 	orl	_P3MDOUT,#0xF8
-	C$lab1_2.c$168$1$67 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:168: P3MDOUT &= 0xFC; // set Port 3 input pins to open drain mode 
+	C$lab1_2.c$230$1$74 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:230: P3MDOUT &= 0xFC; // set Port 3 input pins to open drain mode 
 	anl	_P3MDOUT,#0xFC
-	C$lab1_2.c$169$1$67 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:169: P3 |= ~0xFC; // set Port 3 input pins to high impedance state 
+	C$lab1_2.c$231$1$74 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:231: P3 |= ~0xFC; // set Port 3 input pins to high impedance state 
 	mov	r7,_P3
 	mov	a,#0x03
 	orl	a,r7
 	mov	_P3,a
-	C$lab1_2.c$171$1$67 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:171: P2MDOUT &= 0xFE; // set Port 2 input pins to push-pull mode
+	C$lab1_2.c$233$1$74 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:233: P2MDOUT &= 0xFE; // set Port 2 input pins to push-pull mode
 	anl	_P2MDOUT,#0xFE
-	C$lab1_2.c$172$1$67 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:172: P2 |= ~0xFE; // set Port 2 input pins to high impedance state
+	C$lab1_2.c$234$1$74 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:234: P2 |= ~0xFE; // set Port 2 input pins to high impedance state
 	mov	r7,_P2
 	mov	a,#0x01
 	orl	a,r7
 	mov	_P2,a
-	C$lab1_2.c$174$1$67 ==.
+	C$lab1_2.c$236$1$74 ==.
 	XG$Port_Init$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'Interrupt_Init'
 ;------------------------------------------------------------
 	G$Interrupt_Init$0$0 ==.
-	C$lab1_2.c$176$1$67 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:176: void Interrupt_Init(void)
+	C$lab1_2.c$238$1$74 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:238: void Interrupt_Init(void)
 ;	-----------------------------------------
 ;	 function Interrupt_Init
 ;	-----------------------------------------
 _Interrupt_Init:
-	C$lab1_2.c$178$1$69 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:178: ET0 = 1;      // enable Timer0 Interrupt request
+	C$lab1_2.c$240$1$76 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:240: ET0 = 1;      // enable Timer0 Interrupt request
 	setb	_ET0
-	C$lab1_2.c$179$1$69 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:179: EA = 1;       // enable global interrupts
+	C$lab1_2.c$241$1$76 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:241: EA = 1;       // enable global interrupts
 	setb	_EA
-	C$lab1_2.c$180$1$69 ==.
+	C$lab1_2.c$242$1$76 ==.
 	XG$Interrupt_Init$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'Timer_Init'
 ;------------------------------------------------------------
 	G$Timer_Init$0$0 ==.
-	C$lab1_2.c$182$1$69 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:182: void Timer_Init(void)
+	C$lab1_2.c$244$1$76 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:244: void Timer_Init(void)
 ;	-----------------------------------------
 ;	 function Timer_Init
 ;	-----------------------------------------
 _Timer_Init:
-	C$lab1_2.c$185$1$71 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:185: CKCON |= 0x08;  // Timer0 uses SYSCLK as source
+	C$lab1_2.c$247$1$78 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:247: CKCON |= 0x08;  // Timer0 uses SYSCLK as source
 	orl	_CKCON,#0x08
-	C$lab1_2.c$186$1$71 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:186: TMOD &= 0xF0;   // clear the 4 least significant bits
+	C$lab1_2.c$248$1$78 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:248: TMOD &= 0xF0;   // clear the 4 least significant bits
 	anl	_TMOD,#0xF0
-	C$lab1_2.c$187$1$71 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:187: TMOD |= 0x01;   // Timer0 in mode 1
+	C$lab1_2.c$249$1$78 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:249: TMOD |= 0x01;   // Timer0 in mode 1
 	orl	_TMOD,#0x01
-	C$lab1_2.c$188$1$71 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:188: TR0 = 0;           // Stop Timer0
+	C$lab1_2.c$250$1$78 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:250: TR0 = 0;           // Stop Timer0
 	clr	_TR0
-	C$lab1_2.c$189$1$71 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:189: TL0 = 0;           // Clear low byte of register T0
+	C$lab1_2.c$251$1$78 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:251: TL0 = 0;           // Clear low byte of register T0
 	mov	_TL0,#0x00
-	C$lab1_2.c$190$1$71 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:190: TH0 = 0;           // Clear high byte of register T0
+	C$lab1_2.c$252$1$78 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:252: TH0 = 0;           // Clear high byte of register T0
 	mov	_TH0,#0x00
-	C$lab1_2.c$192$1$71 ==.
+	C$lab1_2.c$254$1$78 ==.
 	XG$Timer_Init$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'Timer0_ISR'
 ;------------------------------------------------------------
 	G$Timer0_ISR$0$0 ==.
-	C$lab1_2.c$196$1$71 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:196: void Timer0_ISR(void) __interrupt 1
+	C$lab1_2.c$258$1$78 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:258: void Timer0_ISR(void) __interrupt 1
 ;	-----------------------------------------
 ;	 function Timer0_ISR
 ;	-----------------------------------------
 _Timer0_ISR:
 	push	acc
 	push	psw
-	C$lab1_2.c$198$1$73 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:198: Counts++;
+	C$lab1_2.c$260$1$80 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:260: Counts++;
 	inc	_Counts
 	clr	a
 	cjne	a,_Counts,00108$
 	inc	(_Counts + 1)
 00108$:
-	C$lab1_2.c$199$1$73 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:199: if(Counts == 337)
+	C$lab1_2.c$261$1$80 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:261: if(Counts == 337)
 	mov	a,#0x51
 	cjne	a,_Counts,00103$
 	mov	a,#0x01
 	cjne	a,(_Counts + 1),00103$
-	C$lab1_2.c$201$2$74 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:201: Seconds ++;
+	C$lab1_2.c$263$2$81 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:263: Seconds ++;
 	inc	_Seconds
-	C$lab1_2.c$202$2$74 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:202: Counts = 0;
+	C$lab1_2.c$264$2$81 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:264: Counts = 0;
 	clr	a
 	mov	_Counts,a
 	mov	(_Counts + 1),a
 00103$:
 	pop	psw
 	pop	acc
-	C$lab1_2.c$204$1$73 ==.
+	C$lab1_2.c$266$1$80 ==.
 	XG$Timer0_ISR$0$0 ==.
 	reti
 ;	eliminated unneeded mov psw,# (no regs used in bank)
@@ -1661,92 +1827,92 @@ _Timer0_ISR:
 ;Allocation info for local variables in function 'random'
 ;------------------------------------------------------------
 	G$random$0$0 ==.
-	C$lab1_2.c$213$1$73 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:213: unsigned char random(void)
+	C$lab1_2.c$275$1$80 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:275: unsigned char random(void)
 ;	-----------------------------------------
 ;	 function random
 ;	-----------------------------------------
 _random:
-	C$lab1_2.c$215$1$76 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:215: return (rand()%3);  // rand returns a random number between 0 and 32767.
+	C$lab1_2.c$277$1$83 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:277: return (rand()%3);  // rand returns a random number between 0 and 32767.
 	lcall	_rand
 	mov	__modsint_PARM_2,#0x03
 	mov	(__modsint_PARM_2 + 1),#0x00
 	lcall	__modsint
-	C$lab1_2.c$219$1$76 ==.
+	C$lab1_2.c$281$1$83 ==.
 	XG$random$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'Button0'
 ;------------------------------------------------------------
 	G$Button0$0$0 ==.
-	C$lab1_2.c$226$1$76 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:226: int Button0(void)
+	C$lab1_2.c$288$1$83 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:288: int Button0(void)
 ;	-----------------------------------------
 ;	 function Button0
 ;	-----------------------------------------
 _Button0:
-	C$lab1_2.c$228$1$78 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:228: if (!PB0)
+	C$lab1_2.c$290$1$85 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:290: if (!PB0)
 	jb	_PB0,00102$
-	C$lab1_2.c$230$2$79 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:230: return 1;
+	C$lab1_2.c$292$2$86 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:292: return 1;
 	mov	dptr,#0x0001
 	sjmp	00104$
 00102$:
-	C$lab1_2.c$232$1$78 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:232: else return 0;
+	C$lab1_2.c$294$1$85 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:294: else return 0;
 	mov	dptr,#0x0000
 00104$:
-	C$lab1_2.c$233$1$78 ==.
+	C$lab1_2.c$295$1$85 ==.
 	XG$Button0$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'Button1'
 ;------------------------------------------------------------
 	G$Button1$0$0 ==.
-	C$lab1_2.c$235$1$78 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:235: int Button1(void)
+	C$lab1_2.c$297$1$85 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:297: int Button1(void)
 ;	-----------------------------------------
 ;	 function Button1
 ;	-----------------------------------------
 _Button1:
-	C$lab1_2.c$237$1$81 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:237: if (!PB1)
+	C$lab1_2.c$299$1$88 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:299: if (!PB1)
 	jb	_PB1,00102$
-	C$lab1_2.c$239$2$82 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:239: return 1;
+	C$lab1_2.c$301$2$89 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:301: return 1;
 	mov	dptr,#0x0001
 	sjmp	00104$
 00102$:
-	C$lab1_2.c$241$1$81 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:241: else return 0;
+	C$lab1_2.c$303$1$88 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:303: else return 0;
 	mov	dptr,#0x0000
 00104$:
-	C$lab1_2.c$242$1$81 ==.
+	C$lab1_2.c$304$1$88 ==.
 	XG$Button1$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'Switch'
 ;------------------------------------------------------------
 	G$Switch$0$0 ==.
-	C$lab1_2.c$247$1$81 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:247: int Switch(void)
+	C$lab1_2.c$309$1$88 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:309: int Switch(void)
 ;	-----------------------------------------
 ;	 function Switch
 ;	-----------------------------------------
 _Switch:
-	C$lab1_2.c$249$1$84 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:249: if (!SS) return 1;
+	C$lab1_2.c$311$1$91 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:311: if (!SS) return 1;
 	jb	_SS,00102$
 	mov	dptr,#0x0001
 	sjmp	00104$
 00102$:
-	C$lab1_2.c$250$1$84 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:250: else return 0;
+	C$lab1_2.c$312$1$91 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 1\Lab 1_2\lab1-2.c:312: else return 0;
 	mov	dptr,#0x0000
 00104$:
-	C$lab1_2.c$251$1$84 ==.
+	C$lab1_2.c$313$1$91 ==.
 	XG$Switch$0$0 ==.
 	ret
 	.area CSEG    (CODE)
@@ -1759,24 +1925,48 @@ ___str_0:
 	.db 0x00
 Flab1_2$__str_1$0$0 == .
 ___str_1:
-	.ascii "Switch is off!"
+	.db 0x0D
+	.ascii "Number is %u"
+	.db 0x0A
 	.db 0x00
 Flab1_2$__str_2$0$0 == .
 ___str_2:
-	.ascii "This is just a test"
+	.db 0x0D
+	.ascii "You pressed Button 0"
+	.db 0x0A
 	.db 0x00
 Flab1_2$__str_3$0$0 == .
 ___str_3:
-	.ascii "Overflows: %u"
+	.db 0x0D
+	.ascii "You pushed Button 1"
+	.db 0x0A
 	.db 0x00
 Flab1_2$__str_4$0$0 == .
 ___str_4:
-	.ascii "Correct responses: %u"
+	.db 0x0D
+	.ascii "You pressed Button 0 and Button 1"
+	.db 0x0A
 	.db 0x00
 Flab1_2$__str_5$0$0 == .
 ___str_5:
 	.db 0x0D
-	.ascii "Number of Overflows = %d"
+	.ascii "It is turn %u"
+	.db 0x0A
+	.db 0x00
+Flab1_2$__str_6$0$0 == .
+___str_6:
+	.db 0x0D
+	.ascii "Correct responses: %u"
+	.db 0x0A
+	.db 0x00
+Flab1_2$__str_7$0$0 == .
+___str_7:
+	.db 0x0D
+	.ascii "FINAL RESULTS: %u"
+	.db 0x00
+Flab1_2$__str_8$0$0 == .
+___str_8:
+	.ascii " out of 10"
 	.db 0x0A
 	.db 0x00
 	.area XINIT   (CODE)
