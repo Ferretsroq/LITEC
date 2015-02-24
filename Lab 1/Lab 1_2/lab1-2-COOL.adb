@@ -24,6 +24,7 @@ S:G$flag$0$0({1}SC:U),E,0,0
 S:G$programflag$0$0({1}SC:U),E,0,0
 S:G$countvariable$0$0({1}SC:U),E,0,0
 S:G$secondvariable$0$0({1}SC:U),E,0,0
+S:G$doublecountvariable$0$0({1}SC:U),E,0,0
 S:G$P0$0$0({1}SC:U),I,0,0
 S:G$SP$0$0({1}SC:U),I,0,0
 S:G$DPL$0$0({1}SC:U),I,0,0

@@ -52,6 +52,7 @@ unsigned char flag = 0;
 unsigned char programflag = 0; //ends the program once it's completed
 unsigned char countvariable = 50; // Adjusts the delay on repeated button inputs
 unsigned char secondvariable = 1; // Adjusts the seconds allowed per turn
+unsigned char doublecountvariable = 100; // Only for double-button pushes
 
 //***************
 void main(void)
@@ -184,7 +185,7 @@ void main(void)
 								BILED1 = 0;	
 								flag = 1;
 							}	
-							else if(Button0()) // If the incorrect button is pressed
+							/*else if(Button0()) // If the incorrect button is pressed
 							{
 								Counts = 0;
 								while (Counts <= countvariable);
@@ -199,7 +200,7 @@ void main(void)
 								flag = 1;
 								BILED0 = 0;			// Make BILED red
 								BILED1 = 1;
-							}
+							}*/
 							else 
 							{
 								BILED0 = 0;			// Make BILED red
