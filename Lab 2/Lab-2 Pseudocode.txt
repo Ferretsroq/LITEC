@@ -1,0 +1,90 @@
+
+LAB 2 PSEUDOCODE
+
+
+----------------------------
+//------------------------------------------------
+// INITIALIZING VARIABLES
+unsigned char number_of_correct_colors
+unsigned char number_of_correct_spots
+
+Array of size 3 called Mastermind_Array equal to ['?','?','?']
+Array of size 3 called Guess_Array equal to ['?','?','?']
+
+//------------------------------------------------
+// Code for displaying outputs
+	second switch off	Off
+	first switch off	Red
+	second switch on
+	first switch on		Green
+	second switch on
+
+//------------------------------------------------
+Main function
+  Mastermind_Array[0] = random integer between 0,1,2
+  Mastermind_Array[1] = random integer between 0,1,2
+  Mastermind_Array[2] = random integer between 0,1,2
+  FUNCTION_A(Mastermind_Array) // converted array into 0s,Rs, and Gs
+
+  while FUNCTION_C does not return a 3 (as in while the sequence hasn't been guessed)
+    hi
+  end while loop
+  
+
+
+End main function
+
+
+
+
+//------------------------------------------------
+FUNCTION_A - Function for creating sequences
+  // these repeating lines of code could honestly be another function
+  // but for now I'm just going to brute force things
+  If the first LED is Off
+    store Array[0] = '0'
+  Else if the first LED is Red
+    store Array[0] = 'R'
+  Else if the first LED is Green
+    store Array[0] = 'G'
+  End if statement
+
+  If the second LED is Off
+    store Array[1] = '0'
+  Else if the second LED is Red
+    store Array[1] = 'R'
+  Else if the second LED is Green
+    store Array[1] = 'G'
+  End if statement
+
+  If the third LED is Off
+    store Array[2] = '0'
+  Else if the third LED is Red
+    store Array[2] = 'R'
+  Else if the third LED is Green
+    store Array[2] = 'G'
+  End if statement
+
+  return Array
+End function
+
+//------------------------------------------------
+FUNCTION_B - Function for calculating number of correct colors
+  Temporarily duplicate the Mastermind_Array
+  For loop that iterates through the Guess_Array
+    If Guess_Array[i] is in the Mastermind_Array
+      add one to the number_of_correct_colors
+      replace that element of Mastermind_Array with a ? or some other null value
+  End for loop
+  return number_of_correct_colors
+End function
+
+//------------------------------------------------
+FUNCTION_C - Function for calculating number of correct spots
+  For i=0 to length of Mastermind array (3)
+    if Mastermind_Array[i] == Guess_Array[i]
+      Add 1 to the number_of_correct_spots
+    end if statement
+  End for loop
+  return number_of_correct_spots
+End function
