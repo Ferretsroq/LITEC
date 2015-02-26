@@ -1,78 +1,160 @@
 
 LAB 2 PSEUDOCODE
 
-
-----------------------------
 //------------------------------------------------
 // INITIALIZING VARIABLES
 unsigned char number_of_correct_colors
 unsigned char number_of_correct_spots
 unsigned char amber_score
 unsigned char green_score
-unsigned char current_player = 0;  // flag used to determine if it's amber's or green's turn
+unsigned char potentiometer_value
+unsigned char points	// points obtained per round
 
-Array of size 3 called Mastermind_Array equal to ['?','?','?']
-Array of size 3 called Guess_Array equal to ['?','?','?']
-
-//------------------------------------------------
-// Code for displaying outputs
-	second switch off	Off
-	first switch off	Red
-	second switch on
-	first switch on		Green
-	second switch on
+Array of size 3 called Mastermind_Array equal to [7,7,7]
+Array of size 3 called Guess_Array equal to [7,7,7] // the 7s are arbitrary values that will shortly be written over
 
 //------------------------------------------------
 Main function
-  Mastermind_Array[0] = random integer between 0,1,2
-  Mastermind_Array[1] = random integer between 0,1,2
-  Mastermind_Array[2] = random integer between 0,1,2
-  //FUNCTION_A(Mastermind_Array) // converted array into 0s,Rs, and Gs; now useless
-  
+  while (1) // infinite loop
+	  //BiLEDs are off, Amber & Green LEDs are off, output a message, clear scores, and wait
+	  //  for the pushbutton to be pressed.
+	  AmberLED is off
+	  GreenLED is off
+	  print out "Set the speed pot and press the pushbutton to begin LITEC Mastermind."
 
-  // Amber's turn
-  while FUNCTION_C does not return a 3 (as in while the sequence hasn't been guessed)
-    FUNCTION_D
-  end while loop
-  
+	  //2. Read the game speed pot voltage and calculate TMAX. Set T = TMAX and output value (ms).
+	  potentiometer_value = read in potentiometer // there are a ton of functionalities that I'm overlooking for now
+	  TMAX = ((18750 * potentiometer_value)+15000);
+	  print out "Starting Period: " + TMAX
+	  T = TMAX
+	  
+	  //Game play
+	  //3. Repeat the following steps for each player.
+	  
+	  //4. Light Amber player LED.
+	  Turn AmberLED on
+	  // Amber's turn
+	  print blank line
+	  print "Amber Player Turn\n"
+	  //5. Generate 3 random values from 0 to 2 for BiLED pattern.
+	  GENERATE_MASTERMIND_ARRAY(mastermind_array);
+	  //6. Repeat steps 7 to 15 until a match is found.
+	  while FUNCTION_C does not return a 3 (as in while the sequence hasn't been guessed)
+		//7. Start timed window for T ms and wait for pushbuttons to be pressed. Stop the clock if
+		//TMAX is exceeded to avoid timing errors due to overflow.
+		reset timer.
+		//8. While waiting for pushbutton read 6 slide switches and activate corresponding BiLEDs.
+		while pushbutton not pressed or time has not exceeded TMAX (calculate by saying TMAX >= timer)
+			FUNCTION_A
+		end while loop
+		//9. When the “guess” pushbutton is pressed capture the numerical value of the 3 pairs of
+		//slide switches (0, 1, or 2 for each pair).
+		FUNCTION_G // this reads in Guess_Array and sets the values so we can check
+		
+		//10. If TMAX was reached set points to 6, otherwise set points to 5T(ms)/TMAX(ms) + 1 (integer divide and ignore fraction)
+		if timer >= TMAX
+			points = 6;
+		else if timer < TMAX
+			points = (((5*timer)/TMAX) + 1);
+		end if statement
+		//12. Add points to score.
+		amber_score += points;
+		points = 0;
+		
+		//11. Compare the slide switches pair numerical values (0, 1, or 2) to the random color code
+		//values and display on SecureCRT the current 3-character guess as either 0, R, or G for
+		//each color or the digits 0, 1 or 2. Also display the number of correct colors, the number of
+		//correct positions and the total points scored so far.
+		FUNCTION_B // Function for calculating number of correct colors
+		FUNCTION_C // Function for calculating number of correct spots
+		
+		FUNCTION_Da // Formatted Print function and buzzer function for AMBER; reads in Guess_Array and amber_score
+		//14. If no complete match is found repeat back to step 6.
+	  end while loop
+	  
+	  //16. Change player LED to Green, and after waiting for the pushbutton, repeat back to step 5.
+	  Turn GreenLED on
+	  print blank line
+	  print "Green Player Turn\n"
+	  //5. Generate 3 random values from 0 to 2 for BiLED pattern.
+	  set Mastermind_Array = [7,7,7];  //reset it
+	  GENERATE_MASTERMIND_ARRAY(mastermind_array);
+	  //6. Repeat steps 7 to 15 until a match is found.
+	  while FUNCTION_C does not return a 3 (as in while the sequence hasn't been guessed)
+		//7. Start timed window for T ms and wait for pushbuttons to be pressed. Stop the clock if
+		//TMAX is exceeded to avoid timing errors due to overflow.
+		reset timer.
+		//8. While waiting for pushbutton read 6 slide switches and activate corresponding BiLEDs.
+		while pushbutton not pressed or time has not exceeded TMAX (calculate by saying TMAX >= timer)
+			FUNCTION_A
+		end while loop
+		//9. When the “guess” pushbutton is pressed capture the numerical value of the 3 pairs of
+		//slide switches (0, 1, or 2 for each pair).
+		FUNCTION_G // this reads in Guess_Array and sets the values so we can check
+		
+		//10. If TMAX was reached set points to 6, otherwise set points to 5T(ms)/TMAX(ms) + 1 (integer divide and ignore fraction)
+		if timer >= TMAX
+			points = 6;
+		else if timer < TMAX
+			points = (((5*timer)/TMAX) + 1);
+		end if statement
+		//12. Add points to score.
+		green_score += points;
+		points = 0;
+		
+		//11. Compare the slide switches pair numerical values (0, 1, or 2) to the random color code
+		//values and display on SecureCRT the current 3-character guess as either 0, R, or G for
+		//each color or the digits 0, 1 or 2. Also display the number of correct colors, the number of
+		//correct positions and the total points scored so far.
+		FUNCTION_B // Function for calculating number of correct colors
+		FUNCTION_C // Function for calculating number of correct spots
+		
+		FUNCTION_Db // Formatted Print function and buzzer function for GREEN; reads in Guess_Array and green_score
+		//14. If no complete match is found repeat back to step 6.
+	  end while loop
 
-
+	  //Game end
+	  print out blank line
+	  print out "Amber Points = " + amber_score + ", Green Points = " + green_score + ",\n"
+	  //17. If second turn is done then calculate total score and declare a winner.
+	  if green_score > amber_score
+		print out "Winner is Amber!"
+	  else if amber_score > green_score
+		print out "Winner is Green!"
+	  else if amber_score == green_score
+		print out "It's a tie. FIGHT TO THE DEATH!"
+	  end if statements
+	  //18. Wait for the pushbutton to be pressed before starting a new game (step 1).
+	  while pushbutton not pressed; // stall here until it is pressed again.
+	end while loop
 End main function
 
 
-
-
-/* The following is actually totally useless
 //------------------------------------------------
-FUNCTION_A - Function for creating sequences
-  // these repeating lines of code could honestly be another function
-  // but for now I'm just going to brute force things
-  If the first LED is Off
-    store Array[0] = '0'
-  Else if the first LED is Red
-    store Array[0] = 'R'
-  Else if the first LED is Green
-    store Array[0] = 'G'
-  End if statement
+GENERATE_MASTERMIND_ARRAY(Mastermind_Array)
+{
+  Mastermind_Array[0] = random integer between 0,1,2
+  Mastermind_Array[1] = random integer between 0,1,2
+  Mastermind_Array[2] = random integer between 0,1,2
+  return Mastermind_Array;
+}
 
-  If the second LED is Off
-    store Array[1] = '0'
-  Else if the second LED is Red
-    store Array[1] = 'R'
-  Else if the second LED is Green
-    store Array[1] = 'G'
-  End if statement
-
-  If the third LED is Off
-    store Array[2] = '0'
-  Else if the third LED is Red
-    store Array[2] = 'R'
-  Else if the third LED is Green
-    store Array[2] = 'G'
-  End if statement
-
-  return Array
-End function*/
+//------------------------------------------------
+FUNCTION_A - Function for changing the colors of the BILEDS prior to guessing
+	// we're just going to hard code all of this
+	// so there are 3 BILEDs, and each one comes with 2 switches
+	if SWITCH01 is off, turn BILED0 off
+	if SWITCH00 is off and SWITCH01 is on, turn BILED0 to RED
+	if SWITCH00 and SWITCH01 are on, turn BILED0 to GREEN
+	
+	if SWITCH11 is off, turn BILED1 off
+	if SWITCH10 is off and SWITCH11 is on, turn BILED1 to RED
+	if SWITCH10 and SWITCH11 are on, turn BILED1 to GREEN
+	
+	if SWITCH21 is off, turn BILED2 off
+	if SWITCH20 is off and SWITCH21 is on, turn BILED2 to RED
+	if SWITCH20 and SWITCH21 are on, turn BILED2 to GREEN
+End function
 
 //------------------------------------------------
 FUNCTION_B - Function for calculating number of correct colors
@@ -80,7 +162,7 @@ FUNCTION_B - Function for calculating number of correct colors
   For loop that iterates through the Guess_Array
     If Guess_Array[i] is in the Mastermind_Array
       add one to the number_of_correct_colors
-      replace that element of Mastermind_Array with a ? or some other null value
+      replace that element of Mastermind_Array with a 7
   End for loop
   return number_of_correct_colors
 End function
@@ -96,7 +178,7 @@ FUNCTION_C - Function for calculating number of correct spots
 End function
 
 //------------------------------------------------
-FUNCTION_D - Formatted Print function for AMBER; reads in Guess_Array and Total_Score
+FUNCTION_Da - Formatted Print function for AMBER; reads in Guess_Array and amber_score
   for unsigned int i to the size of Guess_Array
     print out Guess_Array[i]
   end for loop
@@ -105,12 +187,162 @@ FUNCTION_D - Formatted Print function for AMBER; reads in Guess_Array and Total_
   print out another tab
   print out FUNCTION_C for Guess_Array
   print out another tab
-  print out the Total Score
+  print out amber_score
+  if FUNCTION_B returns a 0
+	//13. If no color matches are found sound the buzzer (5000ms).
+	FUNCTION_E // Function that plays buzzer once, to happen when no color matches are found
+  end if statement
   if FUNCTION_C returns a 3
     print out tab
     print out "(Match!)"
     print out new line
-    print out [Name] + " Points = " and Points_Score.
+    print out "Amber Points = " and amber_score
+	//15. If a perfect match is found display score for the turn & sound 5 very short buzzer blasts.
+	FUNCTION_F // Function that plays when the sequence has been correctly guessed
   end if statement
   print out new line
 End function
+
+//------------------------------------------------
+FUNCTION_Db - Formatted Print function for GREEN; reads in Guess_Array and green_score
+  for unsigned int i to the size of Guess_Array
+    print out Guess_Array[i]
+  end for loop
+  print out a tab
+  print out FUNCTION_B for Guess_Array
+  print out another tab
+  print out FUNCTION_C for Guess_Array
+  print out another tab
+  print out green_score
+  if FUNCTION_B returns a 0
+	//13. If no color matches are found sound the buzzer (5000ms).
+	FUNCTION_E // Function that plays buzzer once, to happen when no color matches are found
+  end if statement
+  if FUNCTION_C returns a 3
+    print out tab
+    print out "(Match!)"
+    print out new line
+    print out "Greeb Points = " and green_score
+	//15. If a perfect match is found display score for the turn & sound 5 very short buzzer blasts.
+	FUNCTION_F // Function that plays when the sequence has been correctly guessed
+  end if statement
+  print out new line
+End function
+
+//------------------------------------------------
+FUNCTION_E - Function that plays buzzer once, to happen when no color matches are found
+	//13. If no color matches are found sound the buzzer (5000ms).
+	Counts = 0;
+	while the counts does not exceed 5000ms (5 seconds)
+		turn buzzer on
+	end while loop
+	turn buzzer off
+End Function
+
+//------------------------------------------------
+FUNCTION_F - Function that plays when the sequence has been correctly guessed
+	//15. If a perfect match is found display score for the turn & sound 5 very short buzzer blasts.
+	counts = 0;
+	while counts is between 0 and 500ms
+		turn buzzer on
+	end while
+	while counts is between 500ms and 1000ms
+		turn buzzer off
+	end while
+	while counts is between 1000ms and 1500ms
+		turn buzzer on
+	end while
+	while counts is between 1500ms and 2000ms
+		turn buzzer off
+	end while
+	while counts is between 2000 and 2500ms
+		turn buzzer on
+	end while
+	while counts is between 2500ms and 3000ms
+		turn buzzer off
+	end while
+	while counts is between 3000 and 3500ms
+		turn buzzer on
+	end while
+	while counts is between 3500ms and 4000ms
+		turn buzzer off
+	end while
+	while counts is between 4000 and 4500ms
+		turn buzzer on
+	end while
+	while counts is between 4500ms and 5000ms
+		turn buzzer off
+	end while
+	turn buzzer off //once more for good measure
+End Function
+
+//------------------------------------------------
+FUNCTION_G - Function that creates the Guess_Array based on the states of the LEDS
+	if BILED0 is off
+		store Guess_Array[0] = 0;
+	else if BILED0 is red
+		store Guess_Array[0] = 1;
+	else if BILED0 is green
+		store Guess_Array[0] = 2;
+	end if statement
+	
+	if BILED1 is off
+		store Guess_Array[1] = 0;
+	else if BILED1 is red
+		store Guess_Array[1] = 1;
+	else if BILED1 is green
+		store Guess_Array[1] = 2;
+	end if statement
+	
+	if BILED2 is off
+		store Guess_Array[2] = 0;
+	else if BILED2 is red
+		store Guess_Array[2] = 1;
+	else if BILED2 is green
+		store Guess_Array[2] = 2;
+	end if statement
+End Function
+
+
+
+
+
+
+/* This program demonstrates how to perform an A/D Conversion */
+main()
+{
+	unsigned char result;
+	Sys_Init(); // Initialize the C8051 board
+	putchar(' '); // Required for output to terminal
+	Port_Init(); // Configure P1.0 for analog input
+	ADC_Init(); // Initialize A/D conversion
+	while (1)
+	{
+		result = read_AD_input(0); // Read the A/D value on P1.0
+	}
+}
+
+void Port_Init(void)
+{
+	P1MDIN &= ~0x01; // Set P1.0 for analog input
+	P1MDOUT &= ~0x01; // Set P1.0 to open drain
+	P1 |= 0x01; // Send logic 1 to input pin P1.0
+}
+
+void ADC_Init(void)
+{
+	REF0CN = 0x03; // Set Vref to use internal reference voltage (2.4 V)
+	ADC1CN = 0x80; // Enable A/D converter (ADC1)
+	ADC1CF |= 0x01; // Set A/D converter gain to 1
+}
+
+unsigned char read_AD_input(unsigned char n)
+{
+	AMX1SL = n; // Set P1.n as the analog input for ADC1
+	ADC1CN = ADC1CN & ~0x20; // Clear the “Conversion Completed” flag
+	ADC1CN = ADC1CN | 0x10; // Initiate A/D conversion
+
+	while ((ADC1CN & 0x20) == 0x00);// Wait for conversion to complete
+
+	return ADC1; // Return digital value in ADC1 register
+}

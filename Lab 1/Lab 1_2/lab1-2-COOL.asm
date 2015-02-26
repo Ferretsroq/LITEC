@@ -1,7 +1,7 @@
 ;--------------------------------------------------------
 ; File Created by SDCC : free open source ANSI-C Compiler
 ; Version 3.4.0 #8981 (Apr  5 2014) (MINGW32)
-; This file was generated Tue Feb 24 12:09:53 2015
+; This file was generated Tue Feb 24 12:23:39 2015
 ;--------------------------------------------------------
 	.module lab1_2_COOL
 	.optsdcc -mmcs51 --model-small
@@ -1297,7 +1297,7 @@ _main:
 	C$lab1_2_COOL.c$71$3$51 ==.
 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:71: TR0 = 1;     // Timer 0 Enabled
 	setb	_TR0
-	C$lab1_2_COOL.c$72$9$71 ==.
+	C$lab1_2_COOL.c$72$3$51 ==.
 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:72: while(turns <= 10)
 00174$:
 	mov	a,_turns
@@ -1662,7 +1662,57 @@ _main:
 	subb	a,(_Counts + 1)
 	jnc	00152$
 	C$lab1_2_COOL.c$174$9$71 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:174: printf("\rYou pressed Button 0 and Button 1\n");
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:174: correctAnswerCount++; // Log the correct answer
+	inc	_correctAnswerCount
+	C$lab1_2_COOL.c$175$9$71 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:175: BILED0 = 1;			  // Make BILED green
+	setb	_BILED0
+	C$lab1_2_COOL.c$176$9$71 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:176: BILED1 = 0;	
+	clr	_BILED1
+	C$lab1_2_COOL.c$177$9$71 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:177: flag = 1;
+	mov	_flag,#0x01
+	sjmp	00161$
+00156$:
+	C$lab1_2_COOL.c$181$9$72 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:181: BILED0 = 0;			// Make BILED red
+	clr	_BILED0
+	C$lab1_2_COOL.c$182$9$72 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:182: BILED1 = 1;
+	setb	_BILED1
+	sjmp	00161$
+00171$:
+	C$lab1_2_COOL.c$187$5$53 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:187: turns++;
+	inc	_turns
+	C$lab1_2_COOL.c$188$5$53 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:188: previousRNG = RNG;
+	mov	_previousRNG,_RNG
+	C$lab1_2_COOL.c$189$5$53 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:189: flag = 0;
+	mov	_flag,#0x00
+	ljmp	00174$
+00176$:
+	C$lab1_2_COOL.c$193$3$51 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:193: Seconds = 0;
+	mov	_Seconds,#0x00
+	C$lab1_2_COOL.c$194$3$51 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:194: while (Seconds == 0)
+00177$:
+	mov	a,_Seconds
+	jnz	00179$
+	C$lab1_2_COOL.c$196$4$73 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:196: Buzzer = 0; // Start buzzer
+	clr	_Buzzer
+	sjmp	00177$
+00179$:
+	C$lab1_2_COOL.c$198$3$51 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:198: printf("\rFINAL RESULTS: %u", correctAnswerCount);
+	mov	r6,_correctAnswerCount
+	mov	r7,#0x00
+	push	ar6
+	push	ar7
 	mov	a,#___str_1
 	push	acc
 	mov	a,#(___str_1 >> 8)
@@ -1670,61 +1720,11 @@ _main:
 	mov	a,#0x80
 	push	acc
 	lcall	_printf
-	dec	sp
-	dec	sp
-	dec	sp
-	C$lab1_2_COOL.c$175$9$71 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:175: correctAnswerCount++; // Log the correct answer
-	inc	_correctAnswerCount
-	C$lab1_2_COOL.c$176$9$71 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:176: BILED0 = 1;			  // Make BILED green
-	setb	_BILED0
-	C$lab1_2_COOL.c$177$9$71 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:177: BILED1 = 0;	
-	clr	_BILED1
-	C$lab1_2_COOL.c$178$9$71 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:178: flag = 1;
-	mov	_flag,#0x01
-	sjmp	00161$
-00156$:
-	C$lab1_2_COOL.c$182$9$72 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:182: BILED0 = 0;			// Make BILED red
-	clr	_BILED0
-	C$lab1_2_COOL.c$183$9$72 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:183: BILED1 = 1;
-	setb	_BILED1
-	sjmp	00161$
-00171$:
-	C$lab1_2_COOL.c$188$5$53 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:188: turns++;
-	inc	_turns
-	C$lab1_2_COOL.c$189$5$53 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:189: previousRNG = RNG;
-	mov	_previousRNG,_RNG
-	C$lab1_2_COOL.c$190$5$53 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:190: flag = 0;
-	mov	_flag,#0x00
-	ljmp	00174$
-00176$:
-	C$lab1_2_COOL.c$194$3$51 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:194: Seconds = 0;
-	mov	_Seconds,#0x00
-	C$lab1_2_COOL.c$195$3$51 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:195: while (Seconds == 0)
-00177$:
-	mov	a,_Seconds
-	jnz	00179$
-	C$lab1_2_COOL.c$197$4$73 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:197: Buzzer = 0; // Start buzzer
-	clr	_Buzzer
-	sjmp	00177$
-00179$:
+	mov	a,sp
+	add	a,#0xfb
+	mov	sp,a
 	C$lab1_2_COOL.c$199$3$51 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:199: printf("\rFINAL RESULTS: %u", correctAnswerCount);
-	mov	r6,_correctAnswerCount
-	mov	r7,#0x00
-	push	ar6
-	push	ar7
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:199: printf(" out of 10\n");
 	mov	a,#___str_2
 	push	acc
 	mov	a,#(___str_2 >> 8)
@@ -1732,153 +1732,141 @@ _main:
 	mov	a,#0x80
 	push	acc
 	lcall	_printf
-	mov	a,sp
-	add	a,#0xfb
-	mov	sp,a
+	dec	sp
+	dec	sp
+	dec	sp
 	C$lab1_2_COOL.c$200$3$51 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:200: printf(" out of 10\n");
-	mov	a,#___str_3
-	push	acc
-	mov	a,#(___str_3 >> 8)
-	push	acc
-	mov	a,#0x80
-	push	acc
-	lcall	_printf
-	dec	sp
-	dec	sp
-	dec	sp
-	C$lab1_2_COOL.c$201$3$51 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:201: programflag = 1;
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:200: programflag = 1;
 	mov	_programflag,#0x01
 00181$:
-	C$lab1_2_COOL.c$203$2$50 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:203: Buzzer = 1; // Stop buzzer
+	C$lab1_2_COOL.c$202$2$50 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:202: Buzzer = 1; // Stop buzzer
 	setb	_Buzzer
 	ljmp	00183$
-	C$lab1_2_COOL.c$221$1$49 ==.
+	C$lab1_2_COOL.c$220$1$49 ==.
 	XG$main$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'Port_Init'
 ;------------------------------------------------------------
 	G$Port_Init$0$0 ==.
-	C$lab1_2_COOL.c$224$1$49 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:224: void Port_Init(void)
+	C$lab1_2_COOL.c$223$1$49 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:223: void Port_Init(void)
 ;	-----------------------------------------
 ;	 function Port_Init
 ;	-----------------------------------------
 _Port_Init:
-	C$lab1_2_COOL.c$227$1$75 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:227: P3MDOUT |= 0xF8;// set Port 3 output pins to push-pull mode 
+	C$lab1_2_COOL.c$226$1$75 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:226: P3MDOUT |= 0xF8;// set Port 3 output pins to push-pull mode 
 	orl	_P3MDOUT,#0xF8
-	C$lab1_2_COOL.c$228$1$75 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:228: P3MDOUT &= 0xFC; // set Port 3 input pins to open drain mode 
+	C$lab1_2_COOL.c$227$1$75 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:227: P3MDOUT &= 0xFC; // set Port 3 input pins to open drain mode 
 	anl	_P3MDOUT,#0xFC
-	C$lab1_2_COOL.c$229$1$75 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:229: P3 |= ~0xFC; // set Port 3 input pins to high impedance state 
+	C$lab1_2_COOL.c$228$1$75 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:228: P3 |= ~0xFC; // set Port 3 input pins to high impedance state 
 	mov	r7,_P3
 	mov	a,#0x03
 	orl	a,r7
 	mov	_P3,a
-	C$lab1_2_COOL.c$231$1$75 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:231: P2MDOUT &= 0xFE; // set Port 2 input pins to push-pull mode
+	C$lab1_2_COOL.c$230$1$75 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:230: P2MDOUT &= 0xFE; // set Port 2 input pins to push-pull mode
 	anl	_P2MDOUT,#0xFE
-	C$lab1_2_COOL.c$232$1$75 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:232: P2 |= ~0xFE; // set Port 2 input pins to high impedance state
+	C$lab1_2_COOL.c$231$1$75 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:231: P2 |= ~0xFE; // set Port 2 input pins to high impedance state
 	mov	r7,_P2
 	mov	a,#0x01
 	orl	a,r7
 	mov	_P2,a
-	C$lab1_2_COOL.c$234$1$75 ==.
+	C$lab1_2_COOL.c$233$1$75 ==.
 	XG$Port_Init$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'Interrupt_Init'
 ;------------------------------------------------------------
 	G$Interrupt_Init$0$0 ==.
-	C$lab1_2_COOL.c$236$1$75 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:236: void Interrupt_Init(void)
+	C$lab1_2_COOL.c$235$1$75 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:235: void Interrupt_Init(void)
 ;	-----------------------------------------
 ;	 function Interrupt_Init
 ;	-----------------------------------------
 _Interrupt_Init:
-	C$lab1_2_COOL.c$238$1$77 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:238: ET0 = 1;      // enable Timer0 Interrupt request
+	C$lab1_2_COOL.c$237$1$77 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:237: ET0 = 1;      // enable Timer0 Interrupt request
 	setb	_ET0
-	C$lab1_2_COOL.c$239$1$77 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:239: EA = 1;       // enable global interrupts
+	C$lab1_2_COOL.c$238$1$77 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:238: EA = 1;       // enable global interrupts
 	setb	_EA
-	C$lab1_2_COOL.c$240$1$77 ==.
+	C$lab1_2_COOL.c$239$1$77 ==.
 	XG$Interrupt_Init$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'Timer_Init'
 ;------------------------------------------------------------
 	G$Timer_Init$0$0 ==.
-	C$lab1_2_COOL.c$242$1$77 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:242: void Timer_Init(void)
+	C$lab1_2_COOL.c$241$1$77 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:241: void Timer_Init(void)
 ;	-----------------------------------------
 ;	 function Timer_Init
 ;	-----------------------------------------
 _Timer_Init:
-	C$lab1_2_COOL.c$245$1$79 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:245: CKCON |= 0x08;  // Timer0 uses SYSCLK as source
+	C$lab1_2_COOL.c$244$1$79 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:244: CKCON |= 0x08;  // Timer0 uses SYSCLK as source
 	orl	_CKCON,#0x08
-	C$lab1_2_COOL.c$246$1$79 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:246: TMOD &= 0xF0;   // clear the 4 least significant bits
+	C$lab1_2_COOL.c$245$1$79 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:245: TMOD &= 0xF0;   // clear the 4 least significant bits
 	anl	_TMOD,#0xF0
-	C$lab1_2_COOL.c$247$1$79 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:247: TMOD |= 0x01;   // Timer0 in mode 1
+	C$lab1_2_COOL.c$246$1$79 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:246: TMOD |= 0x01;   // Timer0 in mode 1
 	orl	_TMOD,#0x01
-	C$lab1_2_COOL.c$248$1$79 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:248: TR0 = 0;           // Stop Timer0
+	C$lab1_2_COOL.c$247$1$79 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:247: TR0 = 0;           // Stop Timer0
 	clr	_TR0
-	C$lab1_2_COOL.c$249$1$79 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:249: TL0 = 0;           // Clear low byte of register T0
+	C$lab1_2_COOL.c$248$1$79 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:248: TL0 = 0;           // Clear low byte of register T0
 	mov	_TL0,#0x00
-	C$lab1_2_COOL.c$250$1$79 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:250: TH0 = 0;           // Clear high byte of register T0
+	C$lab1_2_COOL.c$249$1$79 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:249: TH0 = 0;           // Clear high byte of register T0
 	mov	_TH0,#0x00
-	C$lab1_2_COOL.c$252$1$79 ==.
+	C$lab1_2_COOL.c$251$1$79 ==.
 	XG$Timer_Init$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'Timer0_ISR'
 ;------------------------------------------------------------
 	G$Timer0_ISR$0$0 ==.
-	C$lab1_2_COOL.c$256$1$79 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:256: void Timer0_ISR(void) __interrupt 1
+	C$lab1_2_COOL.c$255$1$79 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:255: void Timer0_ISR(void) __interrupt 1
 ;	-----------------------------------------
 ;	 function Timer0_ISR
 ;	-----------------------------------------
 _Timer0_ISR:
 	push	acc
 	push	psw
-	C$lab1_2_COOL.c$258$1$81 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:258: Counts++;
+	C$lab1_2_COOL.c$257$1$81 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:257: Counts++;
 	inc	_Counts
 	clr	a
 	cjne	a,_Counts,00108$
 	inc	(_Counts + 1)
 00108$:
-	C$lab1_2_COOL.c$259$1$81 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:259: if(Counts == 337)
+	C$lab1_2_COOL.c$258$1$81 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:258: if(Counts == 337)
 	mov	a,#0x51
 	cjne	a,_Counts,00103$
 	mov	a,#0x01
 	cjne	a,(_Counts + 1),00103$
-	C$lab1_2_COOL.c$261$2$82 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:261: Seconds ++;
+	C$lab1_2_COOL.c$260$2$82 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:260: Seconds ++;
 	inc	_Seconds
-	C$lab1_2_COOL.c$262$2$82 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:262: Counts = 0;
+	C$lab1_2_COOL.c$261$2$82 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:261: Counts = 0;
 	clr	a
 	mov	_Counts,a
 	mov	(_Counts + 1),a
 00103$:
 	pop	psw
 	pop	acc
-	C$lab1_2_COOL.c$264$1$81 ==.
+	C$lab1_2_COOL.c$263$1$81 ==.
 	XG$Timer0_ISR$0$0 ==.
 	reti
 ;	eliminated unneeded mov psw,# (no regs used in bank)
@@ -1889,92 +1877,92 @@ _Timer0_ISR:
 ;Allocation info for local variables in function 'random'
 ;------------------------------------------------------------
 	G$random$0$0 ==.
-	C$lab1_2_COOL.c$273$1$81 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:273: unsigned char random(void)
+	C$lab1_2_COOL.c$272$1$81 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:272: unsigned char random(void)
 ;	-----------------------------------------
 ;	 function random
 ;	-----------------------------------------
 _random:
-	C$lab1_2_COOL.c$275$1$84 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:275: return (rand()%3);  // rand returns a random number between 0 and 32767.
+	C$lab1_2_COOL.c$274$1$84 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:274: return (rand()%3);  // rand returns a random number between 0 and 32767.
 	lcall	_rand
 	mov	__modsint_PARM_2,#0x03
 	mov	(__modsint_PARM_2 + 1),#0x00
 	lcall	__modsint
-	C$lab1_2_COOL.c$279$1$84 ==.
+	C$lab1_2_COOL.c$278$1$84 ==.
 	XG$random$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'Button0'
 ;------------------------------------------------------------
 	G$Button0$0$0 ==.
-	C$lab1_2_COOL.c$286$1$84 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:286: int Button0(void)
+	C$lab1_2_COOL.c$285$1$84 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:285: int Button0(void)
 ;	-----------------------------------------
 ;	 function Button0
 ;	-----------------------------------------
 _Button0:
-	C$lab1_2_COOL.c$288$1$86 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:288: if (!PB0)
+	C$lab1_2_COOL.c$287$1$86 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:287: if (!PB0)
 	jb	_PB0,00102$
-	C$lab1_2_COOL.c$290$2$87 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:290: return 1;
+	C$lab1_2_COOL.c$289$2$87 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:289: return 1;
 	mov	dptr,#0x0001
 	sjmp	00104$
 00102$:
-	C$lab1_2_COOL.c$292$1$86 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:292: else return 0;
+	C$lab1_2_COOL.c$291$1$86 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:291: else return 0;
 	mov	dptr,#0x0000
 00104$:
-	C$lab1_2_COOL.c$293$1$86 ==.
+	C$lab1_2_COOL.c$292$1$86 ==.
 	XG$Button0$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'Button1'
 ;------------------------------------------------------------
 	G$Button1$0$0 ==.
-	C$lab1_2_COOL.c$295$1$86 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:295: int Button1(void)
+	C$lab1_2_COOL.c$294$1$86 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:294: int Button1(void)
 ;	-----------------------------------------
 ;	 function Button1
 ;	-----------------------------------------
 _Button1:
-	C$lab1_2_COOL.c$297$1$89 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:297: if (!PB1)
+	C$lab1_2_COOL.c$296$1$89 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:296: if (!PB1)
 	jb	_PB1,00102$
-	C$lab1_2_COOL.c$299$2$90 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:299: return 1;
+	C$lab1_2_COOL.c$298$2$90 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:298: return 1;
 	mov	dptr,#0x0001
 	sjmp	00104$
 00102$:
-	C$lab1_2_COOL.c$301$1$89 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:301: else return 0;
+	C$lab1_2_COOL.c$300$1$89 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:300: else return 0;
 	mov	dptr,#0x0000
 00104$:
-	C$lab1_2_COOL.c$302$1$89 ==.
+	C$lab1_2_COOL.c$301$1$89 ==.
 	XG$Button1$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'Switch'
 ;------------------------------------------------------------
 	G$Switch$0$0 ==.
-	C$lab1_2_COOL.c$307$1$89 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:307: int Switch(void)
+	C$lab1_2_COOL.c$306$1$89 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:306: int Switch(void)
 ;	-----------------------------------------
 ;	 function Switch
 ;	-----------------------------------------
 _Switch:
-	C$lab1_2_COOL.c$309$1$92 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:309: if (!SS) return 1;
+	C$lab1_2_COOL.c$308$1$92 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:308: if (!SS) return 1;
 	jb	_SS,00102$
 	mov	dptr,#0x0001
 	sjmp	00104$
 00102$:
-	C$lab1_2_COOL.c$310$1$92 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:310: else return 0;
+	C$lab1_2_COOL.c$309$1$92 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 1\Lab 1_2\lab1-2-COOL.c:309: else return 0;
 	mov	dptr,#0x0000
 00104$:
-	C$lab1_2_COOL.c$311$1$92 ==.
+	C$lab1_2_COOL.c$310$1$92 ==.
 	XG$Switch$0$0 ==.
 	ret
 	.area CSEG    (CODE)
@@ -1988,16 +1976,10 @@ ___str_0:
 Flab1_2_COOL$__str_1$0$0 == .
 ___str_1:
 	.db 0x0D
-	.ascii "You pressed Button 0 and Button 1"
-	.db 0x0A
+	.ascii "FINAL RESULTS: %u"
 	.db 0x00
 Flab1_2_COOL$__str_2$0$0 == .
 ___str_2:
-	.db 0x0D
-	.ascii "FINAL RESULTS: %u"
-	.db 0x00
-Flab1_2_COOL$__str_3$0$0 == .
-___str_3:
 	.ascii " out of 10"
 	.db 0x0A
 	.db 0x00
