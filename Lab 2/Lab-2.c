@@ -116,9 +116,10 @@ main()
 			{
 				FUNCTION_A();
 			}
+			timer = Seconds;
 			//9. When the “guess” pushbutton is pressed capture the numerical value of the 3 pairs of
 			//slide switches (0, 1, or 2 for each pair).
-			-FUNCTION_G // this reads in Guess_Array and sets the values so we can check
+			FUNCTION_G(Guess_Array); // this creates Guess_Array
 			
 			//10. If TMAX was reached set points to 6, otherwise set points to 5T(ms)/TMAX(ms) + 1 (integer divide and ignore fraction)
 			if (timer >= TMAX)
@@ -131,62 +132,58 @@ main()
 			}
 			//12. Add points to score.
 			amber_score += points;
-			points = 0;
+			points = 0; // reset
 			
 			//11. Compare the slide switches pair numerical values (0, 1, or 2) to the random color code
 			//values and display on SecureCRT the current 3-character guess as either 0, R, or G for
 			//each color or the digits 0, 1 or 2. Also display the number of correct colors, the number of
 			//correct positions and the total points scored so far.
-			-FUNCTION_B // Function for calculating number of correct colors
-			-FUNCTION_C // Function for calculating number of correct spots
-			
-			FUNCTION_Da // Formatted Print function and buzzer function for AMBER; reads in Guess_Array and amber_score
+			FUNCTION_Da(Mastermind_Array, Guess_Array, amber_score); // Formatted Print function and buzzer function for AMBER; reads in Guess_Array and amber_score
 			//14. If no complete match is found repeat back to step 6.
-		end while loop
+		}
 		  
 		//16. Change player LED to Green, and after waiting for the pushbutton, repeat back to step 5.
-		Turn GreenLED on
-		print blank line
-		print "Green Player Turn\n"
-		//5. Generate 3 random values from 0 to 2 for BiLED pattern.
-		set Mastermind_Array = [7,7,7];  //reset it
-		GENERATE_MASTERMIND_ARRAY(mastermind_array);
+		GREEN = 0;													// 4. Light Green player LED.
+		printf("\n\rGreen Player Turn\n");							// Green's turn
+		
+		GENERATE_MASTERMIND_ARRAY(mastermind_array);				//5. Generate 3 random values from 0 to 2 for BiLED pattern.
 		//6. Repeat steps 7 to 15 until a match is found.
-		while FUNCTION_C does not return a 3 (as in while the sequence hasn't been guessed)
-		//7. Start timed window for T ms and wait for pushbuttons to be pressed. Stop the clock if
-		//TMAX is exceeded to avoid timing errors due to overflow.
-		reset timer.
-		//8. While waiting for pushbutton read 6 slide switches and activate corresponding BiLEDs.
-		while pushbutton not pressed or time has not exceeded TMAX (calculate by saying TMAX >= timer)
+		while (FUNCTION_C(Mastermind_Array, Guess_Array) != 3)		// while the sequence hasn't been guessed
 		{
-			FUNCTION_A
+			//7. Start timed window for T ms and wait for pushbuttons to be pressed. Stop the clock if
+			//TMAX is exceeded to avoid timing errors due to overflow.
+			Counts = 0; // reset timer
+			Seconds = 0;
+			//8. While waiting for pushbutton read 6 slide switches and activate corresponding BiLEDs.
+			while ((BUTTON) && (TMAX >= Seconds))
+			{
+				FUNCTION_A();
+			}
+			timer = Seconds;
+			//9. When the “guess” pushbutton is pressed capture the numerical value of the 3 pairs of
+			//slide switches (0, 1, or 2 for each pair).
+			FUNCTION_G(Guess_Array); // this creates Guess_Array
+			
+			//10. If TMAX was reached set points to 6, otherwise set points to 5T(ms)/TMAX(ms) + 1 (integer divide and ignore fraction)
+			if (timer >= TMAX)
+			{
+				points = 6;
+			}
+			else if (timer < TMAX)
+			{
+				points = (((5*timer)/TMAX) + 1);
+			}
+			//12. Add points to score.
+			green_score += points;
+			points = 0; // reset
+			
+			//11. Compare the slide switches pair numerical values (0, 1, or 2) to the random color code
+			//values and display on SecureCRT the current 3-character guess as either 0, R, or G for
+			//each color or the digits 0, 1 or 2. Also display the number of correct colors, the number of
+			//correct positions and the total points scored so far.
+			FUNCTION_Db(Mastermind_Array, Guess_Array, green_score); // Formatted Print function and buzzer function for GREEN; reads in Guess_Array and green_score
+			//14. If no complete match is found repeat back to step 6.
 		}
-		//9. When the “guess” pushbutton is pressed capture the numerical value of the 3 pairs of
-		//slide switches (0, 1, or 2 for each pair).
-		FUNCTION_G // this reads in Guess_Array and sets the values so we can check
-		
-		//10. If TMAX was reached set points to 6, otherwise set points to 5T(ms)/TMAX(ms) + 1 (integer divide and ignore fraction)
-		if (timer >= TMAX)
-		{
-			points = 6;
-		}
-		else if (timer < TMAX)
-		{
-			points = (((5*timer)/TMAX) + 1);
-		}
-		//12. Add points to score.
-		green_score += points;
-		points = 0;
-		
-		//11. Compare the slide switches pair numerical values (0, 1, or 2) to the random color code
-		//values and display on SecureCRT the current 3-character guess as either 0, R, or G for
-		//each color or the digits 0, 1 or 2. Also display the number of correct colors, the number of
-		//correct positions and the total points scored so far.
-		FUNCTION_B(Mastermind_Array, Guess_Array) // Function for calculating number of correct colors
-		FUNCTION_C(Mastermind_Array, Guess_Array) // Function for calculating number of correct spots
-		
-		FUNCTION_Db // Formatted Print function and buzzer function for GREEN; reads in Guess_Array and green_score
-		//14. If no complete match is found repeat back to step 6.
 	}
 
 	//Game end
