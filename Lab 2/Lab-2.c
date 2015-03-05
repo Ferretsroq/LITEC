@@ -42,27 +42,22 @@ unsigned char read_AD_input(unsigned char n);
 //-----------------------------------------------------------------------------
 // Global Variables
 //-----------------------------------------------------------------------------
-__sbit __at 0x84 BILEDA0;
-__sbit __at 0x85 BILEDA1;
-__sbit __at 0x82 SWITCHA0;
-__sbit __at 0x83 SWITCHA1;
-__sbit __at 0x80 BILEDB0;
-__sbit __at 0x81 BILEDB1;
-__sbit __at 0xA6 SWITCHB0;
-__sbit __at 0xA7 SWITCHB1;
-__sbit __at 0xA4 BILEDC0;
-__sbit __at 0xA5 BILEDC1;
-__sbit __at 0xA2 SWITCHC0;
-__sbit __at 0xA3 SWITCHC1;
-__sbit __at 0xB0 AMBER;
-__sbit __at 0xB1 GREEN;
-__sbit __at 0xB2 BUZZER;
-__sbit __at 0xB3 BUTTON;
-// we need something for the start button (See 428)
-// we need something for the buzzer
-// we need all the things for the other 2 LEDs
-
-// check line 430 to see if those inputs are correct
+__sbit __at 0xA4 BILEDA0;
+__sbit __at 0xA5 BILEDA1;
+__sbit __at 0xA3 SWITCHA0;
+__sbit __at 0xA2 SWITCHA1;
+__sbit __at 0xB4 BILEDB0;
+__sbit __at 0xB5 BILEDB1;
+__sbit __at 0xA7 SWITCHB0;
+__sbit __at 0xA6 SWITCHB1;
+__sbit __at 0x84 BILEDC0;
+__sbit __at 0x85 BILEDC1;
+__sbit __at 0x83 SWITCHC0;
+__sbit __at 0x82 SWITCHC1;
+__sbit __at 0xB1 AMBER;
+__sbit __at 0xB2 GREEN;
+__sbit __at 0x87 BUZZER;
+__sbit __at 0xB0 BUTTON;
 
 unsigned int Counts = 0;				// elements to be used when keeping track of time
 unsigned char Seconds = 0;
@@ -71,9 +66,13 @@ unsigned char green_score = 0;
 unsigned char points = 0;				// temporary points value obtained per round
 unsigned char result;					// potentiometer value reading
 int i = 0;
-int j = 0;
+unsigned char MA_0 = 0;
+unsigned char MA_1 = 0;
+unsigned char MA_2 = 0;
+unsigned char GA_0 = 0;
+unsigned char GA_1 = 0;
+unsigned char GA_2 = 0;
 int buzzer_delay = 0;
-int flag = 0;
 unsigned char number_of_correct_colors = 0;
 unsigned char number_of_correct_spots = 0;
 
@@ -112,6 +111,7 @@ main()
 		BILEDC1 = 0;
 		printf("\rSet the speed pot and press the pushbutton to begin LITEC Mastermind.\n");
 		while (!Start_Button()); // wait for button to be pressed before starting
+		while (Start_Button());
 		//2. Read the game speed pot voltage and calculate TMAX. Set T = TMAX and output value (ms).
 		result = read_AD_input(0); // Read the A/D value on P1.0
 		TMAX = ((18750 * result)+15000);
@@ -120,9 +120,15 @@ main()
 		//Game play
 		//3. Repeat the following steps for each player.
 		AMBER = 0;													// 4. Light Amber player LED.
-		printf("\n\rAmber Player Turn\n");							// Amber's turn
+		printf("\n\rAmber Player Turn\n\n");							// Amber's turn
 		
 		GENERATE_MASTERMIND_ARRAY(Mastermind_Array);				//5. Generate 3 random values from 0 to 2 for BiLED pattern.
+		for (i=0; i<3; i++)
+		{
+			printf("%d", Mastermind_Array[i]);
+		}
+		printf("\n");
+		printf("\r\tColor\tSpot\tScore\n");
 		//6. Repeat steps 7 to 15 until a match is found.
 		while (FUNCTION_C(Mastermind_Array, Guess_Array) != 3)		// while the sequence hasn't been guessed
 		{
@@ -135,6 +141,7 @@ main()
 			{
 				FUNCTION_A();
 			}
+			while (Start_Button());
 			timer = Seconds;
 			//9. When the “guess” pushbutton is pressed capture the numerical value of the 3 pairs of
 			//slide switches (0, 1, or 2 for each pair).
@@ -157,16 +164,28 @@ main()
 			//values and display on SecureCRT the current 3-character guess as either 0, R, or G for
 			//each color or the digits 0, 1 or 2. Also display the number of correct colors, the number of
 			//correct positions and the total points scored so far.
+			for (i=0; i<3; i++)
+			{
+				printf("%d", Mastermind_Array[i]);
+			}
+			printf("\n");
 			FUNCTION_Da(Mastermind_Array, Guess_Array, amber_score); // Formatted Print function and buzzer function for AMBER; reads in Guess_Array and amber_score
 			//14. If no complete match is found repeat back to step 6.
 		}
 		  
 		//16. Change player LED to Green, and after waiting for the pushbutton, repeat back to step 5.
+		AMBER = 1;
 		GREEN = 0;													// 4. Light Green player LED.
 		printf("\n\rGreen Player Turn\n");							// Green's turn
 		
 		GENERATE_MASTERMIND_ARRAY(Mastermind_Array);				//5. Generate 3 random values from 0 to 2 for BiLED pattern.
 		//6. Repeat steps 7 to 15 until a match is found.
+		for (i=0; i<3; i++)
+		{
+			printf("%d", Mastermind_Array[i]);
+		}
+		printf("\n");
+		printf("\r\tColor\tSpot\tScore\n");
 		while ((FUNCTION_C(Mastermind_Array, Guess_Array)) != 3)		// while the sequence hasn't been guessed
 		{
 			//7. Start timed window for T ms and wait for pushbuttons to be pressed. Stop the clock if
@@ -178,6 +197,7 @@ main()
 			{
 				FUNCTION_A();
 			}
+			while (Start_Button());
 			timer = Seconds;
 			//9. When the “guess” pushbutton is pressed capture the numerical value of the 3 pairs of
 			//slide switches (0, 1, or 2 for each pair).
@@ -206,7 +226,10 @@ main()
 
 		//Game end
 		printf("\n\rAmber Points = %u", amber_score);
-		printf(", Green Points = %u/n", green_score);
+		printf(", Green Points = %u", green_score);
+		printf("\n");
+		Seconds = 0;
+		while (Seconds < 1);
 		//17. If second turn is done then calculate total score and declare a winner.
 		if (green_score > amber_score)
 		{
@@ -222,6 +245,7 @@ main()
 		}
 		//18. Wait for the pushbutton to be pressed before starting a new game (step 1).
 		while (!Start_Button());		// stall here until it is pressed again.
+		while (Start_Button());
 	}
 }
 
@@ -245,7 +269,7 @@ void FUNCTION_A(void)
 		BILEDA0 = 0;
 		BILEDA1 = 0;
 	}
-	else if (Switch_A0() && (!Switch_A1())) // turn BILEDA to RED
+	else if ((!Switch_A0()) && Switch_A1()) // turn BILEDA to RED
 	{
 		BILEDA0 = 0;
 		BILEDA1 = 1;
@@ -261,7 +285,7 @@ void FUNCTION_A(void)
 		BILEDB0 = 0;
 		BILEDB1 = 0;
 	}
-	else if (Switch_B0() && (!Switch_B1())) // turn BILEDB to RED
+	else if ((!Switch_B0()) && Switch_B1()) // turn BILEDB to RED
 	{
 		BILEDB0 = 0;
 		BILEDB1 = 1;
@@ -277,12 +301,12 @@ void FUNCTION_A(void)
 		BILEDC0 = 0;
 		BILEDC1 = 0;
 	}
-	else if (Switch_C0() && (!Switch_C1())) // turn BILEDC to RED
+	else if ((!Switch_C0()) && (Switch_C1())) // turn BILEDC to RED
 	{
 		BILEDC0 = 0;
 		BILEDC1 = 1;
 	}
-	else if (Switch_C0() && Switch_C1()) // turn BILEDC to GREEN
+	else if ((Switch_C0()) && (Switch_C1())) // turn BILEDC to GREEN
 	{
 		BILEDC0 = 1;
 		BILEDC1 = 0;
@@ -293,27 +317,54 @@ void FUNCTION_A(void)
 // Function for calculating number of correct colors
 char FUNCTION_B(int Mastermind_Array[], int Guess_Array[])
 {
-	i = 0;
-	j = 0;
-	flag = 0;
+	MA_0 = 0; // separate counts for Mastermind_Array
+	MA_1 = 0;
+	MA_2 = 0;
+	GA_0 = 0; // separate counts for Guess_Array
+	GA_1 = 0;
+	GA_2 = 0;
 	number_of_correct_colors = 0;
-	// Temporarily duplicate the Mastermind_Array
-	for (i=0; i<3; i++)
+	i = 0;
+	for (int 1=0; i<3; i++)
 	{
-		MA_Copy[i] = Mastermind_Array[i];
-	}
-	for (i=0; i<3; i++) // iterate through Guess_Array
-	{
-		for (j=0; j<3; j++) // iterate through Mastermind_Array
+		// iterate through Mastermind_Array
+		if (Mastermind_Array[i] == 0)
 		{
-			if ((Guess_Array[i] == Mastermind_Array[j]) && (flag == 0))
-			{
-				number_of_correct_colors++;
-				Mastermind_Array[j] = 0;
-				flag = 1;
-			}
+			MA_0++;
 		}
-		flag = 0; // reset flag
+		else if (Mastermind_Array[i] == 1)
+		{
+			MA_1++;
+		}
+		else if (Mastermind_Array[i] == 2)
+		{
+			MA_2++;
+		}
+		// iterate through Guess_Array
+		if (Guess_Array[i] == 0)
+		{
+			GA_0++;
+		}
+		else if (Guess_Array[i] == 1)
+		{
+			GA_1++;
+		}
+		else if (Guess_Array[i] == 2)
+		{
+			GA_2++;
+		}
+	}
+	if (GA_0 >= MA_0)
+	{
+		colors += MA_0;
+	}
+	if (GA_1 >= MA_1)
+	{
+		colors += MA_1;
+	}
+	if (GA_2 >= MA_2)
+	{
+		colors += MA_2;
 	}
 	return number_of_correct_colors;
 }
@@ -350,14 +401,14 @@ void FUNCTION_Da(int Mastermind_Array[], int Guess_Array[], unsigned char amber_
 	if (FUNCTION_B(Mastermind_Array, Guess_Array) == 0)
 	{
 		//13. If no color matches are found sound the buzzer (5000ms).
-		FUNCTION_E(); // Function that plays buzzer once, to happen when no color matches are found
+		//FUNCTION_E(); // Function that plays buzzer once, to happen when no color matches are found
 	}
 	if (FUNCTION_C(Mastermind_Array, Guess_Array) == 3)
 	{
 		printf("\t(Match!)\n");
 		printf("Amber Points = %u\n", amber_score);
 		//15. If a perfect match is found display score for the turn & sound 5 very short buzzer blasts.
-		FUNCTION_F(); // Function that plays when the sequence has been correctly guessed
+		//FUNCTION_F(); // Function that plays when the sequence has been correctly guessed
 	}
 	printf("\n");
 }
@@ -378,14 +429,14 @@ void FUNCTION_Db(int Mastermind_Array[], int Guess_Array[], unsigned char green_
 	if ((FUNCTION_B(Mastermind_Array, Guess_Array)) == 0)
 	{
 		//13. If no color matches are found sound the buzzer (5000ms).
-		FUNCTION_E(); // Function that plays buzzer once, to happen when no color matches are found
+		//FUNCTION_E(); // Function that plays buzzer once, to happen when no color matches are found
 	}
 	if ((FUNCTION_C(Mastermind_Array, Guess_Array)) == 3)
 	{
 		printf("\t(Match!)\n");
 		printf("Green Points = %u\n", green_score);
 		//15. If a perfect match is found display score for the turn & sound 5 very short buzzer blasts.
-		FUNCTION_F(); // Function that plays when the sequence has been correctly guessed
+		//FUNCTION_F(); // Function that plays when the sequence has been correctly guessed
 	}
 	printf("\n");
 }
@@ -482,13 +533,13 @@ void Port_Init(void)
 	P1MDIN &= ~0x01;	// Set P1.0 for analog input
 	P1MDOUT &= ~0x01;	// Set P1.0 to open drain
 	P1 |= 0x01;			// Send logic 1 to input pin P1.0
-	P0MDOUT |= 0xB3;	// Set output pins to push-pull
+	P0MDOUT |= 0xB0;	// Set output pins to push-pull
 	P0MDOUT &= 0xF3;	// Set input pins to open-drain
 	P0 |= ~0xF3;		// Set input pins to high impedance
-	P2MDOUT |= 0x30;	// Set output pins to push-pull
-	P2MDOUT &= 0x33;	// Set input pins to open-drain
-	P2 |= ~0x33;		// Set input pins to high impedance
-	P3MDOUT |= 0x06;	// Set output pins to push-pull
+	P2MDOUT |= 0x10;	// Set output pins to push-pull
+	P2MDOUT &= 0x13;	// Set input pins to open-drain
+	P2 |= ~0x13;		// Set input pins to high impedance
+	P3MDOUT |= 0x36;	// Set output pins to push-pull
 	P3MDOUT &= 0xFE;	// Set input pins to open-drain
 	P3 |= ~0xFE;		// Set input pins to high impedance
 }
@@ -503,7 +554,7 @@ void ADC_Init(void)
 unsigned char read_AD_input(unsigned char n)
 {
 	AMX1SL = n; // Set P1.n as the analog input for ADC1
-	ADC1CN = ADC1CN & ~0x20; // Clear the “Conversion Completed” flag
+	ADC1CN = ADC1CN & ~0x20; // Clear the "Conversion Completed"� flag
 	ADC1CN = ADC1CN | 0x10; // Initiate A/D conversion
 
 	while ((ADC1CN & 0x20) == 0x00);// Wait for conversion to complete
@@ -566,7 +617,6 @@ int Start_Button(void)
 {
 	if (!BUTTON)
 	{
-		//printf("\rYou pushed the start button.\n");
 		return 1;
 	}
 	else
