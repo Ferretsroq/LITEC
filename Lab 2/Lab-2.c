@@ -102,6 +102,8 @@ main()
 		//  for the pushbutton to be pressed.
 		AMBER = 1; // AmberLED is off
 		GREEN = 1; // GreenLED is off
+		amber_points = 0;
+		green_points = 0;
 		// turn off all other LEDS
 		BILEDA0 = 0;
 		BILEDA1 = 0;
@@ -124,11 +126,11 @@ main()
 		printf("\n\rAmber Player Turn\n\n");							// Amber's turn
 		
 		GENERATE_MASTERMIND_ARRAY(Mastermind_Array);				//5. Generate 3 random values from 0 to 2 for BiLED pattern.
-		printf("\rCorrect Answer --- ");
+/*		printf("\rCorrect Answer --- ");
 		for (i=0; i<3; i++)
 		{
 			printf("%d", Mastermind_Array[i]);
-		}
+		}*/
 		printf("\n");
 		printf("\r\tColor\tSpot\tScore\n");
 		//6. Repeat steps 7 to 15 until a match is found.
@@ -181,11 +183,11 @@ main()
 		printf("\n\rGreen Player Turn\n");							// Green's turn
 		
 		GENERATE_MASTERMIND_ARRAY(Mastermind_Array);				//5. Generate 3 random values from 0 to 2 for BiLED pattern.
-		printf("\rCorrect Answer --- ");
+/*		printf("\rCorrect Answer --- ");
 		for (i=0; i<3; i++)
 		{
 			printf("%d", Mastermind_Array[i]);
-		}
+		}*/
 		printf("\n");
 		printf("\r\tColor\tSpot\tScore\n");
 		while ((FUNCTION_C(Mastermind_Array, Guess_Array)) != 3)		// while the sequence hasn't been guessed
