@@ -114,15 +114,17 @@ main()
 		while (Start_Button());
 		//2. Read the game speed pot voltage and calculate TMAX. Set T = TMAX and output value (ms).
 		result = read_AD_input(0); // Read the A/D value on P1.0
-		TMAX = ((18750 * result)+15000);
-		printf("\rStarting Period: %u\n", TMAX);
-		
+		TMAX = (((3/17) * result)+15);
+		printf("\rStarting Period: %u", TMAX);
+		printf(" seconds\n");
+
 		//Game play
 		//3. Repeat the following steps for each player.
 		AMBER = 0;													// 4. Light Amber player LED.
 		printf("\n\rAmber Player Turn\n\n");							// Amber's turn
 		
 		GENERATE_MASTERMIND_ARRAY(Mastermind_Array);				//5. Generate 3 random values from 0 to 2 for BiLED pattern.
+		printf("\rCorrect Answer --- ");
 		for (i=0; i<3; i++)
 		{
 			printf("%d", Mastermind_Array[i]);
@@ -137,13 +139,18 @@ main()
 			Counts = 0; // reset timer
 			Seconds = 0;
 			//8. While waiting for pushbutton read 6 slide switches and activate corresponding BiLEDs.
-			while ((!Start_Button()) && (TMAX >= Seconds))
+			TR0 = 0; // turn timer off
+			Counts = 0; // reset the timer
+			Seconds = 0;
+			TR0 = 1; // turn timer on
+			while (!Start_Button()) // && (TMAX >= Seconds))
 			{
 				FUNCTION_A();
 			}
+			TR0 = 0; // stop timer
 			while (Start_Button());
 			timer = Seconds;
-			//9. When the “guess” pushbutton is pressed capture the numerical value of the 3 pairs of
+			//9. When the guess� pushbutton is pressed capture the numerical value of the 3 pairs of
 			//slide switches (0, 1, or 2 for each pair).
 			FUNCTION_G(Guess_Array); // this creates Guess_Array
 			
@@ -164,11 +171,6 @@ main()
 			//values and display on SecureCRT the current 3-character guess as either 0, R, or G for
 			//each color or the digits 0, 1 or 2. Also display the number of correct colors, the number of
 			//correct positions and the total points scored so far.
-			for (i=0; i<3; i++)
-			{
-				printf("%d", Mastermind_Array[i]);
-			}
-			printf("\n");
 			FUNCTION_Da(Mastermind_Array, Guess_Array, amber_score); // Formatted Print function and buzzer function for AMBER; reads in Guess_Array and amber_score
 			//14. If no complete match is found repeat back to step 6.
 		}
@@ -179,7 +181,7 @@ main()
 		printf("\n\rGreen Player Turn\n");							// Green's turn
 		
 		GENERATE_MASTERMIND_ARRAY(Mastermind_Array);				//5. Generate 3 random values from 0 to 2 for BiLED pattern.
-		//6. Repeat steps 7 to 15 until a match is found.
+		printf("\rCorrect Answer --- ");
 		for (i=0; i<3; i++)
 		{
 			printf("%d", Mastermind_Array[i]);
@@ -190,16 +192,20 @@ main()
 		{
 			//7. Start timed window for T ms and wait for pushbuttons to be pressed. Stop the clock if
 			//TMAX is exceeded to avoid timing errors due to overflow.
-			Counts = 0; // reset timer
-			Seconds = 0;
 			//8. While waiting for pushbutton read 6 slide switches and activate corresponding BiLEDs.
-			while ((!Start_Button()) && (TMAX >= Seconds))
+			TR0 = 0; // turn timer off
+			Counts = 0; // reset the timer
+			Seconds = 0;
+			TR0 = 1; // turn timer on
+
+			while (!Start_Button())// && (TMAX >= Seconds))
 			{
 				FUNCTION_A();
 			}
+			TR0 = 0; // stop timer
 			while (Start_Button());
 			timer = Seconds;
-			//9. When the “guess” pushbutton is pressed capture the numerical value of the 3 pairs of
+			//9. When the guess� pushbutton is pressed capture the numerical value of the 3 pairs of
 			//slide switches (0, 1, or 2 for each pair).
 			FUNCTION_G(Guess_Array); // this creates Guess_Array
 			
@@ -228,8 +234,12 @@ main()
 		printf("\n\rAmber Points = %u", amber_score);
 		printf(", Green Points = %u", green_score);
 		printf("\n");
+		TR0 = 0; // turn timer off
+		Counts = 0;
 		Seconds = 0;
+		TR0 = 1; // turn timer on
 		while (Seconds < 1);
+		TR0 = 0; // turn timer off
 		//17. If second turn is done then calculate total score and declare a winner.
 		if (green_score > amber_score)
 		{
@@ -325,7 +335,7 @@ char FUNCTION_B(int Mastermind_Array[], int Guess_Array[])
 	GA_2 = 0;
 	number_of_correct_colors = 0;
 	i = 0;
-	for (int 1=0; i<3; i++)
+	for (i=0; i<3; i++)
 	{
 		// iterate through Mastermind_Array
 		if (Mastermind_Array[i] == 0)
@@ -356,15 +366,15 @@ char FUNCTION_B(int Mastermind_Array[], int Guess_Array[])
 	}
 	if (GA_0 >= MA_0)
 	{
-		colors += MA_0;
+		number_of_correct_colors += MA_0;
 	}
 	if (GA_1 >= MA_1)
 	{
-		colors += MA_1;
+		number_of_correct_colors += MA_1;
 	}
 	if (GA_2 >= MA_2)
 	{
-		colors += MA_2;
+		number_of_correct_colors += MA_2;
 	}
 	return number_of_correct_colors;
 }
@@ -398,17 +408,17 @@ void FUNCTION_Da(int Mastermind_Array[], int Guess_Array[], unsigned char amber_
 	printf("\t%u", FUNCTION_B(Mastermind_Array, Guess_Array));
 	printf("\t%u", FUNCTION_C(Mastermind_Array, Guess_Array));
 	printf("\t%u", amber_score);
-	if (FUNCTION_B(Mastermind_Array, Guess_Array) == 0)
+	if ((FUNCTION_B(Mastermind_Array, Guess_Array)) == 0)
 	{
 		//13. If no color matches are found sound the buzzer (5000ms).
-		//FUNCTION_E(); // Function that plays buzzer once, to happen when no color matches are found
+		FUNCTION_E(); // Function that plays buzzer once, to happen when no color matches are found
 	}
 	if (FUNCTION_C(Mastermind_Array, Guess_Array) == 3)
 	{
 		printf("\t(Match!)\n");
 		printf("Amber Points = %u\n", amber_score);
 		//15. If a perfect match is found display score for the turn & sound 5 very short buzzer blasts.
-		//FUNCTION_F(); // Function that plays when the sequence has been correctly guessed
+		FUNCTION_F(); // Function that plays when the sequence has been correctly guessed
 	}
 	printf("\n");
 }
@@ -429,14 +439,14 @@ void FUNCTION_Db(int Mastermind_Array[], int Guess_Array[], unsigned char green_
 	if ((FUNCTION_B(Mastermind_Array, Guess_Array)) == 0)
 	{
 		//13. If no color matches are found sound the buzzer (5000ms).
-		//FUNCTION_E(); // Function that plays buzzer once, to happen when no color matches are found
+		FUNCTION_E(); // Function that plays buzzer once, to happen when no color matches are found
 	}
 	if ((FUNCTION_C(Mastermind_Array, Guess_Array)) == 3)
 	{
 		printf("\t(Match!)\n");
 		printf("Green Points = %u\n", green_score);
 		//15. If a perfect match is found display score for the turn & sound 5 very short buzzer blasts.
-		//FUNCTION_F(); // Function that plays when the sequence has been correctly guessed
+		FUNCTION_F(); // Function that plays when the sequence has been correctly guessed
 	}
 	printf("\n");
 }
@@ -446,7 +456,10 @@ void FUNCTION_Db(int Mastermind_Array[], int Guess_Array[], unsigned char green_
 void FUNCTION_E(void)
 {
 	//13. If no color matches are found sound the buzzer (5000ms).
+	TR0 = 0;
+	Counts = 0;
 	Seconds = 0;
+	TR0 = 1;
 	// while the counts does not exceed 5000ms (5 seconds)
 	while (Seconds <= 5)
 	{
@@ -461,17 +474,22 @@ void FUNCTION_F(void)
 {
 	//15. If a perfect match is found display score for the turn & sound 5 very short buzzer blasts.
 	Counts = 0;
+	Seconds = 0;
 	buzzer_delay = 168;
 	i = 0;
 	for (i=0; i<5; i++)
 	{
+		TR0 = 0;
 		Counts = 0;
-		while (Counts <= buzzer_delay)
+		TR0 = 1;
+		while (Counts <= 100)
 		{
 			BUZZER = 0; // turn buzzer on
 		}
+		TR0 = 0;
 		Counts = 0;
-		while (Counts <= buzzer_delay)
+		TR0 = 1;
+		while (Counts <= 50)
 		{
 			BUZZER = 1; // turn buzzer off
 		}

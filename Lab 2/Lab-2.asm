@@ -1,7 +1,7 @@
 ;--------------------------------------------------------
 ; File Created by SDCC : free open source ANSI-C Compiler
 ; Version 3.4.0 #8981 (Apr  5 2014) (MINGW32)
-; This file was generated Wed Mar 04 20:11:02 2015
+; This file was generated Thu Mar 05 19:02:18 2015
 ;--------------------------------------------------------
 	.module Lab_2
 	.optsdcc -mmcs51 --model-small
@@ -321,9 +321,13 @@
 	.globl _TMAX
 	.globl _number_of_correct_spots
 	.globl _number_of_correct_colors
-	.globl _flag
 	.globl _buzzer_delay
-	.globl _j
+	.globl _GA_2
+	.globl _GA_1
+	.globl _GA_0
+	.globl _MA_2
+	.globl _MA_1
+	.globl _MA_0
 	.globl _i
 	.globl _result
 	.globl _points
@@ -979,14 +983,26 @@ _result::
 G$i$0$0==.
 _i::
 	.ds 2
-G$j$0$0==.
-_j::
-	.ds 2
+G$MA_0$0$0==.
+_MA_0::
+	.ds 1
+G$MA_1$0$0==.
+_MA_1::
+	.ds 1
+G$MA_2$0$0==.
+_MA_2::
+	.ds 1
+G$GA_0$0$0==.
+_GA_0::
+	.ds 1
+G$GA_1$0$0==.
+_GA_1::
+	.ds 1
+G$GA_2$0$0==.
+_GA_2::
+	.ds 1
 G$buzzer_delay$0$0==.
 _buzzer_delay::
-	.ds 2
-G$flag$0$0==.
-_flag::
 	.ds 2
 G$number_of_correct_colors$0$0==.
 _number_of_correct_colors::
@@ -1009,16 +1025,16 @@ _Guess_Array::
 G$MA_Copy$0$0==.
 _MA_Copy::
 	.ds 6
-LLab_2.FUNCTION_Da$Guess_Array$1$103==.
+LLab_2.FUNCTION_Da$Guess_Array$1$108==.
 _FUNCTION_Da_PARM_2:
 	.ds 3
-LLab_2.FUNCTION_Da$amber_score$1$103==.
+LLab_2.FUNCTION_Da$amber_score$1$108==.
 _FUNCTION_Da_PARM_3:
 	.ds 1
-LLab_2.FUNCTION_Db$Guess_Array$1$108==.
+LLab_2.FUNCTION_Db$Guess_Array$1$113==.
 _FUNCTION_Db_PARM_2:
 	.ds 3
-LLab_2.FUNCTION_Db$green_score$1$108==.
+LLab_2.FUNCTION_Db$green_score$1$113==.
 _FUNCTION_Db_PARM_3:
 	.ds 1
 ;--------------------------------------------------------
@@ -1027,14 +1043,11 @@ _FUNCTION_Db_PARM_3:
 	.area	OSEG    (OVR,DATA)
 	.area	OSEG    (OVR,DATA)
 	.area	OSEG    (OVR,DATA)
-LLab_2.FUNCTION_B$Guess_Array$1$93==.
+LLab_2.FUNCTION_B$Guess_Array$1$92==.
 _FUNCTION_B_PARM_2:
 	.ds 3
-LLab_2.FUNCTION_B$Mastermind_Array$1$93==.
-_FUNCTION_B_Mastermind_Array_1_93:
-	.ds 3
 	.area	OSEG    (OVR,DATA)
-LLab_2.FUNCTION_C$Guess_Array$1$99==.
+LLab_2.FUNCTION_C$Guess_Array$1$104==.
 _FUNCTION_C_PARM_2:
 	.ds 3
 	.area	OSEG    (OVR,DATA)
@@ -1107,61 +1120,77 @@ __interrupt_vect:
 	.globl __mcs51_genXINIT
 	.globl __mcs51_genXRAMCLEAR
 	.globl __mcs51_genRAMCLEAR
-	C$Lab_2.c$62$1$176 ==.
+	C$Lab_2.c$62$1$181 ==.
 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:62: unsigned int Counts = 0;				// elements to be used when keeping track of time
 	clr	a
 	mov	_Counts,a
 	mov	(_Counts + 1),a
-	C$Lab_2.c$63$1$176 ==.
+	C$Lab_2.c$63$1$181 ==.
 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:63: unsigned char Seconds = 0;
 ;	1-genFromRTrack replaced	mov	_Seconds,#0x00
 	mov	_Seconds,a
-	C$Lab_2.c$64$1$176 ==.
+	C$Lab_2.c$64$1$181 ==.
 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:64: unsigned char amber_score = 0;
 ;	1-genFromRTrack replaced	mov	_amber_score,#0x00
 	mov	_amber_score,a
-	C$Lab_2.c$65$1$176 ==.
+	C$Lab_2.c$65$1$181 ==.
 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:65: unsigned char green_score = 0;
 ;	1-genFromRTrack replaced	mov	_green_score,#0x00
 	mov	_green_score,a
-	C$Lab_2.c$66$1$176 ==.
+	C$Lab_2.c$66$1$181 ==.
 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:66: unsigned char points = 0;				// temporary points value obtained per round
 ;	1-genFromRTrack replaced	mov	_points,#0x00
 	mov	_points,a
-	C$Lab_2.c$68$1$176 ==.
+	C$Lab_2.c$68$1$181 ==.
 ;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:68: int i = 0;
 	mov	_i,a
 	mov	(_i + 1),a
-	C$Lab_2.c$69$1$176 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:69: int j = 0;
-	mov	_j,a
-	mov	(_j + 1),a
-	C$Lab_2.c$70$1$176 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:70: int buzzer_delay = 0;
+	C$Lab_2.c$69$1$181 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:69: unsigned char MA_0 = 0;
+;	1-genFromRTrack replaced	mov	_MA_0,#0x00
+	mov	_MA_0,a
+	C$Lab_2.c$70$1$181 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:70: unsigned char MA_1 = 0;
+;	1-genFromRTrack replaced	mov	_MA_1,#0x00
+	mov	_MA_1,a
+	C$Lab_2.c$71$1$181 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:71: unsigned char MA_2 = 0;
+;	1-genFromRTrack replaced	mov	_MA_2,#0x00
+	mov	_MA_2,a
+	C$Lab_2.c$72$1$181 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:72: unsigned char GA_0 = 0;
+;	1-genFromRTrack replaced	mov	_GA_0,#0x00
+	mov	_GA_0,a
+	C$Lab_2.c$73$1$181 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:73: unsigned char GA_1 = 0;
+;	1-genFromRTrack replaced	mov	_GA_1,#0x00
+	mov	_GA_1,a
+	C$Lab_2.c$74$1$181 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:74: unsigned char GA_2 = 0;
+;	1-genFromRTrack replaced	mov	_GA_2,#0x00
+	mov	_GA_2,a
+	C$Lab_2.c$75$1$181 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:75: int buzzer_delay = 0;
 	mov	_buzzer_delay,a
 	mov	(_buzzer_delay + 1),a
-	C$Lab_2.c$71$1$176 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:71: int flag = 0;
-	mov	_flag,a
-	mov	(_flag + 1),a
-	C$Lab_2.c$72$1$176 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:72: unsigned char number_of_correct_colors = 0;
+	C$Lab_2.c$76$1$181 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:76: unsigned char number_of_correct_colors = 0;
 ;	1-genFromRTrack replaced	mov	_number_of_correct_colors,#0x00
 	mov	_number_of_correct_colors,a
-	C$Lab_2.c$73$1$176 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:73: unsigned char number_of_correct_spots = 0;
+	C$Lab_2.c$77$1$181 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:77: unsigned char number_of_correct_spots = 0;
 ;	1-genFromRTrack replaced	mov	_number_of_correct_spots,#0x00
 	mov	_number_of_correct_spots,a
-	C$Lab_2.c$75$1$176 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:75: unsigned char TMAX = 0;					// maximum time per round
+	C$Lab_2.c$79$1$181 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:79: unsigned char TMAX = 0;					// maximum time per round
 ;	1-genFromRTrack replaced	mov	_TMAX,#0x00
 	mov	_TMAX,a
-	C$Lab_2.c$76$1$176 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:76: unsigned char timer = 0;				// timer for each round
+	C$Lab_2.c$80$1$181 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:80: unsigned char timer = 0;				// timer for each round
 ;	1-genFromRTrack replaced	mov	_timer,#0x00
 	mov	_timer,a
-	C$Lab_2.c$79$1$176 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:79: int Mastermind_Array[3] = { 7, 7, 7 };
+	C$Lab_2.c$83$1$181 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:83: int Mastermind_Array[3] = { 7, 7, 7 };
 	mov	(_Mastermind_Array + 0),#0x07
 ;	1-genFromRTrack replaced	mov	(_Mastermind_Array + 1),#0x00
 	mov	(_Mastermind_Array + 1),a
@@ -1171,8 +1200,8 @@ __interrupt_vect:
 	mov	((_Mastermind_Array + 0x0004) + 0),#0x07
 ;	1-genFromRTrack replaced	mov	((_Mastermind_Array + 0x0004) + 1),#0x00
 	mov	((_Mastermind_Array + 0x0004) + 1),a
-	C$Lab_2.c$80$1$176 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:80: int Guess_Array[3] = { 7, 7, 7 };		// the 7s are arbitrary values that will shortly be written over
+	C$Lab_2.c$84$1$181 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:84: int Guess_Array[3] = { 7, 7, 7 };		// the 7s are arbitrary values that will shortly be written over
 	mov	(_Guess_Array + 0),#0x07
 ;	1-genFromRTrack replaced	mov	(_Guess_Array + 1),#0x00
 	mov	(_Guess_Array + 1),a
@@ -1182,8 +1211,8 @@ __interrupt_vect:
 	mov	((_Guess_Array + 0x0004) + 0),#0x07
 ;	1-genFromRTrack replaced	mov	((_Guess_Array + 0x0004) + 1),#0x00
 	mov	((_Guess_Array + 0x0004) + 1),a
-	C$Lab_2.c$81$1$176 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:81: int MA_Copy[3] = { 7, 7, 7 };
+	C$Lab_2.c$85$1$181 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:85: int MA_Copy[3] = { 7, 7, 7 };
 	mov	(_MA_Copy + 0),#0x07
 ;	1-genFromRTrack replaced	mov	(_MA_Copy + 1),#0x00
 	mov	(_MA_Copy + 1),a
@@ -1384,64 +1413,64 @@ _getchar:
 ;Allocation info for local variables in function 'main'
 ;------------------------------------------------------------
 	G$main$0$0 ==.
-	C$Lab_2.c$85$1$10 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:85: main()
+	C$Lab_2.c$89$1$10 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:89: main()
 ;	-----------------------------------------
 ;	 function main
 ;	-----------------------------------------
 _main:
-	C$Lab_2.c$87$1$64 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:87: Sys_Init();		// Initialize the C8051 board
-	lcall	_Sys_Init
-	C$Lab_2.c$88$1$64 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:88: putchar(' ');	// Required for output to terminal
-	mov	dpl,#0x20
-	lcall	_putchar
-	C$Lab_2.c$89$1$64 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:89: Port_Init();	// Configure P1.0 for analog input
-	lcall	_Port_Init
-	C$Lab_2.c$90$1$64 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:90: ADC_Init();		// Initialize A/D conversion
-	lcall	_ADC_Init
 	C$Lab_2.c$91$1$64 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:91: Interrupt_Init();
-	lcall	_Interrupt_Init
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:91: Sys_Init();		// Initialize the C8051 board
+	lcall	_Sys_Init
 	C$Lab_2.c$92$1$64 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:92: Timer_Init();    // Initialize Timer 0
-	lcall	_Timer_Init
-	C$Lab_2.c$93$1$64 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:93: putchar(' ');    // the quote fonts may not copy correctly into SiLabs IDE
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:92: putchar(' ');	// Required for output to terminal
 	mov	dpl,#0x20
 	lcall	_putchar
+	C$Lab_2.c$93$1$64 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:93: Port_Init();	// Configure P1.0 for analog input
+	lcall	_Port_Init
+	C$Lab_2.c$94$1$64 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:94: ADC_Init();		// Initialize A/D conversion
+	lcall	_ADC_Init
 	C$Lab_2.c$95$1$64 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:95: while (1) // infinite loop
-00158$:
-	C$Lab_2.c$99$2$65 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:99: AMBER = 1; // AmberLED is off
-	setb	_AMBER
-	C$Lab_2.c$100$2$65 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:100: GREEN = 1; // GreenLED is off
-	setb	_GREEN
-	C$Lab_2.c$102$2$65 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:102: BILEDA0 = 0;
-	clr	_BILEDA0
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:95: Interrupt_Init();
+	lcall	_Interrupt_Init
+	C$Lab_2.c$96$1$64 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:96: Timer_Init();    // Initialize Timer 0
+	lcall	_Timer_Init
+	C$Lab_2.c$97$1$64 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:97: putchar(' ');    // the quote fonts may not copy correctly into SiLabs IDE
+	mov	dpl,#0x20
+	lcall	_putchar
+	C$Lab_2.c$99$1$64 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:99: while (1) // infinite loop
+00155$:
 	C$Lab_2.c$103$2$65 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:103: BILEDA1 = 0;
-	clr	_BILEDA1
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:103: AMBER = 1; // AmberLED is off
+	setb	_AMBER
 	C$Lab_2.c$104$2$65 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:104: BILEDB0 = 0;
-	clr	_BILEDB0
-	C$Lab_2.c$105$2$65 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:105: BILEDB1 = 0;
-	clr	_BILEDB1
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:104: GREEN = 1; // GreenLED is off
+	setb	_GREEN
 	C$Lab_2.c$106$2$65 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:106: BILEDC0 = 0;
-	clr	_BILEDC0
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:106: BILEDA0 = 0;
+	clr	_BILEDA0
 	C$Lab_2.c$107$2$65 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:107: BILEDC1 = 0;
-	clr	_BILEDC1
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:107: BILEDA1 = 0;
+	clr	_BILEDA1
 	C$Lab_2.c$108$2$65 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:108: printf("\rSet the speed pot and press the pushbutton to begin LITEC Mastermind.\n");
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:108: BILEDB0 = 0;
+	clr	_BILEDB0
+	C$Lab_2.c$109$2$65 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:109: BILEDB1 = 0;
+	clr	_BILEDB1
+	C$Lab_2.c$110$2$65 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:110: BILEDC0 = 0;
+	clr	_BILEDC0
+	C$Lab_2.c$111$2$65 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:111: BILEDC1 = 0;
+	clr	_BILEDC1
+	C$Lab_2.c$112$2$65 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:112: printf("\rSet the speed pot and press the pushbutton to begin LITEC Mastermind.\n");
 	mov	a,#___str_0
 	push	acc
 	mov	a,#(___str_0 >> 8)
@@ -1452,40 +1481,36 @@ _main:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$Lab_2.c$109$2$65 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:109: while (!Start_Button()); // wait for button to be pressed before starting
+	C$Lab_2.c$113$2$65 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:113: while (!Start_Button()); // wait for button to be pressed before starting
 00101$:
 	lcall	_Start_Button
 	mov	a,dpl
 	mov	b,dph
 	orl	a,b
 	jz	00101$
-	C$Lab_2.c$110$2$65 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:110: while (Start_Button());
+	C$Lab_2.c$114$2$65 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:114: while (Start_Button());
 00104$:
 	lcall	_Start_Button
 	mov	a,dpl
 	mov	b,dph
 	orl	a,b
-	C$Lab_2.c$112$2$65 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:112: result = read_AD_input(0); // Read the A/D value on P1.0
+	C$Lab_2.c$116$2$65 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:116: result = read_AD_input(0); // Read the A/D value on P1.0
 	jnz	00104$
 	mov	dpl,a
 	lcall	_read_AD_input
-	C$Lab_2.c$113$2$65 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:113: TMAX = ((18750 * result)+15000);
-	mov	a,dpl
-	mov	_result,a
-	mov	b,#0x3E
-	mul	ab
-	add	a,#0x98
+	mov	_result,dpl
+	C$Lab_2.c$117$2$65 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:117: TMAX = (((3/17) * result)+15);
+	C$Lab_2.c$118$2$65 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:118: printf("\rStarting Period: %u", TMAX);
+	mov	a,#0x0F
 	mov	_TMAX,a
-	C$Lab_2.c$114$2$65 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:114: printf("\rStarting Period: %u\n", TMAX);
-	mov	r6,_TMAX
-	mov	r7,#0x00
-	push	ar6
-	push	ar7
+	push	acc
+	clr	a
+	push	acc
 	mov	a,#___str_1
 	push	acc
 	mov	a,#(___str_1 >> 8)
@@ -1496,11 +1521,8 @@ _main:
 	mov	a,sp
 	add	a,#0xfb
 	mov	sp,a
-	C$Lab_2.c$118$2$65 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:118: AMBER = 0;													// 4. Light Amber player LED.
-	clr	_AMBER
 	C$Lab_2.c$119$2$65 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:119: printf("\n\rAmber Player Turn\n\n");							// Amber's turn
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:119: printf(" seconds\n");
 	mov	a,#___str_2
 	push	acc
 	mov	a,#(___str_2 >> 8)
@@ -1511,19 +1533,46 @@ _main:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$Lab_2.c$121$2$65 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:121: GENERATE_MASTERMIND_ARRAY(Mastermind_Array);				//5. Generate 3 random values from 0 to 2 for BiLED pattern.
+	C$Lab_2.c$123$2$65 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:123: AMBER = 0;													// 4. Light Amber player LED.
+	clr	_AMBER
+	C$Lab_2.c$124$2$65 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:124: printf("\n\rAmber Player Turn\n\n");							// Amber's turn
+	mov	a,#___str_3
+	push	acc
+	mov	a,#(___str_3 >> 8)
+	push	acc
+	mov	a,#0x80
+	push	acc
+	lcall	_printf
+	dec	sp
+	dec	sp
+	dec	sp
+	C$Lab_2.c$126$2$65 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:126: GENERATE_MASTERMIND_ARRAY(Mastermind_Array);				//5. Generate 3 random values from 0 to 2 for BiLED pattern.
 	mov	dptr,#_Mastermind_Array
 	mov	b,#0x40
 	lcall	_GENERATE_MASTERMIND_ARRAY
-	C$Lab_2.c$122$2$65 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:122: for (i=0; i<3; i++)
+	C$Lab_2.c$127$2$65 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:127: printf("\rCorrect Answer --- ");
+	mov	a,#___str_4
+	push	acc
+	mov	a,#(___str_4 >> 8)
+	push	acc
+	mov	a,#0x80
+	push	acc
+	lcall	_printf
+	dec	sp
+	dec	sp
+	dec	sp
+	C$Lab_2.c$128$2$65 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:128: for (i=0; i<3; i++)
 	clr	a
 	mov	_i,a
 	mov	(_i + 1),a
-00160$:
-	C$Lab_2.c$124$3$66 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:124: printf("%d", Mastermind_Array[i]);
+00157$:
+	C$Lab_2.c$130$3$66 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:130: printf("%d", Mastermind_Array[i]);
 	mov	a,_i
 	add	a,_i
 	mov	r6,a
@@ -1538,44 +1587,6 @@ _main:
 	dec	r1
 	push	ar6
 	push	ar7
-	mov	a,#___str_3
-	push	acc
-	mov	a,#(___str_3 >> 8)
-	push	acc
-	mov	a,#0x80
-	push	acc
-	lcall	_printf
-	mov	a,sp
-	add	a,#0xfb
-	mov	sp,a
-	C$Lab_2.c$122$2$65 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:122: for (i=0; i<3; i++)
-	inc	_i
-	clr	a
-	cjne	a,_i,00278$
-	inc	(_i + 1)
-00278$:
-	clr	c
-	mov	a,_i
-	subb	a,#0x03
-	mov	a,(_i + 1)
-	xrl	a,#0x80
-	subb	a,#0x80
-	jc	00160$
-	C$Lab_2.c$126$2$65 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:126: printf("\n");
-	mov	a,#___str_4
-	push	acc
-	mov	a,#(___str_4 >> 8)
-	push	acc
-	mov	a,#0x80
-	push	acc
-	lcall	_printf
-	dec	sp
-	dec	sp
-	dec	sp
-	C$Lab_2.c$127$2$65 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:127: printf("\r\tColor\tSpot\tScore\n");
 	mov	a,#___str_5
 	push	acc
 	mov	a,#(___str_5 >> 8)
@@ -1583,181 +1594,25 @@ _main:
 	mov	a,#0x80
 	push	acc
 	lcall	_printf
-	dec	sp
-	dec	sp
-	dec	sp
-	C$Lab_2.c$129$3$67 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:129: while (FUNCTION_C(Mastermind_Array, Guess_Array) != 3)		// while the sequence hasn't been guessed
-00121$:
-	mov	_FUNCTION_C_PARM_2,#_Guess_Array
-	mov	(_FUNCTION_C_PARM_2 + 1),#0x00
-	mov	(_FUNCTION_C_PARM_2 + 2),#0x40
-	mov	dptr,#_Mastermind_Array
-	mov	b,#0x40
-	lcall	_FUNCTION_C
-	mov	r7,dpl
-	cjne	r7,#0x03,00280$
-	ljmp	00123$
-00280$:
-	C$Lab_2.c$133$3$67 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:133: Counts = 0; // reset timer
-	clr	a
-	mov	_Counts,a
-	mov	(_Counts + 1),a
-	C$Lab_2.c$134$3$67 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:134: Seconds = 0;
-;	1-genFromRTrack replaced	mov	_Seconds,#0x00
-	mov	_Seconds,a
-	C$Lab_2.c$136$3$67 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:136: while ((!Start_Button()) && (TMAX >= Seconds))
-00109$:
-	lcall	_Start_Button
-	mov	a,dpl
-	mov	b,dph
-	orl	a,b
-	jnz	00112$
-	clr	c
-	mov	a,_TMAX
-	subb	a,_Seconds
-	jc	00112$
-	C$Lab_2.c$138$4$68 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:138: FUNCTION_A();
-	lcall	_FUNCTION_A
-	C$Lab_2.c$140$3$67 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:140: while (Start_Button());
-	sjmp	00109$
-00112$:
-	lcall	_Start_Button
-	mov	a,dpl
-	mov	b,dph
-	orl	a,b
-	jnz	00112$
-	C$Lab_2.c$141$3$67 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:141: timer = Seconds;
-	mov	_timer,_Seconds
-	C$Lab_2.c$144$3$67 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:144: FUNCTION_G(Guess_Array); // this creates Guess_Array
-	mov	dptr,#_Guess_Array
-	mov	b,#0x40
-	lcall	_FUNCTION_G
-	C$Lab_2.c$147$3$67 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:147: if (timer >= TMAX)
-	clr	c
-	mov	a,_timer
-	subb	a,_TMAX
-	jc	00118$
-	C$Lab_2.c$149$4$69 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:149: points = 6;
-	mov	_points,#0x06
-	sjmp	00119$
-00118$:
-	C$Lab_2.c$151$3$67 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:151: else if (timer < TMAX)
-	clr	c
-	mov	a,_timer
-	subb	a,_TMAX
-	jnc	00119$
-	C$Lab_2.c$153$4$70 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:153: points = (((5*timer)/TMAX) + 1);
-	mov	a,_timer
-	mov	b,#0x05
-	mul	ab
-	mov	dpl,a
-	mov	dph,b
-	mov	__divsint_PARM_2,_TMAX
-	mov	(__divsint_PARM_2 + 1),#0x00
-	lcall	__divsint
-	mov	r6,dpl
-	mov	r7,dph
-	mov	a,r6
-	inc	a
-	mov	_points,a
-00119$:
-	C$Lab_2.c$156$3$67 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:156: amber_score += points;
-	mov	a,_points
-	add	a,_amber_score
-	mov	_amber_score,a
-	C$Lab_2.c$157$3$67 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:157: points = 0; // reset
-	C$Lab_2.c$163$3$67 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:163: for (i=0; i<3; i++)
-	clr	a
-	mov	_points,a
-	mov	_i,a
-	mov	(_i + 1),a
-00162$:
-	C$Lab_2.c$165$4$71 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:165: printf("%d", Mastermind_Array[i]);
-	mov	a,_i
-	add	a,_i
-	mov	r6,a
-	mov	a,(_i + 1)
-	rlc	a
-	mov	a,r6
-	add	a,#_Mastermind_Array
-	mov	r1,a
-	mov	ar6,@r1
-	inc	r1
-	mov	ar7,@r1
-	dec	r1
-	push	ar6
-	push	ar7
-	mov	a,#___str_3
-	push	acc
-	mov	a,#(___str_3 >> 8)
-	push	acc
-	mov	a,#0x80
-	push	acc
-	lcall	_printf
 	mov	a,sp
 	add	a,#0xfb
 	mov	sp,a
-	C$Lab_2.c$163$3$67 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:163: for (i=0; i<3; i++)
+	C$Lab_2.c$128$2$65 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:128: for (i=0; i<3; i++)
 	inc	_i
 	clr	a
-	cjne	a,_i,00286$
+	cjne	a,_i,00261$
 	inc	(_i + 1)
-00286$:
+00261$:
 	clr	c
 	mov	a,_i
 	subb	a,#0x03
 	mov	a,(_i + 1)
 	xrl	a,#0x80
 	subb	a,#0x80
-	jc	00162$
-	C$Lab_2.c$167$3$67 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:167: printf("\n");
-	mov	a,#___str_4
-	push	acc
-	mov	a,#(___str_4 >> 8)
-	push	acc
-	mov	a,#0x80
-	push	acc
-	lcall	_printf
-	dec	sp
-	dec	sp
-	dec	sp
-	C$Lab_2.c$168$3$67 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:168: FUNCTION_Da(Mastermind_Array, Guess_Array, amber_score); // Formatted Print function and buzzer function for AMBER; reads in Guess_Array and amber_score
-	mov	_FUNCTION_Da_PARM_2,#_Guess_Array
-	mov	(_FUNCTION_Da_PARM_2 + 1),#0x00
-	mov	(_FUNCTION_Da_PARM_2 + 2),#0x40
-	mov	_FUNCTION_Da_PARM_3,_amber_score
-	mov	dptr,#_Mastermind_Array
-	mov	b,#0x40
-	lcall	_FUNCTION_Da
-	ljmp	00121$
-00123$:
-	C$Lab_2.c$173$2$65 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:173: AMBER = 1;
-	setb	_AMBER
-	C$Lab_2.c$174$2$65 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:174: GREEN = 0;													// 4. Light Green player LED.
-	clr	_GREEN
-	C$Lab_2.c$175$2$65 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:175: printf("\n\rGreen Player Turn\n");							// Green's turn
+	jc	00157$
+	C$Lab_2.c$132$2$65 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:132: printf("\n");
 	mov	a,#___str_6
 	push	acc
 	mov	a,#(___str_6 >> 8)
@@ -1768,19 +1623,173 @@ _main:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$Lab_2.c$177$2$65 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:177: GENERATE_MASTERMIND_ARRAY(Mastermind_Array);				//5. Generate 3 random values from 0 to 2 for BiLED pattern.
+	C$Lab_2.c$133$2$65 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:133: printf("\r\tColor\tSpot\tScore\n");
+	mov	a,#___str_7
+	push	acc
+	mov	a,#(___str_7 >> 8)
+	push	acc
+	mov	a,#0x80
+	push	acc
+	lcall	_printf
+	dec	sp
+	dec	sp
+	dec	sp
+	C$Lab_2.c$135$3$67 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:135: while (FUNCTION_C(Mastermind_Array, Guess_Array) != 3)		// while the sequence hasn't been guessed
+00119$:
+	mov	_FUNCTION_C_PARM_2,#_Guess_Array
+	mov	(_FUNCTION_C_PARM_2 + 1),#0x00
+	mov	(_FUNCTION_C_PARM_2 + 2),#0x40
+	mov	dptr,#_Mastermind_Array
+	mov	b,#0x40
+	lcall	_FUNCTION_C
+	mov	r7,dpl
+	cjne	r7,#0x03,00263$
+	ljmp	00121$
+00263$:
+	C$Lab_2.c$142$3$67 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:142: TR0 = 0; // turn timer off
+	clr	_TR0
+	C$Lab_2.c$143$3$67 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:143: Counts = 0; // reset the timer
+	clr	a
+	mov	_Counts,a
+	mov	(_Counts + 1),a
+	C$Lab_2.c$144$3$67 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:144: Seconds = 0;
+;	1-genFromRTrack replaced	mov	_Seconds,#0x00
+	mov	_Seconds,a
+	C$Lab_2.c$145$3$67 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:145: TR0 = 1; // turn timer on
+	setb	_TR0
+	C$Lab_2.c$146$3$67 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:146: while (!Start_Button()) // && (TMAX >= Seconds))
+00108$:
+	lcall	_Start_Button
+	mov	a,dpl
+	mov	b,dph
+	orl	a,b
+	jnz	00110$
+	C$Lab_2.c$148$4$68 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:148: FUNCTION_A();
+	lcall	_FUNCTION_A
+	sjmp	00108$
+00110$:
+	C$Lab_2.c$150$3$67 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:150: TR0 = 0; // stop timer
+	clr	_TR0
+	C$Lab_2.c$151$3$67 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:151: while (Start_Button());
+00111$:
+	lcall	_Start_Button
+	mov	a,dpl
+	mov	b,dph
+	orl	a,b
+	jnz	00111$
+	C$Lab_2.c$152$3$67 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:152: timer = Seconds;
+	mov	_timer,_Seconds
+	C$Lab_2.c$155$3$67 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:155: FUNCTION_G(Guess_Array); // this creates Guess_Array
+	mov	dptr,#_Guess_Array
+	mov	b,#0x40
+	lcall	_FUNCTION_G
+	C$Lab_2.c$158$3$67 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:158: if (timer >= TMAX)
+	clr	c
+	mov	a,_timer
+	subb	a,_TMAX
+	jc	00117$
+	C$Lab_2.c$160$4$69 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:160: points = 6;
+	mov	_points,#0x06
+	sjmp	00118$
+00117$:
+	C$Lab_2.c$162$3$67 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:162: else if (timer < TMAX)
+	clr	c
+	mov	a,_timer
+	subb	a,_TMAX
+	jnc	00118$
+	C$Lab_2.c$164$4$70 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:164: points = (((5*timer)/TMAX) + 1);
+	mov	a,_timer
+	mov	b,#0x05
+	mul	ab
+	mov	dpl,a
+	mov	dph,b
+	mov	__divsint_PARM_2,_TMAX
+	mov	(__divsint_PARM_2 + 1),#0x00
+	lcall	__divsint
+	mov	r6,dpl
+	mov	r7,dph
+	mov	a,r6
+	inc	a
+	mov	_points,a
+00118$:
+	C$Lab_2.c$167$3$67 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:167: amber_score += points;
+	mov	a,_points
+	add	a,_amber_score
+	mov	_amber_score,a
+	C$Lab_2.c$168$3$67 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:168: points = 0; // reset
+	mov	_points,#0x00
+	C$Lab_2.c$174$3$67 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:174: FUNCTION_Da(Mastermind_Array, Guess_Array, amber_score); // Formatted Print function and buzzer function for AMBER; reads in Guess_Array and amber_score
+	mov	_FUNCTION_Da_PARM_2,#_Guess_Array
+	mov	(_FUNCTION_Da_PARM_2 + 1),#0x00
+	mov	(_FUNCTION_Da_PARM_2 + 2),#0x40
+	mov	_FUNCTION_Da_PARM_3,_amber_score
+	mov	dptr,#_Mastermind_Array
+	mov	b,#0x40
+	lcall	_FUNCTION_Da
+	ljmp	00119$
+00121$:
+	C$Lab_2.c$179$2$65 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:179: AMBER = 1;
+	setb	_AMBER
+	C$Lab_2.c$180$2$65 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:180: GREEN = 0;													// 4. Light Green player LED.
+	clr	_GREEN
+	C$Lab_2.c$181$2$65 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:181: printf("\n\rGreen Player Turn\n");							// Green's turn
+	mov	a,#___str_8
+	push	acc
+	mov	a,#(___str_8 >> 8)
+	push	acc
+	mov	a,#0x80
+	push	acc
+	lcall	_printf
+	dec	sp
+	dec	sp
+	dec	sp
+	C$Lab_2.c$183$2$65 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:183: GENERATE_MASTERMIND_ARRAY(Mastermind_Array);				//5. Generate 3 random values from 0 to 2 for BiLED pattern.
 	mov	dptr,#_Mastermind_Array
 	mov	b,#0x40
 	lcall	_GENERATE_MASTERMIND_ARRAY
-	C$Lab_2.c$179$2$65 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:179: for (i=0; i<3; i++)
+	C$Lab_2.c$184$2$65 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:184: printf("\rCorrect Answer --- ");
+	mov	a,#___str_4
+	push	acc
+	mov	a,#(___str_4 >> 8)
+	push	acc
+	mov	a,#0x80
+	push	acc
+	lcall	_printf
+	dec	sp
+	dec	sp
+	dec	sp
+	C$Lab_2.c$185$2$65 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:185: for (i=0; i<3; i++)
 	clr	a
 	mov	_i,a
 	mov	(_i + 1),a
-00164$:
-	C$Lab_2.c$181$3$72 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:181: printf("%d", Mastermind_Array[i]);
+00159$:
+	C$Lab_2.c$187$3$71 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:187: printf("%d", Mastermind_Array[i]);
 	mov	a,_i
 	add	a,_i
 	mov	r6,a
@@ -1795,44 +1804,6 @@ _main:
 	dec	r1
 	push	ar6
 	push	ar7
-	mov	a,#___str_3
-	push	acc
-	mov	a,#(___str_3 >> 8)
-	push	acc
-	mov	a,#0x80
-	push	acc
-	lcall	_printf
-	mov	a,sp
-	add	a,#0xfb
-	mov	sp,a
-	C$Lab_2.c$179$2$65 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:179: for (i=0; i<3; i++)
-	inc	_i
-	clr	a
-	cjne	a,_i,00288$
-	inc	(_i + 1)
-00288$:
-	clr	c
-	mov	a,_i
-	subb	a,#0x03
-	mov	a,(_i + 1)
-	xrl	a,#0x80
-	subb	a,#0x80
-	jc	00164$
-	C$Lab_2.c$183$2$65 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:183: printf("\n");
-	mov	a,#___str_4
-	push	acc
-	mov	a,#(___str_4 >> 8)
-	push	acc
-	mov	a,#0x80
-	push	acc
-	lcall	_printf
-	dec	sp
-	dec	sp
-	dec	sp
-	C$Lab_2.c$184$2$65 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:184: printf("\r\tColor\tSpot\tScore\n");
 	mov	a,#___str_5
 	push	acc
 	mov	a,#(___str_5 >> 8)
@@ -1840,12 +1811,50 @@ _main:
 	mov	a,#0x80
 	push	acc
 	lcall	_printf
+	mov	a,sp
+	add	a,#0xfb
+	mov	sp,a
+	C$Lab_2.c$185$2$65 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:185: for (i=0; i<3; i++)
+	inc	_i
+	clr	a
+	cjne	a,_i,00268$
+	inc	(_i + 1)
+00268$:
+	clr	c
+	mov	a,_i
+	subb	a,#0x03
+	mov	a,(_i + 1)
+	xrl	a,#0x80
+	subb	a,#0x80
+	jc	00159$
+	C$Lab_2.c$189$2$65 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:189: printf("\n");
+	mov	a,#___str_6
+	push	acc
+	mov	a,#(___str_6 >> 8)
+	push	acc
+	mov	a,#0x80
+	push	acc
+	lcall	_printf
 	dec	sp
 	dec	sp
 	dec	sp
-	C$Lab_2.c$185$3$73 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:185: while ((FUNCTION_C(Mastermind_Array, Guess_Array)) != 3)		// while the sequence hasn't been guessed
-00137$:
+	C$Lab_2.c$190$2$65 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:190: printf("\r\tColor\tSpot\tScore\n");
+	mov	a,#___str_7
+	push	acc
+	mov	a,#(___str_7 >> 8)
+	push	acc
+	mov	a,#0x80
+	push	acc
+	lcall	_printf
+	dec	sp
+	dec	sp
+	dec	sp
+	C$Lab_2.c$191$3$72 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:191: while ((FUNCTION_C(Mastermind_Array, Guess_Array)) != 3)		// while the sequence hasn't been guessed
+00134$:
 	mov	_FUNCTION_C_PARM_2,#_Guess_Array
 	mov	(_FUNCTION_C_PARM_2 + 1),#0x00
 	mov	(_FUNCTION_C_PARM_2 + 2),#0x40
@@ -1853,69 +1862,75 @@ _main:
 	mov	b,#0x40
 	lcall	_FUNCTION_C
 	mov	r7,dpl
-	cjne	r7,#0x03,00290$
-	ljmp	00139$
-00290$:
-	C$Lab_2.c$189$3$73 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:189: Counts = 0; // reset timer
+	cjne	r7,#0x03,00270$
+	ljmp	00136$
+00270$:
+	C$Lab_2.c$196$3$72 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:196: TR0 = 0; // turn timer off
+	clr	_TR0
+	C$Lab_2.c$197$3$72 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:197: Counts = 0; // reset the timer
 	clr	a
 	mov	_Counts,a
 	mov	(_Counts + 1),a
-	C$Lab_2.c$190$3$73 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:190: Seconds = 0;
+	C$Lab_2.c$198$3$72 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:198: Seconds = 0;
 ;	1-genFromRTrack replaced	mov	_Seconds,#0x00
 	mov	_Seconds,a
-	C$Lab_2.c$192$3$73 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:192: while ((!Start_Button()) && (TMAX >= Seconds))
+	C$Lab_2.c$199$3$72 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:199: TR0 = 1; // turn timer on
+	setb	_TR0
+	C$Lab_2.c$201$3$72 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:201: while (!Start_Button())// && (TMAX >= Seconds))
+00123$:
+	lcall	_Start_Button
+	mov	a,dpl
+	mov	b,dph
+	orl	a,b
+	jnz	00125$
+	C$Lab_2.c$203$4$73 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:203: FUNCTION_A();
+	lcall	_FUNCTION_A
+	sjmp	00123$
+00125$:
+	C$Lab_2.c$205$3$72 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:205: TR0 = 0; // stop timer
+	clr	_TR0
+	C$Lab_2.c$206$3$72 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:206: while (Start_Button());
 00126$:
 	lcall	_Start_Button
 	mov	a,dpl
 	mov	b,dph
 	orl	a,b
-	jnz	00129$
-	clr	c
-	mov	a,_TMAX
-	subb	a,_Seconds
-	jc	00129$
-	C$Lab_2.c$194$4$74 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:194: FUNCTION_A();
-	lcall	_FUNCTION_A
-	C$Lab_2.c$196$3$73 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:196: while (Start_Button());
-	sjmp	00126$
-00129$:
-	lcall	_Start_Button
-	mov	a,dpl
-	mov	b,dph
-	orl	a,b
-	jnz	00129$
-	C$Lab_2.c$197$3$73 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:197: timer = Seconds;
+	jnz	00126$
+	C$Lab_2.c$207$3$72 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:207: timer = Seconds;
 	mov	_timer,_Seconds
-	C$Lab_2.c$200$3$73 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:200: FUNCTION_G(Guess_Array); // this creates Guess_Array
+	C$Lab_2.c$210$3$72 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:210: FUNCTION_G(Guess_Array); // this creates Guess_Array
 	mov	dptr,#_Guess_Array
 	mov	b,#0x40
 	lcall	_FUNCTION_G
-	C$Lab_2.c$203$3$73 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:203: if (timer >= TMAX)
+	C$Lab_2.c$213$3$72 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:213: if (timer >= TMAX)
 	clr	c
 	mov	a,_timer
 	subb	a,_TMAX
-	jc	00135$
-	C$Lab_2.c$205$4$75 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:205: points = 6;
+	jc	00132$
+	C$Lab_2.c$215$4$74 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:215: points = 6;
 	mov	_points,#0x06
-	sjmp	00136$
-00135$:
-	C$Lab_2.c$207$3$73 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:207: else if (timer < TMAX)
+	sjmp	00133$
+00132$:
+	C$Lab_2.c$217$3$72 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:217: else if (timer < TMAX)
 	clr	c
 	mov	a,_timer
 	subb	a,_TMAX
-	jnc	00136$
-	C$Lab_2.c$209$4$76 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:209: points = (((5*timer)/TMAX) + 1);
+	jnc	00133$
+	C$Lab_2.c$219$4$75 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:219: points = (((5*timer)/TMAX) + 1);
 	mov	a,_timer
 	mov	b,#0x05
 	mul	ab
@@ -1929,17 +1944,17 @@ _main:
 	mov	a,r6
 	inc	a
 	mov	_points,a
-00136$:
-	C$Lab_2.c$212$3$73 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:212: green_score += points;
+00133$:
+	C$Lab_2.c$222$3$72 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:222: green_score += points;
 	mov	a,_points
 	add	a,_green_score
 	mov	_green_score,a
-	C$Lab_2.c$213$3$73 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:213: points = 0; // reset
+	C$Lab_2.c$223$3$72 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:223: points = 0; // reset
 	mov	_points,#0x00
-	C$Lab_2.c$219$3$73 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:219: FUNCTION_Db(Mastermind_Array, Guess_Array, green_score); // Formatted Print function and buzzer function for GREEN; reads in Guess_Array and green_score
+	C$Lab_2.c$229$3$72 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:229: FUNCTION_Db(Mastermind_Array, Guess_Array, green_score); // Formatted Print function and buzzer function for GREEN; reads in Guess_Array and green_score
 	mov	_FUNCTION_Db_PARM_2,#_Guess_Array
 	mov	(_FUNCTION_Db_PARM_2 + 1),#0x00
 	mov	(_FUNCTION_Db_PARM_2 + 2),#0x40
@@ -1947,57 +1962,14 @@ _main:
 	mov	dptr,#_Mastermind_Array
 	mov	b,#0x40
 	lcall	_FUNCTION_Db
-	ljmp	00137$
-00139$:
-	C$Lab_2.c$224$2$65 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:224: printf("\n\rAmber Points = %u", amber_score);
+	ljmp	00134$
+00136$:
+	C$Lab_2.c$234$2$65 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:234: printf("\n\rAmber Points = %u", amber_score);
 	mov	r6,_amber_score
 	mov	r7,#0x00
 	push	ar6
 	push	ar7
-	mov	a,#___str_7
-	push	acc
-	mov	a,#(___str_7 >> 8)
-	push	acc
-	mov	a,#0x80
-	push	acc
-	lcall	_printf
-	mov	a,sp
-	add	a,#0xfb
-	mov	sp,a
-	C$Lab_2.c$225$2$65 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:225: printf(", Green Points = %u/n", green_score);
-	mov	r6,_green_score
-	mov	r7,#0x00
-	push	ar6
-	push	ar7
-	mov	a,#___str_8
-	push	acc
-	mov	a,#(___str_8 >> 8)
-	push	acc
-	mov	a,#0x80
-	push	acc
-	lcall	_printf
-	mov	a,sp
-	add	a,#0xfb
-	mov	sp,a
-	C$Lab_2.c$226$2$65 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:226: Seconds = 0;
-	mov	_Seconds,#0x00
-	C$Lab_2.c$227$2$65 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:227: while (Seconds < 1);
-00140$:
-	mov	a,#0x100 - 0x01
-	add	a,_Seconds
-	jnc	00140$
-	C$Lab_2.c$229$2$65 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:229: if (green_score > amber_score)
-	clr	c
-	mov	a,_amber_score
-	subb	a,_green_score
-	jnc	00149$
-	C$Lab_2.c$231$3$77 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:231: printf("\r\tWinner is Amber!\n");
 	mov	a,#___str_9
 	push	acc
 	mov	a,#(___str_9 >> 8)
@@ -2005,19 +1977,15 @@ _main:
 	mov	a,#0x80
 	push	acc
 	lcall	_printf
-	dec	sp
-	dec	sp
-	dec	sp
-	sjmp	00151$
-00149$:
-	C$Lab_2.c$233$2$65 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:233: else if (amber_score > green_score)
-	clr	c
-	mov	a,_green_score
-	subb	a,_amber_score
-	jnc	00146$
-	C$Lab_2.c$235$3$78 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:235: printf("\r\tWinner is Green!\n");
+	mov	a,sp
+	add	a,#0xfb
+	mov	sp,a
+	C$Lab_2.c$235$2$65 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:235: printf(", Green Points = %u", green_score);
+	mov	r6,_green_score
+	mov	r7,#0x00
+	push	ar6
+	push	ar7
 	mov	a,#___str_10
 	push	acc
 	mov	a,#(___str_10 >> 8)
@@ -2025,17 +1993,53 @@ _main:
 	mov	a,#0x80
 	push	acc
 	lcall	_printf
+	mov	a,sp
+	add	a,#0xfb
+	mov	sp,a
+	C$Lab_2.c$236$2$65 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:236: printf("\n");
+	mov	a,#___str_6
+	push	acc
+	mov	a,#(___str_6 >> 8)
+	push	acc
+	mov	a,#0x80
+	push	acc
+	lcall	_printf
 	dec	sp
 	dec	sp
 	dec	sp
-	sjmp	00151$
-00146$:
 	C$Lab_2.c$237$2$65 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:237: else if (amber_score == green_score)
-	mov	a,_green_score
-	cjne	a,_amber_score,00151$
-	C$Lab_2.c$239$3$79 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:239: printf("\r\tIt's a tie. FIGHT TO THE DEATH!\n");
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:237: TR0 = 0; // turn timer off
+	clr	_TR0
+	C$Lab_2.c$238$2$65 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:238: Counts = 0;
+	clr	a
+	mov	_Counts,a
+	mov	(_Counts + 1),a
+	C$Lab_2.c$239$2$65 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:239: Seconds = 0;
+;	1-genFromRTrack replaced	mov	_Seconds,#0x00
+	mov	_Seconds,a
+	C$Lab_2.c$240$2$65 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:240: TR0 = 1; // turn timer on
+	setb	_TR0
+	C$Lab_2.c$241$2$65 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:241: while (Seconds < 1);
+00137$:
+	mov	a,#0x100 - 0x01
+	add	a,_Seconds
+	jnc	00137$
+	C$Lab_2.c$242$2$65 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:242: TR0 = 0; // turn timer off
+	clr	_TR0
+	C$Lab_2.c$244$2$65 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:244: if (green_score > amber_score)
+	clr	c
+	mov	a,_amber_score
+	subb	a,_green_score
+	jnc	00146$
+	C$Lab_2.c$246$3$76 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:246: printf("\r\tWinner is Amber!\n");
 	mov	a,#___str_11
 	push	acc
 	mov	a,#(___str_11 >> 8)
@@ -2046,26 +2050,64 @@ _main:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$Lab_2.c$242$2$65 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:242: while (!Start_Button());		// stall here until it is pressed again.
+	sjmp	00148$
+00146$:
+	C$Lab_2.c$248$2$65 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:248: else if (amber_score > green_score)
+	clr	c
+	mov	a,_green_score
+	subb	a,_amber_score
+	jnc	00143$
+	C$Lab_2.c$250$3$77 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:250: printf("\r\tWinner is Green!\n");
+	mov	a,#___str_12
+	push	acc
+	mov	a,#(___str_12 >> 8)
+	push	acc
+	mov	a,#0x80
+	push	acc
+	lcall	_printf
+	dec	sp
+	dec	sp
+	dec	sp
+	sjmp	00148$
+00143$:
+	C$Lab_2.c$252$2$65 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:252: else if (amber_score == green_score)
+	mov	a,_green_score
+	cjne	a,_amber_score,00148$
+	C$Lab_2.c$254$3$78 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:254: printf("\r\tIt's a tie. FIGHT TO THE DEATH!\n");
+	mov	a,#___str_13
+	push	acc
+	mov	a,#(___str_13 >> 8)
+	push	acc
+	mov	a,#0x80
+	push	acc
+	lcall	_printf
+	dec	sp
+	dec	sp
+	dec	sp
+	C$Lab_2.c$257$2$65 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:257: while (!Start_Button());		// stall here until it is pressed again.
+00148$:
+	lcall	_Start_Button
+	mov	a,dpl
+	mov	b,dph
+	orl	a,b
+	jz	00148$
+	C$Lab_2.c$258$2$65 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:258: while (Start_Button());
 00151$:
 	lcall	_Start_Button
 	mov	a,dpl
 	mov	b,dph
 	orl	a,b
-	jz	00151$
-	C$Lab_2.c$243$2$65 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:243: while (Start_Button());
-00154$:
-	lcall	_Start_Button
-	mov	a,dpl
-	mov	b,dph
-	orl	a,b
-	jnz	00302$
-	ljmp	00158$
-00302$:
-	sjmp	00154$
-	C$Lab_2.c$245$1$64 ==.
+	jnz	00281$
+	ljmp	00155$
+00281$:
+	sjmp	00151$
+	C$Lab_2.c$260$1$64 ==.
 	XG$main$0$0 ==.
 	ret
 ;------------------------------------------------------------
@@ -2074,8 +2116,8 @@ _main:
 ;Mastermind_Array          Allocated to registers r5 r6 r7 
 ;------------------------------------------------------------
 	G$GENERATE_MASTERMIND_ARRAY$0$0 ==.
-	C$Lab_2.c$249$1$64 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:249: void GENERATE_MASTERMIND_ARRAY(int Mastermind_Array[])
+	C$Lab_2.c$264$1$64 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:264: void GENERATE_MASTERMIND_ARRAY(int Mastermind_Array[])
 ;	-----------------------------------------
 ;	 function GENERATE_MASTERMIND_ARRAY
 ;	-----------------------------------------
@@ -2083,8 +2125,8 @@ _GENERATE_MASTERMIND_ARRAY:
 	mov	r5,dpl
 	mov	r6,dph
 	mov	r7,b
-	C$Lab_2.c$251$1$81 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:251: Mastermind_Array[0] = random(); // random integer between 0,1,2
+	C$Lab_2.c$266$1$80 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:266: Mastermind_Array[0] = random(); // random integer between 0,1,2
 	push	ar7
 	push	ar6
 	push	ar5
@@ -2102,8 +2144,8 @@ _GENERATE_MASTERMIND_ARRAY:
 	inc	dptr
 	mov	a,r3
 	lcall	__gptrput
-	C$Lab_2.c$252$1$81 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:252: Mastermind_Array[1] = random(); // random integer between 0,1,2
+	C$Lab_2.c$267$1$80 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:267: Mastermind_Array[1] = random(); // random integer between 0,1,2
 	mov	a,#0x02
 	add	a,r5
 	mov	r2,a
@@ -2134,8 +2176,8 @@ _GENERATE_MASTERMIND_ARRAY:
 	inc	dptr
 	mov	a,r1
 	lcall	__gptrput
-	C$Lab_2.c$253$1$81 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:253: Mastermind_Array[2] = random(); // random integer between 0,1,2
+	C$Lab_2.c$268$1$80 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:268: Mastermind_Array[2] = random(); // random integer between 0,1,2
 	mov	a,#0x04
 	add	a,r5
 	mov	r5,a
@@ -2158,36 +2200,36 @@ _GENERATE_MASTERMIND_ARRAY:
 	inc	dptr
 	mov	a,r3
 	lcall	__gptrput
-	C$Lab_2.c$254$1$81 ==.
+	C$Lab_2.c$269$1$80 ==.
 	XG$GENERATE_MASTERMIND_ARRAY$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'FUNCTION_A'
 ;------------------------------------------------------------
 	G$FUNCTION_A$0$0 ==.
-	C$Lab_2.c$258$1$81 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:258: void FUNCTION_A(void)
+	C$Lab_2.c$273$1$80 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:273: void FUNCTION_A(void)
 ;	-----------------------------------------
 ;	 function FUNCTION_A
 ;	-----------------------------------------
 _FUNCTION_A:
-	C$Lab_2.c$262$1$83 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:262: if (!Switch_A1())  // turn BILEDA off
+	C$Lab_2.c$277$1$82 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:277: if (!Switch_A1())  // turn BILEDA off
 	lcall	_Switch_A1
 	mov	a,dpl
 	mov	b,dph
 	orl	a,b
 	jnz	00109$
-	C$Lab_2.c$264$2$84 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:264: BILEDA0 = 0;
+	C$Lab_2.c$279$2$83 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:279: BILEDA0 = 0;
 	clr	_BILEDA0
-	C$Lab_2.c$265$2$84 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:265: BILEDA1 = 0;
+	C$Lab_2.c$280$2$83 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:280: BILEDA1 = 0;
 	clr	_BILEDA1
 	sjmp	00110$
 00109$:
-	C$Lab_2.c$267$1$83 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:267: else if ((!Switch_A0()) && Switch_A1()) // turn BILEDA to RED
+	C$Lab_2.c$282$1$82 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:282: else if ((!Switch_A0()) && Switch_A1()) // turn BILEDA to RED
 	lcall	_Switch_A0
 	mov	a,dpl
 	mov	b,dph
@@ -2198,16 +2240,16 @@ _FUNCTION_A:
 	mov	b,dph
 	orl	a,b
 	jz	00105$
-	C$Lab_2.c$269$2$85 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:269: BILEDA0 = 0;
+	C$Lab_2.c$284$2$84 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:284: BILEDA0 = 0;
 	clr	_BILEDA0
-	C$Lab_2.c$270$2$85 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:270: BILEDA1 = 1;
+	C$Lab_2.c$285$2$84 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:285: BILEDA1 = 1;
 	setb	_BILEDA1
 	sjmp	00110$
 00105$:
-	C$Lab_2.c$272$1$83 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:272: else if (Switch_A0() && Switch_A1()) // turn BILEDA to GREEN
+	C$Lab_2.c$287$1$82 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:287: else if (Switch_A0() && Switch_A1()) // turn BILEDA to GREEN
 	lcall	_Switch_A0
 	mov	a,dpl
 	mov	b,dph
@@ -2218,30 +2260,30 @@ _FUNCTION_A:
 	mov	b,dph
 	orl	a,b
 	jz	00110$
-	C$Lab_2.c$274$2$86 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:274: BILEDA0 = 1;
+	C$Lab_2.c$289$2$85 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:289: BILEDA0 = 1;
 	setb	_BILEDA0
-	C$Lab_2.c$275$2$86 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:275: BILEDA1 = 0;
+	C$Lab_2.c$290$2$85 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:290: BILEDA1 = 0;
 	clr	_BILEDA1
 00110$:
-	C$Lab_2.c$278$1$83 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:278: if (!Switch_B1())  // turn BILEDB off
+	C$Lab_2.c$293$1$82 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:293: if (!Switch_B1())  // turn BILEDB off
 	lcall	_Switch_B1
 	mov	a,dpl
 	mov	b,dph
 	orl	a,b
 	jnz	00119$
-	C$Lab_2.c$280$2$87 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:280: BILEDB0 = 0;
+	C$Lab_2.c$295$2$86 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:295: BILEDB0 = 0;
 	clr	_BILEDB0
-	C$Lab_2.c$281$2$87 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:281: BILEDB1 = 0;
+	C$Lab_2.c$296$2$86 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:296: BILEDB1 = 0;
 	clr	_BILEDB1
 	sjmp	00120$
 00119$:
-	C$Lab_2.c$283$1$83 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:283: else if ((!Switch_B0()) && Switch_B1()) // turn BILEDB to RED
+	C$Lab_2.c$298$1$82 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:298: else if ((!Switch_B0()) && Switch_B1()) // turn BILEDB to RED
 	lcall	_Switch_B0
 	mov	a,dpl
 	mov	b,dph
@@ -2252,16 +2294,16 @@ _FUNCTION_A:
 	mov	b,dph
 	orl	a,b
 	jz	00115$
-	C$Lab_2.c$285$2$88 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:285: BILEDB0 = 0;
+	C$Lab_2.c$300$2$87 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:300: BILEDB0 = 0;
 	clr	_BILEDB0
-	C$Lab_2.c$286$2$88 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:286: BILEDB1 = 1;
+	C$Lab_2.c$301$2$87 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:301: BILEDB1 = 1;
 	setb	_BILEDB1
 	sjmp	00120$
 00115$:
-	C$Lab_2.c$288$1$83 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:288: else if (Switch_B0() && Switch_B1()) // turn BILEDB to GREEN
+	C$Lab_2.c$303$1$82 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:303: else if (Switch_B0() && Switch_B1()) // turn BILEDB to GREEN
 	lcall	_Switch_B0
 	mov	a,dpl
 	mov	b,dph
@@ -2272,30 +2314,30 @@ _FUNCTION_A:
 	mov	b,dph
 	orl	a,b
 	jz	00120$
-	C$Lab_2.c$290$2$89 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:290: BILEDB0 = 1;
+	C$Lab_2.c$305$2$88 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:305: BILEDB0 = 1;
 	setb	_BILEDB0
-	C$Lab_2.c$291$2$89 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:291: BILEDB1 = 0;
+	C$Lab_2.c$306$2$88 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:306: BILEDB1 = 0;
 	clr	_BILEDB1
 00120$:
-	C$Lab_2.c$294$1$83 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:294: if (!Switch_C1())  // turn BILEDC off
+	C$Lab_2.c$309$1$82 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:309: if (!Switch_C1())  // turn BILEDC off
 	lcall	_Switch_C1
 	mov	a,dpl
 	mov	b,dph
 	orl	a,b
 	jnz	00129$
-	C$Lab_2.c$296$2$90 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:296: BILEDC0 = 0;
+	C$Lab_2.c$311$2$89 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:311: BILEDC0 = 0;
 	clr	_BILEDC0
-	C$Lab_2.c$297$2$90 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:297: BILEDC1 = 0;
+	C$Lab_2.c$312$2$89 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:312: BILEDC1 = 0;
 	clr	_BILEDC1
 	sjmp	00131$
 00129$:
-	C$Lab_2.c$299$1$83 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:299: else if ((!Switch_C0()) && (Switch_C1())) // turn BILEDC to RED
+	C$Lab_2.c$314$1$82 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:314: else if ((!Switch_C0()) && (Switch_C1())) // turn BILEDC to RED
 	lcall	_Switch_C0
 	mov	a,dpl
 	mov	b,dph
@@ -2306,16 +2348,16 @@ _FUNCTION_A:
 	mov	b,dph
 	orl	a,b
 	jz	00125$
-	C$Lab_2.c$301$2$91 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:301: BILEDC0 = 0;
+	C$Lab_2.c$316$2$90 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:316: BILEDC0 = 0;
 	clr	_BILEDC0
-	C$Lab_2.c$302$2$91 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:302: BILEDC1 = 1;
+	C$Lab_2.c$317$2$90 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:317: BILEDC1 = 1;
 	setb	_BILEDC1
 	sjmp	00131$
 00125$:
-	C$Lab_2.c$304$1$83 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:304: else if ((Switch_C0()) && (Switch_C1())) // turn BILEDC to GREEN
+	C$Lab_2.c$319$1$82 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:319: else if ((Switch_C0()) && (Switch_C1())) // turn BILEDC to GREEN
 	lcall	_Switch_C0
 	mov	a,dpl
 	mov	b,dph
@@ -2326,52 +2368,61 @@ _FUNCTION_A:
 	mov	b,dph
 	orl	a,b
 	jz	00131$
-	C$Lab_2.c$306$2$92 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:306: BILEDC0 = 1;
+	C$Lab_2.c$321$2$91 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:321: BILEDC0 = 1;
 	setb	_BILEDC0
-	C$Lab_2.c$307$2$92 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:307: BILEDC1 = 0;
+	C$Lab_2.c$322$2$91 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:322: BILEDC1 = 0;
 	clr	_BILEDC1
 00131$:
-	C$Lab_2.c$309$1$83 ==.
+	C$Lab_2.c$324$1$82 ==.
 	XG$FUNCTION_A$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'FUNCTION_B'
 ;------------------------------------------------------------
 ;Guess_Array               Allocated with name '_FUNCTION_B_PARM_2'
-;Mastermind_Array          Allocated with name '_FUNCTION_B_Mastermind_Array_1_93'
+;Mastermind_Array          Allocated to registers r5 r6 r7 
 ;------------------------------------------------------------
 	G$FUNCTION_B$0$0 ==.
-	C$Lab_2.c$313$1$83 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:313: char FUNCTION_B(int Mastermind_Array[], int Guess_Array[])
+	C$Lab_2.c$328$1$82 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:328: char FUNCTION_B(int Mastermind_Array[], int Guess_Array[])
 ;	-----------------------------------------
 ;	 function FUNCTION_B
 ;	-----------------------------------------
 _FUNCTION_B:
-	mov	_FUNCTION_B_Mastermind_Array_1_93,dpl
-	mov	(_FUNCTION_B_Mastermind_Array_1_93 + 1),dph
-	mov	(_FUNCTION_B_Mastermind_Array_1_93 + 2),b
-	C$Lab_2.c$316$1$94 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:316: j = 0;
+	mov	r5,dpl
+	mov	r6,dph
+	mov	r7,b
+	C$Lab_2.c$330$1$93 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:330: MA_0 = 0; // separate counts for Mastermind_Array
+	mov	_MA_0,#0x00
+	C$Lab_2.c$331$1$93 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:331: MA_1 = 0;
+	mov	_MA_1,#0x00
+	C$Lab_2.c$332$1$93 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:332: MA_2 = 0;
+	mov	_MA_2,#0x00
+	C$Lab_2.c$333$1$93 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:333: GA_0 = 0; // separate counts for Guess_Array
+	mov	_GA_0,#0x00
+	C$Lab_2.c$334$1$93 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:334: GA_1 = 0;
+	mov	_GA_1,#0x00
+	C$Lab_2.c$335$1$93 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:335: GA_2 = 0;
+	C$Lab_2.c$336$1$93 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:336: number_of_correct_colors = 0;
+	C$Lab_2.c$338$1$93 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:338: for (i=0; i<3; i++)
 	clr	a
-	mov	_j,a
-	mov	(_j + 1),a
-	C$Lab_2.c$317$1$94 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:317: flag = 0;
-	mov	_flag,a
-	mov	(_flag + 1),a
-	C$Lab_2.c$318$1$94 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:318: number_of_correct_colors = 0;
-;	1-genFromRTrack replaced	mov	_number_of_correct_colors,#0x00
+	mov	_GA_2,a
 	mov	_number_of_correct_colors,a
-	C$Lab_2.c$320$1$94 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:320: for (i=0; i<3; i++)
 	mov	_i,a
 	mov	(_i + 1),a
-00107$:
-	C$Lab_2.c$322$2$95 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:322: MA_Copy[i] = Mastermind_Array[i];
+00124$:
+	C$Lab_2.c$341$2$94 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:341: if (Mastermind_Array[i] == 0)
 	mov	a,_i
 	add	a,_i
 	mov	r3,a
@@ -2379,15 +2430,12 @@ _FUNCTION_B:
 	rlc	a
 	mov	r4,a
 	mov	a,r3
-	add	a,#_MA_Copy
-	mov	r1,a
-	mov	a,r3
-	add	a,_FUNCTION_B_Mastermind_Array_1_93
+	add	a,r5
 	mov	r3,a
 	mov	a,r4
-	addc	a,(_FUNCTION_B_Mastermind_Array_1_93 + 1)
+	addc	a,r6
 	mov	r4,a
-	mov	r2,(_FUNCTION_B_Mastermind_Array_1_93 + 2)
+	mov	ar2,r7
 	mov	dpl,r3
 	mov	dph,r4
 	mov	b,r2
@@ -2396,38 +2444,74 @@ _FUNCTION_B:
 	inc	dptr
 	lcall	__gptrget
 	mov	r4,a
-	mov	@r1,ar3
-	inc	r1
-	mov	@r1,ar4
-	dec	r1
-	C$Lab_2.c$320$1$94 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:320: for (i=0; i<3; i++)
-	inc	_i
-	clr	a
-	cjne	a,_i,00139$
-	inc	(_i + 1)
-00139$:
-	clr	c
+	orl	a,r3
+	jnz	00107$
+	C$Lab_2.c$343$3$95 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:343: MA_0++;
+	inc	_MA_0
+	sjmp	00108$
+00107$:
+	C$Lab_2.c$345$2$94 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:345: else if (Mastermind_Array[i] == 1)
 	mov	a,_i
-	subb	a,#0x03
+	add	a,_i
+	mov	r3,a
 	mov	a,(_i + 1)
-	xrl	a,#0x80
-	subb	a,#0x80
-	jc	00107$
-	C$Lab_2.c$325$1$94 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:325: for (i=0; i<3; i++) // iterate through Guess_Array
-	clr	a
-	mov	_i,a
-	mov	(_i + 1),a
-00111$:
-	C$Lab_2.c$328$2$96 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:328: for (j=0; j<3; j++) // iterate through Mastermind_Array
-	clr	a
-	mov	_j,a
-	mov	(_j + 1),a
-00109$:
-	C$Lab_2.c$330$3$97 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:330: if ((Guess_Array[i] == Mastermind_Array[j]) && (flag == 0))
+	rlc	a
+	mov	r4,a
+	mov	a,r3
+	add	a,r5
+	mov	r3,a
+	mov	a,r4
+	addc	a,r6
+	mov	r4,a
+	mov	ar2,r7
+	mov	dpl,r3
+	mov	dph,r4
+	mov	b,r2
+	lcall	__gptrget
+	mov	r3,a
+	inc	dptr
+	lcall	__gptrget
+	mov	r4,a
+	cjne	r3,#0x01,00104$
+	cjne	r4,#0x00,00104$
+	C$Lab_2.c$347$3$96 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:347: MA_1++;
+	inc	_MA_1
+	sjmp	00108$
+00104$:
+	C$Lab_2.c$349$2$94 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:349: else if (Mastermind_Array[i] == 2)
+	mov	a,_i
+	add	a,_i
+	mov	r3,a
+	mov	a,(_i + 1)
+	rlc	a
+	mov	r4,a
+	mov	a,r3
+	add	a,r5
+	mov	r3,a
+	mov	a,r4
+	addc	a,r6
+	mov	r4,a
+	mov	ar2,r7
+	mov	dpl,r3
+	mov	dph,r4
+	mov	b,r2
+	lcall	__gptrget
+	mov	r3,a
+	inc	dptr
+	lcall	__gptrget
+	mov	r4,a
+	cjne	r3,#0x02,00108$
+	cjne	r4,#0x00,00108$
+	C$Lab_2.c$351$3$97 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:351: MA_2++;
+	inc	_MA_2
+00108$:
+	C$Lab_2.c$354$2$94 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:354: if (Guess_Array[i] == 0)
 	mov	a,_i
 	add	a,_i
 	mov	r3,a
@@ -2449,97 +2533,128 @@ _FUNCTION_B:
 	inc	dptr
 	lcall	__gptrget
 	mov	r4,a
-	mov	a,_j
-	add	a,_j
-	mov	r2,a
-	mov	a,(_j + 1)
+	orl	a,r3
+	jnz	00115$
+	C$Lab_2.c$356$3$98 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:356: GA_0++;
+	inc	_GA_0
+	sjmp	00125$
+00115$:
+	C$Lab_2.c$358$2$94 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:358: else if (Guess_Array[i] == 1)
+	mov	a,_i
+	add	a,_i
+	mov	r3,a
+	mov	a,(_i + 1)
 	rlc	a
-	mov	r7,a
-	mov	a,r2
-	add	a,_FUNCTION_B_Mastermind_Array_1_93
-	mov	r2,a
-	mov	a,r7
-	addc	a,(_FUNCTION_B_Mastermind_Array_1_93 + 1)
-	mov	r7,a
-	mov	r6,(_FUNCTION_B_Mastermind_Array_1_93 + 2)
-	mov	dpl,r2
-	mov	dph,r7
-	mov	b,r6
+	mov	r4,a
+	mov	a,r3
+	add	a,_FUNCTION_B_PARM_2
+	mov	r3,a
+	mov	a,r4
+	addc	a,(_FUNCTION_B_PARM_2 + 1)
+	mov	r4,a
+	mov	r2,(_FUNCTION_B_PARM_2 + 2)
+	mov	dpl,r3
+	mov	dph,r4
+	mov	b,r2
 	lcall	__gptrget
-	mov	r2,a
+	mov	r3,a
 	inc	dptr
 	lcall	__gptrget
-	mov	r7,a
-	mov	a,r3
-	cjne	a,ar2,00110$
-	mov	a,r4
-	cjne	a,ar7,00110$
-	mov	a,_flag
-	orl	a,(_flag + 1)
-	jnz	00110$
-	C$Lab_2.c$332$4$98 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:332: number_of_correct_colors++;
-	inc	_number_of_correct_colors
-	C$Lab_2.c$333$4$98 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:333: MA_Copy[j] = 7;
-	mov	a,_j
-	add	a,_j
-	mov	r6,a
-	mov	a,(_j + 1)
+	mov	r4,a
+	cjne	r3,#0x01,00112$
+	cjne	r4,#0x00,00112$
+	C$Lab_2.c$360$3$99 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:360: GA_1++;
+	inc	_GA_1
+	sjmp	00125$
+00112$:
+	C$Lab_2.c$362$2$94 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:362: else if (Guess_Array[i] == 2)
+	mov	a,_i
+	add	a,_i
+	mov	r3,a
+	mov	a,(_i + 1)
 	rlc	a
-	mov	r7,a
-	mov	a,r6
-	add	a,#_MA_Copy
-	mov	r0,a
-	mov	@r0,#0x07
-	inc	r0
-	mov	@r0,#0x00
-	C$Lab_2.c$334$4$98 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:334: flag = 1;
-	mov	_flag,#0x01
-	mov	(_flag + 1),#0x00
-00110$:
-	C$Lab_2.c$328$2$96 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:328: for (j=0; j<3; j++) // iterate through Mastermind_Array
-	inc	_j
-	clr	a
-	cjne	a,_j,00144$
-	inc	(_j + 1)
-00144$:
-	clr	c
-	mov	a,_j
-	subb	a,#0x03
-	mov	a,(_j + 1)
-	xrl	a,#0x80
-	subb	a,#0x80
-	jnc	00145$
-	ljmp	00109$
-00145$:
-	C$Lab_2.c$337$2$96 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:337: flag = 0; // reset flag
-	clr	a
-	mov	_flag,a
-	mov	(_flag + 1),a
-	C$Lab_2.c$325$1$94 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:325: for (i=0; i<3; i++) // iterate through Guess_Array
+	mov	r4,a
+	mov	a,r3
+	add	a,_FUNCTION_B_PARM_2
+	mov	r3,a
+	mov	a,r4
+	addc	a,(_FUNCTION_B_PARM_2 + 1)
+	mov	r4,a
+	mov	r2,(_FUNCTION_B_PARM_2 + 2)
+	mov	dpl,r3
+	mov	dph,r4
+	mov	b,r2
+	lcall	__gptrget
+	mov	r3,a
+	inc	dptr
+	lcall	__gptrget
+	mov	r4,a
+	cjne	r3,#0x02,00125$
+	cjne	r4,#0x00,00125$
+	C$Lab_2.c$364$3$100 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:364: GA_2++;
+	inc	_GA_2
+00125$:
+	C$Lab_2.c$338$1$93 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:338: for (i=0; i<3; i++)
 	inc	_i
-;	genFromRTrack removed	clr	a
-	cjne	a,_i,00146$
+	clr	a
+	cjne	a,_i,00171$
 	inc	(_i + 1)
-00146$:
+00171$:
 	clr	c
 	mov	a,_i
 	subb	a,#0x03
 	mov	a,(_i + 1)
 	xrl	a,#0x80
 	subb	a,#0x80
-	jnc	00147$
-	ljmp	00111$
-00147$:
-	C$Lab_2.c$339$1$94 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:339: return number_of_correct_colors;
+	jnc	00172$
+	ljmp	00124$
+00172$:
+	C$Lab_2.c$367$1$93 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:367: if (GA_0 >= MA_0)
+	clr	c
+	mov	a,_GA_0
+	subb	a,_MA_0
+	jc	00119$
+	C$Lab_2.c$369$2$101 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:369: number_of_correct_colors += MA_0;
+	mov	a,_MA_0
+	add	a,_number_of_correct_colors
+	mov	_number_of_correct_colors,a
+00119$:
+	C$Lab_2.c$371$1$93 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:371: if (GA_1 >= MA_1)
+	clr	c
+	mov	a,_GA_1
+	subb	a,_MA_1
+	jc	00121$
+	C$Lab_2.c$373$2$102 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:373: number_of_correct_colors += MA_1;
+	mov	a,_MA_1
+	add	a,_number_of_correct_colors
+	mov	_number_of_correct_colors,a
+00121$:
+	C$Lab_2.c$375$1$93 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:375: if (GA_2 >= MA_2)
+	clr	c
+	mov	a,_GA_2
+	subb	a,_MA_2
+	jc	00123$
+	C$Lab_2.c$377$2$103 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:377: number_of_correct_colors += MA_2;
+	mov	a,_MA_2
+	add	a,_number_of_correct_colors
+	mov	_number_of_correct_colors,a
+00123$:
+	C$Lab_2.c$379$1$93 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:379: return number_of_correct_colors;
 	mov	dpl,_number_of_correct_colors
-	C$Lab_2.c$340$1$94 ==.
+	C$Lab_2.c$380$1$93 ==.
 	XG$FUNCTION_B$0$0 ==.
 	ret
 ;------------------------------------------------------------
@@ -2549,8 +2664,8 @@ _FUNCTION_B:
 ;Mastermind_Array          Allocated to registers r5 r6 r7 
 ;------------------------------------------------------------
 	G$FUNCTION_C$0$0 ==.
-	C$Lab_2.c$344$1$94 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:344: char FUNCTION_C(int Mastermind_Array[], int Guess_Array[])
+	C$Lab_2.c$384$1$93 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:384: char FUNCTION_C(int Mastermind_Array[], int Guess_Array[])
 ;	-----------------------------------------
 ;	 function FUNCTION_C
 ;	-----------------------------------------
@@ -2558,17 +2673,17 @@ _FUNCTION_C:
 	mov	r5,dpl
 	mov	r6,dph
 	mov	r7,b
-	C$Lab_2.c$347$1$100 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:347: number_of_correct_spots = 0;
-	C$Lab_2.c$348$1$100 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:348: for (i=0; i<3; i++)
+	C$Lab_2.c$387$1$105 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:387: number_of_correct_spots = 0;
+	C$Lab_2.c$388$1$105 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:388: for (i=0; i<3; i++)
 	clr	a
 	mov	_number_of_correct_spots,a
 	mov	_i,a
 	mov	(_i + 1),a
 00104$:
-	C$Lab_2.c$350$2$101 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:350: if (Mastermind_Array[i] == Guess_Array[i])
+	C$Lab_2.c$390$2$106 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:390: if (Mastermind_Array[i] == Guess_Array[i])
 	mov	a,_i
 	add	a,_i
 	mov	r3,a
@@ -2609,12 +2724,12 @@ _FUNCTION_C:
 	cjne	a,ar3,00105$
 	mov	a,r1
 	cjne	a,ar4,00105$
-	C$Lab_2.c$352$3$102 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:352: number_of_correct_spots++;
+	C$Lab_2.c$392$3$107 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:392: number_of_correct_spots++;
 	inc	_number_of_correct_spots
 00105$:
-	C$Lab_2.c$348$1$100 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:348: for (i=0; i<3; i++)
+	C$Lab_2.c$388$1$105 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:388: for (i=0; i<3; i++)
 	inc	_i
 	clr	a
 	cjne	a,_i,00119$
@@ -2627,10 +2742,10 @@ _FUNCTION_C:
 	xrl	a,#0x80
 	subb	a,#0x80
 	jc	00104$
-	C$Lab_2.c$355$1$100 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:355: return number_of_correct_spots;
+	C$Lab_2.c$395$1$105 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:395: return number_of_correct_spots;
 	mov	dpl,_number_of_correct_spots
-	C$Lab_2.c$356$1$100 ==.
+	C$Lab_2.c$396$1$105 ==.
 	XG$FUNCTION_C$0$0 ==.
 	ret
 ;------------------------------------------------------------
@@ -2641,8 +2756,8 @@ _FUNCTION_C:
 ;Mastermind_Array          Allocated to registers r5 r6 r7 
 ;------------------------------------------------------------
 	G$FUNCTION_Da$0$0 ==.
-	C$Lab_2.c$360$1$100 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:360: void FUNCTION_Da(int Mastermind_Array[], int Guess_Array[], unsigned char amber_score)
+	C$Lab_2.c$400$1$105 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:400: void FUNCTION_Da(int Mastermind_Array[], int Guess_Array[], unsigned char amber_score)
 ;	-----------------------------------------
 ;	 function FUNCTION_Da
 ;	-----------------------------------------
@@ -2650,19 +2765,19 @@ _FUNCTION_Da:
 	mov	r5,dpl
 	mov	r6,dph
 	mov	r7,b
-	C$Lab_2.c$362$1$104 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:362: i = 0;
+	C$Lab_2.c$402$1$109 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:402: i = 0;
 	clr	a
 	mov	_i,a
 	mov	(_i + 1),a
-	C$Lab_2.c$363$1$104 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:363: printf("\r");
+	C$Lab_2.c$403$1$109 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:403: printf("\r");
 	push	ar7
 	push	ar6
 	push	ar5
-	mov	a,#___str_12
+	mov	a,#___str_14
 	push	acc
-	mov	a,#(___str_12 >> 8)
+	mov	a,#(___str_14 >> 8)
 	push	acc
 	mov	a,#0x80
 	push	acc
@@ -2673,14 +2788,14 @@ _FUNCTION_Da:
 	pop	ar5
 	pop	ar6
 	pop	ar7
-	C$Lab_2.c$364$1$104 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:364: for (i=0; i<3; i++)
+	C$Lab_2.c$404$1$109 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:404: for (i=0; i<3; i++)
 	clr	a
 	mov	_i,a
 	mov	(_i + 1),a
 00106$:
-	C$Lab_2.c$366$2$105 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:366: printf("%d", Guess_Array[i]);
+	C$Lab_2.c$406$2$110 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:406: printf("%d", Guess_Array[i]);
 	mov	a,_i
 	add	a,_i
 	mov	r3,a
@@ -2707,9 +2822,9 @@ _FUNCTION_Da:
 	push	ar5
 	push	ar3
 	push	ar4
-	mov	a,#___str_3
+	mov	a,#___str_5
 	push	acc
-	mov	a,#(___str_3 >> 8)
+	mov	a,#(___str_5 >> 8)
 	push	acc
 	mov	a,#0x80
 	push	acc
@@ -2720,13 +2835,13 @@ _FUNCTION_Da:
 	pop	ar5
 	pop	ar6
 	pop	ar7
-	C$Lab_2.c$364$1$104 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:364: for (i=0; i<3; i++)
+	C$Lab_2.c$404$1$109 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:404: for (i=0; i<3; i++)
 	inc	_i
 	clr	a
-	cjne	a,_i,00119$
+	cjne	a,_i,00122$
 	inc	(_i + 1)
-00119$:
+00122$:
 	clr	c
 	mov	a,_i
 	subb	a,#0x03
@@ -2734,8 +2849,8 @@ _FUNCTION_Da:
 	xrl	a,#0x80
 	subb	a,#0x80
 	jc	00106$
-	C$Lab_2.c$368$1$104 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:368: printf("\t%u", FUNCTION_B(Mastermind_Array, Guess_Array));
+	C$Lab_2.c$408$1$109 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:408: printf("\t%u", FUNCTION_B(Mastermind_Array, Guess_Array));
 	mov	_FUNCTION_B_PARM_2,_FUNCTION_Da_PARM_2
 	mov	(_FUNCTION_B_PARM_2 + 1),(_FUNCTION_Da_PARM_2 + 1)
 	mov	(_FUNCTION_B_PARM_2 + 2),(_FUNCTION_Da_PARM_2 + 2)
@@ -2753,111 +2868,6 @@ _FUNCTION_Da:
 	mov	r3,a
 	push	ar4
 	push	ar3
-	mov	a,#___str_13
-	push	acc
-	mov	a,#(___str_13 >> 8)
-	push	acc
-	mov	a,#0x80
-	push	acc
-	lcall	_printf
-	mov	a,sp
-	add	a,#0xfb
-	mov	sp,a
-	pop	ar5
-	pop	ar6
-	pop	ar7
-	C$Lab_2.c$369$1$104 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:369: printf("\t%u", FUNCTION_C(Mastermind_Array, Guess_Array));
-	mov	_FUNCTION_C_PARM_2,_FUNCTION_Da_PARM_2
-	mov	(_FUNCTION_C_PARM_2 + 1),(_FUNCTION_Da_PARM_2 + 1)
-	mov	(_FUNCTION_C_PARM_2 + 2),(_FUNCTION_Da_PARM_2 + 2)
-	mov	dpl,r5
-	mov	dph,r6
-	mov	b,r7
-	push	ar7
-	push	ar6
-	push	ar5
-	lcall	_FUNCTION_C
-	mov	a,dpl
-	mov	r4,a
-	rlc	a
-	subb	a,acc
-	mov	r3,a
-	push	ar4
-	push	ar3
-	mov	a,#___str_13
-	push	acc
-	mov	a,#(___str_13 >> 8)
-	push	acc
-	mov	a,#0x80
-	push	acc
-	lcall	_printf
-	mov	a,sp
-	add	a,#0xfb
-	mov	sp,a
-	C$Lab_2.c$370$1$104 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:370: printf("\t%u", amber_score);
-	mov	r3,_FUNCTION_Da_PARM_3
-	mov	r4,#0x00
-	push	ar3
-	push	ar4
-	mov	a,#___str_13
-	push	acc
-	mov	a,#(___str_13 >> 8)
-	push	acc
-	mov	a,#0x80
-	push	acc
-	lcall	_printf
-	mov	a,sp
-	add	a,#0xfb
-	mov	sp,a
-	pop	ar5
-	pop	ar6
-	pop	ar7
-	C$Lab_2.c$371$1$104 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:371: if (FUNCTION_B(Mastermind_Array, Guess_Array) == 0)
-	mov	_FUNCTION_B_PARM_2,_FUNCTION_Da_PARM_2
-	mov	(_FUNCTION_B_PARM_2 + 1),(_FUNCTION_Da_PARM_2 + 1)
-	mov	(_FUNCTION_B_PARM_2 + 2),(_FUNCTION_Da_PARM_2 + 2)
-	mov	dpl,r5
-	mov	dph,r6
-	mov	b,r7
-	push	ar7
-	push	ar6
-	push	ar5
-	lcall	_FUNCTION_B
-	pop	ar5
-	pop	ar6
-	pop	ar7
-	C$Lab_2.c$376$1$104 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:376: if (FUNCTION_C(Mastermind_Array, Guess_Array) == 3)
-	mov	_FUNCTION_C_PARM_2,_FUNCTION_Da_PARM_2
-	mov	(_FUNCTION_C_PARM_2 + 1),(_FUNCTION_Da_PARM_2 + 1)
-	mov	(_FUNCTION_C_PARM_2 + 2),(_FUNCTION_Da_PARM_2 + 2)
-	mov	dpl,r5
-	mov	dph,r6
-	mov	b,r7
-	lcall	_FUNCTION_C
-	mov	r7,dpl
-	cjne	r7,#0x03,00105$
-	C$Lab_2.c$378$2$107 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:378: printf("\t(Match!)\n");
-	mov	a,#___str_14
-	push	acc
-	mov	a,#(___str_14 >> 8)
-	push	acc
-	mov	a,#0x80
-	push	acc
-	lcall	_printf
-	dec	sp
-	dec	sp
-	dec	sp
-	C$Lab_2.c$379$2$107 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:379: printf("Amber Points = %u\n", amber_score);
-	mov	r6,_FUNCTION_Da_PARM_3
-	mov	r7,#0x00
-	push	ar6
-	push	ar7
 	mov	a,#___str_15
 	push	acc
 	mov	a,#(___str_15 >> 8)
@@ -2868,12 +2878,100 @@ _FUNCTION_Da:
 	mov	a,sp
 	add	a,#0xfb
 	mov	sp,a
-00105$:
-	C$Lab_2.c$383$1$104 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:383: printf("\n");
-	mov	a,#___str_4
+	pop	ar5
+	pop	ar6
+	pop	ar7
+	C$Lab_2.c$409$1$109 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:409: printf("\t%u", FUNCTION_C(Mastermind_Array, Guess_Array));
+	mov	_FUNCTION_C_PARM_2,_FUNCTION_Da_PARM_2
+	mov	(_FUNCTION_C_PARM_2 + 1),(_FUNCTION_Da_PARM_2 + 1)
+	mov	(_FUNCTION_C_PARM_2 + 2),(_FUNCTION_Da_PARM_2 + 2)
+	mov	dpl,r5
+	mov	dph,r6
+	mov	b,r7
+	push	ar7
+	push	ar6
+	push	ar5
+	lcall	_FUNCTION_C
+	mov	a,dpl
+	mov	r4,a
+	rlc	a
+	subb	a,acc
+	mov	r3,a
+	push	ar4
+	push	ar3
+	mov	a,#___str_15
 	push	acc
-	mov	a,#(___str_4 >> 8)
+	mov	a,#(___str_15 >> 8)
+	push	acc
+	mov	a,#0x80
+	push	acc
+	lcall	_printf
+	mov	a,sp
+	add	a,#0xfb
+	mov	sp,a
+	C$Lab_2.c$410$1$109 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:410: printf("\t%u", amber_score);
+	mov	r3,_FUNCTION_Da_PARM_3
+	mov	r4,#0x00
+	push	ar3
+	push	ar4
+	mov	a,#___str_15
+	push	acc
+	mov	a,#(___str_15 >> 8)
+	push	acc
+	mov	a,#0x80
+	push	acc
+	lcall	_printf
+	mov	a,sp
+	add	a,#0xfb
+	mov	sp,a
+	pop	ar5
+	pop	ar6
+	pop	ar7
+	C$Lab_2.c$411$1$109 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:411: if ((FUNCTION_B(Mastermind_Array, Guess_Array)) == 0)
+	mov	_FUNCTION_B_PARM_2,_FUNCTION_Da_PARM_2
+	mov	(_FUNCTION_B_PARM_2 + 1),(_FUNCTION_Da_PARM_2 + 1)
+	mov	(_FUNCTION_B_PARM_2 + 2),(_FUNCTION_Da_PARM_2 + 2)
+	mov	dpl,r5
+	mov	dph,r6
+	mov	b,r7
+	push	ar7
+	push	ar6
+	push	ar5
+	lcall	_FUNCTION_B
+	mov	a,dpl
+	pop	ar5
+	pop	ar6
+	pop	ar7
+	jnz	00103$
+	C$Lab_2.c$414$2$111 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:414: FUNCTION_E(); // Function that plays buzzer once, to happen when no color matches are found
+	push	ar7
+	push	ar6
+	push	ar5
+	lcall	_FUNCTION_E
+	pop	ar5
+	pop	ar6
+	pop	ar7
+00103$:
+	C$Lab_2.c$416$1$109 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:416: if (FUNCTION_C(Mastermind_Array, Guess_Array) == 3)
+	mov	_FUNCTION_C_PARM_2,_FUNCTION_Da_PARM_2
+	mov	(_FUNCTION_C_PARM_2 + 1),(_FUNCTION_Da_PARM_2 + 1)
+	mov	(_FUNCTION_C_PARM_2 + 2),(_FUNCTION_Da_PARM_2 + 2)
+	mov	dpl,r5
+	mov	dph,r6
+	mov	b,r7
+	lcall	_FUNCTION_C
+	mov	r7,dpl
+	cjne	r7,#0x03,00105$
+	C$Lab_2.c$418$2$112 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:418: printf("\t(Match!)\n");
+	mov	a,#___str_16
+	push	acc
+	mov	a,#(___str_16 >> 8)
 	push	acc
 	mov	a,#0x80
 	push	acc
@@ -2881,7 +2979,39 @@ _FUNCTION_Da:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$Lab_2.c$384$1$104 ==.
+	C$Lab_2.c$419$2$112 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:419: printf("Amber Points = %u\n", amber_score);
+	mov	r6,_FUNCTION_Da_PARM_3
+	mov	r7,#0x00
+	push	ar6
+	push	ar7
+	mov	a,#___str_17
+	push	acc
+	mov	a,#(___str_17 >> 8)
+	push	acc
+	mov	a,#0x80
+	push	acc
+	lcall	_printf
+	mov	a,sp
+	add	a,#0xfb
+	mov	sp,a
+	C$Lab_2.c$421$2$112 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:421: FUNCTION_F(); // Function that plays when the sequence has been correctly guessed
+	lcall	_FUNCTION_F
+00105$:
+	C$Lab_2.c$423$1$109 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:423: printf("\n");
+	mov	a,#___str_6
+	push	acc
+	mov	a,#(___str_6 >> 8)
+	push	acc
+	mov	a,#0x80
+	push	acc
+	lcall	_printf
+	dec	sp
+	dec	sp
+	dec	sp
+	C$Lab_2.c$424$1$109 ==.
 	XG$FUNCTION_Da$0$0 ==.
 	ret
 ;------------------------------------------------------------
@@ -2892,8 +3022,8 @@ _FUNCTION_Da:
 ;Mastermind_Array          Allocated to registers r5 r6 r7 
 ;------------------------------------------------------------
 	G$FUNCTION_Db$0$0 ==.
-	C$Lab_2.c$388$1$104 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:388: void FUNCTION_Db(int Mastermind_Array[], int Guess_Array[], unsigned char green_score)
+	C$Lab_2.c$428$1$109 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:428: void FUNCTION_Db(int Mastermind_Array[], int Guess_Array[], unsigned char green_score)
 ;	-----------------------------------------
 ;	 function FUNCTION_Db
 ;	-----------------------------------------
@@ -2901,14 +3031,14 @@ _FUNCTION_Db:
 	mov	r5,dpl
 	mov	r6,dph
 	mov	r7,b
-	C$Lab_2.c$390$1$109 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:390: printf("\r");
+	C$Lab_2.c$430$1$114 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:430: printf("\r");
 	push	ar7
 	push	ar6
 	push	ar5
-	mov	a,#___str_12
+	mov	a,#___str_14
 	push	acc
-	mov	a,#(___str_12 >> 8)
+	mov	a,#(___str_14 >> 8)
 	push	acc
 	mov	a,#0x80
 	push	acc
@@ -2919,14 +3049,14 @@ _FUNCTION_Db:
 	pop	ar5
 	pop	ar6
 	pop	ar7
-	C$Lab_2.c$392$1$109 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:392: for (i=0; i<3; i++)
+	C$Lab_2.c$432$1$114 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:432: for (i=0; i<3; i++)
 	clr	a
 	mov	_i,a
 	mov	(_i + 1),a
 00106$:
-	C$Lab_2.c$394$2$110 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:394: printf("%d", Guess_Array[i]);
+	C$Lab_2.c$434$2$115 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:434: printf("%d", Guess_Array[i]);
 	mov	a,_i
 	add	a,_i
 	mov	r3,a
@@ -2953,9 +3083,9 @@ _FUNCTION_Db:
 	push	ar5
 	push	ar3
 	push	ar4
-	mov	a,#___str_3
+	mov	a,#___str_5
 	push	acc
-	mov	a,#(___str_3 >> 8)
+	mov	a,#(___str_5 >> 8)
 	push	acc
 	mov	a,#0x80
 	push	acc
@@ -2966,13 +3096,13 @@ _FUNCTION_Db:
 	pop	ar5
 	pop	ar6
 	pop	ar7
-	C$Lab_2.c$392$1$109 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:392: for (i=0; i<3; i++)
+	C$Lab_2.c$432$1$114 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:432: for (i=0; i<3; i++)
 	inc	_i
 	clr	a
-	cjne	a,_i,00119$
+	cjne	a,_i,00122$
 	inc	(_i + 1)
-00119$:
+00122$:
 	clr	c
 	mov	a,_i
 	subb	a,#0x03
@@ -2980,8 +3110,8 @@ _FUNCTION_Db:
 	xrl	a,#0x80
 	subb	a,#0x80
 	jc	00106$
-	C$Lab_2.c$396$1$109 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:396: printf("\t%u", FUNCTION_B(Mastermind_Array, Guess_Array));
+	C$Lab_2.c$436$1$114 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:436: printf("\t%u", FUNCTION_B(Mastermind_Array, Guess_Array));
 	mov	_FUNCTION_B_PARM_2,_FUNCTION_Db_PARM_2
 	mov	(_FUNCTION_B_PARM_2 + 1),(_FUNCTION_Db_PARM_2 + 1)
 	mov	(_FUNCTION_B_PARM_2 + 2),(_FUNCTION_Db_PARM_2 + 2)
@@ -2999,9 +3129,9 @@ _FUNCTION_Db:
 	mov	r3,a
 	push	ar4
 	push	ar3
-	mov	a,#___str_13
+	mov	a,#___str_15
 	push	acc
-	mov	a,#(___str_13 >> 8)
+	mov	a,#(___str_15 >> 8)
 	push	acc
 	mov	a,#0x80
 	push	acc
@@ -3012,8 +3142,8 @@ _FUNCTION_Db:
 	pop	ar5
 	pop	ar6
 	pop	ar7
-	C$Lab_2.c$397$1$109 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:397: printf("\t%u", FUNCTION_C(Mastermind_Array, Guess_Array));
+	C$Lab_2.c$437$1$114 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:437: printf("\t%u", FUNCTION_C(Mastermind_Array, Guess_Array));
 	mov	_FUNCTION_C_PARM_2,_FUNCTION_Db_PARM_2
 	mov	(_FUNCTION_C_PARM_2 + 1),(_FUNCTION_Db_PARM_2 + 1)
 	mov	(_FUNCTION_C_PARM_2 + 2),(_FUNCTION_Db_PARM_2 + 2)
@@ -3031,9 +3161,9 @@ _FUNCTION_Db:
 	mov	r3,a
 	push	ar4
 	push	ar3
-	mov	a,#___str_13
+	mov	a,#___str_15
 	push	acc
-	mov	a,#(___str_13 >> 8)
+	mov	a,#(___str_15 >> 8)
 	push	acc
 	mov	a,#0x80
 	push	acc
@@ -3041,15 +3171,15 @@ _FUNCTION_Db:
 	mov	a,sp
 	add	a,#0xfb
 	mov	sp,a
-	C$Lab_2.c$398$1$109 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:398: printf("\t%u", green_score);
+	C$Lab_2.c$438$1$114 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:438: printf("\t%u", green_score);
 	mov	r3,_FUNCTION_Db_PARM_3
 	mov	r4,#0x00
 	push	ar3
 	push	ar4
-	mov	a,#___str_13
+	mov	a,#___str_15
 	push	acc
-	mov	a,#(___str_13 >> 8)
+	mov	a,#(___str_15 >> 8)
 	push	acc
 	mov	a,#0x80
 	push	acc
@@ -3060,8 +3190,8 @@ _FUNCTION_Db:
 	pop	ar5
 	pop	ar6
 	pop	ar7
-	C$Lab_2.c$399$1$109 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:399: if ((FUNCTION_B(Mastermind_Array, Guess_Array)) == 0)
+	C$Lab_2.c$439$1$114 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:439: if ((FUNCTION_B(Mastermind_Array, Guess_Array)) == 0)
 	mov	_FUNCTION_B_PARM_2,_FUNCTION_Db_PARM_2
 	mov	(_FUNCTION_B_PARM_2 + 1),(_FUNCTION_Db_PARM_2 + 1)
 	mov	(_FUNCTION_B_PARM_2 + 2),(_FUNCTION_Db_PARM_2 + 2)
@@ -3072,11 +3202,23 @@ _FUNCTION_Db:
 	push	ar6
 	push	ar5
 	lcall	_FUNCTION_B
+	mov	a,dpl
 	pop	ar5
 	pop	ar6
 	pop	ar7
-	C$Lab_2.c$404$1$109 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:404: if ((FUNCTION_C(Mastermind_Array, Guess_Array)) == 3)
+	jnz	00103$
+	C$Lab_2.c$442$2$116 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:442: FUNCTION_E(); // Function that plays buzzer once, to happen when no color matches are found
+	push	ar7
+	push	ar6
+	push	ar5
+	lcall	_FUNCTION_E
+	pop	ar5
+	pop	ar6
+	pop	ar7
+00103$:
+	C$Lab_2.c$444$1$114 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:444: if ((FUNCTION_C(Mastermind_Array, Guess_Array)) == 3)
 	mov	_FUNCTION_C_PARM_2,_FUNCTION_Db_PARM_2
 	mov	(_FUNCTION_C_PARM_2 + 1),(_FUNCTION_Db_PARM_2 + 1)
 	mov	(_FUNCTION_C_PARM_2 + 2),(_FUNCTION_Db_PARM_2 + 2)
@@ -3086,24 +3228,8 @@ _FUNCTION_Db:
 	lcall	_FUNCTION_C
 	mov	r7,dpl
 	cjne	r7,#0x03,00105$
-	C$Lab_2.c$406$2$112 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:406: printf("\t(Match!)\n");
-	mov	a,#___str_14
-	push	acc
-	mov	a,#(___str_14 >> 8)
-	push	acc
-	mov	a,#0x80
-	push	acc
-	lcall	_printf
-	dec	sp
-	dec	sp
-	dec	sp
-	C$Lab_2.c$407$2$112 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:407: printf("Green Points = %u\n", green_score);
-	mov	r6,_FUNCTION_Db_PARM_3
-	mov	r7,#0x00
-	push	ar6
-	push	ar7
+	C$Lab_2.c$446$2$117 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:446: printf("\t(Match!)\n");
 	mov	a,#___str_16
 	push	acc
 	mov	a,#(___str_16 >> 8)
@@ -3111,15 +3237,34 @@ _FUNCTION_Db:
 	mov	a,#0x80
 	push	acc
 	lcall	_printf
+	dec	sp
+	dec	sp
+	dec	sp
+	C$Lab_2.c$447$2$117 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:447: printf("Green Points = %u\n", green_score);
+	mov	r6,_FUNCTION_Db_PARM_3
+	mov	r7,#0x00
+	push	ar6
+	push	ar7
+	mov	a,#___str_18
+	push	acc
+	mov	a,#(___str_18 >> 8)
+	push	acc
+	mov	a,#0x80
+	push	acc
+	lcall	_printf
 	mov	a,sp
 	add	a,#0xfb
 	mov	sp,a
+	C$Lab_2.c$449$2$117 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:449: FUNCTION_F(); // Function that plays when the sequence has been correctly guessed
+	lcall	_FUNCTION_F
 00105$:
-	C$Lab_2.c$411$1$109 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:411: printf("\n");
-	mov	a,#___str_4
+	C$Lab_2.c$451$1$114 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:451: printf("\n");
+	mov	a,#___str_6
 	push	acc
-	mov	a,#(___str_4 >> 8)
+	mov	a,#(___str_6 >> 8)
 	push	acc
 	mov	a,#0x80
 	push	acc
@@ -3127,108 +3272,132 @@ _FUNCTION_Db:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$Lab_2.c$412$1$109 ==.
+	C$Lab_2.c$452$1$114 ==.
 	XG$FUNCTION_Db$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'FUNCTION_E'
 ;------------------------------------------------------------
 	G$FUNCTION_E$0$0 ==.
-	C$Lab_2.c$416$1$109 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:416: void FUNCTION_E(void)
+	C$Lab_2.c$456$1$114 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:456: void FUNCTION_E(void)
 ;	-----------------------------------------
 ;	 function FUNCTION_E
 ;	-----------------------------------------
 _FUNCTION_E:
-	C$Lab_2.c$419$1$114 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:419: Seconds = 0;
-	mov	_Seconds,#0x00
-	C$Lab_2.c$421$1$114 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:421: while (Seconds <= 5)
+	C$Lab_2.c$459$1$119 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:459: TR0 = 0;
+	clr	_TR0
+	C$Lab_2.c$460$1$119 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:460: Counts = 0;
+	clr	a
+	mov	_Counts,a
+	mov	(_Counts + 1),a
+	C$Lab_2.c$461$1$119 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:461: Seconds = 0;
+;	1-genFromRTrack replaced	mov	_Seconds,#0x00
+	mov	_Seconds,a
+	C$Lab_2.c$462$1$119 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:462: TR0 = 1;
+	setb	_TR0
+	C$Lab_2.c$464$1$119 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:464: while (Seconds <= 5)
 00101$:
 	mov	a,_Seconds
 	add	a,#0xff - 0x05
 	jc	00103$
-	C$Lab_2.c$423$2$115 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:423: BUZZER = 0; // turn buzzer on
+	C$Lab_2.c$466$2$120 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:466: BUZZER = 0; // turn buzzer on
 	clr	_BUZZER
 	sjmp	00101$
 00103$:
-	C$Lab_2.c$425$1$114 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:425: BUZZER = 1;	// turn buzzer off
+	C$Lab_2.c$468$1$119 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:468: BUZZER = 1;	// turn buzzer off
 	setb	_BUZZER
-	C$Lab_2.c$426$1$114 ==.
+	C$Lab_2.c$469$1$119 ==.
 	XG$FUNCTION_E$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'FUNCTION_F'
 ;------------------------------------------------------------
 	G$FUNCTION_F$0$0 ==.
-	C$Lab_2.c$430$1$114 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:430: void FUNCTION_F(void)
+	C$Lab_2.c$473$1$119 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:473: void FUNCTION_F(void)
 ;	-----------------------------------------
 ;	 function FUNCTION_F
 ;	-----------------------------------------
 _FUNCTION_F:
-	C$Lab_2.c$433$1$117 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:433: Counts = 0;
+	C$Lab_2.c$476$1$122 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:476: Counts = 0;
 	clr	a
 	mov	_Counts,a
 	mov	(_Counts + 1),a
-	C$Lab_2.c$434$1$117 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:434: buzzer_delay = 168;
+	C$Lab_2.c$477$1$122 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:477: Seconds = 0;
+;	1-genFromRTrack replaced	mov	_Seconds,#0x00
+	mov	_Seconds,a
+	C$Lab_2.c$478$1$122 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:478: buzzer_delay = 168;
 	mov	_buzzer_delay,#0xA8
 ;	1-genFromRTrack replaced	mov	(_buzzer_delay + 1),#0x00
 	mov	(_buzzer_delay + 1),a
-	C$Lab_2.c$436$1$117 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:436: for (i=0; i<5; i++)
+	C$Lab_2.c$480$1$122 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:480: for (i=0; i<5; i++)
 	mov	_i,a
 	mov	(_i + 1),a
 00108$:
-	C$Lab_2.c$438$2$118 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:438: Counts = 0;
+	C$Lab_2.c$482$2$123 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:482: TR0 = 0;
+	clr	_TR0
+	C$Lab_2.c$483$2$123 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:483: Counts = 0;
 	clr	a
 	mov	_Counts,a
 	mov	(_Counts + 1),a
-	C$Lab_2.c$439$2$118 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:439: while (Counts <= buzzer_delay)
+	C$Lab_2.c$484$2$123 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:484: TR0 = 1;
+	setb	_TR0
+	C$Lab_2.c$485$2$123 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:485: while (Counts <= 100)
 00101$:
-	mov	r6,_buzzer_delay
-	mov	r7,(_buzzer_delay + 1)
 	clr	c
-	mov	a,r6
+	mov	a,#0x64
 	subb	a,_Counts
-	mov	a,r7
+	clr	a
 	subb	a,(_Counts + 1)
 	jc	00103$
-	C$Lab_2.c$441$3$119 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:441: BUZZER = 0; // turn buzzer on
+	C$Lab_2.c$487$3$124 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:487: BUZZER = 0; // turn buzzer on
 	clr	_BUZZER
 	sjmp	00101$
 00103$:
-	C$Lab_2.c$443$2$118 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:443: Counts = 0;
+	C$Lab_2.c$489$2$123 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:489: TR0 = 0;
+	clr	_TR0
+	C$Lab_2.c$490$2$123 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:490: Counts = 0;
 	clr	a
 	mov	_Counts,a
 	mov	(_Counts + 1),a
-	C$Lab_2.c$444$2$118 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:444: while (Counts <= buzzer_delay)
+	C$Lab_2.c$491$2$123 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:491: TR0 = 1;
+	setb	_TR0
+	C$Lab_2.c$492$2$123 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:492: while (Counts <= 50)
 00104$:
-	mov	r6,_buzzer_delay
-	mov	r7,(_buzzer_delay + 1)
 	clr	c
-	mov	a,r6
+	mov	a,#0x32
 	subb	a,_Counts
-	mov	a,r7
+	clr	a
 	subb	a,(_Counts + 1)
 	jc	00109$
-	C$Lab_2.c$446$3$120 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:446: BUZZER = 1; // turn buzzer off
+	C$Lab_2.c$494$3$125 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:494: BUZZER = 1; // turn buzzer off
 	setb	_BUZZER
 	sjmp	00104$
 00109$:
-	C$Lab_2.c$436$1$117 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:436: for (i=0; i<5; i++)
+	C$Lab_2.c$480$1$122 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:480: for (i=0; i<5; i++)
 	inc	_i
 	clr	a
 	cjne	a,_i,00132$
@@ -3241,10 +3410,10 @@ _FUNCTION_F:
 	xrl	a,#0x80
 	subb	a,#0x80
 	jc	00108$
-	C$Lab_2.c$449$1$117 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:449: BUZZER = 1; //once more for good measure
+	C$Lab_2.c$497$1$122 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:497: BUZZER = 1; //once more for good measure
 	setb	_BUZZER
-	C$Lab_2.c$450$1$117 ==.
+	C$Lab_2.c$498$1$122 ==.
 	XG$FUNCTION_F$0$0 ==.
 	ret
 ;------------------------------------------------------------
@@ -3253,8 +3422,8 @@ _FUNCTION_F:
 ;Guess_Array               Allocated to registers r5 r6 r7 
 ;------------------------------------------------------------
 	G$FUNCTION_G$0$0 ==.
-	C$Lab_2.c$454$1$117 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:454: void FUNCTION_G(int Guess_Array[])
+	C$Lab_2.c$502$1$122 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:502: void FUNCTION_G(int Guess_Array[])
 ;	-----------------------------------------
 ;	 function FUNCTION_G
 ;	-----------------------------------------
@@ -3262,12 +3431,12 @@ _FUNCTION_G:
 	mov	r5,dpl
 	mov	r6,dph
 	mov	r7,b
-	C$Lab_2.c$457$1$122 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:457: if ((BILEDA0 == 0) && (BILEDA1 == 0))
+	C$Lab_2.c$505$1$127 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:505: if ((BILEDA0 == 0) && (BILEDA1 == 0))
 	jb	_BILEDA0,00109$
 	jb	_BILEDA1,00109$
-	C$Lab_2.c$459$2$123 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:459: Guess_Array[0] = 0; // off
+	C$Lab_2.c$507$2$128 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:507: Guess_Array[0] = 0; // off
 	mov	dpl,r5
 	mov	dph,r6
 	mov	b,r7
@@ -3277,12 +3446,12 @@ _FUNCTION_G:
 	lcall	__gptrput
 	sjmp	00110$
 00109$:
-	C$Lab_2.c$461$1$122 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:461: else if ((BILEDA0 == 0) && (BILEDA1 == 1))
+	C$Lab_2.c$509$1$127 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:509: else if ((BILEDA0 == 0) && (BILEDA1 == 1))
 	jb	_BILEDA0,00105$
 	jnb	_BILEDA1,00105$
-	C$Lab_2.c$463$2$124 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:463: Guess_Array[0] = 1; // red
+	C$Lab_2.c$511$2$129 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:511: Guess_Array[0] = 1; // red
 	mov	dpl,r5
 	mov	dph,r6
 	mov	b,r7
@@ -3293,12 +3462,12 @@ _FUNCTION_G:
 	lcall	__gptrput
 	sjmp	00110$
 00105$:
-	C$Lab_2.c$465$1$122 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:465: else if ((BILEDA0 == 1) && (BILEDA1 == 0))
+	C$Lab_2.c$513$1$127 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:513: else if ((BILEDA0 == 1) && (BILEDA1 == 0))
 	jnb	_BILEDA0,00110$
 	jb	_BILEDA1,00110$
-	C$Lab_2.c$467$2$125 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:467: Guess_Array[0] = 2;  // green
+	C$Lab_2.c$515$2$130 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:515: Guess_Array[0] = 2;  // green
 	mov	dpl,r5
 	mov	dph,r6
 	mov	b,r7
@@ -3308,12 +3477,12 @@ _FUNCTION_G:
 	clr	a
 	lcall	__gptrput
 00110$:
-	C$Lab_2.c$471$1$122 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:471: if ((BILEDB0 == 0) && (BILEDB1 == 0))
+	C$Lab_2.c$519$1$127 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:519: if ((BILEDB0 == 0) && (BILEDB1 == 0))
 	jb	_BILEDB0,00120$
 	jb	_BILEDB1,00120$
-	C$Lab_2.c$473$2$126 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:473: Guess_Array[1] = 0; // off
+	C$Lab_2.c$521$2$131 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:521: Guess_Array[1] = 0; // off
 	mov	a,#0x02
 	add	a,r5
 	mov	r2,a
@@ -3330,12 +3499,12 @@ _FUNCTION_G:
 	lcall	__gptrput
 	sjmp	00121$
 00120$:
-	C$Lab_2.c$475$1$122 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:475: else if ((BILEDB0 == 0) && (BILEDB1 == 1))
+	C$Lab_2.c$523$1$127 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:523: else if ((BILEDB0 == 0) && (BILEDB1 == 1))
 	jb	_BILEDB0,00116$
 	jnb	_BILEDB1,00116$
-	C$Lab_2.c$477$2$127 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:477: Guess_Array[1] = 1; // red
+	C$Lab_2.c$525$2$132 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:525: Guess_Array[1] = 1; // red
 	mov	a,#0x02
 	add	a,r5
 	mov	r2,a
@@ -3353,12 +3522,12 @@ _FUNCTION_G:
 	lcall	__gptrput
 	sjmp	00121$
 00116$:
-	C$Lab_2.c$479$1$122 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:479: else if ((BILEDB0 == 1) && (BILEDB1 == 0))
+	C$Lab_2.c$527$1$127 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:527: else if ((BILEDB0 == 1) && (BILEDB1 == 0))
 	jnb	_BILEDB0,00121$
 	jb	_BILEDB1,00121$
-	C$Lab_2.c$481$2$128 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:481: Guess_Array[1] = 2;  // green
+	C$Lab_2.c$529$2$133 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:529: Guess_Array[1] = 2;  // green
 	mov	a,#0x02
 	add	a,r5
 	mov	r2,a
@@ -3375,12 +3544,12 @@ _FUNCTION_G:
 	clr	a
 	lcall	__gptrput
 00121$:
-	C$Lab_2.c$485$1$122 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:485: if ((BILEDC0 == 0) && (BILEDC1 == 0))
+	C$Lab_2.c$533$1$127 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:533: if ((BILEDC0 == 0) && (BILEDC1 == 0))
 	jb	_BILEDC0,00131$
 	jb	_BILEDC1,00131$
-	C$Lab_2.c$487$2$129 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:487: Guess_Array[2] = 0; // off
+	C$Lab_2.c$535$2$134 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:535: Guess_Array[2] = 0; // off
 	mov	a,#0x04
 	add	a,r5
 	mov	r2,a
@@ -3397,12 +3566,12 @@ _FUNCTION_G:
 	lcall	__gptrput
 	sjmp	00134$
 00131$:
-	C$Lab_2.c$489$1$122 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:489: else if ((BILEDC0 == 0) && (BILEDC1 == 1))
+	C$Lab_2.c$537$1$127 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:537: else if ((BILEDC0 == 0) && (BILEDC1 == 1))
 	jb	_BILEDC0,00127$
 	jnb	_BILEDC1,00127$
-	C$Lab_2.c$491$2$130 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:491: Guess_Array[2] = 1; // red
+	C$Lab_2.c$539$2$135 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:539: Guess_Array[2] = 1; // red
 	mov	a,#0x04
 	add	a,r5
 	mov	r2,a
@@ -3420,12 +3589,12 @@ _FUNCTION_G:
 	lcall	__gptrput
 	sjmp	00134$
 00127$:
-	C$Lab_2.c$493$1$122 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:493: else if ((BILEDC0 == 1) && (BILEDC1 == 0))
+	C$Lab_2.c$541$1$127 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:541: else if ((BILEDC0 == 1) && (BILEDC1 == 0))
 	jnb	_BILEDC0,00134$
 	jb	_BILEDC1,00134$
-	C$Lab_2.c$495$2$131 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:495: Guess_Array[2] = 2;  // green
+	C$Lab_2.c$543$2$136 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:543: Guess_Array[2] = 2;  // green
 	mov	a,#0x04
 	add	a,r5
 	mov	r5,a
@@ -3441,93 +3610,93 @@ _FUNCTION_G:
 	clr	a
 	lcall	__gptrput
 00134$:
-	C$Lab_2.c$497$1$122 ==.
+	C$Lab_2.c$545$1$127 ==.
 	XG$FUNCTION_G$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'Port_Init'
 ;------------------------------------------------------------
 	G$Port_Init$0$0 ==.
-	C$Lab_2.c$501$1$122 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:501: void Port_Init(void)
+	C$Lab_2.c$549$1$127 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:549: void Port_Init(void)
 ;	-----------------------------------------
 ;	 function Port_Init
 ;	-----------------------------------------
 _Port_Init:
-	C$Lab_2.c$503$1$133 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:503: P1MDIN &= ~0x01;	// Set P1.0 for analog input
+	C$Lab_2.c$551$1$138 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:551: P1MDIN &= ~0x01;	// Set P1.0 for analog input
 	mov	r7,_P1MDIN
 	mov	a,#0xFE
 	anl	a,r7
 	mov	_P1MDIN,a
-	C$Lab_2.c$504$1$133 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:504: P1MDOUT &= ~0x01;	// Set P1.0 to open drain
+	C$Lab_2.c$552$1$138 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:552: P1MDOUT &= ~0x01;	// Set P1.0 to open drain
 	mov	r7,_P1MDOUT
 	mov	a,#0xFE
 	anl	a,r7
 	mov	_P1MDOUT,a
-	C$Lab_2.c$505$1$133 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:505: P1 |= 0x01;			// Send logic 1 to input pin P1.0
+	C$Lab_2.c$553$1$138 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:553: P1 |= 0x01;			// Send logic 1 to input pin P1.0
 	orl	_P1,#0x01
-	C$Lab_2.c$506$1$133 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:506: P0MDOUT |= 0xB0;	// Set output pins to push-pull
+	C$Lab_2.c$554$1$138 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:554: P0MDOUT |= 0xB0;	// Set output pins to push-pull
 	orl	_P0MDOUT,#0xB0
-	C$Lab_2.c$507$1$133 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:507: P0MDOUT &= 0xF3;	// Set input pins to open-drain
+	C$Lab_2.c$555$1$138 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:555: P0MDOUT &= 0xF3;	// Set input pins to open-drain
 	anl	_P0MDOUT,#0xF3
-	C$Lab_2.c$508$1$133 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:508: P0 |= ~0xF3;		// Set input pins to high impedance
+	C$Lab_2.c$556$1$138 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:556: P0 |= ~0xF3;		// Set input pins to high impedance
 	mov	r7,_P0
 	mov	a,#0x0C
 	orl	a,r7
 	mov	_P0,a
-	C$Lab_2.c$509$1$133 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:509: P2MDOUT |= 0x10;	// Set output pins to push-pull
+	C$Lab_2.c$557$1$138 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:557: P2MDOUT |= 0x10;	// Set output pins to push-pull
 	orl	_P2MDOUT,#0x10
-	C$Lab_2.c$510$1$133 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:510: P2MDOUT &= 0x13;	// Set input pins to open-drain
+	C$Lab_2.c$558$1$138 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:558: P2MDOUT &= 0x13;	// Set input pins to open-drain
 	anl	_P2MDOUT,#0x13
-	C$Lab_2.c$511$1$133 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:511: P2 |= ~0x13;		// Set input pins to high impedance
+	C$Lab_2.c$559$1$138 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:559: P2 |= ~0x13;		// Set input pins to high impedance
 	mov	r7,_P2
 	mov	a,#0xEC
 	orl	a,r7
 	mov	_P2,a
-	C$Lab_2.c$512$1$133 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:512: P3MDOUT |= 0x36;	// Set output pins to push-pull
+	C$Lab_2.c$560$1$138 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:560: P3MDOUT |= 0x36;	// Set output pins to push-pull
 	orl	_P3MDOUT,#0x36
-	C$Lab_2.c$513$1$133 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:513: P3MDOUT &= 0xFE;	// Set input pins to open-drain
+	C$Lab_2.c$561$1$138 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:561: P3MDOUT &= 0xFE;	// Set input pins to open-drain
 	anl	_P3MDOUT,#0xFE
-	C$Lab_2.c$514$1$133 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:514: P3 |= ~0xFE;		// Set input pins to high impedance
+	C$Lab_2.c$562$1$138 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:562: P3 |= ~0xFE;		// Set input pins to high impedance
 	mov	r7,_P3
 	mov	a,#0x01
 	orl	a,r7
 	mov	_P3,a
-	C$Lab_2.c$515$1$133 ==.
+	C$Lab_2.c$563$1$138 ==.
 	XG$Port_Init$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'ADC_Init'
 ;------------------------------------------------------------
 	G$ADC_Init$0$0 ==.
-	C$Lab_2.c$517$1$133 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:517: void ADC_Init(void)
+	C$Lab_2.c$565$1$138 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:565: void ADC_Init(void)
 ;	-----------------------------------------
 ;	 function ADC_Init
 ;	-----------------------------------------
 _ADC_Init:
-	C$Lab_2.c$519$1$135 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:519: REF0CN = 0x03; // Set Vref to use internal reference voltage (2.4 V)
+	C$Lab_2.c$567$1$140 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:567: REF0CN = 0x03; // Set Vref to use internal reference voltage (2.4 V)
 	mov	_REF0CN,#0x03
-	C$Lab_2.c$520$1$135 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:520: ADC1CN = 0x80; // Enable A/D converter (ADC1)
+	C$Lab_2.c$568$1$140 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:568: ADC1CN = 0x80; // Enable A/D converter (ADC1)
 	mov	_ADC1CN,#0x80
-	C$Lab_2.c$521$1$135 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:521: ADC1CF |= 0x01; // Set A/D converter gain to 1
+	C$Lab_2.c$569$1$140 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:569: ADC1CF |= 0x01; // Set A/D converter gain to 1
 	orl	_ADC1CF,#0x01
-	C$Lab_2.c$522$1$135 ==.
+	C$Lab_2.c$570$1$140 ==.
 	XG$ADC_Init$0$0 ==.
 	ret
 ;------------------------------------------------------------
@@ -3536,139 +3705,139 @@ _ADC_Init:
 ;n                         Allocated to registers 
 ;------------------------------------------------------------
 	G$read_AD_input$0$0 ==.
-	C$Lab_2.c$524$1$135 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:524: unsigned char read_AD_input(unsigned char n)
+	C$Lab_2.c$572$1$140 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:572: unsigned char read_AD_input(unsigned char n)
 ;	-----------------------------------------
 ;	 function read_AD_input
 ;	-----------------------------------------
 _read_AD_input:
 	mov	_AMX1SL,dpl
-	C$Lab_2.c$527$1$137 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:527: ADC1CN = ADC1CN & ~0x20; // Clear the "Conversion Completed" flag
+	C$Lab_2.c$575$1$142 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:575: ADC1CN = ADC1CN & ~0x20; // Clear the "Conversion Completed" flag
 	mov	r7,_ADC1CN
 	mov	a,#0xDF
 	anl	a,r7
 	mov	_ADC1CN,a
-	C$Lab_2.c$528$1$137 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:528: ADC1CN = ADC1CN | 0x10; // Initiate A/D conversion
+	C$Lab_2.c$576$1$142 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:576: ADC1CN = ADC1CN | 0x10; // Initiate A/D conversion
 	orl	_ADC1CN,#0x10
-	C$Lab_2.c$530$1$137 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:530: while ((ADC1CN & 0x20) == 0x00);// Wait for conversion to complete
+	C$Lab_2.c$578$1$142 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:578: while ((ADC1CN & 0x20) == 0x00);// Wait for conversion to complete
 00101$:
 	mov	a,_ADC1CN
 	jnb	acc.5,00101$
-	C$Lab_2.c$532$1$137 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:532: return ADC1; // Return digital value in ADC1 register
+	C$Lab_2.c$580$1$142 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:580: return ADC1; // Return digital value in ADC1 register
 	mov	dpl,_ADC1
-	C$Lab_2.c$533$1$137 ==.
+	C$Lab_2.c$581$1$142 ==.
 	XG$read_AD_input$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'random'
 ;------------------------------------------------------------
 	G$random$0$0 ==.
-	C$Lab_2.c$542$1$137 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:542: unsigned char random(void)
+	C$Lab_2.c$590$1$142 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:590: unsigned char random(void)
 ;	-----------------------------------------
 ;	 function random
 ;	-----------------------------------------
 _random:
-	C$Lab_2.c$544$1$139 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:544: return (rand()%3);  // rand returns a random number between 0 and 32767.
+	C$Lab_2.c$592$1$144 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:592: return (rand()%3);  // rand returns a random number between 0 and 32767.
 	lcall	_rand
 	mov	__modsint_PARM_2,#0x03
 	mov	(__modsint_PARM_2 + 1),#0x00
 	lcall	__modsint
-	C$Lab_2.c$548$1$139 ==.
+	C$Lab_2.c$596$1$144 ==.
 	XG$random$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'Interrupt_Init'
 ;------------------------------------------------------------
 	G$Interrupt_Init$0$0 ==.
-	C$Lab_2.c$551$1$139 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:551: void Interrupt_Init(void)
+	C$Lab_2.c$599$1$144 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:599: void Interrupt_Init(void)
 ;	-----------------------------------------
 ;	 function Interrupt_Init
 ;	-----------------------------------------
 _Interrupt_Init:
-	C$Lab_2.c$553$1$141 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:553: ET0 = 1;      // enable Timer0 Interrupt request
+	C$Lab_2.c$601$1$146 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:601: ET0 = 1;      // enable Timer0 Interrupt request
 	setb	_ET0
-	C$Lab_2.c$554$1$141 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:554: EA = 1;       // enable global interrupts
+	C$Lab_2.c$602$1$146 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:602: EA = 1;       // enable global interrupts
 	setb	_EA
-	C$Lab_2.c$555$1$141 ==.
+	C$Lab_2.c$603$1$146 ==.
 	XG$Interrupt_Init$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'Timer_Init'
 ;------------------------------------------------------------
 	G$Timer_Init$0$0 ==.
-	C$Lab_2.c$558$1$141 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:558: void Timer_Init(void)
+	C$Lab_2.c$606$1$146 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:606: void Timer_Init(void)
 ;	-----------------------------------------
 ;	 function Timer_Init
 ;	-----------------------------------------
 _Timer_Init:
-	C$Lab_2.c$561$1$143 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:561: CKCON |= 0x08;  // Timer0 uses SYSCLK as source
+	C$Lab_2.c$609$1$148 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:609: CKCON |= 0x08;  // Timer0 uses SYSCLK as source
 	orl	_CKCON,#0x08
-	C$Lab_2.c$562$1$143 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:562: TMOD &= 0xF0;   // clear the 4 least significant bits
+	C$Lab_2.c$610$1$148 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:610: TMOD &= 0xF0;   // clear the 4 least significant bits
 	anl	_TMOD,#0xF0
-	C$Lab_2.c$563$1$143 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:563: TMOD |= 0x01;   // Timer0 in mode 1
+	C$Lab_2.c$611$1$148 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:611: TMOD |= 0x01;   // Timer0 in mode 1
 	orl	_TMOD,#0x01
-	C$Lab_2.c$564$1$143 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:564: TR0 = 0;           // Stop Timer0
+	C$Lab_2.c$612$1$148 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:612: TR0 = 0;           // Stop Timer0
 	clr	_TR0
-	C$Lab_2.c$565$1$143 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:565: TL0 = 0;           // Clear low byte of register T0
+	C$Lab_2.c$613$1$148 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:613: TL0 = 0;           // Clear low byte of register T0
 	mov	_TL0,#0x00
-	C$Lab_2.c$566$1$143 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:566: TH0 = 0;           // Clear high byte of register T0
+	C$Lab_2.c$614$1$148 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:614: TH0 = 0;           // Clear high byte of register T0
 	mov	_TH0,#0x00
-	C$Lab_2.c$568$1$143 ==.
+	C$Lab_2.c$616$1$148 ==.
 	XG$Timer_Init$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'Timer0_ISR'
 ;------------------------------------------------------------
 	G$Timer0_ISR$0$0 ==.
-	C$Lab_2.c$571$1$143 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:571: void Timer0_ISR(void) __interrupt 1
+	C$Lab_2.c$619$1$148 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:619: void Timer0_ISR(void) __interrupt 1
 ;	-----------------------------------------
 ;	 function Timer0_ISR
 ;	-----------------------------------------
 _Timer0_ISR:
 	push	acc
 	push	psw
-	C$Lab_2.c$573$1$145 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:573: Counts++;
+	C$Lab_2.c$621$1$150 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:621: Counts++;
 	inc	_Counts
 	clr	a
 	cjne	a,_Counts,00108$
 	inc	(_Counts + 1)
 00108$:
-	C$Lab_2.c$574$1$145 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:574: if(Counts == 337)
+	C$Lab_2.c$622$1$150 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:622: if(Counts == 337)
 	mov	a,#0x51
 	cjne	a,_Counts,00103$
 	mov	a,#0x01
 	cjne	a,(_Counts + 1),00103$
-	C$Lab_2.c$576$2$146 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:576: Seconds ++;
+	C$Lab_2.c$624$2$151 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:624: Seconds ++;
 	inc	_Seconds
-	C$Lab_2.c$577$2$146 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:577: Counts = 0;
+	C$Lab_2.c$625$2$151 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:625: Counts = 0;
 	clr	a
 	mov	_Counts,a
 	mov	(_Counts + 1),a
 00103$:
 	pop	psw
 	pop	acc
-	C$Lab_2.c$579$1$145 ==.
+	C$Lab_2.c$627$1$150 ==.
 	XG$Timer0_ISR$0$0 ==.
 	reti
 ;	eliminated unneeded mov psw,# (no regs used in bank)
@@ -3679,195 +3848,195 @@ _Timer0_ISR:
 ;Allocation info for local variables in function 'Start_Button'
 ;------------------------------------------------------------
 	G$Start_Button$0$0 ==.
-	C$Lab_2.c$586$1$145 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:586: int Start_Button(void)
+	C$Lab_2.c$634$1$150 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:634: int Start_Button(void)
 ;	-----------------------------------------
 ;	 function Start_Button
 ;	-----------------------------------------
 _Start_Button:
-	C$Lab_2.c$588$1$148 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:588: if (!BUTTON)
+	C$Lab_2.c$636$1$153 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:636: if (!BUTTON)
 	jb	_BUTTON,00102$
-	C$Lab_2.c$590$2$149 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:590: return 1;
+	C$Lab_2.c$638$2$154 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:638: return 1;
 	mov	dptr,#0x0001
 	sjmp	00104$
 00102$:
-	C$Lab_2.c$594$2$150 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:594: return 0;
+	C$Lab_2.c$642$2$155 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:642: return 0;
 	mov	dptr,#0x0000
 00104$:
-	C$Lab_2.c$596$1$148 ==.
+	C$Lab_2.c$644$1$153 ==.
 	XG$Start_Button$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'Switch_A0'
 ;------------------------------------------------------------
 	G$Switch_A0$0$0 ==.
-	C$Lab_2.c$602$1$148 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:602: int Switch_A0(void)
+	C$Lab_2.c$650$1$153 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:650: int Switch_A0(void)
 ;	-----------------------------------------
 ;	 function Switch_A0
 ;	-----------------------------------------
 _Switch_A0:
-	C$Lab_2.c$604$1$152 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:604: if (!SWITCHA0)
+	C$Lab_2.c$652$1$157 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:652: if (!SWITCHA0)
 	jb	_SWITCHA0,00102$
-	C$Lab_2.c$606$2$153 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:606: return 1;
+	C$Lab_2.c$654$2$158 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:654: return 1;
 	mov	dptr,#0x0001
 	sjmp	00104$
 00102$:
-	C$Lab_2.c$610$2$154 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:610: return 0;
+	C$Lab_2.c$658$2$159 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:658: return 0;
 	mov	dptr,#0x0000
 00104$:
-	C$Lab_2.c$612$1$152 ==.
+	C$Lab_2.c$660$1$157 ==.
 	XG$Switch_A0$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'Switch_A1'
 ;------------------------------------------------------------
 	G$Switch_A1$0$0 ==.
-	C$Lab_2.c$613$1$152 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:613: int Switch_A1(void)
+	C$Lab_2.c$661$1$157 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:661: int Switch_A1(void)
 ;	-----------------------------------------
 ;	 function Switch_A1
 ;	-----------------------------------------
 _Switch_A1:
-	C$Lab_2.c$615$1$156 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:615: if (!SWITCHA1)
+	C$Lab_2.c$663$1$161 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:663: if (!SWITCHA1)
 	jb	_SWITCHA1,00102$
-	C$Lab_2.c$617$2$157 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:617: return 1;
+	C$Lab_2.c$665$2$162 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:665: return 1;
 	mov	dptr,#0x0001
 	sjmp	00104$
 00102$:
-	C$Lab_2.c$621$2$158 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:621: return 0;
+	C$Lab_2.c$669$2$163 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:669: return 0;
 	mov	dptr,#0x0000
 00104$:
-	C$Lab_2.c$623$1$156 ==.
+	C$Lab_2.c$671$1$161 ==.
 	XG$Switch_A1$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'Switch_B0'
 ;------------------------------------------------------------
 	G$Switch_B0$0$0 ==.
-	C$Lab_2.c$625$1$156 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:625: int Switch_B0(void)
+	C$Lab_2.c$673$1$161 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:673: int Switch_B0(void)
 ;	-----------------------------------------
 ;	 function Switch_B0
 ;	-----------------------------------------
 _Switch_B0:
-	C$Lab_2.c$627$1$160 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:627: if (!SWITCHB0)
+	C$Lab_2.c$675$1$165 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:675: if (!SWITCHB0)
 	jb	_SWITCHB0,00102$
-	C$Lab_2.c$629$2$161 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:629: return 1;
+	C$Lab_2.c$677$2$166 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:677: return 1;
 	mov	dptr,#0x0001
 	sjmp	00104$
 00102$:
-	C$Lab_2.c$633$2$162 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:633: return 0;
+	C$Lab_2.c$681$2$167 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:681: return 0;
 	mov	dptr,#0x0000
 00104$:
-	C$Lab_2.c$635$1$160 ==.
+	C$Lab_2.c$683$1$165 ==.
 	XG$Switch_B0$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'Switch_B1'
 ;------------------------------------------------------------
 	G$Switch_B1$0$0 ==.
-	C$Lab_2.c$636$1$160 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:636: int Switch_B1(void)
+	C$Lab_2.c$684$1$165 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:684: int Switch_B1(void)
 ;	-----------------------------------------
 ;	 function Switch_B1
 ;	-----------------------------------------
 _Switch_B1:
-	C$Lab_2.c$638$1$164 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:638: if (!SWITCHB1)
+	C$Lab_2.c$686$1$169 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:686: if (!SWITCHB1)
 	jb	_SWITCHB1,00102$
-	C$Lab_2.c$640$2$165 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:640: return 1;
+	C$Lab_2.c$688$2$170 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:688: return 1;
 	mov	dptr,#0x0001
 	sjmp	00104$
 00102$:
-	C$Lab_2.c$644$2$166 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:644: return 0;
+	C$Lab_2.c$692$2$171 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:692: return 0;
 	mov	dptr,#0x0000
 00104$:
-	C$Lab_2.c$646$1$164 ==.
+	C$Lab_2.c$694$1$169 ==.
 	XG$Switch_B1$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'Switch_C0'
 ;------------------------------------------------------------
 	G$Switch_C0$0$0 ==.
-	C$Lab_2.c$648$1$164 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:648: int Switch_C0(void)
+	C$Lab_2.c$696$1$169 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:696: int Switch_C0(void)
 ;	-----------------------------------------
 ;	 function Switch_C0
 ;	-----------------------------------------
 _Switch_C0:
-	C$Lab_2.c$650$1$168 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:650: if (!SWITCHC0)
+	C$Lab_2.c$698$1$173 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:698: if (!SWITCHC0)
 	jb	_SWITCHC0,00102$
-	C$Lab_2.c$652$2$169 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:652: return 1;
+	C$Lab_2.c$700$2$174 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:700: return 1;
 	mov	dptr,#0x0001
 	sjmp	00104$
 00102$:
-	C$Lab_2.c$656$2$170 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:656: return 0;
+	C$Lab_2.c$704$2$175 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:704: return 0;
 	mov	dptr,#0x0000
 00104$:
-	C$Lab_2.c$658$1$168 ==.
+	C$Lab_2.c$706$1$173 ==.
 	XG$Switch_C0$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'Switch_C1'
 ;------------------------------------------------------------
 	G$Switch_C1$0$0 ==.
-	C$Lab_2.c$659$1$168 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:659: int Switch_C1(void)
+	C$Lab_2.c$707$1$173 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:707: int Switch_C1(void)
 ;	-----------------------------------------
 ;	 function Switch_C1
 ;	-----------------------------------------
 _Switch_C1:
-	C$Lab_2.c$661$1$172 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:661: if (!SWITCHC1)
+	C$Lab_2.c$709$1$177 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:709: if (!SWITCHC1)
 	jb	_SWITCHC1,00102$
-	C$Lab_2.c$663$2$173 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:663: return 1;
+	C$Lab_2.c$711$2$178 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:711: return 1;
 	mov	dptr,#0x0001
 	sjmp	00104$
 00102$:
-	C$Lab_2.c$667$2$174 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:667: return 0;
+	C$Lab_2.c$715$2$179 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:715: return 0;
 	mov	dptr,#0x0000
 00104$:
-	C$Lab_2.c$669$1$172 ==.
+	C$Lab_2.c$717$1$177 ==.
 	XG$Switch_C1$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'Debugging'
 ;------------------------------------------------------------
 	G$Debugging$0$0 ==.
-	C$Lab_2.c$671$1$172 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:671: void Debugging(void)
+	C$Lab_2.c$719$1$177 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:719: void Debugging(void)
 ;	-----------------------------------------
 ;	 function Debugging
 ;	-----------------------------------------
 _Debugging:
-	C$Lab_2.c$673$1$176 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:673: if(!BUTTON)
+	C$Lab_2.c$721$1$181 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:721: if(!BUTTON)
 	jb	_BUTTON,00103$
-	C$Lab_2.c$675$2$177 ==.
-;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:675: printf("\rYou pushed the start button.\n");
-	mov	a,#___str_17
+	C$Lab_2.c$723$2$182 ==.
+;	C:\Users\Kathryn\Desktop\LITEC\Lab 2\Lab-2.c:723: printf("\rYou pushed the start button.\n");
+	mov	a,#___str_19
 	push	acc
-	mov	a,#(___str_17 >> 8)
+	mov	a,#(___str_19 >> 8)
 	push	acc
 	mov	a,#0x80
 	push	acc
@@ -3876,7 +4045,7 @@ _Debugging:
 	dec	sp
 	dec	sp
 00103$:
-	C$Lab_2.c$677$1$176 ==.
+	C$Lab_2.c$725$1$181 ==.
 	XG$Debugging$0$0 ==.
 	ret
 	.area CSEG    (CODE)
@@ -3892,26 +4061,35 @@ FLab_2$__str_1$0$0 == .
 ___str_1:
 	.db 0x0D
 	.ascii "Starting Period: %u"
-	.db 0x0A
 	.db 0x00
 FLab_2$__str_2$0$0 == .
 ___str_2:
+	.ascii " seconds"
+	.db 0x0A
+	.db 0x00
+FLab_2$__str_3$0$0 == .
+___str_3:
 	.db 0x0A
 	.db 0x0D
 	.ascii "Amber Player Turn"
 	.db 0x0A
 	.db 0x0A
 	.db 0x00
-FLab_2$__str_3$0$0 == .
-___str_3:
-	.ascii "%d"
-	.db 0x00
 FLab_2$__str_4$0$0 == .
 ___str_4:
-	.db 0x0A
+	.db 0x0D
+	.ascii "Correct Answer --- "
 	.db 0x00
 FLab_2$__str_5$0$0 == .
 ___str_5:
+	.ascii "%d"
+	.db 0x00
+FLab_2$__str_6$0$0 == .
+___str_6:
+	.db 0x0A
+	.db 0x00
+FLab_2$__str_7$0$0 == .
+___str_7:
 	.db 0x0D
 	.db 0x09
 	.ascii "Color"
@@ -3921,71 +4099,71 @@ ___str_5:
 	.ascii "Score"
 	.db 0x0A
 	.db 0x00
-FLab_2$__str_6$0$0 == .
-___str_6:
+FLab_2$__str_8$0$0 == .
+___str_8:
 	.db 0x0A
 	.db 0x0D
 	.ascii "Green Player Turn"
 	.db 0x0A
 	.db 0x00
-FLab_2$__str_7$0$0 == .
-___str_7:
+FLab_2$__str_9$0$0 == .
+___str_9:
 	.db 0x0A
 	.db 0x0D
 	.ascii "Amber Points = %u"
 	.db 0x00
-FLab_2$__str_8$0$0 == .
-___str_8:
-	.ascii ", Green Points = %u/n"
-	.db 0x00
-FLab_2$__str_9$0$0 == .
-___str_9:
-	.db 0x0D
-	.db 0x09
-	.ascii "Winner is Amber!"
-	.db 0x0A
-	.db 0x00
 FLab_2$__str_10$0$0 == .
 ___str_10:
-	.db 0x0D
-	.db 0x09
-	.ascii "Winner is Green!"
-	.db 0x0A
+	.ascii ", Green Points = %u"
 	.db 0x00
 FLab_2$__str_11$0$0 == .
 ___str_11:
 	.db 0x0D
 	.db 0x09
-	.ascii "It's a tie. FIGHT TO THE DEATH!"
+	.ascii "Winner is Amber!"
 	.db 0x0A
 	.db 0x00
 FLab_2$__str_12$0$0 == .
 ___str_12:
 	.db 0x0D
+	.db 0x09
+	.ascii "Winner is Green!"
+	.db 0x0A
 	.db 0x00
 FLab_2$__str_13$0$0 == .
 ___str_13:
+	.db 0x0D
 	.db 0x09
-	.ascii "%u"
+	.ascii "It's a tie. FIGHT TO THE DEATH!"
+	.db 0x0A
 	.db 0x00
 FLab_2$__str_14$0$0 == .
 ___str_14:
+	.db 0x0D
+	.db 0x00
+FLab_2$__str_15$0$0 == .
+___str_15:
+	.db 0x09
+	.ascii "%u"
+	.db 0x00
+FLab_2$__str_16$0$0 == .
+___str_16:
 	.db 0x09
 	.ascii "(Match!)"
 	.db 0x0A
 	.db 0x00
-FLab_2$__str_15$0$0 == .
-___str_15:
+FLab_2$__str_17$0$0 == .
+___str_17:
 	.ascii "Amber Points = %u"
 	.db 0x0A
 	.db 0x00
-FLab_2$__str_16$0$0 == .
-___str_16:
+FLab_2$__str_18$0$0 == .
+___str_18:
 	.ascii "Green Points = %u"
 	.db 0x0A
 	.db 0x00
-FLab_2$__str_17$0$0 == .
-___str_17:
+FLab_2$__str_19$0$0 == .
+___str_19:
 	.db 0x0D
 	.ascii "You pushed the start button."
 	.db 0x0A
