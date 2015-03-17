@@ -1,5 +1,5 @@
 -muwx
--i C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\Lab 3\Steering\Lab3_Steering.hex
+-i C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab3_Steering.hex
 -M
 -Y
 -y
@@ -14,6 +14,6 @@
 -l libint
 -l liblong
 -l libfloat
-C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\Lab 3\Steering\Lab3_Steering.rel
+C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab3_Steering.rel
 
 -e

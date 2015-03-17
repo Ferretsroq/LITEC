@@ -8,261 +8,217 @@ Symbol Table
     .__.CPU.                                                    =  000000 L
     .__.H$L.                                                    =  000001 L
     A                                                           =  0000E0 L
- 17 A$Lab3_Steering$1002                                           000006 GR
- 17 A$Lab3_Steering$1003                                           000009 GR
- 17 A$Lab3_Steering$1006                                           00000C GR
- 17 A$Lab3_Steering$1007                                           00000F GR
- 17 A$Lab3_Steering$1010                                           000012 GR
- 17 A$Lab3_Steering$1011                                           000013 GR
- 17 A$Lab3_Steering$1012                                           000015 GR
- 17 A$Lab3_Steering$1015                                           000017 GR
- 17 A$Lab3_Steering$1016                                           000019 GR
- 18 A$Lab3_Steering$1018                                           000000 GR
- 10 A$Lab3_Steering$1025                                           00004E GR
- 19 A$Lab3_Steering$1053                                           000000 GR
- 19 A$Lab3_Steering$1056                                           000003 GR
- 19 A$Lab3_Steering$1057                                           000005 GR
- 19 A$Lab3_Steering$1059                                           000007 GR
- 19 A$Lab3_Steering$1060                                           000008 GR
- 19 A$Lab3_Steering$1061                                           00000B GR
- 19 A$Lab3_Steering$1063                                           00000C GR
- 19 A$Lab3_Steering$1064                                           00000D GR
- 19 A$Lab3_Steering$1065                                           00000E GR
- 19 A$Lab3_Steering$1069                                           000010 GR
- 19 A$Lab3_Steering$1070                                           000012 GR
- 19 A$Lab3_Steering$1073                                           000015 GR
- 19 A$Lab3_Steering$1076                                           000018 GR
- 19 A$Lab3_Steering$1089                                           000019 GR
- 19 A$Lab3_Steering$1092                                           00001C GR
- 19 A$Lab3_Steering$1095                                           00001F GR
- 19 A$Lab3_Steering$1098                                           000022 GR
- 19 A$Lab3_Steering$1101                                           000024 GR
- 19 A$Lab3_Steering$1104                                           000027 GR
- 19 A$Lab3_Steering$1107                                           00002A GR
- 19 A$Lab3_Steering$1110                                           00002C GR
- 19 A$Lab3_Steering$1113                                           00002F GR
- 19 A$Lab3_Steering$1126                                           000030 GR
- 19 A$Lab3_Steering$1129                                           000033 GR
- 19 A$Lab3_Steering$1132                                           000036 GR
- 19 A$Lab3_Steering$1135                                           000039 GR
- 19 A$Lab3_Steering$1138                                           00003C GR
- 19 A$Lab3_Steering$1141                                           00003F GR
- 19 A$Lab3_Steering$1144                                           000042 GR
- 19 A$Lab3_Steering$1157                                           000043 GR
- 19 A$Lab3_Steering$1163                                           000045 GR
- 19 A$Lab3_Steering$1164                                           000048 GR
- 19 A$Lab3_Steering$1168                                           00004A GR
- 19 A$Lab3_Steering$1171                                           00004C GR
- 19 A$Lab3_Steering$1189                                           00004D GR
- 19 A$Lab3_Steering$1190                                           000050 GR
- 19 A$Lab3_Steering$1194                                           000052 GR
- 19 A$Lab3_Steering$1197                                           000055 GR
- 19 A$Lab3_Steering$1200                                           000058 GR
+ 16 A$Lab3_Steering$1002                                           000018 GR
+ 16 A$Lab3_Steering$1003                                           000019 GR
+ 16 A$Lab3_Steering$1004                                           00001B GR
+ 16 A$Lab3_Steering$1007                                           00001D GR
+ 16 A$Lab3_Steering$1008                                           00001F GR
+ 17 A$Lab3_Steering$1010                                           000000 GR
+  F A$Lab3_Steering$1017                                           00004E GR
+ 18 A$Lab3_Steering$1045                                           000000 GR
+ 18 A$Lab3_Steering$1048                                           000003 GR
+ 18 A$Lab3_Steering$1049                                           000005 GR
+ 18 A$Lab3_Steering$1051                                           000007 GR
+ 18 A$Lab3_Steering$1052                                           000008 GR
+ 18 A$Lab3_Steering$1053                                           00000B GR
+ 18 A$Lab3_Steering$1055                                           00000C GR
+ 18 A$Lab3_Steering$1056                                           00000D GR
+ 18 A$Lab3_Steering$1057                                           00000E GR
+ 18 A$Lab3_Steering$1061                                           000010 GR
+ 18 A$Lab3_Steering$1062                                           000012 GR
+ 18 A$Lab3_Steering$1065                                           000015 GR
+ 18 A$Lab3_Steering$1068                                           000018 GR
+ 18 A$Lab3_Steering$1081                                           000019 GR
+ 18 A$Lab3_Steering$1084                                           00001C GR
+ 18 A$Lab3_Steering$1087                                           00001F GR
+ 18 A$Lab3_Steering$1090                                           000022 GR
+ 18 A$Lab3_Steering$1093                                           000024 GR
+ 18 A$Lab3_Steering$1096                                           000027 GR
+ 18 A$Lab3_Steering$1099                                           00002A GR
+ 18 A$Lab3_Steering$1102                                           00002C GR
+ 18 A$Lab3_Steering$1105                                           00002F GR
+ 18 A$Lab3_Steering$1118                                           000030 GR
+ 18 A$Lab3_Steering$1121                                           000033 GR
+ 18 A$Lab3_Steering$1124                                           000036 GR
+ 18 A$Lab3_Steering$1127                                           000039 GR
+ 18 A$Lab3_Steering$1130                                           00003C GR
+ 18 A$Lab3_Steering$1133                                           00003F GR
+ 18 A$Lab3_Steering$1136                                           000042 GR
+ 18 A$Lab3_Steering$1149                                           000043 GR
+ 18 A$Lab3_Steering$1155                                           000045 GR
+ 18 A$Lab3_Steering$1156                                           000048 GR
+ 18 A$Lab3_Steering$1160                                           00004A GR
+ 18 A$Lab3_Steering$1163                                           00004C GR
+ 18 A$Lab3_Steering$1181                                           00004D GR
+ 18 A$Lab3_Steering$1182                                           000050 GR
+ 18 A$Lab3_Steering$1186                                           000052 GR
+ 18 A$Lab3_Steering$1189                                           000055 GR
+ 18 A$Lab3_Steering$1192                                           000058 GR
+ 18 A$Lab3_Steering$1195                                           00005B GR
+ 18 A$Lab3_Steering$1208                                           00005C GR
+ 18 A$Lab3_Steering$1211                                           00005F GR
+ 18 A$Lab3_Steering$1212                                           000062 GR
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 2.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
- 19 A$Lab3_Steering$1203                                           00005B GR
- 19 A$Lab3_Steering$1216                                           00005C GR
- 19 A$Lab3_Steering$1219                                           00005F GR
- 19 A$Lab3_Steering$1220                                           000062 GR
- 19 A$Lab3_Steering$1223                                           000065 GR
- 19 A$Lab3_Steering$1226                                           000068 GR
- 19 A$Lab3_Steering$1229                                           00006B GR
- 19 A$Lab3_Steering$1232                                           00006E GR
- 19 A$Lab3_Steering$1235                                           000071 GR
- 19 A$Lab3_Steering$1236                                           000073 GR
- 19 A$Lab3_Steering$1237                                           000075 GR
- 19 A$Lab3_Steering$1238                                           000077 GR
- 19 A$Lab3_Steering$1239                                           000079 GR
- 19 A$Lab3_Steering$1240                                           00007B GR
- 19 A$Lab3_Steering$1241                                           00007D GR
- 19 A$Lab3_Steering$1242                                           000080 GR
- 19 A$Lab3_Steering$1243                                           000082 GR
- 19 A$Lab3_Steering$1244                                           000084 GR
- 19 A$Lab3_Steering$1247                                           000086 GR
- 19 A$Lab3_Steering$1248                                           000089 GR
- 19 A$Lab3_Steering$1251                                           00008C GR
- 19 A$Lab3_Steering$1252                                           00008E GR
- 19 A$Lab3_Steering$1253                                           000090 GR
- 19 A$Lab3_Steering$1254                                           000092 GR
- 19 A$Lab3_Steering$1255                                           000094 GR
- 19 A$Lab3_Steering$1256                                           000096 GR
- 19 A$Lab3_Steering$1257                                           000098 GR
- 19 A$Lab3_Steering$1258                                           00009B GR
- 19 A$Lab3_Steering$1259                                           00009D GR
- 19 A$Lab3_Steering$1260                                           00009F GR
- 19 A$Lab3_Steering$1264                                           0000A1 GR
- 19 A$Lab3_Steering$1265                                           0000A2 GR
- 19 A$Lab3_Steering$1266                                           0000A4 GR
- 19 A$Lab3_Steering$1267                                           0000A6 GR
- 19 A$Lab3_Steering$1268                                           0000A8 GR
- 19 A$Lab3_Steering$1269                                           0000AA GR
- 19 A$Lab3_Steering$1272                                           0000AC GR
- 19 A$Lab3_Steering$1273                                           0000AE GR
- 19 A$Lab3_Steering$1274                                           0000B0 GR
- 19 A$Lab3_Steering$1275                                           0000B2 GR
- 19 A$Lab3_Steering$1276                                           0000B4 GR
- 19 A$Lab3_Steering$1277                                           0000B6 GR
- 19 A$Lab3_Steering$1278                                           0000B8 GR
- 19 A$Lab3_Steering$1279                                           0000BB GR
- 19 A$Lab3_Steering$1280                                           0000BD GR
- 19 A$Lab3_Steering$1281                                           0000BF GR
- 19 A$Lab3_Steering$1287                                           0000C1 GR
- 19 A$Lab3_Steering$1288                                           0000C4 GR
- 19 A$Lab3_Steering$1291                                           0000C6 GR
- 19 A$Lab3_Steering$1306                                           0000C7 GR
- 19 A$Lab3_Steering$1307                                           0000CA GR
- 19 A$Lab3_Steering$1310                                           0000CC GR
- 19 A$Lab3_Steering$1313                                           0000CF GR
- 19 A$Lab3_Steering$1314                                           0000D1 GR
- 19 A$Lab3_Steering$1315                                           0000D3 GR
+ 18 A$Lab3_Steering$1215                                           000065 GR
+ 18 A$Lab3_Steering$1218                                           000068 GR
+ 18 A$Lab3_Steering$1221                                           00006B GR
+ 18 A$Lab3_Steering$1224                                           00006E GR
+ 18 A$Lab3_Steering$1225                                           000070 GR
+ 18 A$Lab3_Steering$1226                                           000072 GR
+ 18 A$Lab3_Steering$1227                                           000074 GR
+ 18 A$Lab3_Steering$1228                                           000076 GR
+ 18 A$Lab3_Steering$1229                                           000078 GR
+ 18 A$Lab3_Steering$1230                                           00007A GR
+ 18 A$Lab3_Steering$1231                                           00007D GR
+ 18 A$Lab3_Steering$1232                                           00007F GR
+ 18 A$Lab3_Steering$1233                                           000081 GR
+ 18 A$Lab3_Steering$1236                                           000083 GR
+ 18 A$Lab3_Steering$1237                                           000086 GR
+ 18 A$Lab3_Steering$1240                                           000089 GR
+ 18 A$Lab3_Steering$1241                                           00008B GR
+ 18 A$Lab3_Steering$1242                                           00008D GR
+ 18 A$Lab3_Steering$1243                                           00008E GR
+ 18 A$Lab3_Steering$1244                                           00008F GR
+ 18 A$Lab3_Steering$1245                                           000090 GR
+ 18 A$Lab3_Steering$1246                                           000092 GR
+ 18 A$Lab3_Steering$1247                                           000093 GR
+ 18 A$Lab3_Steering$1248                                           000094 GR
+ 18 A$Lab3_Steering$1249                                           000095 GR
+ 18 A$Lab3_Steering$1250                                           000097 GR
+ 18 A$Lab3_Steering$1251                                           000098 GR
+ 18 A$Lab3_Steering$1252                                           000099 GR
+ 18 A$Lab3_Steering$1253                                           00009A GR
+ 18 A$Lab3_Steering$1254                                           00009B GR
+ 18 A$Lab3_Steering$1255                                           00009C GR
+ 18 A$Lab3_Steering$1256                                           00009D GR
+ 18 A$Lab3_Steering$1257                                           00009E GR
+ 18 A$Lab3_Steering$1258                                           00009F GR
+ 18 A$Lab3_Steering$1259                                           0000A1 GR
+ 18 A$Lab3_Steering$1265                                           0000A3 GR
+ 18 A$Lab3_Steering$1266                                           0000A6 GR
+ 18 A$Lab3_Steering$1269                                           0000A8 GR
+ 18 A$Lab3_Steering$1284                                           0000A9 GR
+ 18 A$Lab3_Steering$1285                                           0000AC GR
+ 18 A$Lab3_Steering$1288                                           0000AE GR
+ 18 A$Lab3_Steering$1291                                           0000B1 GR
+ 18 A$Lab3_Steering$1292                                           0000B2 GR
+ 18 A$Lab3_Steering$1293                                           0000B4 GR
+ 18 A$Lab3_Steering$1294                                           0000B6 GR
+ 18 A$Lab3_Steering$1295                                           0000B8 GR
+ 18 A$Lab3_Steering$1296                                           0000BA GR
+ 18 A$Lab3_Steering$1299                                           0000BC GR
+ 18 A$Lab3_Steering$1300                                           0000BE GR
+ 18 A$Lab3_Steering$1301                                           0000C0 GR
+ 18 A$Lab3_Steering$1302                                           0000C2 GR
+ 18 A$Lab3_Steering$1303                                           0000C3 GR
+ 18 A$Lab3_Steering$1304                                           0000C5 GR
+ 18 A$Lab3_Steering$1307                                           0000C7 GR
+ 18 A$Lab3_Steering$1308                                           0000C9 GR
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 3.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
- 19 A$Lab3_Steering$1316                                           0000D5 GR
- 19 A$Lab3_Steering$1317                                           0000D6 GR
- 19 A$Lab3_Steering$1318                                           0000D8 GR
- 19 A$Lab3_Steering$1321                                           0000DA GR
- 19 A$Lab3_Steering$1322                                           0000DB GR
- 19 A$Lab3_Steering$1323                                           0000DD GR
- 19 A$Lab3_Steering$1324                                           0000DF GR
- 19 A$Lab3_Steering$1325                                           0000E1 GR
- 19 A$Lab3_Steering$1326                                           0000E3 GR
- 19 A$Lab3_Steering$1329                                           0000E5 GR
- 19 A$Lab3_Steering$1330                                           0000E8 GR
- 19 A$Lab3_Steering$1331                                           0000EB GR
- 19 A$Lab3_Steering$1335                                           0000ED GR
- 19 A$Lab3_Steering$1338                                           0000F0 GR
- 19 A$Lab3_Steering$1339                                           0000F2 GR
- 19 A$Lab3_Steering$1340                                           0000F4 GR
- 19 A$Lab3_Steering$1341                                           0000F6 GR
- 19 A$Lab3_Steering$1342                                           0000F8 GR
- 19 A$Lab3_Steering$1343                                           0000FA GR
- 19 A$Lab3_Steering$1346                                           0000FC GR
- 19 A$Lab3_Steering$1347                                           0000FD GR
- 19 A$Lab3_Steering$1348                                           0000FF GR
- 19 A$Lab3_Steering$1349                                           000101 GR
- 19 A$Lab3_Steering$1350                                           000103 GR
- 19 A$Lab3_Steering$1351                                           000105 GR
- 19 A$Lab3_Steering$1354                                           000107 GR
- 19 A$Lab3_Steering$1355                                           00010A GR
- 19 A$Lab3_Steering$1359                                           00010D GR
- 19 A$Lab3_Steering$1360                                           00010F GR
- 19 A$Lab3_Steering$1361                                           000111 GR
- 19 A$Lab3_Steering$1362                                           000113 GR
- 19 A$Lab3_Steering$1363                                           000115 GR
- 19 A$Lab3_Steering$1364                                           000117 GR
- 19 A$Lab3_Steering$1365                                           000119 GR
- 19 A$Lab3_Steering$1366                                           00011B GR
- 19 A$Lab3_Steering$1367                                           00011D GR
- 19 A$Lab3_Steering$1368                                           000120 GR
- 19 A$Lab3_Steering$1369                                           000122 GR
- 19 A$Lab3_Steering$1370                                           000124 GR
- 19 A$Lab3_Steering$1373                                           000126 GR
- 19 A$Lab3_Steering$1374                                           000128 GR
- 19 A$Lab3_Steering$1375                                           000129 GR
- 19 A$Lab3_Steering$1376                                           00012B GR
- 19 A$Lab3_Steering$1377                                           00012D GR
- 19 A$Lab3_Steering$1378                                           00012F GR
- 19 A$Lab3_Steering$1379                                           000131 GR
- 19 A$Lab3_Steering$1382                                           000133 GR
- 19 A$Lab3_Steering$1395                                           000134 GR
- 19 A$Lab3_Steering$1398                                           000137 GR
- 19 A$Lab3_Steering$1411                                           000138 GR
- 19 A$Lab3_Steering$1414                                           00013B GR
- 19 A$Lab3_Steering$1427                                           00013C GR
- 19 A$Lab3_Steering$1430                                           00013F GR
- 19 A$Lab3_Steering$1433                                           000142 GR
- 19 A$Lab3_Steering$1436                                           000145 GR
+ 18 A$Lab3_Steering$1309                                           0000CA GR
+ 18 A$Lab3_Steering$1310                                           0000CC GR
+ 18 A$Lab3_Steering$1311                                           0000CE GR
+ 18 A$Lab3_Steering$1312                                           0000D0 GR
+ 18 A$Lab3_Steering$1313                                           0000D2 GR
+ 18 A$Lab3_Steering$1317                                           0000D4 GR
+ 18 A$Lab3_Steering$1318                                           0000D5 GR
+ 18 A$Lab3_Steering$1319                                           0000D7 GR
+ 18 A$Lab3_Steering$1320                                           0000D9 GR
+ 18 A$Lab3_Steering$1321                                           0000DB GR
+ 18 A$Lab3_Steering$1322                                           0000DD GR
+ 18 A$Lab3_Steering$1325                                           0000DF GR
+ 18 A$Lab3_Steering$1326                                           0000E2 GR
+ 18 A$Lab3_Steering$1327                                           0000E5 GR
+ 18 A$Lab3_Steering$1331                                           0000E7 GR
+ 18 A$Lab3_Steering$1334                                           0000EA GR
+ 18 A$Lab3_Steering$1335                                           0000EB GR
+ 18 A$Lab3_Steering$1336                                           0000ED GR
+ 18 A$Lab3_Steering$1337                                           0000EF GR
+ 18 A$Lab3_Steering$1338                                           0000F1 GR
+ 18 A$Lab3_Steering$1339                                           0000F3 GR
+ 18 A$Lab3_Steering$1342                                           0000F5 GR
+ 18 A$Lab3_Steering$1343                                           0000F7 GR
+ 18 A$Lab3_Steering$1344                                           0000F9 GR
+ 18 A$Lab3_Steering$1345                                           0000FB GR
+ 18 A$Lab3_Steering$1346                                           0000FD GR
+ 18 A$Lab3_Steering$1347                                           0000FF GR
+ 18 A$Lab3_Steering$1350                                           000101 GR
+ 18 A$Lab3_Steering$1351                                           000103 GR
+ 18 A$Lab3_Steering$1352                                           000104 GR
+ 18 A$Lab3_Steering$1353                                           000106 GR
+ 18 A$Lab3_Steering$1354                                           000108 GR
+ 18 A$Lab3_Steering$1355                                           00010A GR
+ 18 A$Lab3_Steering$1356                                           00010C GR
+ 18 A$Lab3_Steering$1360                                           00010E GR
+ 18 A$Lab3_Steering$1361                                           00010F GR
+ 18 A$Lab3_Steering$1362                                           000111 GR
+ 18 A$Lab3_Steering$1363                                           000113 GR
+ 18 A$Lab3_Steering$1364                                           000115 GR
+ 18 A$Lab3_Steering$1365                                           000117 GR
+ 18 A$Lab3_Steering$1368                                           000119 GR
+ 18 A$Lab3_Steering$1369                                           00011C GR
+ 18 A$Lab3_Steering$1373                                           00011F GR
+ 18 A$Lab3_Steering$1374                                           000121 GR
+ 18 A$Lab3_Steering$1375                                           000123 GR
+ 18 A$Lab3_Steering$1376                                           000125 GR
+ 18 A$Lab3_Steering$1377                                           000127 GR
+ 18 A$Lab3_Steering$1378                                           000129 GR
+ 18 A$Lab3_Steering$1379                                           00012B GR
+ 18 A$Lab3_Steering$1380                                           00012D GR
+ 18 A$Lab3_Steering$1381                                           00012F GR
+ 18 A$Lab3_Steering$1382                                           000132 GR
+ 18 A$Lab3_Steering$1383                                           000134 GR
+ 18 A$Lab3_Steering$1384                                           000136 GR
+ 18 A$Lab3_Steering$1387                                           000138 GR
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 4.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
- 19 A$Lab3_Steering$1439                                           000147 GR
- 19 A$Lab3_Steering$1442                                           00014A GR
- 19 A$Lab3_Steering$1457                                           00014B GR
- 19 A$Lab3_Steering$1458                                           00014E GR
- 19 A$Lab3_Steering$1462                                           000150 GR
- 19 A$Lab3_Steering$1463                                           000153 GR
- 19 A$Lab3_Steering$1467                                           000156 GR
- 19 A$Lab3_Steering$1470                                           000159 GR
- 19 A$Lab3_Steering$1489                                           00015A GR
- 19 A$Lab3_Steering$1492                                           00015D GR
- 19 A$Lab3_Steering$1495                                           000160 GR
- 19 A$Lab3_Steering$1498                                           000163 GR
- 19 A$Lab3_Steering$1501                                           000165 GR
- 19 A$Lab3_Steering$1504                                           000168 GR
- 19 A$Lab3_Steering$1507                                           00016B GR
- 19 A$Lab3_Steering$1510                                           00016D GR
- 19 A$Lab3_Steering$1521                                           00016E GR
- 19 A$Lab3_Steering$1522                                           000170 GR
- 19 A$Lab3_Steering$1523                                           000172 GR
- 19 A$Lab3_Steering$1524                                           000174 GR
- 19 A$Lab3_Steering$1525                                           000176 GR
- 19 A$Lab3_Steering$1526                                           000178 GR
- 19 A$Lab3_Steering$1527                                           00017A GR
- 19 A$Lab3_Steering$1528                                           00017C GR
- 19 A$Lab3_Steering$1529                                           00017E GR
- 19 A$Lab3_Steering$1530                                           000180 GR
- 19 A$Lab3_Steering$1531                                           000182 GR
- 19 A$Lab3_Steering$1532                                           000184 GR
- 19 A$Lab3_Steering$1533                                           000186 GR
- 19 A$Lab3_Steering$1534                                           000188 GR
- 19 A$Lab3_Steering$1535                                           00018A GR
- 19 A$Lab3_Steering$1538                                           00018D GR
- 19 A$Lab3_Steering$1539                                           00018F GR
- 19 A$Lab3_Steering$1540                                           000190 GR
- 19 A$Lab3_Steering$1541                                           000193 GR
- 19 A$Lab3_Steering$1545                                           000195 GR
- 19 A$Lab3_Steering$1546                                           000197 GR
- 19 A$Lab3_Steering$1547                                           000199 GR
- 19 A$Lab3_Steering$1548                                           00019B GR
- 19 A$Lab3_Steering$1549                                           00019D GR
- 19 A$Lab3_Steering$1550                                           00019F GR
- 19 A$Lab3_Steering$1551                                           0001A1 GR
- 19 A$Lab3_Steering$1552                                           0001A3 GR
- 19 A$Lab3_Steering$1553                                           0001A5 GR
- 19 A$Lab3_Steering$1554                                           0001A8 GR
- 19 A$Lab3_Steering$1555                                           0001AA GR
- 19 A$Lab3_Steering$1556                                           0001AC GR
- 19 A$Lab3_Steering$1557                                           0001AE GR
- 19 A$Lab3_Steering$1558                                           0001B0 GR
- 19 A$Lab3_Steering$1559                                           0001B2 GR
- 19 A$Lab3_Steering$1560                                           0001B4 GR
- 19 A$Lab3_Steering$1561                                           0001B6 GR
- 19 A$Lab3_Steering$1562                                           0001B8 GR
- 19 A$Lab3_Steering$1563                                           0001BA GR
- 19 A$Lab3_Steering$1564                                           0001BC GR
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 5.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
- 19 A$Lab3_Steering$1565                                           0001BE GR
- 19 A$Lab3_Steering$1566                                           0001C0 GR
- 19 A$Lab3_Steering$1567                                           0001C2 GR
- 19 A$Lab3_Steering$1568                                           0001C4 GR
- 19 A$Lab3_Steering$1569                                           0001C6 GR
- 19 A$Lab3_Steering$1570                                           0001C8 GR
- 19 A$Lab3_Steering$1573                                           0001CA GR
- 10 A$Lab3_Steering$963                                            000000 GR
- 10 A$Lab3_Steering$964                                            000003 GR
- 10 A$Lab3_Steering$966                                            00000B GR
- 10 A$Lab3_Steering$968                                            000013 GR
- 10 A$Lab3_Steering$970                                            00001B GR
- 10 A$Lab3_Steering$972                                            000023 GR
- 10 A$Lab3_Steering$974                                            00002B GR
- 10 A$Lab3_Steering$976                                            000033 GR
- 10 A$Lab3_Steering$978                                            00003B GR
- 10 A$Lab3_Steering$980                                            000043 GR
- 10 A$Lab3_Steering$982                                            00004B GR
- 17 A$Lab3_Steering$998                                            000000 GR
- 17 A$Lab3_Steering$999                                            000003 GR
+ 18 A$Lab3_Steering$1400                                           000139 GR
+ 18 A$Lab3_Steering$1403                                           00013C GR
+ 18 A$Lab3_Steering$1416                                           00013D GR
+ 18 A$Lab3_Steering$1419                                           000140 GR
+ 18 A$Lab3_Steering$1432                                           000141 GR
+ 18 A$Lab3_Steering$1435                                           000144 GR
+ 18 A$Lab3_Steering$1438                                           000147 GR
+ 18 A$Lab3_Steering$1441                                           00014A GR
+ 18 A$Lab3_Steering$1444                                           00014C GR
+ 18 A$Lab3_Steering$1447                                           00014F GR
+ 18 A$Lab3_Steering$1460                                           000150 GR
+ 18 A$Lab3_Steering$1463                                           000153 GR
+ 18 A$Lab3_Steering$1464                                           000156 GR
+ 18 A$Lab3_Steering$1467                                           000159 GR
+ 18 A$Lab3_Steering$1468                                           00015B GR
+ 18 A$Lab3_Steering$1472                                           00015D GR
+ 18 A$Lab3_Steering$1476                                           000160 GR
+  F A$Lab3_Steering$951                                            000000 GR
+  F A$Lab3_Steering$952                                            000003 GR
+  F A$Lab3_Steering$954                                            00000B GR
+  F A$Lab3_Steering$956                                            000013 GR
+  F A$Lab3_Steering$958                                            00001B GR
+  F A$Lab3_Steering$960                                            000023 GR
+  F A$Lab3_Steering$962                                            00002B GR
+  F A$Lab3_Steering$964                                            000033 GR
+  F A$Lab3_Steering$966                                            00003B GR
+  F A$Lab3_Steering$968                                            000043 GR
+  F A$Lab3_Steering$970                                            00004B GR
+ 16 A$Lab3_Steering$986                                            000000 GR
+ 16 A$Lab3_Steering$987                                            000003 GR
+ 16 A$Lab3_Steering$990                                            000006 GR
+ 16 A$Lab3_Steering$991                                            000009 GR
+ 16 A$Lab3_Steering$994                                            00000C GR
+ 16 A$Lab3_Steering$995                                            00000F GR
+ 16 A$Lab3_Steering$998                                            000012 GR
+ 16 A$Lab3_Steering$999                                            000015 GR
     A.0                                                         =  0000E0 L
     A.1                                                         =  0000E1 L
     A.2                                                         =  0000E2 L
@@ -282,6 +238,11 @@ Symbol Table
     ACC.6                                                       =  0000E6 L
     ACC.7                                                       =  0000E7 L
     B                                                           =  0000F0 L
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 5.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
     B.0                                                         =  0000F0 L
     B.1                                                         =  0000F1 L
     B.2                                                         =  0000F2 L
@@ -290,117 +251,100 @@ Symbol Table
     B.5                                                         =  0000F5 L
     B.6                                                         =  0000F6 L
     B.7                                                         =  0000F7 L
- 19 C$Lab3_Steering.c$100$1$50                                  =  000134 GR
- 19 C$Lab3_Steering.c$102$1$55                                  =  000134 GR
- 19 C$Lab3_Steering.c$106$1$55                                  =  000137 GR
- 19 C$Lab3_Steering.c$111$1$55                                  =  000138 GR
- 19 C$Lab3_Steering.c$113$1$57                                  =  000138 GR
- 19 C$Lab3_Steering.c$114$1$57                                  =  00013B GR
- 19 C$Lab3_Steering.c$118$1$57                                  =  00013C GR
- 19 C$Lab3_Steering.c$120$1$59                                  =  00013C GR
+ 18 C$Lab3_Steering.c$102$1$48                                  =  00011F GR
+ 18 C$Lab3_Steering.c$104$1$48                                  =  000138 GR
+ 18 C$Lab3_Steering.c$110$1$48                                  =  000139 GR
+ 18 C$Lab3_Steering.c$112$1$55                                  =  000139 GR
+ 18 C$Lab3_Steering.c$116$1$55                                  =  00013C GR
+ 18 C$Lab3_Steering.c$121$1$55                                  =  00013D GR
+ 18 C$Lab3_Steering.c$123$1$57                                  =  00013D GR
+ 18 C$Lab3_Steering.c$124$1$57                                  =  000140 GR
+ 18 C$Lab3_Steering.c$128$1$57                                  =  000141 GR
+ 18 C$Lab3_Steering.c$130$1$59                                  =  000141 GR
+ 18 C$Lab3_Steering.c$131$1$59                                  =  000144 GR
+ 18 C$Lab3_Steering.c$132$1$59                                  =  000147 GR
+ 18 C$Lab3_Steering.c$133$1$59                                  =  00014A GR
+ 18 C$Lab3_Steering.c$134$1$59                                  =  00014C GR
+ 18 C$Lab3_Steering.c$135$1$59                                  =  00014F GR
+ 18 C$Lab3_Steering.c$140$1$59                                  =  000150 GR
+ 18 C$Lab3_Steering.c$142$1$61                                  =  000150 GR
+ 18 C$Lab3_Steering.c$144$2$62                                  =  000153 GR
+ 18 C$Lab3_Steering.c$145$2$62                                  =  000159 GR
+ 18 C$Lab3_Steering.c$148$1$61                                  =  00015D GR
+ 18 C$Lab3_Steering.c$149$1$61                                  =  000160 GR
+ 16 C$Lab3_Steering.c$25$1$61                                   =  000000 GR
+ 16 C$Lab3_Steering.c$26$1$61                                   =  000006 GR
+ 16 C$Lab3_Steering.c$27$1$61                                   =  00000C GR
+ 16 C$Lab3_Steering.c$28$1$61                                   =  000012 GR
+ 16 C$Lab3_Steering.c$29$1$61                                   =  000018 GR
+ 16 C$Lab3_Steering.c$30$1$61                                   =  00001D GR
+ 18 C$Lab3_Steering.c$42$1$10                                   =  00005C GR
+ 18 C$Lab3_Steering.c$45$1$46                                   =  00005C GR
+ 18 C$Lab3_Steering.c$46$1$46                                   =  00005F GR
+ 18 C$Lab3_Steering.c$47$1$46                                   =  000065 GR
+ 18 C$Lab3_Steering.c$48$1$46                                   =  000068 GR
+ 18 C$Lab3_Steering.c$49$1$46                                   =  00006B GR
+ 18 C$Lab3_Steering.c$52$1$46                                   =  00006E GR
+ 18 C$Lab3_Steering.c$56$1$46                                   =  000083 GR
+ 18 C$Lab3_Steering.c$57$1$46                                   =  000089 GR
+ 18 C$Lab3_Steering.c$66$1$46                                   =  0000A3 GR
+ 18 C$Lab3_Steering.c$68$2$47                                   =  0000A3 GR
+ 18 C$Lab3_Steering.c$70$1$46                                   =  0000A8 GR
+ 18 C$Lab3_Steering.c$73$1$46                                   =  0000A9 GR
+ 18 C$Lab3_Steering.c$77$1$48                                   =  0000A9 GR
+ 18 C$Lab3_Steering.c$78$1$48                                   =  0000AE GR
+ 18 C$Lab3_Steering.c$80$2$49                                   =  0000B1 GR
+ 18 C$Lab3_Steering.c$82$3$50                                   =  0000BC GR
+ 18 C$Lab3_Steering.c$83$3$50                                   =  0000C7 GR
+ 18 C$Lab3_Steering.c$85$2$49                                   =  0000D4 GR
+ 18 C$Lab3_Steering.c$87$3$51                                   =  0000DF GR
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 6.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
- 19 C$Lab3_Steering.c$121$1$59                                  =  00013F GR
- 19 C$Lab3_Steering.c$122$1$59                                  =  000142 GR
- 19 C$Lab3_Steering.c$123$1$59                                  =  000145 GR
- 19 C$Lab3_Steering.c$124$1$59                                  =  000147 GR
- 19 C$Lab3_Steering.c$125$1$59                                  =  00014A GR
- 19 C$Lab3_Steering.c$130$1$59                                  =  00014B GR
- 19 C$Lab3_Steering.c$132$1$61                                  =  00014B GR
- 19 C$Lab3_Steering.c$134$2$62                                  =  00014B GR
- 19 C$Lab3_Steering.c$135$2$62                                  =  000150 GR
- 19 C$Lab3_Steering.c$138$1$61                                  =  000156 GR
- 19 C$Lab3_Steering.c$139$1$61                                  =  000159 GR
- 19 C$Lab3_Steering.c$143$1$61                                  =  00015A GR
- 19 C$Lab3_Steering.c$146$1$64                                  =  00015A GR
- 19 C$Lab3_Steering.c$147$1$64                                  =  00015D GR
- 19 C$Lab3_Steering.c$148$1$64                                  =  000160 GR
- 19 C$Lab3_Steering.c$149$1$64                                  =  000163 GR
- 19 C$Lab3_Steering.c$150$1$64                                  =  000165 GR
- 19 C$Lab3_Steering.c$151$1$64                                  =  000168 GR
- 19 C$Lab3_Steering.c$152$1$64                                  =  00016B GR
- 19 C$Lab3_Steering.c$154$1$64                                  =  00016D GR
- 19 C$Lab3_Steering.c$158$1$64                                  =  00016E GR
- 19 C$Lab3_Steering.c$160$1$66                                  =  00018D GR
- 19 C$Lab3_Steering.c$161$1$66                                  =  000195 GR
- 19 C$Lab3_Steering.c$162$1$66                                  =  0001CA GR
- 17 C$Lab3_Steering.c$25$1$66                                   =  000000 GR
- 17 C$Lab3_Steering.c$26$1$66                                   =  000006 GR
- 17 C$Lab3_Steering.c$27$1$66                                   =  00000C GR
- 17 C$Lab3_Steering.c$28$1$66                                   =  000012 GR
- 17 C$Lab3_Steering.c$29$1$66                                   =  000017 GR
- 19 C$Lab3_Steering.c$41$1$10                                   =  00005C GR
- 19 C$Lab3_Steering.c$44$1$48                                   =  00005C GR
- 19 C$Lab3_Steering.c$45$1$48                                   =  00005F GR
- 19 C$Lab3_Steering.c$46$1$48                                   =  000065 GR
- 19 C$Lab3_Steering.c$47$1$48                                   =  000068 GR
- 19 C$Lab3_Steering.c$48$1$48                                   =  00006B GR
- 19 C$Lab3_Steering.c$49$1$48                                   =  00006E GR
- 19 C$Lab3_Steering.c$51$1$48                                   =  000071 GR
- 19 C$Lab3_Steering.c$55$1$48                                   =  000086 GR
- 19 C$Lab3_Steering.c$61$1$48                                   =  00008C GR
- 19 C$Lab3_Steering.c$62$1$48                                   =  0000A1 GR
- 19 C$Lab3_Steering.c$63$1$48                                   =  0000AC GR
- 19 C$Lab3_Steering.c$64$1$48                                   =  0000C1 GR
- 19 C$Lab3_Steering.c$66$2$49                                   =  0000C1 GR
- 19 C$Lab3_Steering.c$68$1$48                                   =  0000C6 GR
- 19 C$Lab3_Steering.c$71$1$48                                   =  0000C7 GR
- 19 C$Lab3_Steering.c$75$1$50                                   =  0000C7 GR
- 19 C$Lab3_Steering.c$76$1$50                                   =  0000CC GR
- 19 C$Lab3_Steering.c$78$2$51                                   =  0000CF GR
- 19 C$Lab3_Steering.c$79$2$51                                   =  0000DA GR
- 19 C$Lab3_Steering.c$81$3$52                                   =  0000E5 GR
- 19 C$Lab3_Steering.c$84$1$50                                   =  0000ED GR
- 19 C$Lab3_Steering.c$86$2$53                                   =  0000F0 GR
- 19 C$Lab3_Steering.c$87$2$53                                   =  0000FC GR
- 19 C$Lab3_Steering.c$89$3$54                                   =  000107 GR
- 19 C$Lab3_Steering.c$92$1$50                                   =  00010D GR
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 7.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
- 19 C$Lab3_Steering.c$93$1$50                                   =  000126 GR
- 19 C$Lab3_Steering.c$94$1$50                                   =  000133 GR
- 19 C$c8051_SDCC.h$100$1$8                                      =  000045 GR
- 19 C$c8051_SDCC.h$101$1$8                                      =  000045 GR
- 19 C$c8051_SDCC.h$102$1$8                                      =  00004A GR
- 19 C$c8051_SDCC.h$103$1$8                                      =  00004C GR
- 19 C$c8051_SDCC.h$108$1$8                                      =  00004D GR
- 19 C$c8051_SDCC.h$111$1$10                                     =  00004D GR
- 19 C$c8051_SDCC.h$112$1$10                                     =  00004D GR
- 19 C$c8051_SDCC.h$113$1$10                                     =  000052 GR
- 19 C$c8051_SDCC.h$114$1$10                                     =  000055 GR
- 19 C$c8051_SDCC.h$115$1$10                                     =  000058 GR
- 19 C$c8051_SDCC.h$116$1$10                                     =  00005B GR
- 19 C$c8051_SDCC.h$42$0$0                                       =  000000 GR
- 19 C$c8051_SDCC.h$46$1$2                                       =  000000 GR
- 19 C$c8051_SDCC.h$49$1$2                                       =  000003 GR
- 19 C$c8051_SDCC.h$51$1$2                                       =  000010 GR
- 19 C$c8051_SDCC.h$53$1$2                                       =  000015 GR
- 19 C$c8051_SDCC.h$56$1$2                                       =  000018 GR
- 19 C$c8051_SDCC.h$64$1$2                                       =  000019 GR
- 19 C$c8051_SDCC.h$66$1$4                                       =  000019 GR
- 19 C$c8051_SDCC.h$67$1$4                                       =  00001C GR
- 19 C$c8051_SDCC.h$68$1$4                                       =  00001F GR
- 19 C$c8051_SDCC.h$69$1$4                                       =  000022 GR
- 19 C$c8051_SDCC.h$70$1$4                                       =  000024 GR
- 19 C$c8051_SDCC.h$71$1$4                                       =  000027 GR
- 19 C$c8051_SDCC.h$73$1$4                                       =  00002A GR
- 19 C$c8051_SDCC.h$74$1$4                                       =  00002C GR
- 19 C$c8051_SDCC.h$75$1$4                                       =  00002F GR
- 19 C$c8051_SDCC.h$83$1$4                                       =  000030 GR
- 19 C$c8051_SDCC.h$85$1$6                                       =  000030 GR
- 19 C$c8051_SDCC.h$86$1$6                                       =  000033 GR
- 19 C$c8051_SDCC.h$88$1$6                                       =  000036 GR
- 19 C$c8051_SDCC.h$89$1$6                                       =  000039 GR
- 19 C$c8051_SDCC.h$91$1$6                                       =  00003C GR
- 19 C$c8051_SDCC.h$92$1$6                                       =  00003F GR
- 19 C$c8051_SDCC.h$93$1$6                                       =  000042 GR
- 19 C$c8051_SDCC.h$98$1$6                                       =  000043 GR
+ 18 C$Lab3_Steering.c$90$1$48                                   =  0000E7 GR
+ 18 C$Lab3_Steering.c$92$2$52                                   =  0000EA GR
+ 18 C$Lab3_Steering.c$94$3$53                                   =  0000F5 GR
+ 18 C$Lab3_Steering.c$95$3$53                                   =  000101 GR
+ 18 C$Lab3_Steering.c$97$2$52                                   =  00010E GR
+ 18 C$Lab3_Steering.c$99$3$54                                   =  000119 GR
+ 18 C$c8051_SDCC.h$100$1$8                                      =  000045 GR
+ 18 C$c8051_SDCC.h$101$1$8                                      =  000045 GR
+ 18 C$c8051_SDCC.h$102$1$8                                      =  00004A GR
+ 18 C$c8051_SDCC.h$103$1$8                                      =  00004C GR
+ 18 C$c8051_SDCC.h$108$1$8                                      =  00004D GR
+ 18 C$c8051_SDCC.h$111$1$10                                     =  00004D GR
+ 18 C$c8051_SDCC.h$112$1$10                                     =  00004D GR
+ 18 C$c8051_SDCC.h$113$1$10                                     =  000052 GR
+ 18 C$c8051_SDCC.h$114$1$10                                     =  000055 GR
+ 18 C$c8051_SDCC.h$115$1$10                                     =  000058 GR
+ 18 C$c8051_SDCC.h$116$1$10                                     =  00005B GR
+ 18 C$c8051_SDCC.h$42$0$0                                       =  000000 GR
+ 18 C$c8051_SDCC.h$46$1$2                                       =  000000 GR
+ 18 C$c8051_SDCC.h$49$1$2                                       =  000003 GR
+ 18 C$c8051_SDCC.h$51$1$2                                       =  000010 GR
+ 18 C$c8051_SDCC.h$53$1$2                                       =  000015 GR
+ 18 C$c8051_SDCC.h$56$1$2                                       =  000018 GR
+ 18 C$c8051_SDCC.h$64$1$2                                       =  000019 GR
+ 18 C$c8051_SDCC.h$66$1$4                                       =  000019 GR
+ 18 C$c8051_SDCC.h$67$1$4                                       =  00001C GR
+ 18 C$c8051_SDCC.h$68$1$4                                       =  00001F GR
+ 18 C$c8051_SDCC.h$69$1$4                                       =  000022 GR
+ 18 C$c8051_SDCC.h$70$1$4                                       =  000024 GR
+ 18 C$c8051_SDCC.h$71$1$4                                       =  000027 GR
+ 18 C$c8051_SDCC.h$73$1$4                                       =  00002A GR
+ 18 C$c8051_SDCC.h$74$1$4                                       =  00002C GR
+ 18 C$c8051_SDCC.h$75$1$4                                       =  00002F GR
+ 18 C$c8051_SDCC.h$83$1$4                                       =  000030 GR
+ 18 C$c8051_SDCC.h$85$1$6                                       =  000030 GR
+ 18 C$c8051_SDCC.h$86$1$6                                       =  000033 GR
+ 18 C$c8051_SDCC.h$88$1$6                                       =  000036 GR
+ 18 C$c8051_SDCC.h$89$1$6                                       =  000039 GR
+ 18 C$c8051_SDCC.h$91$1$6                                       =  00003C GR
+ 18 C$c8051_SDCC.h$92$1$6                                       =  00003F GR
+ 18 C$c8051_SDCC.h$93$1$6                                       =  000042 GR
+ 18 C$c8051_SDCC.h$98$1$6                                       =  000043 GR
     CPRL2                                                       =  0000C8 L
     CT2                                                         =  0000C9 L
     CY                                                          =  0000D7 L
@@ -414,18 +358,15 @@ Symbol Table
     EX0                                                         =  0000A8 L
     EX1                                                         =  0000AA L
     EXEN2                                                       =  0000CB L
-    EXF2                                                        =  0000CE L
-    F0                                                          =  0000D5 L
- 1A FLab3_Steering$__str_0$0$0                                  =  000000 GR
- 1A FLab3_Steering$__str_1$0$0                                  =  000028 GR
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 8.
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 7.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
- 1A FLab3_Steering$__str_2$0$0                                  =  000048 GR
- 1A FLab3_Steering$__str_3$0$0                                  =  000069 GR
- 1A FLab3_Steering$__str_4$0$0                                  =  000073 GR
+    EXF2                                                        =  0000CE L
+    F0                                                          =  0000D5 L
+ 19 FLab3_Steering$__str_0$0$0                                  =  000000 GR
+ 19 FLab3_Steering$__str_1$0$0                                  =  000028 GR
     G$AA$0$0                                                    =  0000C2 G
     G$AC$0$0                                                    =  0000D6 G
     G$ACC$0$0                                                   =  0000E0 G
@@ -477,12 +418,12 @@ Symbol Table
     G$CR$0$0                                                    =  0000DE G
     G$CT2$0$0                                                   =  0000C9 G
     G$CY$0$0                                                    =  0000D7 G
-    G$DAC0$0$0                                                  =  00D3D2 G
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 9.
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 8.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
+    G$DAC0$0$0                                                  =  00D3D2 G
     G$DAC0CN$0$0                                                =  0000D4 G
     G$DAC0H$0$0                                                 =  0000D3 G
     G$DAC0L$0$0                                                 =  0000D2 G
@@ -537,12 +478,12 @@ Symbol Table
     G$P0_5$0$0                                                  =  000085 G
     G$P0_6$0$0                                                  =  000086 G
     G$P0_7$0$0                                                  =  000087 G
-    G$P1$0$0                                                    =  000090 G
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 10.
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 9.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
+    G$P1$0$0                                                    =  000090 G
     G$P1MDIN$0$0                                                =  0000BD G
     G$P1MDOUT$0$0                                               =  0000A5 G
     G$P1_0$0$0                                                  =  000090 G
@@ -597,20 +538,21 @@ Symbol Table
     G$PCA0CPL3$0$0                                              =  0000ED G
     G$PCA0CPL4$0$0                                              =  0000EE G
     G$PCA0CPM0$0$0                                              =  0000DA G
-    G$PCA0CPM1$0$0                                              =  0000DB G
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 11.
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 10.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
+    G$PCA0CPM1$0$0                                              =  0000DB G
     G$PCA0CPM2$0$0                                              =  0000DC G
     G$PCA0CPM3$0$0                                              =  0000DD G
     G$PCA0CPM4$0$0                                              =  0000DE G
     G$PCA0H$0$0                                                 =  0000F9 G
     G$PCA0L$0$0                                                 =  0000E9 G
     G$PCA0MD$0$0                                                =  0000D9 G
- 19 G$PCA_ISR$0$0                                               =  00014B GR
- 19 G$PCA_Init$0$0                                              =  00013C GR
+ 18 G$PCA_ISR$0$0                                               =  000150 GR
+ 18 G$PCA_Init$0$0                                              =  000141 GR
+  5 G$PCA_START$0$0                                             =  000000 GR
     G$PCON$0$0                                                  =  000087 G
     G$PRT0CF$0$0                                                =  0000A4 G
     G$PRT1CF$0$0                                                =  0000A5 G
@@ -623,13 +565,13 @@ Symbol Table
     G$PT0$0$0                                                   =  0000B9 G
     G$PT1$0$0                                                   =  0000BB G
     G$PT2$0$0                                                   =  0000BD G
-  6 G$PW$0$0                                                    =  000006 GR
-  6 G$PW_CENTER$0$0                                             =  000000 GR
-  6 G$PW_MAX$0$0                                                =  000004 GR
-  6 G$PW_MIN$0$0                                                =  000002 GR
+  5 G$PW$0$0                                                    =  000008 GR
+  5 G$PW_CENTER$0$0                                             =  000002 GR
+  5 G$PW_MAX$0$0                                                =  000006 GR
+  5 G$PW_MIN$0$0                                                =  000004 GR
     G$PX0$0$0                                                   =  0000B8 G
     G$PX1$0$0                                                   =  0000BA G
- 19 G$Port_Init$0$0                                             =  000134 GR
+ 18 G$Port_Init$0$0                                             =  000139 GR
     G$RB8$0$0                                                   =  00009A G
     G$RB80$0$0                                                  =  00009A G
     G$RCAP2$0$0                                                 =  00CBCA G
@@ -656,13 +598,13 @@ Symbol Table
     G$SBUF$0$0                                                  =  000099 G
     G$SBUF0$0$0                                                 =  000099 G
     G$SBUF1$0$0                                                 =  0000F2 G
-    G$SCON$0$0                                                  =  000098 G
-    G$SCON0$0$0                                                 =  000098 G
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 12.
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 11.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
+    G$SCON$0$0                                                  =  000098 G
+    G$SCON0$0$0                                                 =  000098 G
     G$SCON1$0$0                                                 =  0000F1 G
     G$SI$0$0                                                    =  0000C3 G
     G$SLVSEL$0$0                                                =  0000FA G
@@ -688,9 +630,9 @@ Symbol Table
     G$SPIF$0$0                                                  =  0000FF G
     G$STA$0$0                                                   =  0000C5 G
     G$STO$0$0                                                   =  0000C4 G
- 19 G$SYSCLK_Init$0$0                                           =  000000 GR
- 19 G$Steering_Servo$0$0                                        =  0000C7 GR
- 19 G$Sys_Init$0$0                                              =  000030 GR
+ 18 G$SYSCLK_Init$0$0                                           =  000000 GR
+ 18 G$Steering_Servo$0$0                                        =  0000A9 GR
+ 18 G$Sys_Init$0$0                                              =  000030 GR
     G$T2CON$0$0                                                 =  0000C8 G
     G$T4CON$0$0                                                 =  0000C9 G
     G$TB8$0$0                                                   =  00009B G
@@ -716,13 +658,13 @@ Symbol Table
     G$TMR2$0$0                                                  =  00CDCC G
     G$TMR3$0$0                                                  =  009594 G
     G$TMR3CN$0$0                                                =  000091 G
-    G$TMR3H$0$0                                                 =  000095 G
-    G$TMR3L$0$0                                                 =  000094 G
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 13.
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 12.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
+    G$TMR3H$0$0                                                 =  000095 G
+    G$TMR3L$0$0                                                 =  000094 G
     G$TMR3RL$0$0                                                =  009392 G
     G$TMR3RLH$0$0                                               =  000093 G
     G$TMR3RLL$0$0                                               =  000092 G
@@ -731,20 +673,18 @@ Symbol Table
     G$TR1$0$0                                                   =  00008E G
     G$TR2$0$0                                                   =  0000CA G
     G$TXBSY$0$0                                                 =  0000FB G
- 19 G$Timer0_ISR$0$0                                            =  00016E GR
- 19 G$Timer_Init$0$0                                            =  00015A GR
- 19 G$UART0_Init$0$0                                            =  000019 GR
+ 18 G$UART0_Init$0$0                                            =  000019 GR
     G$WCOL$0$0                                                  =  0000FE G
     G$WDTCN$0$0                                                 =  0000FF G
     G$XBR0$0$0                                                  =  0000E1 G
- 19 G$XBR0_Init$0$0                                             =  000138 GR
+ 18 G$XBR0_Init$0$0                                             =  00013D GR
     G$XBR1$0$0                                                  =  0000E2 G
     G$XBR2$0$0                                                  =  0000E3 G
     G$_XPAGE$0$0                                                =  0000AF G
-  6 G$counts$0$0                                                =  000008 GR
- 19 G$getchar$0$0                                               =  00004D GR
- 19 G$main$0$0                                                  =  00005C GR
- 19 G$putchar$0$0                                               =  000043 GR
+  5 G$counts$0$0                                                =  00000A GR
+ 18 G$getchar$0$0                                               =  00004D GR
+ 18 G$main$0$0                                                  =  00005C GR
+ 18 G$putchar$0$0                                               =  000043 GR
     IE                                                          =  0000A8 L
     IE.0                                                        =  0000A8 L
     IE.1                                                        =  0000A9 L
@@ -778,7 +718,7 @@ Symbol Table
     P0.6                                                        =  000086 L
     P0.7                                                        =  000087 L
     P1                                                          =  000090 L
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 14.
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 13.
 Hexadecimal [24-Bits]
 
 Symbol Table
@@ -838,7 +778,7 @@ Symbol Table
     SCON                                                        =  000098 L
     SCON.0                                                      =  000098 L
     SCON.1                                                      =  000099 L
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 15.
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 14.
 Hexadecimal [24-Bits]
 
 Symbol Table
@@ -888,24 +828,22 @@ Symbol Table
     TR1                                                         =  00008E L
     TR2                                                         =  0000CA L
     TXD                                                         =  0000B1 L
- 19 XG$PCA_ISR$0$0                                              =  000159 GR
- 19 XG$PCA_Init$0$0                                             =  00014A GR
- 19 XG$Port_Init$0$0                                            =  000137 GR
- 19 XG$SYSCLK_Init$0$0                                          =  000018 GR
- 19 XG$Steering_Servo$0$0                                       =  000133 GR
- 19 XG$Sys_Init$0$0                                             =  000042 GR
- 19 XG$Timer0_ISR$0$0                                           =  0001CA GR
- 19 XG$Timer_Init$0$0                                           =  00016D GR
- 19 XG$UART0_Init$0$0                                           =  00002F GR
- 19 XG$XBR0_Init$0$0                                            =  00013B GR
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 16.
+ 18 XG$PCA_ISR$0$0                                              =  000160 GR
+ 18 XG$PCA_Init$0$0                                             =  00014F GR
+ 18 XG$Port_Init$0$0                                            =  00013C GR
+ 18 XG$SYSCLK_Init$0$0                                          =  000018 GR
+ 18 XG$Steering_Servo$0$0                                       =  000138 GR
+ 18 XG$Sys_Init$0$0                                             =  000042 GR
+ 18 XG$UART0_Init$0$0                                           =  00002F GR
+ 18 XG$XBR0_Init$0$0                                            =  000140 GR
+ 18 XG$getchar$0$0                                              =  00005B GR
+ 18 XG$main$0$0                                                 =  0000A8 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 15.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
- 19 XG$getchar$0$0                                              =  00005B GR
- 19 XG$main$0$0                                                 =  0000C6 GR
- 19 XG$putchar$0$0                                              =  00004C GR
+ 18 XG$putchar$0$0                                              =  00004C GR
     _AA                                                         =  0000C2 G
     _AC                                                         =  0000D6 G
     _ACC                                                        =  0000E0 G
@@ -958,13 +896,13 @@ Symbol Table
     _CT2                                                        =  0000C9 G
     _CY                                                         =  0000D7 G
     _DAC0                                                       =  00D3D2 G
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 17.
+    _DAC0CN                                                     =  0000D4 G
+    _DAC0H                                                      =  0000D3 G
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 16.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
-    _DAC0CN                                                     =  0000D4 G
-    _DAC0H                                                      =  0000D3 G
     _DAC0L                                                      =  0000D2 G
     _DAC1                                                       =  00D6D5 G
     _DAC1CN                                                     =  0000D7 G
@@ -1018,13 +956,13 @@ Symbol Table
     _P0_6                                                       =  000086 G
     _P0_7                                                       =  000087 G
     _P1                                                         =  000090 G
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 18.
+    _P1MDIN                                                     =  0000BD G
+    _P1MDOUT                                                    =  0000A5 G
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 17.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
-    _P1MDIN                                                     =  0000BD G
-    _P1MDOUT                                                    =  0000A5 G
     _P1_0                                                       =  000090 G
     _P1_1                                                       =  000091 G
     _P1_2                                                       =  000092 G
@@ -1078,19 +1016,20 @@ Symbol Table
     _PCA0CPL4                                                   =  0000EE G
     _PCA0CPM0                                                   =  0000DA G
     _PCA0CPM1                                                   =  0000DB G
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 19.
+    _PCA0CPM2                                                   =  0000DC G
+    _PCA0CPM3                                                   =  0000DD G
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 18.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
-    _PCA0CPM2                                                   =  0000DC G
-    _PCA0CPM3                                                   =  0000DD G
     _PCA0CPM4                                                   =  0000DE G
     _PCA0H                                                      =  0000F9 G
     _PCA0L                                                      =  0000E9 G
     _PCA0MD                                                     =  0000D9 G
- 19 _PCA_ISR                                                       00014B GR
- 19 _PCA_Init                                                      00013C GR
+ 18 _PCA_ISR                                                       000150 GR
+ 18 _PCA_Init                                                      000141 GR
+  5 _PCA_START                                                     000000 GR
     _PCON                                                       =  000087 G
     _PRT0CF                                                     =  0000A4 G
     _PRT1CF                                                     =  0000A5 G
@@ -1103,13 +1042,13 @@ Symbol Table
     _PT0                                                        =  0000B9 G
     _PT1                                                        =  0000BB G
     _PT2                                                        =  0000BD G
-  6 _PW                                                            000006 GR
-  6 _PW_CENTER                                                     000000 GR
-  6 _PW_MAX                                                        000004 GR
-  6 _PW_MIN                                                        000002 GR
+  5 _PW                                                            000008 GR
+  5 _PW_CENTER                                                     000002 GR
+  5 _PW_MAX                                                        000006 GR
+  5 _PW_MIN                                                        000004 GR
     _PX0                                                        =  0000B8 G
     _PX1                                                        =  0000BA G
- 19 _Port_Init                                                     000134 GR
+ 18 _Port_Init                                                     000139 GR
     _RB8                                                        =  00009A G
     _RB80                                                       =  00009A G
     _RCAP2                                                      =  00CBCA G
@@ -1138,12 +1077,12 @@ Symbol Table
     _SBUF1                                                      =  0000F2 G
     _SCON                                                       =  000098 G
     _SCON0                                                      =  000098 G
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 20.
+    _SCON1                                                      =  0000F1 G
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 19.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
-    _SCON1                                                      =  0000F1 G
     _SI                                                         =  0000C3 G
     _SLVSEL                                                     =  0000FA G
     _SM0                                                        =  00009F G
@@ -1168,9 +1107,9 @@ Symbol Table
     _SPIF                                                       =  0000FF G
     _STA                                                        =  0000C5 G
     _STO                                                        =  0000C4 G
- 19 _SYSCLK_Init                                                   000000 GR
- 19 _Steering_Servo                                                0000C7 GR
- 19 _Sys_Init                                                      000030 GR
+ 18 _SYSCLK_Init                                                   000000 GR
+ 18 _Steering_Servo                                                0000A9 GR
+ 18 _Sys_Init                                                      000030 GR
     _T2CON                                                      =  0000C8 G
     _T4CON                                                      =  0000C9 G
     _TB8                                                        =  00009B G
@@ -1198,12 +1137,12 @@ Symbol Table
     _TMR3CN                                                     =  000091 G
     _TMR3H                                                      =  000095 G
     _TMR3L                                                      =  000094 G
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 21.
+    _TMR3RL                                                     =  009392 G
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 20.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
-    _TMR3RL                                                     =  009392 G
     _TMR3RLH                                                    =  000093 G
     _TMR3RLL                                                    =  000092 G
     _TMR4                                                       =  00F5F4 G
@@ -1211,33 +1150,28 @@ Symbol Table
     _TR1                                                        =  00008E G
     _TR2                                                        =  0000CA G
     _TXBSY                                                      =  0000FB G
- 19 _Timer0_ISR                                                    00016E GR
- 19 _Timer_Init                                                    00015A GR
- 19 _UART0_Init                                                    000019 GR
+ 18 _UART0_Init                                                    000019 GR
     _WCOL                                                       =  0000FE G
     _WDTCN                                                      =  0000FF G
     _XBR0                                                       =  0000E1 G
- 19 _XBR0_Init                                                     000138 GR
+ 18 _XBR0_Init                                                     00013D GR
     _XBR1                                                       =  0000E2 G
     _XBR2                                                       =  0000E3 G
     __XPAGE                                                     =  0000AF G
- 1A ___str_0                                                       000000 R
- 1A ___str_1                                                       000028 R
- 1A ___str_2                                                       000048 R
- 1A ___str_3                                                       000069 R
- 1A ___str_4                                                       000073 R
- 10 __interrupt_vect                                               000000 R
+ 19 ___str_0                                                       000000 R
+ 19 ___str_1                                                       000028 R
+  F __interrupt_vect                                               000000 R
     __mcs51_genRAMCLEAR                                            ****** GX
     __mcs51_genXINIT                                               ****** GX
     __mcs51_genXRAMCLEAR                                           ****** GX
     __sdcc_gsinit_startup                                          ****** GX
- 10 __sdcc_program_startup                                         00004E GR
-  8 __start__stack                                                 000000 GR
-  6 _counts                                                        000008 GR
- 19 _getchar                                                       00004D GR
- 19 _main                                                          00005C GR
+  F __sdcc_program_startup                                         00004E GR
+  7 __start__stack                                                 000000 GR
+  5 _counts                                                        00000A GR
+ 18 _getchar                                                       00004D GR
+ 18 _main                                                          00005C GR
     _printf                                                        ****** GX
- 19 _putchar                                                       000043 GR
+ 18 _putchar                                                       000043 GR
     a                                                           =  0000E0 L
     a.0                                                         =  0000E0 L
     a.1                                                         =  0000E1 L
@@ -1258,17 +1192,17 @@ Symbol Table
     acc.6                                                       =  0000E6 L
     acc.7                                                       =  0000E7 L
     ar0                                                         =  000000 
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 22.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
     ar1                                                         =  000001 
     ar2                                                         =  000002 
     ar3                                                         =  000003 
     ar4                                                         =  000004 
     ar5                                                         =  000005 
     ar6                                                         =  000006 
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 21.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
     ar7                                                         =  000007 
     b                                                           =  0000F0 L
     b.0                                                         =  0000F0 L
@@ -1279,15 +1213,6 @@ Symbol Table
     b.5                                                         =  0000F5 L
     b.6                                                         =  0000F6 L
     b.7                                                         =  0000F7 L
-  5 b0                                                          =  008000 R
-  5 b1                                                          =  008100 R
-  5 b2                                                          =  008200 R
-  5 b3                                                          =  008300 R
-  5 b4                                                          =  008400 R
-  5 b5                                                          =  008500 R
-  5 b6                                                          =  008600 R
-  5 b7                                                          =  008700 R
-  5 bits                                                           000000 R
     cprl2                                                       =  0000C8 L
     ct2                                                         =  0000C9 L
     cy                                                          =  0000D7 L
@@ -1318,11 +1243,6 @@ Symbol Table
     ip                                                          =  0000B8 L
     ip.0                                                        =  0000B8 L
     ip.1                                                        =  0000B9 L
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 23.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
     ip.2                                                        =  0000BA L
     ip.3                                                        =  0000BB L
     ip.4                                                        =  0000BC L
@@ -1338,6 +1258,11 @@ Symbol Table
     p0.3                                                        =  000083 L
     p0.4                                                        =  000084 L
     p0.5                                                        =  000085 L
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 22.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
     p0.6                                                        =  000086 L
     p0.7                                                        =  000087 L
     p1                                                          =  000090 L
@@ -1378,11 +1303,6 @@ Symbol Table
     psw.5                                                       =  0000D5 L
     psw.6                                                       =  0000D6 L
     psw.7                                                       =  0000D7 L
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 24.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
     pt0                                                         =  0000B9 L
     pt1                                                         =  0000BB L
     pt2                                                         =  0000BD L
@@ -1398,6 +1318,11 @@ Symbol Table
     rs1                                                         =  0000D4 L
     rxd                                                         =  0000B0 L
     sbuf                                                        =  000099 L
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 23.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
     scon                                                        =  000098 L
     scon.0                                                      =  000098 L
     scon.1                                                      =  000099 L
@@ -1438,11 +1363,6 @@ Symbol Table
     th1                                                         =  00008D L
     th2                                                         =  0000CD L
     ti                                                          =  000099 L
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 25.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
     tl0                                                         =  00008A L
     tl1                                                         =  00008B L
     tl2                                                         =  0000CC L
@@ -1453,7 +1373,7 @@ Symbol Table
     txd                                                         =  0000B1 L
 
 
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 26.
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 24.
 Hexadecimal [24-Bits]
 
 Area Table
@@ -1463,28 +1383,27 @@ Area Table
    2 RSEG0                                      size      0   flags    8
    3 RSEG1                                      size      0   flags    8
    4 REG_BANK_0                                 size      8   flags    4
-   5 BIT_BANK                                   size      1   flags    4
-   6 DSEG                                       size      A   flags    0
-   7 OSEG                                       size      0   flags    4
-   8 SSEG                                       size      1   flags    0
-   9 ISEG                                       size      0   flags    0
-   A IABS                                       size      0   flags    8
-   B BSEG                                       size      0   flags   80
-   C PSEG                                       size      0   flags   50
-   D XSEG                                       size      0   flags   40
-   E XABS                                       size      0   flags   48
-   F XISEG                                      size      0   flags   40
-  10 HOME                                       size     51   flags   20
-  11 GSINIT0                                    size      0   flags   20
-  12 GSINIT1                                    size      0   flags   20
-  13 GSINIT2                                    size      0   flags   20
-  14 GSINIT3                                    size      0   flags   20
-  15 GSINIT4                                    size      0   flags   20
-  16 GSINIT5                                    size      0   flags   20
-  17 GSINIT                                     size     1B   flags   20
-  18 GSFINAL                                    size      3   flags   20
-  19 CSEG                                       size    1CB   flags   20
-  1A CONST                                      size     78   flags   20
-  1B XINIT                                      size      0   flags   20
-  1C CABS                                       size      0   flags   28
+   5 DSEG                                       size      C   flags    0
+   6 OSEG                                       size      0   flags    4
+   7 SSEG                                       size      1   flags    0
+   8 ISEG                                       size      0   flags    0
+   9 IABS                                       size      0   flags    8
+   A BSEG                                       size      0   flags   80
+   B PSEG                                       size      0   flags   50
+   C XSEG                                       size      0   flags   40
+   D XABS                                       size      0   flags   48
+   E XISEG                                      size      0   flags   40
+   F HOME                                       size     51   flags   20
+  10 GSINIT0                                    size      0   flags   20
+  11 GSINIT1                                    size      0   flags   20
+  12 GSINIT2                                    size      0   flags   20
+  13 GSINIT3                                    size      0   flags   20
+  14 GSINIT4                                    size      0   flags   20
+  15 GSINIT5                                    size      0   flags   20
+  16 GSINIT                                     size     21   flags   20
+  17 GSFINAL                                    size      3   flags   20
+  18 CSEG                                       size    161   flags   20
+  19 CONST                                      size     31   flags   20
+  1A XINIT                                      size      0   flags   20
+  1B CABS                                       size      0   flags   28
 

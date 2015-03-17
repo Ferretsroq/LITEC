@@ -10,15 +10,14 @@ F:G$Port_Init$0$0({2}DF,SV:S),Z,0,0,0,0,0
 F:G$XBR0_Init$0$0({2}DF,SV:S),Z,0,0,0,0,0
 F:G$PCA_Init$0$0({2}DF,SV:S),Z,0,0,0,0,0
 F:G$PCA_ISR$0$0({2}DF,SV:S),Z,0,0,1,9,0
-F:G$Timer_Init$0$0({2}DF,SV:S),Z,0,0,0,0,0
-F:G$Timer0_ISR$0$0({2}DF,SV:S),Z,0,0,1,1,0
 S:LLab3_Steering.getchar$c$1$10({1}SC:S),R,0,0,[]
+S:G$PCA_START$0$0({2}SI:U),E,0,0
 S:G$PW_CENTER$0$0({2}SI:U),E,0,0
 S:G$PW_MIN$0$0({2}SI:U),E,0,0
 S:G$PW_MAX$0$0({2}SI:U),E,0,0
 S:G$PW$0$0({2}SI:U),E,0,0
 S:G$counts$0$0({2}SI:U),E,0,0
-S:LLab3_Steering.Steering_Servo$input$1$50({1}SC:S),R,0,0,[r7]
+S:LLab3_Steering.Steering_Servo$input$1$48({1}SC:S),R,0,0,[r7]
 S:G$P0$0$0({1}SC:U),I,0,0
 S:G$SP$0$0({1}SC:U),I,0,0
 S:G$DPL$0$0({1}SC:U),I,0,0
@@ -328,7 +327,4 @@ S:G$rand$0$0({2}DF,SI:S),C,0,0
 S:G$srand$0$0({2}DF,SV:S),C,0,0
 S:G$main$0$0({2}DF,SV:S),C,0,0
 S:FLab3_Steering$__str_0$0$0({40}DA40d,SC:S),D,0,0
-S:FLab3_Steering$__str_1$0$0({32}DA32d,SC:S),D,0,0
-S:FLab3_Steering$__str_2$0$0({33}DA33d,SC:S),D,0,0
-S:FLab3_Steering$__str_3$0$0({10}DA10d,SC:S),D,0,0
-S:FLab3_Steering$__str_4$0$0({5}DA5d,SC:S),D,0,0
+S:FLab3_Steering$__str_1$0$0({9}DA9d,SC:S),D,0,0

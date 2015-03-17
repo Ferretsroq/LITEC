@@ -19,9 +19,10 @@ void Port_Init(void);
 void PCA_Init (void);
 void XBR0_Init(void);
 void Steering_Servo(void);
-void PCA_ISR ( void ) __interrupt 9;
-void Timer_Init(void);     // Initialize Timer 0 
-void Timer0_ISR(void) __interrupt 1;
+void PCA_ISR (void) __interrupt 9;
+//void Timer_Init(void);     // Initialize Timer 0 
+//void Timer0_ISR(void) __interrupt 1;
+unsigned int PCA_START = 28672;
 unsigned int PW_CENTER = 2760;
 unsigned int PW_MIN = 2030;
 unsigned int PW_MAX = 3500;
@@ -46,21 +47,22 @@ void main(void)
 	Port_Init();
 	XBR0_Init();
 	PCA_Init();
-	Timer_Init();
+	//Timer_Init();
 	//print beginning message
 	printf("\rEmbedded Control Steering Calibration\n");
 	//set PCA output to a neutral setting
 	//__________________________________________
     //__________________________________________
     PW = PW_CENTER;
+	PCA0CP0 = 65535 - PW;	//Set initial pulsewidth
 /*
     count=0;
     while (count < 29);
     PCA0CPL0 = 0xFFFF - PW;
     PCA0CPH0 = (0xFFFF - PW) >> 8; */
-	printf("\rOne second delay has started!\n");
+	/*printf("\rOne second delay has started!\n");
 	while(counts < 337);
-	printf("\rOne second delay has finished!\n");
+	printf("\rOne second delay has finished!\n");*/
 	while(1)
 	{
 		Steering_Servo();
@@ -75,7 +77,11 @@ void Steering_Servo()
 	input = getchar();
 	if(input == 'r') //if 'r' - single character input to increase the pulsewidth
 	{
-		PW += 100; // arbitrary number to increment
+		if (PW < PW_MAX)
+		{
+			PW += 100; // arbitrary number to increment
+			PCA0CP0 = 0xFFFF - PW;	// Change pulse width
+		}
 		if(PW > PW_MAX) // check if more than pulsewidth maximum
 		{
 			PW = PW_MAX; //set PW to a maximum value
@@ -83,14 +89,18 @@ void Steering_Servo()
 	}
 	else if(input == 'l') //if 'l' - single character input to decrease the pulsewidth
 	{
-		PW -= 100; // arbitrary number to decrement
+		if (PW > PW_MIN)
+		{
+			PW -= 100; // arbitrary number to decrement
+			PCA0CP0 = 0xFFFF - PW;	// Change pulse width
+		}
 		if(PW < PW_MIN) // check if pulsewidth minimum exceeded
 		{
 			PW = PW_MIN; // set PW to a minimum value
 		}
 	}
-	printf("\rlPW: %u\n", PW);
-	PCA0CP0 = 0xFFFF - PW;
+	printf("\rPW: %u\n", PW);
+	
 }
 
 
@@ -131,16 +141,16 @@ void PCA_ISR ( void ) __interrupt 9
 {
 	if (CF)
 	{
+		PCA0 = PCA_START;	// Start count for 20ms period
 		CF = 0;			// Clear overflow flag
-		PCA0 = 28672;	// Start count for 20ms period
 		//printf("\rWe are getting overflows!\n");
 	}
-	PCA0CN &= 0xC0;		// Handle other PCA interrupt sources
+	else PCA0CN &= 0xC0;		// Handle other PCA interrupt sources
 }
 
 //------------------------------------------------------------------------------
 // Initialize Timer0
-void Timer_Init(void)
+/*void Timer_Init(void)
 {
 
     CKCON |= 0x08;  // Timer0 uses SYSCLK as source
@@ -151,12 +161,12 @@ void Timer_Init(void)
     TH0 = 0;           // Clear high byte of register T0
 	ET0 = 1;		// Enable Timer0 Interrupts
 
-}
+}*/
 
 //-------------------------------------------------------------------------------
 // Interrupt Service Routine for Timer0
-void Timer0_ISR(void) __interrupt 1
+/*void Timer0_ISR(void) __interrupt 1
 {
 		counts++;
 		printf("\r%u\n", counts);
-}
+}*/
