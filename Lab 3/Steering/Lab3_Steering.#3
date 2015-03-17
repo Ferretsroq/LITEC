@@ -21,7 +21,6 @@ void XBR0_Init(void);
 void Steering_Servo(void);
 void PCA_ISR ( void ) __interrupt 9;
 void Timer_Init(void);     // Initialize Timer 0 
-void Timer0_ISR(void) __interrupt 1;
 unsigned int PW_CENTER = 2760;
 unsigned int PW_MIN = 2030;
 unsigned int PW_MAX = 3500;
