@@ -1,8 +1,8 @@
 /*	Names: Kathryn DiPippo, Rebecca Halzack, Seth Rutman
 	Section: 4B
 	Date: 3/20/2015
-	File name: Lab 3-2 - Compass
-	Description: Read the heading on a compass
+	File name: Lab 3-2 - Ranger
+	Description: Read the Ultrasonic Ranger
 */
 
 
@@ -18,24 +18,22 @@
 void Port_Init(void);
 void PCA_Init (void);
 void XBR0_Init(void);
-//void Steering_Servo(void);
-unsigned int ReadCompass(void);
+unsigned int ReadRanger(void);
 void PCA_ISR (void) __interrupt 9;
 void SMB_Init(void);
 
 //-----------------------------------------------------------------------------
 // Global Variables
 //-----------------------------------------------------------------------------
+
 unsigned int PCA_START = 28672;
 unsigned int PW_CENTER = 2760;
 unsigned int PW_MIN = 2030;
 unsigned int PW_MAX = 3500;
 unsigned int PW = 0;
 unsigned int counts = 0;
-unsigned char new_heading = 0;
-unsigned char h_count = 0;
-unsigned int heading;
-unsigned char heading_delay = 0;
+unsigned char new_ping = 0;
+unsigned char r_count = 0;
 
 
 
@@ -48,20 +46,31 @@ void main(void)
 	Port_Init();
 	XBR0_Init();
 	PCA_Init();
-	SMB_Init();
+	//Timer_Init();
 	//print beginning message
-	printf("\rEmbedded Control Compass Reading\n");
+	printf("\rEmbedded Control Steering Calibration\n");
+	//set PCA output to a neutral setting
+	//__________________________________________
+    //__________________________________________
+    PW = PW_CENTER;
+	PCA0CP0 = 65535 - PW;	//Set initial pulsewidth
 	while(1)
 	{
-		//Steering_Servo();
-		if(new_heading && (heading_delay>=5))
-		{		
-			heading = ReadCompass();
-			printf("\rThe heading is %u degrees\n",heading/10);
-			new_heading = 0;
+		if(new_range)
+		{
+			unsigned int range;
+			range = ReadRanger();
+			new_range = 0;
+			Data[0] = 0x51 ; // write 0x51 to reg 0 of the ranger:
+			i2c_write_data(addr, 0, Data, 1) ; // write one byte of data to reg 0 at addr
+			//The above two lines change the result to centimetres
+			printf("The range is %u cm",range);
+			
 		}
 	}	
 }
+
+//-----------------------------------------------------------------------------
 
 
 //=============================================================================
@@ -69,7 +78,7 @@ void main(void)
 // Set up ports for input and output
 void Port_Init()
 {
-	P1MDOUT |= 0x01; //set output pin for CEX0 in push-pull mode
+	P1MDOUT |= 0x04; //set output pin for CEX0 in push-pull mode
 	// configure CEX0
 	// configure CEX1 just cause
 	// configure CEX2
@@ -94,12 +103,13 @@ void SMB_Init(void)
 // Set up Programmable Counter Array
 void PCA_Init(void)
 {
-	PCA0CPM0 = 0xC2;	// CCM0 in 16-bit compare mode
+	PCA0CPM2 = 0xC2;	// CCM2 in 16-bit compare mode
 	PCA0CN = 0x40;		// Enable PCA Counter
 	PCA0MD = 0x81;		// Enable CF Interrupt and SYSCLK/12
 	EA = 1;				// Enable Global Interrupts
 	EIE1 |= 0x08;		// Enable PCA Interrupt
 }
+
 
 //-----------------------------------------------------------------------------
 // Interrupt Service Routine for Programmable Counter Array Overflow Interrupt
@@ -107,28 +117,28 @@ void PCA_ISR ( void ) __interrupt 9
 {
 	if (CF)
 	{
-		h_count++;
-		if(h_count>=2)
+		r_count++;
+		if(r_count>=4)
 		{
-			new_heading=1;
-			h_count = 0;
+			new_range=1;
+			r_count = 0;
 		}
-		heading_delay++;
-		if(heading_delay>5) heading_delay=0;
 		PCA0 = PCA_START;	// Start count for 20ms period
 		CF = 0;			// Clear overflow flag
 	}
 	else PCA0CN &= 0xC0;		// Handle other PCA interrupt sources
 }
 
+//------------------------------------------------------------------------------
+
 //-------------------------------------------------------------------------------
-// Compass Reading Function
-unsigned int ReadCompass(void)
+// Ranger Reading Function
+unsigned int ReadRanger()
 {
-	unsigned char addr = 0xC0; // the address of the sensor, 0xC0 for the compass
+	unsigned char addr = 0xE0; // the address of the sensor, 0xC0 for the compass
 	unsigned char Data[2]; // Data is an array with a length of 2
-	unsigned int read_heading; // the heading returned in degrees between 0 and 3599
+	unsigned int range = 0; // the range
 	i2c_read_data(addr, 2, Data, 2); // read two byte, starting at reg 2
-	read_heading =(((unsigned int)Data[0] << 8) | Data[1]); //combine the two values
-	return read_heading; // the heading returned in degrees between 0 and 3599
+	range =(((unsigned int)Data[0] << 8) | Data[1]); //combine the two values
+	return range;
 }
