@@ -65,7 +65,8 @@ void main(void)
 	printf("\rOne second delay has finished!\n");*/
 	while(1)
 	{
-		Steering_Servo();
+		
+		//Steering_Servo();
 	}	
 }
 

@@ -1,0 +1,3 @@
+?ASlink-Error-<cannot open> : "C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-3\Lab3_3_Steering.rel"
++ C:\PROGRA~2\SDCC\bin\sdld.exe -nf "C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-3\Lab3_3_Steering.lk"
++ C:\PROGRA~2\SDCC\bin\sdld.exe -nf "C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-3\Lab3_3_Steering.lk" returned errorcode 3

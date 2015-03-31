@@ -1,7 +1,7 @@
 ;--------------------------------------------------------
 ; File Created by SDCC : free open source ANSI-C Compiler
 ; Version 3.4.0 #8981 (Apr  5 2014) (MINGW32)
-; This file was generated Tue Mar 17 13:26:44 2015
+; This file was generated Tue Mar 31 12:34:21 2015
 ;--------------------------------------------------------
 	.module Lab3_Steering
 	.optsdcc -mmcs51 --model-small
@@ -982,28 +982,28 @@ __interrupt_vect:
 	.globl __mcs51_genXRAMCLEAR
 	.globl __mcs51_genRAMCLEAR
 	C$Lab3_Steering.c$25$1$61 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab3_Steering.c:25: unsigned int PCA_START = 28672;
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-1\Lab3_Steering.c:25: unsigned int PCA_START = 28672;
 	mov	_PCA_START,#0x00
 	mov	(_PCA_START + 1),#0x70
 	C$Lab3_Steering.c$26$1$61 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab3_Steering.c:26: unsigned int PW_CENTER = 2760;
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-1\Lab3_Steering.c:26: unsigned int PW_CENTER = 2760;
 	mov	_PW_CENTER,#0xC8
 	mov	(_PW_CENTER + 1),#0x0A
 	C$Lab3_Steering.c$27$1$61 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab3_Steering.c:27: unsigned int PW_MIN = 2030;
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-1\Lab3_Steering.c:27: unsigned int PW_MIN = 2030;
 	mov	_PW_MIN,#0xEE
 	mov	(_PW_MIN + 1),#0x07
 	C$Lab3_Steering.c$28$1$61 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab3_Steering.c:28: unsigned int PW_MAX = 3500;
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-1\Lab3_Steering.c:28: unsigned int PW_MAX = 3500;
 	mov	_PW_MAX,#0xAC
 	mov	(_PW_MAX + 1),#0x0D
 	C$Lab3_Steering.c$29$1$61 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab3_Steering.c:29: unsigned int PW = 0;
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-1\Lab3_Steering.c:29: unsigned int PW = 0;
 	clr	a
 	mov	_PW,a
 	mov	(_PW + 1),a
 	C$Lab3_Steering.c$30$1$61 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab3_Steering.c:30: unsigned int counts = 0;
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-1\Lab3_Steering.c:30: unsigned int counts = 0;
 	mov	_counts,a
 	mov	(_counts + 1),a
 	.area GSFINAL (CODE)
@@ -1198,29 +1198,29 @@ _getchar:
 ;------------------------------------------------------------
 	G$main$0$0 ==.
 	C$Lab3_Steering.c$42$1$10 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab3_Steering.c:42: void main(void)
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-1\Lab3_Steering.c:42: void main(void)
 ;	-----------------------------------------
 ;	 function main
 ;	-----------------------------------------
 _main:
 	C$Lab3_Steering.c$45$1$46 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab3_Steering.c:45: Sys_Init();
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-1\Lab3_Steering.c:45: Sys_Init();
 	lcall	_Sys_Init
 	C$Lab3_Steering.c$46$1$46 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab3_Steering.c:46: putchar(' '); //the quotes in this line may not format correctly
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-1\Lab3_Steering.c:46: putchar(' '); //the quotes in this line may not format correctly
 	mov	dpl,#0x20
 	lcall	_putchar
 	C$Lab3_Steering.c$47$1$46 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab3_Steering.c:47: Port_Init();
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-1\Lab3_Steering.c:47: Port_Init();
 	lcall	_Port_Init
 	C$Lab3_Steering.c$48$1$46 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab3_Steering.c:48: XBR0_Init();
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-1\Lab3_Steering.c:48: XBR0_Init();
 	lcall	_XBR0_Init
 	C$Lab3_Steering.c$49$1$46 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab3_Steering.c:49: PCA_Init();
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-1\Lab3_Steering.c:49: PCA_Init();
 	lcall	_PCA_Init
 	C$Lab3_Steering.c$52$1$46 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab3_Steering.c:52: printf("\rEmbedded Control Steering Calibration\n");
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-1\Lab3_Steering.c:52: printf("\rEmbedded Control Steering Calibration\n");
 	mov	a,#___str_0
 	push	acc
 	mov	a,#(___str_0 >> 8)
@@ -1232,11 +1232,11 @@ _main:
 	dec	sp
 	dec	sp
 	C$Lab3_Steering.c$56$1$46 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab3_Steering.c:56: PW = PW_CENTER;
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-1\Lab3_Steering.c:56: PW = PW_CENTER;
 	mov	_PW,_PW_CENTER
 	mov	(_PW + 1),(_PW_CENTER + 1)
 	C$Lab3_Steering.c$57$1$46 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab3_Steering.c:57: PCA0CP0 = 65535 - PW;	//Set initial pulsewidth
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-1\Lab3_Steering.c:57: PCA0CP0 = 65535 - PW;	//Set initial pulsewidth
 	mov	r4,_PW
 	mov	r5,(_PW + 1)
 	clr	a
@@ -1258,13 +1258,10 @@ _main:
 	mov	((_PCA0CP0 >> 0) & 0xFF),r4
 	mov	((_PCA0CP0 >> 8) & 0xFF),r5
 	C$Lab3_Steering.c$66$1$46 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab3_Steering.c:66: while(1)
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-1\Lab3_Steering.c:66: while(1)
 00102$:
-	C$Lab3_Steering.c$68$2$47 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab3_Steering.c:68: Steering_Servo();
-	lcall	_Steering_Servo
 	sjmp	00102$
-	C$Lab3_Steering.c$70$1$46 ==.
+	C$Lab3_Steering.c$71$1$46 ==.
 	XG$main$0$0 ==.
 	ret
 ;------------------------------------------------------------
@@ -1273,37 +1270,37 @@ _main:
 ;input                     Allocated to registers r7 
 ;------------------------------------------------------------
 	G$Steering_Servo$0$0 ==.
-	C$Lab3_Steering.c$73$1$46 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab3_Steering.c:73: void Steering_Servo()
+	C$Lab3_Steering.c$74$1$46 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-1\Lab3_Steering.c:74: void Steering_Servo()
 ;	-----------------------------------------
 ;	 function Steering_Servo
 ;	-----------------------------------------
 _Steering_Servo:
-	C$Lab3_Steering.c$77$1$48 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab3_Steering.c:77: input = getchar();
+	C$Lab3_Steering.c$78$1$48 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-1\Lab3_Steering.c:78: input = getchar();
 	lcall	_getchar
 	mov	r7,dpl
-	C$Lab3_Steering.c$78$1$48 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab3_Steering.c:78: if(input == 'r') //if 'r' - single character input to increase the pulsewidth
+	C$Lab3_Steering.c$79$1$48 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-1\Lab3_Steering.c:79: if(input == 'r') //if 'r' - single character input to increase the pulsewidth
 	cjne	r7,#0x72,00112$
-	C$Lab3_Steering.c$80$2$49 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab3_Steering.c:80: if (PW < PW_MAX)
+	C$Lab3_Steering.c$81$2$49 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-1\Lab3_Steering.c:81: if (PW < PW_MAX)
 	clr	c
 	mov	a,_PW
 	subb	a,_PW_MAX
 	mov	a,(_PW + 1)
 	subb	a,(_PW_MAX + 1)
 	jnc	00102$
-	C$Lab3_Steering.c$82$3$50 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab3_Steering.c:82: PW += 100; // arbitrary number to increment
+	C$Lab3_Steering.c$83$3$50 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-1\Lab3_Steering.c:83: PW += 100; // arbitrary number to increment
 	mov	a,#0x64
 	add	a,_PW
 	mov	_PW,a
 	clr	a
 	addc	a,(_PW + 1)
 	mov	(_PW + 1),a
-	C$Lab3_Steering.c$83$3$50 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab3_Steering.c:83: PCA0CP0 = 0xFFFF - PW;	// Change pulse width
+	C$Lab3_Steering.c$84$3$50 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-1\Lab3_Steering.c:84: PCA0CP0 = 0xFFFF - PW;	// Change pulse width
 	mov	a,#0xFF
 	clr	c
 	subb	a,_PW
@@ -1312,41 +1309,41 @@ _Steering_Servo:
 	subb	a,(_PW + 1)
 	mov	((_PCA0CP0 >> 8) & 0xFF),a
 00102$:
-	C$Lab3_Steering.c$85$2$49 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab3_Steering.c:85: if(PW > PW_MAX) // check if more than pulsewidth maximum
+	C$Lab3_Steering.c$86$2$49 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-1\Lab3_Steering.c:86: if(PW > PW_MAX) // check if more than pulsewidth maximum
 	clr	c
 	mov	a,_PW_MAX
 	subb	a,_PW
 	mov	a,(_PW_MAX + 1)
 	subb	a,(_PW + 1)
 	jnc	00113$
-	C$Lab3_Steering.c$87$3$51 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab3_Steering.c:87: PW = PW_MAX; //set PW to a maximum value
+	C$Lab3_Steering.c$88$3$51 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-1\Lab3_Steering.c:88: PW = PW_MAX; //set PW to a maximum value
 	mov	_PW,_PW_MAX
 	mov	(_PW + 1),(_PW_MAX + 1)
 	sjmp	00113$
 00112$:
-	C$Lab3_Steering.c$90$1$48 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab3_Steering.c:90: else if(input == 'l') //if 'l' - single character input to decrease the pulsewidth
+	C$Lab3_Steering.c$91$1$48 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-1\Lab3_Steering.c:91: else if(input == 'l') //if 'l' - single character input to decrease the pulsewidth
 	cjne	r7,#0x6C,00113$
-	C$Lab3_Steering.c$92$2$52 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab3_Steering.c:92: if (PW > PW_MIN)
+	C$Lab3_Steering.c$93$2$52 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-1\Lab3_Steering.c:93: if (PW > PW_MIN)
 	clr	c
 	mov	a,_PW_MIN
 	subb	a,_PW
 	mov	a,(_PW_MIN + 1)
 	subb	a,(_PW + 1)
 	jnc	00106$
-	C$Lab3_Steering.c$94$3$53 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab3_Steering.c:94: PW -= 100; // arbitrary number to decrement
+	C$Lab3_Steering.c$95$3$53 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-1\Lab3_Steering.c:95: PW -= 100; // arbitrary number to decrement
 	mov	a,_PW
 	add	a,#0x9C
 	mov	_PW,a
 	mov	a,(_PW + 1)
 	addc	a,#0xFF
 	mov	(_PW + 1),a
-	C$Lab3_Steering.c$95$3$53 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab3_Steering.c:95: PCA0CP0 = 0xFFFF - PW;	// Change pulse width
+	C$Lab3_Steering.c$96$3$53 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-1\Lab3_Steering.c:96: PCA0CP0 = 0xFFFF - PW;	// Change pulse width
 	mov	a,#0xFF
 	clr	c
 	subb	a,_PW
@@ -1355,21 +1352,21 @@ _Steering_Servo:
 	subb	a,(_PW + 1)
 	mov	((_PCA0CP0 >> 8) & 0xFF),a
 00106$:
-	C$Lab3_Steering.c$97$2$52 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab3_Steering.c:97: if(PW < PW_MIN) // check if pulsewidth minimum exceeded
+	C$Lab3_Steering.c$98$2$52 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-1\Lab3_Steering.c:98: if(PW < PW_MIN) // check if pulsewidth minimum exceeded
 	clr	c
 	mov	a,_PW
 	subb	a,_PW_MIN
 	mov	a,(_PW + 1)
 	subb	a,(_PW_MIN + 1)
 	jnc	00113$
-	C$Lab3_Steering.c$99$3$54 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab3_Steering.c:99: PW = PW_MIN; // set PW to a minimum value
+	C$Lab3_Steering.c$100$3$54 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-1\Lab3_Steering.c:100: PW = PW_MIN; // set PW to a minimum value
 	mov	_PW,_PW_MIN
 	mov	(_PW + 1),(_PW_MIN + 1)
 00113$:
-	C$Lab3_Steering.c$102$1$48 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab3_Steering.c:102: printf("\rPW: %u\n", PW);
+	C$Lab3_Steering.c$103$1$48 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-1\Lab3_Steering.c:103: printf("\rPW: %u\n", PW);
 	push	_PW
 	push	(_PW + 1)
 	mov	a,#___str_1
@@ -1382,96 +1379,96 @@ _Steering_Servo:
 	mov	a,sp
 	add	a,#0xfb
 	mov	sp,a
-	C$Lab3_Steering.c$104$1$48 ==.
+	C$Lab3_Steering.c$105$1$48 ==.
 	XG$Steering_Servo$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'Port_Init'
 ;------------------------------------------------------------
 	G$Port_Init$0$0 ==.
-	C$Lab3_Steering.c$110$1$48 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab3_Steering.c:110: void Port_Init()
+	C$Lab3_Steering.c$111$1$48 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-1\Lab3_Steering.c:111: void Port_Init()
 ;	-----------------------------------------
 ;	 function Port_Init
 ;	-----------------------------------------
 _Port_Init:
-	C$Lab3_Steering.c$112$1$55 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab3_Steering.c:112: P1MDOUT |= 0x01; //set output pin for CEX0 in push-pull mode
+	C$Lab3_Steering.c$113$1$55 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-1\Lab3_Steering.c:113: P1MDOUT |= 0x01; //set output pin for CEX0 in push-pull mode
 	orl	_P1MDOUT,#0x01
-	C$Lab3_Steering.c$116$1$55 ==.
+	C$Lab3_Steering.c$117$1$55 ==.
 	XG$Port_Init$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'XBR0_Init'
 ;------------------------------------------------------------
 	G$XBR0_Init$0$0 ==.
-	C$Lab3_Steering.c$121$1$55 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab3_Steering.c:121: void XBR0_Init(void)
+	C$Lab3_Steering.c$122$1$55 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-1\Lab3_Steering.c:122: void XBR0_Init(void)
 ;	-----------------------------------------
 ;	 function XBR0_Init
 ;	-----------------------------------------
 _XBR0_Init:
-	C$Lab3_Steering.c$123$1$57 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab3_Steering.c:123: XBR0 = 0x27;	//configure crossbar as directed in the laboratory
-	mov	_XBR0,#0x27
 	C$Lab3_Steering.c$124$1$57 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-1\Lab3_Steering.c:124: XBR0 = 0x27;	//configure crossbar as directed in the laboratory
+	mov	_XBR0,#0x27
+	C$Lab3_Steering.c$125$1$57 ==.
 	XG$XBR0_Init$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'PCA_Init'
 ;------------------------------------------------------------
 	G$PCA_Init$0$0 ==.
-	C$Lab3_Steering.c$128$1$57 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab3_Steering.c:128: void PCA_Init(void)
+	C$Lab3_Steering.c$129$1$57 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-1\Lab3_Steering.c:129: void PCA_Init(void)
 ;	-----------------------------------------
 ;	 function PCA_Init
 ;	-----------------------------------------
 _PCA_Init:
-	C$Lab3_Steering.c$130$1$59 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab3_Steering.c:130: PCA0CPM0 = 0xC2;	// CCM0 in 16-bit compare mode
-	mov	_PCA0CPM0,#0xC2
 	C$Lab3_Steering.c$131$1$59 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab3_Steering.c:131: PCA0CN = 0x40;		// Enable PCA Counter
-	mov	_PCA0CN,#0x40
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-1\Lab3_Steering.c:131: PCA0CPM0 = 0xC2;	// CCM0 in 16-bit compare mode
+	mov	_PCA0CPM0,#0xC2
 	C$Lab3_Steering.c$132$1$59 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab3_Steering.c:132: PCA0MD = 0x81;		// Enable CF Interrupt and SYSCLK/12
-	mov	_PCA0MD,#0x81
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-1\Lab3_Steering.c:132: PCA0CN = 0x40;		// Enable PCA Counter
+	mov	_PCA0CN,#0x40
 	C$Lab3_Steering.c$133$1$59 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab3_Steering.c:133: EA = 1;				// Enable Global Interrupts
-	setb	_EA
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-1\Lab3_Steering.c:133: PCA0MD = 0x81;		// Enable CF Interrupt and SYSCLK/12
+	mov	_PCA0MD,#0x81
 	C$Lab3_Steering.c$134$1$59 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab3_Steering.c:134: EIE1 |= 0x08;		// Enable PCA Interrupt
-	orl	_EIE1,#0x08
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-1\Lab3_Steering.c:134: EA = 1;				// Enable Global Interrupts
+	setb	_EA
 	C$Lab3_Steering.c$135$1$59 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-1\Lab3_Steering.c:135: EIE1 |= 0x08;		// Enable PCA Interrupt
+	orl	_EIE1,#0x08
+	C$Lab3_Steering.c$136$1$59 ==.
 	XG$PCA_Init$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'PCA_ISR'
 ;------------------------------------------------------------
 	G$PCA_ISR$0$0 ==.
-	C$Lab3_Steering.c$140$1$59 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab3_Steering.c:140: void PCA_ISR ( void ) __interrupt 9
+	C$Lab3_Steering.c$141$1$59 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-1\Lab3_Steering.c:141: void PCA_ISR ( void ) __interrupt 9
 ;	-----------------------------------------
 ;	 function PCA_ISR
 ;	-----------------------------------------
 _PCA_ISR:
-	C$Lab3_Steering.c$142$1$61 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab3_Steering.c:142: if (CF)
+	C$Lab3_Steering.c$143$1$61 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-1\Lab3_Steering.c:143: if (CF)
 	jnb	_CF,00102$
-	C$Lab3_Steering.c$144$2$62 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab3_Steering.c:144: PCA0 = PCA_START;	// Start count for 20ms period
+	C$Lab3_Steering.c$145$2$62 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-1\Lab3_Steering.c:145: PCA0 = PCA_START;	// Start count for 20ms period
 	mov	((_PCA0 >> 0) & 0xFF),_PCA_START
 	mov	((_PCA0 >> 8) & 0xFF),(_PCA_START + 1)
-	C$Lab3_Steering.c$145$2$62 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab3_Steering.c:145: CF = 0;			// Clear overflow flag
+	C$Lab3_Steering.c$146$2$62 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-1\Lab3_Steering.c:146: CF = 0;			// Clear overflow flag
 	clr	_CF
 	sjmp	00104$
 00102$:
-	C$Lab3_Steering.c$148$1$61 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab3_Steering.c:148: else PCA0CN &= 0xC0;		// Handle other PCA interrupt sources
+	C$Lab3_Steering.c$149$1$61 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-1\Lab3_Steering.c:149: else PCA0CN &= 0xC0;		// Handle other PCA interrupt sources
 	anl	_PCA0CN,#0xC0
 00104$:
-	C$Lab3_Steering.c$149$1$61 ==.
+	C$Lab3_Steering.c$150$1$61 ==.
 	XG$PCA_ISR$0$0 ==.
 	reti
 ;	eliminated unneeded mov psw,# (no regs used in bank)
