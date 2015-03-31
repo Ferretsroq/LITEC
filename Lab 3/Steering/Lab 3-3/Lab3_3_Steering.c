@@ -10,7 +10,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <i2c.h>
-#define Desired_Heading = 0
 
 //-----------------------------------------------------------------------------
 // 8051 Initialization Functions
@@ -18,7 +17,7 @@
 void Port_Init(void);
 void PCA_Init (void);
 void XBR0_Init(void);
-//void Steering_Servo(void);
+void Steering_Servo(void);
 unsigned int ReadCompass(void);
 void PCA_ISR (void) __interrupt 9;
 void SMB_Init(void);
@@ -37,8 +36,7 @@ unsigned char new_heading = 0;
 unsigned char h_count = 0;
 unsigned int heading;
 unsigned char heading_delay = 0;
-signed int Error;
-unsigned int PWMe;
+unsigned int Desired_Heading = 0;
 
 
 
@@ -53,17 +51,12 @@ void main(void)
 	PCA_Init();
 	SMB_Init();
 	//print beginning message
-	printf("\rEmbedded Control Compass Reading\n");
+	printf("\rEmbedded Control Compass Steering\n");
+	PW = PW_CENTER;
+	PCA0CP0 = 65535 - PW; //Set initial pulsewidth
 	while(1)
 	{
-		//Steering_Servo();
-		if(new_heading && (heading_delay>=5))
-		{		
-			heading = ReadCompass();
-			PW = DeterminePWM(heading);
-			printf("\rThe heading is %u degrees\n",heading/10);
-			new_heading = 0;
-		}
+		Steering_Servo();
 	}	
 }
 
@@ -141,8 +134,8 @@ unsigned int ReadCompass(void)
 // Determine and fix the error
 signed int DeterminePWM(unsigned int heading)
 {
-	Error = 0;
-	PWMe = 0;
+	signed int Error = 0;
+	unsigned int PWMe = 0;
 	Error = Desired_Heading - heading;
 	if(Error < 1800) Error = Error + 3600;
 	if(Error > 1800) Error = Error - 3600;
@@ -150,4 +143,19 @@ signed int DeterminePWM(unsigned int heading)
 	if(PWMe < PW_MIN) PWMe = PW_MIN;
 	if(PWMe > PW_MAX) PWMe = PW_MAX;
 	return PWMe;
+}
+
+//---------------------------------------------------------------------------------
+// Steering Function
+void Steering_Servo()
+{
+	if(new_heading && (heading_delay>=5))
+		{		
+			heading = ReadCompass();
+			printf("The current direction is %u", heading);
+			PW = DeterminePWM(heading);
+			PCA0CP0 = 0xFFFF - PW; // Change pulse width
+			//printf("\rThe heading is %u degrees\n",heading/10);
+			new_heading = 0;
+		}
 }
