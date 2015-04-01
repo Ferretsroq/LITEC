@@ -66,7 +66,7 @@ void main(void)
 	while(1)
 	{
 		
-		//Steering_Servo();
+		Steering_Servo();
 	}	
 }
 

@@ -1,7 +1,7 @@
 ;--------------------------------------------------------
 ; File Created by SDCC : free open source ANSI-C Compiler
 ; Version 3.4.0 #8981 (Apr  5 2014) (MINGW32)
-; This file was generated Tue Mar 31 12:34:21 2015
+; This file was generated Tue Mar 31 19:49:09 2015
 ;--------------------------------------------------------
 	.module Lab3_Steering
 	.optsdcc -mmcs51 --model-small
@@ -1260,6 +1260,9 @@ _main:
 	C$Lab3_Steering.c$66$1$46 ==.
 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-1\Lab3_Steering.c:66: while(1)
 00102$:
+	C$Lab3_Steering.c$69$2$47 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-1\Lab3_Steering.c:69: Steering_Servo();
+	lcall	_Steering_Servo
 	sjmp	00102$
 	C$Lab3_Steering.c$71$1$46 ==.
 	XG$main$0$0 ==.

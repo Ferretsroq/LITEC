@@ -136,10 +136,11 @@ signed int DeterminePWM(unsigned int heading)
 {
 	signed int Error = 0;
 	unsigned int PWMe = 0;
+	unsigned char k = 1;
 	Error = Desired_Heading - heading;
 	if(Error < 1800) Error = Error + 3600;
 	if(Error > 1800) Error = Error - 3600;
-	PWMe = PW_CENTER + Error;
+	PWMe = PW_CENTER + (k*Error);
 	if(PWMe < PW_MIN) PWMe = PW_MIN;
 	if(PWMe > PW_MAX) PWMe = PW_MAX;
 	return PWMe;
@@ -152,6 +153,7 @@ void Steering_Servo()
 	if(new_heading && (heading_delay>=5))
 		{		
 			heading = ReadCompass();
+			printf("\rThe current direction is %u\n", heading/10);
 			PW = DeterminePWM(heading);
 			PCA0CP0 = 0xFFFF - PW; // Change pulse width
 			//printf("\rThe heading is %u degrees\n",heading/10);

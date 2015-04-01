@@ -64,6 +64,10 @@ S:G$Desired_Heading$0$0({2}SI:U),E,0,0
 S:LLab3_3_Steering.ReadCompass$addr$1$127({1}SC:U),R,0,0,[]
 S:LLab3_3_Steering.ReadCompass$Data$1$127({2}DA2d,SC:U),E,0,0
 S:LLab3_3_Steering.ReadCompass$read_heading$1$127({2}SI:U),R,0,0,[]
+S:LLab3_3_Steering.DeterminePWM$heading$1$128({2}SI:U),R,0,0,[r6,r7]
+S:LLab3_3_Steering.DeterminePWM$Error$1$129({2}SI:S),R,0,0,[r6,r7]
+S:LLab3_3_Steering.DeterminePWM$PWMe$1$129({2}SI:U),R,0,0,[r6,r7]
+S:LLab3_3_Steering.DeterminePWM$k$1$129({1}SC:U),R,0,0,[r5]
 S:LLab3_3_Steering.lcd_print$text$1$73({80}DA80d,SC:U),F,0,0
 S:G$P0$0$0({1}SC:U),I,0,0
 S:G$SP$0$0({1}SC:U),I,0,0
@@ -409,4 +413,4 @@ S:FLab3_3_Steering$__str_0$0$0({22}DA22d,SC:S),D,0,0
 S:FLab3_3_Steering$__str_1$0$0({16}DA16d,SC:S),D,0,0
 S:FLab3_3_Steering$__str_2$0$0({3}DA3d,SC:S),D,0,0
 S:FLab3_3_Steering$__str_3$0$0({36}DA36d,SC:S),D,0,0
-S:FLab3_3_Steering$__str_4$0$0({28}DA28d,SC:S),D,0,0
+S:FLab3_3_Steering$__str_4$0$0({30}DA30d,SC:S),D,0,0

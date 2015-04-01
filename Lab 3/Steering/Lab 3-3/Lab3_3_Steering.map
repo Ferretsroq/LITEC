@@ -71,7 +71,7 @@ C:   00000054  s_GSINIT1
 C:   00000054  s_GSINIT2                       
 C:   0000005E  s_GSINIT3                       
 C:   00000061  s_SSEG                          
-C:   00000074  l_CONST                         
+C:   00000076  l_CONST                         
 C:   0000007D  l_DSEG                          
 C:   00000080  s_GSINIT4                       
 C:   0000009F  l_SSEG                          
@@ -80,9 +80,9 @@ C:   000000AA  s_GSINIT5
 C:   000000D5  s_GSFINAL                       
 C:   000000D8  s_CSEG                          
 C:   00000100  l_IRAM                          
-C:   00000DB0  l_CSEG                          
-C:   00000E88  s_CONST                         
-C:   00000EFC  s_XINIT                         
+C:   00000DF9  l_CSEG                          
+C:   00000ED1  s_CONST                         
+C:   00000F47  s_XINIT                         
 
 ASxxxx Linker V03.00 + NoICE + sdld,  page 3.
 Hexadecimal  [32-Bits]
@@ -850,6 +850,8 @@ OSEG                                00000011    00000006 =           6. bytes (R
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
+     00000011  __divsint_PARM_2                   _divuint
+     00000011  __divuint_PARM_2                   _divuint
      00000011  __gptrput_PARM_2                   _gptrput
      00000011  __mulint_PARM_2                    _mulint
 
@@ -893,18 +895,18 @@ HOME                                00000000    00000051 =          81. bytes (R
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   00000000  A$Lab3_3_Steering$1063             Lab3_3_Steering
-C:   00000003  A$Lab3_3_Steering$1064             Lab3_3_Steering
-C:   0000000B  A$Lab3_3_Steering$1066             Lab3_3_Steering
-C:   00000013  A$Lab3_3_Steering$1068             Lab3_3_Steering
-C:   0000001B  A$Lab3_3_Steering$1070             Lab3_3_Steering
-C:   00000023  A$Lab3_3_Steering$1072             Lab3_3_Steering
-C:   0000002B  A$Lab3_3_Steering$1074             Lab3_3_Steering
-C:   00000033  A$Lab3_3_Steering$1076             Lab3_3_Steering
-C:   0000003B  A$Lab3_3_Steering$1078             Lab3_3_Steering
-C:   00000043  A$Lab3_3_Steering$1080             Lab3_3_Steering
-C:   0000004B  A$Lab3_3_Steering$1082             Lab3_3_Steering
-C:   0000004E  A$Lab3_3_Steering$1145             Lab3_3_Steering
+C:   00000000  A$Lab3_3_Steering$1062             Lab3_3_Steering
+C:   00000003  A$Lab3_3_Steering$1063             Lab3_3_Steering
+C:   0000000B  A$Lab3_3_Steering$1065             Lab3_3_Steering
+C:   00000013  A$Lab3_3_Steering$1067             Lab3_3_Steering
+C:   0000001B  A$Lab3_3_Steering$1069             Lab3_3_Steering
+C:   00000023  A$Lab3_3_Steering$1071             Lab3_3_Steering
+C:   0000002B  A$Lab3_3_Steering$1073             Lab3_3_Steering
+C:   00000033  A$Lab3_3_Steering$1075             Lab3_3_Steering
+C:   0000003B  A$Lab3_3_Steering$1077             Lab3_3_Steering
+C:   00000043  A$Lab3_3_Steering$1079             Lab3_3_Steering
+C:   0000004B  A$Lab3_3_Steering$1081             Lab3_3_Steering
+C:   0000004E  A$Lab3_3_Steering$1144             Lab3_3_Steering
 C:   0000004E  __sdcc_program_startup             Lab3_3_Steering
 
 ASxxxx Linker V03.00 + NoICE + sdld,  page 23.
@@ -959,34 +961,34 @@ GSINIT                              000000AA    0000002B =          43. bytes (R
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   000000AA  A$Lab3_3_Steering$1098             Lab3_3_Steering
+C:   000000AA  A$Lab3_3_Steering$1097             Lab3_3_Steering
 C:   000000AA  C$Lab3_3_Steering.c$29$1$130       Lab3_3_Steering
-C:   000000AD  A$Lab3_3_Steering$1099             Lab3_3_Steering
-C:   000000B0  A$Lab3_3_Steering$1102             Lab3_3_Steering
+C:   000000AD  A$Lab3_3_Steering$1098             Lab3_3_Steering
+C:   000000B0  A$Lab3_3_Steering$1101             Lab3_3_Steering
 C:   000000B0  C$Lab3_3_Steering.c$30$1$130       Lab3_3_Steering
-C:   000000B3  A$Lab3_3_Steering$1103             Lab3_3_Steering
-C:   000000B6  A$Lab3_3_Steering$1106             Lab3_3_Steering
+C:   000000B3  A$Lab3_3_Steering$1102             Lab3_3_Steering
+C:   000000B6  A$Lab3_3_Steering$1105             Lab3_3_Steering
 C:   000000B6  C$Lab3_3_Steering.c$31$1$130       Lab3_3_Steering
-C:   000000B9  A$Lab3_3_Steering$1107             Lab3_3_Steering
-C:   000000BC  A$Lab3_3_Steering$1110             Lab3_3_Steering
+C:   000000B9  A$Lab3_3_Steering$1106             Lab3_3_Steering
+C:   000000BC  A$Lab3_3_Steering$1109             Lab3_3_Steering
 C:   000000BC  C$Lab3_3_Steering.c$32$1$130       Lab3_3_Steering
-C:   000000BF  A$Lab3_3_Steering$1111             Lab3_3_Steering
-C:   000000C2  A$Lab3_3_Steering$1114             Lab3_3_Steering
+C:   000000BF  A$Lab3_3_Steering$1110             Lab3_3_Steering
+C:   000000C2  A$Lab3_3_Steering$1113             Lab3_3_Steering
 C:   000000C2  C$Lab3_3_Steering.c$33$1$130       Lab3_3_Steering
-C:   000000C3  A$Lab3_3_Steering$1115             Lab3_3_Steering
-C:   000000C5  A$Lab3_3_Steering$1116             Lab3_3_Steering
-C:   000000C7  A$Lab3_3_Steering$1119             Lab3_3_Steering
+C:   000000C3  A$Lab3_3_Steering$1114             Lab3_3_Steering
+C:   000000C5  A$Lab3_3_Steering$1115             Lab3_3_Steering
+C:   000000C7  A$Lab3_3_Steering$1118             Lab3_3_Steering
 C:   000000C7  C$Lab3_3_Steering.c$34$1$130       Lab3_3_Steering
-C:   000000C9  A$Lab3_3_Steering$1120             Lab3_3_Steering
-C:   000000CB  A$Lab3_3_Steering$1124             Lab3_3_Steering
+C:   000000C9  A$Lab3_3_Steering$1119             Lab3_3_Steering
+C:   000000CB  A$Lab3_3_Steering$1123             Lab3_3_Steering
 C:   000000CB  C$Lab3_3_Steering.c$35$1$130       Lab3_3_Steering
-C:   000000CD  A$Lab3_3_Steering$1128             Lab3_3_Steering
+C:   000000CD  A$Lab3_3_Steering$1127             Lab3_3_Steering
 C:   000000CD  C$Lab3_3_Steering.c$36$1$130       Lab3_3_Steering
-C:   000000CF  A$Lab3_3_Steering$1132             Lab3_3_Steering
+C:   000000CF  A$Lab3_3_Steering$1131             Lab3_3_Steering
 C:   000000CF  C$Lab3_3_Steering.c$38$1$130       Lab3_3_Steering
-C:   000000D1  A$Lab3_3_Steering$1135             Lab3_3_Steering
+C:   000000D1  A$Lab3_3_Steering$1134             Lab3_3_Steering
 C:   000000D1  C$Lab3_3_Steering.c$39$1$130       Lab3_3_Steering
-C:   000000D3  A$Lab3_3_Steering$1136             Lab3_3_Steering
+C:   000000D3  A$Lab3_3_Steering$1135             Lab3_3_Steering
 
 ASxxxx Linker V03.00 + NoICE + sdld,  page 28.
 Hexadecimal  [32-Bits]
@@ -997,245 +999,245 @@ GSFINAL                             000000D5    00000003 =           3. bytes (R
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   000000D5  A$Lab3_3_Steering$1138             Lab3_3_Steering
+C:   000000D5  A$Lab3_3_Steering$1137             Lab3_3_Steering
 
 ASxxxx Linker V03.00 + NoICE + sdld,  page 29.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000D8    00000DB0 =        3504. bytes (REL,CON,CODE)
+CSEG                                000000D8    00000DF9 =        3577. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   000000D8  A$Lab3_3_Steering$1173             Lab3_3_Steering
+C:   000000D8  A$Lab3_3_Steering$1172             Lab3_3_Steering
 C:   000000D8  C$c8051_SDCC.h$42$0$0              Lab3_3_Steering
 C:   000000D8  C$c8051_SDCC.h$46$1$2              Lab3_3_Steering
 C:   000000D8  G$SYSCLK_Init$0$0                  Lab3_3_Steering
 C:   000000D8  _SYSCLK_Init                       Lab3_3_Steering
-C:   000000DB  A$Lab3_3_Steering$1176             Lab3_3_Steering
+C:   000000DB  A$Lab3_3_Steering$1175             Lab3_3_Steering
 C:   000000DB  C$c8051_SDCC.h$49$1$2              Lab3_3_Steering
-C:   000000DD  A$Lab3_3_Steering$1177             Lab3_3_Steering
-C:   000000DF  A$Lab3_3_Steering$1179             Lab3_3_Steering
-C:   000000E0  A$Lab3_3_Steering$1180             Lab3_3_Steering
-C:   000000E3  A$Lab3_3_Steering$1181             Lab3_3_Steering
-C:   000000E4  A$Lab3_3_Steering$1183             Lab3_3_Steering
-C:   000000E5  A$Lab3_3_Steering$1184             Lab3_3_Steering
-C:   000000E6  A$Lab3_3_Steering$1185             Lab3_3_Steering
-C:   000000E8  A$Lab3_3_Steering$1189             Lab3_3_Steering
+C:   000000DD  A$Lab3_3_Steering$1176             Lab3_3_Steering
+C:   000000DF  A$Lab3_3_Steering$1178             Lab3_3_Steering
+C:   000000E0  A$Lab3_3_Steering$1179             Lab3_3_Steering
+C:   000000E3  A$Lab3_3_Steering$1180             Lab3_3_Steering
+C:   000000E4  A$Lab3_3_Steering$1182             Lab3_3_Steering
+C:   000000E5  A$Lab3_3_Steering$1183             Lab3_3_Steering
+C:   000000E6  A$Lab3_3_Steering$1184             Lab3_3_Steering
+C:   000000E8  A$Lab3_3_Steering$1188             Lab3_3_Steering
 C:   000000E8  C$c8051_SDCC.h$51$1$2              Lab3_3_Steering
-C:   000000EA  A$Lab3_3_Steering$1190             Lab3_3_Steering
-C:   000000ED  A$Lab3_3_Steering$1193             Lab3_3_Steering
+C:   000000EA  A$Lab3_3_Steering$1189             Lab3_3_Steering
+C:   000000ED  A$Lab3_3_Steering$1192             Lab3_3_Steering
 C:   000000ED  C$c8051_SDCC.h$53$1$2              Lab3_3_Steering
-C:   000000F0  A$Lab3_3_Steering$1196             Lab3_3_Steering
+C:   000000F0  A$Lab3_3_Steering$1195             Lab3_3_Steering
 C:   000000F0  C$c8051_SDCC.h$56$1$2              Lab3_3_Steering
 C:   000000F0  XG$SYSCLK_Init$0$0                 Lab3_3_Steering
-C:   000000F1  A$Lab3_3_Steering$1209             Lab3_3_Steering
+C:   000000F1  A$Lab3_3_Steering$1208             Lab3_3_Steering
 C:   000000F1  C$c8051_SDCC.h$64$1$2              Lab3_3_Steering
 C:   000000F1  C$c8051_SDCC.h$66$1$4              Lab3_3_Steering
 C:   000000F1  G$UART0_Init$0$0                   Lab3_3_Steering
 C:   000000F1  _UART0_Init                        Lab3_3_Steering
-C:   000000F4  A$Lab3_3_Steering$1212             Lab3_3_Steering
+C:   000000F4  A$Lab3_3_Steering$1211             Lab3_3_Steering
 C:   000000F4  C$c8051_SDCC.h$67$1$4              Lab3_3_Steering
-C:   000000F7  A$Lab3_3_Steering$1215             Lab3_3_Steering
+C:   000000F7  A$Lab3_3_Steering$1214             Lab3_3_Steering
 C:   000000F7  C$c8051_SDCC.h$68$1$4              Lab3_3_Steering
-C:   000000FA  A$Lab3_3_Steering$1218             Lab3_3_Steering
+C:   000000FA  A$Lab3_3_Steering$1217             Lab3_3_Steering
 C:   000000FA  C$c8051_SDCC.h$69$1$4              Lab3_3_Steering
-C:   000000FC  A$Lab3_3_Steering$1221             Lab3_3_Steering
+C:   000000FC  A$Lab3_3_Steering$1220             Lab3_3_Steering
 C:   000000FC  C$c8051_SDCC.h$70$1$4              Lab3_3_Steering
-C:   000000FF  A$Lab3_3_Steering$1224             Lab3_3_Steering
+C:   000000FF  A$Lab3_3_Steering$1223             Lab3_3_Steering
 C:   000000FF  C$c8051_SDCC.h$71$1$4              Lab3_3_Steering
-C:   00000102  A$Lab3_3_Steering$1227             Lab3_3_Steering
+C:   00000102  A$Lab3_3_Steering$1226             Lab3_3_Steering
 C:   00000102  C$c8051_SDCC.h$73$1$4              Lab3_3_Steering
-C:   00000104  A$Lab3_3_Steering$1230             Lab3_3_Steering
+C:   00000104  A$Lab3_3_Steering$1229             Lab3_3_Steering
 C:   00000104  C$c8051_SDCC.h$74$1$4              Lab3_3_Steering
-C:   00000107  A$Lab3_3_Steering$1233             Lab3_3_Steering
+C:   00000107  A$Lab3_3_Steering$1232             Lab3_3_Steering
 C:   00000107  C$c8051_SDCC.h$75$1$4              Lab3_3_Steering
 C:   00000107  XG$UART0_Init$0$0                  Lab3_3_Steering
-C:   00000108  A$Lab3_3_Steering$1246             Lab3_3_Steering
+C:   00000108  A$Lab3_3_Steering$1245             Lab3_3_Steering
 C:   00000108  C$c8051_SDCC.h$83$1$4              Lab3_3_Steering
 C:   00000108  C$c8051_SDCC.h$85$1$6              Lab3_3_Steering
 C:   00000108  G$Sys_Init$0$0                     Lab3_3_Steering
 C:   00000108  _Sys_Init                          Lab3_3_Steering
-C:   0000010B  A$Lab3_3_Steering$1249             Lab3_3_Steering
+C:   0000010B  A$Lab3_3_Steering$1248             Lab3_3_Steering
 ASxxxx Linker V03.00 + NoICE + sdld,  page 30.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000D8    00000DB0 =        3504. bytes (REL,CON,CODE)
+CSEG                                000000D8    00000DF9 =        3577. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
 C:   0000010B  C$c8051_SDCC.h$86$1$6              Lab3_3_Steering
-C:   0000010E  A$Lab3_3_Steering$1252             Lab3_3_Steering
+C:   0000010E  A$Lab3_3_Steering$1251             Lab3_3_Steering
 C:   0000010E  C$c8051_SDCC.h$88$1$6              Lab3_3_Steering
-C:   00000111  A$Lab3_3_Steering$1255             Lab3_3_Steering
+C:   00000111  A$Lab3_3_Steering$1254             Lab3_3_Steering
 C:   00000111  C$c8051_SDCC.h$89$1$6              Lab3_3_Steering
-C:   00000114  A$Lab3_3_Steering$1258             Lab3_3_Steering
+C:   00000114  A$Lab3_3_Steering$1257             Lab3_3_Steering
 C:   00000114  C$c8051_SDCC.h$91$1$6              Lab3_3_Steering
-C:   00000117  A$Lab3_3_Steering$1261             Lab3_3_Steering
+C:   00000117  A$Lab3_3_Steering$1260             Lab3_3_Steering
 C:   00000117  C$c8051_SDCC.h$92$1$6              Lab3_3_Steering
-C:   0000011A  A$Lab3_3_Steering$1264             Lab3_3_Steering
+C:   0000011A  A$Lab3_3_Steering$1263             Lab3_3_Steering
 C:   0000011A  C$c8051_SDCC.h$93$1$6              Lab3_3_Steering
 C:   0000011A  XG$Sys_Init$0$0                    Lab3_3_Steering
-C:   0000011B  A$Lab3_3_Steering$1277             Lab3_3_Steering
+C:   0000011B  A$Lab3_3_Steering$1276             Lab3_3_Steering
 C:   0000011B  C$c8051_SDCC.h$98$1$6              Lab3_3_Steering
 C:   0000011B  G$putchar$0$0                      Lab3_3_Steering
 C:   0000011B  _putchar                           Lab3_3_Steering
-C:   0000011D  A$Lab3_3_Steering$1283             Lab3_3_Steering
+C:   0000011D  A$Lab3_3_Steering$1282             Lab3_3_Steering
 C:   0000011D  C$c8051_SDCC.h$100$1$8             Lab3_3_Steering
 C:   0000011D  C$c8051_SDCC.h$101$1$8             Lab3_3_Steering
-C:   00000120  A$Lab3_3_Steering$1284             Lab3_3_Steering
-C:   00000122  A$Lab3_3_Steering$1288             Lab3_3_Steering
+C:   00000120  A$Lab3_3_Steering$1283             Lab3_3_Steering
+C:   00000122  A$Lab3_3_Steering$1287             Lab3_3_Steering
 C:   00000122  C$c8051_SDCC.h$102$1$8             Lab3_3_Steering
-C:   00000124  A$Lab3_3_Steering$1291             Lab3_3_Steering
+C:   00000124  A$Lab3_3_Steering$1290             Lab3_3_Steering
 C:   00000124  C$c8051_SDCC.h$103$1$8             Lab3_3_Steering
 C:   00000124  XG$putchar$0$0                     Lab3_3_Steering
-C:   00000125  A$Lab3_3_Steering$1309             Lab3_3_Steering
+C:   00000125  A$Lab3_3_Steering$1308             Lab3_3_Steering
 C:   00000125  C$c8051_SDCC.h$108$1$8             Lab3_3_Steering
 C:   00000125  C$c8051_SDCC.h$111$1$10            Lab3_3_Steering
 C:   00000125  C$c8051_SDCC.h$112$1$10            Lab3_3_Steering
 C:   00000125  G$getchar$0$0                      Lab3_3_Steering
-C:   00000128  A$Lab3_3_Steering$1310             Lab3_3_Steering
-C:   0000012A  A$Lab3_3_Steering$1314             Lab3_3_Steering
+C:   00000128  A$Lab3_3_Steering$1309             Lab3_3_Steering
+C:   0000012A  A$Lab3_3_Steering$1313             Lab3_3_Steering
 C:   0000012A  C$c8051_SDCC.h$113$1$10            Lab3_3_Steering
-C:   0000012D  A$Lab3_3_Steering$1317             Lab3_3_Steering
+C:   0000012D  A$Lab3_3_Steering$1316             Lab3_3_Steering
 C:   0000012D  C$c8051_SDCC.h$114$1$10            Lab3_3_Steering
-C:   00000130  A$Lab3_3_Steering$1320             Lab3_3_Steering
+C:   00000130  A$Lab3_3_Steering$1319             Lab3_3_Steering
 C:   00000130  C$c8051_SDCC.h$115$1$10            Lab3_3_Steering
-C:   00000133  A$Lab3_3_Steering$1323             Lab3_3_Steering
+C:   00000133  A$Lab3_3_Steering$1322             Lab3_3_Steering
 C:   00000133  C$c8051_SDCC.h$116$1$10            Lab3_3_Steering
 C:   00000133  XG$getchar$0$0                     Lab3_3_Steering
-C:   00000134  A$Lab3_3_Steering$1340             Lab3_3_Steering
+C:   00000134  A$Lab3_3_Steering$1339             Lab3_3_Steering
 C:   00000134  C$i2c.h$81$1$10                    Lab3_3_Steering
 C:   00000134  G$lcd_print$0$0                    Lab3_3_Steering
 C:   00000134  _lcd_print                         Lab3_3_Steering
-C:   00000136  A$Lab3_3_Steering$1341             Lab3_3_Steering
-C:   00000139  A$Lab3_3_Steering$1344             Lab3_3_Steering
+C:   00000136  A$Lab3_3_Steering$1340             Lab3_3_Steering
+C:   00000139  A$Lab3_3_Steering$1343             Lab3_3_Steering
 C:   00000139  C$i2c.h$87$1$73                    Lab3_3_Steering
-C:   0000013B  A$Lab3_3_Steering$1345             Lab3_3_Steering
-C:   0000013D  A$Lab3_3_Steering$1346             Lab3_3_Steering
-C:   0000013E  A$Lab3_3_Steering$1347             Lab3_3_Steering
-C:   00000140  A$Lab3_3_Steering$1348             Lab3_3_Steering
+C:   0000013B  A$Lab3_3_Steering$1344             Lab3_3_Steering
+C:   0000013D  A$Lab3_3_Steering$1345             Lab3_3_Steering
+C:   0000013E  A$Lab3_3_Steering$1346             Lab3_3_Steering
+C:   00000140  A$Lab3_3_Steering$1347             Lab3_3_Steering
 ASxxxx Linker V03.00 + NoICE + sdld,  page 31.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000D8    00000DB0 =        3504. bytes (REL,CON,CODE)
+CSEG                                000000D8    00000DF9 =        3577. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   00000141  A$Lab3_3_Steering$1349             Lab3_3_Steering
-C:   00000143  A$Lab3_3_Steering$1350             Lab3_3_Steering
-C:   00000144  A$Lab3_3_Steering$1351             Lab3_3_Steering
-C:   00000146  A$Lab3_3_Steering$1352             Lab3_3_Steering
-C:   00000149  A$Lab3_3_Steering$1353             Lab3_3_Steering
-C:   0000014B  A$Lab3_3_Steering$1354             Lab3_3_Steering
-C:   0000014E  A$Lab3_3_Steering$1355             Lab3_3_Steering
-C:   00000150  A$Lab3_3_Steering$1356             Lab3_3_Steering
-C:   00000152  A$Lab3_3_Steering$1357             Lab3_3_Steering
-C:   00000154  A$Lab3_3_Steering$1361             Lab3_3_Steering
+C:   00000141  A$Lab3_3_Steering$1348             Lab3_3_Steering
+C:   00000143  A$Lab3_3_Steering$1349             Lab3_3_Steering
+C:   00000144  A$Lab3_3_Steering$1350             Lab3_3_Steering
+C:   00000146  A$Lab3_3_Steering$1351             Lab3_3_Steering
+C:   00000149  A$Lab3_3_Steering$1352             Lab3_3_Steering
+C:   0000014B  A$Lab3_3_Steering$1353             Lab3_3_Steering
+C:   0000014E  A$Lab3_3_Steering$1354             Lab3_3_Steering
+C:   00000150  A$Lab3_3_Steering$1355             Lab3_3_Steering
+C:   00000152  A$Lab3_3_Steering$1356             Lab3_3_Steering
+C:   00000154  A$Lab3_3_Steering$1360             Lab3_3_Steering
 C:   00000154  C$i2c.h$89$2$74                    Lab3_3_Steering
-C:   00000156  A$Lab3_3_Steering$1362             Lab3_3_Steering
-C:   00000158  A$Lab3_3_Steering$1363             Lab3_3_Steering
-C:   00000159  A$Lab3_3_Steering$1364             Lab3_3_Steering
-C:   0000015B  A$Lab3_3_Steering$1367             Lab3_3_Steering
+C:   00000156  A$Lab3_3_Steering$1361             Lab3_3_Steering
+C:   00000158  A$Lab3_3_Steering$1362             Lab3_3_Steering
+C:   00000159  A$Lab3_3_Steering$1363             Lab3_3_Steering
+C:   0000015B  A$Lab3_3_Steering$1366             Lab3_3_Steering
 C:   0000015B  C$i2c.h$90$1$73                    Lab3_3_Steering
-C:   0000015D  A$Lab3_3_Steering$1368             Lab3_3_Steering
-C:   0000015F  A$Lab3_3_Steering$1369             Lab3_3_Steering
-C:   00000160  A$Lab3_3_Steering$1370             Lab3_3_Steering
-C:   00000162  A$Lab3_3_Steering$1371             Lab3_3_Steering
-C:   00000163  A$Lab3_3_Steering$1372             Lab3_3_Steering
-C:   00000165  A$Lab3_3_Steering$1373             Lab3_3_Steering
-C:   00000166  A$Lab3_3_Steering$1374             Lab3_3_Steering
-C:   00000168  A$Lab3_3_Steering$1375             Lab3_3_Steering
-C:   0000016B  A$Lab3_3_Steering$1376             Lab3_3_Steering
-C:   0000016E  A$Lab3_3_Steering$1377             Lab3_3_Steering
-C:   00000171  A$Lab3_3_Steering$1380             Lab3_3_Steering
+C:   0000015D  A$Lab3_3_Steering$1367             Lab3_3_Steering
+C:   0000015F  A$Lab3_3_Steering$1368             Lab3_3_Steering
+C:   00000160  A$Lab3_3_Steering$1369             Lab3_3_Steering
+C:   00000162  A$Lab3_3_Steering$1370             Lab3_3_Steering
+C:   00000163  A$Lab3_3_Steering$1371             Lab3_3_Steering
+C:   00000165  A$Lab3_3_Steering$1372             Lab3_3_Steering
+C:   00000166  A$Lab3_3_Steering$1373             Lab3_3_Steering
+C:   00000168  A$Lab3_3_Steering$1374             Lab3_3_Steering
+C:   0000016B  A$Lab3_3_Steering$1375             Lab3_3_Steering
+C:   0000016E  A$Lab3_3_Steering$1376             Lab3_3_Steering
+C:   00000171  A$Lab3_3_Steering$1379             Lab3_3_Steering
 C:   00000171  C$i2c.h$93$1$73                    Lab3_3_Steering
-C:   00000174  A$Lab3_3_Steering$1381             Lab3_3_Steering
-C:   00000177  A$Lab3_3_Steering$1382             Lab3_3_Steering
-C:   0000017A  A$Lab3_3_Steering$1383             Lab3_3_Steering
-C:   0000017C  A$Lab3_3_Steering$1386             Lab3_3_Steering
-C:   0000017E  A$Lab3_3_Steering$1388             Lab3_3_Steering
-C:   0000017F  A$Lab3_3_Steering$1389             Lab3_3_Steering
-C:   00000180  A$Lab3_3_Steering$1390             Lab3_3_Steering
-C:   00000181  A$Lab3_3_Steering$1391             Lab3_3_Steering
-C:   00000183  A$Lab3_3_Steering$1394             Lab3_3_Steering
+C:   00000174  A$Lab3_3_Steering$1380             Lab3_3_Steering
+C:   00000177  A$Lab3_3_Steering$1381             Lab3_3_Steering
+C:   0000017A  A$Lab3_3_Steering$1382             Lab3_3_Steering
+C:   0000017C  A$Lab3_3_Steering$1385             Lab3_3_Steering
+C:   0000017E  A$Lab3_3_Steering$1387             Lab3_3_Steering
+C:   0000017F  A$Lab3_3_Steering$1388             Lab3_3_Steering
+C:   00000180  A$Lab3_3_Steering$1389             Lab3_3_Steering
+C:   00000181  A$Lab3_3_Steering$1390             Lab3_3_Steering
+C:   00000183  A$Lab3_3_Steering$1393             Lab3_3_Steering
 C:   00000183  C$i2c.h$96$2$76                    Lab3_3_Steering
-C:   00000184  A$Lab3_3_Steering$1395             Lab3_3_Steering
-C:   00000186  A$Lab3_3_Steering$1396             Lab3_3_Steering
-C:   00000188  A$Lab3_3_Steering$1397             Lab3_3_Steering
-C:   00000189  A$Lab3_3_Steering$1398             Lab3_3_Steering
-C:   0000018B  A$Lab3_3_Steering$1399             Lab3_3_Steering
-C:   0000018D  A$Lab3_3_Steering$1400             Lab3_3_Steering
-C:   0000018E  A$Lab3_3_Steering$1401             Lab3_3_Steering
-C:   0000018F  A$Lab3_3_Steering$1402             Lab3_3_Steering
-C:   00000192  A$Lab3_3_Steering$1403             Lab3_3_Steering
-C:   00000193  A$Lab3_3_Steering$1404             Lab3_3_Steering
-C:   00000195  A$Lab3_3_Steering$1405             Lab3_3_Steering
-C:   00000197  A$Lab3_3_Steering$1406             Lab3_3_Steering
-C:   00000198  A$Lab3_3_Steering$1407             Lab3_3_Steering
+C:   00000184  A$Lab3_3_Steering$1394             Lab3_3_Steering
+C:   00000186  A$Lab3_3_Steering$1395             Lab3_3_Steering
+C:   00000188  A$Lab3_3_Steering$1396             Lab3_3_Steering
+C:   00000189  A$Lab3_3_Steering$1397             Lab3_3_Steering
+C:   0000018B  A$Lab3_3_Steering$1398             Lab3_3_Steering
+C:   0000018D  A$Lab3_3_Steering$1399             Lab3_3_Steering
+C:   0000018E  A$Lab3_3_Steering$1400             Lab3_3_Steering
+C:   0000018F  A$Lab3_3_Steering$1401             Lab3_3_Steering
+C:   00000192  A$Lab3_3_Steering$1402             Lab3_3_Steering
+C:   00000193  A$Lab3_3_Steering$1403             Lab3_3_Steering
+C:   00000195  A$Lab3_3_Steering$1404             Lab3_3_Steering
+C:   00000197  A$Lab3_3_Steering$1405             Lab3_3_Steering
+C:   00000198  A$Lab3_3_Steering$1406             Lab3_3_Steering
 ASxxxx Linker V03.00 + NoICE + sdld,  page 32.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000D8    00000DB0 =        3504. bytes (REL,CON,CODE)
+CSEG                                000000D8    00000DF9 =        3577. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   0000019A  A$Lab3_3_Steering$1408             Lab3_3_Steering
-C:   0000019C  A$Lab3_3_Steering$1409             Lab3_3_Steering
-C:   0000019E  A$Lab3_3_Steering$1410             Lab3_3_Steering
-C:   0000019F  A$Lab3_3_Steering$1414             Lab3_3_Steering
+C:   0000019A  A$Lab3_3_Steering$1407             Lab3_3_Steering
+C:   0000019C  A$Lab3_3_Steering$1408             Lab3_3_Steering
+C:   0000019E  A$Lab3_3_Steering$1409             Lab3_3_Steering
+C:   0000019F  A$Lab3_3_Steering$1413             Lab3_3_Steering
 C:   0000019F  C$i2c.h$94$1$73                    Lab3_3_Steering
-C:   000001A0  A$Lab3_3_Steering$1415             Lab3_3_Steering
-C:   000001A2  A$Lab3_3_Steering$1419             Lab3_3_Steering
+C:   000001A0  A$Lab3_3_Steering$1414             Lab3_3_Steering
+C:   000001A2  A$Lab3_3_Steering$1418             Lab3_3_Steering
 C:   000001A2  C$i2c.h$99$1$73                    Lab3_3_Steering
-C:   000001A5  A$Lab3_3_Steering$1420             Lab3_3_Steering
-C:   000001A8  A$Lab3_3_Steering$1421             Lab3_3_Steering
-C:   000001AB  A$Lab3_3_Steering$1422             Lab3_3_Steering
-C:   000001AE  A$Lab3_3_Steering$1423             Lab3_3_Steering
-C:   000001B0  A$Lab3_3_Steering$1424             Lab3_3_Steering
-C:   000001B3  A$Lab3_3_Steering$1425             Lab3_3_Steering
-C:   000001B6  A$Lab3_3_Steering$1427             Lab3_3_Steering
-C:   000001B8  A$Lab3_3_Steering$1430             Lab3_3_Steering
+C:   000001A5  A$Lab3_3_Steering$1419             Lab3_3_Steering
+C:   000001A8  A$Lab3_3_Steering$1420             Lab3_3_Steering
+C:   000001AB  A$Lab3_3_Steering$1421             Lab3_3_Steering
+C:   000001AE  A$Lab3_3_Steering$1422             Lab3_3_Steering
+C:   000001B0  A$Lab3_3_Steering$1423             Lab3_3_Steering
+C:   000001B3  A$Lab3_3_Steering$1424             Lab3_3_Steering
+C:   000001B6  A$Lab3_3_Steering$1426             Lab3_3_Steering
+C:   000001B8  A$Lab3_3_Steering$1429             Lab3_3_Steering
 C:   000001B8  C$i2c.h$100$1$73                   Lab3_3_Steering
 C:   000001B8  XG$lcd_print$0$0                   Lab3_3_Steering
-C:   000001B9  A$Lab3_3_Steering$1446             Lab3_3_Steering
+C:   000001B9  A$Lab3_3_Steering$1445             Lab3_3_Steering
 C:   000001B9  C$i2c.h$103$1$73                   Lab3_3_Steering
 C:   000001B9  C$i2c.h$105$1$73                   Lab3_3_Steering
 C:   000001B9  G$lcd_clear$0$0                    Lab3_3_Steering
 C:   000001B9  _lcd_clear                         Lab3_3_Steering
-C:   000001BC  A$Lab3_3_Steering$1450             Lab3_3_Steering
+C:   000001BC  A$Lab3_3_Steering$1449             Lab3_3_Steering
 C:   000001BC  C$i2c.h$107$1$77                   Lab3_3_Steering
-C:   000001BE  A$Lab3_3_Steering$1451             Lab3_3_Steering
-C:   000001C0  A$Lab3_3_Steering$1452             Lab3_3_Steering
-C:   000001C2  A$Lab3_3_Steering$1453             Lab3_3_Steering
-C:   000001C5  A$Lab3_3_Steering$1454             Lab3_3_Steering
-C:   000001C8  A$Lab3_3_Steering$1455             Lab3_3_Steering
-C:   000001CB  A$Lab3_3_Steering$1456             Lab3_3_Steering
-C:   000001CE  A$Lab3_3_Steering$1457             Lab3_3_Steering
-C:   000001D1  A$Lab3_3_Steering$1458             Lab3_3_Steering
-C:   000001D4  A$Lab3_3_Steering$1459             Lab3_3_Steering
-C:   000001D7  A$Lab3_3_Steering$1460             Lab3_3_Steering
-C:   000001D9  A$Lab3_3_Steering$1464             Lab3_3_Steering
+C:   000001BE  A$Lab3_3_Steering$1450             Lab3_3_Steering
+C:   000001C0  A$Lab3_3_Steering$1451             Lab3_3_Steering
+C:   000001C2  A$Lab3_3_Steering$1452             Lab3_3_Steering
+C:   000001C5  A$Lab3_3_Steering$1453             Lab3_3_Steering
+C:   000001C8  A$Lab3_3_Steering$1454             Lab3_3_Steering
+C:   000001CB  A$Lab3_3_Steering$1455             Lab3_3_Steering
+C:   000001CE  A$Lab3_3_Steering$1456             Lab3_3_Steering
+C:   000001D1  A$Lab3_3_Steering$1457             Lab3_3_Steering
+C:   000001D4  A$Lab3_3_Steering$1458             Lab3_3_Steering
+C:   000001D7  A$Lab3_3_Steering$1459             Lab3_3_Steering
+C:   000001D9  A$Lab3_3_Steering$1463             Lab3_3_Steering
 C:   000001D9  C$i2c.h$109$1$77                   Lab3_3_Steering
-C:   000001DC  A$Lab3_3_Steering$1467             Lab3_3_Steering
+C:   000001DC  A$Lab3_3_Steering$1466             Lab3_3_Steering
 C:   000001DC  C$i2c.h$110$1$77                   Lab3_3_Steering
-C:   000001DF  A$Lab3_3_Steering$1468             Lab3_3_Steering
-C:   000001E2  A$Lab3_3_Steering$1469             Lab3_3_Steering
-C:   000001E5  A$Lab3_3_Steering$1470             Lab3_3_Steering
-C:   000001E8  A$Lab3_3_Steering$1471             Lab3_3_Steering
-C:   000001EB  A$Lab3_3_Steering$1472             Lab3_3_Steering
-C:   000001EE  A$Lab3_3_Steering$1473             Lab3_3_Steering
-C:   000001F1  A$Lab3_3_Steering$1476             Lab3_3_Steering
+C:   000001DF  A$Lab3_3_Steering$1467             Lab3_3_Steering
+C:   000001E2  A$Lab3_3_Steering$1468             Lab3_3_Steering
+C:   000001E5  A$Lab3_3_Steering$1469             Lab3_3_Steering
+C:   000001E8  A$Lab3_3_Steering$1470             Lab3_3_Steering
+C:   000001EB  A$Lab3_3_Steering$1471             Lab3_3_Steering
+C:   000001EE  A$Lab3_3_Steering$1472             Lab3_3_Steering
+C:   000001F1  A$Lab3_3_Steering$1475             Lab3_3_Steering
 C:   000001F1  C$i2c.h$111$1$77                   Lab3_3_Steering
 C:   000001F1  XG$lcd_clear$0$0                   Lab3_3_Steering
-C:   000001F2  A$Lab3_3_Steering$1492             Lab3_3_Steering
+C:   000001F2  A$Lab3_3_Steering$1491             Lab3_3_Steering
 C:   000001F2  C$i2c.h$114$1$77                   Lab3_3_Steering
 C:   000001F2  C$i2c.h$118$1$78                   Lab3_3_Steering
 ASxxxx Linker V03.00 + NoICE + sdld,  page 33.
@@ -1243,418 +1245,418 @@ Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000D8    00000DB0 =        3504. bytes (REL,CON,CODE)
+CSEG                                000000D8    00000DF9 =        3577. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
 C:   000001F2  G$read_keypad$0$0                  Lab3_3_Steering
 C:   000001F2  _read_keypad                       Lab3_3_Steering
-C:   000001F5  A$Lab3_3_Steering$1493             Lab3_3_Steering
-C:   000001F8  A$Lab3_3_Steering$1494             Lab3_3_Steering
-C:   000001FB  A$Lab3_3_Steering$1495             Lab3_3_Steering
-C:   000001FE  A$Lab3_3_Steering$1496             Lab3_3_Steering
-C:   00000201  A$Lab3_3_Steering$1497             Lab3_3_Steering
-C:   00000204  A$Lab3_3_Steering$1498             Lab3_3_Steering
-C:   00000207  A$Lab3_3_Steering$1501             Lab3_3_Steering
+C:   000001F5  A$Lab3_3_Steering$1492             Lab3_3_Steering
+C:   000001F8  A$Lab3_3_Steering$1493             Lab3_3_Steering
+C:   000001FB  A$Lab3_3_Steering$1494             Lab3_3_Steering
+C:   000001FE  A$Lab3_3_Steering$1495             Lab3_3_Steering
+C:   00000201  A$Lab3_3_Steering$1496             Lab3_3_Steering
+C:   00000204  A$Lab3_3_Steering$1497             Lab3_3_Steering
+C:   00000207  A$Lab3_3_Steering$1500             Lab3_3_Steering
 C:   00000207  C$i2c.h$119$1$78                   Lab3_3_Steering
-C:   00000209  A$Lab3_3_Steering$1502             Lab3_3_Steering
-C:   0000020C  A$Lab3_3_Steering$1503             Lab3_3_Steering
-C:   0000020F  A$Lab3_3_Steering$1504             Lab3_3_Steering
-C:   00000211  A$Lab3_3_Steering$1508             Lab3_3_Steering
-C:   00000213  A$Lab3_3_Steering$1509             Lab3_3_Steering
-C:   00000215  A$Lab3_3_Steering$1513             Lab3_3_Steering
+C:   00000209  A$Lab3_3_Steering$1501             Lab3_3_Steering
+C:   0000020C  A$Lab3_3_Steering$1502             Lab3_3_Steering
+C:   0000020F  A$Lab3_3_Steering$1503             Lab3_3_Steering
+C:   00000211  A$Lab3_3_Steering$1507             Lab3_3_Steering
+C:   00000213  A$Lab3_3_Steering$1508             Lab3_3_Steering
+C:   00000215  A$Lab3_3_Steering$1512             Lab3_3_Steering
 C:   00000215  C$i2c.h$123$2$79                   Lab3_3_Steering
-C:   00000217  A$Lab3_3_Steering$1514             Lab3_3_Steering
-C:   00000219  A$Lab3_3_Steering$1515             Lab3_3_Steering
-C:   0000021B  A$Lab3_3_Steering$1516             Lab3_3_Steering
-C:   0000021D  A$Lab3_3_Steering$1517             Lab3_3_Steering
-C:   0000021F  A$Lab3_3_Steering$1519             Lab3_3_Steering
-C:   00000220  A$Lab3_3_Steering$1520             Lab3_3_Steering
-C:   00000221  A$Lab3_3_Steering$1521             Lab3_3_Steering
-C:   00000222  A$Lab3_3_Steering$1522             Lab3_3_Steering
-C:   00000223  A$Lab3_3_Steering$1523             Lab3_3_Steering
-C:   00000224  A$Lab3_3_Steering$1524             Lab3_3_Steering
-C:   00000225  A$Lab3_3_Steering$1526             Lab3_3_Steering
-C:   00000228  A$Lab3_3_Steering$1527             Lab3_3_Steering
-C:   0000022A  A$Lab3_3_Steering$1528             Lab3_3_Steering
-C:   0000022C  A$Lab3_3_Steering$1529             Lab3_3_Steering
-C:   0000022D  A$Lab3_3_Steering$1530             Lab3_3_Steering
-C:   0000022F  A$Lab3_3_Steering$1531             Lab3_3_Steering
-C:   00000230  A$Lab3_3_Steering$1532             Lab3_3_Steering
-C:   00000232  A$Lab3_3_Steering$1533             Lab3_3_Steering
-C:   00000233  A$Lab3_3_Steering$1534             Lab3_3_Steering
-C:   00000234  A$Lab3_3_Steering$1535             Lab3_3_Steering
-C:   00000236  A$Lab3_3_Steering$1538             Lab3_3_Steering
+C:   00000217  A$Lab3_3_Steering$1513             Lab3_3_Steering
+C:   00000219  A$Lab3_3_Steering$1514             Lab3_3_Steering
+C:   0000021B  A$Lab3_3_Steering$1515             Lab3_3_Steering
+C:   0000021D  A$Lab3_3_Steering$1516             Lab3_3_Steering
+C:   0000021F  A$Lab3_3_Steering$1518             Lab3_3_Steering
+C:   00000220  A$Lab3_3_Steering$1519             Lab3_3_Steering
+C:   00000221  A$Lab3_3_Steering$1520             Lab3_3_Steering
+C:   00000222  A$Lab3_3_Steering$1521             Lab3_3_Steering
+C:   00000223  A$Lab3_3_Steering$1522             Lab3_3_Steering
+C:   00000224  A$Lab3_3_Steering$1523             Lab3_3_Steering
+C:   00000225  A$Lab3_3_Steering$1525             Lab3_3_Steering
+C:   00000228  A$Lab3_3_Steering$1526             Lab3_3_Steering
+C:   0000022A  A$Lab3_3_Steering$1527             Lab3_3_Steering
+C:   0000022C  A$Lab3_3_Steering$1528             Lab3_3_Steering
+C:   0000022D  A$Lab3_3_Steering$1529             Lab3_3_Steering
+C:   0000022F  A$Lab3_3_Steering$1530             Lab3_3_Steering
+C:   00000230  A$Lab3_3_Steering$1531             Lab3_3_Steering
+C:   00000232  A$Lab3_3_Steering$1532             Lab3_3_Steering
+C:   00000233  A$Lab3_3_Steering$1533             Lab3_3_Steering
+C:   00000234  A$Lab3_3_Steering$1534             Lab3_3_Steering
+C:   00000236  A$Lab3_3_Steering$1537             Lab3_3_Steering
 C:   00000236  C$i2c.h$124$2$79                   Lab3_3_Steering
-C:   00000238  A$Lab3_3_Steering$1539             Lab3_3_Steering
-C:   00000239  A$Lab3_3_Steering$1540             Lab3_3_Steering
-C:   0000023B  A$Lab3_3_Steering$1541             Lab3_3_Steering
-C:   0000023D  A$Lab3_3_Steering$1545             Lab3_3_Steering
+C:   00000238  A$Lab3_3_Steering$1538             Lab3_3_Steering
+C:   00000239  A$Lab3_3_Steering$1539             Lab3_3_Steering
+C:   0000023B  A$Lab3_3_Steering$1540             Lab3_3_Steering
+C:   0000023D  A$Lab3_3_Steering$1544             Lab3_3_Steering
 C:   0000023D  C$i2c.h$121$1$78                   Lab3_3_Steering
-C:   0000023E  A$Lab3_3_Steering$1546             Lab3_3_Steering
-C:   00000240  A$Lab3_3_Steering$1547             Lab3_3_Steering
-C:   00000243  A$Lab3_3_Steering$1549             Lab3_3_Steering
-C:   00000245  A$Lab3_3_Steering$1552             Lab3_3_Steering
+C:   0000023E  A$Lab3_3_Steering$1545             Lab3_3_Steering
+C:   00000240  A$Lab3_3_Steering$1546             Lab3_3_Steering
+C:   00000243  A$Lab3_3_Steering$1548             Lab3_3_Steering
+C:   00000245  A$Lab3_3_Steering$1551             Lab3_3_Steering
 C:   00000245  C$i2c.h$127$1$78                   Lab3_3_Steering
-C:   00000247  A$Lab3_3_Steering$1553             Lab3_3_Steering
-C:   0000024A  A$Lab3_3_Steering$1554             Lab3_3_Steering
+C:   00000247  A$Lab3_3_Steering$1552             Lab3_3_Steering
+C:   0000024A  A$Lab3_3_Steering$1553             Lab3_3_Steering
 ASxxxx Linker V03.00 + NoICE + sdld,  page 34.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000D8    00000DB0 =        3504. bytes (REL,CON,CODE)
+CSEG                                000000D8    00000DF9 =        3577. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   0000024D  A$Lab3_3_Steering$1555             Lab3_3_Steering
-C:   0000024F  A$Lab3_3_Steering$1559             Lab3_3_Steering
+C:   0000024D  A$Lab3_3_Steering$1554             Lab3_3_Steering
+C:   0000024F  A$Lab3_3_Steering$1558             Lab3_3_Steering
 C:   0000024F  C$i2c.h$129$1$78                   Lab3_3_Steering
-C:   00000251  A$Lab3_3_Steering$1560             Lab3_3_Steering
-C:   00000254  A$Lab3_3_Steering$1561             Lab3_3_Steering
-C:   00000257  A$Lab3_3_Steering$1562             Lab3_3_Steering
-C:   00000259  A$Lab3_3_Steering$1566             Lab3_3_Steering
+C:   00000251  A$Lab3_3_Steering$1559             Lab3_3_Steering
+C:   00000254  A$Lab3_3_Steering$1560             Lab3_3_Steering
+C:   00000257  A$Lab3_3_Steering$1561             Lab3_3_Steering
+C:   00000259  A$Lab3_3_Steering$1565             Lab3_3_Steering
 C:   00000259  C$i2c.h$131$1$78                   Lab3_3_Steering
-C:   0000025B  A$Lab3_3_Steering$1567             Lab3_3_Steering
-C:   0000025E  A$Lab3_3_Steering$1568             Lab3_3_Steering
-C:   00000261  A$Lab3_3_Steering$1569             Lab3_3_Steering
-C:   00000263  A$Lab3_3_Steering$1573             Lab3_3_Steering
+C:   0000025B  A$Lab3_3_Steering$1566             Lab3_3_Steering
+C:   0000025E  A$Lab3_3_Steering$1567             Lab3_3_Steering
+C:   00000261  A$Lab3_3_Steering$1568             Lab3_3_Steering
+C:   00000263  A$Lab3_3_Steering$1572             Lab3_3_Steering
 C:   00000263  C$i2c.h$133$1$78                   Lab3_3_Steering
-C:   00000265  A$Lab3_3_Steering$1574             Lab3_3_Steering
-C:   00000268  A$Lab3_3_Steering$1575             Lab3_3_Steering
-C:   0000026B  A$Lab3_3_Steering$1576             Lab3_3_Steering
-C:   0000026D  A$Lab3_3_Steering$1580             Lab3_3_Steering
+C:   00000265  A$Lab3_3_Steering$1573             Lab3_3_Steering
+C:   00000268  A$Lab3_3_Steering$1574             Lab3_3_Steering
+C:   0000026B  A$Lab3_3_Steering$1575             Lab3_3_Steering
+C:   0000026D  A$Lab3_3_Steering$1579             Lab3_3_Steering
 C:   0000026D  C$i2c.h$135$1$78                   Lab3_3_Steering
-C:   00000270  A$Lab3_3_Steering$1584             Lab3_3_Steering
+C:   00000270  A$Lab3_3_Steering$1583             Lab3_3_Steering
 C:   00000270  C$i2c.h$136$1$78                   Lab3_3_Steering
 C:   00000270  XG$read_keypad$0$0                 Lab3_3_Steering
-C:   00000271  A$Lab3_3_Steering$1600             Lab3_3_Steering
+C:   00000271  A$Lab3_3_Steering$1599             Lab3_3_Steering
 C:   00000271  C$i2c.h$148$1$78                   Lab3_3_Steering
 C:   00000271  G$kpd_input$0$0                    Lab3_3_Steering
 C:   00000271  _kpd_input                         Lab3_3_Steering
-C:   00000273  A$Lab3_3_Steering$1605             Lab3_3_Steering
+C:   00000273  A$Lab3_3_Steering$1604             Lab3_3_Steering
 C:   00000273  C$i2c.h$153$1$81                   Lab3_3_Steering
 C:   00000273  C$i2c.h$156$1$81                   Lab3_3_Steering
-C:   00000274  A$Lab3_3_Steering$1606             Lab3_3_Steering
-C:   00000275  A$Lab3_3_Steering$1607             Lab3_3_Steering
-C:   00000276  A$Lab3_3_Steering$1608             Lab3_3_Steering
-C:   00000277  A$Lab3_3_Steering$1609             Lab3_3_Steering
-C:   00000279  A$Lab3_3_Steering$1610             Lab3_3_Steering
-C:   0000027B  A$Lab3_3_Steering$1611             Lab3_3_Steering
-C:   0000027D  A$Lab3_3_Steering$1612             Lab3_3_Steering
-C:   0000027F  A$Lab3_3_Steering$1613             Lab3_3_Steering
-C:   00000281  A$Lab3_3_Steering$1614             Lab3_3_Steering
-C:   00000283  A$Lab3_3_Steering$1615             Lab3_3_Steering
-C:   00000285  A$Lab3_3_Steering$1616             Lab3_3_Steering
-C:   00000287  A$Lab3_3_Steering$1617             Lab3_3_Steering
-C:   00000289  A$Lab3_3_Steering$1618             Lab3_3_Steering
-C:   0000028C  A$Lab3_3_Steering$1619             Lab3_3_Steering
-C:   0000028E  A$Lab3_3_Steering$1620             Lab3_3_Steering
-C:   00000290  A$Lab3_3_Steering$1621             Lab3_3_Steering
-C:   00000292  A$Lab3_3_Steering$1622             Lab3_3_Steering
-C:   00000294  A$Lab3_3_Steering$1623             Lab3_3_Steering
-C:   00000296  A$Lab3_3_Steering$1627             Lab3_3_Steering
+C:   00000274  A$Lab3_3_Steering$1605             Lab3_3_Steering
+C:   00000275  A$Lab3_3_Steering$1606             Lab3_3_Steering
+C:   00000276  A$Lab3_3_Steering$1607             Lab3_3_Steering
+C:   00000277  A$Lab3_3_Steering$1608             Lab3_3_Steering
+C:   00000279  A$Lab3_3_Steering$1609             Lab3_3_Steering
+C:   0000027B  A$Lab3_3_Steering$1610             Lab3_3_Steering
+C:   0000027D  A$Lab3_3_Steering$1611             Lab3_3_Steering
+C:   0000027F  A$Lab3_3_Steering$1612             Lab3_3_Steering
+C:   00000281  A$Lab3_3_Steering$1613             Lab3_3_Steering
+C:   00000283  A$Lab3_3_Steering$1614             Lab3_3_Steering
+C:   00000285  A$Lab3_3_Steering$1615             Lab3_3_Steering
+C:   00000287  A$Lab3_3_Steering$1616             Lab3_3_Steering
+C:   00000289  A$Lab3_3_Steering$1617             Lab3_3_Steering
+C:   0000028C  A$Lab3_3_Steering$1618             Lab3_3_Steering
+C:   0000028E  A$Lab3_3_Steering$1619             Lab3_3_Steering
+C:   00000290  A$Lab3_3_Steering$1620             Lab3_3_Steering
+C:   00000292  A$Lab3_3_Steering$1621             Lab3_3_Steering
+C:   00000294  A$Lab3_3_Steering$1622             Lab3_3_Steering
+C:   00000296  A$Lab3_3_Steering$1626             Lab3_3_Steering
 C:   00000296  C$i2c.h$158$1$81                   Lab3_3_Steering
-C:   00000298  A$Lab3_3_Steering$1628             Lab3_3_Steering
-C:   0000029A  A$Lab3_3_Steering$1629             Lab3_3_Steering
-C:   0000029C  A$Lab3_3_Steering$1630             Lab3_3_Steering
+C:   00000298  A$Lab3_3_Steering$1627             Lab3_3_Steering
+C:   0000029A  A$Lab3_3_Steering$1628             Lab3_3_Steering
+C:   0000029C  A$Lab3_3_Steering$1629             Lab3_3_Steering
 ASxxxx Linker V03.00 + NoICE + sdld,  page 35.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000D8    00000DB0 =        3504. bytes (REL,CON,CODE)
+CSEG                                000000D8    00000DF9 =        3577. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   0000029E  A$Lab3_3_Steering$1631             Lab3_3_Steering
-C:   0000029F  A$Lab3_3_Steering$1632             Lab3_3_Steering
-C:   000002A1  A$Lab3_3_Steering$1633             Lab3_3_Steering
-C:   000002A3  A$Lab3_3_Steering$1634             Lab3_3_Steering
-C:   000002A5  A$Lab3_3_Steering$1635             Lab3_3_Steering
-C:   000002A6  A$Lab3_3_Steering$1636             Lab3_3_Steering
-C:   000002A8  A$Lab3_3_Steering$1637             Lab3_3_Steering
-C:   000002AA  A$Lab3_3_Steering$1638             Lab3_3_Steering
-C:   000002AC  A$Lab3_3_Steering$1639             Lab3_3_Steering
-C:   000002AD  A$Lab3_3_Steering$1640             Lab3_3_Steering
-C:   000002AF  A$Lab3_3_Steering$1641             Lab3_3_Steering
-C:   000002B1  A$Lab3_3_Steering$1642             Lab3_3_Steering
-C:   000002B3  A$Lab3_3_Steering$1643             Lab3_3_Steering
-C:   000002B4  A$Lab3_3_Steering$1644             Lab3_3_Steering
-C:   000002B6  A$Lab3_3_Steering$1645             Lab3_3_Steering
-C:   000002B8  A$Lab3_3_Steering$1646             Lab3_3_Steering
-C:   000002BA  A$Lab3_3_Steering$1647             Lab3_3_Steering
-C:   000002BB  A$Lab3_3_Steering$1648             Lab3_3_Steering
-C:   000002BD  A$Lab3_3_Steering$1649             Lab3_3_Steering
-C:   000002BF  A$Lab3_3_Steering$1650             Lab3_3_Steering
-C:   000002C1  A$Lab3_3_Steering$1651             Lab3_3_Steering
-C:   000002C3  A$Lab3_3_Steering$1652             Lab3_3_Steering
-C:   000002C5  A$Lab3_3_Steering$1653             Lab3_3_Steering
-C:   000002C7  A$Lab3_3_Steering$1654             Lab3_3_Steering
-C:   000002C9  A$Lab3_3_Steering$1655             Lab3_3_Steering
-C:   000002CC  A$Lab3_3_Steering$1656             Lab3_3_Steering
-C:   000002CE  A$Lab3_3_Steering$1657             Lab3_3_Steering
-C:   000002D0  A$Lab3_3_Steering$1658             Lab3_3_Steering
-C:   000002D2  A$Lab3_3_Steering$1661             Lab3_3_Steering
+C:   0000029E  A$Lab3_3_Steering$1630             Lab3_3_Steering
+C:   0000029F  A$Lab3_3_Steering$1631             Lab3_3_Steering
+C:   000002A1  A$Lab3_3_Steering$1632             Lab3_3_Steering
+C:   000002A3  A$Lab3_3_Steering$1633             Lab3_3_Steering
+C:   000002A5  A$Lab3_3_Steering$1634             Lab3_3_Steering
+C:   000002A6  A$Lab3_3_Steering$1635             Lab3_3_Steering
+C:   000002A8  A$Lab3_3_Steering$1636             Lab3_3_Steering
+C:   000002AA  A$Lab3_3_Steering$1637             Lab3_3_Steering
+C:   000002AC  A$Lab3_3_Steering$1638             Lab3_3_Steering
+C:   000002AD  A$Lab3_3_Steering$1639             Lab3_3_Steering
+C:   000002AF  A$Lab3_3_Steering$1640             Lab3_3_Steering
+C:   000002B1  A$Lab3_3_Steering$1641             Lab3_3_Steering
+C:   000002B3  A$Lab3_3_Steering$1642             Lab3_3_Steering
+C:   000002B4  A$Lab3_3_Steering$1643             Lab3_3_Steering
+C:   000002B6  A$Lab3_3_Steering$1644             Lab3_3_Steering
+C:   000002B8  A$Lab3_3_Steering$1645             Lab3_3_Steering
+C:   000002BA  A$Lab3_3_Steering$1646             Lab3_3_Steering
+C:   000002BB  A$Lab3_3_Steering$1647             Lab3_3_Steering
+C:   000002BD  A$Lab3_3_Steering$1648             Lab3_3_Steering
+C:   000002BF  A$Lab3_3_Steering$1649             Lab3_3_Steering
+C:   000002C1  A$Lab3_3_Steering$1650             Lab3_3_Steering
+C:   000002C3  A$Lab3_3_Steering$1651             Lab3_3_Steering
+C:   000002C5  A$Lab3_3_Steering$1652             Lab3_3_Steering
+C:   000002C7  A$Lab3_3_Steering$1653             Lab3_3_Steering
+C:   000002C9  A$Lab3_3_Steering$1654             Lab3_3_Steering
+C:   000002CC  A$Lab3_3_Steering$1655             Lab3_3_Steering
+C:   000002CE  A$Lab3_3_Steering$1656             Lab3_3_Steering
+C:   000002D0  A$Lab3_3_Steering$1657             Lab3_3_Steering
+C:   000002D2  A$Lab3_3_Steering$1660             Lab3_3_Steering
 C:   000002D2  C$i2c.h$160$1$81                   Lab3_3_Steering
-C:   000002D5  A$Lab3_3_Steering$1662             Lab3_3_Steering
-C:   000002D8  A$Lab3_3_Steering$1663             Lab3_3_Steering
-C:   000002D9  A$Lab3_3_Steering$1664             Lab3_3_Steering
-C:   000002DC  A$Lab3_3_Steering$1665             Lab3_3_Steering
-C:   000002DE  A$Lab3_3_Steering$1666             Lab3_3_Steering
-C:   000002E0  A$Lab3_3_Steering$1669             Lab3_3_Steering
-C:   000002E2  A$Lab3_3_Steering$1673             Lab3_3_Steering
+C:   000002D5  A$Lab3_3_Steering$1661             Lab3_3_Steering
+C:   000002D8  A$Lab3_3_Steering$1662             Lab3_3_Steering
+C:   000002D9  A$Lab3_3_Steering$1663             Lab3_3_Steering
+C:   000002DC  A$Lab3_3_Steering$1664             Lab3_3_Steering
+C:   000002DE  A$Lab3_3_Steering$1665             Lab3_3_Steering
+C:   000002E0  A$Lab3_3_Steering$1668             Lab3_3_Steering
+C:   000002E2  A$Lab3_3_Steering$1672             Lab3_3_Steering
 C:   000002E2  C$i2c.h$166$3$84                   Lab3_3_Steering
-C:   000002E4  A$Lab3_3_Steering$1674             Lab3_3_Steering
-C:   000002E6  A$Lab3_3_Steering$1675             Lab3_3_Steering
-C:   000002E8  A$Lab3_3_Steering$1676             Lab3_3_Steering
-C:   000002EB  A$Lab3_3_Steering$1677             Lab3_3_Steering
-C:   000002ED  A$Lab3_3_Steering$1678             Lab3_3_Steering
-C:   000002EF  A$Lab3_3_Steering$1679             Lab3_3_Steering
-C:   000002F1  A$Lab3_3_Steering$1680             Lab3_3_Steering
-C:   000002F3  A$Lab3_3_Steering$1681             Lab3_3_Steering
-C:   000002F5  A$Lab3_3_Steering$1682             Lab3_3_Steering
-C:   000002F8  A$Lab3_3_Steering$1683             Lab3_3_Steering
-C:   000002FA  A$Lab3_3_Steering$1685             Lab3_3_Steering
-C:   000002FD  A$Lab3_3_Steering$1687             Lab3_3_Steering
-C:   00000300  A$Lab3_3_Steering$1688             Lab3_3_Steering
+C:   000002E4  A$Lab3_3_Steering$1673             Lab3_3_Steering
+C:   000002E6  A$Lab3_3_Steering$1674             Lab3_3_Steering
+C:   000002E8  A$Lab3_3_Steering$1675             Lab3_3_Steering
+C:   000002EB  A$Lab3_3_Steering$1676             Lab3_3_Steering
+C:   000002ED  A$Lab3_3_Steering$1677             Lab3_3_Steering
+C:   000002EF  A$Lab3_3_Steering$1678             Lab3_3_Steering
+C:   000002F1  A$Lab3_3_Steering$1679             Lab3_3_Steering
+C:   000002F3  A$Lab3_3_Steering$1680             Lab3_3_Steering
+C:   000002F5  A$Lab3_3_Steering$1681             Lab3_3_Steering
+C:   000002F8  A$Lab3_3_Steering$1682             Lab3_3_Steering
+C:   000002FA  A$Lab3_3_Steering$1684             Lab3_3_Steering
+C:   000002FD  A$Lab3_3_Steering$1686             Lab3_3_Steering
+C:   00000300  A$Lab3_3_Steering$1687             Lab3_3_Steering
 ASxxxx Linker V03.00 + NoICE + sdld,  page 36.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000D8    00000DB0 =        3504. bytes (REL,CON,CODE)
+CSEG                                000000D8    00000DF9 =        3577. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   00000301  A$Lab3_3_Steering$1689             Lab3_3_Steering
-C:   00000303  A$Lab3_3_Steering$1690             Lab3_3_Steering
-C:   00000305  A$Lab3_3_Steering$1691             Lab3_3_Steering
-C:   00000307  A$Lab3_3_Steering$1692             Lab3_3_Steering
-C:   00000309  A$Lab3_3_Steering$1693             Lab3_3_Steering
-C:   0000030C  A$Lab3_3_Steering$1694             Lab3_3_Steering
-C:   0000030E  A$Lab3_3_Steering$1695             Lab3_3_Steering
-C:   00000310  A$Lab3_3_Steering$1696             Lab3_3_Steering
-C:   00000312  A$Lab3_3_Steering$1697             Lab3_3_Steering
-C:   00000314  A$Lab3_3_Steering$1701             Lab3_3_Steering
+C:   00000301  A$Lab3_3_Steering$1688             Lab3_3_Steering
+C:   00000303  A$Lab3_3_Steering$1689             Lab3_3_Steering
+C:   00000305  A$Lab3_3_Steering$1690             Lab3_3_Steering
+C:   00000307  A$Lab3_3_Steering$1691             Lab3_3_Steering
+C:   00000309  A$Lab3_3_Steering$1692             Lab3_3_Steering
+C:   0000030C  A$Lab3_3_Steering$1693             Lab3_3_Steering
+C:   0000030E  A$Lab3_3_Steering$1694             Lab3_3_Steering
+C:   00000310  A$Lab3_3_Steering$1695             Lab3_3_Steering
+C:   00000312  A$Lab3_3_Steering$1696             Lab3_3_Steering
+C:   00000314  A$Lab3_3_Steering$1700             Lab3_3_Steering
 C:   00000314  C$i2c.h$167$2$82                   Lab3_3_Steering
-C:   00000317  A$Lab3_3_Steering$1705             Lab3_3_Steering
+C:   00000317  A$Lab3_3_Steering$1704             Lab3_3_Steering
 C:   00000317  C$i2c.h$169$3$83                   Lab3_3_Steering
-C:   00000319  A$Lab3_3_Steering$1706             Lab3_3_Steering
-C:   0000031B  A$Lab3_3_Steering$1707             Lab3_3_Steering
-C:   0000031E  A$Lab3_3_Steering$1708             Lab3_3_Steering
-C:   00000320  A$Lab3_3_Steering$1709             Lab3_3_Steering
-C:   00000322  A$Lab3_3_Steering$1710             Lab3_3_Steering
-C:   00000324  A$Lab3_3_Steering$1711             Lab3_3_Steering
-C:   00000327  A$Lab3_3_Steering$1712             Lab3_3_Steering
-C:   0000032A  A$Lab3_3_Steering$1713             Lab3_3_Steering
-C:   0000032B  A$Lab3_3_Steering$1714             Lab3_3_Steering
-C:   0000032D  A$Lab3_3_Steering$1715             Lab3_3_Steering
-C:   0000032F  A$Lab3_3_Steering$1716             Lab3_3_Steering
-C:   00000331  A$Lab3_3_Steering$1717             Lab3_3_Steering
-C:   00000334  A$Lab3_3_Steering$1718             Lab3_3_Steering
-C:   00000336  A$Lab3_3_Steering$1719             Lab3_3_Steering
-C:   00000338  A$Lab3_3_Steering$1720             Lab3_3_Steering
-C:   0000033A  A$Lab3_3_Steering$1724             Lab3_3_Steering
+C:   00000319  A$Lab3_3_Steering$1705             Lab3_3_Steering
+C:   0000031B  A$Lab3_3_Steering$1706             Lab3_3_Steering
+C:   0000031E  A$Lab3_3_Steering$1707             Lab3_3_Steering
+C:   00000320  A$Lab3_3_Steering$1708             Lab3_3_Steering
+C:   00000322  A$Lab3_3_Steering$1709             Lab3_3_Steering
+C:   00000324  A$Lab3_3_Steering$1710             Lab3_3_Steering
+C:   00000327  A$Lab3_3_Steering$1711             Lab3_3_Steering
+C:   0000032A  A$Lab3_3_Steering$1712             Lab3_3_Steering
+C:   0000032B  A$Lab3_3_Steering$1713             Lab3_3_Steering
+C:   0000032D  A$Lab3_3_Steering$1714             Lab3_3_Steering
+C:   0000032F  A$Lab3_3_Steering$1715             Lab3_3_Steering
+C:   00000331  A$Lab3_3_Steering$1716             Lab3_3_Steering
+C:   00000334  A$Lab3_3_Steering$1717             Lab3_3_Steering
+C:   00000336  A$Lab3_3_Steering$1718             Lab3_3_Steering
+C:   00000338  A$Lab3_3_Steering$1719             Lab3_3_Steering
+C:   0000033A  A$Lab3_3_Steering$1723             Lab3_3_Steering
 C:   0000033A  C$i2c.h$170$3$83                   Lab3_3_Steering
-C:   0000033C  A$Lab3_3_Steering$1725             Lab3_3_Steering
-C:   0000033E  A$Lab3_3_Steering$1726             Lab3_3_Steering
-C:   00000341  A$Lab3_3_Steering$1730             Lab3_3_Steering
+C:   0000033C  A$Lab3_3_Steering$1724             Lab3_3_Steering
+C:   0000033E  A$Lab3_3_Steering$1725             Lab3_3_Steering
+C:   00000341  A$Lab3_3_Steering$1729             Lab3_3_Steering
 C:   00000341  C$i2c.h$174$3$84                   Lab3_3_Steering
-C:   00000342  A$Lab3_3_Steering$1731             Lab3_3_Steering
-C:   00000343  A$Lab3_3_Steering$1732             Lab3_3_Steering
-C:   00000344  A$Lab3_3_Steering$1733             Lab3_3_Steering
-C:   00000346  A$Lab3_3_Steering$1734             Lab3_3_Steering
-C:   00000347  A$Lab3_3_Steering$1735             Lab3_3_Steering
-C:   00000349  A$Lab3_3_Steering$1736             Lab3_3_Steering
-C:   0000034B  A$Lab3_3_Steering$1737             Lab3_3_Steering
-C:   0000034D  A$Lab3_3_Steering$1738             Lab3_3_Steering
-C:   0000034F  A$Lab3_3_Steering$1739             Lab3_3_Steering
-C:   00000351  A$Lab3_3_Steering$1740             Lab3_3_Steering
-C:   00000353  A$Lab3_3_Steering$1741             Lab3_3_Steering
-C:   00000355  A$Lab3_3_Steering$1742             Lab3_3_Steering
-C:   00000357  A$Lab3_3_Steering$1743             Lab3_3_Steering
-C:   00000359  A$Lab3_3_Steering$1744             Lab3_3_Steering
-C:   0000035B  A$Lab3_3_Steering$1745             Lab3_3_Steering
-C:   0000035D  A$Lab3_3_Steering$1746             Lab3_3_Steering
-C:   0000035F  A$Lab3_3_Steering$1747             Lab3_3_Steering
+C:   00000342  A$Lab3_3_Steering$1730             Lab3_3_Steering
+C:   00000343  A$Lab3_3_Steering$1731             Lab3_3_Steering
+C:   00000344  A$Lab3_3_Steering$1732             Lab3_3_Steering
+C:   00000346  A$Lab3_3_Steering$1733             Lab3_3_Steering
+C:   00000347  A$Lab3_3_Steering$1734             Lab3_3_Steering
+C:   00000349  A$Lab3_3_Steering$1735             Lab3_3_Steering
+C:   0000034B  A$Lab3_3_Steering$1736             Lab3_3_Steering
+C:   0000034D  A$Lab3_3_Steering$1737             Lab3_3_Steering
+C:   0000034F  A$Lab3_3_Steering$1738             Lab3_3_Steering
+C:   00000351  A$Lab3_3_Steering$1739             Lab3_3_Steering
+C:   00000353  A$Lab3_3_Steering$1740             Lab3_3_Steering
+C:   00000355  A$Lab3_3_Steering$1741             Lab3_3_Steering
+C:   00000357  A$Lab3_3_Steering$1742             Lab3_3_Steering
+C:   00000359  A$Lab3_3_Steering$1743             Lab3_3_Steering
+C:   0000035B  A$Lab3_3_Steering$1744             Lab3_3_Steering
+C:   0000035D  A$Lab3_3_Steering$1745             Lab3_3_Steering
+C:   0000035F  A$Lab3_3_Steering$1746             Lab3_3_Steering
 ASxxxx Linker V03.00 + NoICE + sdld,  page 37.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000D8    00000DB0 =        3504. bytes (REL,CON,CODE)
+CSEG                                000000D8    00000DF9 =        3577. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   00000361  A$Lab3_3_Steering$1748             Lab3_3_Steering
-C:   00000363  A$Lab3_3_Steering$1749             Lab3_3_Steering
-C:   00000366  A$Lab3_3_Steering$1750             Lab3_3_Steering
-C:   00000368  A$Lab3_3_Steering$1751             Lab3_3_Steering
-C:   0000036A  A$Lab3_3_Steering$1752             Lab3_3_Steering
-C:   0000036C  A$Lab3_3_Steering$1753             Lab3_3_Steering
-C:   0000036E  A$Lab3_3_Steering$1754             Lab3_3_Steering
-C:   00000370  A$Lab3_3_Steering$1755             Lab3_3_Steering
-C:   00000372  A$Lab3_3_Steering$1756             Lab3_3_Steering
-C:   00000374  A$Lab3_3_Steering$1757             Lab3_3_Steering
-C:   00000376  A$Lab3_3_Steering$1760             Lab3_3_Steering
+C:   00000361  A$Lab3_3_Steering$1747             Lab3_3_Steering
+C:   00000363  A$Lab3_3_Steering$1748             Lab3_3_Steering
+C:   00000366  A$Lab3_3_Steering$1749             Lab3_3_Steering
+C:   00000368  A$Lab3_3_Steering$1750             Lab3_3_Steering
+C:   0000036A  A$Lab3_3_Steering$1751             Lab3_3_Steering
+C:   0000036C  A$Lab3_3_Steering$1752             Lab3_3_Steering
+C:   0000036E  A$Lab3_3_Steering$1753             Lab3_3_Steering
+C:   00000370  A$Lab3_3_Steering$1754             Lab3_3_Steering
+C:   00000372  A$Lab3_3_Steering$1755             Lab3_3_Steering
+C:   00000374  A$Lab3_3_Steering$1756             Lab3_3_Steering
+C:   00000376  A$Lab3_3_Steering$1759             Lab3_3_Steering
 C:   00000376  C$i2c.h$175$1$81                   Lab3_3_Steering
-C:   00000378  A$Lab3_3_Steering$1761             Lab3_3_Steering
-C:   0000037A  A$Lab3_3_Steering$1762             Lab3_3_Steering
-C:   0000037D  A$Lab3_3_Steering$1763             Lab3_3_Steering
-C:   0000037F  A$Lab3_3_Steering$1764             Lab3_3_Steering
-C:   00000381  A$Lab3_3_Steering$1765             Lab3_3_Steering
-C:   00000383  A$Lab3_3_Steering$1766             Lab3_3_Steering
-C:   00000386  A$Lab3_3_Steering$1767             Lab3_3_Steering
-C:   00000388  A$Lab3_3_Steering$1768             Lab3_3_Steering
-C:   0000038A  A$Lab3_3_Steering$1769             Lab3_3_Steering
-C:   0000038C  A$Lab3_3_Steering$1770             Lab3_3_Steering
-C:   0000038E  A$Lab3_3_Steering$1771             Lab3_3_Steering
-C:   00000390  A$Lab3_3_Steering$1772             Lab3_3_Steering
-C:   00000392  A$Lab3_3_Steering$1773             Lab3_3_Steering
-C:   00000393  A$Lab3_3_Steering$1774             Lab3_3_Steering
-C:   00000394  A$Lab3_3_Steering$1775             Lab3_3_Steering
-C:   00000395  A$Lab3_3_Steering$1776             Lab3_3_Steering
-C:   00000396  A$Lab3_3_Steering$1777             Lab3_3_Steering
-C:   00000397  A$Lab3_3_Steering$1778             Lab3_3_Steering
-C:   00000398  A$Lab3_3_Steering$1779             Lab3_3_Steering
-C:   00000399  A$Lab3_3_Steering$1780             Lab3_3_Steering
-C:   0000039B  A$Lab3_3_Steering$1781             Lab3_3_Steering
-C:   0000039C  A$Lab3_3_Steering$1782             Lab3_3_Steering
-C:   0000039D  A$Lab3_3_Steering$1783             Lab3_3_Steering
-C:   0000039F  A$Lab3_3_Steering$1784             Lab3_3_Steering
-C:   000003A0  A$Lab3_3_Steering$1788             Lab3_3_Steering
+C:   00000378  A$Lab3_3_Steering$1760             Lab3_3_Steering
+C:   0000037A  A$Lab3_3_Steering$1761             Lab3_3_Steering
+C:   0000037D  A$Lab3_3_Steering$1762             Lab3_3_Steering
+C:   0000037F  A$Lab3_3_Steering$1763             Lab3_3_Steering
+C:   00000381  A$Lab3_3_Steering$1764             Lab3_3_Steering
+C:   00000383  A$Lab3_3_Steering$1765             Lab3_3_Steering
+C:   00000386  A$Lab3_3_Steering$1766             Lab3_3_Steering
+C:   00000388  A$Lab3_3_Steering$1767             Lab3_3_Steering
+C:   0000038A  A$Lab3_3_Steering$1768             Lab3_3_Steering
+C:   0000038C  A$Lab3_3_Steering$1769             Lab3_3_Steering
+C:   0000038E  A$Lab3_3_Steering$1770             Lab3_3_Steering
+C:   00000390  A$Lab3_3_Steering$1771             Lab3_3_Steering
+C:   00000392  A$Lab3_3_Steering$1772             Lab3_3_Steering
+C:   00000393  A$Lab3_3_Steering$1773             Lab3_3_Steering
+C:   00000394  A$Lab3_3_Steering$1774             Lab3_3_Steering
+C:   00000395  A$Lab3_3_Steering$1775             Lab3_3_Steering
+C:   00000396  A$Lab3_3_Steering$1776             Lab3_3_Steering
+C:   00000397  A$Lab3_3_Steering$1777             Lab3_3_Steering
+C:   00000398  A$Lab3_3_Steering$1778             Lab3_3_Steering
+C:   00000399  A$Lab3_3_Steering$1779             Lab3_3_Steering
+C:   0000039B  A$Lab3_3_Steering$1780             Lab3_3_Steering
+C:   0000039C  A$Lab3_3_Steering$1781             Lab3_3_Steering
+C:   0000039D  A$Lab3_3_Steering$1782             Lab3_3_Steering
+C:   0000039F  A$Lab3_3_Steering$1783             Lab3_3_Steering
+C:   000003A0  A$Lab3_3_Steering$1787             Lab3_3_Steering
 C:   000003A0  C$i2c.h$176$3$84                   Lab3_3_Steering
-C:   000003A2  A$Lab3_3_Steering$1789             Lab3_3_Steering
-C:   000003A4  A$Lab3_3_Steering$1790             Lab3_3_Steering
-C:   000003A6  A$Lab3_3_Steering$1791             Lab3_3_Steering
-C:   000003A8  A$Lab3_3_Steering$1792             Lab3_3_Steering
-C:   000003AB  A$Lab3_3_Steering$1793             Lab3_3_Steering
-C:   000003AD  A$Lab3_3_Steering$1794             Lab3_3_Steering
-C:   000003AF  A$Lab3_3_Steering$1795             Lab3_3_Steering
-C:   000003B1  A$Lab3_3_Steering$1796             Lab3_3_Steering
-C:   000003B3  A$Lab3_3_Steering$1797             Lab3_3_Steering
-C:   000003B5  A$Lab3_3_Steering$1798             Lab3_3_Steering
-C:   000003B6  A$Lab3_3_Steering$1799             Lab3_3_Steering
-C:   000003B9  A$Lab3_3_Steering$1800             Lab3_3_Steering
-C:   000003BC  A$Lab3_3_Steering$1801             Lab3_3_Steering
+C:   000003A2  A$Lab3_3_Steering$1788             Lab3_3_Steering
+C:   000003A4  A$Lab3_3_Steering$1789             Lab3_3_Steering
+C:   000003A6  A$Lab3_3_Steering$1790             Lab3_3_Steering
+C:   000003A8  A$Lab3_3_Steering$1791             Lab3_3_Steering
+C:   000003AB  A$Lab3_3_Steering$1792             Lab3_3_Steering
+C:   000003AD  A$Lab3_3_Steering$1793             Lab3_3_Steering
+C:   000003AF  A$Lab3_3_Steering$1794             Lab3_3_Steering
+C:   000003B1  A$Lab3_3_Steering$1795             Lab3_3_Steering
+C:   000003B3  A$Lab3_3_Steering$1796             Lab3_3_Steering
+C:   000003B5  A$Lab3_3_Steering$1797             Lab3_3_Steering
+C:   000003B6  A$Lab3_3_Steering$1798             Lab3_3_Steering
+C:   000003B9  A$Lab3_3_Steering$1799             Lab3_3_Steering
+C:   000003BC  A$Lab3_3_Steering$1800             Lab3_3_Steering
 ASxxxx Linker V03.00 + NoICE + sdld,  page 38.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000D8    00000DB0 =        3504. bytes (REL,CON,CODE)
+CSEG                                000000D8    00000DF9 =        3577. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   000003BD  A$Lab3_3_Steering$1802             Lab3_3_Steering
-C:   000003BF  A$Lab3_3_Steering$1803             Lab3_3_Steering
-C:   000003C1  A$Lab3_3_Steering$1804             Lab3_3_Steering
-C:   000003C3  A$Lab3_3_Steering$1805             Lab3_3_Steering
-C:   000003C5  A$Lab3_3_Steering$1806             Lab3_3_Steering
-C:   000003C7  A$Lab3_3_Steering$1807             Lab3_3_Steering
-C:   000003CA  A$Lab3_3_Steering$1808             Lab3_3_Steering
-C:   000003CC  A$Lab3_3_Steering$1809             Lab3_3_Steering
-C:   000003CE  A$Lab3_3_Steering$1810             Lab3_3_Steering
-C:   000003D0  A$Lab3_3_Steering$1811             Lab3_3_Steering
-C:   000003D2  A$Lab3_3_Steering$1812             Lab3_3_Steering
-C:   000003D4  A$Lab3_3_Steering$1816             Lab3_3_Steering
+C:   000003BD  A$Lab3_3_Steering$1801             Lab3_3_Steering
+C:   000003BF  A$Lab3_3_Steering$1802             Lab3_3_Steering
+C:   000003C1  A$Lab3_3_Steering$1803             Lab3_3_Steering
+C:   000003C3  A$Lab3_3_Steering$1804             Lab3_3_Steering
+C:   000003C5  A$Lab3_3_Steering$1805             Lab3_3_Steering
+C:   000003C7  A$Lab3_3_Steering$1806             Lab3_3_Steering
+C:   000003CA  A$Lab3_3_Steering$1807             Lab3_3_Steering
+C:   000003CC  A$Lab3_3_Steering$1808             Lab3_3_Steering
+C:   000003CE  A$Lab3_3_Steering$1809             Lab3_3_Steering
+C:   000003D0  A$Lab3_3_Steering$1810             Lab3_3_Steering
+C:   000003D2  A$Lab3_3_Steering$1811             Lab3_3_Steering
+C:   000003D4  A$Lab3_3_Steering$1815             Lab3_3_Steering
 C:   000003D4  C$i2c.h$164$1$81                   Lab3_3_Steering
-C:   000003D5  A$Lab3_3_Steering$1817             Lab3_3_Steering
-C:   000003D6  A$Lab3_3_Steering$1818             Lab3_3_Steering
-C:   000003D7  A$Lab3_3_Steering$1819             Lab3_3_Steering
-C:   000003D9  A$Lab3_3_Steering$1820             Lab3_3_Steering
-C:   000003DB  A$Lab3_3_Steering$1821             Lab3_3_Steering
-C:   000003DD  A$Lab3_3_Steering$1822             Lab3_3_Steering
-C:   000003E0  A$Lab3_3_Steering$1826             Lab3_3_Steering
+C:   000003D5  A$Lab3_3_Steering$1816             Lab3_3_Steering
+C:   000003D6  A$Lab3_3_Steering$1817             Lab3_3_Steering
+C:   000003D7  A$Lab3_3_Steering$1818             Lab3_3_Steering
+C:   000003D9  A$Lab3_3_Steering$1819             Lab3_3_Steering
+C:   000003DB  A$Lab3_3_Steering$1820             Lab3_3_Steering
+C:   000003DD  A$Lab3_3_Steering$1821             Lab3_3_Steering
+C:   000003E0  A$Lab3_3_Steering$1825             Lab3_3_Steering
 C:   000003E0  C$i2c.h$179$1$81                   Lab3_3_Steering
-C:   000003E2  A$Lab3_3_Steering$1827             Lab3_3_Steering
-C:   000003E4  A$Lab3_3_Steering$1831             Lab3_3_Steering
+C:   000003E2  A$Lab3_3_Steering$1826             Lab3_3_Steering
+C:   000003E4  A$Lab3_3_Steering$1830             Lab3_3_Steering
 C:   000003E4  C$i2c.h$180$1$81                   Lab3_3_Steering
 C:   000003E4  XG$kpd_input$0$0                   Lab3_3_Steering
-C:   000003E5  A$Lab3_3_Steering$1845             Lab3_3_Steering
+C:   000003E5  A$Lab3_3_Steering$1844             Lab3_3_Steering
 C:   000003E5  C$i2c.h$189$1$81                   Lab3_3_Steering
 C:   000003E5  G$delay_time$0$0                   Lab3_3_Steering
 C:   000003E5  _delay_time                        Lab3_3_Steering
-C:   000003E7  A$Lab3_3_Steering$1846             Lab3_3_Steering
-C:   000003E9  A$Lab3_3_Steering$1847             Lab3_3_Steering
-C:   000003EB  A$Lab3_3_Steering$1848             Lab3_3_Steering
-C:   000003EC  A$Lab3_3_Steering$1851             Lab3_3_Steering
+C:   000003E7  A$Lab3_3_Steering$1845             Lab3_3_Steering
+C:   000003E9  A$Lab3_3_Steering$1846             Lab3_3_Steering
+C:   000003EB  A$Lab3_3_Steering$1847             Lab3_3_Steering
+C:   000003EC  A$Lab3_3_Steering$1850             Lab3_3_Steering
 C:   000003EC  C$i2c.h$192$1$86                   Lab3_3_Steering
-C:   000003EE  A$Lab3_3_Steering$1852             Lab3_3_Steering
-C:   000003F0  A$Lab3_3_Steering$1853             Lab3_3_Steering
-C:   000003F2  A$Lab3_3_Steering$1854             Lab3_3_Steering
-C:   000003F4  A$Lab3_3_Steering$1856             Lab3_3_Steering
-C:   000003F5  A$Lab3_3_Steering$1857             Lab3_3_Steering
-C:   000003F6  A$Lab3_3_Steering$1858             Lab3_3_Steering
-C:   000003F7  A$Lab3_3_Steering$1859             Lab3_3_Steering
-C:   000003F8  A$Lab3_3_Steering$1860             Lab3_3_Steering
-C:   000003F9  A$Lab3_3_Steering$1861             Lab3_3_Steering
-C:   000003FA  A$Lab3_3_Steering$1862             Lab3_3_Steering
-C:   000003FB  A$Lab3_3_Steering$1863             Lab3_3_Steering
-C:   000003FC  A$Lab3_3_Steering$1864             Lab3_3_Steering
-C:   000003FD  A$Lab3_3_Steering$1865             Lab3_3_Steering
-C:   000003FF  A$Lab3_3_Steering$1866             Lab3_3_Steering
-C:   00000400  A$Lab3_3_Steering$1867             Lab3_3_Steering
-C:   00000403  A$Lab3_3_Steering$1868             Lab3_3_Steering
-C:   00000404  A$Lab3_3_Steering$1869             Lab3_3_Steering
+C:   000003EE  A$Lab3_3_Steering$1851             Lab3_3_Steering
+C:   000003F0  A$Lab3_3_Steering$1852             Lab3_3_Steering
+C:   000003F2  A$Lab3_3_Steering$1853             Lab3_3_Steering
+C:   000003F4  A$Lab3_3_Steering$1855             Lab3_3_Steering
+C:   000003F5  A$Lab3_3_Steering$1856             Lab3_3_Steering
+C:   000003F6  A$Lab3_3_Steering$1857             Lab3_3_Steering
+C:   000003F7  A$Lab3_3_Steering$1858             Lab3_3_Steering
+C:   000003F8  A$Lab3_3_Steering$1859             Lab3_3_Steering
+C:   000003F9  A$Lab3_3_Steering$1860             Lab3_3_Steering
+C:   000003FA  A$Lab3_3_Steering$1861             Lab3_3_Steering
+C:   000003FB  A$Lab3_3_Steering$1862             Lab3_3_Steering
+C:   000003FC  A$Lab3_3_Steering$1863             Lab3_3_Steering
+C:   000003FD  A$Lab3_3_Steering$1864             Lab3_3_Steering
+C:   000003FF  A$Lab3_3_Steering$1865             Lab3_3_Steering
+C:   00000400  A$Lab3_3_Steering$1866             Lab3_3_Steering
+C:   00000403  A$Lab3_3_Steering$1867             Lab3_3_Steering
+C:   00000404  A$Lab3_3_Steering$1868             Lab3_3_Steering
 ASxxxx Linker V03.00 + NoICE + sdld,  page 39.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000D8    00000DB0 =        3504. bytes (REL,CON,CODE)
+CSEG                                000000D8    00000DF9 =        3577. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   00000407  A$Lab3_3_Steering$1870             Lab3_3_Steering
-C:   00000408  A$Lab3_3_Steering$1871             Lab3_3_Steering
-C:   0000040B  A$Lab3_3_Steering$1872             Lab3_3_Steering
-C:   0000040C  A$Lab3_3_Steering$1874             Lab3_3_Steering
-C:   0000040E  A$Lab3_3_Steering$1878             Lab3_3_Steering
+C:   00000407  A$Lab3_3_Steering$1869             Lab3_3_Steering
+C:   00000408  A$Lab3_3_Steering$1870             Lab3_3_Steering
+C:   0000040B  A$Lab3_3_Steering$1871             Lab3_3_Steering
+C:   0000040C  A$Lab3_3_Steering$1873             Lab3_3_Steering
+C:   0000040E  A$Lab3_3_Steering$1877             Lab3_3_Steering
 C:   0000040E  C$i2c.h$193$1$86                   Lab3_3_Steering
 C:   0000040E  XG$delay_time$0$0                  Lab3_3_Steering
-C:   0000040F  A$Lab3_3_Steering$1892             Lab3_3_Steering
+C:   0000040F  A$Lab3_3_Steering$1891             Lab3_3_Steering
 C:   0000040F  C$i2c.h$196$1$86                   Lab3_3_Steering
 C:   0000040F  C$i2c.h$198$1$88                   Lab3_3_Steering
 C:   0000040F  G$i2c_start$0$0                    Lab3_3_Steering
 C:   0000040F  _i2c_start                         Lab3_3_Steering
-C:   00000412  A$Lab3_3_Steering$1895             Lab3_3_Steering
+C:   00000412  A$Lab3_3_Steering$1894             Lab3_3_Steering
 C:   00000412  C$i2c.h$199$1$88                   Lab3_3_Steering
-C:   00000414  A$Lab3_3_Steering$1899             Lab3_3_Steering
+C:   00000414  A$Lab3_3_Steering$1898             Lab3_3_Steering
 C:   00000414  C$i2c.h$200$1$88                   Lab3_3_Steering
-C:   00000417  A$Lab3_3_Steering$1902             Lab3_3_Steering
+C:   00000417  A$Lab3_3_Steering$1901             Lab3_3_Steering
 C:   00000417  C$i2c.h$201$1$88                   Lab3_3_Steering
-C:   00000419  A$Lab3_3_Steering$1905             Lab3_3_Steering
+C:   00000419  A$Lab3_3_Steering$1904             Lab3_3_Steering
 C:   00000419  C$i2c.h$202$1$88                   Lab3_3_Steering
-C:   0000041B  A$Lab3_3_Steering$1908             Lab3_3_Steering
+C:   0000041B  A$Lab3_3_Steering$1907             Lab3_3_Steering
 C:   0000041B  C$i2c.h$203$1$88                   Lab3_3_Steering
 C:   0000041B  XG$i2c_start$0$0                   Lab3_3_Steering
-C:   0000041C  A$Lab3_3_Steering$1921             Lab3_3_Steering
+C:   0000041C  A$Lab3_3_Steering$1920             Lab3_3_Steering
 C:   0000041C  C$i2c.h$206$1$88                   Lab3_3_Steering
 C:   0000041C  G$i2c_write$0$0                    Lab3_3_Steering
 C:   0000041C  _i2c_write                         Lab3_3_Steering
-C:   0000041F  A$Lab3_3_Steering$1927             Lab3_3_Steering
+C:   0000041F  A$Lab3_3_Steering$1926             Lab3_3_Steering
 C:   0000041F  C$i2c.h$209$1$90                   Lab3_3_Steering
 C:   0000041F  C$i2c.h$210$1$90                   Lab3_3_Steering
-C:   00000422  A$Lab3_3_Steering$1928             Lab3_3_Steering
-C:   00000424  A$Lab3_3_Steering$1932             Lab3_3_Steering
+C:   00000422  A$Lab3_3_Steering$1927             Lab3_3_Steering
+C:   00000424  A$Lab3_3_Steering$1931             Lab3_3_Steering
 C:   00000424  C$i2c.h$211$1$90                   Lab3_3_Steering
 C:   00000424  XG$i2c_write$0$0                   Lab3_3_Steering
-C:   00000425  A$Lab3_3_Steering$1945             Lab3_3_Steering
+C:   00000425  A$Lab3_3_Steering$1944             Lab3_3_Steering
 C:   00000425  C$i2c.h$214$1$90                   Lab3_3_Steering
 C:   00000425  G$i2c_write_and_stop$0$0           Lab3_3_Steering
 C:   00000425  _i2c_write_and_stop                Lab3_3_Steering
-C:   00000428  A$Lab3_3_Steering$1948             Lab3_3_Steering
+C:   00000428  A$Lab3_3_Steering$1947             Lab3_3_Steering
 C:   00000428  C$i2c.h$217$1$92                   Lab3_3_Steering
-C:   0000042A  A$Lab3_3_Steering$1954             Lab3_3_Steering
+C:   0000042A  A$Lab3_3_Steering$1953             Lab3_3_Steering
 C:   0000042A  C$i2c.h$218$1$92                   Lab3_3_Steering
 C:   0000042A  C$i2c.h$219$1$92                   Lab3_3_Steering
-C:   0000042D  A$Lab3_3_Steering$1955             Lab3_3_Steering
-C:   0000042F  A$Lab3_3_Steering$1959             Lab3_3_Steering
+C:   0000042D  A$Lab3_3_Steering$1954             Lab3_3_Steering
+C:   0000042F  A$Lab3_3_Steering$1958             Lab3_3_Steering
 C:   0000042F  C$i2c.h$220$1$92                   Lab3_3_Steering
 C:   0000042F  XG$i2c_write_and_stop$0$0          Lab3_3_Steering
-C:   00000430  A$Lab3_3_Steering$1975             Lab3_3_Steering
+C:   00000430  A$Lab3_3_Steering$1974             Lab3_3_Steering
 C:   00000430  C$i2c.h$223$1$92                   Lab3_3_Steering
 C:   00000430  C$i2c.h$226$1$94                   Lab3_3_Steering
 C:   00000430  G$i2c_read$0$0                     Lab3_3_Steering
@@ -1663,474 +1665,474 @@ Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000D8    00000DB0 =        3504. bytes (REL,CON,CODE)
+CSEG                                000000D8    00000DF9 =        3577. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
 C:   00000430  _i2c_read                          Lab3_3_Steering
-C:   00000433  A$Lab3_3_Steering$1978             Lab3_3_Steering
+C:   00000433  A$Lab3_3_Steering$1977             Lab3_3_Steering
 C:   00000433  C$i2c.h$227$1$94                   Lab3_3_Steering
-C:   00000436  A$Lab3_3_Steering$1981             Lab3_3_Steering
+C:   00000436  A$Lab3_3_Steering$1980             Lab3_3_Steering
 C:   00000436  C$i2c.h$228$1$94                   Lab3_3_Steering
-C:   00000438  A$Lab3_3_Steering$1986             Lab3_3_Steering
+C:   00000438  A$Lab3_3_Steering$1985             Lab3_3_Steering
 C:   00000438  C$i2c.h$229$1$94                   Lab3_3_Steering
 C:   00000438  C$i2c.h$230$1$94                   Lab3_3_Steering
 C:   00000438  XG$i2c_read$0$0                    Lab3_3_Steering
-C:   00000439  A$Lab3_3_Steering$2002             Lab3_3_Steering
+C:   00000439  A$Lab3_3_Steering$2001             Lab3_3_Steering
 C:   00000439  C$i2c.h$233$1$94                   Lab3_3_Steering
 C:   00000439  C$i2c.h$236$1$96                   Lab3_3_Steering
 C:   00000439  G$i2c_read_and_stop$0$0            Lab3_3_Steering
 C:   00000439  _i2c_read_and_stop                 Lab3_3_Steering
-C:   0000043C  A$Lab3_3_Steering$2005             Lab3_3_Steering
+C:   0000043C  A$Lab3_3_Steering$2004             Lab3_3_Steering
 C:   0000043C  C$i2c.h$237$1$96                   Lab3_3_Steering
-C:   0000043E  A$Lab3_3_Steering$2008             Lab3_3_Steering
+C:   0000043E  A$Lab3_3_Steering$2007             Lab3_3_Steering
 C:   0000043E  C$i2c.h$238$1$96                   Lab3_3_Steering
-C:   00000440  A$Lab3_3_Steering$2011             Lab3_3_Steering
+C:   00000440  A$Lab3_3_Steering$2010             Lab3_3_Steering
 C:   00000440  C$i2c.h$239$1$96                   Lab3_3_Steering
-C:   00000442  A$Lab3_3_Steering$2017             Lab3_3_Steering
+C:   00000442  A$Lab3_3_Steering$2016             Lab3_3_Steering
 C:   00000442  C$i2c.h$240$1$96                   Lab3_3_Steering
 C:   00000442  C$i2c.h$241$1$96                   Lab3_3_Steering
-C:   00000445  A$Lab3_3_Steering$2018             Lab3_3_Steering
-C:   00000447  A$Lab3_3_Steering$2022             Lab3_3_Steering
+C:   00000445  A$Lab3_3_Steering$2017             Lab3_3_Steering
+C:   00000447  A$Lab3_3_Steering$2021             Lab3_3_Steering
 C:   00000447  C$i2c.h$242$1$96                   Lab3_3_Steering
-C:   00000449  A$Lab3_3_Steering$2025             Lab3_3_Steering
+C:   00000449  A$Lab3_3_Steering$2024             Lab3_3_Steering
 C:   00000449  C$i2c.h$243$1$96                   Lab3_3_Steering
 C:   00000449  XG$i2c_read_and_stop$0$0           Lab3_3_Steering
-C:   0000044A  A$Lab3_3_Steering$2042             Lab3_3_Steering
+C:   0000044A  A$Lab3_3_Steering$2041             Lab3_3_Steering
 C:   0000044A  C$i2c.h$246$1$96                   Lab3_3_Steering
 C:   0000044A  G$i2c_write_data$0$0               Lab3_3_Steering
 C:   0000044A  _i2c_write_data                    Lab3_3_Steering
-C:   0000044C  A$Lab3_3_Steering$2045             Lab3_3_Steering
+C:   0000044C  A$Lab3_3_Steering$2044             Lab3_3_Steering
 C:   0000044C  C$i2c.h$250$1$98                   Lab3_3_Steering
-C:   0000044E  A$Lab3_3_Steering$2046             Lab3_3_Steering
-C:   00000451  A$Lab3_3_Steering$2047             Lab3_3_Steering
-C:   00000453  A$Lab3_3_Steering$2050             Lab3_3_Steering
+C:   0000044E  A$Lab3_3_Steering$2045             Lab3_3_Steering
+C:   00000451  A$Lab3_3_Steering$2046             Lab3_3_Steering
+C:   00000453  A$Lab3_3_Steering$2049             Lab3_3_Steering
 C:   00000453  C$i2c.h$251$1$98                   Lab3_3_Steering
-C:   00000455  A$Lab3_3_Steering$2051             Lab3_3_Steering
-C:   00000456  A$Lab3_3_Steering$2052             Lab3_3_Steering
-C:   00000458  A$Lab3_3_Steering$2053             Lab3_3_Steering
-C:   0000045B  A$Lab3_3_Steering$2056             Lab3_3_Steering
+C:   00000455  A$Lab3_3_Steering$2050             Lab3_3_Steering
+C:   00000456  A$Lab3_3_Steering$2051             Lab3_3_Steering
+C:   00000458  A$Lab3_3_Steering$2052             Lab3_3_Steering
+C:   0000045B  A$Lab3_3_Steering$2055             Lab3_3_Steering
 C:   0000045B  C$i2c.h$252$1$98                   Lab3_3_Steering
-C:   0000045E  A$Lab3_3_Steering$2057             Lab3_3_Steering
-C:   00000461  A$Lab3_3_Steering$2060             Lab3_3_Steering
-C:   00000463  A$Lab3_3_Steering$2062             Lab3_3_Steering
-C:   00000465  A$Lab3_3_Steering$2063             Lab3_3_Steering
-C:   00000467  A$Lab3_3_Steering$2064             Lab3_3_Steering
-C:   00000468  A$Lab3_3_Steering$2065             Lab3_3_Steering
-C:   0000046B  A$Lab3_3_Steering$2066             Lab3_3_Steering
+C:   0000045E  A$Lab3_3_Steering$2056             Lab3_3_Steering
+C:   00000461  A$Lab3_3_Steering$2059             Lab3_3_Steering
+C:   00000463  A$Lab3_3_Steering$2061             Lab3_3_Steering
+C:   00000465  A$Lab3_3_Steering$2062             Lab3_3_Steering
+C:   00000467  A$Lab3_3_Steering$2063             Lab3_3_Steering
+C:   00000468  A$Lab3_3_Steering$2064             Lab3_3_Steering
+C:   0000046B  A$Lab3_3_Steering$2065             Lab3_3_Steering
 ASxxxx Linker V03.00 + NoICE + sdld,  page 41.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000D8    00000DB0 =        3504. bytes (REL,CON,CODE)
+CSEG                                000000D8    00000DF9 =        3577. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   0000046C  A$Lab3_3_Steering$2068             Lab3_3_Steering
-C:   0000046E  A$Lab3_3_Steering$2069             Lab3_3_Steering
-C:   00000470  A$Lab3_3_Steering$2070             Lab3_3_Steering
-C:   00000471  A$Lab3_3_Steering$2071             Lab3_3_Steering
-C:   00000472  A$Lab3_3_Steering$2072             Lab3_3_Steering
-C:   00000473  A$Lab3_3_Steering$2073             Lab3_3_Steering
-C:   00000474  A$Lab3_3_Steering$2074             Lab3_3_Steering
-C:   00000476  A$Lab3_3_Steering$2075             Lab3_3_Steering
-C:   00000478  A$Lab3_3_Steering$2076             Lab3_3_Steering
-C:   0000047B  A$Lab3_3_Steering$2077             Lab3_3_Steering
-C:   0000047D  A$Lab3_3_Steering$2078             Lab3_3_Steering
-C:   0000047F  A$Lab3_3_Steering$2081             Lab3_3_Steering
+C:   0000046C  A$Lab3_3_Steering$2067             Lab3_3_Steering
+C:   0000046E  A$Lab3_3_Steering$2068             Lab3_3_Steering
+C:   00000470  A$Lab3_3_Steering$2069             Lab3_3_Steering
+C:   00000471  A$Lab3_3_Steering$2070             Lab3_3_Steering
+C:   00000472  A$Lab3_3_Steering$2071             Lab3_3_Steering
+C:   00000473  A$Lab3_3_Steering$2072             Lab3_3_Steering
+C:   00000474  A$Lab3_3_Steering$2073             Lab3_3_Steering
+C:   00000476  A$Lab3_3_Steering$2074             Lab3_3_Steering
+C:   00000478  A$Lab3_3_Steering$2075             Lab3_3_Steering
+C:   0000047B  A$Lab3_3_Steering$2076             Lab3_3_Steering
+C:   0000047D  A$Lab3_3_Steering$2077             Lab3_3_Steering
+C:   0000047F  A$Lab3_3_Steering$2080             Lab3_3_Steering
 C:   0000047F  C$i2c.h$254$1$98                   Lab3_3_Steering
-C:   00000480  A$Lab3_3_Steering$2082             Lab3_3_Steering
-C:   00000482  A$Lab3_3_Steering$2083             Lab3_3_Steering
-C:   00000483  A$Lab3_3_Steering$2084             Lab3_3_Steering
-C:   00000484  A$Lab3_3_Steering$2085             Lab3_3_Steering
-C:   00000486  A$Lab3_3_Steering$2086             Lab3_3_Steering
-C:   00000487  A$Lab3_3_Steering$2087             Lab3_3_Steering
-C:   00000489  A$Lab3_3_Steering$2088             Lab3_3_Steering
-C:   0000048B  A$Lab3_3_Steering$2089             Lab3_3_Steering
-C:   0000048D  A$Lab3_3_Steering$2090             Lab3_3_Steering
-C:   0000048F  A$Lab3_3_Steering$2091             Lab3_3_Steering
-C:   00000492  A$Lab3_3_Steering$2092             Lab3_3_Steering
-C:   00000494  A$Lab3_3_Steering$2093             Lab3_3_Steering
-C:   00000496  A$Lab3_3_Steering$2094             Lab3_3_Steering
-C:   00000499  A$Lab3_3_Steering$2095             Lab3_3_Steering
-C:   0000049B  A$Lab3_3_Steering$2098             Lab3_3_Steering
+C:   00000480  A$Lab3_3_Steering$2081             Lab3_3_Steering
+C:   00000482  A$Lab3_3_Steering$2082             Lab3_3_Steering
+C:   00000483  A$Lab3_3_Steering$2083             Lab3_3_Steering
+C:   00000484  A$Lab3_3_Steering$2084             Lab3_3_Steering
+C:   00000486  A$Lab3_3_Steering$2085             Lab3_3_Steering
+C:   00000487  A$Lab3_3_Steering$2086             Lab3_3_Steering
+C:   00000489  A$Lab3_3_Steering$2087             Lab3_3_Steering
+C:   0000048B  A$Lab3_3_Steering$2088             Lab3_3_Steering
+C:   0000048D  A$Lab3_3_Steering$2089             Lab3_3_Steering
+C:   0000048F  A$Lab3_3_Steering$2090             Lab3_3_Steering
+C:   00000492  A$Lab3_3_Steering$2091             Lab3_3_Steering
+C:   00000494  A$Lab3_3_Steering$2092             Lab3_3_Steering
+C:   00000496  A$Lab3_3_Steering$2093             Lab3_3_Steering
+C:   00000499  A$Lab3_3_Steering$2094             Lab3_3_Steering
+C:   0000049B  A$Lab3_3_Steering$2097             Lab3_3_Steering
 C:   0000049B  C$i2c.h$253$1$98                   Lab3_3_Steering
-C:   0000049C  A$Lab3_3_Steering$2099             Lab3_3_Steering
-C:   0000049E  A$Lab3_3_Steering$2103             Lab3_3_Steering
+C:   0000049C  A$Lab3_3_Steering$2098             Lab3_3_Steering
+C:   0000049E  A$Lab3_3_Steering$2102             Lab3_3_Steering
 C:   0000049E  C$i2c.h$255$1$98                   Lab3_3_Steering
-C:   000004A0  A$Lab3_3_Steering$2104             Lab3_3_Steering
-C:   000004A2  A$Lab3_3_Steering$2105             Lab3_3_Steering
-C:   000004A3  A$Lab3_3_Steering$2106             Lab3_3_Steering
-C:   000004A6  A$Lab3_3_Steering$2107             Lab3_3_Steering
-C:   000004A7  A$Lab3_3_Steering$2109             Lab3_3_Steering
-C:   000004A8  A$Lab3_3_Steering$2110             Lab3_3_Steering
-C:   000004AA  A$Lab3_3_Steering$2111             Lab3_3_Steering
-C:   000004AB  A$Lab3_3_Steering$2112             Lab3_3_Steering
-C:   000004AC  A$Lab3_3_Steering$2113             Lab3_3_Steering
-C:   000004AE  A$Lab3_3_Steering$2114             Lab3_3_Steering
-C:   000004AF  A$Lab3_3_Steering$2115             Lab3_3_Steering
-C:   000004B1  A$Lab3_3_Steering$2116             Lab3_3_Steering
-C:   000004B3  A$Lab3_3_Steering$2117             Lab3_3_Steering
-C:   000004B5  A$Lab3_3_Steering$2118             Lab3_3_Steering
-C:   000004B7  A$Lab3_3_Steering$2119             Lab3_3_Steering
-C:   000004BA  A$Lab3_3_Steering$2120             Lab3_3_Steering
-C:   000004BC  A$Lab3_3_Steering$2121             Lab3_3_Steering
-C:   000004BF  A$Lab3_3_Steering$2124             Lab3_3_Steering
+C:   000004A0  A$Lab3_3_Steering$2103             Lab3_3_Steering
+C:   000004A2  A$Lab3_3_Steering$2104             Lab3_3_Steering
+C:   000004A3  A$Lab3_3_Steering$2105             Lab3_3_Steering
+C:   000004A6  A$Lab3_3_Steering$2106             Lab3_3_Steering
+C:   000004A7  A$Lab3_3_Steering$2108             Lab3_3_Steering
+C:   000004A8  A$Lab3_3_Steering$2109             Lab3_3_Steering
+C:   000004AA  A$Lab3_3_Steering$2110             Lab3_3_Steering
+C:   000004AB  A$Lab3_3_Steering$2111             Lab3_3_Steering
+C:   000004AC  A$Lab3_3_Steering$2112             Lab3_3_Steering
+C:   000004AE  A$Lab3_3_Steering$2113             Lab3_3_Steering
+C:   000004AF  A$Lab3_3_Steering$2114             Lab3_3_Steering
+C:   000004B1  A$Lab3_3_Steering$2115             Lab3_3_Steering
+C:   000004B3  A$Lab3_3_Steering$2116             Lab3_3_Steering
+C:   000004B5  A$Lab3_3_Steering$2117             Lab3_3_Steering
+C:   000004B7  A$Lab3_3_Steering$2118             Lab3_3_Steering
+C:   000004BA  A$Lab3_3_Steering$2119             Lab3_3_Steering
+C:   000004BC  A$Lab3_3_Steering$2120             Lab3_3_Steering
+C:   000004BF  A$Lab3_3_Steering$2123             Lab3_3_Steering
 C:   000004BF  C$i2c.h$256$1$98                   Lab3_3_Steering
 ASxxxx Linker V03.00 + NoICE + sdld,  page 42.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000D8    00000DB0 =        3504. bytes (REL,CON,CODE)
+CSEG                                000000D8    00000DF9 =        3577. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
 C:   000004BF  XG$i2c_write_data$0$0              Lab3_3_Steering
-C:   000004C0  A$Lab3_3_Steering$2141             Lab3_3_Steering
+C:   000004C0  A$Lab3_3_Steering$2140             Lab3_3_Steering
 C:   000004C0  C$i2c.h$259$1$98                   Lab3_3_Steering
 C:   000004C0  G$i2c_read_data$0$0                Lab3_3_Steering
 C:   000004C0  _i2c_read_data                     Lab3_3_Steering
-C:   000004C2  A$Lab3_3_Steering$2144             Lab3_3_Steering
+C:   000004C2  A$Lab3_3_Steering$2143             Lab3_3_Steering
 C:   000004C2  C$i2c.h$262$1$100                  Lab3_3_Steering
-C:   000004C4  A$Lab3_3_Steering$2145             Lab3_3_Steering
-C:   000004C7  A$Lab3_3_Steering$2146             Lab3_3_Steering
-C:   000004C9  A$Lab3_3_Steering$2149             Lab3_3_Steering
+C:   000004C4  A$Lab3_3_Steering$2144             Lab3_3_Steering
+C:   000004C7  A$Lab3_3_Steering$2145             Lab3_3_Steering
+C:   000004C9  A$Lab3_3_Steering$2148             Lab3_3_Steering
 C:   000004C9  C$i2c.h$263$1$100                  Lab3_3_Steering
-C:   000004CB  A$Lab3_3_Steering$2150             Lab3_3_Steering
-C:   000004CD  A$Lab3_3_Steering$2151             Lab3_3_Steering
-C:   000004CE  A$Lab3_3_Steering$2152             Lab3_3_Steering
-C:   000004D0  A$Lab3_3_Steering$2153             Lab3_3_Steering
-C:   000004D2  A$Lab3_3_Steering$2154             Lab3_3_Steering
-C:   000004D5  A$Lab3_3_Steering$2157             Lab3_3_Steering
+C:   000004CB  A$Lab3_3_Steering$2149             Lab3_3_Steering
+C:   000004CD  A$Lab3_3_Steering$2150             Lab3_3_Steering
+C:   000004CE  A$Lab3_3_Steering$2151             Lab3_3_Steering
+C:   000004D0  A$Lab3_3_Steering$2152             Lab3_3_Steering
+C:   000004D2  A$Lab3_3_Steering$2153             Lab3_3_Steering
+C:   000004D5  A$Lab3_3_Steering$2156             Lab3_3_Steering
 C:   000004D5  C$i2c.h$264$1$100                  Lab3_3_Steering
-C:   000004D8  A$Lab3_3_Steering$2158             Lab3_3_Steering
-C:   000004DB  A$Lab3_3_Steering$2161             Lab3_3_Steering
+C:   000004D8  A$Lab3_3_Steering$2157             Lab3_3_Steering
+C:   000004DB  A$Lab3_3_Steering$2160             Lab3_3_Steering
 C:   000004DB  C$i2c.h$265$1$100                  Lab3_3_Steering
-C:   000004DE  A$Lab3_3_Steering$2162             Lab3_3_Steering
-C:   000004E0  A$Lab3_3_Steering$2165             Lab3_3_Steering
+C:   000004DE  A$Lab3_3_Steering$2161             Lab3_3_Steering
+C:   000004E0  A$Lab3_3_Steering$2164             Lab3_3_Steering
 C:   000004E0  C$i2c.h$266$1$100                  Lab3_3_Steering
-C:   000004E2  A$Lab3_3_Steering$2166             Lab3_3_Steering
-C:   000004E3  A$Lab3_3_Steering$2167             Lab3_3_Steering
-C:   000004E5  A$Lab3_3_Steering$2168             Lab3_3_Steering
-C:   000004E8  A$Lab3_3_Steering$2171             Lab3_3_Steering
-C:   000004EA  A$Lab3_3_Steering$2173             Lab3_3_Steering
-C:   000004EC  A$Lab3_3_Steering$2174             Lab3_3_Steering
-C:   000004EE  A$Lab3_3_Steering$2175             Lab3_3_Steering
-C:   000004EF  A$Lab3_3_Steering$2176             Lab3_3_Steering
-C:   000004F2  A$Lab3_3_Steering$2177             Lab3_3_Steering
-C:   000004F3  A$Lab3_3_Steering$2179             Lab3_3_Steering
-C:   000004F5  A$Lab3_3_Steering$2180             Lab3_3_Steering
-C:   000004F7  A$Lab3_3_Steering$2181             Lab3_3_Steering
-C:   000004F8  A$Lab3_3_Steering$2182             Lab3_3_Steering
-C:   000004F9  A$Lab3_3_Steering$2183             Lab3_3_Steering
-C:   000004FA  A$Lab3_3_Steering$2184             Lab3_3_Steering
-C:   000004FB  A$Lab3_3_Steering$2185             Lab3_3_Steering
-C:   000004FD  A$Lab3_3_Steering$2186             Lab3_3_Steering
-C:   000004FF  A$Lab3_3_Steering$2187             Lab3_3_Steering
-C:   00000502  A$Lab3_3_Steering$2188             Lab3_3_Steering
-C:   00000504  A$Lab3_3_Steering$2189             Lab3_3_Steering
-C:   00000506  A$Lab3_3_Steering$2192             Lab3_3_Steering
+C:   000004E2  A$Lab3_3_Steering$2165             Lab3_3_Steering
+C:   000004E3  A$Lab3_3_Steering$2166             Lab3_3_Steering
+C:   000004E5  A$Lab3_3_Steering$2167             Lab3_3_Steering
+C:   000004E8  A$Lab3_3_Steering$2170             Lab3_3_Steering
+C:   000004EA  A$Lab3_3_Steering$2172             Lab3_3_Steering
+C:   000004EC  A$Lab3_3_Steering$2173             Lab3_3_Steering
+C:   000004EE  A$Lab3_3_Steering$2174             Lab3_3_Steering
+C:   000004EF  A$Lab3_3_Steering$2175             Lab3_3_Steering
+C:   000004F2  A$Lab3_3_Steering$2176             Lab3_3_Steering
+C:   000004F3  A$Lab3_3_Steering$2178             Lab3_3_Steering
+C:   000004F5  A$Lab3_3_Steering$2179             Lab3_3_Steering
+C:   000004F7  A$Lab3_3_Steering$2180             Lab3_3_Steering
+C:   000004F8  A$Lab3_3_Steering$2181             Lab3_3_Steering
+C:   000004F9  A$Lab3_3_Steering$2182             Lab3_3_Steering
+C:   000004FA  A$Lab3_3_Steering$2183             Lab3_3_Steering
+C:   000004FB  A$Lab3_3_Steering$2184             Lab3_3_Steering
+C:   000004FD  A$Lab3_3_Steering$2185             Lab3_3_Steering
+C:   000004FF  A$Lab3_3_Steering$2186             Lab3_3_Steering
+C:   00000502  A$Lab3_3_Steering$2187             Lab3_3_Steering
+C:   00000504  A$Lab3_3_Steering$2188             Lab3_3_Steering
+C:   00000506  A$Lab3_3_Steering$2191             Lab3_3_Steering
 C:   00000506  C$i2c.h$269$2$101                  Lab3_3_Steering
-C:   00000508  A$Lab3_3_Steering$2195             Lab3_3_Steering
+C:   00000508  A$Lab3_3_Steering$2194             Lab3_3_Steering
 C:   00000508  C$i2c.h$270$2$101                  Lab3_3_Steering
-C:   00000509  A$Lab3_3_Steering$2196             Lab3_3_Steering
-C:   0000050B  A$Lab3_3_Steering$2197             Lab3_3_Steering
-C:   0000050C  A$Lab3_3_Steering$2198             Lab3_3_Steering
+C:   00000509  A$Lab3_3_Steering$2195             Lab3_3_Steering
+C:   0000050B  A$Lab3_3_Steering$2196             Lab3_3_Steering
+C:   0000050C  A$Lab3_3_Steering$2197             Lab3_3_Steering
 ASxxxx Linker V03.00 + NoICE + sdld,  page 43.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000D8    00000DB0 =        3504. bytes (REL,CON,CODE)
+CSEG                                000000D8    00000DF9 =        3577. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   0000050D  A$Lab3_3_Steering$2199             Lab3_3_Steering
-C:   0000050F  A$Lab3_3_Steering$2200             Lab3_3_Steering
-C:   00000510  A$Lab3_3_Steering$2201             Lab3_3_Steering
-C:   00000512  A$Lab3_3_Steering$2202             Lab3_3_Steering
-C:   00000514  A$Lab3_3_Steering$2203             Lab3_3_Steering
-C:   00000516  A$Lab3_3_Steering$2204             Lab3_3_Steering
-C:   00000518  A$Lab3_3_Steering$2205             Lab3_3_Steering
-C:   0000051A  A$Lab3_3_Steering$2206             Lab3_3_Steering
-C:   0000051D  A$Lab3_3_Steering$2207             Lab3_3_Steering
-C:   0000051F  A$Lab3_3_Steering$2208             Lab3_3_Steering
-C:   00000521  A$Lab3_3_Steering$2209             Lab3_3_Steering
-C:   00000523  A$Lab3_3_Steering$2210             Lab3_3_Steering
-C:   00000525  A$Lab3_3_Steering$2211             Lab3_3_Steering
-C:   00000527  A$Lab3_3_Steering$2212             Lab3_3_Steering
-C:   00000529  A$Lab3_3_Steering$2213             Lab3_3_Steering
-C:   0000052B  A$Lab3_3_Steering$2214             Lab3_3_Steering
-C:   0000052D  A$Lab3_3_Steering$2215             Lab3_3_Steering
-C:   0000052E  A$Lab3_3_Steering$2216             Lab3_3_Steering
-C:   00000531  A$Lab3_3_Steering$2219             Lab3_3_Steering
+C:   0000050D  A$Lab3_3_Steering$2198             Lab3_3_Steering
+C:   0000050F  A$Lab3_3_Steering$2199             Lab3_3_Steering
+C:   00000510  A$Lab3_3_Steering$2200             Lab3_3_Steering
+C:   00000512  A$Lab3_3_Steering$2201             Lab3_3_Steering
+C:   00000514  A$Lab3_3_Steering$2202             Lab3_3_Steering
+C:   00000516  A$Lab3_3_Steering$2203             Lab3_3_Steering
+C:   00000518  A$Lab3_3_Steering$2204             Lab3_3_Steering
+C:   0000051A  A$Lab3_3_Steering$2205             Lab3_3_Steering
+C:   0000051D  A$Lab3_3_Steering$2206             Lab3_3_Steering
+C:   0000051F  A$Lab3_3_Steering$2207             Lab3_3_Steering
+C:   00000521  A$Lab3_3_Steering$2208             Lab3_3_Steering
+C:   00000523  A$Lab3_3_Steering$2209             Lab3_3_Steering
+C:   00000525  A$Lab3_3_Steering$2210             Lab3_3_Steering
+C:   00000527  A$Lab3_3_Steering$2211             Lab3_3_Steering
+C:   00000529  A$Lab3_3_Steering$2212             Lab3_3_Steering
+C:   0000052B  A$Lab3_3_Steering$2213             Lab3_3_Steering
+C:   0000052D  A$Lab3_3_Steering$2214             Lab3_3_Steering
+C:   0000052E  A$Lab3_3_Steering$2215             Lab3_3_Steering
+C:   00000531  A$Lab3_3_Steering$2218             Lab3_3_Steering
 C:   00000531  C$i2c.h$267$1$100                  Lab3_3_Steering
-C:   00000532  A$Lab3_3_Steering$2220             Lab3_3_Steering
-C:   00000534  A$Lab3_3_Steering$2224             Lab3_3_Steering
+C:   00000532  A$Lab3_3_Steering$2219             Lab3_3_Steering
+C:   00000534  A$Lab3_3_Steering$2223             Lab3_3_Steering
 C:   00000534  C$i2c.h$272$1$100                  Lab3_3_Steering
-C:   00000536  A$Lab3_3_Steering$2227             Lab3_3_Steering
+C:   00000536  A$Lab3_3_Steering$2226             Lab3_3_Steering
 C:   00000536  C$i2c.h$273$1$100                  Lab3_3_Steering
-C:   00000538  A$Lab3_3_Steering$2228             Lab3_3_Steering
-C:   0000053A  A$Lab3_3_Steering$2229             Lab3_3_Steering
-C:   0000053B  A$Lab3_3_Steering$2230             Lab3_3_Steering
-C:   0000053E  A$Lab3_3_Steering$2231             Lab3_3_Steering
-C:   0000053F  A$Lab3_3_Steering$2233             Lab3_3_Steering
-C:   00000540  A$Lab3_3_Steering$2234             Lab3_3_Steering
-C:   00000542  A$Lab3_3_Steering$2235             Lab3_3_Steering
-C:   00000543  A$Lab3_3_Steering$2236             Lab3_3_Steering
-C:   00000544  A$Lab3_3_Steering$2237             Lab3_3_Steering
-C:   00000546  A$Lab3_3_Steering$2238             Lab3_3_Steering
-C:   00000547  A$Lab3_3_Steering$2239             Lab3_3_Steering
-C:   00000549  A$Lab3_3_Steering$2240             Lab3_3_Steering
-C:   0000054B  A$Lab3_3_Steering$2241             Lab3_3_Steering
-C:   0000054D  A$Lab3_3_Steering$2242             Lab3_3_Steering
-C:   0000054F  A$Lab3_3_Steering$2243             Lab3_3_Steering
-C:   00000552  A$Lab3_3_Steering$2244             Lab3_3_Steering
-C:   00000554  A$Lab3_3_Steering$2245             Lab3_3_Steering
-C:   00000556  A$Lab3_3_Steering$2246             Lab3_3_Steering
-C:   00000558  A$Lab3_3_Steering$2247             Lab3_3_Steering
-C:   0000055A  A$Lab3_3_Steering$2248             Lab3_3_Steering
-C:   0000055C  A$Lab3_3_Steering$2249             Lab3_3_Steering
-C:   0000055E  A$Lab3_3_Steering$2250             Lab3_3_Steering
-C:   00000560  A$Lab3_3_Steering$2251             Lab3_3_Steering
-C:   00000561  A$Lab3_3_Steering$2252             Lab3_3_Steering
-C:   00000564  A$Lab3_3_Steering$2255             Lab3_3_Steering
+C:   00000538  A$Lab3_3_Steering$2227             Lab3_3_Steering
+C:   0000053A  A$Lab3_3_Steering$2228             Lab3_3_Steering
+C:   0000053B  A$Lab3_3_Steering$2229             Lab3_3_Steering
+C:   0000053E  A$Lab3_3_Steering$2230             Lab3_3_Steering
+C:   0000053F  A$Lab3_3_Steering$2232             Lab3_3_Steering
+C:   00000540  A$Lab3_3_Steering$2233             Lab3_3_Steering
+C:   00000542  A$Lab3_3_Steering$2234             Lab3_3_Steering
+C:   00000543  A$Lab3_3_Steering$2235             Lab3_3_Steering
+C:   00000544  A$Lab3_3_Steering$2236             Lab3_3_Steering
+C:   00000546  A$Lab3_3_Steering$2237             Lab3_3_Steering
+C:   00000547  A$Lab3_3_Steering$2238             Lab3_3_Steering
+C:   00000549  A$Lab3_3_Steering$2239             Lab3_3_Steering
+C:   0000054B  A$Lab3_3_Steering$2240             Lab3_3_Steering
+C:   0000054D  A$Lab3_3_Steering$2241             Lab3_3_Steering
+C:   0000054F  A$Lab3_3_Steering$2242             Lab3_3_Steering
+C:   00000552  A$Lab3_3_Steering$2243             Lab3_3_Steering
+C:   00000554  A$Lab3_3_Steering$2244             Lab3_3_Steering
+C:   00000556  A$Lab3_3_Steering$2245             Lab3_3_Steering
+C:   00000558  A$Lab3_3_Steering$2246             Lab3_3_Steering
+C:   0000055A  A$Lab3_3_Steering$2247             Lab3_3_Steering
+C:   0000055C  A$Lab3_3_Steering$2248             Lab3_3_Steering
+C:   0000055E  A$Lab3_3_Steering$2249             Lab3_3_Steering
+C:   00000560  A$Lab3_3_Steering$2250             Lab3_3_Steering
+C:   00000561  A$Lab3_3_Steering$2251             Lab3_3_Steering
+C:   00000564  A$Lab3_3_Steering$2254             Lab3_3_Steering
 C:   00000564  C$i2c.h$274$1$100                  Lab3_3_Steering
 ASxxxx Linker V03.00 + NoICE + sdld,  page 44.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000D8    00000DB0 =        3504. bytes (REL,CON,CODE)
+CSEG                                000000D8    00000DF9 =        3577. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
 C:   00000564  XG$i2c_read_data$0$0               Lab3_3_Steering
-C:   00000565  A$Lab3_3_Steering$2270             Lab3_3_Steering
+C:   00000565  A$Lab3_3_Steering$2269             Lab3_3_Steering
 C:   00000565  C$i2c.h$283$1$100                  Lab3_3_Steering
 C:   00000565  C$i2c.h$287$1$103                  Lab3_3_Steering
 C:   00000565  G$Accel_Init$0$0                   Lab3_3_Steering
 C:   00000565  _Accel_Init                        Lab3_3_Steering
-C:   00000568  A$Lab3_3_Steering$2273             Lab3_3_Steering
+C:   00000568  A$Lab3_3_Steering$2272             Lab3_3_Steering
 C:   00000568  C$i2c.h$289$1$103                  Lab3_3_Steering
-C:   0000056B  A$Lab3_3_Steering$2274             Lab3_3_Steering
-C:   0000056E  A$Lab3_3_Steering$2275             Lab3_3_Steering
-C:   00000571  A$Lab3_3_Steering$2276             Lab3_3_Steering
-C:   00000574  A$Lab3_3_Steering$2277             Lab3_3_Steering
-C:   00000577  A$Lab3_3_Steering$2278             Lab3_3_Steering
-C:   0000057A  A$Lab3_3_Steering$2279             Lab3_3_Steering
-C:   0000057D  A$Lab3_3_Steering$2282             Lab3_3_Steering
+C:   0000056B  A$Lab3_3_Steering$2273             Lab3_3_Steering
+C:   0000056E  A$Lab3_3_Steering$2274             Lab3_3_Steering
+C:   00000571  A$Lab3_3_Steering$2275             Lab3_3_Steering
+C:   00000574  A$Lab3_3_Steering$2276             Lab3_3_Steering
+C:   00000577  A$Lab3_3_Steering$2277             Lab3_3_Steering
+C:   0000057A  A$Lab3_3_Steering$2278             Lab3_3_Steering
+C:   0000057D  A$Lab3_3_Steering$2281             Lab3_3_Steering
 C:   0000057D  C$i2c.h$290$1$103                  Lab3_3_Steering
-C:   00000580  A$Lab3_3_Steering$2285             Lab3_3_Steering
+C:   00000580  A$Lab3_3_Steering$2284             Lab3_3_Steering
 C:   00000580  C$i2c.h$292$1$103                  Lab3_3_Steering
-C:   00000583  A$Lab3_3_Steering$2286             Lab3_3_Steering
-C:   00000586  A$Lab3_3_Steering$2287             Lab3_3_Steering
-C:   00000589  A$Lab3_3_Steering$2288             Lab3_3_Steering
-C:   0000058C  A$Lab3_3_Steering$2289             Lab3_3_Steering
-C:   0000058F  A$Lab3_3_Steering$2290             Lab3_3_Steering
-C:   00000592  A$Lab3_3_Steering$2291             Lab3_3_Steering
-C:   00000595  A$Lab3_3_Steering$2294             Lab3_3_Steering
+C:   00000583  A$Lab3_3_Steering$2285             Lab3_3_Steering
+C:   00000586  A$Lab3_3_Steering$2286             Lab3_3_Steering
+C:   00000589  A$Lab3_3_Steering$2287             Lab3_3_Steering
+C:   0000058C  A$Lab3_3_Steering$2288             Lab3_3_Steering
+C:   0000058F  A$Lab3_3_Steering$2289             Lab3_3_Steering
+C:   00000592  A$Lab3_3_Steering$2290             Lab3_3_Steering
+C:   00000595  A$Lab3_3_Steering$2293             Lab3_3_Steering
 C:   00000595  C$i2c.h$293$1$103                  Lab3_3_Steering
-C:   00000598  A$Lab3_3_Steering$2297             Lab3_3_Steering
+C:   00000598  A$Lab3_3_Steering$2296             Lab3_3_Steering
 C:   00000598  C$i2c.h$294$1$103                  Lab3_3_Steering
-C:   0000059B  A$Lab3_3_Steering$2298             Lab3_3_Steering
-C:   0000059E  A$Lab3_3_Steering$2299             Lab3_3_Steering
-C:   000005A1  A$Lab3_3_Steering$2300             Lab3_3_Steering
-C:   000005A4  A$Lab3_3_Steering$2301             Lab3_3_Steering
-C:   000005A7  A$Lab3_3_Steering$2302             Lab3_3_Steering
-C:   000005AA  A$Lab3_3_Steering$2303             Lab3_3_Steering
-C:   000005AD  A$Lab3_3_Steering$2306             Lab3_3_Steering
+C:   0000059B  A$Lab3_3_Steering$2297             Lab3_3_Steering
+C:   0000059E  A$Lab3_3_Steering$2298             Lab3_3_Steering
+C:   000005A1  A$Lab3_3_Steering$2299             Lab3_3_Steering
+C:   000005A4  A$Lab3_3_Steering$2300             Lab3_3_Steering
+C:   000005A7  A$Lab3_3_Steering$2301             Lab3_3_Steering
+C:   000005AA  A$Lab3_3_Steering$2302             Lab3_3_Steering
+C:   000005AD  A$Lab3_3_Steering$2305             Lab3_3_Steering
 C:   000005AD  C$i2c.h$298$1$103                  Lab3_3_Steering
 C:   000005AD  XG$Accel_Init$0$0                  Lab3_3_Steering
-C:   000005AE  A$Lab3_3_Steering$2319             Lab3_3_Steering
+C:   000005AE  A$Lab3_3_Steering$2318             Lab3_3_Steering
 C:   000005AE  C$Lab3_3_Steering.c$44$1$103       Lab3_3_Steering
 C:   000005AE  C$Lab3_3_Steering.c$47$1$113       Lab3_3_Steering
 C:   000005AE  G$main$0$0                         Lab3_3_Steering
 C:   000005AE  _main                              Lab3_3_Steering
-C:   000005B1  A$Lab3_3_Steering$2322             Lab3_3_Steering
+C:   000005B1  A$Lab3_3_Steering$2321             Lab3_3_Steering
 C:   000005B1  C$Lab3_3_Steering.c$48$1$113       Lab3_3_Steering
-C:   000005B4  A$Lab3_3_Steering$2323             Lab3_3_Steering
-C:   000005B7  A$Lab3_3_Steering$2326             Lab3_3_Steering
+C:   000005B4  A$Lab3_3_Steering$2322             Lab3_3_Steering
+C:   000005B7  A$Lab3_3_Steering$2325             Lab3_3_Steering
 C:   000005B7  C$Lab3_3_Steering.c$49$1$113       Lab3_3_Steering
-C:   000005BA  A$Lab3_3_Steering$2329             Lab3_3_Steering
+C:   000005BA  A$Lab3_3_Steering$2328             Lab3_3_Steering
 C:   000005BA  C$Lab3_3_Steering.c$50$1$113       Lab3_3_Steering
-C:   000005BD  A$Lab3_3_Steering$2332             Lab3_3_Steering
+C:   000005BD  A$Lab3_3_Steering$2331             Lab3_3_Steering
 C:   000005BD  C$Lab3_3_Steering.c$51$1$113       Lab3_3_Steering
 ASxxxx Linker V03.00 + NoICE + sdld,  page 45.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000D8    00000DB0 =        3504. bytes (REL,CON,CODE)
+CSEG                                000000D8    00000DF9 =        3577. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   000005C0  A$Lab3_3_Steering$2335             Lab3_3_Steering
+C:   000005C0  A$Lab3_3_Steering$2334             Lab3_3_Steering
 C:   000005C0  C$Lab3_3_Steering.c$52$1$113       Lab3_3_Steering
-C:   000005C3  A$Lab3_3_Steering$2338             Lab3_3_Steering
+C:   000005C3  A$Lab3_3_Steering$2337             Lab3_3_Steering
 C:   000005C3  C$Lab3_3_Steering.c$54$1$113       Lab3_3_Steering
-C:   000005C5  A$Lab3_3_Steering$2339             Lab3_3_Steering
-C:   000005C7  A$Lab3_3_Steering$2340             Lab3_3_Steering
-C:   000005C9  A$Lab3_3_Steering$2341             Lab3_3_Steering
-C:   000005CB  A$Lab3_3_Steering$2342             Lab3_3_Steering
-C:   000005CD  A$Lab3_3_Steering$2343             Lab3_3_Steering
-C:   000005CF  A$Lab3_3_Steering$2344             Lab3_3_Steering
-C:   000005D2  A$Lab3_3_Steering$2345             Lab3_3_Steering
-C:   000005D4  A$Lab3_3_Steering$2346             Lab3_3_Steering
-C:   000005D6  A$Lab3_3_Steering$2347             Lab3_3_Steering
-C:   000005D8  A$Lab3_3_Steering$2350             Lab3_3_Steering
+C:   000005C5  A$Lab3_3_Steering$2338             Lab3_3_Steering
+C:   000005C7  A$Lab3_3_Steering$2339             Lab3_3_Steering
+C:   000005C9  A$Lab3_3_Steering$2340             Lab3_3_Steering
+C:   000005CB  A$Lab3_3_Steering$2341             Lab3_3_Steering
+C:   000005CD  A$Lab3_3_Steering$2342             Lab3_3_Steering
+C:   000005CF  A$Lab3_3_Steering$2343             Lab3_3_Steering
+C:   000005D2  A$Lab3_3_Steering$2344             Lab3_3_Steering
+C:   000005D4  A$Lab3_3_Steering$2345             Lab3_3_Steering
+C:   000005D6  A$Lab3_3_Steering$2346             Lab3_3_Steering
+C:   000005D8  A$Lab3_3_Steering$2349             Lab3_3_Steering
 C:   000005D8  C$Lab3_3_Steering.c$55$1$113       Lab3_3_Steering
-C:   000005DB  A$Lab3_3_Steering$2351             Lab3_3_Steering
-C:   000005DE  A$Lab3_3_Steering$2354             Lab3_3_Steering
+C:   000005DB  A$Lab3_3_Steering$2350             Lab3_3_Steering
+C:   000005DE  A$Lab3_3_Steering$2353             Lab3_3_Steering
 C:   000005DE  C$Lab3_3_Steering.c$56$1$113       Lab3_3_Steering
-C:   000005E0  A$Lab3_3_Steering$2355             Lab3_3_Steering
-C:   000005E2  A$Lab3_3_Steering$2356             Lab3_3_Steering
-C:   000005E3  A$Lab3_3_Steering$2357             Lab3_3_Steering
-C:   000005E4  A$Lab3_3_Steering$2358             Lab3_3_Steering
-C:   000005E5  A$Lab3_3_Steering$2359             Lab3_3_Steering
-C:   000005E7  A$Lab3_3_Steering$2360             Lab3_3_Steering
-C:   000005E8  A$Lab3_3_Steering$2361             Lab3_3_Steering
-C:   000005E9  A$Lab3_3_Steering$2362             Lab3_3_Steering
-C:   000005EA  A$Lab3_3_Steering$2363             Lab3_3_Steering
-C:   000005EC  A$Lab3_3_Steering$2364             Lab3_3_Steering
-C:   000005ED  A$Lab3_3_Steering$2365             Lab3_3_Steering
-C:   000005EE  A$Lab3_3_Steering$2366             Lab3_3_Steering
-C:   000005EF  A$Lab3_3_Steering$2367             Lab3_3_Steering
-C:   000005F0  A$Lab3_3_Steering$2368             Lab3_3_Steering
-C:   000005F1  A$Lab3_3_Steering$2369             Lab3_3_Steering
-C:   000005F2  A$Lab3_3_Steering$2370             Lab3_3_Steering
-C:   000005F3  A$Lab3_3_Steering$2371             Lab3_3_Steering
-C:   000005F4  A$Lab3_3_Steering$2372             Lab3_3_Steering
-C:   000005F6  A$Lab3_3_Steering$2373             Lab3_3_Steering
-C:   000005F8  A$Lab3_3_Steering$2379             Lab3_3_Steering
+C:   000005E0  A$Lab3_3_Steering$2354             Lab3_3_Steering
+C:   000005E2  A$Lab3_3_Steering$2355             Lab3_3_Steering
+C:   000005E3  A$Lab3_3_Steering$2356             Lab3_3_Steering
+C:   000005E4  A$Lab3_3_Steering$2357             Lab3_3_Steering
+C:   000005E5  A$Lab3_3_Steering$2358             Lab3_3_Steering
+C:   000005E7  A$Lab3_3_Steering$2359             Lab3_3_Steering
+C:   000005E8  A$Lab3_3_Steering$2360             Lab3_3_Steering
+C:   000005E9  A$Lab3_3_Steering$2361             Lab3_3_Steering
+C:   000005EA  A$Lab3_3_Steering$2362             Lab3_3_Steering
+C:   000005EC  A$Lab3_3_Steering$2363             Lab3_3_Steering
+C:   000005ED  A$Lab3_3_Steering$2364             Lab3_3_Steering
+C:   000005EE  A$Lab3_3_Steering$2365             Lab3_3_Steering
+C:   000005EF  A$Lab3_3_Steering$2366             Lab3_3_Steering
+C:   000005F0  A$Lab3_3_Steering$2367             Lab3_3_Steering
+C:   000005F1  A$Lab3_3_Steering$2368             Lab3_3_Steering
+C:   000005F2  A$Lab3_3_Steering$2369             Lab3_3_Steering
+C:   000005F3  A$Lab3_3_Steering$2370             Lab3_3_Steering
+C:   000005F4  A$Lab3_3_Steering$2371             Lab3_3_Steering
+C:   000005F6  A$Lab3_3_Steering$2372             Lab3_3_Steering
+C:   000005F8  A$Lab3_3_Steering$2378             Lab3_3_Steering
 C:   000005F8  C$Lab3_3_Steering.c$57$1$113       Lab3_3_Steering
 C:   000005F8  C$Lab3_3_Steering.c$59$2$114       Lab3_3_Steering
-C:   000005FB  A$Lab3_3_Steering$2380             Lab3_3_Steering
-C:   000005FD  A$Lab3_3_Steering$2383             Lab3_3_Steering
+C:   000005FB  A$Lab3_3_Steering$2379             Lab3_3_Steering
+C:   000005FD  A$Lab3_3_Steering$2382             Lab3_3_Steering
 C:   000005FD  C$Lab3_3_Steering.c$61$1$113       Lab3_3_Steering
 C:   000005FD  XG$main$0$0                        Lab3_3_Steering
-C:   000005FE  A$Lab3_3_Steering$2396             Lab3_3_Steering
+C:   000005FE  A$Lab3_3_Steering$2395             Lab3_3_Steering
 C:   000005FE  C$Lab3_3_Steering.c$67$1$113       Lab3_3_Steering
 C:   000005FE  C$Lab3_3_Steering.c$69$1$115       Lab3_3_Steering
 C:   000005FE  G$Port_Init$0$0                    Lab3_3_Steering
 C:   000005FE  _Port_Init                         Lab3_3_Steering
-C:   00000601  A$Lab3_3_Steering$2399             Lab3_3_Steering
+C:   00000601  A$Lab3_3_Steering$2398             Lab3_3_Steering
 C:   00000601  C$Lab3_3_Steering.c$73$1$115       Lab3_3_Steering
 ASxxxx Linker V03.00 + NoICE + sdld,  page 46.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000D8    00000DB0 =        3504. bytes (REL,CON,CODE)
+CSEG                                000000D8    00000DF9 =        3577. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
 C:   00000601  XG$Port_Init$0$0                   Lab3_3_Steering
-C:   00000602  A$Lab3_3_Steering$2412             Lab3_3_Steering
+C:   00000602  A$Lab3_3_Steering$2411             Lab3_3_Steering
 C:   00000602  C$Lab3_3_Steering.c$78$1$115       Lab3_3_Steering
 C:   00000602  C$Lab3_3_Steering.c$80$1$117       Lab3_3_Steering
 C:   00000602  G$XBR0_Init$0$0                    Lab3_3_Steering
 C:   00000602  _XBR0_Init                         Lab3_3_Steering
-C:   00000605  A$Lab3_3_Steering$2415             Lab3_3_Steering
+C:   00000605  A$Lab3_3_Steering$2414             Lab3_3_Steering
 C:   00000605  C$Lab3_3_Steering.c$81$1$117       Lab3_3_Steering
 C:   00000605  XG$XBR0_Init$0$0                   Lab3_3_Steering
-C:   00000606  A$Lab3_3_Steering$2428             Lab3_3_Steering
+C:   00000606  A$Lab3_3_Steering$2427             Lab3_3_Steering
 C:   00000606  C$Lab3_3_Steering.c$85$1$117       Lab3_3_Steering
 C:   00000606  C$Lab3_3_Steering.c$87$1$119       Lab3_3_Steering
 C:   00000606  G$SMB_Init$0$0                     Lab3_3_Steering
 C:   00000606  _SMB_Init                          Lab3_3_Steering
-C:   00000609  A$Lab3_3_Steering$2431             Lab3_3_Steering
+C:   00000609  A$Lab3_3_Steering$2430             Lab3_3_Steering
 C:   00000609  C$Lab3_3_Steering.c$88$1$119       Lab3_3_Steering
-C:   0000060B  A$Lab3_3_Steering$2434             Lab3_3_Steering
+C:   0000060B  A$Lab3_3_Steering$2433             Lab3_3_Steering
 C:   0000060B  C$Lab3_3_Steering.c$89$1$119       Lab3_3_Steering
 C:   0000060B  XG$SMB_Init$0$0                    Lab3_3_Steering
-C:   0000060C  A$Lab3_3_Steering$2447             Lab3_3_Steering
+C:   0000060C  A$Lab3_3_Steering$2446             Lab3_3_Steering
 C:   0000060C  C$Lab3_3_Steering.c$92$1$119       Lab3_3_Steering
 C:   0000060C  C$Lab3_3_Steering.c$94$1$121       Lab3_3_Steering
 C:   0000060C  G$PCA_Init$0$0                     Lab3_3_Steering
 C:   0000060C  _PCA_Init                          Lab3_3_Steering
-C:   0000060F  A$Lab3_3_Steering$2450             Lab3_3_Steering
+C:   0000060F  A$Lab3_3_Steering$2449             Lab3_3_Steering
 C:   0000060F  C$Lab3_3_Steering.c$95$1$121       Lab3_3_Steering
-C:   00000612  A$Lab3_3_Steering$2453             Lab3_3_Steering
+C:   00000612  A$Lab3_3_Steering$2452             Lab3_3_Steering
 C:   00000612  C$Lab3_3_Steering.c$96$1$121       Lab3_3_Steering
-C:   00000615  A$Lab3_3_Steering$2456             Lab3_3_Steering
+C:   00000615  A$Lab3_3_Steering$2455             Lab3_3_Steering
 C:   00000615  C$Lab3_3_Steering.c$97$1$121       Lab3_3_Steering
-C:   00000617  A$Lab3_3_Steering$2459             Lab3_3_Steering
+C:   00000617  A$Lab3_3_Steering$2458             Lab3_3_Steering
 C:   00000617  C$Lab3_3_Steering.c$98$1$121       Lab3_3_Steering
-C:   0000061A  A$Lab3_3_Steering$2462             Lab3_3_Steering
+C:   0000061A  A$Lab3_3_Steering$2461             Lab3_3_Steering
 C:   0000061A  C$Lab3_3_Steering.c$99$1$121       Lab3_3_Steering
 C:   0000061A  XG$PCA_Init$0$0                    Lab3_3_Steering
-C:   0000061B  A$Lab3_3_Steering$2473             Lab3_3_Steering
+C:   0000061B  A$Lab3_3_Steering$2472             Lab3_3_Steering
 C:   0000061B  C$Lab3_3_Steering.c$103$1$121      Lab3_3_Steering
 C:   0000061B  G$PCA_ISR$0$0                      Lab3_3_Steering
 C:   0000061B  _PCA_ISR                           Lab3_3_Steering
-C:   0000061D  A$Lab3_3_Steering$2474             Lab3_3_Steering
-C:   0000061F  A$Lab3_3_Steering$2477             Lab3_3_Steering
+C:   0000061D  A$Lab3_3_Steering$2473             Lab3_3_Steering
+C:   0000061F  A$Lab3_3_Steering$2476             Lab3_3_Steering
 C:   0000061F  C$Lab3_3_Steering.c$105$1$123      Lab3_3_Steering
-C:   00000622  A$Lab3_3_Steering$2480             Lab3_3_Steering
+C:   00000622  A$Lab3_3_Steering$2479             Lab3_3_Steering
 C:   00000622  C$Lab3_3_Steering.c$107$2$124      Lab3_3_Steering
-C:   00000624  A$Lab3_3_Steering$2483             Lab3_3_Steering
+C:   00000624  A$Lab3_3_Steering$2482             Lab3_3_Steering
 C:   00000624  C$Lab3_3_Steering.c$108$2$124      Lab3_3_Steering
-C:   00000626  A$Lab3_3_Steering$2484             Lab3_3_Steering
-C:   00000628  A$Lab3_3_Steering$2485             Lab3_3_Steering
-C:   0000062A  A$Lab3_3_Steering$2488             Lab3_3_Steering
+C:   00000626  A$Lab3_3_Steering$2483             Lab3_3_Steering
+C:   00000628  A$Lab3_3_Steering$2484             Lab3_3_Steering
+C:   0000062A  A$Lab3_3_Steering$2487             Lab3_3_Steering
 C:   0000062A  C$Lab3_3_Steering.c$110$3$125      Lab3_3_Steering
-C:   0000062D  A$Lab3_3_Steering$2491             Lab3_3_Steering
+C:   0000062D  A$Lab3_3_Steering$2490             Lab3_3_Steering
 ASxxxx Linker V03.00 + NoICE + sdld,  page 47.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000D8    00000DB0 =        3504. bytes (REL,CON,CODE)
+CSEG                                000000D8    00000DF9 =        3577. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
 C:   0000062D  C$Lab3_3_Steering.c$111$3$125      Lab3_3_Steering
-C:   00000630  A$Lab3_3_Steering$2495             Lab3_3_Steering
+C:   00000630  A$Lab3_3_Steering$2494             Lab3_3_Steering
 C:   00000630  C$Lab3_3_Steering.c$113$2$124      Lab3_3_Steering
-C:   00000632  A$Lab3_3_Steering$2498             Lab3_3_Steering
+C:   00000632  A$Lab3_3_Steering$2497             Lab3_3_Steering
 C:   00000632  C$Lab3_3_Steering.c$114$2$124      Lab3_3_Steering
-C:   00000634  A$Lab3_3_Steering$2499             Lab3_3_Steering
-C:   00000636  A$Lab3_3_Steering$2500             Lab3_3_Steering
-C:   00000638  A$Lab3_3_Steering$2501             Lab3_3_Steering
-C:   0000063B  A$Lab3_3_Steering$2505             Lab3_3_Steering
+C:   00000634  A$Lab3_3_Steering$2498             Lab3_3_Steering
+C:   00000636  A$Lab3_3_Steering$2499             Lab3_3_Steering
+C:   00000638  A$Lab3_3_Steering$2500             Lab3_3_Steering
+C:   0000063B  A$Lab3_3_Steering$2504             Lab3_3_Steering
 C:   0000063B  C$Lab3_3_Steering.c$115$2$124      Lab3_3_Steering
-C:   0000063E  A$Lab3_3_Steering$2506             Lab3_3_Steering
-C:   00000641  A$Lab3_3_Steering$2509             Lab3_3_Steering
+C:   0000063E  A$Lab3_3_Steering$2505             Lab3_3_Steering
+C:   00000641  A$Lab3_3_Steering$2508             Lab3_3_Steering
 C:   00000641  C$Lab3_3_Steering.c$116$2$124      Lab3_3_Steering
-C:   00000643  A$Lab3_3_Steering$2510             Lab3_3_Steering
-C:   00000645  A$Lab3_3_Steering$2514             Lab3_3_Steering
+C:   00000643  A$Lab3_3_Steering$2509             Lab3_3_Steering
+C:   00000645  A$Lab3_3_Steering$2513             Lab3_3_Steering
 C:   00000645  C$Lab3_3_Steering.c$118$1$123      Lab3_3_Steering
-C:   00000648  A$Lab3_3_Steering$2516             Lab3_3_Steering
-C:   0000064A  A$Lab3_3_Steering$2517             Lab3_3_Steering
-C:   0000064C  A$Lab3_3_Steering$2520             Lab3_3_Steering
+C:   00000648  A$Lab3_3_Steering$2515             Lab3_3_Steering
+C:   0000064A  A$Lab3_3_Steering$2516             Lab3_3_Steering
+C:   0000064C  A$Lab3_3_Steering$2519             Lab3_3_Steering
 C:   0000064C  C$Lab3_3_Steering.c$119$1$123      Lab3_3_Steering
 C:   0000064C  XG$PCA_ISR$0$0                     Lab3_3_Steering
-C:   0000064D  A$Lab3_3_Steering$2541             Lab3_3_Steering
+C:   0000064D  A$Lab3_3_Steering$2540             Lab3_3_Steering
 C:   0000064D  C$Lab3_3_Steering.c$123$1$123      Lab3_3_Steering
 C:   0000064D  C$Lab3_3_Steering.c$128$1$127      Lab3_3_Steering
 C:   0000064D  G$ReadCompass$0$0                  Lab3_3_Steering
 C:   0000064D  _ReadCompass                       Lab3_3_Steering
-C:   00000650  A$Lab3_3_Steering$2542             Lab3_3_Steering
-C:   00000653  A$Lab3_3_Steering$2543             Lab3_3_Steering
-C:   00000656  A$Lab3_3_Steering$2544             Lab3_3_Steering
-C:   00000659  A$Lab3_3_Steering$2545             Lab3_3_Steering
-C:   0000065C  A$Lab3_3_Steering$2546             Lab3_3_Steering
-C:   0000065F  A$Lab3_3_Steering$2547             Lab3_3_Steering
-C:   00000662  A$Lab3_3_Steering$2550             Lab3_3_Steering
+C:   00000650  A$Lab3_3_Steering$2541             Lab3_3_Steering
+C:   00000653  A$Lab3_3_Steering$2542             Lab3_3_Steering
+C:   00000656  A$Lab3_3_Steering$2543             Lab3_3_Steering
+C:   00000659  A$Lab3_3_Steering$2544             Lab3_3_Steering
+C:   0000065C  A$Lab3_3_Steering$2545             Lab3_3_Steering
+C:   0000065F  A$Lab3_3_Steering$2546             Lab3_3_Steering
+C:   00000662  A$Lab3_3_Steering$2549             Lab3_3_Steering
 C:   00000662  C$Lab3_3_Steering.c$129$1$127      Lab3_3_Steering
-C:   00000664  A$Lab3_3_Steering$2551             Lab3_3_Steering
-C:   00000666  A$Lab3_3_Steering$2552             Lab3_3_Steering
-C:   00000668  A$Lab3_3_Steering$2553             Lab3_3_Steering
-C:   0000066A  A$Lab3_3_Steering$2554             Lab3_3_Steering
-C:   0000066B  A$Lab3_3_Steering$2555             Lab3_3_Steering
-C:   0000066C  A$Lab3_3_Steering$2556             Lab3_3_Steering
-C:   0000066E  A$Lab3_3_Steering$2557             Lab3_3_Steering
-C:   0000066F  A$Lab3_3_Steering$2558             Lab3_3_Steering
-C:   00000670  A$Lab3_3_Steering$2559             Lab3_3_Steering
-C:   00000672  A$Lab3_3_Steering$2564             Lab3_3_Steering
+C:   00000664  A$Lab3_3_Steering$2550             Lab3_3_Steering
+C:   00000666  A$Lab3_3_Steering$2551             Lab3_3_Steering
+C:   00000668  A$Lab3_3_Steering$2552             Lab3_3_Steering
+C:   0000066A  A$Lab3_3_Steering$2553             Lab3_3_Steering
+C:   0000066B  A$Lab3_3_Steering$2554             Lab3_3_Steering
+C:   0000066C  A$Lab3_3_Steering$2555             Lab3_3_Steering
+C:   0000066E  A$Lab3_3_Steering$2556             Lab3_3_Steering
+C:   0000066F  A$Lab3_3_Steering$2557             Lab3_3_Steering
+C:   00000670  A$Lab3_3_Steering$2558             Lab3_3_Steering
+C:   00000672  A$Lab3_3_Steering$2563             Lab3_3_Steering
 C:   00000672  C$Lab3_3_Steering.c$130$1$127      Lab3_3_Steering
 C:   00000672  C$Lab3_3_Steering.c$131$1$127      Lab3_3_Steering
 C:   00000672  XG$ReadCompass$0$0                 Lab3_3_Steering
@@ -2143,168 +2145,184 @@ Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000D8    00000DB0 =        3504. bytes (REL,CON,CODE)
+CSEG                                000000D8    00000DF9 =        3577. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
 C:   00000675  A$Lab3_3_Steering$2580             Lab3_3_Steering
 C:   00000677  A$Lab3_3_Steering$2583             Lab3_3_Steering
-C:   00000677  C$Lab3_3_Steering.c$139$1$129      Lab3_3_Steering
-C:   00000679  A$Lab3_3_Steering$2584             Lab3_3_Steering
-C:   0000067A  A$Lab3_3_Steering$2585             Lab3_3_Steering
-C:   0000067B  A$Lab3_3_Steering$2586             Lab3_3_Steering
-C:   0000067C  A$Lab3_3_Steering$2587             Lab3_3_Steering
-C:   0000067E  A$Lab3_3_Steering$2588             Lab3_3_Steering
-C:   0000067F  A$Lab3_3_Steering$2589             Lab3_3_Steering
-C:   00000680  A$Lab3_3_Steering$2592             Lab3_3_Steering
-C:   00000680  C$Lab3_3_Steering.c$140$1$129      Lab3_3_Steering
-C:   00000681  A$Lab3_3_Steering$2593             Lab3_3_Steering
-C:   00000682  A$Lab3_3_Steering$2594             Lab3_3_Steering
-C:   00000684  A$Lab3_3_Steering$2595             Lab3_3_Steering
-C:   00000685  A$Lab3_3_Steering$2596             Lab3_3_Steering
-C:   00000687  A$Lab3_3_Steering$2597             Lab3_3_Steering
-C:   00000689  A$Lab3_3_Steering$2598             Lab3_3_Steering
-C:   0000068B  A$Lab3_3_Steering$2599             Lab3_3_Steering
-C:   0000068D  A$Lab3_3_Steering$2600             Lab3_3_Steering
-C:   0000068E  A$Lab3_3_Steering$2601             Lab3_3_Steering
-C:   0000068F  A$Lab3_3_Steering$2602             Lab3_3_Steering
-C:   00000691  A$Lab3_3_Steering$2603             Lab3_3_Steering
-C:   00000692  A$Lab3_3_Steering$2604             Lab3_3_Steering
-C:   00000693  A$Lab3_3_Steering$2608             Lab3_3_Steering
-C:   00000693  C$Lab3_3_Steering.c$141$1$129      Lab3_3_Steering
-C:   00000694  A$Lab3_3_Steering$2609             Lab3_3_Steering
-C:   00000696  A$Lab3_3_Steering$2610             Lab3_3_Steering
-C:   00000697  A$Lab3_3_Steering$2611             Lab3_3_Steering
-C:   00000699  A$Lab3_3_Steering$2612             Lab3_3_Steering
-C:   0000069B  A$Lab3_3_Steering$2613             Lab3_3_Steering
-C:   0000069E  A$Lab3_3_Steering$2614             Lab3_3_Steering
-C:   000006A0  A$Lab3_3_Steering$2615             Lab3_3_Steering
-C:   000006A2  A$Lab3_3_Steering$2616             Lab3_3_Steering
-C:   000006A3  A$Lab3_3_Steering$2617             Lab3_3_Steering
-C:   000006A5  A$Lab3_3_Steering$2618             Lab3_3_Steering
-C:   000006A6  A$Lab3_3_Steering$2619             Lab3_3_Steering
-C:   000006A7  A$Lab3_3_Steering$2620             Lab3_3_Steering
-C:   000006A9  A$Lab3_3_Steering$2621             Lab3_3_Steering
-C:   000006AA  A$Lab3_3_Steering$2625             Lab3_3_Steering
-C:   000006AA  C$Lab3_3_Steering.c$142$1$129      Lab3_3_Steering
-C:   000006AB  A$Lab3_3_Steering$2626             Lab3_3_Steering
-C:   000006AD  A$Lab3_3_Steering$2627             Lab3_3_Steering
-C:   000006AE  A$Lab3_3_Steering$2628             Lab3_3_Steering
-C:   000006AF  A$Lab3_3_Steering$2629             Lab3_3_Steering
-C:   000006B1  A$Lab3_3_Steering$2630             Lab3_3_Steering
-C:   000006B2  A$Lab3_3_Steering$2633             Lab3_3_Steering
-C:   000006B2  C$Lab3_3_Steering.c$143$1$129      Lab3_3_Steering
-C:   000006B3  A$Lab3_3_Steering$2634             Lab3_3_Steering
-C:   000006B4  A$Lab3_3_Steering$2635             Lab3_3_Steering
-C:   000006B6  A$Lab3_3_Steering$2636             Lab3_3_Steering
-C:   000006B7  A$Lab3_3_Steering$2637             Lab3_3_Steering
+C:   00000677  C$Lab3_3_Steering.c$139$1$127      Lab3_3_Steering
+C:   00000679  A$Lab3_3_Steering$2586             Lab3_3_Steering
+C:   00000679  C$Lab3_3_Steering.c$140$1$129      Lab3_3_Steering
+C:   0000067B  A$Lab3_3_Steering$2587             Lab3_3_Steering
+C:   0000067C  A$Lab3_3_Steering$2588             Lab3_3_Steering
+C:   0000067D  A$Lab3_3_Steering$2589             Lab3_3_Steering
+C:   0000067E  A$Lab3_3_Steering$2590             Lab3_3_Steering
+C:   00000680  A$Lab3_3_Steering$2591             Lab3_3_Steering
+C:   00000681  A$Lab3_3_Steering$2592             Lab3_3_Steering
+C:   00000682  A$Lab3_3_Steering$2595             Lab3_3_Steering
+C:   00000682  C$Lab3_3_Steering.c$141$1$129      Lab3_3_Steering
+C:   00000683  A$Lab3_3_Steering$2596             Lab3_3_Steering
+C:   00000684  A$Lab3_3_Steering$2597             Lab3_3_Steering
+C:   00000686  A$Lab3_3_Steering$2598             Lab3_3_Steering
+C:   00000687  A$Lab3_3_Steering$2599             Lab3_3_Steering
+C:   00000689  A$Lab3_3_Steering$2600             Lab3_3_Steering
+C:   0000068B  A$Lab3_3_Steering$2601             Lab3_3_Steering
+C:   0000068D  A$Lab3_3_Steering$2602             Lab3_3_Steering
+C:   0000068F  A$Lab3_3_Steering$2603             Lab3_3_Steering
+C:   00000690  A$Lab3_3_Steering$2604             Lab3_3_Steering
+C:   00000691  A$Lab3_3_Steering$2605             Lab3_3_Steering
+C:   00000693  A$Lab3_3_Steering$2606             Lab3_3_Steering
+C:   00000694  A$Lab3_3_Steering$2607             Lab3_3_Steering
+C:   00000695  A$Lab3_3_Steering$2611             Lab3_3_Steering
+C:   00000695  C$Lab3_3_Steering.c$142$1$129      Lab3_3_Steering
+C:   00000696  A$Lab3_3_Steering$2612             Lab3_3_Steering
+C:   00000698  A$Lab3_3_Steering$2613             Lab3_3_Steering
+C:   00000699  A$Lab3_3_Steering$2614             Lab3_3_Steering
+C:   0000069B  A$Lab3_3_Steering$2615             Lab3_3_Steering
+C:   0000069D  A$Lab3_3_Steering$2616             Lab3_3_Steering
+C:   000006A0  A$Lab3_3_Steering$2617             Lab3_3_Steering
+C:   000006A2  A$Lab3_3_Steering$2618             Lab3_3_Steering
+C:   000006A4  A$Lab3_3_Steering$2619             Lab3_3_Steering
+C:   000006A5  A$Lab3_3_Steering$2620             Lab3_3_Steering
+C:   000006A7  A$Lab3_3_Steering$2621             Lab3_3_Steering
+C:   000006A8  A$Lab3_3_Steering$2622             Lab3_3_Steering
+C:   000006A9  A$Lab3_3_Steering$2623             Lab3_3_Steering
+C:   000006AB  A$Lab3_3_Steering$2624             Lab3_3_Steering
+C:   000006AC  A$Lab3_3_Steering$2628             Lab3_3_Steering
+C:   000006AC  C$Lab3_3_Steering.c$143$1$129      Lab3_3_Steering
+C:   000006AE  A$Lab3_3_Steering$2629             Lab3_3_Steering
+C:   000006B0  A$Lab3_3_Steering$2630             Lab3_3_Steering
+C:   000006B2  A$Lab3_3_Steering$2631             Lab3_3_Steering
+C:   000006B4  A$Lab3_3_Steering$2632             Lab3_3_Steering
+C:   000006B6  A$Lab3_3_Steering$2633             Lab3_3_Steering
+C:   000006B9  A$Lab3_3_Steering$2634             Lab3_3_Steering
+C:   000006BB  A$Lab3_3_Steering$2635             Lab3_3_Steering
+C:   000006BD  A$Lab3_3_Steering$2636             Lab3_3_Steering
+C:   000006BE  A$Lab3_3_Steering$2637             Lab3_3_Steering
 ASxxxx Linker V03.00 + NoICE + sdld,  page 49.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000D8    00000DB0 =        3504. bytes (REL,CON,CODE)
+CSEG                                000000D8    00000DF9 =        3577. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   000006B9  A$Lab3_3_Steering$2638             Lab3_3_Steering
-C:   000006BB  A$Lab3_3_Steering$2639             Lab3_3_Steering
-C:   000006BD  A$Lab3_3_Steering$2640             Lab3_3_Steering
-C:   000006BF  A$Lab3_3_Steering$2644             Lab3_3_Steering
-C:   000006BF  C$Lab3_3_Steering.c$144$1$129      Lab3_3_Steering
-C:   000006C0  A$Lab3_3_Steering$2645             Lab3_3_Steering
-C:   000006C2  A$Lab3_3_Steering$2646             Lab3_3_Steering
-C:   000006C3  A$Lab3_3_Steering$2647             Lab3_3_Steering
-C:   000006C5  A$Lab3_3_Steering$2648             Lab3_3_Steering
-C:   000006C6  A$Lab3_3_Steering$2649             Lab3_3_Steering
-C:   000006C8  A$Lab3_3_Steering$2650             Lab3_3_Steering
-C:   000006CA  A$Lab3_3_Steering$2651             Lab3_3_Steering
-C:   000006CC  A$Lab3_3_Steering$2655             Lab3_3_Steering
-C:   000006CC  C$Lab3_3_Steering.c$145$1$129      Lab3_3_Steering
-C:   000006CE  A$Lab3_3_Steering$2656             Lab3_3_Steering
-C:   000006D0  A$Lab3_3_Steering$2659             Lab3_3_Steering
-C:   000006D0  C$Lab3_3_Steering.c$146$1$129      Lab3_3_Steering
-C:   000006D0  XG$DeterminePWM$0$0                Lab3_3_Steering
-C:   000006D1  A$Lab3_3_Steering$2672             Lab3_3_Steering
-C:   000006D1  C$Lab3_3_Steering.c$150$1$129      Lab3_3_Steering
-C:   000006D1  C$Lab3_3_Steering.c$152$1$130      Lab3_3_Steering
-C:   000006D1  G$Steering_Servo$0$0               Lab3_3_Steering
-C:   000006D1  _Steering_Servo                    Lab3_3_Steering
-C:   000006D3  A$Lab3_3_Steering$2673             Lab3_3_Steering
-C:   000006D5  A$Lab3_3_Steering$2674             Lab3_3_Steering
-C:   000006D7  A$Lab3_3_Steering$2675             Lab3_3_Steering
-C:   000006D9  A$Lab3_3_Steering$2676             Lab3_3_Steering
-C:   000006DB  A$Lab3_3_Steering$2679             Lab3_3_Steering
-C:   000006DB  C$Lab3_3_Steering.c$154$2$131      Lab3_3_Steering
-C:   000006DE  A$Lab3_3_Steering$2680             Lab3_3_Steering
-C:   000006E1  A$Lab3_3_Steering$2681             Lab3_3_Steering
-C:   000006E4  A$Lab3_3_Steering$2684             Lab3_3_Steering
-C:   000006E4  C$Lab3_3_Steering.c$155$2$131      Lab3_3_Steering
-C:   000006E6  A$Lab3_3_Steering$2685             Lab3_3_Steering
-C:   000006E8  A$Lab3_3_Steering$2686             Lab3_3_Steering
-C:   000006EA  A$Lab3_3_Steering$2687             Lab3_3_Steering
-C:   000006EC  A$Lab3_3_Steering$2688             Lab3_3_Steering
-C:   000006EE  A$Lab3_3_Steering$2689             Lab3_3_Steering
-C:   000006F0  A$Lab3_3_Steering$2690             Lab3_3_Steering
-C:   000006F2  A$Lab3_3_Steering$2691             Lab3_3_Steering
-C:   000006F4  A$Lab3_3_Steering$2692             Lab3_3_Steering
-C:   000006F7  A$Lab3_3_Steering$2693             Lab3_3_Steering
-C:   000006F9  A$Lab3_3_Steering$2694             Lab3_3_Steering
-C:   000006FB  A$Lab3_3_Steering$2695             Lab3_3_Steering
-C:   000006FD  A$Lab3_3_Steering$2698             Lab3_3_Steering
-C:   000006FD  C$Lab3_3_Steering.c$156$2$131      Lab3_3_Steering
-C:   00000700  A$Lab3_3_Steering$2699             Lab3_3_Steering
-C:   00000703  A$Lab3_3_Steering$2700             Lab3_3_Steering
+C:   000006C0  A$Lab3_3_Steering$2638             Lab3_3_Steering
+C:   000006C1  A$Lab3_3_Steering$2639             Lab3_3_Steering
+C:   000006C2  A$Lab3_3_Steering$2640             Lab3_3_Steering
+C:   000006C4  A$Lab3_3_Steering$2641             Lab3_3_Steering
+C:   000006C5  A$Lab3_3_Steering$2644             Lab3_3_Steering
+C:   000006C5  C$Lab3_3_Steering.c$144$1$129      Lab3_3_Steering
+C:   000006C6  A$Lab3_3_Steering$2645             Lab3_3_Steering
+C:   000006C7  A$Lab3_3_Steering$2646             Lab3_3_Steering
+C:   000006C9  A$Lab3_3_Steering$2647             Lab3_3_Steering
+C:   000006CA  A$Lab3_3_Steering$2648             Lab3_3_Steering
+C:   000006CC  A$Lab3_3_Steering$2649             Lab3_3_Steering
+C:   000006CE  A$Lab3_3_Steering$2650             Lab3_3_Steering
+C:   000006D0  A$Lab3_3_Steering$2651             Lab3_3_Steering
+C:   000006D2  A$Lab3_3_Steering$2655             Lab3_3_Steering
+C:   000006D2  C$Lab3_3_Steering.c$145$1$129      Lab3_3_Steering
+C:   000006D3  A$Lab3_3_Steering$2656             Lab3_3_Steering
+C:   000006D5  A$Lab3_3_Steering$2657             Lab3_3_Steering
+C:   000006D6  A$Lab3_3_Steering$2658             Lab3_3_Steering
+C:   000006D8  A$Lab3_3_Steering$2659             Lab3_3_Steering
+C:   000006D9  A$Lab3_3_Steering$2660             Lab3_3_Steering
+C:   000006DB  A$Lab3_3_Steering$2661             Lab3_3_Steering
+C:   000006DD  A$Lab3_3_Steering$2662             Lab3_3_Steering
+C:   000006DF  A$Lab3_3_Steering$2666             Lab3_3_Steering
+C:   000006DF  C$Lab3_3_Steering.c$146$1$129      Lab3_3_Steering
+C:   000006E1  A$Lab3_3_Steering$2667             Lab3_3_Steering
+C:   000006E3  A$Lab3_3_Steering$2670             Lab3_3_Steering
+C:   000006E3  C$Lab3_3_Steering.c$147$1$129      Lab3_3_Steering
+C:   000006E3  XG$DeterminePWM$0$0                Lab3_3_Steering
+C:   000006E4  A$Lab3_3_Steering$2683             Lab3_3_Steering
+C:   000006E4  C$Lab3_3_Steering.c$151$1$129      Lab3_3_Steering
+C:   000006E4  C$Lab3_3_Steering.c$153$1$130      Lab3_3_Steering
+C:   000006E4  G$Steering_Servo$0$0               Lab3_3_Steering
+C:   000006E4  _Steering_Servo                    Lab3_3_Steering
+C:   000006E6  A$Lab3_3_Steering$2684             Lab3_3_Steering
+C:   000006E8  A$Lab3_3_Steering$2685             Lab3_3_Steering
+C:   000006EA  A$Lab3_3_Steering$2686             Lab3_3_Steering
+C:   000006EC  A$Lab3_3_Steering$2687             Lab3_3_Steering
+C:   000006EE  A$Lab3_3_Steering$2690             Lab3_3_Steering
+C:   000006EE  C$Lab3_3_Steering.c$155$2$131      Lab3_3_Steering
+C:   000006F1  A$Lab3_3_Steering$2693             Lab3_3_Steering
+C:   000006F1  C$Lab3_3_Steering.c$156$1$130      Lab3_3_Steering
+C:   000006F4  A$Lab3_3_Steering$2694             Lab3_3_Steering
+C:   000006F7  A$Lab3_3_Steering$2695             Lab3_3_Steering
+C:   000006FA  A$Lab3_3_Steering$2696             Lab3_3_Steering
+C:   000006FD  A$Lab3_3_Steering$2697             Lab3_3_Steering
+C:   00000700  A$Lab3_3_Steering$2698             Lab3_3_Steering
+C:   00000702  A$Lab3_3_Steering$2699             Lab3_3_Steering
+C:   00000704  A$Lab3_3_Steering$2700             Lab3_3_Steering
 C:   00000706  A$Lab3_3_Steering$2701             Lab3_3_Steering
-C:   00000709  A$Lab3_3_Steering$2702             Lab3_3_Steering
-C:   0000070C  A$Lab3_3_Steering$2705             Lab3_3_Steering
+C:   00000708  A$Lab3_3_Steering$2702             Lab3_3_Steering
+C:   0000070A  A$Lab3_3_Steering$2703             Lab3_3_Steering
 ASxxxx Linker V03.00 + NoICE + sdld,  page 50.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000D8    00000DB0 =        3504. bytes (REL,CON,CODE)
+CSEG                                000000D8    00000DF9 =        3577. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   0000070C  C$Lab3_3_Steering.c$157$2$131      Lab3_3_Steering
-C:   0000070E  A$Lab3_3_Steering$2706             Lab3_3_Steering
-C:   0000070F  A$Lab3_3_Steering$2707             Lab3_3_Steering
-C:   00000711  A$Lab3_3_Steering$2708             Lab3_3_Steering
-C:   00000713  A$Lab3_3_Steering$2709             Lab3_3_Steering
-C:   00000715  A$Lab3_3_Steering$2710             Lab3_3_Steering
-C:   00000717  A$Lab3_3_Steering$2711             Lab3_3_Steering
-C:   00000719  A$Lab3_3_Steering$2714             Lab3_3_Steering
-C:   00000719  C$Lab3_3_Steering.c$159$2$131      Lab3_3_Steering
-C:   0000071C  A$Lab3_3_Steering$2718             Lab3_3_Steering
-C:   0000071C  C$Lab3_3_Steering.c$161$1$130      Lab3_3_Steering
-C:   0000071C  XG$Steering_Servo$0$0              Lab3_3_Steering
-C:   0000071D  __gptrput                          _gptrput
-C:   00000738  __mulint                           _mulint
-C:   00000738  __mulint_dummy                     _mulint
-C:   000007C5  _vsprintf                          sprintf
-C:   00000802  _sprintf                           sprintf
-C:   0000085B  _vprintf                           vprintf
-C:   00000874  _printf                            vprintf
-C:   00000946  __print_format                     printf_large
-C:   00000E50  _strlen                            _strlen
-C:   00000E68  __gptrget                          _gptrget
-C:   00000E84  __sdcc_external_startup            _startup
+C:   0000070C  A$Lab3_3_Steering$2704             Lab3_3_Steering
+C:   0000070E  A$Lab3_3_Steering$2705             Lab3_3_Steering
+C:   00000710  A$Lab3_3_Steering$2706             Lab3_3_Steering
+C:   00000712  A$Lab3_3_Steering$2707             Lab3_3_Steering
+C:   00000714  A$Lab3_3_Steering$2708             Lab3_3_Steering
+C:   00000717  A$Lab3_3_Steering$2709             Lab3_3_Steering
+C:   00000719  A$Lab3_3_Steering$2710             Lab3_3_Steering
+C:   0000071B  A$Lab3_3_Steering$2711             Lab3_3_Steering
+C:   0000071D  A$Lab3_3_Steering$2714             Lab3_3_Steering
+C:   0000071D  C$Lab3_3_Steering.c$157$2$131      Lab3_3_Steering
+C:   00000720  A$Lab3_3_Steering$2715             Lab3_3_Steering
+C:   00000723  A$Lab3_3_Steering$2716             Lab3_3_Steering
+C:   00000726  A$Lab3_3_Steering$2717             Lab3_3_Steering
+C:   00000729  A$Lab3_3_Steering$2718             Lab3_3_Steering
+C:   0000072C  A$Lab3_3_Steering$2721             Lab3_3_Steering
+C:   0000072C  C$Lab3_3_Steering.c$158$2$131      Lab3_3_Steering
+C:   0000072E  A$Lab3_3_Steering$2722             Lab3_3_Steering
+C:   0000072F  A$Lab3_3_Steering$2723             Lab3_3_Steering
+C:   00000731  A$Lab3_3_Steering$2724             Lab3_3_Steering
+C:   00000733  A$Lab3_3_Steering$2725             Lab3_3_Steering
+C:   00000735  A$Lab3_3_Steering$2726             Lab3_3_Steering
+C:   00000737  A$Lab3_3_Steering$2727             Lab3_3_Steering
+C:   00000739  A$Lab3_3_Steering$2730             Lab3_3_Steering
+C:   00000739  C$Lab3_3_Steering.c$160$2$131      Lab3_3_Steering
+C:   0000073C  A$Lab3_3_Steering$2734             Lab3_3_Steering
+C:   0000073C  C$Lab3_3_Steering.c$162$1$130      Lab3_3_Steering
+C:   0000073C  XG$Steering_Servo$0$0              Lab3_3_Steering
+C:   0000073D  __divuint                          _divuint
+C:   00000766  __gptrput                          _gptrput
+C:   00000781  __mulint                           _mulint
+C:   00000781  __mulint_dummy                     _mulint
+C:   0000080E  _vsprintf                          sprintf
+C:   0000084B  _sprintf                           sprintf
+C:   000008A4  _vprintf                           vprintf
+C:   000008BD  _printf                            vprintf
+C:   0000098F  __print_format                     printf_large
+C:   00000E99  _strlen                            _strlen
+C:   00000EB1  __gptrget                          _gptrget
+C:   00000ECD  __sdcc_external_startup            _startup
 
 ASxxxx Linker V03.00 + NoICE + sdld,  page 51.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CONST                               00000E88    00000074 =         116. bytes (REL,CON,CODE)
+CONST                               00000ED1    00000076 =         118. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   00000E88  FLab3_3_Steering$__str_0$0$0       Lab3_3_Steering
-C:   00000E9E  FLab3_3_Steering$__str_1$0$0       Lab3_3_Steering
-C:   00000EAE  FLab3_3_Steering$__str_2$0$0       Lab3_3_Steering
-C:   00000EB1  FLab3_3_Steering$__str_3$0$0       Lab3_3_Steering
-C:   00000ED5  FLab3_3_Steering$__str_4$0$0       Lab3_3_Steering
+C:   00000ED1  FLab3_3_Steering$__str_0$0$0       Lab3_3_Steering
+C:   00000EE7  FLab3_3_Steering$__str_1$0$0       Lab3_3_Steering
+C:   00000EF7  FLab3_3_Steering$__str_2$0$0       Lab3_3_Steering
+C:   00000EFA  FLab3_3_Steering$__str_3$0$0       Lab3_3_Steering
+C:   00000F1E  FLab3_3_Steering$__str_4$0$0       Lab3_3_Steering
 
 ASxxxx Linker V03.00 + NoICE + sdld,  page 52.
 
@@ -2316,6 +2334,8 @@ C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-3\Lab3_3_Steering.rel
 
 Libraries Linked                          [ object file ]
 
+C:\Program Files (x86)\SDCC\bin\..\lib\small/libint.lib
+                                          [ _divuint.rel ]
 C:\Program Files (x86)\SDCC\bin\..\lib\small/mcs51.lib
                                           [ crtclear.rel ]
 C:\Program Files (x86)\SDCC\bin\..\lib\small/mcs51.lib
