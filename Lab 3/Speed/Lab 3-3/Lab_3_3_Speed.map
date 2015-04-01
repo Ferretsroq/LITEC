@@ -52,8 +52,8 @@ C:   00000018  s_REG_BANK_3
 C:   00000020  s_BSEG_BYTES                    
 C:   00000020  s__CODE                         
 C:   00000022  l_GSINIT3                       
-C:   00000028  l_GSINIT                        
 C:   0000002A  l_GSINIT4                       
+C:   0000002C  l_GSINIT                        
 C:   00000050  l_XSEG                          
 C:   00000051  l_HOME                          
 C:   00000051  s_GSINIT0                       
@@ -70,19 +70,19 @@ C:   00000051  s_XISEG
 C:   00000054  s_GSINIT1                       
 C:   00000054  s_GSINIT2                       
 C:   0000005E  s_GSINIT3                       
-C:   0000005F  s_SSEG                          
+C:   00000061  s_SSEG                          
 C:   0000007C  l_CONST                         
 C:   0000007D  l_DSEG                          
 C:   00000080  s_GSINIT4                       
-C:   000000A1  l_SSEG                          
+C:   0000009F  l_SSEG                          
 C:   000000AA  s_GSINIT                        
 C:   000000AA  s_GSINIT5                       
-C:   000000D2  s_GSFINAL                       
-C:   000000D5  s_CSEG                          
+C:   000000D6  s_GSFINAL                       
+C:   000000D9  s_CSEG                          
 C:   00000100  l_IRAM                          
-C:   00000DFC  l_CSEG                          
-C:   00000ED1  s_CONST                         
-C:   00000F4D  s_XINIT                         
+C:   00000E40  l_CSEG                          
+C:   00000F19  s_CONST                         
+C:   00000F95  s_XINIT                         
 
 ASxxxx Linker V03.00 + NoICE + sdld,  page 3.
 Hexadecimal  [32-Bits]
@@ -835,11 +835,14 @@ DSEG                                00000000    0000007D =         125. bytes (R
      00000040  _neutral                           Lab_3_3_Speed
      00000041  G$range$0$0                        Lab_3_3_Speed
      00000041  _range                             Lab_3_3_Speed
-     00000043  LLab_3_3_Speed.ReadRanger$Data$1   Lab_3_3_Speed
-     00000051  __print_format_PARM_2              printf_large
-     00000054  __print_format_PARM_3              printf_large
-     00000057  __print_format_PARM_4              printf_large
-
+     00000043  G$delay$0$0                        Lab_3_3_Speed
+     00000043  _delay                             Lab_3_3_Speed
+     00000044  G$start_delay$0$0                  Lab_3_3_Speed
+     00000044  _start_delay                       Lab_3_3_Speed
+     00000045  LLab_3_3_Speed.ReadRanger$Data$1   Lab_3_3_Speed
+     00000053  __print_format_PARM_2              printf_large
+     00000056  __print_format_PARM_3              printf_large
+     00000059  __print_format_PARM_4              printf_large
 ASxxxx Linker V03.00 + NoICE + sdld,  page 18.
 Hexadecimal  [32-Bits]
 
@@ -866,11 +869,11 @@ Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-SSEG                                0000005F    000000A1 =         161. bytes (REL,OVR)
+SSEG                                00000061    0000009F =         159. bytes (REL,OVR)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-     0000005F  __start__stack                     Lab_3_3_Speed
+     00000061  __start__stack                     Lab_3_3_Speed
 
 ASxxxx Linker V03.00 + NoICE + sdld,  page 21.
 Hexadecimal  [32-Bits]
@@ -892,18 +895,18 @@ HOME                                00000000    00000051 =          81. bytes (R
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   00000000  A$Lab_3_3_Speed$1062               Lab_3_3_Speed
-C:   00000003  A$Lab_3_3_Speed$1063               Lab_3_3_Speed
-C:   0000000B  A$Lab_3_3_Speed$1065               Lab_3_3_Speed
-C:   00000013  A$Lab_3_3_Speed$1067               Lab_3_3_Speed
-C:   0000001B  A$Lab_3_3_Speed$1069               Lab_3_3_Speed
-C:   00000023  A$Lab_3_3_Speed$1071               Lab_3_3_Speed
-C:   0000002B  A$Lab_3_3_Speed$1073               Lab_3_3_Speed
-C:   00000033  A$Lab_3_3_Speed$1075               Lab_3_3_Speed
-C:   0000003B  A$Lab_3_3_Speed$1077               Lab_3_3_Speed
-C:   00000043  A$Lab_3_3_Speed$1079               Lab_3_3_Speed
-C:   0000004B  A$Lab_3_3_Speed$1081               Lab_3_3_Speed
-C:   0000004E  A$Lab_3_3_Speed$1139               Lab_3_3_Speed
+C:   00000000  A$Lab_3_3_Speed$1069               Lab_3_3_Speed
+C:   00000003  A$Lab_3_3_Speed$1070               Lab_3_3_Speed
+C:   0000000B  A$Lab_3_3_Speed$1072               Lab_3_3_Speed
+C:   00000013  A$Lab_3_3_Speed$1074               Lab_3_3_Speed
+C:   0000001B  A$Lab_3_3_Speed$1076               Lab_3_3_Speed
+C:   00000023  A$Lab_3_3_Speed$1078               Lab_3_3_Speed
+C:   0000002B  A$Lab_3_3_Speed$1080               Lab_3_3_Speed
+C:   00000033  A$Lab_3_3_Speed$1082               Lab_3_3_Speed
+C:   0000003B  A$Lab_3_3_Speed$1084               Lab_3_3_Speed
+C:   00000043  A$Lab_3_3_Speed$1086               Lab_3_3_Speed
+C:   0000004B  A$Lab_3_3_Speed$1088               Lab_3_3_Speed
+C:   0000004E  A$Lab_3_3_Speed$1154               Lab_3_3_Speed
 C:   0000004E  __sdcc_program_startup             Lab_3_3_Speed
 
 ASxxxx Linker V03.00 + NoICE + sdld,  page 23.
@@ -954,1396 +957,1434 @@ Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-GSINIT                              000000AA    00000028 =          40. bytes (REL,CON,CODE)
+GSINIT                              000000AA    0000002C =          44. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   000000AA  A$Lab_3_3_Speed$1097               Lab_3_3_Speed
+C:   000000AA  A$Lab_3_3_Speed$1104               Lab_3_3_Speed
 C:   000000AA  C$Lab_3_3_Speed.c$31$1$130         Lab_3_3_Speed
-C:   000000AD  A$Lab_3_3_Speed$1098               Lab_3_3_Speed
-C:   000000B0  A$Lab_3_3_Speed$1101               Lab_3_3_Speed
+C:   000000AD  A$Lab_3_3_Speed$1105               Lab_3_3_Speed
+C:   000000B0  A$Lab_3_3_Speed$1108               Lab_3_3_Speed
 C:   000000B0  C$Lab_3_3_Speed.c$32$1$130         Lab_3_3_Speed
-C:   000000B3  A$Lab_3_3_Speed$1102               Lab_3_3_Speed
-C:   000000B6  A$Lab_3_3_Speed$1105               Lab_3_3_Speed
+C:   000000B3  A$Lab_3_3_Speed$1109               Lab_3_3_Speed
+C:   000000B6  A$Lab_3_3_Speed$1112               Lab_3_3_Speed
 C:   000000B6  C$Lab_3_3_Speed.c$33$1$130         Lab_3_3_Speed
-C:   000000B9  A$Lab_3_3_Speed$1106               Lab_3_3_Speed
-C:   000000BC  A$Lab_3_3_Speed$1109               Lab_3_3_Speed
+C:   000000B9  A$Lab_3_3_Speed$1113               Lab_3_3_Speed
+C:   000000BC  A$Lab_3_3_Speed$1116               Lab_3_3_Speed
 C:   000000BC  C$Lab_3_3_Speed.c$34$1$130         Lab_3_3_Speed
-C:   000000BF  A$Lab_3_3_Speed$1110               Lab_3_3_Speed
-C:   000000C2  A$Lab_3_3_Speed$1113               Lab_3_3_Speed
+C:   000000BF  A$Lab_3_3_Speed$1117               Lab_3_3_Speed
+C:   000000C2  A$Lab_3_3_Speed$1120               Lab_3_3_Speed
 C:   000000C2  C$Lab_3_3_Speed.c$35$1$130         Lab_3_3_Speed
-C:   000000C3  A$Lab_3_3_Speed$1114               Lab_3_3_Speed
-C:   000000C5  A$Lab_3_3_Speed$1115               Lab_3_3_Speed
-C:   000000C7  A$Lab_3_3_Speed$1118               Lab_3_3_Speed
+C:   000000C3  A$Lab_3_3_Speed$1121               Lab_3_3_Speed
+C:   000000C5  A$Lab_3_3_Speed$1122               Lab_3_3_Speed
+C:   000000C7  A$Lab_3_3_Speed$1125               Lab_3_3_Speed
 C:   000000C7  C$Lab_3_3_Speed.c$36$1$130         Lab_3_3_Speed
-C:   000000C9  A$Lab_3_3_Speed$1119               Lab_3_3_Speed
-C:   000000CB  A$Lab_3_3_Speed$1123               Lab_3_3_Speed
+C:   000000C9  A$Lab_3_3_Speed$1126               Lab_3_3_Speed
+C:   000000CB  A$Lab_3_3_Speed$1130               Lab_3_3_Speed
 C:   000000CB  C$Lab_3_3_Speed.c$37$1$130         Lab_3_3_Speed
-C:   000000CD  A$Lab_3_3_Speed$1127               Lab_3_3_Speed
+C:   000000CD  A$Lab_3_3_Speed$1134               Lab_3_3_Speed
 C:   000000CD  C$Lab_3_3_Speed.c$38$1$130         Lab_3_3_Speed
-C:   000000CF  A$Lab_3_3_Speed$1130               Lab_3_3_Speed
+C:   000000CF  A$Lab_3_3_Speed$1137               Lab_3_3_Speed
 C:   000000CF  C$Lab_3_3_Speed.c$39$1$130         Lab_3_3_Speed
+C:   000000D2  A$Lab_3_3_Speed$1141               Lab_3_3_Speed
+C:   000000D2  C$Lab_3_3_Speed.c$41$1$130         Lab_3_3_Speed
+C:   000000D4  A$Lab_3_3_Speed$1145               Lab_3_3_Speed
+C:   000000D4  C$Lab_3_3_Speed.c$42$1$130         Lab_3_3_Speed
 
 ASxxxx Linker V03.00 + NoICE + sdld,  page 28.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-GSFINAL                             000000D2    00000003 =           3. bytes (REL,CON,CODE)
+GSFINAL                             000000D6    00000003 =           3. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   000000D2  A$Lab_3_3_Speed$1132               Lab_3_3_Speed
+C:   000000D6  A$Lab_3_3_Speed$1147               Lab_3_3_Speed
 
 ASxxxx Linker V03.00 + NoICE + sdld,  page 29.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000D5    00000DFC =        3580. bytes (REL,CON,CODE)
+CSEG                                000000D9    00000E40 =        3648. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   000000D5  A$Lab_3_3_Speed$1167               Lab_3_3_Speed
-C:   000000D5  C$c8051_SDCC.h$42$0$0              Lab_3_3_Speed
-C:   000000D5  C$c8051_SDCC.h$46$1$2              Lab_3_3_Speed
-C:   000000D5  G$SYSCLK_Init$0$0                  Lab_3_3_Speed
-C:   000000D5  _SYSCLK_Init                       Lab_3_3_Speed
-C:   000000D8  A$Lab_3_3_Speed$1170               Lab_3_3_Speed
-C:   000000D8  C$c8051_SDCC.h$49$1$2              Lab_3_3_Speed
-C:   000000DA  A$Lab_3_3_Speed$1171               Lab_3_3_Speed
-C:   000000DC  A$Lab_3_3_Speed$1173               Lab_3_3_Speed
-C:   000000DD  A$Lab_3_3_Speed$1174               Lab_3_3_Speed
-C:   000000E0  A$Lab_3_3_Speed$1175               Lab_3_3_Speed
-C:   000000E1  A$Lab_3_3_Speed$1177               Lab_3_3_Speed
-C:   000000E2  A$Lab_3_3_Speed$1178               Lab_3_3_Speed
-C:   000000E3  A$Lab_3_3_Speed$1179               Lab_3_3_Speed
-C:   000000E5  A$Lab_3_3_Speed$1183               Lab_3_3_Speed
-C:   000000E5  C$c8051_SDCC.h$51$1$2              Lab_3_3_Speed
-C:   000000E7  A$Lab_3_3_Speed$1184               Lab_3_3_Speed
-C:   000000EA  A$Lab_3_3_Speed$1187               Lab_3_3_Speed
-C:   000000EA  C$c8051_SDCC.h$53$1$2              Lab_3_3_Speed
-C:   000000ED  A$Lab_3_3_Speed$1190               Lab_3_3_Speed
-C:   000000ED  C$c8051_SDCC.h$56$1$2              Lab_3_3_Speed
-C:   000000ED  XG$SYSCLK_Init$0$0                 Lab_3_3_Speed
-C:   000000EE  A$Lab_3_3_Speed$1203               Lab_3_3_Speed
-C:   000000EE  C$c8051_SDCC.h$64$1$2              Lab_3_3_Speed
-C:   000000EE  C$c8051_SDCC.h$66$1$4              Lab_3_3_Speed
-C:   000000EE  G$UART0_Init$0$0                   Lab_3_3_Speed
-C:   000000EE  _UART0_Init                        Lab_3_3_Speed
-C:   000000F1  A$Lab_3_3_Speed$1206               Lab_3_3_Speed
-C:   000000F1  C$c8051_SDCC.h$67$1$4              Lab_3_3_Speed
-C:   000000F4  A$Lab_3_3_Speed$1209               Lab_3_3_Speed
-C:   000000F4  C$c8051_SDCC.h$68$1$4              Lab_3_3_Speed
-C:   000000F7  A$Lab_3_3_Speed$1212               Lab_3_3_Speed
-C:   000000F7  C$c8051_SDCC.h$69$1$4              Lab_3_3_Speed
-C:   000000F9  A$Lab_3_3_Speed$1215               Lab_3_3_Speed
-C:   000000F9  C$c8051_SDCC.h$70$1$4              Lab_3_3_Speed
-C:   000000FC  A$Lab_3_3_Speed$1218               Lab_3_3_Speed
-C:   000000FC  C$c8051_SDCC.h$71$1$4              Lab_3_3_Speed
-C:   000000FF  A$Lab_3_3_Speed$1221               Lab_3_3_Speed
-C:   000000FF  C$c8051_SDCC.h$73$1$4              Lab_3_3_Speed
-C:   00000101  A$Lab_3_3_Speed$1224               Lab_3_3_Speed
-C:   00000101  C$c8051_SDCC.h$74$1$4              Lab_3_3_Speed
-C:   00000104  A$Lab_3_3_Speed$1227               Lab_3_3_Speed
-C:   00000104  C$c8051_SDCC.h$75$1$4              Lab_3_3_Speed
-C:   00000104  XG$UART0_Init$0$0                  Lab_3_3_Speed
-C:   00000105  A$Lab_3_3_Speed$1240               Lab_3_3_Speed
-C:   00000105  C$c8051_SDCC.h$83$1$4              Lab_3_3_Speed
-C:   00000105  C$c8051_SDCC.h$85$1$6              Lab_3_3_Speed
-C:   00000105  G$Sys_Init$0$0                     Lab_3_3_Speed
-C:   00000105  _Sys_Init                          Lab_3_3_Speed
-C:   00000108  A$Lab_3_3_Speed$1243               Lab_3_3_Speed
+C:   000000D9  A$Lab_3_3_Speed$1182               Lab_3_3_Speed
+C:   000000D9  C$c8051_SDCC.h$42$0$0              Lab_3_3_Speed
+C:   000000D9  C$c8051_SDCC.h$46$1$2              Lab_3_3_Speed
+C:   000000D9  G$SYSCLK_Init$0$0                  Lab_3_3_Speed
+C:   000000D9  _SYSCLK_Init                       Lab_3_3_Speed
+C:   000000DC  A$Lab_3_3_Speed$1185               Lab_3_3_Speed
+C:   000000DC  C$c8051_SDCC.h$49$1$2              Lab_3_3_Speed
+C:   000000DE  A$Lab_3_3_Speed$1186               Lab_3_3_Speed
+C:   000000E0  A$Lab_3_3_Speed$1188               Lab_3_3_Speed
+C:   000000E1  A$Lab_3_3_Speed$1189               Lab_3_3_Speed
+C:   000000E4  A$Lab_3_3_Speed$1190               Lab_3_3_Speed
+C:   000000E5  A$Lab_3_3_Speed$1192               Lab_3_3_Speed
+C:   000000E6  A$Lab_3_3_Speed$1193               Lab_3_3_Speed
+C:   000000E7  A$Lab_3_3_Speed$1194               Lab_3_3_Speed
+C:   000000E9  A$Lab_3_3_Speed$1198               Lab_3_3_Speed
+C:   000000E9  C$c8051_SDCC.h$51$1$2              Lab_3_3_Speed
+C:   000000EB  A$Lab_3_3_Speed$1199               Lab_3_3_Speed
+C:   000000EE  A$Lab_3_3_Speed$1202               Lab_3_3_Speed
+C:   000000EE  C$c8051_SDCC.h$53$1$2              Lab_3_3_Speed
+C:   000000F1  A$Lab_3_3_Speed$1205               Lab_3_3_Speed
+C:   000000F1  C$c8051_SDCC.h$56$1$2              Lab_3_3_Speed
+C:   000000F1  XG$SYSCLK_Init$0$0                 Lab_3_3_Speed
+C:   000000F2  A$Lab_3_3_Speed$1218               Lab_3_3_Speed
+C:   000000F2  C$c8051_SDCC.h$64$1$2              Lab_3_3_Speed
+C:   000000F2  C$c8051_SDCC.h$66$1$4              Lab_3_3_Speed
+C:   000000F2  G$UART0_Init$0$0                   Lab_3_3_Speed
+C:   000000F2  _UART0_Init                        Lab_3_3_Speed
+C:   000000F5  A$Lab_3_3_Speed$1221               Lab_3_3_Speed
+C:   000000F5  C$c8051_SDCC.h$67$1$4              Lab_3_3_Speed
+C:   000000F8  A$Lab_3_3_Speed$1224               Lab_3_3_Speed
+C:   000000F8  C$c8051_SDCC.h$68$1$4              Lab_3_3_Speed
+C:   000000FB  A$Lab_3_3_Speed$1227               Lab_3_3_Speed
+C:   000000FB  C$c8051_SDCC.h$69$1$4              Lab_3_3_Speed
+C:   000000FD  A$Lab_3_3_Speed$1230               Lab_3_3_Speed
+C:   000000FD  C$c8051_SDCC.h$70$1$4              Lab_3_3_Speed
+C:   00000100  A$Lab_3_3_Speed$1233               Lab_3_3_Speed
+C:   00000100  C$c8051_SDCC.h$71$1$4              Lab_3_3_Speed
+C:   00000103  A$Lab_3_3_Speed$1236               Lab_3_3_Speed
+C:   00000103  C$c8051_SDCC.h$73$1$4              Lab_3_3_Speed
+C:   00000105  A$Lab_3_3_Speed$1239               Lab_3_3_Speed
+C:   00000105  C$c8051_SDCC.h$74$1$4              Lab_3_3_Speed
+C:   00000108  A$Lab_3_3_Speed$1242               Lab_3_3_Speed
+C:   00000108  C$c8051_SDCC.h$75$1$4              Lab_3_3_Speed
+C:   00000108  XG$UART0_Init$0$0                  Lab_3_3_Speed
+C:   00000109  A$Lab_3_3_Speed$1255               Lab_3_3_Speed
+C:   00000109  C$c8051_SDCC.h$83$1$4              Lab_3_3_Speed
+C:   00000109  C$c8051_SDCC.h$85$1$6              Lab_3_3_Speed
+C:   00000109  G$Sys_Init$0$0                     Lab_3_3_Speed
+C:   00000109  _Sys_Init                          Lab_3_3_Speed
+C:   0000010C  A$Lab_3_3_Speed$1258               Lab_3_3_Speed
 ASxxxx Linker V03.00 + NoICE + sdld,  page 30.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000D5    00000DFC =        3580. bytes (REL,CON,CODE)
+CSEG                                000000D9    00000E40 =        3648. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   00000108  C$c8051_SDCC.h$86$1$6              Lab_3_3_Speed
-C:   0000010B  A$Lab_3_3_Speed$1246               Lab_3_3_Speed
-C:   0000010B  C$c8051_SDCC.h$88$1$6              Lab_3_3_Speed
-C:   0000010E  A$Lab_3_3_Speed$1249               Lab_3_3_Speed
-C:   0000010E  C$c8051_SDCC.h$89$1$6              Lab_3_3_Speed
-C:   00000111  A$Lab_3_3_Speed$1252               Lab_3_3_Speed
-C:   00000111  C$c8051_SDCC.h$91$1$6              Lab_3_3_Speed
-C:   00000114  A$Lab_3_3_Speed$1255               Lab_3_3_Speed
-C:   00000114  C$c8051_SDCC.h$92$1$6              Lab_3_3_Speed
-C:   00000117  A$Lab_3_3_Speed$1258               Lab_3_3_Speed
-C:   00000117  C$c8051_SDCC.h$93$1$6              Lab_3_3_Speed
-C:   00000117  XG$Sys_Init$0$0                    Lab_3_3_Speed
-C:   00000118  A$Lab_3_3_Speed$1271               Lab_3_3_Speed
-C:   00000118  C$c8051_SDCC.h$98$1$6              Lab_3_3_Speed
-C:   00000118  G$putchar$0$0                      Lab_3_3_Speed
-C:   00000118  _putchar                           Lab_3_3_Speed
-C:   0000011A  A$Lab_3_3_Speed$1277               Lab_3_3_Speed
-C:   0000011A  C$c8051_SDCC.h$100$1$8             Lab_3_3_Speed
-C:   0000011A  C$c8051_SDCC.h$101$1$8             Lab_3_3_Speed
-C:   0000011D  A$Lab_3_3_Speed$1278               Lab_3_3_Speed
-C:   0000011F  A$Lab_3_3_Speed$1282               Lab_3_3_Speed
-C:   0000011F  C$c8051_SDCC.h$102$1$8             Lab_3_3_Speed
-C:   00000121  A$Lab_3_3_Speed$1285               Lab_3_3_Speed
-C:   00000121  C$c8051_SDCC.h$103$1$8             Lab_3_3_Speed
-C:   00000121  XG$putchar$0$0                     Lab_3_3_Speed
-C:   00000122  A$Lab_3_3_Speed$1303               Lab_3_3_Speed
-C:   00000122  C$c8051_SDCC.h$108$1$8             Lab_3_3_Speed
-C:   00000122  C$c8051_SDCC.h$111$1$10            Lab_3_3_Speed
-C:   00000122  C$c8051_SDCC.h$112$1$10            Lab_3_3_Speed
-C:   00000122  G$getchar$0$0                      Lab_3_3_Speed
-C:   00000125  A$Lab_3_3_Speed$1304               Lab_3_3_Speed
-C:   00000127  A$Lab_3_3_Speed$1308               Lab_3_3_Speed
-C:   00000127  C$c8051_SDCC.h$113$1$10            Lab_3_3_Speed
-C:   0000012A  A$Lab_3_3_Speed$1311               Lab_3_3_Speed
-C:   0000012A  C$c8051_SDCC.h$114$1$10            Lab_3_3_Speed
-C:   0000012D  A$Lab_3_3_Speed$1314               Lab_3_3_Speed
-C:   0000012D  C$c8051_SDCC.h$115$1$10            Lab_3_3_Speed
-C:   00000130  A$Lab_3_3_Speed$1317               Lab_3_3_Speed
-C:   00000130  C$c8051_SDCC.h$116$1$10            Lab_3_3_Speed
-C:   00000130  XG$getchar$0$0                     Lab_3_3_Speed
-C:   00000131  A$Lab_3_3_Speed$1334               Lab_3_3_Speed
-C:   00000131  C$i2c.h$81$1$10                    Lab_3_3_Speed
-C:   00000131  G$lcd_print$0$0                    Lab_3_3_Speed
-C:   00000131  _lcd_print                         Lab_3_3_Speed
-C:   00000133  A$Lab_3_3_Speed$1335               Lab_3_3_Speed
-C:   00000136  A$Lab_3_3_Speed$1338               Lab_3_3_Speed
-C:   00000136  C$i2c.h$87$1$73                    Lab_3_3_Speed
-C:   00000138  A$Lab_3_3_Speed$1339               Lab_3_3_Speed
-C:   0000013A  A$Lab_3_3_Speed$1340               Lab_3_3_Speed
-C:   0000013B  A$Lab_3_3_Speed$1341               Lab_3_3_Speed
-C:   0000013D  A$Lab_3_3_Speed$1342               Lab_3_3_Speed
+C:   0000010C  C$c8051_SDCC.h$86$1$6              Lab_3_3_Speed
+C:   0000010F  A$Lab_3_3_Speed$1261               Lab_3_3_Speed
+C:   0000010F  C$c8051_SDCC.h$88$1$6              Lab_3_3_Speed
+C:   00000112  A$Lab_3_3_Speed$1264               Lab_3_3_Speed
+C:   00000112  C$c8051_SDCC.h$89$1$6              Lab_3_3_Speed
+C:   00000115  A$Lab_3_3_Speed$1267               Lab_3_3_Speed
+C:   00000115  C$c8051_SDCC.h$91$1$6              Lab_3_3_Speed
+C:   00000118  A$Lab_3_3_Speed$1270               Lab_3_3_Speed
+C:   00000118  C$c8051_SDCC.h$92$1$6              Lab_3_3_Speed
+C:   0000011B  A$Lab_3_3_Speed$1273               Lab_3_3_Speed
+C:   0000011B  C$c8051_SDCC.h$93$1$6              Lab_3_3_Speed
+C:   0000011B  XG$Sys_Init$0$0                    Lab_3_3_Speed
+C:   0000011C  A$Lab_3_3_Speed$1286               Lab_3_3_Speed
+C:   0000011C  C$c8051_SDCC.h$98$1$6              Lab_3_3_Speed
+C:   0000011C  G$putchar$0$0                      Lab_3_3_Speed
+C:   0000011C  _putchar                           Lab_3_3_Speed
+C:   0000011E  A$Lab_3_3_Speed$1292               Lab_3_3_Speed
+C:   0000011E  C$c8051_SDCC.h$100$1$8             Lab_3_3_Speed
+C:   0000011E  C$c8051_SDCC.h$101$1$8             Lab_3_3_Speed
+C:   00000121  A$Lab_3_3_Speed$1293               Lab_3_3_Speed
+C:   00000123  A$Lab_3_3_Speed$1297               Lab_3_3_Speed
+C:   00000123  C$c8051_SDCC.h$102$1$8             Lab_3_3_Speed
+C:   00000125  A$Lab_3_3_Speed$1300               Lab_3_3_Speed
+C:   00000125  C$c8051_SDCC.h$103$1$8             Lab_3_3_Speed
+C:   00000125  XG$putchar$0$0                     Lab_3_3_Speed
+C:   00000126  A$Lab_3_3_Speed$1318               Lab_3_3_Speed
+C:   00000126  C$c8051_SDCC.h$108$1$8             Lab_3_3_Speed
+C:   00000126  C$c8051_SDCC.h$111$1$10            Lab_3_3_Speed
+C:   00000126  C$c8051_SDCC.h$112$1$10            Lab_3_3_Speed
+C:   00000126  G$getchar$0$0                      Lab_3_3_Speed
+C:   00000129  A$Lab_3_3_Speed$1319               Lab_3_3_Speed
+C:   0000012B  A$Lab_3_3_Speed$1323               Lab_3_3_Speed
+C:   0000012B  C$c8051_SDCC.h$113$1$10            Lab_3_3_Speed
+C:   0000012E  A$Lab_3_3_Speed$1326               Lab_3_3_Speed
+C:   0000012E  C$c8051_SDCC.h$114$1$10            Lab_3_3_Speed
+C:   00000131  A$Lab_3_3_Speed$1329               Lab_3_3_Speed
+C:   00000131  C$c8051_SDCC.h$115$1$10            Lab_3_3_Speed
+C:   00000134  A$Lab_3_3_Speed$1332               Lab_3_3_Speed
+C:   00000134  C$c8051_SDCC.h$116$1$10            Lab_3_3_Speed
+C:   00000134  XG$getchar$0$0                     Lab_3_3_Speed
+C:   00000135  A$Lab_3_3_Speed$1349               Lab_3_3_Speed
+C:   00000135  C$i2c.h$81$1$10                    Lab_3_3_Speed
+C:   00000135  G$lcd_print$0$0                    Lab_3_3_Speed
+C:   00000135  _lcd_print                         Lab_3_3_Speed
+C:   00000137  A$Lab_3_3_Speed$1350               Lab_3_3_Speed
+C:   0000013A  A$Lab_3_3_Speed$1353               Lab_3_3_Speed
+C:   0000013A  C$i2c.h$87$1$73                    Lab_3_3_Speed
+C:   0000013C  A$Lab_3_3_Speed$1354               Lab_3_3_Speed
+C:   0000013E  A$Lab_3_3_Speed$1355               Lab_3_3_Speed
+C:   0000013F  A$Lab_3_3_Speed$1356               Lab_3_3_Speed
+C:   00000141  A$Lab_3_3_Speed$1357               Lab_3_3_Speed
 ASxxxx Linker V03.00 + NoICE + sdld,  page 31.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000D5    00000DFC =        3580. bytes (REL,CON,CODE)
+CSEG                                000000D9    00000E40 =        3648. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   0000013E  A$Lab_3_3_Speed$1343               Lab_3_3_Speed
-C:   00000140  A$Lab_3_3_Speed$1344               Lab_3_3_Speed
-C:   00000141  A$Lab_3_3_Speed$1345               Lab_3_3_Speed
-C:   00000143  A$Lab_3_3_Speed$1346               Lab_3_3_Speed
-C:   00000146  A$Lab_3_3_Speed$1347               Lab_3_3_Speed
-C:   00000148  A$Lab_3_3_Speed$1348               Lab_3_3_Speed
-C:   0000014B  A$Lab_3_3_Speed$1349               Lab_3_3_Speed
-C:   0000014D  A$Lab_3_3_Speed$1350               Lab_3_3_Speed
-C:   0000014F  A$Lab_3_3_Speed$1351               Lab_3_3_Speed
-C:   00000151  A$Lab_3_3_Speed$1355               Lab_3_3_Speed
-C:   00000151  C$i2c.h$89$2$74                    Lab_3_3_Speed
-C:   00000153  A$Lab_3_3_Speed$1356               Lab_3_3_Speed
-C:   00000155  A$Lab_3_3_Speed$1357               Lab_3_3_Speed
-C:   00000156  A$Lab_3_3_Speed$1358               Lab_3_3_Speed
-C:   00000158  A$Lab_3_3_Speed$1361               Lab_3_3_Speed
-C:   00000158  C$i2c.h$90$1$73                    Lab_3_3_Speed
-C:   0000015A  A$Lab_3_3_Speed$1362               Lab_3_3_Speed
-C:   0000015C  A$Lab_3_3_Speed$1363               Lab_3_3_Speed
-C:   0000015D  A$Lab_3_3_Speed$1364               Lab_3_3_Speed
-C:   0000015F  A$Lab_3_3_Speed$1365               Lab_3_3_Speed
-C:   00000160  A$Lab_3_3_Speed$1366               Lab_3_3_Speed
-C:   00000162  A$Lab_3_3_Speed$1367               Lab_3_3_Speed
-C:   00000163  A$Lab_3_3_Speed$1368               Lab_3_3_Speed
-C:   00000165  A$Lab_3_3_Speed$1369               Lab_3_3_Speed
-C:   00000168  A$Lab_3_3_Speed$1370               Lab_3_3_Speed
-C:   0000016B  A$Lab_3_3_Speed$1371               Lab_3_3_Speed
-C:   0000016E  A$Lab_3_3_Speed$1374               Lab_3_3_Speed
-C:   0000016E  C$i2c.h$93$1$73                    Lab_3_3_Speed
-C:   00000171  A$Lab_3_3_Speed$1375               Lab_3_3_Speed
-C:   00000174  A$Lab_3_3_Speed$1376               Lab_3_3_Speed
-C:   00000177  A$Lab_3_3_Speed$1377               Lab_3_3_Speed
-C:   00000179  A$Lab_3_3_Speed$1380               Lab_3_3_Speed
-C:   0000017B  A$Lab_3_3_Speed$1382               Lab_3_3_Speed
-C:   0000017C  A$Lab_3_3_Speed$1383               Lab_3_3_Speed
-C:   0000017D  A$Lab_3_3_Speed$1384               Lab_3_3_Speed
-C:   0000017E  A$Lab_3_3_Speed$1385               Lab_3_3_Speed
-C:   00000180  A$Lab_3_3_Speed$1388               Lab_3_3_Speed
-C:   00000180  C$i2c.h$96$2$76                    Lab_3_3_Speed
-C:   00000181  A$Lab_3_3_Speed$1389               Lab_3_3_Speed
-C:   00000183  A$Lab_3_3_Speed$1390               Lab_3_3_Speed
-C:   00000185  A$Lab_3_3_Speed$1391               Lab_3_3_Speed
-C:   00000186  A$Lab_3_3_Speed$1392               Lab_3_3_Speed
-C:   00000188  A$Lab_3_3_Speed$1393               Lab_3_3_Speed
-C:   0000018A  A$Lab_3_3_Speed$1394               Lab_3_3_Speed
-C:   0000018B  A$Lab_3_3_Speed$1395               Lab_3_3_Speed
-C:   0000018C  A$Lab_3_3_Speed$1396               Lab_3_3_Speed
-C:   0000018F  A$Lab_3_3_Speed$1397               Lab_3_3_Speed
-C:   00000190  A$Lab_3_3_Speed$1398               Lab_3_3_Speed
-C:   00000192  A$Lab_3_3_Speed$1399               Lab_3_3_Speed
-C:   00000194  A$Lab_3_3_Speed$1400               Lab_3_3_Speed
-C:   00000195  A$Lab_3_3_Speed$1401               Lab_3_3_Speed
+C:   00000142  A$Lab_3_3_Speed$1358               Lab_3_3_Speed
+C:   00000144  A$Lab_3_3_Speed$1359               Lab_3_3_Speed
+C:   00000145  A$Lab_3_3_Speed$1360               Lab_3_3_Speed
+C:   00000147  A$Lab_3_3_Speed$1361               Lab_3_3_Speed
+C:   0000014A  A$Lab_3_3_Speed$1362               Lab_3_3_Speed
+C:   0000014C  A$Lab_3_3_Speed$1363               Lab_3_3_Speed
+C:   0000014F  A$Lab_3_3_Speed$1364               Lab_3_3_Speed
+C:   00000151  A$Lab_3_3_Speed$1365               Lab_3_3_Speed
+C:   00000153  A$Lab_3_3_Speed$1366               Lab_3_3_Speed
+C:   00000155  A$Lab_3_3_Speed$1370               Lab_3_3_Speed
+C:   00000155  C$i2c.h$89$2$74                    Lab_3_3_Speed
+C:   00000157  A$Lab_3_3_Speed$1371               Lab_3_3_Speed
+C:   00000159  A$Lab_3_3_Speed$1372               Lab_3_3_Speed
+C:   0000015A  A$Lab_3_3_Speed$1373               Lab_3_3_Speed
+C:   0000015C  A$Lab_3_3_Speed$1376               Lab_3_3_Speed
+C:   0000015C  C$i2c.h$90$1$73                    Lab_3_3_Speed
+C:   0000015E  A$Lab_3_3_Speed$1377               Lab_3_3_Speed
+C:   00000160  A$Lab_3_3_Speed$1378               Lab_3_3_Speed
+C:   00000161  A$Lab_3_3_Speed$1379               Lab_3_3_Speed
+C:   00000163  A$Lab_3_3_Speed$1380               Lab_3_3_Speed
+C:   00000164  A$Lab_3_3_Speed$1381               Lab_3_3_Speed
+C:   00000166  A$Lab_3_3_Speed$1382               Lab_3_3_Speed
+C:   00000167  A$Lab_3_3_Speed$1383               Lab_3_3_Speed
+C:   00000169  A$Lab_3_3_Speed$1384               Lab_3_3_Speed
+C:   0000016C  A$Lab_3_3_Speed$1385               Lab_3_3_Speed
+C:   0000016F  A$Lab_3_3_Speed$1386               Lab_3_3_Speed
+C:   00000172  A$Lab_3_3_Speed$1389               Lab_3_3_Speed
+C:   00000172  C$i2c.h$93$1$73                    Lab_3_3_Speed
+C:   00000175  A$Lab_3_3_Speed$1390               Lab_3_3_Speed
+C:   00000178  A$Lab_3_3_Speed$1391               Lab_3_3_Speed
+C:   0000017B  A$Lab_3_3_Speed$1392               Lab_3_3_Speed
+C:   0000017D  A$Lab_3_3_Speed$1395               Lab_3_3_Speed
+C:   0000017F  A$Lab_3_3_Speed$1397               Lab_3_3_Speed
+C:   00000180  A$Lab_3_3_Speed$1398               Lab_3_3_Speed
+C:   00000181  A$Lab_3_3_Speed$1399               Lab_3_3_Speed
+C:   00000182  A$Lab_3_3_Speed$1400               Lab_3_3_Speed
+C:   00000184  A$Lab_3_3_Speed$1403               Lab_3_3_Speed
+C:   00000184  C$i2c.h$96$2$76                    Lab_3_3_Speed
+C:   00000185  A$Lab_3_3_Speed$1404               Lab_3_3_Speed
+C:   00000187  A$Lab_3_3_Speed$1405               Lab_3_3_Speed
+C:   00000189  A$Lab_3_3_Speed$1406               Lab_3_3_Speed
+C:   0000018A  A$Lab_3_3_Speed$1407               Lab_3_3_Speed
+C:   0000018C  A$Lab_3_3_Speed$1408               Lab_3_3_Speed
+C:   0000018E  A$Lab_3_3_Speed$1409               Lab_3_3_Speed
+C:   0000018F  A$Lab_3_3_Speed$1410               Lab_3_3_Speed
+C:   00000190  A$Lab_3_3_Speed$1411               Lab_3_3_Speed
+C:   00000193  A$Lab_3_3_Speed$1412               Lab_3_3_Speed
+C:   00000194  A$Lab_3_3_Speed$1413               Lab_3_3_Speed
+C:   00000196  A$Lab_3_3_Speed$1414               Lab_3_3_Speed
+C:   00000198  A$Lab_3_3_Speed$1415               Lab_3_3_Speed
+C:   00000199  A$Lab_3_3_Speed$1416               Lab_3_3_Speed
 ASxxxx Linker V03.00 + NoICE + sdld,  page 32.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000D5    00000DFC =        3580. bytes (REL,CON,CODE)
+CSEG                                000000D9    00000E40 =        3648. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   00000197  A$Lab_3_3_Speed$1402               Lab_3_3_Speed
-C:   00000199  A$Lab_3_3_Speed$1403               Lab_3_3_Speed
-C:   0000019B  A$Lab_3_3_Speed$1404               Lab_3_3_Speed
-C:   0000019C  A$Lab_3_3_Speed$1408               Lab_3_3_Speed
-C:   0000019C  C$i2c.h$94$1$73                    Lab_3_3_Speed
-C:   0000019D  A$Lab_3_3_Speed$1409               Lab_3_3_Speed
-C:   0000019F  A$Lab_3_3_Speed$1413               Lab_3_3_Speed
-C:   0000019F  C$i2c.h$99$1$73                    Lab_3_3_Speed
-C:   000001A2  A$Lab_3_3_Speed$1414               Lab_3_3_Speed
-C:   000001A5  A$Lab_3_3_Speed$1415               Lab_3_3_Speed
-C:   000001A8  A$Lab_3_3_Speed$1416               Lab_3_3_Speed
-C:   000001AB  A$Lab_3_3_Speed$1417               Lab_3_3_Speed
-C:   000001AD  A$Lab_3_3_Speed$1418               Lab_3_3_Speed
-C:   000001B0  A$Lab_3_3_Speed$1419               Lab_3_3_Speed
-C:   000001B3  A$Lab_3_3_Speed$1421               Lab_3_3_Speed
-C:   000001B5  A$Lab_3_3_Speed$1424               Lab_3_3_Speed
-C:   000001B5  C$i2c.h$100$1$73                   Lab_3_3_Speed
-C:   000001B5  XG$lcd_print$0$0                   Lab_3_3_Speed
-C:   000001B6  A$Lab_3_3_Speed$1440               Lab_3_3_Speed
-C:   000001B6  C$i2c.h$103$1$73                   Lab_3_3_Speed
-C:   000001B6  C$i2c.h$105$1$73                   Lab_3_3_Speed
-C:   000001B6  G$lcd_clear$0$0                    Lab_3_3_Speed
-C:   000001B6  _lcd_clear                         Lab_3_3_Speed
-C:   000001B9  A$Lab_3_3_Speed$1444               Lab_3_3_Speed
-C:   000001B9  C$i2c.h$107$1$77                   Lab_3_3_Speed
-C:   000001BB  A$Lab_3_3_Speed$1445               Lab_3_3_Speed
-C:   000001BD  A$Lab_3_3_Speed$1446               Lab_3_3_Speed
-C:   000001BF  A$Lab_3_3_Speed$1447               Lab_3_3_Speed
-C:   000001C2  A$Lab_3_3_Speed$1448               Lab_3_3_Speed
-C:   000001C5  A$Lab_3_3_Speed$1449               Lab_3_3_Speed
-C:   000001C8  A$Lab_3_3_Speed$1450               Lab_3_3_Speed
-C:   000001CB  A$Lab_3_3_Speed$1451               Lab_3_3_Speed
-C:   000001CE  A$Lab_3_3_Speed$1452               Lab_3_3_Speed
-C:   000001D1  A$Lab_3_3_Speed$1453               Lab_3_3_Speed
-C:   000001D4  A$Lab_3_3_Speed$1454               Lab_3_3_Speed
-C:   000001D6  A$Lab_3_3_Speed$1458               Lab_3_3_Speed
-C:   000001D6  C$i2c.h$109$1$77                   Lab_3_3_Speed
-C:   000001D9  A$Lab_3_3_Speed$1461               Lab_3_3_Speed
-C:   000001D9  C$i2c.h$110$1$77                   Lab_3_3_Speed
-C:   000001DC  A$Lab_3_3_Speed$1462               Lab_3_3_Speed
-C:   000001DF  A$Lab_3_3_Speed$1463               Lab_3_3_Speed
-C:   000001E2  A$Lab_3_3_Speed$1464               Lab_3_3_Speed
-C:   000001E5  A$Lab_3_3_Speed$1465               Lab_3_3_Speed
-C:   000001E8  A$Lab_3_3_Speed$1466               Lab_3_3_Speed
-C:   000001EB  A$Lab_3_3_Speed$1467               Lab_3_3_Speed
-C:   000001EE  A$Lab_3_3_Speed$1470               Lab_3_3_Speed
-C:   000001EE  C$i2c.h$111$1$77                   Lab_3_3_Speed
-C:   000001EE  XG$lcd_clear$0$0                   Lab_3_3_Speed
-C:   000001EF  A$Lab_3_3_Speed$1486               Lab_3_3_Speed
-C:   000001EF  C$i2c.h$114$1$77                   Lab_3_3_Speed
-C:   000001EF  C$i2c.h$118$1$78                   Lab_3_3_Speed
+C:   0000019B  A$Lab_3_3_Speed$1417               Lab_3_3_Speed
+C:   0000019D  A$Lab_3_3_Speed$1418               Lab_3_3_Speed
+C:   0000019F  A$Lab_3_3_Speed$1419               Lab_3_3_Speed
+C:   000001A0  A$Lab_3_3_Speed$1423               Lab_3_3_Speed
+C:   000001A0  C$i2c.h$94$1$73                    Lab_3_3_Speed
+C:   000001A1  A$Lab_3_3_Speed$1424               Lab_3_3_Speed
+C:   000001A3  A$Lab_3_3_Speed$1428               Lab_3_3_Speed
+C:   000001A3  C$i2c.h$99$1$73                    Lab_3_3_Speed
+C:   000001A6  A$Lab_3_3_Speed$1429               Lab_3_3_Speed
+C:   000001A9  A$Lab_3_3_Speed$1430               Lab_3_3_Speed
+C:   000001AC  A$Lab_3_3_Speed$1431               Lab_3_3_Speed
+C:   000001AF  A$Lab_3_3_Speed$1432               Lab_3_3_Speed
+C:   000001B1  A$Lab_3_3_Speed$1433               Lab_3_3_Speed
+C:   000001B4  A$Lab_3_3_Speed$1434               Lab_3_3_Speed
+C:   000001B7  A$Lab_3_3_Speed$1436               Lab_3_3_Speed
+C:   000001B9  A$Lab_3_3_Speed$1439               Lab_3_3_Speed
+C:   000001B9  C$i2c.h$100$1$73                   Lab_3_3_Speed
+C:   000001B9  XG$lcd_print$0$0                   Lab_3_3_Speed
+C:   000001BA  A$Lab_3_3_Speed$1455               Lab_3_3_Speed
+C:   000001BA  C$i2c.h$103$1$73                   Lab_3_3_Speed
+C:   000001BA  C$i2c.h$105$1$73                   Lab_3_3_Speed
+C:   000001BA  G$lcd_clear$0$0                    Lab_3_3_Speed
+C:   000001BA  _lcd_clear                         Lab_3_3_Speed
+C:   000001BD  A$Lab_3_3_Speed$1459               Lab_3_3_Speed
+C:   000001BD  C$i2c.h$107$1$77                   Lab_3_3_Speed
+C:   000001BF  A$Lab_3_3_Speed$1460               Lab_3_3_Speed
+C:   000001C1  A$Lab_3_3_Speed$1461               Lab_3_3_Speed
+C:   000001C3  A$Lab_3_3_Speed$1462               Lab_3_3_Speed
+C:   000001C6  A$Lab_3_3_Speed$1463               Lab_3_3_Speed
+C:   000001C9  A$Lab_3_3_Speed$1464               Lab_3_3_Speed
+C:   000001CC  A$Lab_3_3_Speed$1465               Lab_3_3_Speed
+C:   000001CF  A$Lab_3_3_Speed$1466               Lab_3_3_Speed
+C:   000001D2  A$Lab_3_3_Speed$1467               Lab_3_3_Speed
+C:   000001D5  A$Lab_3_3_Speed$1468               Lab_3_3_Speed
+C:   000001D8  A$Lab_3_3_Speed$1469               Lab_3_3_Speed
+C:   000001DA  A$Lab_3_3_Speed$1473               Lab_3_3_Speed
+C:   000001DA  C$i2c.h$109$1$77                   Lab_3_3_Speed
+C:   000001DD  A$Lab_3_3_Speed$1476               Lab_3_3_Speed
+C:   000001DD  C$i2c.h$110$1$77                   Lab_3_3_Speed
+C:   000001E0  A$Lab_3_3_Speed$1477               Lab_3_3_Speed
+C:   000001E3  A$Lab_3_3_Speed$1478               Lab_3_3_Speed
+C:   000001E6  A$Lab_3_3_Speed$1479               Lab_3_3_Speed
+C:   000001E9  A$Lab_3_3_Speed$1480               Lab_3_3_Speed
+C:   000001EC  A$Lab_3_3_Speed$1481               Lab_3_3_Speed
+C:   000001EF  A$Lab_3_3_Speed$1482               Lab_3_3_Speed
+C:   000001F2  A$Lab_3_3_Speed$1485               Lab_3_3_Speed
+C:   000001F2  C$i2c.h$111$1$77                   Lab_3_3_Speed
+C:   000001F2  XG$lcd_clear$0$0                   Lab_3_3_Speed
+C:   000001F3  A$Lab_3_3_Speed$1501               Lab_3_3_Speed
+C:   000001F3  C$i2c.h$114$1$77                   Lab_3_3_Speed
+C:   000001F3  C$i2c.h$118$1$78                   Lab_3_3_Speed
 ASxxxx Linker V03.00 + NoICE + sdld,  page 33.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000D5    00000DFC =        3580. bytes (REL,CON,CODE)
+CSEG                                000000D9    00000E40 =        3648. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   000001EF  G$read_keypad$0$0                  Lab_3_3_Speed
-C:   000001EF  _read_keypad                       Lab_3_3_Speed
-C:   000001F2  A$Lab_3_3_Speed$1487               Lab_3_3_Speed
-C:   000001F5  A$Lab_3_3_Speed$1488               Lab_3_3_Speed
-C:   000001F8  A$Lab_3_3_Speed$1489               Lab_3_3_Speed
-C:   000001FB  A$Lab_3_3_Speed$1490               Lab_3_3_Speed
-C:   000001FE  A$Lab_3_3_Speed$1491               Lab_3_3_Speed
-C:   00000201  A$Lab_3_3_Speed$1492               Lab_3_3_Speed
-C:   00000204  A$Lab_3_3_Speed$1495               Lab_3_3_Speed
-C:   00000204  C$i2c.h$119$1$78                   Lab_3_3_Speed
-C:   00000206  A$Lab_3_3_Speed$1496               Lab_3_3_Speed
-C:   00000209  A$Lab_3_3_Speed$1497               Lab_3_3_Speed
-C:   0000020C  A$Lab_3_3_Speed$1498               Lab_3_3_Speed
-C:   0000020E  A$Lab_3_3_Speed$1502               Lab_3_3_Speed
-C:   00000210  A$Lab_3_3_Speed$1503               Lab_3_3_Speed
-C:   00000212  A$Lab_3_3_Speed$1507               Lab_3_3_Speed
-C:   00000212  C$i2c.h$123$2$79                   Lab_3_3_Speed
-C:   00000214  A$Lab_3_3_Speed$1508               Lab_3_3_Speed
-C:   00000216  A$Lab_3_3_Speed$1509               Lab_3_3_Speed
-C:   00000218  A$Lab_3_3_Speed$1510               Lab_3_3_Speed
-C:   0000021A  A$Lab_3_3_Speed$1511               Lab_3_3_Speed
-C:   0000021C  A$Lab_3_3_Speed$1513               Lab_3_3_Speed
-C:   0000021D  A$Lab_3_3_Speed$1514               Lab_3_3_Speed
-C:   0000021E  A$Lab_3_3_Speed$1515               Lab_3_3_Speed
-C:   0000021F  A$Lab_3_3_Speed$1516               Lab_3_3_Speed
-C:   00000220  A$Lab_3_3_Speed$1517               Lab_3_3_Speed
-C:   00000221  A$Lab_3_3_Speed$1518               Lab_3_3_Speed
-C:   00000222  A$Lab_3_3_Speed$1520               Lab_3_3_Speed
-C:   00000225  A$Lab_3_3_Speed$1521               Lab_3_3_Speed
-C:   00000227  A$Lab_3_3_Speed$1522               Lab_3_3_Speed
-C:   00000229  A$Lab_3_3_Speed$1523               Lab_3_3_Speed
-C:   0000022A  A$Lab_3_3_Speed$1524               Lab_3_3_Speed
-C:   0000022C  A$Lab_3_3_Speed$1525               Lab_3_3_Speed
-C:   0000022D  A$Lab_3_3_Speed$1526               Lab_3_3_Speed
-C:   0000022F  A$Lab_3_3_Speed$1527               Lab_3_3_Speed
-C:   00000230  A$Lab_3_3_Speed$1528               Lab_3_3_Speed
-C:   00000231  A$Lab_3_3_Speed$1529               Lab_3_3_Speed
-C:   00000233  A$Lab_3_3_Speed$1532               Lab_3_3_Speed
-C:   00000233  C$i2c.h$124$2$79                   Lab_3_3_Speed
-C:   00000235  A$Lab_3_3_Speed$1533               Lab_3_3_Speed
-C:   00000236  A$Lab_3_3_Speed$1534               Lab_3_3_Speed
-C:   00000238  A$Lab_3_3_Speed$1535               Lab_3_3_Speed
-C:   0000023A  A$Lab_3_3_Speed$1539               Lab_3_3_Speed
-C:   0000023A  C$i2c.h$121$1$78                   Lab_3_3_Speed
-C:   0000023B  A$Lab_3_3_Speed$1540               Lab_3_3_Speed
-C:   0000023D  A$Lab_3_3_Speed$1541               Lab_3_3_Speed
-C:   00000240  A$Lab_3_3_Speed$1543               Lab_3_3_Speed
-C:   00000242  A$Lab_3_3_Speed$1546               Lab_3_3_Speed
-C:   00000242  C$i2c.h$127$1$78                   Lab_3_3_Speed
-C:   00000244  A$Lab_3_3_Speed$1547               Lab_3_3_Speed
-C:   00000247  A$Lab_3_3_Speed$1548               Lab_3_3_Speed
+C:   000001F3  G$read_keypad$0$0                  Lab_3_3_Speed
+C:   000001F3  _read_keypad                       Lab_3_3_Speed
+C:   000001F6  A$Lab_3_3_Speed$1502               Lab_3_3_Speed
+C:   000001F9  A$Lab_3_3_Speed$1503               Lab_3_3_Speed
+C:   000001FC  A$Lab_3_3_Speed$1504               Lab_3_3_Speed
+C:   000001FF  A$Lab_3_3_Speed$1505               Lab_3_3_Speed
+C:   00000202  A$Lab_3_3_Speed$1506               Lab_3_3_Speed
+C:   00000205  A$Lab_3_3_Speed$1507               Lab_3_3_Speed
+C:   00000208  A$Lab_3_3_Speed$1510               Lab_3_3_Speed
+C:   00000208  C$i2c.h$119$1$78                   Lab_3_3_Speed
+C:   0000020A  A$Lab_3_3_Speed$1511               Lab_3_3_Speed
+C:   0000020D  A$Lab_3_3_Speed$1512               Lab_3_3_Speed
+C:   00000210  A$Lab_3_3_Speed$1513               Lab_3_3_Speed
+C:   00000212  A$Lab_3_3_Speed$1517               Lab_3_3_Speed
+C:   00000214  A$Lab_3_3_Speed$1518               Lab_3_3_Speed
+C:   00000216  A$Lab_3_3_Speed$1522               Lab_3_3_Speed
+C:   00000216  C$i2c.h$123$2$79                   Lab_3_3_Speed
+C:   00000218  A$Lab_3_3_Speed$1523               Lab_3_3_Speed
+C:   0000021A  A$Lab_3_3_Speed$1524               Lab_3_3_Speed
+C:   0000021C  A$Lab_3_3_Speed$1525               Lab_3_3_Speed
+C:   0000021E  A$Lab_3_3_Speed$1526               Lab_3_3_Speed
+C:   00000220  A$Lab_3_3_Speed$1528               Lab_3_3_Speed
+C:   00000221  A$Lab_3_3_Speed$1529               Lab_3_3_Speed
+C:   00000222  A$Lab_3_3_Speed$1530               Lab_3_3_Speed
+C:   00000223  A$Lab_3_3_Speed$1531               Lab_3_3_Speed
+C:   00000224  A$Lab_3_3_Speed$1532               Lab_3_3_Speed
+C:   00000225  A$Lab_3_3_Speed$1533               Lab_3_3_Speed
+C:   00000226  A$Lab_3_3_Speed$1535               Lab_3_3_Speed
+C:   00000229  A$Lab_3_3_Speed$1536               Lab_3_3_Speed
+C:   0000022B  A$Lab_3_3_Speed$1537               Lab_3_3_Speed
+C:   0000022D  A$Lab_3_3_Speed$1538               Lab_3_3_Speed
+C:   0000022E  A$Lab_3_3_Speed$1539               Lab_3_3_Speed
+C:   00000230  A$Lab_3_3_Speed$1540               Lab_3_3_Speed
+C:   00000231  A$Lab_3_3_Speed$1541               Lab_3_3_Speed
+C:   00000233  A$Lab_3_3_Speed$1542               Lab_3_3_Speed
+C:   00000234  A$Lab_3_3_Speed$1543               Lab_3_3_Speed
+C:   00000235  A$Lab_3_3_Speed$1544               Lab_3_3_Speed
+C:   00000237  A$Lab_3_3_Speed$1547               Lab_3_3_Speed
+C:   00000237  C$i2c.h$124$2$79                   Lab_3_3_Speed
+C:   00000239  A$Lab_3_3_Speed$1548               Lab_3_3_Speed
+C:   0000023A  A$Lab_3_3_Speed$1549               Lab_3_3_Speed
+C:   0000023C  A$Lab_3_3_Speed$1550               Lab_3_3_Speed
+C:   0000023E  A$Lab_3_3_Speed$1554               Lab_3_3_Speed
+C:   0000023E  C$i2c.h$121$1$78                   Lab_3_3_Speed
+C:   0000023F  A$Lab_3_3_Speed$1555               Lab_3_3_Speed
+C:   00000241  A$Lab_3_3_Speed$1556               Lab_3_3_Speed
+C:   00000244  A$Lab_3_3_Speed$1558               Lab_3_3_Speed
+C:   00000246  A$Lab_3_3_Speed$1561               Lab_3_3_Speed
+C:   00000246  C$i2c.h$127$1$78                   Lab_3_3_Speed
+C:   00000248  A$Lab_3_3_Speed$1562               Lab_3_3_Speed
+C:   0000024B  A$Lab_3_3_Speed$1563               Lab_3_3_Speed
 ASxxxx Linker V03.00 + NoICE + sdld,  page 34.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000D5    00000DFC =        3580. bytes (REL,CON,CODE)
+CSEG                                000000D9    00000E40 =        3648. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   0000024A  A$Lab_3_3_Speed$1549               Lab_3_3_Speed
-C:   0000024C  A$Lab_3_3_Speed$1553               Lab_3_3_Speed
-C:   0000024C  C$i2c.h$129$1$78                   Lab_3_3_Speed
-C:   0000024E  A$Lab_3_3_Speed$1554               Lab_3_3_Speed
-C:   00000251  A$Lab_3_3_Speed$1555               Lab_3_3_Speed
-C:   00000254  A$Lab_3_3_Speed$1556               Lab_3_3_Speed
-C:   00000256  A$Lab_3_3_Speed$1560               Lab_3_3_Speed
-C:   00000256  C$i2c.h$131$1$78                   Lab_3_3_Speed
-C:   00000258  A$Lab_3_3_Speed$1561               Lab_3_3_Speed
-C:   0000025B  A$Lab_3_3_Speed$1562               Lab_3_3_Speed
-C:   0000025E  A$Lab_3_3_Speed$1563               Lab_3_3_Speed
-C:   00000260  A$Lab_3_3_Speed$1567               Lab_3_3_Speed
-C:   00000260  C$i2c.h$133$1$78                   Lab_3_3_Speed
-C:   00000262  A$Lab_3_3_Speed$1568               Lab_3_3_Speed
-C:   00000265  A$Lab_3_3_Speed$1569               Lab_3_3_Speed
-C:   00000268  A$Lab_3_3_Speed$1570               Lab_3_3_Speed
-C:   0000026A  A$Lab_3_3_Speed$1574               Lab_3_3_Speed
-C:   0000026A  C$i2c.h$135$1$78                   Lab_3_3_Speed
-C:   0000026D  A$Lab_3_3_Speed$1578               Lab_3_3_Speed
-C:   0000026D  C$i2c.h$136$1$78                   Lab_3_3_Speed
-C:   0000026D  XG$read_keypad$0$0                 Lab_3_3_Speed
-C:   0000026E  A$Lab_3_3_Speed$1594               Lab_3_3_Speed
-C:   0000026E  C$i2c.h$148$1$78                   Lab_3_3_Speed
-C:   0000026E  G$kpd_input$0$0                    Lab_3_3_Speed
-C:   0000026E  _kpd_input                         Lab_3_3_Speed
-C:   00000270  A$Lab_3_3_Speed$1599               Lab_3_3_Speed
-C:   00000270  C$i2c.h$153$1$81                   Lab_3_3_Speed
-C:   00000270  C$i2c.h$156$1$81                   Lab_3_3_Speed
-C:   00000271  A$Lab_3_3_Speed$1600               Lab_3_3_Speed
-C:   00000272  A$Lab_3_3_Speed$1601               Lab_3_3_Speed
-C:   00000273  A$Lab_3_3_Speed$1602               Lab_3_3_Speed
-C:   00000274  A$Lab_3_3_Speed$1603               Lab_3_3_Speed
-C:   00000276  A$Lab_3_3_Speed$1604               Lab_3_3_Speed
-C:   00000278  A$Lab_3_3_Speed$1605               Lab_3_3_Speed
-C:   0000027A  A$Lab_3_3_Speed$1606               Lab_3_3_Speed
-C:   0000027C  A$Lab_3_3_Speed$1607               Lab_3_3_Speed
-C:   0000027E  A$Lab_3_3_Speed$1608               Lab_3_3_Speed
-C:   00000280  A$Lab_3_3_Speed$1609               Lab_3_3_Speed
-C:   00000282  A$Lab_3_3_Speed$1610               Lab_3_3_Speed
-C:   00000284  A$Lab_3_3_Speed$1611               Lab_3_3_Speed
-C:   00000286  A$Lab_3_3_Speed$1612               Lab_3_3_Speed
-C:   00000289  A$Lab_3_3_Speed$1613               Lab_3_3_Speed
-C:   0000028B  A$Lab_3_3_Speed$1614               Lab_3_3_Speed
-C:   0000028D  A$Lab_3_3_Speed$1615               Lab_3_3_Speed
-C:   0000028F  A$Lab_3_3_Speed$1616               Lab_3_3_Speed
-C:   00000291  A$Lab_3_3_Speed$1617               Lab_3_3_Speed
-C:   00000293  A$Lab_3_3_Speed$1621               Lab_3_3_Speed
-C:   00000293  C$i2c.h$158$1$81                   Lab_3_3_Speed
-C:   00000295  A$Lab_3_3_Speed$1622               Lab_3_3_Speed
-C:   00000297  A$Lab_3_3_Speed$1623               Lab_3_3_Speed
-C:   00000299  A$Lab_3_3_Speed$1624               Lab_3_3_Speed
+C:   0000024E  A$Lab_3_3_Speed$1564               Lab_3_3_Speed
+C:   00000250  A$Lab_3_3_Speed$1568               Lab_3_3_Speed
+C:   00000250  C$i2c.h$129$1$78                   Lab_3_3_Speed
+C:   00000252  A$Lab_3_3_Speed$1569               Lab_3_3_Speed
+C:   00000255  A$Lab_3_3_Speed$1570               Lab_3_3_Speed
+C:   00000258  A$Lab_3_3_Speed$1571               Lab_3_3_Speed
+C:   0000025A  A$Lab_3_3_Speed$1575               Lab_3_3_Speed
+C:   0000025A  C$i2c.h$131$1$78                   Lab_3_3_Speed
+C:   0000025C  A$Lab_3_3_Speed$1576               Lab_3_3_Speed
+C:   0000025F  A$Lab_3_3_Speed$1577               Lab_3_3_Speed
+C:   00000262  A$Lab_3_3_Speed$1578               Lab_3_3_Speed
+C:   00000264  A$Lab_3_3_Speed$1582               Lab_3_3_Speed
+C:   00000264  C$i2c.h$133$1$78                   Lab_3_3_Speed
+C:   00000266  A$Lab_3_3_Speed$1583               Lab_3_3_Speed
+C:   00000269  A$Lab_3_3_Speed$1584               Lab_3_3_Speed
+C:   0000026C  A$Lab_3_3_Speed$1585               Lab_3_3_Speed
+C:   0000026E  A$Lab_3_3_Speed$1589               Lab_3_3_Speed
+C:   0000026E  C$i2c.h$135$1$78                   Lab_3_3_Speed
+C:   00000271  A$Lab_3_3_Speed$1593               Lab_3_3_Speed
+C:   00000271  C$i2c.h$136$1$78                   Lab_3_3_Speed
+C:   00000271  XG$read_keypad$0$0                 Lab_3_3_Speed
+C:   00000272  A$Lab_3_3_Speed$1609               Lab_3_3_Speed
+C:   00000272  C$i2c.h$148$1$78                   Lab_3_3_Speed
+C:   00000272  G$kpd_input$0$0                    Lab_3_3_Speed
+C:   00000272  _kpd_input                         Lab_3_3_Speed
+C:   00000274  A$Lab_3_3_Speed$1614               Lab_3_3_Speed
+C:   00000274  C$i2c.h$153$1$81                   Lab_3_3_Speed
+C:   00000274  C$i2c.h$156$1$81                   Lab_3_3_Speed
+C:   00000275  A$Lab_3_3_Speed$1615               Lab_3_3_Speed
+C:   00000276  A$Lab_3_3_Speed$1616               Lab_3_3_Speed
+C:   00000277  A$Lab_3_3_Speed$1617               Lab_3_3_Speed
+C:   00000278  A$Lab_3_3_Speed$1618               Lab_3_3_Speed
+C:   0000027A  A$Lab_3_3_Speed$1619               Lab_3_3_Speed
+C:   0000027C  A$Lab_3_3_Speed$1620               Lab_3_3_Speed
+C:   0000027E  A$Lab_3_3_Speed$1621               Lab_3_3_Speed
+C:   00000280  A$Lab_3_3_Speed$1622               Lab_3_3_Speed
+C:   00000282  A$Lab_3_3_Speed$1623               Lab_3_3_Speed
+C:   00000284  A$Lab_3_3_Speed$1624               Lab_3_3_Speed
+C:   00000286  A$Lab_3_3_Speed$1625               Lab_3_3_Speed
+C:   00000288  A$Lab_3_3_Speed$1626               Lab_3_3_Speed
+C:   0000028A  A$Lab_3_3_Speed$1627               Lab_3_3_Speed
+C:   0000028D  A$Lab_3_3_Speed$1628               Lab_3_3_Speed
+C:   0000028F  A$Lab_3_3_Speed$1629               Lab_3_3_Speed
+C:   00000291  A$Lab_3_3_Speed$1630               Lab_3_3_Speed
+C:   00000293  A$Lab_3_3_Speed$1631               Lab_3_3_Speed
+C:   00000295  A$Lab_3_3_Speed$1632               Lab_3_3_Speed
+C:   00000297  A$Lab_3_3_Speed$1636               Lab_3_3_Speed
+C:   00000297  C$i2c.h$158$1$81                   Lab_3_3_Speed
+C:   00000299  A$Lab_3_3_Speed$1637               Lab_3_3_Speed
+C:   0000029B  A$Lab_3_3_Speed$1638               Lab_3_3_Speed
+C:   0000029D  A$Lab_3_3_Speed$1639               Lab_3_3_Speed
 ASxxxx Linker V03.00 + NoICE + sdld,  page 35.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000D5    00000DFC =        3580. bytes (REL,CON,CODE)
+CSEG                                000000D9    00000E40 =        3648. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   0000029B  A$Lab_3_3_Speed$1625               Lab_3_3_Speed
-C:   0000029C  A$Lab_3_3_Speed$1626               Lab_3_3_Speed
-C:   0000029E  A$Lab_3_3_Speed$1627               Lab_3_3_Speed
-C:   000002A0  A$Lab_3_3_Speed$1628               Lab_3_3_Speed
-C:   000002A2  A$Lab_3_3_Speed$1629               Lab_3_3_Speed
-C:   000002A3  A$Lab_3_3_Speed$1630               Lab_3_3_Speed
-C:   000002A5  A$Lab_3_3_Speed$1631               Lab_3_3_Speed
-C:   000002A7  A$Lab_3_3_Speed$1632               Lab_3_3_Speed
-C:   000002A9  A$Lab_3_3_Speed$1633               Lab_3_3_Speed
-C:   000002AA  A$Lab_3_3_Speed$1634               Lab_3_3_Speed
-C:   000002AC  A$Lab_3_3_Speed$1635               Lab_3_3_Speed
-C:   000002AE  A$Lab_3_3_Speed$1636               Lab_3_3_Speed
-C:   000002B0  A$Lab_3_3_Speed$1637               Lab_3_3_Speed
-C:   000002B1  A$Lab_3_3_Speed$1638               Lab_3_3_Speed
-C:   000002B3  A$Lab_3_3_Speed$1639               Lab_3_3_Speed
-C:   000002B5  A$Lab_3_3_Speed$1640               Lab_3_3_Speed
-C:   000002B7  A$Lab_3_3_Speed$1641               Lab_3_3_Speed
-C:   000002B8  A$Lab_3_3_Speed$1642               Lab_3_3_Speed
-C:   000002BA  A$Lab_3_3_Speed$1643               Lab_3_3_Speed
-C:   000002BC  A$Lab_3_3_Speed$1644               Lab_3_3_Speed
-C:   000002BE  A$Lab_3_3_Speed$1645               Lab_3_3_Speed
-C:   000002C0  A$Lab_3_3_Speed$1646               Lab_3_3_Speed
-C:   000002C2  A$Lab_3_3_Speed$1647               Lab_3_3_Speed
-C:   000002C4  A$Lab_3_3_Speed$1648               Lab_3_3_Speed
-C:   000002C6  A$Lab_3_3_Speed$1649               Lab_3_3_Speed
-C:   000002C9  A$Lab_3_3_Speed$1650               Lab_3_3_Speed
-C:   000002CB  A$Lab_3_3_Speed$1651               Lab_3_3_Speed
-C:   000002CD  A$Lab_3_3_Speed$1652               Lab_3_3_Speed
-C:   000002CF  A$Lab_3_3_Speed$1655               Lab_3_3_Speed
-C:   000002CF  C$i2c.h$160$1$81                   Lab_3_3_Speed
-C:   000002D2  A$Lab_3_3_Speed$1656               Lab_3_3_Speed
-C:   000002D5  A$Lab_3_3_Speed$1657               Lab_3_3_Speed
-C:   000002D6  A$Lab_3_3_Speed$1658               Lab_3_3_Speed
-C:   000002D9  A$Lab_3_3_Speed$1659               Lab_3_3_Speed
-C:   000002DB  A$Lab_3_3_Speed$1660               Lab_3_3_Speed
-C:   000002DD  A$Lab_3_3_Speed$1663               Lab_3_3_Speed
-C:   000002DF  A$Lab_3_3_Speed$1667               Lab_3_3_Speed
-C:   000002DF  C$i2c.h$166$3$84                   Lab_3_3_Speed
-C:   000002E1  A$Lab_3_3_Speed$1668               Lab_3_3_Speed
-C:   000002E3  A$Lab_3_3_Speed$1669               Lab_3_3_Speed
-C:   000002E5  A$Lab_3_3_Speed$1670               Lab_3_3_Speed
-C:   000002E8  A$Lab_3_3_Speed$1671               Lab_3_3_Speed
-C:   000002EA  A$Lab_3_3_Speed$1672               Lab_3_3_Speed
-C:   000002EC  A$Lab_3_3_Speed$1673               Lab_3_3_Speed
-C:   000002EE  A$Lab_3_3_Speed$1674               Lab_3_3_Speed
-C:   000002F0  A$Lab_3_3_Speed$1675               Lab_3_3_Speed
-C:   000002F2  A$Lab_3_3_Speed$1676               Lab_3_3_Speed
-C:   000002F5  A$Lab_3_3_Speed$1677               Lab_3_3_Speed
-C:   000002F7  A$Lab_3_3_Speed$1679               Lab_3_3_Speed
-C:   000002FA  A$Lab_3_3_Speed$1681               Lab_3_3_Speed
-C:   000002FD  A$Lab_3_3_Speed$1682               Lab_3_3_Speed
+C:   0000029F  A$Lab_3_3_Speed$1640               Lab_3_3_Speed
+C:   000002A0  A$Lab_3_3_Speed$1641               Lab_3_3_Speed
+C:   000002A2  A$Lab_3_3_Speed$1642               Lab_3_3_Speed
+C:   000002A4  A$Lab_3_3_Speed$1643               Lab_3_3_Speed
+C:   000002A6  A$Lab_3_3_Speed$1644               Lab_3_3_Speed
+C:   000002A7  A$Lab_3_3_Speed$1645               Lab_3_3_Speed
+C:   000002A9  A$Lab_3_3_Speed$1646               Lab_3_3_Speed
+C:   000002AB  A$Lab_3_3_Speed$1647               Lab_3_3_Speed
+C:   000002AD  A$Lab_3_3_Speed$1648               Lab_3_3_Speed
+C:   000002AE  A$Lab_3_3_Speed$1649               Lab_3_3_Speed
+C:   000002B0  A$Lab_3_3_Speed$1650               Lab_3_3_Speed
+C:   000002B2  A$Lab_3_3_Speed$1651               Lab_3_3_Speed
+C:   000002B4  A$Lab_3_3_Speed$1652               Lab_3_3_Speed
+C:   000002B5  A$Lab_3_3_Speed$1653               Lab_3_3_Speed
+C:   000002B7  A$Lab_3_3_Speed$1654               Lab_3_3_Speed
+C:   000002B9  A$Lab_3_3_Speed$1655               Lab_3_3_Speed
+C:   000002BB  A$Lab_3_3_Speed$1656               Lab_3_3_Speed
+C:   000002BC  A$Lab_3_3_Speed$1657               Lab_3_3_Speed
+C:   000002BE  A$Lab_3_3_Speed$1658               Lab_3_3_Speed
+C:   000002C0  A$Lab_3_3_Speed$1659               Lab_3_3_Speed
+C:   000002C2  A$Lab_3_3_Speed$1660               Lab_3_3_Speed
+C:   000002C4  A$Lab_3_3_Speed$1661               Lab_3_3_Speed
+C:   000002C6  A$Lab_3_3_Speed$1662               Lab_3_3_Speed
+C:   000002C8  A$Lab_3_3_Speed$1663               Lab_3_3_Speed
+C:   000002CA  A$Lab_3_3_Speed$1664               Lab_3_3_Speed
+C:   000002CD  A$Lab_3_3_Speed$1665               Lab_3_3_Speed
+C:   000002CF  A$Lab_3_3_Speed$1666               Lab_3_3_Speed
+C:   000002D1  A$Lab_3_3_Speed$1667               Lab_3_3_Speed
+C:   000002D3  A$Lab_3_3_Speed$1670               Lab_3_3_Speed
+C:   000002D3  C$i2c.h$160$1$81                   Lab_3_3_Speed
+C:   000002D6  A$Lab_3_3_Speed$1671               Lab_3_3_Speed
+C:   000002D9  A$Lab_3_3_Speed$1672               Lab_3_3_Speed
+C:   000002DA  A$Lab_3_3_Speed$1673               Lab_3_3_Speed
+C:   000002DD  A$Lab_3_3_Speed$1674               Lab_3_3_Speed
+C:   000002DF  A$Lab_3_3_Speed$1675               Lab_3_3_Speed
+C:   000002E1  A$Lab_3_3_Speed$1678               Lab_3_3_Speed
+C:   000002E3  A$Lab_3_3_Speed$1682               Lab_3_3_Speed
+C:   000002E3  C$i2c.h$166$3$84                   Lab_3_3_Speed
+C:   000002E5  A$Lab_3_3_Speed$1683               Lab_3_3_Speed
+C:   000002E7  A$Lab_3_3_Speed$1684               Lab_3_3_Speed
+C:   000002E9  A$Lab_3_3_Speed$1685               Lab_3_3_Speed
+C:   000002EC  A$Lab_3_3_Speed$1686               Lab_3_3_Speed
+C:   000002EE  A$Lab_3_3_Speed$1687               Lab_3_3_Speed
+C:   000002F0  A$Lab_3_3_Speed$1688               Lab_3_3_Speed
+C:   000002F2  A$Lab_3_3_Speed$1689               Lab_3_3_Speed
+C:   000002F4  A$Lab_3_3_Speed$1690               Lab_3_3_Speed
+C:   000002F6  A$Lab_3_3_Speed$1691               Lab_3_3_Speed
+C:   000002F9  A$Lab_3_3_Speed$1692               Lab_3_3_Speed
+C:   000002FB  A$Lab_3_3_Speed$1694               Lab_3_3_Speed
+C:   000002FE  A$Lab_3_3_Speed$1696               Lab_3_3_Speed
+C:   00000301  A$Lab_3_3_Speed$1697               Lab_3_3_Speed
 ASxxxx Linker V03.00 + NoICE + sdld,  page 36.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000D5    00000DFC =        3580. bytes (REL,CON,CODE)
+CSEG                                000000D9    00000E40 =        3648. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   000002FE  A$Lab_3_3_Speed$1683               Lab_3_3_Speed
-C:   00000300  A$Lab_3_3_Speed$1684               Lab_3_3_Speed
-C:   00000302  A$Lab_3_3_Speed$1685               Lab_3_3_Speed
-C:   00000304  A$Lab_3_3_Speed$1686               Lab_3_3_Speed
-C:   00000306  A$Lab_3_3_Speed$1687               Lab_3_3_Speed
-C:   00000309  A$Lab_3_3_Speed$1688               Lab_3_3_Speed
-C:   0000030B  A$Lab_3_3_Speed$1689               Lab_3_3_Speed
-C:   0000030D  A$Lab_3_3_Speed$1690               Lab_3_3_Speed
-C:   0000030F  A$Lab_3_3_Speed$1691               Lab_3_3_Speed
-C:   00000311  A$Lab_3_3_Speed$1695               Lab_3_3_Speed
-C:   00000311  C$i2c.h$167$2$82                   Lab_3_3_Speed
-C:   00000314  A$Lab_3_3_Speed$1699               Lab_3_3_Speed
-C:   00000314  C$i2c.h$169$3$83                   Lab_3_3_Speed
-C:   00000316  A$Lab_3_3_Speed$1700               Lab_3_3_Speed
-C:   00000318  A$Lab_3_3_Speed$1701               Lab_3_3_Speed
-C:   0000031B  A$Lab_3_3_Speed$1702               Lab_3_3_Speed
-C:   0000031D  A$Lab_3_3_Speed$1703               Lab_3_3_Speed
-C:   0000031F  A$Lab_3_3_Speed$1704               Lab_3_3_Speed
-C:   00000321  A$Lab_3_3_Speed$1705               Lab_3_3_Speed
-C:   00000324  A$Lab_3_3_Speed$1706               Lab_3_3_Speed
-C:   00000327  A$Lab_3_3_Speed$1707               Lab_3_3_Speed
-C:   00000328  A$Lab_3_3_Speed$1708               Lab_3_3_Speed
-C:   0000032A  A$Lab_3_3_Speed$1709               Lab_3_3_Speed
-C:   0000032C  A$Lab_3_3_Speed$1710               Lab_3_3_Speed
-C:   0000032E  A$Lab_3_3_Speed$1711               Lab_3_3_Speed
-C:   00000331  A$Lab_3_3_Speed$1712               Lab_3_3_Speed
-C:   00000333  A$Lab_3_3_Speed$1713               Lab_3_3_Speed
-C:   00000335  A$Lab_3_3_Speed$1714               Lab_3_3_Speed
-C:   00000337  A$Lab_3_3_Speed$1718               Lab_3_3_Speed
-C:   00000337  C$i2c.h$170$3$83                   Lab_3_3_Speed
-C:   00000339  A$Lab_3_3_Speed$1719               Lab_3_3_Speed
-C:   0000033B  A$Lab_3_3_Speed$1720               Lab_3_3_Speed
-C:   0000033E  A$Lab_3_3_Speed$1724               Lab_3_3_Speed
-C:   0000033E  C$i2c.h$174$3$84                   Lab_3_3_Speed
-C:   0000033F  A$Lab_3_3_Speed$1725               Lab_3_3_Speed
-C:   00000340  A$Lab_3_3_Speed$1726               Lab_3_3_Speed
-C:   00000341  A$Lab_3_3_Speed$1727               Lab_3_3_Speed
-C:   00000343  A$Lab_3_3_Speed$1728               Lab_3_3_Speed
-C:   00000344  A$Lab_3_3_Speed$1729               Lab_3_3_Speed
-C:   00000346  A$Lab_3_3_Speed$1730               Lab_3_3_Speed
-C:   00000348  A$Lab_3_3_Speed$1731               Lab_3_3_Speed
-C:   0000034A  A$Lab_3_3_Speed$1732               Lab_3_3_Speed
-C:   0000034C  A$Lab_3_3_Speed$1733               Lab_3_3_Speed
-C:   0000034E  A$Lab_3_3_Speed$1734               Lab_3_3_Speed
-C:   00000350  A$Lab_3_3_Speed$1735               Lab_3_3_Speed
-C:   00000352  A$Lab_3_3_Speed$1736               Lab_3_3_Speed
-C:   00000354  A$Lab_3_3_Speed$1737               Lab_3_3_Speed
-C:   00000356  A$Lab_3_3_Speed$1738               Lab_3_3_Speed
-C:   00000358  A$Lab_3_3_Speed$1739               Lab_3_3_Speed
-C:   0000035A  A$Lab_3_3_Speed$1740               Lab_3_3_Speed
-C:   0000035C  A$Lab_3_3_Speed$1741               Lab_3_3_Speed
+C:   00000302  A$Lab_3_3_Speed$1698               Lab_3_3_Speed
+C:   00000304  A$Lab_3_3_Speed$1699               Lab_3_3_Speed
+C:   00000306  A$Lab_3_3_Speed$1700               Lab_3_3_Speed
+C:   00000308  A$Lab_3_3_Speed$1701               Lab_3_3_Speed
+C:   0000030A  A$Lab_3_3_Speed$1702               Lab_3_3_Speed
+C:   0000030D  A$Lab_3_3_Speed$1703               Lab_3_3_Speed
+C:   0000030F  A$Lab_3_3_Speed$1704               Lab_3_3_Speed
+C:   00000311  A$Lab_3_3_Speed$1705               Lab_3_3_Speed
+C:   00000313  A$Lab_3_3_Speed$1706               Lab_3_3_Speed
+C:   00000315  A$Lab_3_3_Speed$1710               Lab_3_3_Speed
+C:   00000315  C$i2c.h$167$2$82                   Lab_3_3_Speed
+C:   00000318  A$Lab_3_3_Speed$1714               Lab_3_3_Speed
+C:   00000318  C$i2c.h$169$3$83                   Lab_3_3_Speed
+C:   0000031A  A$Lab_3_3_Speed$1715               Lab_3_3_Speed
+C:   0000031C  A$Lab_3_3_Speed$1716               Lab_3_3_Speed
+C:   0000031F  A$Lab_3_3_Speed$1717               Lab_3_3_Speed
+C:   00000321  A$Lab_3_3_Speed$1718               Lab_3_3_Speed
+C:   00000323  A$Lab_3_3_Speed$1719               Lab_3_3_Speed
+C:   00000325  A$Lab_3_3_Speed$1720               Lab_3_3_Speed
+C:   00000328  A$Lab_3_3_Speed$1721               Lab_3_3_Speed
+C:   0000032B  A$Lab_3_3_Speed$1722               Lab_3_3_Speed
+C:   0000032C  A$Lab_3_3_Speed$1723               Lab_3_3_Speed
+C:   0000032E  A$Lab_3_3_Speed$1724               Lab_3_3_Speed
+C:   00000330  A$Lab_3_3_Speed$1725               Lab_3_3_Speed
+C:   00000332  A$Lab_3_3_Speed$1726               Lab_3_3_Speed
+C:   00000335  A$Lab_3_3_Speed$1727               Lab_3_3_Speed
+C:   00000337  A$Lab_3_3_Speed$1728               Lab_3_3_Speed
+C:   00000339  A$Lab_3_3_Speed$1729               Lab_3_3_Speed
+C:   0000033B  A$Lab_3_3_Speed$1733               Lab_3_3_Speed
+C:   0000033B  C$i2c.h$170$3$83                   Lab_3_3_Speed
+C:   0000033D  A$Lab_3_3_Speed$1734               Lab_3_3_Speed
+C:   0000033F  A$Lab_3_3_Speed$1735               Lab_3_3_Speed
+C:   00000342  A$Lab_3_3_Speed$1739               Lab_3_3_Speed
+C:   00000342  C$i2c.h$174$3$84                   Lab_3_3_Speed
+C:   00000343  A$Lab_3_3_Speed$1740               Lab_3_3_Speed
+C:   00000344  A$Lab_3_3_Speed$1741               Lab_3_3_Speed
+C:   00000345  A$Lab_3_3_Speed$1742               Lab_3_3_Speed
+C:   00000347  A$Lab_3_3_Speed$1743               Lab_3_3_Speed
+C:   00000348  A$Lab_3_3_Speed$1744               Lab_3_3_Speed
+C:   0000034A  A$Lab_3_3_Speed$1745               Lab_3_3_Speed
+C:   0000034C  A$Lab_3_3_Speed$1746               Lab_3_3_Speed
+C:   0000034E  A$Lab_3_3_Speed$1747               Lab_3_3_Speed
+C:   00000350  A$Lab_3_3_Speed$1748               Lab_3_3_Speed
+C:   00000352  A$Lab_3_3_Speed$1749               Lab_3_3_Speed
+C:   00000354  A$Lab_3_3_Speed$1750               Lab_3_3_Speed
+C:   00000356  A$Lab_3_3_Speed$1751               Lab_3_3_Speed
+C:   00000358  A$Lab_3_3_Speed$1752               Lab_3_3_Speed
+C:   0000035A  A$Lab_3_3_Speed$1753               Lab_3_3_Speed
+C:   0000035C  A$Lab_3_3_Speed$1754               Lab_3_3_Speed
+C:   0000035E  A$Lab_3_3_Speed$1755               Lab_3_3_Speed
+C:   00000360  A$Lab_3_3_Speed$1756               Lab_3_3_Speed
 ASxxxx Linker V03.00 + NoICE + sdld,  page 37.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000D5    00000DFC =        3580. bytes (REL,CON,CODE)
+CSEG                                000000D9    00000E40 =        3648. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   0000035E  A$Lab_3_3_Speed$1742               Lab_3_3_Speed
-C:   00000360  A$Lab_3_3_Speed$1743               Lab_3_3_Speed
-C:   00000363  A$Lab_3_3_Speed$1744               Lab_3_3_Speed
-C:   00000365  A$Lab_3_3_Speed$1745               Lab_3_3_Speed
-C:   00000367  A$Lab_3_3_Speed$1746               Lab_3_3_Speed
-C:   00000369  A$Lab_3_3_Speed$1747               Lab_3_3_Speed
-C:   0000036B  A$Lab_3_3_Speed$1748               Lab_3_3_Speed
-C:   0000036D  A$Lab_3_3_Speed$1749               Lab_3_3_Speed
-C:   0000036F  A$Lab_3_3_Speed$1750               Lab_3_3_Speed
-C:   00000371  A$Lab_3_3_Speed$1751               Lab_3_3_Speed
-C:   00000373  A$Lab_3_3_Speed$1754               Lab_3_3_Speed
-C:   00000373  C$i2c.h$175$1$81                   Lab_3_3_Speed
-C:   00000375  A$Lab_3_3_Speed$1755               Lab_3_3_Speed
-C:   00000377  A$Lab_3_3_Speed$1756               Lab_3_3_Speed
-C:   0000037A  A$Lab_3_3_Speed$1757               Lab_3_3_Speed
-C:   0000037C  A$Lab_3_3_Speed$1758               Lab_3_3_Speed
-C:   0000037E  A$Lab_3_3_Speed$1759               Lab_3_3_Speed
-C:   00000380  A$Lab_3_3_Speed$1760               Lab_3_3_Speed
-C:   00000383  A$Lab_3_3_Speed$1761               Lab_3_3_Speed
-C:   00000385  A$Lab_3_3_Speed$1762               Lab_3_3_Speed
-C:   00000387  A$Lab_3_3_Speed$1763               Lab_3_3_Speed
-C:   00000389  A$Lab_3_3_Speed$1764               Lab_3_3_Speed
-C:   0000038B  A$Lab_3_3_Speed$1765               Lab_3_3_Speed
-C:   0000038D  A$Lab_3_3_Speed$1766               Lab_3_3_Speed
-C:   0000038F  A$Lab_3_3_Speed$1767               Lab_3_3_Speed
-C:   00000390  A$Lab_3_3_Speed$1768               Lab_3_3_Speed
-C:   00000391  A$Lab_3_3_Speed$1769               Lab_3_3_Speed
-C:   00000392  A$Lab_3_3_Speed$1770               Lab_3_3_Speed
-C:   00000393  A$Lab_3_3_Speed$1771               Lab_3_3_Speed
-C:   00000394  A$Lab_3_3_Speed$1772               Lab_3_3_Speed
-C:   00000395  A$Lab_3_3_Speed$1773               Lab_3_3_Speed
-C:   00000396  A$Lab_3_3_Speed$1774               Lab_3_3_Speed
-C:   00000398  A$Lab_3_3_Speed$1775               Lab_3_3_Speed
-C:   00000399  A$Lab_3_3_Speed$1776               Lab_3_3_Speed
-C:   0000039A  A$Lab_3_3_Speed$1777               Lab_3_3_Speed
-C:   0000039C  A$Lab_3_3_Speed$1778               Lab_3_3_Speed
-C:   0000039D  A$Lab_3_3_Speed$1782               Lab_3_3_Speed
-C:   0000039D  C$i2c.h$176$3$84                   Lab_3_3_Speed
-C:   0000039F  A$Lab_3_3_Speed$1783               Lab_3_3_Speed
-C:   000003A1  A$Lab_3_3_Speed$1784               Lab_3_3_Speed
-C:   000003A3  A$Lab_3_3_Speed$1785               Lab_3_3_Speed
-C:   000003A5  A$Lab_3_3_Speed$1786               Lab_3_3_Speed
-C:   000003A8  A$Lab_3_3_Speed$1787               Lab_3_3_Speed
-C:   000003AA  A$Lab_3_3_Speed$1788               Lab_3_3_Speed
-C:   000003AC  A$Lab_3_3_Speed$1789               Lab_3_3_Speed
-C:   000003AE  A$Lab_3_3_Speed$1790               Lab_3_3_Speed
-C:   000003B0  A$Lab_3_3_Speed$1791               Lab_3_3_Speed
-C:   000003B2  A$Lab_3_3_Speed$1792               Lab_3_3_Speed
-C:   000003B3  A$Lab_3_3_Speed$1793               Lab_3_3_Speed
-C:   000003B6  A$Lab_3_3_Speed$1794               Lab_3_3_Speed
-C:   000003B9  A$Lab_3_3_Speed$1795               Lab_3_3_Speed
+C:   00000362  A$Lab_3_3_Speed$1757               Lab_3_3_Speed
+C:   00000364  A$Lab_3_3_Speed$1758               Lab_3_3_Speed
+C:   00000367  A$Lab_3_3_Speed$1759               Lab_3_3_Speed
+C:   00000369  A$Lab_3_3_Speed$1760               Lab_3_3_Speed
+C:   0000036B  A$Lab_3_3_Speed$1761               Lab_3_3_Speed
+C:   0000036D  A$Lab_3_3_Speed$1762               Lab_3_3_Speed
+C:   0000036F  A$Lab_3_3_Speed$1763               Lab_3_3_Speed
+C:   00000371  A$Lab_3_3_Speed$1764               Lab_3_3_Speed
+C:   00000373  A$Lab_3_3_Speed$1765               Lab_3_3_Speed
+C:   00000375  A$Lab_3_3_Speed$1766               Lab_3_3_Speed
+C:   00000377  A$Lab_3_3_Speed$1769               Lab_3_3_Speed
+C:   00000377  C$i2c.h$175$1$81                   Lab_3_3_Speed
+C:   00000379  A$Lab_3_3_Speed$1770               Lab_3_3_Speed
+C:   0000037B  A$Lab_3_3_Speed$1771               Lab_3_3_Speed
+C:   0000037E  A$Lab_3_3_Speed$1772               Lab_3_3_Speed
+C:   00000380  A$Lab_3_3_Speed$1773               Lab_3_3_Speed
+C:   00000382  A$Lab_3_3_Speed$1774               Lab_3_3_Speed
+C:   00000384  A$Lab_3_3_Speed$1775               Lab_3_3_Speed
+C:   00000387  A$Lab_3_3_Speed$1776               Lab_3_3_Speed
+C:   00000389  A$Lab_3_3_Speed$1777               Lab_3_3_Speed
+C:   0000038B  A$Lab_3_3_Speed$1778               Lab_3_3_Speed
+C:   0000038D  A$Lab_3_3_Speed$1779               Lab_3_3_Speed
+C:   0000038F  A$Lab_3_3_Speed$1780               Lab_3_3_Speed
+C:   00000391  A$Lab_3_3_Speed$1781               Lab_3_3_Speed
+C:   00000393  A$Lab_3_3_Speed$1782               Lab_3_3_Speed
+C:   00000394  A$Lab_3_3_Speed$1783               Lab_3_3_Speed
+C:   00000395  A$Lab_3_3_Speed$1784               Lab_3_3_Speed
+C:   00000396  A$Lab_3_3_Speed$1785               Lab_3_3_Speed
+C:   00000397  A$Lab_3_3_Speed$1786               Lab_3_3_Speed
+C:   00000398  A$Lab_3_3_Speed$1787               Lab_3_3_Speed
+C:   00000399  A$Lab_3_3_Speed$1788               Lab_3_3_Speed
+C:   0000039A  A$Lab_3_3_Speed$1789               Lab_3_3_Speed
+C:   0000039C  A$Lab_3_3_Speed$1790               Lab_3_3_Speed
+C:   0000039D  A$Lab_3_3_Speed$1791               Lab_3_3_Speed
+C:   0000039E  A$Lab_3_3_Speed$1792               Lab_3_3_Speed
+C:   000003A0  A$Lab_3_3_Speed$1793               Lab_3_3_Speed
+C:   000003A1  A$Lab_3_3_Speed$1797               Lab_3_3_Speed
+C:   000003A1  C$i2c.h$176$3$84                   Lab_3_3_Speed
+C:   000003A3  A$Lab_3_3_Speed$1798               Lab_3_3_Speed
+C:   000003A5  A$Lab_3_3_Speed$1799               Lab_3_3_Speed
+C:   000003A7  A$Lab_3_3_Speed$1800               Lab_3_3_Speed
+C:   000003A9  A$Lab_3_3_Speed$1801               Lab_3_3_Speed
+C:   000003AC  A$Lab_3_3_Speed$1802               Lab_3_3_Speed
+C:   000003AE  A$Lab_3_3_Speed$1803               Lab_3_3_Speed
+C:   000003B0  A$Lab_3_3_Speed$1804               Lab_3_3_Speed
+C:   000003B2  A$Lab_3_3_Speed$1805               Lab_3_3_Speed
+C:   000003B4  A$Lab_3_3_Speed$1806               Lab_3_3_Speed
+C:   000003B6  A$Lab_3_3_Speed$1807               Lab_3_3_Speed
+C:   000003B7  A$Lab_3_3_Speed$1808               Lab_3_3_Speed
+C:   000003BA  A$Lab_3_3_Speed$1809               Lab_3_3_Speed
+C:   000003BD  A$Lab_3_3_Speed$1810               Lab_3_3_Speed
 ASxxxx Linker V03.00 + NoICE + sdld,  page 38.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000D5    00000DFC =        3580. bytes (REL,CON,CODE)
+CSEG                                000000D9    00000E40 =        3648. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   000003BA  A$Lab_3_3_Speed$1796               Lab_3_3_Speed
-C:   000003BC  A$Lab_3_3_Speed$1797               Lab_3_3_Speed
-C:   000003BE  A$Lab_3_3_Speed$1798               Lab_3_3_Speed
-C:   000003C0  A$Lab_3_3_Speed$1799               Lab_3_3_Speed
-C:   000003C2  A$Lab_3_3_Speed$1800               Lab_3_3_Speed
-C:   000003C4  A$Lab_3_3_Speed$1801               Lab_3_3_Speed
-C:   000003C7  A$Lab_3_3_Speed$1802               Lab_3_3_Speed
-C:   000003C9  A$Lab_3_3_Speed$1803               Lab_3_3_Speed
-C:   000003CB  A$Lab_3_3_Speed$1804               Lab_3_3_Speed
-C:   000003CD  A$Lab_3_3_Speed$1805               Lab_3_3_Speed
-C:   000003CF  A$Lab_3_3_Speed$1806               Lab_3_3_Speed
-C:   000003D1  A$Lab_3_3_Speed$1810               Lab_3_3_Speed
-C:   000003D1  C$i2c.h$164$1$81                   Lab_3_3_Speed
-C:   000003D2  A$Lab_3_3_Speed$1811               Lab_3_3_Speed
-C:   000003D3  A$Lab_3_3_Speed$1812               Lab_3_3_Speed
-C:   000003D4  A$Lab_3_3_Speed$1813               Lab_3_3_Speed
-C:   000003D6  A$Lab_3_3_Speed$1814               Lab_3_3_Speed
-C:   000003D8  A$Lab_3_3_Speed$1815               Lab_3_3_Speed
-C:   000003DA  A$Lab_3_3_Speed$1816               Lab_3_3_Speed
-C:   000003DD  A$Lab_3_3_Speed$1820               Lab_3_3_Speed
-C:   000003DD  C$i2c.h$179$1$81                   Lab_3_3_Speed
-C:   000003DF  A$Lab_3_3_Speed$1821               Lab_3_3_Speed
-C:   000003E1  A$Lab_3_3_Speed$1825               Lab_3_3_Speed
-C:   000003E1  C$i2c.h$180$1$81                   Lab_3_3_Speed
-C:   000003E1  XG$kpd_input$0$0                   Lab_3_3_Speed
-C:   000003E2  A$Lab_3_3_Speed$1839               Lab_3_3_Speed
-C:   000003E2  C$i2c.h$189$1$81                   Lab_3_3_Speed
-C:   000003E2  G$delay_time$0$0                   Lab_3_3_Speed
-C:   000003E2  _delay_time                        Lab_3_3_Speed
-C:   000003E4  A$Lab_3_3_Speed$1840               Lab_3_3_Speed
-C:   000003E6  A$Lab_3_3_Speed$1841               Lab_3_3_Speed
-C:   000003E8  A$Lab_3_3_Speed$1842               Lab_3_3_Speed
-C:   000003E9  A$Lab_3_3_Speed$1845               Lab_3_3_Speed
-C:   000003E9  C$i2c.h$192$1$86                   Lab_3_3_Speed
-C:   000003EB  A$Lab_3_3_Speed$1846               Lab_3_3_Speed
-C:   000003ED  A$Lab_3_3_Speed$1847               Lab_3_3_Speed
-C:   000003EF  A$Lab_3_3_Speed$1848               Lab_3_3_Speed
-C:   000003F1  A$Lab_3_3_Speed$1850               Lab_3_3_Speed
-C:   000003F2  A$Lab_3_3_Speed$1851               Lab_3_3_Speed
-C:   000003F3  A$Lab_3_3_Speed$1852               Lab_3_3_Speed
-C:   000003F4  A$Lab_3_3_Speed$1853               Lab_3_3_Speed
-C:   000003F5  A$Lab_3_3_Speed$1854               Lab_3_3_Speed
-C:   000003F6  A$Lab_3_3_Speed$1855               Lab_3_3_Speed
-C:   000003F7  A$Lab_3_3_Speed$1856               Lab_3_3_Speed
-C:   000003F8  A$Lab_3_3_Speed$1857               Lab_3_3_Speed
-C:   000003F9  A$Lab_3_3_Speed$1858               Lab_3_3_Speed
-C:   000003FA  A$Lab_3_3_Speed$1859               Lab_3_3_Speed
-C:   000003FC  A$Lab_3_3_Speed$1860               Lab_3_3_Speed
-C:   000003FD  A$Lab_3_3_Speed$1861               Lab_3_3_Speed
-C:   00000400  A$Lab_3_3_Speed$1862               Lab_3_3_Speed
-C:   00000401  A$Lab_3_3_Speed$1863               Lab_3_3_Speed
+C:   000003BE  A$Lab_3_3_Speed$1811               Lab_3_3_Speed
+C:   000003C0  A$Lab_3_3_Speed$1812               Lab_3_3_Speed
+C:   000003C2  A$Lab_3_3_Speed$1813               Lab_3_3_Speed
+C:   000003C4  A$Lab_3_3_Speed$1814               Lab_3_3_Speed
+C:   000003C6  A$Lab_3_3_Speed$1815               Lab_3_3_Speed
+C:   000003C8  A$Lab_3_3_Speed$1816               Lab_3_3_Speed
+C:   000003CB  A$Lab_3_3_Speed$1817               Lab_3_3_Speed
+C:   000003CD  A$Lab_3_3_Speed$1818               Lab_3_3_Speed
+C:   000003CF  A$Lab_3_3_Speed$1819               Lab_3_3_Speed
+C:   000003D1  A$Lab_3_3_Speed$1820               Lab_3_3_Speed
+C:   000003D3  A$Lab_3_3_Speed$1821               Lab_3_3_Speed
+C:   000003D5  A$Lab_3_3_Speed$1825               Lab_3_3_Speed
+C:   000003D5  C$i2c.h$164$1$81                   Lab_3_3_Speed
+C:   000003D6  A$Lab_3_3_Speed$1826               Lab_3_3_Speed
+C:   000003D7  A$Lab_3_3_Speed$1827               Lab_3_3_Speed
+C:   000003D8  A$Lab_3_3_Speed$1828               Lab_3_3_Speed
+C:   000003DA  A$Lab_3_3_Speed$1829               Lab_3_3_Speed
+C:   000003DC  A$Lab_3_3_Speed$1830               Lab_3_3_Speed
+C:   000003DE  A$Lab_3_3_Speed$1831               Lab_3_3_Speed
+C:   000003E1  A$Lab_3_3_Speed$1835               Lab_3_3_Speed
+C:   000003E1  C$i2c.h$179$1$81                   Lab_3_3_Speed
+C:   000003E3  A$Lab_3_3_Speed$1836               Lab_3_3_Speed
+C:   000003E5  A$Lab_3_3_Speed$1840               Lab_3_3_Speed
+C:   000003E5  C$i2c.h$180$1$81                   Lab_3_3_Speed
+C:   000003E5  XG$kpd_input$0$0                   Lab_3_3_Speed
+C:   000003E6  A$Lab_3_3_Speed$1854               Lab_3_3_Speed
+C:   000003E6  C$i2c.h$189$1$81                   Lab_3_3_Speed
+C:   000003E6  G$delay_time$0$0                   Lab_3_3_Speed
+C:   000003E6  _delay_time                        Lab_3_3_Speed
+C:   000003E8  A$Lab_3_3_Speed$1855               Lab_3_3_Speed
+C:   000003EA  A$Lab_3_3_Speed$1856               Lab_3_3_Speed
+C:   000003EC  A$Lab_3_3_Speed$1857               Lab_3_3_Speed
+C:   000003ED  A$Lab_3_3_Speed$1860               Lab_3_3_Speed
+C:   000003ED  C$i2c.h$192$1$86                   Lab_3_3_Speed
+C:   000003EF  A$Lab_3_3_Speed$1861               Lab_3_3_Speed
+C:   000003F1  A$Lab_3_3_Speed$1862               Lab_3_3_Speed
+C:   000003F3  A$Lab_3_3_Speed$1863               Lab_3_3_Speed
+C:   000003F5  A$Lab_3_3_Speed$1865               Lab_3_3_Speed
+C:   000003F6  A$Lab_3_3_Speed$1866               Lab_3_3_Speed
+C:   000003F7  A$Lab_3_3_Speed$1867               Lab_3_3_Speed
+C:   000003F8  A$Lab_3_3_Speed$1868               Lab_3_3_Speed
+C:   000003F9  A$Lab_3_3_Speed$1869               Lab_3_3_Speed
+C:   000003FA  A$Lab_3_3_Speed$1870               Lab_3_3_Speed
+C:   000003FB  A$Lab_3_3_Speed$1871               Lab_3_3_Speed
+C:   000003FC  A$Lab_3_3_Speed$1872               Lab_3_3_Speed
+C:   000003FD  A$Lab_3_3_Speed$1873               Lab_3_3_Speed
+C:   000003FE  A$Lab_3_3_Speed$1874               Lab_3_3_Speed
+C:   00000400  A$Lab_3_3_Speed$1875               Lab_3_3_Speed
+C:   00000401  A$Lab_3_3_Speed$1876               Lab_3_3_Speed
+C:   00000404  A$Lab_3_3_Speed$1877               Lab_3_3_Speed
+C:   00000405  A$Lab_3_3_Speed$1878               Lab_3_3_Speed
 ASxxxx Linker V03.00 + NoICE + sdld,  page 39.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000D5    00000DFC =        3580. bytes (REL,CON,CODE)
+CSEG                                000000D9    00000E40 =        3648. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   00000404  A$Lab_3_3_Speed$1864               Lab_3_3_Speed
-C:   00000405  A$Lab_3_3_Speed$1865               Lab_3_3_Speed
-C:   00000408  A$Lab_3_3_Speed$1866               Lab_3_3_Speed
-C:   00000409  A$Lab_3_3_Speed$1868               Lab_3_3_Speed
-C:   0000040B  A$Lab_3_3_Speed$1872               Lab_3_3_Speed
-C:   0000040B  C$i2c.h$193$1$86                   Lab_3_3_Speed
-C:   0000040B  XG$delay_time$0$0                  Lab_3_3_Speed
-C:   0000040C  A$Lab_3_3_Speed$1886               Lab_3_3_Speed
-C:   0000040C  C$i2c.h$196$1$86                   Lab_3_3_Speed
-C:   0000040C  C$i2c.h$198$1$88                   Lab_3_3_Speed
-C:   0000040C  G$i2c_start$0$0                    Lab_3_3_Speed
-C:   0000040C  _i2c_start                         Lab_3_3_Speed
-C:   0000040F  A$Lab_3_3_Speed$1889               Lab_3_3_Speed
-C:   0000040F  C$i2c.h$199$1$88                   Lab_3_3_Speed
-C:   00000411  A$Lab_3_3_Speed$1893               Lab_3_3_Speed
-C:   00000411  C$i2c.h$200$1$88                   Lab_3_3_Speed
-C:   00000414  A$Lab_3_3_Speed$1896               Lab_3_3_Speed
-C:   00000414  C$i2c.h$201$1$88                   Lab_3_3_Speed
-C:   00000416  A$Lab_3_3_Speed$1899               Lab_3_3_Speed
-C:   00000416  C$i2c.h$202$1$88                   Lab_3_3_Speed
-C:   00000418  A$Lab_3_3_Speed$1902               Lab_3_3_Speed
-C:   00000418  C$i2c.h$203$1$88                   Lab_3_3_Speed
-C:   00000418  XG$i2c_start$0$0                   Lab_3_3_Speed
-C:   00000419  A$Lab_3_3_Speed$1915               Lab_3_3_Speed
-C:   00000419  C$i2c.h$206$1$88                   Lab_3_3_Speed
-C:   00000419  G$i2c_write$0$0                    Lab_3_3_Speed
-C:   00000419  _i2c_write                         Lab_3_3_Speed
-C:   0000041C  A$Lab_3_3_Speed$1921               Lab_3_3_Speed
-C:   0000041C  C$i2c.h$209$1$90                   Lab_3_3_Speed
-C:   0000041C  C$i2c.h$210$1$90                   Lab_3_3_Speed
-C:   0000041F  A$Lab_3_3_Speed$1922               Lab_3_3_Speed
-C:   00000421  A$Lab_3_3_Speed$1926               Lab_3_3_Speed
-C:   00000421  C$i2c.h$211$1$90                   Lab_3_3_Speed
-C:   00000421  XG$i2c_write$0$0                   Lab_3_3_Speed
-C:   00000422  A$Lab_3_3_Speed$1939               Lab_3_3_Speed
-C:   00000422  C$i2c.h$214$1$90                   Lab_3_3_Speed
-C:   00000422  G$i2c_write_and_stop$0$0           Lab_3_3_Speed
-C:   00000422  _i2c_write_and_stop                Lab_3_3_Speed
-C:   00000425  A$Lab_3_3_Speed$1942               Lab_3_3_Speed
-C:   00000425  C$i2c.h$217$1$92                   Lab_3_3_Speed
-C:   00000427  A$Lab_3_3_Speed$1948               Lab_3_3_Speed
-C:   00000427  C$i2c.h$218$1$92                   Lab_3_3_Speed
-C:   00000427  C$i2c.h$219$1$92                   Lab_3_3_Speed
-C:   0000042A  A$Lab_3_3_Speed$1949               Lab_3_3_Speed
-C:   0000042C  A$Lab_3_3_Speed$1953               Lab_3_3_Speed
-C:   0000042C  C$i2c.h$220$1$92                   Lab_3_3_Speed
-C:   0000042C  XG$i2c_write_and_stop$0$0          Lab_3_3_Speed
-C:   0000042D  A$Lab_3_3_Speed$1969               Lab_3_3_Speed
-C:   0000042D  C$i2c.h$223$1$92                   Lab_3_3_Speed
-C:   0000042D  C$i2c.h$226$1$94                   Lab_3_3_Speed
-C:   0000042D  G$i2c_read$0$0                     Lab_3_3_Speed
+C:   00000408  A$Lab_3_3_Speed$1879               Lab_3_3_Speed
+C:   00000409  A$Lab_3_3_Speed$1880               Lab_3_3_Speed
+C:   0000040C  A$Lab_3_3_Speed$1881               Lab_3_3_Speed
+C:   0000040D  A$Lab_3_3_Speed$1883               Lab_3_3_Speed
+C:   0000040F  A$Lab_3_3_Speed$1887               Lab_3_3_Speed
+C:   0000040F  C$i2c.h$193$1$86                   Lab_3_3_Speed
+C:   0000040F  XG$delay_time$0$0                  Lab_3_3_Speed
+C:   00000410  A$Lab_3_3_Speed$1901               Lab_3_3_Speed
+C:   00000410  C$i2c.h$196$1$86                   Lab_3_3_Speed
+C:   00000410  C$i2c.h$198$1$88                   Lab_3_3_Speed
+C:   00000410  G$i2c_start$0$0                    Lab_3_3_Speed
+C:   00000410  _i2c_start                         Lab_3_3_Speed
+C:   00000413  A$Lab_3_3_Speed$1904               Lab_3_3_Speed
+C:   00000413  C$i2c.h$199$1$88                   Lab_3_3_Speed
+C:   00000415  A$Lab_3_3_Speed$1908               Lab_3_3_Speed
+C:   00000415  C$i2c.h$200$1$88                   Lab_3_3_Speed
+C:   00000418  A$Lab_3_3_Speed$1911               Lab_3_3_Speed
+C:   00000418  C$i2c.h$201$1$88                   Lab_3_3_Speed
+C:   0000041A  A$Lab_3_3_Speed$1914               Lab_3_3_Speed
+C:   0000041A  C$i2c.h$202$1$88                   Lab_3_3_Speed
+C:   0000041C  A$Lab_3_3_Speed$1917               Lab_3_3_Speed
+C:   0000041C  C$i2c.h$203$1$88                   Lab_3_3_Speed
+C:   0000041C  XG$i2c_start$0$0                   Lab_3_3_Speed
+C:   0000041D  A$Lab_3_3_Speed$1930               Lab_3_3_Speed
+C:   0000041D  C$i2c.h$206$1$88                   Lab_3_3_Speed
+C:   0000041D  G$i2c_write$0$0                    Lab_3_3_Speed
+C:   0000041D  _i2c_write                         Lab_3_3_Speed
+C:   00000420  A$Lab_3_3_Speed$1936               Lab_3_3_Speed
+C:   00000420  C$i2c.h$209$1$90                   Lab_3_3_Speed
+C:   00000420  C$i2c.h$210$1$90                   Lab_3_3_Speed
+C:   00000423  A$Lab_3_3_Speed$1937               Lab_3_3_Speed
+C:   00000425  A$Lab_3_3_Speed$1941               Lab_3_3_Speed
+C:   00000425  C$i2c.h$211$1$90                   Lab_3_3_Speed
+C:   00000425  XG$i2c_write$0$0                   Lab_3_3_Speed
+C:   00000426  A$Lab_3_3_Speed$1954               Lab_3_3_Speed
+C:   00000426  C$i2c.h$214$1$90                   Lab_3_3_Speed
+C:   00000426  G$i2c_write_and_stop$0$0           Lab_3_3_Speed
+C:   00000426  _i2c_write_and_stop                Lab_3_3_Speed
+C:   00000429  A$Lab_3_3_Speed$1957               Lab_3_3_Speed
+C:   00000429  C$i2c.h$217$1$92                   Lab_3_3_Speed
+C:   0000042B  A$Lab_3_3_Speed$1963               Lab_3_3_Speed
+C:   0000042B  C$i2c.h$218$1$92                   Lab_3_3_Speed
+C:   0000042B  C$i2c.h$219$1$92                   Lab_3_3_Speed
+C:   0000042E  A$Lab_3_3_Speed$1964               Lab_3_3_Speed
+C:   00000430  A$Lab_3_3_Speed$1968               Lab_3_3_Speed
+C:   00000430  C$i2c.h$220$1$92                   Lab_3_3_Speed
+C:   00000430  XG$i2c_write_and_stop$0$0          Lab_3_3_Speed
+C:   00000431  A$Lab_3_3_Speed$1984               Lab_3_3_Speed
+C:   00000431  C$i2c.h$223$1$92                   Lab_3_3_Speed
+C:   00000431  C$i2c.h$226$1$94                   Lab_3_3_Speed
+C:   00000431  G$i2c_read$0$0                     Lab_3_3_Speed
 ASxxxx Linker V03.00 + NoICE + sdld,  page 40.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000D5    00000DFC =        3580. bytes (REL,CON,CODE)
+CSEG                                000000D9    00000E40 =        3648. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   0000042D  _i2c_read                          Lab_3_3_Speed
-C:   00000430  A$Lab_3_3_Speed$1972               Lab_3_3_Speed
-C:   00000430  C$i2c.h$227$1$94                   Lab_3_3_Speed
-C:   00000433  A$Lab_3_3_Speed$1975               Lab_3_3_Speed
-C:   00000433  C$i2c.h$228$1$94                   Lab_3_3_Speed
-C:   00000435  A$Lab_3_3_Speed$1980               Lab_3_3_Speed
-C:   00000435  C$i2c.h$229$1$94                   Lab_3_3_Speed
-C:   00000435  C$i2c.h$230$1$94                   Lab_3_3_Speed
-C:   00000435  XG$i2c_read$0$0                    Lab_3_3_Speed
-C:   00000436  A$Lab_3_3_Speed$1996               Lab_3_3_Speed
-C:   00000436  C$i2c.h$233$1$94                   Lab_3_3_Speed
-C:   00000436  C$i2c.h$236$1$96                   Lab_3_3_Speed
-C:   00000436  G$i2c_read_and_stop$0$0            Lab_3_3_Speed
-C:   00000436  _i2c_read_and_stop                 Lab_3_3_Speed
-C:   00000439  A$Lab_3_3_Speed$1999               Lab_3_3_Speed
-C:   00000439  C$i2c.h$237$1$96                   Lab_3_3_Speed
-C:   0000043B  A$Lab_3_3_Speed$2002               Lab_3_3_Speed
-C:   0000043B  C$i2c.h$238$1$96                   Lab_3_3_Speed
-C:   0000043D  A$Lab_3_3_Speed$2005               Lab_3_3_Speed
-C:   0000043D  C$i2c.h$239$1$96                   Lab_3_3_Speed
-C:   0000043F  A$Lab_3_3_Speed$2011               Lab_3_3_Speed
-C:   0000043F  C$i2c.h$240$1$96                   Lab_3_3_Speed
-C:   0000043F  C$i2c.h$241$1$96                   Lab_3_3_Speed
-C:   00000442  A$Lab_3_3_Speed$2012               Lab_3_3_Speed
-C:   00000444  A$Lab_3_3_Speed$2016               Lab_3_3_Speed
-C:   00000444  C$i2c.h$242$1$96                   Lab_3_3_Speed
-C:   00000446  A$Lab_3_3_Speed$2019               Lab_3_3_Speed
-C:   00000446  C$i2c.h$243$1$96                   Lab_3_3_Speed
-C:   00000446  XG$i2c_read_and_stop$0$0           Lab_3_3_Speed
-C:   00000447  A$Lab_3_3_Speed$2036               Lab_3_3_Speed
-C:   00000447  C$i2c.h$246$1$96                   Lab_3_3_Speed
-C:   00000447  G$i2c_write_data$0$0               Lab_3_3_Speed
-C:   00000447  _i2c_write_data                    Lab_3_3_Speed
-C:   00000449  A$Lab_3_3_Speed$2039               Lab_3_3_Speed
-C:   00000449  C$i2c.h$250$1$98                   Lab_3_3_Speed
-C:   0000044B  A$Lab_3_3_Speed$2040               Lab_3_3_Speed
-C:   0000044E  A$Lab_3_3_Speed$2041               Lab_3_3_Speed
-C:   00000450  A$Lab_3_3_Speed$2044               Lab_3_3_Speed
-C:   00000450  C$i2c.h$251$1$98                   Lab_3_3_Speed
-C:   00000452  A$Lab_3_3_Speed$2045               Lab_3_3_Speed
-C:   00000453  A$Lab_3_3_Speed$2046               Lab_3_3_Speed
-C:   00000455  A$Lab_3_3_Speed$2047               Lab_3_3_Speed
-C:   00000458  A$Lab_3_3_Speed$2050               Lab_3_3_Speed
-C:   00000458  C$i2c.h$252$1$98                   Lab_3_3_Speed
-C:   0000045B  A$Lab_3_3_Speed$2051               Lab_3_3_Speed
-C:   0000045E  A$Lab_3_3_Speed$2054               Lab_3_3_Speed
-C:   00000460  A$Lab_3_3_Speed$2056               Lab_3_3_Speed
-C:   00000462  A$Lab_3_3_Speed$2057               Lab_3_3_Speed
-C:   00000464  A$Lab_3_3_Speed$2058               Lab_3_3_Speed
-C:   00000465  A$Lab_3_3_Speed$2059               Lab_3_3_Speed
-C:   00000468  A$Lab_3_3_Speed$2060               Lab_3_3_Speed
+C:   00000431  _i2c_read                          Lab_3_3_Speed
+C:   00000434  A$Lab_3_3_Speed$1987               Lab_3_3_Speed
+C:   00000434  C$i2c.h$227$1$94                   Lab_3_3_Speed
+C:   00000437  A$Lab_3_3_Speed$1990               Lab_3_3_Speed
+C:   00000437  C$i2c.h$228$1$94                   Lab_3_3_Speed
+C:   00000439  A$Lab_3_3_Speed$1995               Lab_3_3_Speed
+C:   00000439  C$i2c.h$229$1$94                   Lab_3_3_Speed
+C:   00000439  C$i2c.h$230$1$94                   Lab_3_3_Speed
+C:   00000439  XG$i2c_read$0$0                    Lab_3_3_Speed
+C:   0000043A  A$Lab_3_3_Speed$2011               Lab_3_3_Speed
+C:   0000043A  C$i2c.h$233$1$94                   Lab_3_3_Speed
+C:   0000043A  C$i2c.h$236$1$96                   Lab_3_3_Speed
+C:   0000043A  G$i2c_read_and_stop$0$0            Lab_3_3_Speed
+C:   0000043A  _i2c_read_and_stop                 Lab_3_3_Speed
+C:   0000043D  A$Lab_3_3_Speed$2014               Lab_3_3_Speed
+C:   0000043D  C$i2c.h$237$1$96                   Lab_3_3_Speed
+C:   0000043F  A$Lab_3_3_Speed$2017               Lab_3_3_Speed
+C:   0000043F  C$i2c.h$238$1$96                   Lab_3_3_Speed
+C:   00000441  A$Lab_3_3_Speed$2020               Lab_3_3_Speed
+C:   00000441  C$i2c.h$239$1$96                   Lab_3_3_Speed
+C:   00000443  A$Lab_3_3_Speed$2026               Lab_3_3_Speed
+C:   00000443  C$i2c.h$240$1$96                   Lab_3_3_Speed
+C:   00000443  C$i2c.h$241$1$96                   Lab_3_3_Speed
+C:   00000446  A$Lab_3_3_Speed$2027               Lab_3_3_Speed
+C:   00000448  A$Lab_3_3_Speed$2031               Lab_3_3_Speed
+C:   00000448  C$i2c.h$242$1$96                   Lab_3_3_Speed
+C:   0000044A  A$Lab_3_3_Speed$2034               Lab_3_3_Speed
+C:   0000044A  C$i2c.h$243$1$96                   Lab_3_3_Speed
+C:   0000044A  XG$i2c_read_and_stop$0$0           Lab_3_3_Speed
+C:   0000044B  A$Lab_3_3_Speed$2051               Lab_3_3_Speed
+C:   0000044B  C$i2c.h$246$1$96                   Lab_3_3_Speed
+C:   0000044B  G$i2c_write_data$0$0               Lab_3_3_Speed
+C:   0000044B  _i2c_write_data                    Lab_3_3_Speed
+C:   0000044D  A$Lab_3_3_Speed$2054               Lab_3_3_Speed
+C:   0000044D  C$i2c.h$250$1$98                   Lab_3_3_Speed
+C:   0000044F  A$Lab_3_3_Speed$2055               Lab_3_3_Speed
+C:   00000452  A$Lab_3_3_Speed$2056               Lab_3_3_Speed
+C:   00000454  A$Lab_3_3_Speed$2059               Lab_3_3_Speed
+C:   00000454  C$i2c.h$251$1$98                   Lab_3_3_Speed
+C:   00000456  A$Lab_3_3_Speed$2060               Lab_3_3_Speed
+C:   00000457  A$Lab_3_3_Speed$2061               Lab_3_3_Speed
+C:   00000459  A$Lab_3_3_Speed$2062               Lab_3_3_Speed
+C:   0000045C  A$Lab_3_3_Speed$2065               Lab_3_3_Speed
+C:   0000045C  C$i2c.h$252$1$98                   Lab_3_3_Speed
+C:   0000045F  A$Lab_3_3_Speed$2066               Lab_3_3_Speed
+C:   00000462  A$Lab_3_3_Speed$2069               Lab_3_3_Speed
+C:   00000464  A$Lab_3_3_Speed$2071               Lab_3_3_Speed
+C:   00000466  A$Lab_3_3_Speed$2072               Lab_3_3_Speed
+C:   00000468  A$Lab_3_3_Speed$2073               Lab_3_3_Speed
+C:   00000469  A$Lab_3_3_Speed$2074               Lab_3_3_Speed
+C:   0000046C  A$Lab_3_3_Speed$2075               Lab_3_3_Speed
 ASxxxx Linker V03.00 + NoICE + sdld,  page 41.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000D5    00000DFC =        3580. bytes (REL,CON,CODE)
+CSEG                                000000D9    00000E40 =        3648. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   00000469  A$Lab_3_3_Speed$2062               Lab_3_3_Speed
-C:   0000046B  A$Lab_3_3_Speed$2063               Lab_3_3_Speed
-C:   0000046D  A$Lab_3_3_Speed$2064               Lab_3_3_Speed
-C:   0000046E  A$Lab_3_3_Speed$2065               Lab_3_3_Speed
-C:   0000046F  A$Lab_3_3_Speed$2066               Lab_3_3_Speed
-C:   00000470  A$Lab_3_3_Speed$2067               Lab_3_3_Speed
-C:   00000471  A$Lab_3_3_Speed$2068               Lab_3_3_Speed
-C:   00000473  A$Lab_3_3_Speed$2069               Lab_3_3_Speed
-C:   00000475  A$Lab_3_3_Speed$2070               Lab_3_3_Speed
-C:   00000478  A$Lab_3_3_Speed$2071               Lab_3_3_Speed
-C:   0000047A  A$Lab_3_3_Speed$2072               Lab_3_3_Speed
-C:   0000047C  A$Lab_3_3_Speed$2075               Lab_3_3_Speed
-C:   0000047C  C$i2c.h$254$1$98                   Lab_3_3_Speed
-C:   0000047D  A$Lab_3_3_Speed$2076               Lab_3_3_Speed
-C:   0000047F  A$Lab_3_3_Speed$2077               Lab_3_3_Speed
-C:   00000480  A$Lab_3_3_Speed$2078               Lab_3_3_Speed
-C:   00000481  A$Lab_3_3_Speed$2079               Lab_3_3_Speed
-C:   00000483  A$Lab_3_3_Speed$2080               Lab_3_3_Speed
-C:   00000484  A$Lab_3_3_Speed$2081               Lab_3_3_Speed
-C:   00000486  A$Lab_3_3_Speed$2082               Lab_3_3_Speed
-C:   00000488  A$Lab_3_3_Speed$2083               Lab_3_3_Speed
-C:   0000048A  A$Lab_3_3_Speed$2084               Lab_3_3_Speed
-C:   0000048C  A$Lab_3_3_Speed$2085               Lab_3_3_Speed
-C:   0000048F  A$Lab_3_3_Speed$2086               Lab_3_3_Speed
-C:   00000491  A$Lab_3_3_Speed$2087               Lab_3_3_Speed
-C:   00000493  A$Lab_3_3_Speed$2088               Lab_3_3_Speed
-C:   00000496  A$Lab_3_3_Speed$2089               Lab_3_3_Speed
-C:   00000498  A$Lab_3_3_Speed$2092               Lab_3_3_Speed
-C:   00000498  C$i2c.h$253$1$98                   Lab_3_3_Speed
-C:   00000499  A$Lab_3_3_Speed$2093               Lab_3_3_Speed
-C:   0000049B  A$Lab_3_3_Speed$2097               Lab_3_3_Speed
-C:   0000049B  C$i2c.h$255$1$98                   Lab_3_3_Speed
-C:   0000049D  A$Lab_3_3_Speed$2098               Lab_3_3_Speed
-C:   0000049F  A$Lab_3_3_Speed$2099               Lab_3_3_Speed
-C:   000004A0  A$Lab_3_3_Speed$2100               Lab_3_3_Speed
-C:   000004A3  A$Lab_3_3_Speed$2101               Lab_3_3_Speed
-C:   000004A4  A$Lab_3_3_Speed$2103               Lab_3_3_Speed
-C:   000004A5  A$Lab_3_3_Speed$2104               Lab_3_3_Speed
-C:   000004A7  A$Lab_3_3_Speed$2105               Lab_3_3_Speed
-C:   000004A8  A$Lab_3_3_Speed$2106               Lab_3_3_Speed
-C:   000004A9  A$Lab_3_3_Speed$2107               Lab_3_3_Speed
-C:   000004AB  A$Lab_3_3_Speed$2108               Lab_3_3_Speed
-C:   000004AC  A$Lab_3_3_Speed$2109               Lab_3_3_Speed
-C:   000004AE  A$Lab_3_3_Speed$2110               Lab_3_3_Speed
-C:   000004B0  A$Lab_3_3_Speed$2111               Lab_3_3_Speed
-C:   000004B2  A$Lab_3_3_Speed$2112               Lab_3_3_Speed
-C:   000004B4  A$Lab_3_3_Speed$2113               Lab_3_3_Speed
-C:   000004B7  A$Lab_3_3_Speed$2114               Lab_3_3_Speed
-C:   000004B9  A$Lab_3_3_Speed$2115               Lab_3_3_Speed
-C:   000004BC  A$Lab_3_3_Speed$2118               Lab_3_3_Speed
-C:   000004BC  C$i2c.h$256$1$98                   Lab_3_3_Speed
+C:   0000046D  A$Lab_3_3_Speed$2077               Lab_3_3_Speed
+C:   0000046F  A$Lab_3_3_Speed$2078               Lab_3_3_Speed
+C:   00000471  A$Lab_3_3_Speed$2079               Lab_3_3_Speed
+C:   00000472  A$Lab_3_3_Speed$2080               Lab_3_3_Speed
+C:   00000473  A$Lab_3_3_Speed$2081               Lab_3_3_Speed
+C:   00000474  A$Lab_3_3_Speed$2082               Lab_3_3_Speed
+C:   00000475  A$Lab_3_3_Speed$2083               Lab_3_3_Speed
+C:   00000477  A$Lab_3_3_Speed$2084               Lab_3_3_Speed
+C:   00000479  A$Lab_3_3_Speed$2085               Lab_3_3_Speed
+C:   0000047C  A$Lab_3_3_Speed$2086               Lab_3_3_Speed
+C:   0000047E  A$Lab_3_3_Speed$2087               Lab_3_3_Speed
+C:   00000480  A$Lab_3_3_Speed$2090               Lab_3_3_Speed
+C:   00000480  C$i2c.h$254$1$98                   Lab_3_3_Speed
+C:   00000481  A$Lab_3_3_Speed$2091               Lab_3_3_Speed
+C:   00000483  A$Lab_3_3_Speed$2092               Lab_3_3_Speed
+C:   00000484  A$Lab_3_3_Speed$2093               Lab_3_3_Speed
+C:   00000485  A$Lab_3_3_Speed$2094               Lab_3_3_Speed
+C:   00000487  A$Lab_3_3_Speed$2095               Lab_3_3_Speed
+C:   00000488  A$Lab_3_3_Speed$2096               Lab_3_3_Speed
+C:   0000048A  A$Lab_3_3_Speed$2097               Lab_3_3_Speed
+C:   0000048C  A$Lab_3_3_Speed$2098               Lab_3_3_Speed
+C:   0000048E  A$Lab_3_3_Speed$2099               Lab_3_3_Speed
+C:   00000490  A$Lab_3_3_Speed$2100               Lab_3_3_Speed
+C:   00000493  A$Lab_3_3_Speed$2101               Lab_3_3_Speed
+C:   00000495  A$Lab_3_3_Speed$2102               Lab_3_3_Speed
+C:   00000497  A$Lab_3_3_Speed$2103               Lab_3_3_Speed
+C:   0000049A  A$Lab_3_3_Speed$2104               Lab_3_3_Speed
+C:   0000049C  A$Lab_3_3_Speed$2107               Lab_3_3_Speed
+C:   0000049C  C$i2c.h$253$1$98                   Lab_3_3_Speed
+C:   0000049D  A$Lab_3_3_Speed$2108               Lab_3_3_Speed
+C:   0000049F  A$Lab_3_3_Speed$2112               Lab_3_3_Speed
+C:   0000049F  C$i2c.h$255$1$98                   Lab_3_3_Speed
+C:   000004A1  A$Lab_3_3_Speed$2113               Lab_3_3_Speed
+C:   000004A3  A$Lab_3_3_Speed$2114               Lab_3_3_Speed
+C:   000004A4  A$Lab_3_3_Speed$2115               Lab_3_3_Speed
+C:   000004A7  A$Lab_3_3_Speed$2116               Lab_3_3_Speed
+C:   000004A8  A$Lab_3_3_Speed$2118               Lab_3_3_Speed
+C:   000004A9  A$Lab_3_3_Speed$2119               Lab_3_3_Speed
+C:   000004AB  A$Lab_3_3_Speed$2120               Lab_3_3_Speed
+C:   000004AC  A$Lab_3_3_Speed$2121               Lab_3_3_Speed
+C:   000004AD  A$Lab_3_3_Speed$2122               Lab_3_3_Speed
+C:   000004AF  A$Lab_3_3_Speed$2123               Lab_3_3_Speed
+C:   000004B0  A$Lab_3_3_Speed$2124               Lab_3_3_Speed
+C:   000004B2  A$Lab_3_3_Speed$2125               Lab_3_3_Speed
+C:   000004B4  A$Lab_3_3_Speed$2126               Lab_3_3_Speed
+C:   000004B6  A$Lab_3_3_Speed$2127               Lab_3_3_Speed
+C:   000004B8  A$Lab_3_3_Speed$2128               Lab_3_3_Speed
+C:   000004BB  A$Lab_3_3_Speed$2129               Lab_3_3_Speed
+C:   000004BD  A$Lab_3_3_Speed$2130               Lab_3_3_Speed
+C:   000004C0  A$Lab_3_3_Speed$2133               Lab_3_3_Speed
+C:   000004C0  C$i2c.h$256$1$98                   Lab_3_3_Speed
 ASxxxx Linker V03.00 + NoICE + sdld,  page 42.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000D5    00000DFC =        3580. bytes (REL,CON,CODE)
+CSEG                                000000D9    00000E40 =        3648. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   000004BC  XG$i2c_write_data$0$0              Lab_3_3_Speed
-C:   000004BD  A$Lab_3_3_Speed$2135               Lab_3_3_Speed
-C:   000004BD  C$i2c.h$259$1$98                   Lab_3_3_Speed
-C:   000004BD  G$i2c_read_data$0$0                Lab_3_3_Speed
-C:   000004BD  _i2c_read_data                     Lab_3_3_Speed
-C:   000004BF  A$Lab_3_3_Speed$2138               Lab_3_3_Speed
-C:   000004BF  C$i2c.h$262$1$100                  Lab_3_3_Speed
-C:   000004C1  A$Lab_3_3_Speed$2139               Lab_3_3_Speed
-C:   000004C4  A$Lab_3_3_Speed$2140               Lab_3_3_Speed
-C:   000004C6  A$Lab_3_3_Speed$2143               Lab_3_3_Speed
-C:   000004C6  C$i2c.h$263$1$100                  Lab_3_3_Speed
-C:   000004C8  A$Lab_3_3_Speed$2144               Lab_3_3_Speed
-C:   000004CA  A$Lab_3_3_Speed$2145               Lab_3_3_Speed
-C:   000004CB  A$Lab_3_3_Speed$2146               Lab_3_3_Speed
-C:   000004CD  A$Lab_3_3_Speed$2147               Lab_3_3_Speed
-C:   000004CF  A$Lab_3_3_Speed$2148               Lab_3_3_Speed
-C:   000004D2  A$Lab_3_3_Speed$2151               Lab_3_3_Speed
-C:   000004D2  C$i2c.h$264$1$100                  Lab_3_3_Speed
-C:   000004D5  A$Lab_3_3_Speed$2152               Lab_3_3_Speed
-C:   000004D8  A$Lab_3_3_Speed$2155               Lab_3_3_Speed
-C:   000004D8  C$i2c.h$265$1$100                  Lab_3_3_Speed
-C:   000004DB  A$Lab_3_3_Speed$2156               Lab_3_3_Speed
-C:   000004DD  A$Lab_3_3_Speed$2159               Lab_3_3_Speed
-C:   000004DD  C$i2c.h$266$1$100                  Lab_3_3_Speed
-C:   000004DF  A$Lab_3_3_Speed$2160               Lab_3_3_Speed
-C:   000004E0  A$Lab_3_3_Speed$2161               Lab_3_3_Speed
-C:   000004E2  A$Lab_3_3_Speed$2162               Lab_3_3_Speed
-C:   000004E5  A$Lab_3_3_Speed$2165               Lab_3_3_Speed
-C:   000004E7  A$Lab_3_3_Speed$2167               Lab_3_3_Speed
-C:   000004E9  A$Lab_3_3_Speed$2168               Lab_3_3_Speed
-C:   000004EB  A$Lab_3_3_Speed$2169               Lab_3_3_Speed
-C:   000004EC  A$Lab_3_3_Speed$2170               Lab_3_3_Speed
-C:   000004EF  A$Lab_3_3_Speed$2171               Lab_3_3_Speed
-C:   000004F0  A$Lab_3_3_Speed$2173               Lab_3_3_Speed
-C:   000004F2  A$Lab_3_3_Speed$2174               Lab_3_3_Speed
-C:   000004F4  A$Lab_3_3_Speed$2175               Lab_3_3_Speed
-C:   000004F5  A$Lab_3_3_Speed$2176               Lab_3_3_Speed
-C:   000004F6  A$Lab_3_3_Speed$2177               Lab_3_3_Speed
-C:   000004F7  A$Lab_3_3_Speed$2178               Lab_3_3_Speed
-C:   000004F8  A$Lab_3_3_Speed$2179               Lab_3_3_Speed
-C:   000004FA  A$Lab_3_3_Speed$2180               Lab_3_3_Speed
-C:   000004FC  A$Lab_3_3_Speed$2181               Lab_3_3_Speed
-C:   000004FF  A$Lab_3_3_Speed$2182               Lab_3_3_Speed
-C:   00000501  A$Lab_3_3_Speed$2183               Lab_3_3_Speed
-C:   00000503  A$Lab_3_3_Speed$2186               Lab_3_3_Speed
-C:   00000503  C$i2c.h$269$2$101                  Lab_3_3_Speed
-C:   00000505  A$Lab_3_3_Speed$2189               Lab_3_3_Speed
-C:   00000505  C$i2c.h$270$2$101                  Lab_3_3_Speed
-C:   00000506  A$Lab_3_3_Speed$2190               Lab_3_3_Speed
-C:   00000508  A$Lab_3_3_Speed$2191               Lab_3_3_Speed
-C:   00000509  A$Lab_3_3_Speed$2192               Lab_3_3_Speed
+C:   000004C0  XG$i2c_write_data$0$0              Lab_3_3_Speed
+C:   000004C1  A$Lab_3_3_Speed$2150               Lab_3_3_Speed
+C:   000004C1  C$i2c.h$259$1$98                   Lab_3_3_Speed
+C:   000004C1  G$i2c_read_data$0$0                Lab_3_3_Speed
+C:   000004C1  _i2c_read_data                     Lab_3_3_Speed
+C:   000004C3  A$Lab_3_3_Speed$2153               Lab_3_3_Speed
+C:   000004C3  C$i2c.h$262$1$100                  Lab_3_3_Speed
+C:   000004C5  A$Lab_3_3_Speed$2154               Lab_3_3_Speed
+C:   000004C8  A$Lab_3_3_Speed$2155               Lab_3_3_Speed
+C:   000004CA  A$Lab_3_3_Speed$2158               Lab_3_3_Speed
+C:   000004CA  C$i2c.h$263$1$100                  Lab_3_3_Speed
+C:   000004CC  A$Lab_3_3_Speed$2159               Lab_3_3_Speed
+C:   000004CE  A$Lab_3_3_Speed$2160               Lab_3_3_Speed
+C:   000004CF  A$Lab_3_3_Speed$2161               Lab_3_3_Speed
+C:   000004D1  A$Lab_3_3_Speed$2162               Lab_3_3_Speed
+C:   000004D3  A$Lab_3_3_Speed$2163               Lab_3_3_Speed
+C:   000004D6  A$Lab_3_3_Speed$2166               Lab_3_3_Speed
+C:   000004D6  C$i2c.h$264$1$100                  Lab_3_3_Speed
+C:   000004D9  A$Lab_3_3_Speed$2167               Lab_3_3_Speed
+C:   000004DC  A$Lab_3_3_Speed$2170               Lab_3_3_Speed
+C:   000004DC  C$i2c.h$265$1$100                  Lab_3_3_Speed
+C:   000004DF  A$Lab_3_3_Speed$2171               Lab_3_3_Speed
+C:   000004E1  A$Lab_3_3_Speed$2174               Lab_3_3_Speed
+C:   000004E1  C$i2c.h$266$1$100                  Lab_3_3_Speed
+C:   000004E3  A$Lab_3_3_Speed$2175               Lab_3_3_Speed
+C:   000004E4  A$Lab_3_3_Speed$2176               Lab_3_3_Speed
+C:   000004E6  A$Lab_3_3_Speed$2177               Lab_3_3_Speed
+C:   000004E9  A$Lab_3_3_Speed$2180               Lab_3_3_Speed
+C:   000004EB  A$Lab_3_3_Speed$2182               Lab_3_3_Speed
+C:   000004ED  A$Lab_3_3_Speed$2183               Lab_3_3_Speed
+C:   000004EF  A$Lab_3_3_Speed$2184               Lab_3_3_Speed
+C:   000004F0  A$Lab_3_3_Speed$2185               Lab_3_3_Speed
+C:   000004F3  A$Lab_3_3_Speed$2186               Lab_3_3_Speed
+C:   000004F4  A$Lab_3_3_Speed$2188               Lab_3_3_Speed
+C:   000004F6  A$Lab_3_3_Speed$2189               Lab_3_3_Speed
+C:   000004F8  A$Lab_3_3_Speed$2190               Lab_3_3_Speed
+C:   000004F9  A$Lab_3_3_Speed$2191               Lab_3_3_Speed
+C:   000004FA  A$Lab_3_3_Speed$2192               Lab_3_3_Speed
+C:   000004FB  A$Lab_3_3_Speed$2193               Lab_3_3_Speed
+C:   000004FC  A$Lab_3_3_Speed$2194               Lab_3_3_Speed
+C:   000004FE  A$Lab_3_3_Speed$2195               Lab_3_3_Speed
+C:   00000500  A$Lab_3_3_Speed$2196               Lab_3_3_Speed
+C:   00000503  A$Lab_3_3_Speed$2197               Lab_3_3_Speed
+C:   00000505  A$Lab_3_3_Speed$2198               Lab_3_3_Speed
+C:   00000507  A$Lab_3_3_Speed$2201               Lab_3_3_Speed
+C:   00000507  C$i2c.h$269$2$101                  Lab_3_3_Speed
+C:   00000509  A$Lab_3_3_Speed$2204               Lab_3_3_Speed
+C:   00000509  C$i2c.h$270$2$101                  Lab_3_3_Speed
+C:   0000050A  A$Lab_3_3_Speed$2205               Lab_3_3_Speed
+C:   0000050C  A$Lab_3_3_Speed$2206               Lab_3_3_Speed
+C:   0000050D  A$Lab_3_3_Speed$2207               Lab_3_3_Speed
 ASxxxx Linker V03.00 + NoICE + sdld,  page 43.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000D5    00000DFC =        3580. bytes (REL,CON,CODE)
+CSEG                                000000D9    00000E40 =        3648. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   0000050A  A$Lab_3_3_Speed$2193               Lab_3_3_Speed
-C:   0000050C  A$Lab_3_3_Speed$2194               Lab_3_3_Speed
-C:   0000050D  A$Lab_3_3_Speed$2195               Lab_3_3_Speed
-C:   0000050F  A$Lab_3_3_Speed$2196               Lab_3_3_Speed
-C:   00000511  A$Lab_3_3_Speed$2197               Lab_3_3_Speed
-C:   00000513  A$Lab_3_3_Speed$2198               Lab_3_3_Speed
-C:   00000515  A$Lab_3_3_Speed$2199               Lab_3_3_Speed
-C:   00000517  A$Lab_3_3_Speed$2200               Lab_3_3_Speed
-C:   0000051A  A$Lab_3_3_Speed$2201               Lab_3_3_Speed
-C:   0000051C  A$Lab_3_3_Speed$2202               Lab_3_3_Speed
-C:   0000051E  A$Lab_3_3_Speed$2203               Lab_3_3_Speed
-C:   00000520  A$Lab_3_3_Speed$2204               Lab_3_3_Speed
-C:   00000522  A$Lab_3_3_Speed$2205               Lab_3_3_Speed
-C:   00000524  A$Lab_3_3_Speed$2206               Lab_3_3_Speed
-C:   00000526  A$Lab_3_3_Speed$2207               Lab_3_3_Speed
-C:   00000528  A$Lab_3_3_Speed$2208               Lab_3_3_Speed
-C:   0000052A  A$Lab_3_3_Speed$2209               Lab_3_3_Speed
-C:   0000052B  A$Lab_3_3_Speed$2210               Lab_3_3_Speed
-C:   0000052E  A$Lab_3_3_Speed$2213               Lab_3_3_Speed
-C:   0000052E  C$i2c.h$267$1$100                  Lab_3_3_Speed
-C:   0000052F  A$Lab_3_3_Speed$2214               Lab_3_3_Speed
-C:   00000531  A$Lab_3_3_Speed$2218               Lab_3_3_Speed
-C:   00000531  C$i2c.h$272$1$100                  Lab_3_3_Speed
-C:   00000533  A$Lab_3_3_Speed$2221               Lab_3_3_Speed
-C:   00000533  C$i2c.h$273$1$100                  Lab_3_3_Speed
-C:   00000535  A$Lab_3_3_Speed$2222               Lab_3_3_Speed
-C:   00000537  A$Lab_3_3_Speed$2223               Lab_3_3_Speed
-C:   00000538  A$Lab_3_3_Speed$2224               Lab_3_3_Speed
-C:   0000053B  A$Lab_3_3_Speed$2225               Lab_3_3_Speed
-C:   0000053C  A$Lab_3_3_Speed$2227               Lab_3_3_Speed
-C:   0000053D  A$Lab_3_3_Speed$2228               Lab_3_3_Speed
-C:   0000053F  A$Lab_3_3_Speed$2229               Lab_3_3_Speed
-C:   00000540  A$Lab_3_3_Speed$2230               Lab_3_3_Speed
-C:   00000541  A$Lab_3_3_Speed$2231               Lab_3_3_Speed
-C:   00000543  A$Lab_3_3_Speed$2232               Lab_3_3_Speed
-C:   00000544  A$Lab_3_3_Speed$2233               Lab_3_3_Speed
-C:   00000546  A$Lab_3_3_Speed$2234               Lab_3_3_Speed
-C:   00000548  A$Lab_3_3_Speed$2235               Lab_3_3_Speed
-C:   0000054A  A$Lab_3_3_Speed$2236               Lab_3_3_Speed
-C:   0000054C  A$Lab_3_3_Speed$2237               Lab_3_3_Speed
-C:   0000054F  A$Lab_3_3_Speed$2238               Lab_3_3_Speed
-C:   00000551  A$Lab_3_3_Speed$2239               Lab_3_3_Speed
-C:   00000553  A$Lab_3_3_Speed$2240               Lab_3_3_Speed
-C:   00000555  A$Lab_3_3_Speed$2241               Lab_3_3_Speed
-C:   00000557  A$Lab_3_3_Speed$2242               Lab_3_3_Speed
-C:   00000559  A$Lab_3_3_Speed$2243               Lab_3_3_Speed
-C:   0000055B  A$Lab_3_3_Speed$2244               Lab_3_3_Speed
-C:   0000055D  A$Lab_3_3_Speed$2245               Lab_3_3_Speed
-C:   0000055E  A$Lab_3_3_Speed$2246               Lab_3_3_Speed
-C:   00000561  A$Lab_3_3_Speed$2249               Lab_3_3_Speed
-C:   00000561  C$i2c.h$274$1$100                  Lab_3_3_Speed
+C:   0000050E  A$Lab_3_3_Speed$2208               Lab_3_3_Speed
+C:   00000510  A$Lab_3_3_Speed$2209               Lab_3_3_Speed
+C:   00000511  A$Lab_3_3_Speed$2210               Lab_3_3_Speed
+C:   00000513  A$Lab_3_3_Speed$2211               Lab_3_3_Speed
+C:   00000515  A$Lab_3_3_Speed$2212               Lab_3_3_Speed
+C:   00000517  A$Lab_3_3_Speed$2213               Lab_3_3_Speed
+C:   00000519  A$Lab_3_3_Speed$2214               Lab_3_3_Speed
+C:   0000051B  A$Lab_3_3_Speed$2215               Lab_3_3_Speed
+C:   0000051E  A$Lab_3_3_Speed$2216               Lab_3_3_Speed
+C:   00000520  A$Lab_3_3_Speed$2217               Lab_3_3_Speed
+C:   00000522  A$Lab_3_3_Speed$2218               Lab_3_3_Speed
+C:   00000524  A$Lab_3_3_Speed$2219               Lab_3_3_Speed
+C:   00000526  A$Lab_3_3_Speed$2220               Lab_3_3_Speed
+C:   00000528  A$Lab_3_3_Speed$2221               Lab_3_3_Speed
+C:   0000052A  A$Lab_3_3_Speed$2222               Lab_3_3_Speed
+C:   0000052C  A$Lab_3_3_Speed$2223               Lab_3_3_Speed
+C:   0000052E  A$Lab_3_3_Speed$2224               Lab_3_3_Speed
+C:   0000052F  A$Lab_3_3_Speed$2225               Lab_3_3_Speed
+C:   00000532  A$Lab_3_3_Speed$2228               Lab_3_3_Speed
+C:   00000532  C$i2c.h$267$1$100                  Lab_3_3_Speed
+C:   00000533  A$Lab_3_3_Speed$2229               Lab_3_3_Speed
+C:   00000535  A$Lab_3_3_Speed$2233               Lab_3_3_Speed
+C:   00000535  C$i2c.h$272$1$100                  Lab_3_3_Speed
+C:   00000537  A$Lab_3_3_Speed$2236               Lab_3_3_Speed
+C:   00000537  C$i2c.h$273$1$100                  Lab_3_3_Speed
+C:   00000539  A$Lab_3_3_Speed$2237               Lab_3_3_Speed
+C:   0000053B  A$Lab_3_3_Speed$2238               Lab_3_3_Speed
+C:   0000053C  A$Lab_3_3_Speed$2239               Lab_3_3_Speed
+C:   0000053F  A$Lab_3_3_Speed$2240               Lab_3_3_Speed
+C:   00000540  A$Lab_3_3_Speed$2242               Lab_3_3_Speed
+C:   00000541  A$Lab_3_3_Speed$2243               Lab_3_3_Speed
+C:   00000543  A$Lab_3_3_Speed$2244               Lab_3_3_Speed
+C:   00000544  A$Lab_3_3_Speed$2245               Lab_3_3_Speed
+C:   00000545  A$Lab_3_3_Speed$2246               Lab_3_3_Speed
+C:   00000547  A$Lab_3_3_Speed$2247               Lab_3_3_Speed
+C:   00000548  A$Lab_3_3_Speed$2248               Lab_3_3_Speed
+C:   0000054A  A$Lab_3_3_Speed$2249               Lab_3_3_Speed
+C:   0000054C  A$Lab_3_3_Speed$2250               Lab_3_3_Speed
+C:   0000054E  A$Lab_3_3_Speed$2251               Lab_3_3_Speed
+C:   00000550  A$Lab_3_3_Speed$2252               Lab_3_3_Speed
+C:   00000553  A$Lab_3_3_Speed$2253               Lab_3_3_Speed
+C:   00000555  A$Lab_3_3_Speed$2254               Lab_3_3_Speed
+C:   00000557  A$Lab_3_3_Speed$2255               Lab_3_3_Speed
+C:   00000559  A$Lab_3_3_Speed$2256               Lab_3_3_Speed
+C:   0000055B  A$Lab_3_3_Speed$2257               Lab_3_3_Speed
+C:   0000055D  A$Lab_3_3_Speed$2258               Lab_3_3_Speed
+C:   0000055F  A$Lab_3_3_Speed$2259               Lab_3_3_Speed
+C:   00000561  A$Lab_3_3_Speed$2260               Lab_3_3_Speed
+C:   00000562  A$Lab_3_3_Speed$2261               Lab_3_3_Speed
+C:   00000565  A$Lab_3_3_Speed$2264               Lab_3_3_Speed
+C:   00000565  C$i2c.h$274$1$100                  Lab_3_3_Speed
 ASxxxx Linker V03.00 + NoICE + sdld,  page 44.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000D5    00000DFC =        3580. bytes (REL,CON,CODE)
+CSEG                                000000D9    00000E40 =        3648. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   00000561  XG$i2c_read_data$0$0               Lab_3_3_Speed
-C:   00000562  A$Lab_3_3_Speed$2264               Lab_3_3_Speed
-C:   00000562  C$i2c.h$283$1$100                  Lab_3_3_Speed
-C:   00000562  C$i2c.h$287$1$103                  Lab_3_3_Speed
-C:   00000562  G$Accel_Init$0$0                   Lab_3_3_Speed
-C:   00000562  _Accel_Init                        Lab_3_3_Speed
-C:   00000565  A$Lab_3_3_Speed$2267               Lab_3_3_Speed
-C:   00000565  C$i2c.h$289$1$103                  Lab_3_3_Speed
-C:   00000568  A$Lab_3_3_Speed$2268               Lab_3_3_Speed
-C:   0000056B  A$Lab_3_3_Speed$2269               Lab_3_3_Speed
-C:   0000056E  A$Lab_3_3_Speed$2270               Lab_3_3_Speed
-C:   00000571  A$Lab_3_3_Speed$2271               Lab_3_3_Speed
-C:   00000574  A$Lab_3_3_Speed$2272               Lab_3_3_Speed
-C:   00000577  A$Lab_3_3_Speed$2273               Lab_3_3_Speed
-C:   0000057A  A$Lab_3_3_Speed$2276               Lab_3_3_Speed
-C:   0000057A  C$i2c.h$290$1$103                  Lab_3_3_Speed
-C:   0000057D  A$Lab_3_3_Speed$2279               Lab_3_3_Speed
-C:   0000057D  C$i2c.h$292$1$103                  Lab_3_3_Speed
-C:   00000580  A$Lab_3_3_Speed$2280               Lab_3_3_Speed
-C:   00000583  A$Lab_3_3_Speed$2281               Lab_3_3_Speed
-C:   00000586  A$Lab_3_3_Speed$2282               Lab_3_3_Speed
-C:   00000589  A$Lab_3_3_Speed$2283               Lab_3_3_Speed
-C:   0000058C  A$Lab_3_3_Speed$2284               Lab_3_3_Speed
-C:   0000058F  A$Lab_3_3_Speed$2285               Lab_3_3_Speed
-C:   00000592  A$Lab_3_3_Speed$2288               Lab_3_3_Speed
-C:   00000592  C$i2c.h$293$1$103                  Lab_3_3_Speed
-C:   00000595  A$Lab_3_3_Speed$2291               Lab_3_3_Speed
-C:   00000595  C$i2c.h$294$1$103                  Lab_3_3_Speed
-C:   00000598  A$Lab_3_3_Speed$2292               Lab_3_3_Speed
-C:   0000059B  A$Lab_3_3_Speed$2293               Lab_3_3_Speed
-C:   0000059E  A$Lab_3_3_Speed$2294               Lab_3_3_Speed
-C:   000005A1  A$Lab_3_3_Speed$2295               Lab_3_3_Speed
-C:   000005A4  A$Lab_3_3_Speed$2296               Lab_3_3_Speed
-C:   000005A7  A$Lab_3_3_Speed$2297               Lab_3_3_Speed
-C:   000005AA  A$Lab_3_3_Speed$2300               Lab_3_3_Speed
-C:   000005AA  C$i2c.h$298$1$103                  Lab_3_3_Speed
-C:   000005AA  XG$Accel_Init$0$0                  Lab_3_3_Speed
-C:   000005AB  A$Lab_3_3_Speed$2313               Lab_3_3_Speed
-C:   000005AB  C$Lab_3_3_Speed.c$44$1$103         Lab_3_3_Speed
-C:   000005AB  C$Lab_3_3_Speed.c$47$1$113         Lab_3_3_Speed
-C:   000005AB  G$main$0$0                         Lab_3_3_Speed
-C:   000005AB  _main                              Lab_3_3_Speed
-C:   000005AE  A$Lab_3_3_Speed$2316               Lab_3_3_Speed
-C:   000005AE  C$Lab_3_3_Speed.c$48$1$113         Lab_3_3_Speed
-C:   000005B1  A$Lab_3_3_Speed$2317               Lab_3_3_Speed
-C:   000005B4  A$Lab_3_3_Speed$2320               Lab_3_3_Speed
-C:   000005B4  C$Lab_3_3_Speed.c$49$1$113         Lab_3_3_Speed
-C:   000005B7  A$Lab_3_3_Speed$2323               Lab_3_3_Speed
-C:   000005B7  C$Lab_3_3_Speed.c$50$1$113         Lab_3_3_Speed
-C:   000005BA  A$Lab_3_3_Speed$2326               Lab_3_3_Speed
-C:   000005BA  C$Lab_3_3_Speed.c$51$1$113         Lab_3_3_Speed
+C:   00000565  XG$i2c_read_data$0$0               Lab_3_3_Speed
+C:   00000566  A$Lab_3_3_Speed$2279               Lab_3_3_Speed
+C:   00000566  C$i2c.h$283$1$100                  Lab_3_3_Speed
+C:   00000566  C$i2c.h$287$1$103                  Lab_3_3_Speed
+C:   00000566  G$Accel_Init$0$0                   Lab_3_3_Speed
+C:   00000566  _Accel_Init                        Lab_3_3_Speed
+C:   00000569  A$Lab_3_3_Speed$2282               Lab_3_3_Speed
+C:   00000569  C$i2c.h$289$1$103                  Lab_3_3_Speed
+C:   0000056C  A$Lab_3_3_Speed$2283               Lab_3_3_Speed
+C:   0000056F  A$Lab_3_3_Speed$2284               Lab_3_3_Speed
+C:   00000572  A$Lab_3_3_Speed$2285               Lab_3_3_Speed
+C:   00000575  A$Lab_3_3_Speed$2286               Lab_3_3_Speed
+C:   00000578  A$Lab_3_3_Speed$2287               Lab_3_3_Speed
+C:   0000057B  A$Lab_3_3_Speed$2288               Lab_3_3_Speed
+C:   0000057E  A$Lab_3_3_Speed$2291               Lab_3_3_Speed
+C:   0000057E  C$i2c.h$290$1$103                  Lab_3_3_Speed
+C:   00000581  A$Lab_3_3_Speed$2294               Lab_3_3_Speed
+C:   00000581  C$i2c.h$292$1$103                  Lab_3_3_Speed
+C:   00000584  A$Lab_3_3_Speed$2295               Lab_3_3_Speed
+C:   00000587  A$Lab_3_3_Speed$2296               Lab_3_3_Speed
+C:   0000058A  A$Lab_3_3_Speed$2297               Lab_3_3_Speed
+C:   0000058D  A$Lab_3_3_Speed$2298               Lab_3_3_Speed
+C:   00000590  A$Lab_3_3_Speed$2299               Lab_3_3_Speed
+C:   00000593  A$Lab_3_3_Speed$2300               Lab_3_3_Speed
+C:   00000596  A$Lab_3_3_Speed$2303               Lab_3_3_Speed
+C:   00000596  C$i2c.h$293$1$103                  Lab_3_3_Speed
+C:   00000599  A$Lab_3_3_Speed$2306               Lab_3_3_Speed
+C:   00000599  C$i2c.h$294$1$103                  Lab_3_3_Speed
+C:   0000059C  A$Lab_3_3_Speed$2307               Lab_3_3_Speed
+C:   0000059F  A$Lab_3_3_Speed$2308               Lab_3_3_Speed
+C:   000005A2  A$Lab_3_3_Speed$2309               Lab_3_3_Speed
+C:   000005A5  A$Lab_3_3_Speed$2310               Lab_3_3_Speed
+C:   000005A8  A$Lab_3_3_Speed$2311               Lab_3_3_Speed
+C:   000005AB  A$Lab_3_3_Speed$2312               Lab_3_3_Speed
+C:   000005AE  A$Lab_3_3_Speed$2315               Lab_3_3_Speed
+C:   000005AE  C$i2c.h$298$1$103                  Lab_3_3_Speed
+C:   000005AE  XG$Accel_Init$0$0                  Lab_3_3_Speed
+C:   000005AF  A$Lab_3_3_Speed$2328               Lab_3_3_Speed
+C:   000005AF  C$Lab_3_3_Speed.c$46$1$103         Lab_3_3_Speed
+C:   000005AF  C$Lab_3_3_Speed.c$49$1$113         Lab_3_3_Speed
+C:   000005AF  G$main$0$0                         Lab_3_3_Speed
+C:   000005AF  _main                              Lab_3_3_Speed
+C:   000005B2  A$Lab_3_3_Speed$2331               Lab_3_3_Speed
+C:   000005B2  C$Lab_3_3_Speed.c$50$1$113         Lab_3_3_Speed
+C:   000005B5  A$Lab_3_3_Speed$2332               Lab_3_3_Speed
+C:   000005B8  A$Lab_3_3_Speed$2335               Lab_3_3_Speed
+C:   000005B8  C$Lab_3_3_Speed.c$51$1$113         Lab_3_3_Speed
+C:   000005BB  A$Lab_3_3_Speed$2338               Lab_3_3_Speed
+C:   000005BB  C$Lab_3_3_Speed.c$52$1$113         Lab_3_3_Speed
+C:   000005BE  A$Lab_3_3_Speed$2341               Lab_3_3_Speed
+C:   000005BE  C$Lab_3_3_Speed.c$53$1$113         Lab_3_3_Speed
 ASxxxx Linker V03.00 + NoICE + sdld,  page 45.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000D5    00000DFC =        3580. bytes (REL,CON,CODE)
+CSEG                                000000D9    00000E40 =        3648. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   000005BD  A$Lab_3_3_Speed$2329               Lab_3_3_Speed
-C:   000005BD  C$Lab_3_3_Speed.c$52$1$113         Lab_3_3_Speed
-C:   000005C0  A$Lab_3_3_Speed$2332               Lab_3_3_Speed
-C:   000005C0  C$Lab_3_3_Speed.c$55$1$113         Lab_3_3_Speed
-C:   000005C2  A$Lab_3_3_Speed$2333               Lab_3_3_Speed
-C:   000005C4  A$Lab_3_3_Speed$2334               Lab_3_3_Speed
-C:   000005C6  A$Lab_3_3_Speed$2335               Lab_3_3_Speed
-C:   000005C8  A$Lab_3_3_Speed$2336               Lab_3_3_Speed
-C:   000005CA  A$Lab_3_3_Speed$2337               Lab_3_3_Speed
-C:   000005CC  A$Lab_3_3_Speed$2338               Lab_3_3_Speed
-C:   000005CF  A$Lab_3_3_Speed$2339               Lab_3_3_Speed
-C:   000005D1  A$Lab_3_3_Speed$2340               Lab_3_3_Speed
-C:   000005D3  A$Lab_3_3_Speed$2341               Lab_3_3_Speed
-C:   000005D5  A$Lab_3_3_Speed$2344               Lab_3_3_Speed
-C:   000005D5  C$Lab_3_3_Speed.c$59$1$113         Lab_3_3_Speed
-C:   000005D8  A$Lab_3_3_Speed$2345               Lab_3_3_Speed
-C:   000005DB  A$Lab_3_3_Speed$2348               Lab_3_3_Speed
-C:   000005DB  C$Lab_3_3_Speed.c$60$1$113         Lab_3_3_Speed
-C:   000005DD  A$Lab_3_3_Speed$2349               Lab_3_3_Speed
-C:   000005DF  A$Lab_3_3_Speed$2350               Lab_3_3_Speed
-C:   000005E0  A$Lab_3_3_Speed$2351               Lab_3_3_Speed
-C:   000005E1  A$Lab_3_3_Speed$2352               Lab_3_3_Speed
-C:   000005E2  A$Lab_3_3_Speed$2353               Lab_3_3_Speed
-C:   000005E4  A$Lab_3_3_Speed$2354               Lab_3_3_Speed
-C:   000005E5  A$Lab_3_3_Speed$2355               Lab_3_3_Speed
-C:   000005E6  A$Lab_3_3_Speed$2356               Lab_3_3_Speed
-C:   000005E7  A$Lab_3_3_Speed$2357               Lab_3_3_Speed
-C:   000005E9  A$Lab_3_3_Speed$2358               Lab_3_3_Speed
-C:   000005EA  A$Lab_3_3_Speed$2359               Lab_3_3_Speed
-C:   000005EB  A$Lab_3_3_Speed$2360               Lab_3_3_Speed
-C:   000005EC  A$Lab_3_3_Speed$2361               Lab_3_3_Speed
-C:   000005ED  A$Lab_3_3_Speed$2362               Lab_3_3_Speed
-C:   000005EE  A$Lab_3_3_Speed$2363               Lab_3_3_Speed
-C:   000005EF  A$Lab_3_3_Speed$2364               Lab_3_3_Speed
-C:   000005F0  A$Lab_3_3_Speed$2365               Lab_3_3_Speed
-C:   000005F1  A$Lab_3_3_Speed$2366               Lab_3_3_Speed
-C:   000005F3  A$Lab_3_3_Speed$2367               Lab_3_3_Speed
-C:   000005F5  A$Lab_3_3_Speed$2370               Lab_3_3_Speed
-C:   000005F5  C$Lab_3_3_Speed.c$61$1$113         Lab_3_3_Speed
-C:   000005F8  A$Lab_3_3_Speed$2371               Lab_3_3_Speed
-C:   000005FB  A$Lab_3_3_Speed$2375               Lab_3_3_Speed
-C:   000005FB  C$Lab_3_3_Speed.c$64$2$114         Lab_3_3_Speed
-C:   000005FE  A$Lab_3_3_Speed$2376               Lab_3_3_Speed
-C:   00000601  A$Lab_3_3_Speed$2377               Lab_3_3_Speed
-C:   00000603  A$Lab_3_3_Speed$2380               Lab_3_3_Speed
-C:   00000603  C$Lab_3_3_Speed.c$66$1$113         Lab_3_3_Speed
-C:   00000603  XG$main$0$0                        Lab_3_3_Speed
-C:   00000604  A$Lab_3_3_Speed$2393               Lab_3_3_Speed
-C:   00000604  C$Lab_3_3_Speed.c$74$1$113         Lab_3_3_Speed
-C:   00000604  C$Lab_3_3_Speed.c$76$1$115         Lab_3_3_Speed
-C:   00000604  G$Port_Init$0$0                    Lab_3_3_Speed
+C:   000005C1  A$Lab_3_3_Speed$2344               Lab_3_3_Speed
+C:   000005C1  C$Lab_3_3_Speed.c$54$1$113         Lab_3_3_Speed
+C:   000005C4  A$Lab_3_3_Speed$2347               Lab_3_3_Speed
+C:   000005C4  C$Lab_3_3_Speed.c$57$1$113         Lab_3_3_Speed
+C:   000005C6  A$Lab_3_3_Speed$2348               Lab_3_3_Speed
+C:   000005C8  A$Lab_3_3_Speed$2349               Lab_3_3_Speed
+C:   000005CA  A$Lab_3_3_Speed$2350               Lab_3_3_Speed
+C:   000005CC  A$Lab_3_3_Speed$2351               Lab_3_3_Speed
+C:   000005CE  A$Lab_3_3_Speed$2352               Lab_3_3_Speed
+C:   000005D0  A$Lab_3_3_Speed$2353               Lab_3_3_Speed
+C:   000005D3  A$Lab_3_3_Speed$2354               Lab_3_3_Speed
+C:   000005D5  A$Lab_3_3_Speed$2355               Lab_3_3_Speed
+C:   000005D7  A$Lab_3_3_Speed$2356               Lab_3_3_Speed
+C:   000005D9  A$Lab_3_3_Speed$2359               Lab_3_3_Speed
+C:   000005D9  C$Lab_3_3_Speed.c$61$1$113         Lab_3_3_Speed
+C:   000005DC  A$Lab_3_3_Speed$2360               Lab_3_3_Speed
+C:   000005DF  A$Lab_3_3_Speed$2363               Lab_3_3_Speed
+C:   000005DF  C$Lab_3_3_Speed.c$62$1$113         Lab_3_3_Speed
+C:   000005E1  A$Lab_3_3_Speed$2364               Lab_3_3_Speed
+C:   000005E3  A$Lab_3_3_Speed$2365               Lab_3_3_Speed
+C:   000005E4  A$Lab_3_3_Speed$2366               Lab_3_3_Speed
+C:   000005E5  A$Lab_3_3_Speed$2367               Lab_3_3_Speed
+C:   000005E6  A$Lab_3_3_Speed$2368               Lab_3_3_Speed
+C:   000005E8  A$Lab_3_3_Speed$2369               Lab_3_3_Speed
+C:   000005E9  A$Lab_3_3_Speed$2370               Lab_3_3_Speed
+C:   000005EA  A$Lab_3_3_Speed$2371               Lab_3_3_Speed
+C:   000005EB  A$Lab_3_3_Speed$2372               Lab_3_3_Speed
+C:   000005ED  A$Lab_3_3_Speed$2373               Lab_3_3_Speed
+C:   000005EE  A$Lab_3_3_Speed$2374               Lab_3_3_Speed
+C:   000005EF  A$Lab_3_3_Speed$2375               Lab_3_3_Speed
+C:   000005F0  A$Lab_3_3_Speed$2376               Lab_3_3_Speed
+C:   000005F1  A$Lab_3_3_Speed$2377               Lab_3_3_Speed
+C:   000005F2  A$Lab_3_3_Speed$2378               Lab_3_3_Speed
+C:   000005F3  A$Lab_3_3_Speed$2379               Lab_3_3_Speed
+C:   000005F4  A$Lab_3_3_Speed$2380               Lab_3_3_Speed
+C:   000005F5  A$Lab_3_3_Speed$2381               Lab_3_3_Speed
+C:   000005F7  A$Lab_3_3_Speed$2382               Lab_3_3_Speed
+C:   000005F9  A$Lab_3_3_Speed$2385               Lab_3_3_Speed
+C:   000005F9  C$Lab_3_3_Speed.c$63$1$113         Lab_3_3_Speed
+C:   000005FC  A$Lab_3_3_Speed$2386               Lab_3_3_Speed
+C:   000005FF  A$Lab_3_3_Speed$2390               Lab_3_3_Speed
+C:   000005FF  C$Lab_3_3_Speed.c$66$2$114         Lab_3_3_Speed
+C:   00000601  A$Lab_3_3_Speed$2391               Lab_3_3_Speed
+C:   00000603  A$Lab_3_3_Speed$2392               Lab_3_3_Speed
+C:   00000605  A$Lab_3_3_Speed$2396               Lab_3_3_Speed
+C:   00000605  C$Lab_3_3_Speed.c$67$2$114         Lab_3_3_Speed
+C:   00000608  A$Lab_3_3_Speed$2397               Lab_3_3_Speed
+C:   0000060B  A$Lab_3_3_Speed$2398               Lab_3_3_Speed
+C:   0000060D  A$Lab_3_3_Speed$2401               Lab_3_3_Speed
+C:   0000060D  C$Lab_3_3_Speed.c$69$1$113         Lab_3_3_Speed
+C:   0000060D  XG$main$0$0                        Lab_3_3_Speed
 ASxxxx Linker V03.00 + NoICE + sdld,  page 46.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000D5    00000DFC =        3580. bytes (REL,CON,CODE)
+CSEG                                000000D9    00000E40 =        3648. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   00000604  _Port_Init                         Lab_3_3_Speed
-C:   00000607  A$Lab_3_3_Speed$2396               Lab_3_3_Speed
-C:   00000607  C$Lab_3_3_Speed.c$77$1$115         Lab_3_3_Speed
-C:   0000060A  A$Lab_3_3_Speed$2399               Lab_3_3_Speed
-C:   0000060A  C$Lab_3_3_Speed.c$78$1$115         Lab_3_3_Speed
-C:   0000060C  A$Lab_3_3_Speed$2400               Lab_3_3_Speed
-C:   0000060E  A$Lab_3_3_Speed$2401               Lab_3_3_Speed
-C:   0000060F  A$Lab_3_3_Speed$2402               Lab_3_3_Speed
-C:   00000611  A$Lab_3_3_Speed$2405               Lab_3_3_Speed
-C:   00000611  C$Lab_3_3_Speed.c$82$1$115         Lab_3_3_Speed
-C:   00000611  XG$Port_Init$0$0                   Lab_3_3_Speed
-C:   00000612  A$Lab_3_3_Speed$2418               Lab_3_3_Speed
-C:   00000612  C$Lab_3_3_Speed.c$87$1$115         Lab_3_3_Speed
-C:   00000612  C$Lab_3_3_Speed.c$89$1$117         Lab_3_3_Speed
-C:   00000612  G$XBR0_Init$0$0                    Lab_3_3_Speed
-C:   00000612  _XBR0_Init                         Lab_3_3_Speed
-C:   00000615  A$Lab_3_3_Speed$2421               Lab_3_3_Speed
-C:   00000615  C$Lab_3_3_Speed.c$90$1$117         Lab_3_3_Speed
-C:   00000615  XG$XBR0_Init$0$0                   Lab_3_3_Speed
-C:   00000616  A$Lab_3_3_Speed$2434               Lab_3_3_Speed
-C:   00000616  C$Lab_3_3_Speed.c$94$1$117         Lab_3_3_Speed
-C:   00000616  C$Lab_3_3_Speed.c$96$1$119         Lab_3_3_Speed
-C:   00000616  G$SMB_Init$0$0                     Lab_3_3_Speed
-C:   00000616  _SMB_Init                          Lab_3_3_Speed
-C:   00000619  A$Lab_3_3_Speed$2437               Lab_3_3_Speed
-C:   00000619  C$Lab_3_3_Speed.c$97$1$119         Lab_3_3_Speed
-C:   0000061B  A$Lab_3_3_Speed$2440               Lab_3_3_Speed
-C:   0000061B  C$Lab_3_3_Speed.c$98$1$119         Lab_3_3_Speed
-C:   0000061B  XG$SMB_Init$0$0                    Lab_3_3_Speed
-C:   0000061C  A$Lab_3_3_Speed$2453               Lab_3_3_Speed
-C:   0000061C  C$Lab_3_3_Speed.c$101$1$119        Lab_3_3_Speed
-C:   0000061C  C$Lab_3_3_Speed.c$103$1$121        Lab_3_3_Speed
-C:   0000061C  G$PCA_Init$0$0                     Lab_3_3_Speed
-C:   0000061C  _PCA_Init                          Lab_3_3_Speed
-C:   0000061F  A$Lab_3_3_Speed$2456               Lab_3_3_Speed
-C:   0000061F  C$Lab_3_3_Speed.c$104$1$121        Lab_3_3_Speed
-C:   00000622  A$Lab_3_3_Speed$2459               Lab_3_3_Speed
-C:   00000622  C$Lab_3_3_Speed.c$105$1$121        Lab_3_3_Speed
-C:   00000625  A$Lab_3_3_Speed$2462               Lab_3_3_Speed
-C:   00000625  C$Lab_3_3_Speed.c$106$1$121        Lab_3_3_Speed
-C:   00000627  A$Lab_3_3_Speed$2465               Lab_3_3_Speed
-C:   00000627  C$Lab_3_3_Speed.c$107$1$121        Lab_3_3_Speed
-C:   0000062A  A$Lab_3_3_Speed$2468               Lab_3_3_Speed
-C:   0000062A  C$Lab_3_3_Speed.c$108$1$121        Lab_3_3_Speed
-C:   0000062A  XG$PCA_Init$0$0                    Lab_3_3_Speed
-C:   0000062B  A$Lab_3_3_Speed$2479               Lab_3_3_Speed
-C:   0000062B  C$Lab_3_3_Speed.c$113$1$121        Lab_3_3_Speed
-C:   0000062B  G$PCA_ISR$0$0                      Lab_3_3_Speed
-C:   0000062B  _PCA_ISR                           Lab_3_3_Speed
-C:   0000062D  A$Lab_3_3_Speed$2480               Lab_3_3_Speed
+C:   0000060E  A$Lab_3_3_Speed$2414               Lab_3_3_Speed
+C:   0000060E  C$Lab_3_3_Speed.c$77$1$113         Lab_3_3_Speed
+C:   0000060E  C$Lab_3_3_Speed.c$79$1$115         Lab_3_3_Speed
+C:   0000060E  G$Port_Init$0$0                    Lab_3_3_Speed
+C:   0000060E  _Port_Init                         Lab_3_3_Speed
+C:   00000611  A$Lab_3_3_Speed$2417               Lab_3_3_Speed
+C:   00000611  C$Lab_3_3_Speed.c$80$1$115         Lab_3_3_Speed
+C:   00000614  A$Lab_3_3_Speed$2420               Lab_3_3_Speed
+C:   00000614  C$Lab_3_3_Speed.c$81$1$115         Lab_3_3_Speed
+C:   00000616  A$Lab_3_3_Speed$2421               Lab_3_3_Speed
+C:   00000618  A$Lab_3_3_Speed$2422               Lab_3_3_Speed
+C:   00000619  A$Lab_3_3_Speed$2423               Lab_3_3_Speed
+C:   0000061B  A$Lab_3_3_Speed$2426               Lab_3_3_Speed
+C:   0000061B  C$Lab_3_3_Speed.c$85$1$115         Lab_3_3_Speed
+C:   0000061B  XG$Port_Init$0$0                   Lab_3_3_Speed
+C:   0000061C  A$Lab_3_3_Speed$2439               Lab_3_3_Speed
+C:   0000061C  C$Lab_3_3_Speed.c$90$1$115         Lab_3_3_Speed
+C:   0000061C  C$Lab_3_3_Speed.c$92$1$117         Lab_3_3_Speed
+C:   0000061C  G$XBR0_Init$0$0                    Lab_3_3_Speed
+C:   0000061C  _XBR0_Init                         Lab_3_3_Speed
+C:   0000061F  A$Lab_3_3_Speed$2442               Lab_3_3_Speed
+C:   0000061F  C$Lab_3_3_Speed.c$93$1$117         Lab_3_3_Speed
+C:   0000061F  XG$XBR0_Init$0$0                   Lab_3_3_Speed
+C:   00000620  A$Lab_3_3_Speed$2455               Lab_3_3_Speed
+C:   00000620  C$Lab_3_3_Speed.c$97$1$117         Lab_3_3_Speed
+C:   00000620  C$Lab_3_3_Speed.c$99$1$119         Lab_3_3_Speed
+C:   00000620  G$SMB_Init$0$0                     Lab_3_3_Speed
+C:   00000620  _SMB_Init                          Lab_3_3_Speed
+C:   00000623  A$Lab_3_3_Speed$2458               Lab_3_3_Speed
+C:   00000623  C$Lab_3_3_Speed.c$100$1$119        Lab_3_3_Speed
+C:   00000625  A$Lab_3_3_Speed$2461               Lab_3_3_Speed
+C:   00000625  C$Lab_3_3_Speed.c$101$1$119        Lab_3_3_Speed
+C:   00000625  XG$SMB_Init$0$0                    Lab_3_3_Speed
+C:   00000626  A$Lab_3_3_Speed$2474               Lab_3_3_Speed
+C:   00000626  C$Lab_3_3_Speed.c$104$1$119        Lab_3_3_Speed
+C:   00000626  C$Lab_3_3_Speed.c$106$1$121        Lab_3_3_Speed
+C:   00000626  G$PCA_Init$0$0                     Lab_3_3_Speed
+C:   00000626  _PCA_Init                          Lab_3_3_Speed
+C:   00000629  A$Lab_3_3_Speed$2477               Lab_3_3_Speed
+C:   00000629  C$Lab_3_3_Speed.c$107$1$121        Lab_3_3_Speed
+C:   0000062C  A$Lab_3_3_Speed$2480               Lab_3_3_Speed
+C:   0000062C  C$Lab_3_3_Speed.c$108$1$121        Lab_3_3_Speed
 C:   0000062F  A$Lab_3_3_Speed$2483               Lab_3_3_Speed
+C:   0000062F  C$Lab_3_3_Speed.c$109$1$121        Lab_3_3_Speed
+C:   00000631  A$Lab_3_3_Speed$2486               Lab_3_3_Speed
+C:   00000631  C$Lab_3_3_Speed.c$110$1$121        Lab_3_3_Speed
+C:   00000634  A$Lab_3_3_Speed$2489               Lab_3_3_Speed
+C:   00000634  C$Lab_3_3_Speed.c$111$1$121        Lab_3_3_Speed
+C:   00000634  XG$PCA_Init$0$0                    Lab_3_3_Speed
+C:   00000635  A$Lab_3_3_Speed$2500               Lab_3_3_Speed
+C:   00000635  C$Lab_3_3_Speed.c$116$1$121        Lab_3_3_Speed
 ASxxxx Linker V03.00 + NoICE + sdld,  page 47.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000D5    00000DFC =        3580. bytes (REL,CON,CODE)
+CSEG                                000000D9    00000E40 =        3648. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   0000062F  C$Lab_3_3_Speed.c$115$1$123        Lab_3_3_Speed
-C:   00000632  A$Lab_3_3_Speed$2486               Lab_3_3_Speed
-C:   00000632  C$Lab_3_3_Speed.c$117$2$124        Lab_3_3_Speed
-C:   00000634  A$Lab_3_3_Speed$2489               Lab_3_3_Speed
-C:   00000634  C$Lab_3_3_Speed.c$118$2$124        Lab_3_3_Speed
-C:   00000636  A$Lab_3_3_Speed$2490               Lab_3_3_Speed
-C:   00000638  A$Lab_3_3_Speed$2491               Lab_3_3_Speed
-C:   0000063A  A$Lab_3_3_Speed$2494               Lab_3_3_Speed
-C:   0000063A  C$Lab_3_3_Speed.c$120$3$125        Lab_3_3_Speed
-C:   0000063D  A$Lab_3_3_Speed$2497               Lab_3_3_Speed
-C:   0000063D  C$Lab_3_3_Speed.c$121$3$125        Lab_3_3_Speed
-C:   00000640  A$Lab_3_3_Speed$2501               Lab_3_3_Speed
-C:   00000640  C$Lab_3_3_Speed.c$123$2$124        Lab_3_3_Speed
-C:   00000643  A$Lab_3_3_Speed$2502               Lab_3_3_Speed
-C:   00000646  A$Lab_3_3_Speed$2505               Lab_3_3_Speed
-C:   00000646  C$Lab_3_3_Speed.c$124$2$124        Lab_3_3_Speed
-C:   00000648  A$Lab_3_3_Speed$2506               Lab_3_3_Speed
-C:   0000064A  A$Lab_3_3_Speed$2510               Lab_3_3_Speed
-C:   0000064A  C$Lab_3_3_Speed.c$126$1$123        Lab_3_3_Speed
-C:   0000064D  A$Lab_3_3_Speed$2512               Lab_3_3_Speed
-C:   0000064F  A$Lab_3_3_Speed$2513               Lab_3_3_Speed
-C:   00000651  A$Lab_3_3_Speed$2516               Lab_3_3_Speed
-C:   00000651  C$Lab_3_3_Speed.c$127$1$123        Lab_3_3_Speed
-C:   00000651  XG$PCA_ISR$0$0                     Lab_3_3_Speed
-C:   00000652  A$Lab_3_3_Speed$2537               Lab_3_3_Speed
-C:   00000652  C$Lab_3_3_Speed.c$133$1$123        Lab_3_3_Speed
-C:   00000652  C$Lab_3_3_Speed.c$138$1$126        Lab_3_3_Speed
-C:   00000652  G$ReadRanger$0$0                   Lab_3_3_Speed
-C:   00000652  _ReadRanger                        Lab_3_3_Speed
-C:   00000655  A$Lab_3_3_Speed$2538               Lab_3_3_Speed
-C:   00000658  A$Lab_3_3_Speed$2539               Lab_3_3_Speed
-C:   0000065B  A$Lab_3_3_Speed$2540               Lab_3_3_Speed
-C:   0000065E  A$Lab_3_3_Speed$2541               Lab_3_3_Speed
-C:   00000661  A$Lab_3_3_Speed$2542               Lab_3_3_Speed
-C:   00000664  A$Lab_3_3_Speed$2543               Lab_3_3_Speed
-C:   00000667  A$Lab_3_3_Speed$2546               Lab_3_3_Speed
-C:   00000667  C$Lab_3_3_Speed.c$139$1$126        Lab_3_3_Speed
-C:   00000669  A$Lab_3_3_Speed$2547               Lab_3_3_Speed
-C:   0000066B  A$Lab_3_3_Speed$2548               Lab_3_3_Speed
-C:   0000066D  A$Lab_3_3_Speed$2549               Lab_3_3_Speed
-C:   0000066F  A$Lab_3_3_Speed$2550               Lab_3_3_Speed
-C:   00000670  A$Lab_3_3_Speed$2551               Lab_3_3_Speed
-C:   00000672  A$Lab_3_3_Speed$2552               Lab_3_3_Speed
-C:   00000673  A$Lab_3_3_Speed$2553               Lab_3_3_Speed
-C:   00000675  A$Lab_3_3_Speed$2556               Lab_3_3_Speed
-C:   00000675  C$Lab_3_3_Speed.c$140$1$126        Lab_3_3_Speed
-C:   00000678  A$Lab_3_3_Speed$2559               Lab_3_3_Speed
-C:   00000678  C$Lab_3_3_Speed.c$141$1$126        Lab_3_3_Speed
-C:   0000067B  A$Lab_3_3_Speed$2560               Lab_3_3_Speed
-C:   0000067E  A$Lab_3_3_Speed$2561               Lab_3_3_Speed
-C:   00000681  A$Lab_3_3_Speed$2562               Lab_3_3_Speed
+C:   00000635  G$PCA_ISR$0$0                      Lab_3_3_Speed
+C:   00000635  _PCA_ISR                           Lab_3_3_Speed
+C:   00000637  A$Lab_3_3_Speed$2501               Lab_3_3_Speed
+C:   00000639  A$Lab_3_3_Speed$2504               Lab_3_3_Speed
+C:   00000639  C$Lab_3_3_Speed.c$118$1$123        Lab_3_3_Speed
+C:   0000063C  A$Lab_3_3_Speed$2507               Lab_3_3_Speed
+C:   0000063C  C$Lab_3_3_Speed.c$120$2$124        Lab_3_3_Speed
+C:   0000063E  A$Lab_3_3_Speed$2510               Lab_3_3_Speed
+C:   0000063E  C$Lab_3_3_Speed.c$121$2$124        Lab_3_3_Speed
+C:   00000640  A$Lab_3_3_Speed$2511               Lab_3_3_Speed
+C:   00000642  A$Lab_3_3_Speed$2512               Lab_3_3_Speed
+C:   00000644  A$Lab_3_3_Speed$2515               Lab_3_3_Speed
+C:   00000644  C$Lab_3_3_Speed.c$123$3$125        Lab_3_3_Speed
+C:   00000647  A$Lab_3_3_Speed$2518               Lab_3_3_Speed
+C:   00000647  C$Lab_3_3_Speed.c$124$3$125        Lab_3_3_Speed
+C:   0000064A  A$Lab_3_3_Speed$2522               Lab_3_3_Speed
+C:   0000064A  C$Lab_3_3_Speed.c$126$2$124        Lab_3_3_Speed
+C:   0000064C  A$Lab_3_3_Speed$2525               Lab_3_3_Speed
+C:   0000064C  C$Lab_3_3_Speed.c$127$2$124        Lab_3_3_Speed
+C:   0000064E  A$Lab_3_3_Speed$2526               Lab_3_3_Speed
+C:   00000650  A$Lab_3_3_Speed$2527               Lab_3_3_Speed
+C:   00000652  A$Lab_3_3_Speed$2528               Lab_3_3_Speed
+C:   00000655  A$Lab_3_3_Speed$2532               Lab_3_3_Speed
+C:   00000655  C$Lab_3_3_Speed.c$128$2$124        Lab_3_3_Speed
+C:   00000658  A$Lab_3_3_Speed$2533               Lab_3_3_Speed
+C:   0000065B  A$Lab_3_3_Speed$2536               Lab_3_3_Speed
+C:   0000065B  C$Lab_3_3_Speed.c$129$2$124        Lab_3_3_Speed
+C:   0000065D  A$Lab_3_3_Speed$2539               Lab_3_3_Speed
+C:   0000065D  C$Lab_3_3_Speed.c$130$2$124        Lab_3_3_Speed
+C:   0000065F  A$Lab_3_3_Speed$2540               Lab_3_3_Speed
+C:   00000661  A$Lab_3_3_Speed$2541               Lab_3_3_Speed
+C:   00000663  A$Lab_3_3_Speed$2542               Lab_3_3_Speed
+C:   00000665  A$Lab_3_3_Speed$2543               Lab_3_3_Speed
+C:   00000667  A$Lab_3_3_Speed$2544               Lab_3_3_Speed
+C:   00000669  A$Lab_3_3_Speed$2545               Lab_3_3_Speed
+C:   0000066B  A$Lab_3_3_Speed$2546               Lab_3_3_Speed
+C:   0000066D  A$Lab_3_3_Speed$2550               Lab_3_3_Speed
+C:   0000066D  C$Lab_3_3_Speed.c$132$1$123        Lab_3_3_Speed
+C:   00000670  A$Lab_3_3_Speed$2552               Lab_3_3_Speed
+C:   00000672  A$Lab_3_3_Speed$2553               Lab_3_3_Speed
+C:   00000674  A$Lab_3_3_Speed$2556               Lab_3_3_Speed
+C:   00000674  C$Lab_3_3_Speed.c$133$1$123        Lab_3_3_Speed
+C:   00000674  XG$PCA_ISR$0$0                     Lab_3_3_Speed
+C:   00000675  A$Lab_3_3_Speed$2577               Lab_3_3_Speed
+C:   00000675  C$Lab_3_3_Speed.c$139$1$123        Lab_3_3_Speed
+C:   00000675  C$Lab_3_3_Speed.c$144$1$126        Lab_3_3_Speed
+C:   00000675  G$ReadRanger$0$0                   Lab_3_3_Speed
+C:   00000675  _ReadRanger                        Lab_3_3_Speed
+C:   00000678  A$Lab_3_3_Speed$2578               Lab_3_3_Speed
+C:   0000067B  A$Lab_3_3_Speed$2579               Lab_3_3_Speed
+C:   0000067E  A$Lab_3_3_Speed$2580               Lab_3_3_Speed
 ASxxxx Linker V03.00 + NoICE + sdld,  page 48.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000D5    00000DFC =        3580. bytes (REL,CON,CODE)
+CSEG                                000000D9    00000E40 =        3648. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   00000684  A$Lab_3_3_Speed$2563               Lab_3_3_Speed
-C:   00000687  A$Lab_3_3_Speed$2564               Lab_3_3_Speed
-C:   0000068A  A$Lab_3_3_Speed$2565               Lab_3_3_Speed
-C:   0000068C  A$Lab_3_3_Speed$2566               Lab_3_3_Speed
-C:   0000068E  A$Lab_3_3_Speed$2567               Lab_3_3_Speed
-C:   00000691  A$Lab_3_3_Speed$2568               Lab_3_3_Speed
-C:   00000693  A$Lab_3_3_Speed$2569               Lab_3_3_Speed
-C:   00000695  A$Lab_3_3_Speed$2572               Lab_3_3_Speed
-C:   00000695  C$Lab_3_3_Speed.c$142$1$126        Lab_3_3_Speed
-C:   00000697  A$Lab_3_3_Speed$2573               Lab_3_3_Speed
-C:   00000699  A$Lab_3_3_Speed$2576               Lab_3_3_Speed
-C:   00000699  C$Lab_3_3_Speed.c$143$1$126        Lab_3_3_Speed
-C:   00000699  XG$ReadRanger$0$0                  Lab_3_3_Speed
-C:   0000069A  A$Lab_3_3_Speed$2589               Lab_3_3_Speed
-C:   0000069A  C$Lab_3_3_Speed.c$151$1$126        Lab_3_3_Speed
-C:   0000069A  C$Lab_3_3_Speed.c$167$1$127        Lab_3_3_Speed
-C:   0000069A  G$Drive_Motor$0$0                  Lab_3_3_Speed
-C:   0000069A  _Drive_Motor                       Lab_3_3_Speed
-C:   0000069C  A$Lab_3_3_Speed$2590               Lab_3_3_Speed
-C:   0000069E  A$Lab_3_3_Speed$2593               Lab_3_3_Speed
-C:   0000069E  C$Lab_3_3_Speed.c$169$2$128        Lab_3_3_Speed
-C:   000006A1  A$Lab_3_3_Speed$2594               Lab_3_3_Speed
-C:   000006A4  A$Lab_3_3_Speed$2595               Lab_3_3_Speed
-C:   000006A7  A$Lab_3_3_Speed$2598               Lab_3_3_Speed
-C:   000006A7  C$Lab_3_3_Speed.c$170$2$128        Lab_3_3_Speed
-C:   000006AA  A$Lab_3_3_Speed$2601               Lab_3_3_Speed
-C:   000006AA  C$Lab_3_3_Speed.c$173$2$128        Lab_3_3_Speed
-C:   000006AC  A$Lab_3_3_Speed$2602               Lab_3_3_Speed
-C:   000006AE  A$Lab_3_3_Speed$2603               Lab_3_3_Speed
-C:   000006B0  A$Lab_3_3_Speed$2604               Lab_3_3_Speed
-C:   000006B2  A$Lab_3_3_Speed$2605               Lab_3_3_Speed
-C:   000006B4  A$Lab_3_3_Speed$2606               Lab_3_3_Speed
-C:   000006B6  A$Lab_3_3_Speed$2607               Lab_3_3_Speed
-C:   000006B8  A$Lab_3_3_Speed$2608               Lab_3_3_Speed
-C:   000006BA  A$Lab_3_3_Speed$2609               Lab_3_3_Speed
-C:   000006BD  A$Lab_3_3_Speed$2610               Lab_3_3_Speed
-C:   000006BF  A$Lab_3_3_Speed$2611               Lab_3_3_Speed
-C:   000006C1  A$Lab_3_3_Speed$2612               Lab_3_3_Speed
-C:   000006C3  A$Lab_3_3_Speed$2616               Lab_3_3_Speed
-C:   000006C3  C$Lab_3_3_Speed.c$175$1$127        Lab_3_3_Speed
-C:   000006C6  A$Lab_3_3_Speed$2617               Lab_3_3_Speed
-C:   000006C9  A$Lab_3_3_Speed$2618               Lab_3_3_Speed
-C:   000006CC  A$Lab_3_3_Speed$2619               Lab_3_3_Speed
-C:   000006CF  A$Lab_3_3_Speed$2620               Lab_3_3_Speed
-C:   000006D2  A$Lab_3_3_Speed$2623               Lab_3_3_Speed
-C:   000006D2  C$Lab_3_3_Speed.c$176$1$127        Lab_3_3_Speed
-C:   000006D3  A$Lab_3_3_Speed$2624               Lab_3_3_Speed
-C:   000006D5  A$Lab_3_3_Speed$2625               Lab_3_3_Speed
-C:   000006D7  A$Lab_3_3_Speed$2626               Lab_3_3_Speed
-C:   000006D9  A$Lab_3_3_Speed$2627               Lab_3_3_Speed
-C:   000006DB  A$Lab_3_3_Speed$2628               Lab_3_3_Speed
+C:   00000681  A$Lab_3_3_Speed$2581               Lab_3_3_Speed
+C:   00000684  A$Lab_3_3_Speed$2582               Lab_3_3_Speed
+C:   00000687  A$Lab_3_3_Speed$2583               Lab_3_3_Speed
+C:   0000068A  A$Lab_3_3_Speed$2586               Lab_3_3_Speed
+C:   0000068A  C$Lab_3_3_Speed.c$145$1$126        Lab_3_3_Speed
+C:   0000068C  A$Lab_3_3_Speed$2587               Lab_3_3_Speed
+C:   0000068E  A$Lab_3_3_Speed$2588               Lab_3_3_Speed
+C:   00000690  A$Lab_3_3_Speed$2589               Lab_3_3_Speed
+C:   00000692  A$Lab_3_3_Speed$2590               Lab_3_3_Speed
+C:   00000693  A$Lab_3_3_Speed$2591               Lab_3_3_Speed
+C:   00000695  A$Lab_3_3_Speed$2592               Lab_3_3_Speed
+C:   00000696  A$Lab_3_3_Speed$2593               Lab_3_3_Speed
+C:   00000698  A$Lab_3_3_Speed$2596               Lab_3_3_Speed
+C:   00000698  C$Lab_3_3_Speed.c$146$1$126        Lab_3_3_Speed
+C:   0000069B  A$Lab_3_3_Speed$2599               Lab_3_3_Speed
+C:   0000069B  C$Lab_3_3_Speed.c$147$1$126        Lab_3_3_Speed
+C:   0000069E  A$Lab_3_3_Speed$2600               Lab_3_3_Speed
+C:   000006A1  A$Lab_3_3_Speed$2601               Lab_3_3_Speed
+C:   000006A4  A$Lab_3_3_Speed$2602               Lab_3_3_Speed
+C:   000006A7  A$Lab_3_3_Speed$2603               Lab_3_3_Speed
+C:   000006AA  A$Lab_3_3_Speed$2604               Lab_3_3_Speed
+C:   000006AD  A$Lab_3_3_Speed$2605               Lab_3_3_Speed
+C:   000006AF  A$Lab_3_3_Speed$2606               Lab_3_3_Speed
+C:   000006B1  A$Lab_3_3_Speed$2607               Lab_3_3_Speed
+C:   000006B4  A$Lab_3_3_Speed$2608               Lab_3_3_Speed
+C:   000006B6  A$Lab_3_3_Speed$2609               Lab_3_3_Speed
+C:   000006B8  A$Lab_3_3_Speed$2612               Lab_3_3_Speed
+C:   000006B8  C$Lab_3_3_Speed.c$148$1$126        Lab_3_3_Speed
+C:   000006BA  A$Lab_3_3_Speed$2613               Lab_3_3_Speed
+C:   000006BC  A$Lab_3_3_Speed$2616               Lab_3_3_Speed
+C:   000006BC  C$Lab_3_3_Speed.c$149$1$126        Lab_3_3_Speed
+C:   000006BC  XG$ReadRanger$0$0                  Lab_3_3_Speed
+C:   000006BD  A$Lab_3_3_Speed$2629               Lab_3_3_Speed
+C:   000006BD  C$Lab_3_3_Speed.c$157$1$126        Lab_3_3_Speed
+C:   000006BD  C$Lab_3_3_Speed.c$173$1$127        Lab_3_3_Speed
+C:   000006BD  G$Drive_Motor$0$0                  Lab_3_3_Speed
+C:   000006BD  _Drive_Motor                       Lab_3_3_Speed
+C:   000006BF  A$Lab_3_3_Speed$2630               Lab_3_3_Speed
+C:   000006C1  A$Lab_3_3_Speed$2631               Lab_3_3_Speed
+C:   000006C3  A$Lab_3_3_Speed$2632               Lab_3_3_Speed
+C:   000006C5  A$Lab_3_3_Speed$2633               Lab_3_3_Speed
+C:   000006C7  A$Lab_3_3_Speed$2636               Lab_3_3_Speed
+C:   000006C7  C$Lab_3_3_Speed.c$175$2$128        Lab_3_3_Speed
+C:   000006CA  A$Lab_3_3_Speed$2637               Lab_3_3_Speed
+C:   000006CD  A$Lab_3_3_Speed$2638               Lab_3_3_Speed
+C:   000006D0  A$Lab_3_3_Speed$2641               Lab_3_3_Speed
+C:   000006D0  C$Lab_3_3_Speed.c$176$2$128        Lab_3_3_Speed
+C:   000006D3  A$Lab_3_3_Speed$2644               Lab_3_3_Speed
+C:   000006D3  C$Lab_3_3_Speed.c$179$2$128        Lab_3_3_Speed
+C:   000006D5  A$Lab_3_3_Speed$2645               Lab_3_3_Speed
+C:   000006D7  A$Lab_3_3_Speed$2646               Lab_3_3_Speed
 ASxxxx Linker V03.00 + NoICE + sdld,  page 49.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000D5    00000DFC =        3580. bytes (REL,CON,CODE)
+CSEG                                000000D9    00000E40 =        3648. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   000006DD  A$Lab_3_3_Speed$2629               Lab_3_3_Speed
-C:   000006E0  A$Lab_3_3_Speed$2630               Lab_3_3_Speed
-C:   000006E3  A$Lab_3_3_Speed$2634               Lab_3_3_Speed
-C:   000006E3  C$Lab_3_3_Speed.c$177$1$127        Lab_3_3_Speed
-C:   000006E4  A$Lab_3_3_Speed$2635               Lab_3_3_Speed
-C:   000006E6  A$Lab_3_3_Speed$2636               Lab_3_3_Speed
-C:   000006E8  A$Lab_3_3_Speed$2637               Lab_3_3_Speed
-C:   000006EA  A$Lab_3_3_Speed$2638               Lab_3_3_Speed
-C:   000006EC  A$Lab_3_3_Speed$2639               Lab_3_3_Speed
-C:   000006EE  A$Lab_3_3_Speed$2640               Lab_3_3_Speed
-C:   000006F1  A$Lab_3_3_Speed$2641               Lab_3_3_Speed
-C:   000006F4  A$Lab_3_3_Speed$2645               Lab_3_3_Speed
-C:   000006F4  C$Lab_3_3_Speed.c$178$1$127        Lab_3_3_Speed
-C:   000006F6  A$Lab_3_3_Speed$2646               Lab_3_3_Speed
-C:   000006F8  A$Lab_3_3_Speed$2647               Lab_3_3_Speed
-C:   000006FA  A$Lab_3_3_Speed$2648               Lab_3_3_Speed
-C:   000006FC  A$Lab_3_3_Speed$2649               Lab_3_3_Speed
-C:   000006FE  A$Lab_3_3_Speed$2650               Lab_3_3_Speed
-C:   00000700  A$Lab_3_3_Speed$2651               Lab_3_3_Speed
-C:   00000702  A$Lab_3_3_Speed$2652               Lab_3_3_Speed
-C:   00000704  A$Lab_3_3_Speed$2653               Lab_3_3_Speed
-C:   00000707  A$Lab_3_3_Speed$2654               Lab_3_3_Speed
-C:   00000709  A$Lab_3_3_Speed$2655               Lab_3_3_Speed
-C:   0000070B  A$Lab_3_3_Speed$2656               Lab_3_3_Speed
-C:   0000070D  A$Lab_3_3_Speed$2659               Lab_3_3_Speed
-C:   0000070D  C$Lab_3_3_Speed.c$179$1$127        Lab_3_3_Speed
-C:   0000070F  A$Lab_3_3_Speed$2660               Lab_3_3_Speed
-C:   00000710  A$Lab_3_3_Speed$2661               Lab_3_3_Speed
-C:   00000712  A$Lab_3_3_Speed$2662               Lab_3_3_Speed
-C:   00000714  A$Lab_3_3_Speed$2663               Lab_3_3_Speed
-C:   00000716  A$Lab_3_3_Speed$2664               Lab_3_3_Speed
-C:   00000718  A$Lab_3_3_Speed$2665               Lab_3_3_Speed
-C:   0000071A  A$Lab_3_3_Speed$2668               Lab_3_3_Speed
-C:   0000071A  C$Lab_3_3_Speed.c$180$1$127        Lab_3_3_Speed
-C:   0000071A  XG$Drive_Motor$0$0                 Lab_3_3_Speed
+C:   000006D9  A$Lab_3_3_Speed$2647               Lab_3_3_Speed
+C:   000006DB  A$Lab_3_3_Speed$2648               Lab_3_3_Speed
+C:   000006DD  A$Lab_3_3_Speed$2649               Lab_3_3_Speed
+C:   000006DF  A$Lab_3_3_Speed$2650               Lab_3_3_Speed
+C:   000006E1  A$Lab_3_3_Speed$2651               Lab_3_3_Speed
+C:   000006E3  A$Lab_3_3_Speed$2652               Lab_3_3_Speed
+C:   000006E6  A$Lab_3_3_Speed$2653               Lab_3_3_Speed
+C:   000006E8  A$Lab_3_3_Speed$2654               Lab_3_3_Speed
+C:   000006EA  A$Lab_3_3_Speed$2655               Lab_3_3_Speed
+C:   000006EC  A$Lab_3_3_Speed$2658               Lab_3_3_Speed
+C:   000006EC  C$Lab_3_3_Speed.c$180$2$128        Lab_3_3_Speed
+C:   000006EE  A$Lab_3_3_Speed$2659               Lab_3_3_Speed
+C:   000006F0  A$Lab_3_3_Speed$2660               Lab_3_3_Speed
+C:   000006F2  A$Lab_3_3_Speed$2661               Lab_3_3_Speed
+C:   000006F4  A$Lab_3_3_Speed$2662               Lab_3_3_Speed
+C:   000006F6  A$Lab_3_3_Speed$2663               Lab_3_3_Speed
+C:   000006F8  A$Lab_3_3_Speed$2664               Lab_3_3_Speed
+C:   000006FA  A$Lab_3_3_Speed$2665               Lab_3_3_Speed
+C:   000006FC  A$Lab_3_3_Speed$2666               Lab_3_3_Speed
+C:   000006FF  A$Lab_3_3_Speed$2667               Lab_3_3_Speed
+C:   00000701  A$Lab_3_3_Speed$2668               Lab_3_3_Speed
+C:   00000703  A$Lab_3_3_Speed$2669               Lab_3_3_Speed
+C:   00000705  A$Lab_3_3_Speed$2673               Lab_3_3_Speed
+C:   00000705  C$Lab_3_3_Speed.c$182$1$127        Lab_3_3_Speed
+C:   00000708  A$Lab_3_3_Speed$2674               Lab_3_3_Speed
+C:   0000070B  A$Lab_3_3_Speed$2675               Lab_3_3_Speed
+C:   0000070E  A$Lab_3_3_Speed$2676               Lab_3_3_Speed
+C:   00000711  A$Lab_3_3_Speed$2677               Lab_3_3_Speed
+C:   00000714  A$Lab_3_3_Speed$2680               Lab_3_3_Speed
+C:   00000714  C$Lab_3_3_Speed.c$183$1$127        Lab_3_3_Speed
+C:   00000715  A$Lab_3_3_Speed$2681               Lab_3_3_Speed
+C:   00000717  A$Lab_3_3_Speed$2682               Lab_3_3_Speed
+C:   00000719  A$Lab_3_3_Speed$2683               Lab_3_3_Speed
 C:   0000071B  A$Lab_3_3_Speed$2684               Lab_3_3_Speed
-C:   0000071B  C$Lab_3_3_Speed.c$184$1$127        Lab_3_3_Speed
-C:   0000071B  G$DeterminePWM$0$0                 Lab_3_3_Speed
-C:   0000071B  _DeterminePWM                      Lab_3_3_Speed
 C:   0000071D  A$Lab_3_3_Speed$2685               Lab_3_3_Speed
-C:   0000071F  A$Lab_3_3_Speed$2688               Lab_3_3_Speed
-C:   0000071F  C$Lab_3_3_Speed.c$189$1$130        Lab_3_3_Speed
-C:   00000721  A$Lab_3_3_Speed$2689               Lab_3_3_Speed
-C:   00000723  A$Lab_3_3_Speed$2690               Lab_3_3_Speed
-C:   00000724  A$Lab_3_3_Speed$2691               Lab_3_3_Speed
-C:   00000725  A$Lab_3_3_Speed$2692               Lab_3_3_Speed
-C:   00000726  A$Lab_3_3_Speed$2693               Lab_3_3_Speed
-C:   00000727  A$Lab_3_3_Speed$2694               Lab_3_3_Speed
-C:   00000728  A$Lab_3_3_Speed$2695               Lab_3_3_Speed
-C:   00000729  A$Lab_3_3_Speed$2696               Lab_3_3_Speed
-C:   0000072A  A$Lab_3_3_Speed$2699               Lab_3_3_Speed
+C:   0000071F  A$Lab_3_3_Speed$2686               Lab_3_3_Speed
+C:   00000722  A$Lab_3_3_Speed$2687               Lab_3_3_Speed
+C:   00000725  A$Lab_3_3_Speed$2691               Lab_3_3_Speed
+C:   00000725  C$Lab_3_3_Speed.c$184$1$127        Lab_3_3_Speed
+C:   00000726  A$Lab_3_3_Speed$2692               Lab_3_3_Speed
+C:   00000728  A$Lab_3_3_Speed$2693               Lab_3_3_Speed
+C:   0000072A  A$Lab_3_3_Speed$2694               Lab_3_3_Speed
+C:   0000072C  A$Lab_3_3_Speed$2695               Lab_3_3_Speed
+C:   0000072E  A$Lab_3_3_Speed$2696               Lab_3_3_Speed
+C:   00000730  A$Lab_3_3_Speed$2697               Lab_3_3_Speed
+C:   00000733  A$Lab_3_3_Speed$2698               Lab_3_3_Speed
+C:   00000736  A$Lab_3_3_Speed$2702               Lab_3_3_Speed
+C:   00000736  C$Lab_3_3_Speed.c$186$1$127        Lab_3_3_Speed
+C:   00000738  A$Lab_3_3_Speed$2703               Lab_3_3_Speed
+C:   00000739  A$Lab_3_3_Speed$2704               Lab_3_3_Speed
+C:   0000073B  A$Lab_3_3_Speed$2705               Lab_3_3_Speed
 ASxxxx Linker V03.00 + NoICE + sdld,  page 50.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000D5    00000DFC =        3580. bytes (REL,CON,CODE)
+CSEG                                000000D9    00000E40 =        3648. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   0000072A  C$Lab_3_3_Speed.c$192$1$130        Lab_3_3_Speed
-C:   0000072B  A$Lab_3_3_Speed$2700               Lab_3_3_Speed
-C:   0000072D  A$Lab_3_3_Speed$2701               Lab_3_3_Speed
-C:   0000072E  A$Lab_3_3_Speed$2702               Lab_3_3_Speed
-C:   0000072F  A$Lab_3_3_Speed$2703               Lab_3_3_Speed
-C:   00000731  A$Lab_3_3_Speed$2704               Lab_3_3_Speed
-C:   00000732  A$Lab_3_3_Speed$2707               Lab_3_3_Speed
-C:   00000732  C$Lab_3_3_Speed.c$193$1$130        Lab_3_3_Speed
-C:   00000733  A$Lab_3_3_Speed$2708               Lab_3_3_Speed
-C:   00000734  A$Lab_3_3_Speed$2709               Lab_3_3_Speed
-C:   00000736  A$Lab_3_3_Speed$2710               Lab_3_3_Speed
-C:   00000737  A$Lab_3_3_Speed$2711               Lab_3_3_Speed
-C:   00000739  A$Lab_3_3_Speed$2712               Lab_3_3_Speed
-C:   0000073B  A$Lab_3_3_Speed$2713               Lab_3_3_Speed
-C:   0000073D  A$Lab_3_3_Speed$2714               Lab_3_3_Speed
-C:   0000073F  A$Lab_3_3_Speed$2718               Lab_3_3_Speed
-C:   0000073F  C$Lab_3_3_Speed.c$194$1$130        Lab_3_3_Speed
-C:   00000740  A$Lab_3_3_Speed$2719               Lab_3_3_Speed
-C:   00000742  A$Lab_3_3_Speed$2720               Lab_3_3_Speed
-C:   00000743  A$Lab_3_3_Speed$2721               Lab_3_3_Speed
-C:   00000745  A$Lab_3_3_Speed$2722               Lab_3_3_Speed
-C:   00000746  A$Lab_3_3_Speed$2723               Lab_3_3_Speed
-C:   00000748  A$Lab_3_3_Speed$2724               Lab_3_3_Speed
-C:   0000074A  A$Lab_3_3_Speed$2725               Lab_3_3_Speed
-C:   0000074C  A$Lab_3_3_Speed$2729               Lab_3_3_Speed
-C:   0000074C  C$Lab_3_3_Speed.c$195$1$130        Lab_3_3_Speed
-C:   0000074D  A$Lab_3_3_Speed$2730               Lab_3_3_Speed
-C:   0000074F  A$Lab_3_3_Speed$2731               Lab_3_3_Speed
-C:   00000750  A$Lab_3_3_Speed$2732               Lab_3_3_Speed
-C:   00000752  A$Lab_3_3_Speed$2733               Lab_3_3_Speed
-C:   00000753  A$Lab_3_3_Speed$2734               Lab_3_3_Speed
-C:   00000754  A$Lab_3_3_Speed$2735               Lab_3_3_Speed
-C:   00000755  A$Lab_3_3_Speed$2736               Lab_3_3_Speed
-C:   00000756  A$Lab_3_3_Speed$2737               Lab_3_3_Speed
-C:   00000757  A$Lab_3_3_Speed$2738               Lab_3_3_Speed
-C:   00000759  A$Lab_3_3_Speed$2739               Lab_3_3_Speed
-C:   0000075B  A$Lab_3_3_Speed$2740               Lab_3_3_Speed
-C:   0000075D  A$Lab_3_3_Speed$2741               Lab_3_3_Speed
-C:   0000075F  A$Lab_3_3_Speed$2742               Lab_3_3_Speed
-C:   00000761  A$Lab_3_3_Speed$2746               Lab_3_3_Speed
-C:   00000761  C$Lab_3_3_Speed.c$196$1$130        Lab_3_3_Speed
-C:   00000763  A$Lab_3_3_Speed$2747               Lab_3_3_Speed
+C:   0000073D  A$Lab_3_3_Speed$2706               Lab_3_3_Speed
+C:   0000073F  A$Lab_3_3_Speed$2707               Lab_3_3_Speed
+C:   00000741  A$Lab_3_3_Speed$2708               Lab_3_3_Speed
+C:   00000743  A$Lab_3_3_Speed$2711               Lab_3_3_Speed
+C:   00000743  C$Lab_3_3_Speed.c$187$1$127        Lab_3_3_Speed
+C:   00000743  XG$Drive_Motor$0$0                 Lab_3_3_Speed
+C:   00000744  A$Lab_3_3_Speed$2727               Lab_3_3_Speed
+C:   00000744  C$Lab_3_3_Speed.c$191$1$127        Lab_3_3_Speed
+C:   00000744  G$DeterminePWM$0$0                 Lab_3_3_Speed
+C:   00000744  _DeterminePWM                      Lab_3_3_Speed
+C:   00000746  A$Lab_3_3_Speed$2728               Lab_3_3_Speed
+C:   00000748  A$Lab_3_3_Speed$2731               Lab_3_3_Speed
+C:   00000748  C$Lab_3_3_Speed.c$196$1$130        Lab_3_3_Speed
+C:   0000074A  A$Lab_3_3_Speed$2732               Lab_3_3_Speed
+C:   0000074C  A$Lab_3_3_Speed$2733               Lab_3_3_Speed
+C:   0000074D  A$Lab_3_3_Speed$2734               Lab_3_3_Speed
+C:   0000074E  A$Lab_3_3_Speed$2735               Lab_3_3_Speed
+C:   0000074F  A$Lab_3_3_Speed$2736               Lab_3_3_Speed
+C:   00000750  A$Lab_3_3_Speed$2737               Lab_3_3_Speed
+C:   00000751  A$Lab_3_3_Speed$2738               Lab_3_3_Speed
+C:   00000752  A$Lab_3_3_Speed$2739               Lab_3_3_Speed
+C:   00000753  A$Lab_3_3_Speed$2742               Lab_3_3_Speed
+C:   00000753  C$Lab_3_3_Speed.c$199$1$130        Lab_3_3_Speed
+C:   00000755  A$Lab_3_3_Speed$2743               Lab_3_3_Speed
+C:   00000757  A$Lab_3_3_Speed$2744               Lab_3_3_Speed
+C:   0000075A  A$Lab_3_3_Speed$2745               Lab_3_3_Speed
+C:   0000075C  A$Lab_3_3_Speed$2746               Lab_3_3_Speed
+C:   0000075E  A$Lab_3_3_Speed$2747               Lab_3_3_Speed
+C:   00000761  A$Lab_3_3_Speed$2748               Lab_3_3_Speed
+C:   00000763  A$Lab_3_3_Speed$2749               Lab_3_3_Speed
 C:   00000765  A$Lab_3_3_Speed$2750               Lab_3_3_Speed
-C:   00000765  C$Lab_3_3_Speed.c$197$1$130        Lab_3_3_Speed
-C:   00000765  XG$DeterminePWM$0$0                Lab_3_3_Speed
-C:   00000766  __gptrput                          _gptrput
-C:   00000781  __mulint                           _mulint
-C:   00000781  __mulint_dummy                     _mulint
-C:   0000080E  _vsprintf                          sprintf
-C:   0000084B  _sprintf                           sprintf
-C:   000008A4  _vprintf                           vprintf
+C:   00000767  A$Lab_3_3_Speed$2751               Lab_3_3_Speed
+C:   00000769  A$Lab_3_3_Speed$2752               Lab_3_3_Speed
+C:   0000076A  A$Lab_3_3_Speed$2753               Lab_3_3_Speed
+C:   0000076C  A$Lab_3_3_Speed$2754               Lab_3_3_Speed
+C:   0000076D  A$Lab_3_3_Speed$2755               Lab_3_3_Speed
+C:   0000076E  A$Lab_3_3_Speed$2756               Lab_3_3_Speed
+C:   00000770  A$Lab_3_3_Speed$2757               Lab_3_3_Speed
+C:   00000771  A$Lab_3_3_Speed$2760               Lab_3_3_Speed
+C:   00000771  C$Lab_3_3_Speed.c$200$1$130        Lab_3_3_Speed
+C:   00000772  A$Lab_3_3_Speed$2761               Lab_3_3_Speed
+C:   00000773  A$Lab_3_3_Speed$2762               Lab_3_3_Speed
+C:   00000775  A$Lab_3_3_Speed$2763               Lab_3_3_Speed
+C:   00000776  A$Lab_3_3_Speed$2764               Lab_3_3_Speed
+C:   00000778  A$Lab_3_3_Speed$2765               Lab_3_3_Speed
+C:   0000077A  A$Lab_3_3_Speed$2766               Lab_3_3_Speed
+C:   0000077C  A$Lab_3_3_Speed$2767               Lab_3_3_Speed
+C:   0000077E  A$Lab_3_3_Speed$2771               Lab_3_3_Speed
+C:   0000077E  C$Lab_3_3_Speed.c$201$1$130        Lab_3_3_Speed
+C:   0000077F  A$Lab_3_3_Speed$2772               Lab_3_3_Speed
+C:   00000781  A$Lab_3_3_Speed$2773               Lab_3_3_Speed
 ASxxxx Linker V03.00 + NoICE + sdld,  page 51.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000D5    00000DFC =        3580. bytes (REL,CON,CODE)
+CSEG                                000000D9    00000E40 =        3648. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   000008BD  _printf                            vprintf
-C:   0000098F  __print_format                     printf_large
-C:   00000E99  _strlen                            _strlen
-C:   00000EB1  __gptrget                          _gptrget
-C:   00000ECD  __sdcc_external_startup            _startup
-
+C:   00000782  A$Lab_3_3_Speed$2774               Lab_3_3_Speed
+C:   00000784  A$Lab_3_3_Speed$2775               Lab_3_3_Speed
+C:   00000785  A$Lab_3_3_Speed$2776               Lab_3_3_Speed
+C:   00000787  A$Lab_3_3_Speed$2777               Lab_3_3_Speed
+C:   00000789  A$Lab_3_3_Speed$2778               Lab_3_3_Speed
+C:   0000078B  A$Lab_3_3_Speed$2782               Lab_3_3_Speed
+C:   0000078B  C$Lab_3_3_Speed.c$202$1$130        Lab_3_3_Speed
+C:   0000078C  A$Lab_3_3_Speed$2783               Lab_3_3_Speed
+C:   0000078E  A$Lab_3_3_Speed$2784               Lab_3_3_Speed
+C:   0000078F  A$Lab_3_3_Speed$2785               Lab_3_3_Speed
+C:   00000791  A$Lab_3_3_Speed$2786               Lab_3_3_Speed
+C:   00000793  A$Lab_3_3_Speed$2787               Lab_3_3_Speed
+C:   00000796  A$Lab_3_3_Speed$2788               Lab_3_3_Speed
+C:   00000798  A$Lab_3_3_Speed$2789               Lab_3_3_Speed
+C:   0000079A  A$Lab_3_3_Speed$2790               Lab_3_3_Speed
+C:   0000079B  A$Lab_3_3_Speed$2791               Lab_3_3_Speed
+C:   0000079C  A$Lab_3_3_Speed$2792               Lab_3_3_Speed
+C:   0000079E  A$Lab_3_3_Speed$2793               Lab_3_3_Speed
+C:   0000079F  A$Lab_3_3_Speed$2794               Lab_3_3_Speed
+C:   000007A1  A$Lab_3_3_Speed$2795               Lab_3_3_Speed
+C:   000007A3  A$Lab_3_3_Speed$2796               Lab_3_3_Speed
+C:   000007A5  A$Lab_3_3_Speed$2797               Lab_3_3_Speed
+C:   000007A7  A$Lab_3_3_Speed$2798               Lab_3_3_Speed
+C:   000007A9  A$Lab_3_3_Speed$2802               Lab_3_3_Speed
+C:   000007A9  C$Lab_3_3_Speed.c$203$1$130        Lab_3_3_Speed
+C:   000007AB  A$Lab_3_3_Speed$2803               Lab_3_3_Speed
+C:   000007AD  A$Lab_3_3_Speed$2806               Lab_3_3_Speed
+C:   000007AD  C$Lab_3_3_Speed.c$204$1$130        Lab_3_3_Speed
+C:   000007AD  XG$DeterminePWM$0$0                Lab_3_3_Speed
+C:   000007AE  __gptrput                          _gptrput
+C:   000007C9  __mulint                           _mulint
+C:   000007C9  __mulint_dummy                     _mulint
+C:   00000856  _vsprintf                          sprintf
+C:   00000893  _sprintf                           sprintf
+C:   000008EC  _vprintf                           vprintf
+C:   00000905  _printf                            vprintf
+C:   000009D7  __print_format                     printf_large
+C:   00000EE1  _strlen                            _strlen
+C:   00000EF9  __gptrget                          _gptrget
+C:   00000F15  __sdcc_external_startup            _startup
 ASxxxx Linker V03.00 + NoICE + sdld,  page 52.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CONST                               00000ED1    0000007C =         124. bytes (REL,CON,CODE)
+CONST                               00000F19    0000007C =         124. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   00000ED1  FLab_3_3_Speed$__str_0$0$0         Lab_3_3_Speed
-C:   00000EE7  FLab_3_3_Speed$__str_1$0$0         Lab_3_3_Speed
-C:   00000EF7  FLab_3_3_Speed$__str_2$0$0         Lab_3_3_Speed
-C:   00000EFA  FLab_3_3_Speed$__str_3$0$0         Lab_3_3_Speed
-C:   00000F22  FLab_3_3_Speed$__str_4$0$0         Lab_3_3_Speed
-C:   00000F37  FLab_3_3_Speed$__str_5$0$0         Lab_3_3_Speed
+C:   00000F19  FLab_3_3_Speed$__str_0$0$0         Lab_3_3_Speed
+C:   00000F2F  FLab_3_3_Speed$__str_1$0$0         Lab_3_3_Speed
+C:   00000F3F  FLab_3_3_Speed$__str_2$0$0         Lab_3_3_Speed
+C:   00000F42  FLab_3_3_Speed$__str_3$0$0         Lab_3_3_Speed
+C:   00000F6A  FLab_3_3_Speed$__str_4$0$0         Lab_3_3_Speed
+C:   00000F7F  FLab_3_3_Speed$__str_5$0$0         Lab_3_3_Speed
 ASxxxx Linker V03.00 + NoICE + sdld,  page 53.
 
 Files Linked                              [ module(s) ]

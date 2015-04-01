@@ -37,6 +37,9 @@ unsigned int counts = 0;
 unsigned char new_range = 0;
 unsigned char r_count = 0;
 unsigned char neutral = 45;
+unsigned int range;
+unsigned char delay = 0;
+unsigned char start_delay = 0;
 __sbit __at 0xB6 SWITCH;
 
 //=============================================================================
@@ -57,8 +60,10 @@ void main(void)
     //__________________________________________
     PW = PW_CENTER;
 	PCA0CP0 = 65535 - PW;	//Set initial pulsewidth
+	range = 45;
 	while(1)
 	{
+		while(start_delay<1);
 		while(!SWITCH) Drive_Motor();
 	}	
 }
@@ -118,8 +123,11 @@ void PCA_ISR ( void ) __interrupt 9
 			new_range=1;
 			r_count = 0;
 		}
+		delay++;
+		if(delay>5) delay = 0;
 		PCA0 = PCA_START;	// Start count for 20ms period
 		CF = 0;			// Clear overflow flag
+		if((start_delay<1) && (delay>=4)) start_delay++;
 	}
 	else PCA0CN &= 0xC0;		// Handle other PCA interrupt sources
 }
@@ -162,21 +170,20 @@ void Drive_Motor()
 		PW = PW - 10; //decrease the steering pulsewidth by 10
 		
 	}*/
-	unsigned int range;
-	if(new_range)
+	if(new_range && (delay>=5))
 		{
 			range = ReadRanger();
 			new_range = 0;
 		
 			//The above two lines change the result to centimetres
 			printf("\rThe range is %u cm\n",range);
-			
+			printf("\rPW is %u\n", PW);
 		}
 	PW = DeterminePWM(range);
 	if(PW > PW_MAX) PW = PW_MAX;
 	if(PW < PW_MIN) PW = PW_MIN;
-	printf("\rPW is %u\n", PW);
-	PCA0CP2 = 0xFFFF - PW;
+	
+	PCA0CP2 = 0xFFFF - PW;	
 }
 
 //--------------------------------------------------------------------------------
@@ -185,13 +192,13 @@ signed int DeterminePWM(unsigned int range)
 {
 	signed int Error = 0;
 	unsigned int PWMe = 0;
-	unsigned char k = 1;
+	unsigned char k = 22;
 	Error = neutral - range;
 	//if(Error < 1800) Error = Error + 3600;
 	//if(Error > 1800) Error = Error - 3600;
 	PWMe = PW_CENTER + (k*Error);
 	if(PWMe < PW_MIN) PWMe = PW_MIN;
 	if(PWMe > PW_MAX) PWMe = PW_MAX;
-	if(-5<PWMe<5) PWMe = PW_CENTER;
+	if((-5<Error) && (Error<5)) PWMe = PW_CENTER;
 	return PWMe;
 }

@@ -60,9 +60,15 @@ S:G$new_range$0$0({1}SC:U),E,0,0
 S:G$r_count$0$0({1}SC:U),E,0,0
 S:G$neutral$0$0({1}SC:U),E,0,0
 S:G$range$0$0({2}SI:U),E,0,0
+S:G$delay$0$0({1}SC:U),E,0,0
+S:G$start_delay$0$0({1}SC:U),E,0,0
 S:LLab_3_3_Speed.ReadRanger$addr$1$126({1}SC:U),R,0,0,[]
 S:LLab_3_3_Speed.ReadRanger$Data$1$126({2}DA2d,SC:U),E,0,0
 S:LLab_3_3_Speed.ReadRanger$range$1$126({2}SI:U),R,0,0,[r6,r7]
+S:LLab_3_3_Speed.DeterminePWM$range$1$129({2}SI:U),R,0,0,[r6,r7]
+S:LLab_3_3_Speed.DeterminePWM$Error$1$130({2}SI:S),R,0,0,[r6,r7]
+S:LLab_3_3_Speed.DeterminePWM$PWMe$1$130({2}SI:U),R,0,0,[r4,r5]
+S:LLab_3_3_Speed.DeterminePWM$k$1$130({1}SC:U),R,0,0,[]
 S:LLab_3_3_Speed.lcd_print$text$1$73({80}DA80d,SC:U),F,0,0
 S:G$P0$0$0({1}SC:U),I,0,0
 S:G$SP$0$0({1}SC:U),I,0,0

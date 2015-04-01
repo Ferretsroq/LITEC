@@ -8,937 +8,975 @@ Symbol Table
     .__.CPU.                                                    =  000000 L
     .__.H$L.                                                    =  000001 L
     A                                                           =  0000E0 L
-  F A$Lab_3_3_Speed$1062                                           000000 GR
-  F A$Lab_3_3_Speed$1063                                           000003 GR
-  F A$Lab_3_3_Speed$1065                                           00000B GR
-  F A$Lab_3_3_Speed$1067                                           000013 GR
-  F A$Lab_3_3_Speed$1069                                           00001B GR
-  F A$Lab_3_3_Speed$1071                                           000023 GR
-  F A$Lab_3_3_Speed$1073                                           00002B GR
-  F A$Lab_3_3_Speed$1075                                           000033 GR
-  F A$Lab_3_3_Speed$1077                                           00003B GR
-  F A$Lab_3_3_Speed$1079                                           000043 GR
-  F A$Lab_3_3_Speed$1081                                           00004B GR
- 16 A$Lab_3_3_Speed$1097                                           000000 GR
- 16 A$Lab_3_3_Speed$1098                                           000003 GR
- 16 A$Lab_3_3_Speed$1101                                           000006 GR
- 16 A$Lab_3_3_Speed$1102                                           000009 GR
- 16 A$Lab_3_3_Speed$1105                                           00000C GR
- 16 A$Lab_3_3_Speed$1106                                           00000F GR
- 16 A$Lab_3_3_Speed$1109                                           000012 GR
- 16 A$Lab_3_3_Speed$1110                                           000015 GR
- 16 A$Lab_3_3_Speed$1113                                           000018 GR
- 16 A$Lab_3_3_Speed$1114                                           000019 GR
- 16 A$Lab_3_3_Speed$1115                                           00001B GR
- 16 A$Lab_3_3_Speed$1118                                           00001D GR
- 16 A$Lab_3_3_Speed$1119                                           00001F GR
- 16 A$Lab_3_3_Speed$1123                                           000021 GR
- 16 A$Lab_3_3_Speed$1127                                           000023 GR
- 16 A$Lab_3_3_Speed$1130                                           000025 GR
- 17 A$Lab_3_3_Speed$1132                                           000000 GR
-  F A$Lab_3_3_Speed$1139                                           00004E GR
- 18 A$Lab_3_3_Speed$1167                                           000000 GR
- 18 A$Lab_3_3_Speed$1170                                           000003 GR
- 18 A$Lab_3_3_Speed$1171                                           000005 GR
- 18 A$Lab_3_3_Speed$1173                                           000007 GR
- 18 A$Lab_3_3_Speed$1174                                           000008 GR
- 18 A$Lab_3_3_Speed$1175                                           00000B GR
- 18 A$Lab_3_3_Speed$1177                                           00000C GR
- 18 A$Lab_3_3_Speed$1178                                           00000D GR
- 18 A$Lab_3_3_Speed$1179                                           00000E GR
- 18 A$Lab_3_3_Speed$1183                                           000010 GR
- 18 A$Lab_3_3_Speed$1184                                           000012 GR
- 18 A$Lab_3_3_Speed$1187                                           000015 GR
- 18 A$Lab_3_3_Speed$1190                                           000018 GR
- 18 A$Lab_3_3_Speed$1203                                           000019 GR
- 18 A$Lab_3_3_Speed$1206                                           00001C GR
- 18 A$Lab_3_3_Speed$1209                                           00001F GR
- 18 A$Lab_3_3_Speed$1212                                           000022 GR
- 18 A$Lab_3_3_Speed$1215                                           000024 GR
- 18 A$Lab_3_3_Speed$1218                                           000027 GR
- 18 A$Lab_3_3_Speed$1221                                           00002A GR
- 18 A$Lab_3_3_Speed$1224                                           00002C GR
+  F A$Lab_3_3_Speed$1069                                           000000 GR
+  F A$Lab_3_3_Speed$1070                                           000003 GR
+  F A$Lab_3_3_Speed$1072                                           00000B GR
+  F A$Lab_3_3_Speed$1074                                           000013 GR
+  F A$Lab_3_3_Speed$1076                                           00001B GR
+  F A$Lab_3_3_Speed$1078                                           000023 GR
+  F A$Lab_3_3_Speed$1080                                           00002B GR
+  F A$Lab_3_3_Speed$1082                                           000033 GR
+  F A$Lab_3_3_Speed$1084                                           00003B GR
+  F A$Lab_3_3_Speed$1086                                           000043 GR
+  F A$Lab_3_3_Speed$1088                                           00004B GR
+ 16 A$Lab_3_3_Speed$1104                                           000000 GR
+ 16 A$Lab_3_3_Speed$1105                                           000003 GR
+ 16 A$Lab_3_3_Speed$1108                                           000006 GR
+ 16 A$Lab_3_3_Speed$1109                                           000009 GR
+ 16 A$Lab_3_3_Speed$1112                                           00000C GR
+ 16 A$Lab_3_3_Speed$1113                                           00000F GR
+ 16 A$Lab_3_3_Speed$1116                                           000012 GR
+ 16 A$Lab_3_3_Speed$1117                                           000015 GR
+ 16 A$Lab_3_3_Speed$1120                                           000018 GR
+ 16 A$Lab_3_3_Speed$1121                                           000019 GR
+ 16 A$Lab_3_3_Speed$1122                                           00001B GR
+ 16 A$Lab_3_3_Speed$1125                                           00001D GR
+ 16 A$Lab_3_3_Speed$1126                                           00001F GR
+ 16 A$Lab_3_3_Speed$1130                                           000021 GR
+ 16 A$Lab_3_3_Speed$1134                                           000023 GR
+ 16 A$Lab_3_3_Speed$1137                                           000025 GR
+ 16 A$Lab_3_3_Speed$1141                                           000028 GR
+ 16 A$Lab_3_3_Speed$1145                                           00002A GR
+ 17 A$Lab_3_3_Speed$1147                                           000000 GR
+  F A$Lab_3_3_Speed$1154                                           00004E GR
+ 18 A$Lab_3_3_Speed$1182                                           000000 GR
+ 18 A$Lab_3_3_Speed$1185                                           000003 GR
+ 18 A$Lab_3_3_Speed$1186                                           000005 GR
+ 18 A$Lab_3_3_Speed$1188                                           000007 GR
+ 18 A$Lab_3_3_Speed$1189                                           000008 GR
+ 18 A$Lab_3_3_Speed$1190                                           00000B GR
+ 18 A$Lab_3_3_Speed$1192                                           00000C GR
+ 18 A$Lab_3_3_Speed$1193                                           00000D GR
+ 18 A$Lab_3_3_Speed$1194                                           00000E GR
+ 18 A$Lab_3_3_Speed$1198                                           000010 GR
+ 18 A$Lab_3_3_Speed$1199                                           000012 GR
+ 18 A$Lab_3_3_Speed$1202                                           000015 GR
+ 18 A$Lab_3_3_Speed$1205                                           000018 GR
+ 18 A$Lab_3_3_Speed$1218                                           000019 GR
+ 18 A$Lab_3_3_Speed$1221                                           00001C GR
+ 18 A$Lab_3_3_Speed$1224                                           00001F GR
+ 18 A$Lab_3_3_Speed$1227                                           000022 GR
+ 18 A$Lab_3_3_Speed$1230                                           000024 GR
+ 18 A$Lab_3_3_Speed$1233                                           000027 GR
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 2.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
- 18 A$Lab_3_3_Speed$1227                                           00002F GR
- 18 A$Lab_3_3_Speed$1240                                           000030 GR
- 18 A$Lab_3_3_Speed$1243                                           000033 GR
- 18 A$Lab_3_3_Speed$1246                                           000036 GR
- 18 A$Lab_3_3_Speed$1249                                           000039 GR
- 18 A$Lab_3_3_Speed$1252                                           00003C GR
- 18 A$Lab_3_3_Speed$1255                                           00003F GR
- 18 A$Lab_3_3_Speed$1258                                           000042 GR
- 18 A$Lab_3_3_Speed$1271                                           000043 GR
- 18 A$Lab_3_3_Speed$1277                                           000045 GR
- 18 A$Lab_3_3_Speed$1278                                           000048 GR
- 18 A$Lab_3_3_Speed$1282                                           00004A GR
- 18 A$Lab_3_3_Speed$1285                                           00004C GR
- 18 A$Lab_3_3_Speed$1303                                           00004D GR
- 18 A$Lab_3_3_Speed$1304                                           000050 GR
- 18 A$Lab_3_3_Speed$1308                                           000052 GR
- 18 A$Lab_3_3_Speed$1311                                           000055 GR
- 18 A$Lab_3_3_Speed$1314                                           000058 GR
- 18 A$Lab_3_3_Speed$1317                                           00005B GR
- 18 A$Lab_3_3_Speed$1334                                           00005C GR
- 18 A$Lab_3_3_Speed$1335                                           00005E GR
- 18 A$Lab_3_3_Speed$1338                                           000061 GR
- 18 A$Lab_3_3_Speed$1339                                           000063 GR
- 18 A$Lab_3_3_Speed$1340                                           000065 GR
- 18 A$Lab_3_3_Speed$1341                                           000066 GR
- 18 A$Lab_3_3_Speed$1342                                           000068 GR
- 18 A$Lab_3_3_Speed$1343                                           000069 GR
- 18 A$Lab_3_3_Speed$1344                                           00006B GR
- 18 A$Lab_3_3_Speed$1345                                           00006C GR
- 18 A$Lab_3_3_Speed$1346                                           00006E GR
- 18 A$Lab_3_3_Speed$1347                                           000071 GR
- 18 A$Lab_3_3_Speed$1348                                           000073 GR
- 18 A$Lab_3_3_Speed$1349                                           000076 GR
- 18 A$Lab_3_3_Speed$1350                                           000078 GR
- 18 A$Lab_3_3_Speed$1351                                           00007A GR
- 18 A$Lab_3_3_Speed$1355                                           00007C GR
- 18 A$Lab_3_3_Speed$1356                                           00007E GR
- 18 A$Lab_3_3_Speed$1357                                           000080 GR
- 18 A$Lab_3_3_Speed$1358                                           000081 GR
- 18 A$Lab_3_3_Speed$1361                                           000083 GR
- 18 A$Lab_3_3_Speed$1362                                           000085 GR
- 18 A$Lab_3_3_Speed$1363                                           000087 GR
- 18 A$Lab_3_3_Speed$1364                                           000088 GR
- 18 A$Lab_3_3_Speed$1365                                           00008A GR
- 18 A$Lab_3_3_Speed$1366                                           00008B GR
- 18 A$Lab_3_3_Speed$1367                                           00008D GR
- 18 A$Lab_3_3_Speed$1368                                           00008E GR
- 18 A$Lab_3_3_Speed$1369                                           000090 GR
- 18 A$Lab_3_3_Speed$1370                                           000093 GR
- 18 A$Lab_3_3_Speed$1371                                           000096 GR
- 18 A$Lab_3_3_Speed$1374                                           000099 GR
- 18 A$Lab_3_3_Speed$1375                                           00009C GR
- 18 A$Lab_3_3_Speed$1376                                           00009F GR
- 18 A$Lab_3_3_Speed$1377                                           0000A2 GR
- 18 A$Lab_3_3_Speed$1380                                           0000A4 GR
+ 18 A$Lab_3_3_Speed$1236                                           00002A GR
+ 18 A$Lab_3_3_Speed$1239                                           00002C GR
+ 18 A$Lab_3_3_Speed$1242                                           00002F GR
+ 18 A$Lab_3_3_Speed$1255                                           000030 GR
+ 18 A$Lab_3_3_Speed$1258                                           000033 GR
+ 18 A$Lab_3_3_Speed$1261                                           000036 GR
+ 18 A$Lab_3_3_Speed$1264                                           000039 GR
+ 18 A$Lab_3_3_Speed$1267                                           00003C GR
+ 18 A$Lab_3_3_Speed$1270                                           00003F GR
+ 18 A$Lab_3_3_Speed$1273                                           000042 GR
+ 18 A$Lab_3_3_Speed$1286                                           000043 GR
+ 18 A$Lab_3_3_Speed$1292                                           000045 GR
+ 18 A$Lab_3_3_Speed$1293                                           000048 GR
+ 18 A$Lab_3_3_Speed$1297                                           00004A GR
+ 18 A$Lab_3_3_Speed$1300                                           00004C GR
+ 18 A$Lab_3_3_Speed$1318                                           00004D GR
+ 18 A$Lab_3_3_Speed$1319                                           000050 GR
+ 18 A$Lab_3_3_Speed$1323                                           000052 GR
+ 18 A$Lab_3_3_Speed$1326                                           000055 GR
+ 18 A$Lab_3_3_Speed$1329                                           000058 GR
+ 18 A$Lab_3_3_Speed$1332                                           00005B GR
+ 18 A$Lab_3_3_Speed$1349                                           00005C GR
+ 18 A$Lab_3_3_Speed$1350                                           00005E GR
+ 18 A$Lab_3_3_Speed$1353                                           000061 GR
+ 18 A$Lab_3_3_Speed$1354                                           000063 GR
+ 18 A$Lab_3_3_Speed$1355                                           000065 GR
+ 18 A$Lab_3_3_Speed$1356                                           000066 GR
+ 18 A$Lab_3_3_Speed$1357                                           000068 GR
+ 18 A$Lab_3_3_Speed$1358                                           000069 GR
+ 18 A$Lab_3_3_Speed$1359                                           00006B GR
+ 18 A$Lab_3_3_Speed$1360                                           00006C GR
+ 18 A$Lab_3_3_Speed$1361                                           00006E GR
+ 18 A$Lab_3_3_Speed$1362                                           000071 GR
+ 18 A$Lab_3_3_Speed$1363                                           000073 GR
+ 18 A$Lab_3_3_Speed$1364                                           000076 GR
+ 18 A$Lab_3_3_Speed$1365                                           000078 GR
+ 18 A$Lab_3_3_Speed$1366                                           00007A GR
+ 18 A$Lab_3_3_Speed$1370                                           00007C GR
+ 18 A$Lab_3_3_Speed$1371                                           00007E GR
+ 18 A$Lab_3_3_Speed$1372                                           000080 GR
+ 18 A$Lab_3_3_Speed$1373                                           000081 GR
+ 18 A$Lab_3_3_Speed$1376                                           000083 GR
+ 18 A$Lab_3_3_Speed$1377                                           000085 GR
+ 18 A$Lab_3_3_Speed$1378                                           000087 GR
+ 18 A$Lab_3_3_Speed$1379                                           000088 GR
+ 18 A$Lab_3_3_Speed$1380                                           00008A GR
+ 18 A$Lab_3_3_Speed$1381                                           00008B GR
+ 18 A$Lab_3_3_Speed$1382                                           00008D GR
+ 18 A$Lab_3_3_Speed$1383                                           00008E GR
+ 18 A$Lab_3_3_Speed$1384                                           000090 GR
+ 18 A$Lab_3_3_Speed$1385                                           000093 GR
+ 18 A$Lab_3_3_Speed$1386                                           000096 GR
+ 18 A$Lab_3_3_Speed$1389                                           000099 GR
+ 18 A$Lab_3_3_Speed$1390                                           00009C GR
+ 18 A$Lab_3_3_Speed$1391                                           00009F GR
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 3.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
- 18 A$Lab_3_3_Speed$1382                                           0000A6 GR
- 18 A$Lab_3_3_Speed$1383                                           0000A7 GR
- 18 A$Lab_3_3_Speed$1384                                           0000A8 GR
- 18 A$Lab_3_3_Speed$1385                                           0000A9 GR
- 18 A$Lab_3_3_Speed$1388                                           0000AB GR
- 18 A$Lab_3_3_Speed$1389                                           0000AC GR
- 18 A$Lab_3_3_Speed$1390                                           0000AE GR
- 18 A$Lab_3_3_Speed$1391                                           0000B0 GR
- 18 A$Lab_3_3_Speed$1392                                           0000B1 GR
- 18 A$Lab_3_3_Speed$1393                                           0000B3 GR
- 18 A$Lab_3_3_Speed$1394                                           0000B5 GR
- 18 A$Lab_3_3_Speed$1395                                           0000B6 GR
- 18 A$Lab_3_3_Speed$1396                                           0000B7 GR
- 18 A$Lab_3_3_Speed$1397                                           0000BA GR
- 18 A$Lab_3_3_Speed$1398                                           0000BB GR
- 18 A$Lab_3_3_Speed$1399                                           0000BD GR
- 18 A$Lab_3_3_Speed$1400                                           0000BF GR
- 18 A$Lab_3_3_Speed$1401                                           0000C0 GR
- 18 A$Lab_3_3_Speed$1402                                           0000C2 GR
- 18 A$Lab_3_3_Speed$1403                                           0000C4 GR
- 18 A$Lab_3_3_Speed$1404                                           0000C6 GR
- 18 A$Lab_3_3_Speed$1408                                           0000C7 GR
- 18 A$Lab_3_3_Speed$1409                                           0000C8 GR
- 18 A$Lab_3_3_Speed$1413                                           0000CA GR
- 18 A$Lab_3_3_Speed$1414                                           0000CD GR
- 18 A$Lab_3_3_Speed$1415                                           0000D0 GR
- 18 A$Lab_3_3_Speed$1416                                           0000D3 GR
- 18 A$Lab_3_3_Speed$1417                                           0000D6 GR
- 18 A$Lab_3_3_Speed$1418                                           0000D8 GR
- 18 A$Lab_3_3_Speed$1419                                           0000DB GR
- 18 A$Lab_3_3_Speed$1421                                           0000DE GR
- 18 A$Lab_3_3_Speed$1424                                           0000E0 GR
- 18 A$Lab_3_3_Speed$1440                                           0000E1 GR
- 18 A$Lab_3_3_Speed$1444                                           0000E4 GR
- 18 A$Lab_3_3_Speed$1445                                           0000E6 GR
- 18 A$Lab_3_3_Speed$1446                                           0000E8 GR
- 18 A$Lab_3_3_Speed$1447                                           0000EA GR
- 18 A$Lab_3_3_Speed$1448                                           0000ED GR
- 18 A$Lab_3_3_Speed$1449                                           0000F0 GR
- 18 A$Lab_3_3_Speed$1450                                           0000F3 GR
- 18 A$Lab_3_3_Speed$1451                                           0000F6 GR
- 18 A$Lab_3_3_Speed$1452                                           0000F9 GR
- 18 A$Lab_3_3_Speed$1453                                           0000FC GR
- 18 A$Lab_3_3_Speed$1454                                           0000FF GR
- 18 A$Lab_3_3_Speed$1458                                           000101 GR
- 18 A$Lab_3_3_Speed$1461                                           000104 GR
- 18 A$Lab_3_3_Speed$1462                                           000107 GR
- 18 A$Lab_3_3_Speed$1463                                           00010A GR
- 18 A$Lab_3_3_Speed$1464                                           00010D GR
- 18 A$Lab_3_3_Speed$1465                                           000110 GR
- 18 A$Lab_3_3_Speed$1466                                           000113 GR
- 18 A$Lab_3_3_Speed$1467                                           000116 GR
- 18 A$Lab_3_3_Speed$1470                                           000119 GR
- 18 A$Lab_3_3_Speed$1486                                           00011A GR
- 18 A$Lab_3_3_Speed$1487                                           00011D GR
+ 18 A$Lab_3_3_Speed$1392                                           0000A2 GR
+ 18 A$Lab_3_3_Speed$1395                                           0000A4 GR
+ 18 A$Lab_3_3_Speed$1397                                           0000A6 GR
+ 18 A$Lab_3_3_Speed$1398                                           0000A7 GR
+ 18 A$Lab_3_3_Speed$1399                                           0000A8 GR
+ 18 A$Lab_3_3_Speed$1400                                           0000A9 GR
+ 18 A$Lab_3_3_Speed$1403                                           0000AB GR
+ 18 A$Lab_3_3_Speed$1404                                           0000AC GR
+ 18 A$Lab_3_3_Speed$1405                                           0000AE GR
+ 18 A$Lab_3_3_Speed$1406                                           0000B0 GR
+ 18 A$Lab_3_3_Speed$1407                                           0000B1 GR
+ 18 A$Lab_3_3_Speed$1408                                           0000B3 GR
+ 18 A$Lab_3_3_Speed$1409                                           0000B5 GR
+ 18 A$Lab_3_3_Speed$1410                                           0000B6 GR
+ 18 A$Lab_3_3_Speed$1411                                           0000B7 GR
+ 18 A$Lab_3_3_Speed$1412                                           0000BA GR
+ 18 A$Lab_3_3_Speed$1413                                           0000BB GR
+ 18 A$Lab_3_3_Speed$1414                                           0000BD GR
+ 18 A$Lab_3_3_Speed$1415                                           0000BF GR
+ 18 A$Lab_3_3_Speed$1416                                           0000C0 GR
+ 18 A$Lab_3_3_Speed$1417                                           0000C2 GR
+ 18 A$Lab_3_3_Speed$1418                                           0000C4 GR
+ 18 A$Lab_3_3_Speed$1419                                           0000C6 GR
+ 18 A$Lab_3_3_Speed$1423                                           0000C7 GR
+ 18 A$Lab_3_3_Speed$1424                                           0000C8 GR
+ 18 A$Lab_3_3_Speed$1428                                           0000CA GR
+ 18 A$Lab_3_3_Speed$1429                                           0000CD GR
+ 18 A$Lab_3_3_Speed$1430                                           0000D0 GR
+ 18 A$Lab_3_3_Speed$1431                                           0000D3 GR
+ 18 A$Lab_3_3_Speed$1432                                           0000D6 GR
+ 18 A$Lab_3_3_Speed$1433                                           0000D8 GR
+ 18 A$Lab_3_3_Speed$1434                                           0000DB GR
+ 18 A$Lab_3_3_Speed$1436                                           0000DE GR
+ 18 A$Lab_3_3_Speed$1439                                           0000E0 GR
+ 18 A$Lab_3_3_Speed$1455                                           0000E1 GR
+ 18 A$Lab_3_3_Speed$1459                                           0000E4 GR
+ 18 A$Lab_3_3_Speed$1460                                           0000E6 GR
+ 18 A$Lab_3_3_Speed$1461                                           0000E8 GR
+ 18 A$Lab_3_3_Speed$1462                                           0000EA GR
+ 18 A$Lab_3_3_Speed$1463                                           0000ED GR
+ 18 A$Lab_3_3_Speed$1464                                           0000F0 GR
+ 18 A$Lab_3_3_Speed$1465                                           0000F3 GR
+ 18 A$Lab_3_3_Speed$1466                                           0000F6 GR
+ 18 A$Lab_3_3_Speed$1467                                           0000F9 GR
+ 18 A$Lab_3_3_Speed$1468                                           0000FC GR
+ 18 A$Lab_3_3_Speed$1469                                           0000FF GR
+ 18 A$Lab_3_3_Speed$1473                                           000101 GR
+ 18 A$Lab_3_3_Speed$1476                                           000104 GR
+ 18 A$Lab_3_3_Speed$1477                                           000107 GR
+ 18 A$Lab_3_3_Speed$1478                                           00010A GR
+ 18 A$Lab_3_3_Speed$1479                                           00010D GR
+ 18 A$Lab_3_3_Speed$1480                                           000110 GR
+ 18 A$Lab_3_3_Speed$1481                                           000113 GR
+ 18 A$Lab_3_3_Speed$1482                                           000116 GR
+ 18 A$Lab_3_3_Speed$1485                                           000119 GR
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 4.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
- 18 A$Lab_3_3_Speed$1488                                           000120 GR
- 18 A$Lab_3_3_Speed$1489                                           000123 GR
- 18 A$Lab_3_3_Speed$1490                                           000126 GR
- 18 A$Lab_3_3_Speed$1491                                           000129 GR
- 18 A$Lab_3_3_Speed$1492                                           00012C GR
- 18 A$Lab_3_3_Speed$1495                                           00012F GR
- 18 A$Lab_3_3_Speed$1496                                           000131 GR
- 18 A$Lab_3_3_Speed$1497                                           000134 GR
- 18 A$Lab_3_3_Speed$1498                                           000137 GR
- 18 A$Lab_3_3_Speed$1502                                           000139 GR
- 18 A$Lab_3_3_Speed$1503                                           00013B GR
- 18 A$Lab_3_3_Speed$1507                                           00013D GR
- 18 A$Lab_3_3_Speed$1508                                           00013F GR
- 18 A$Lab_3_3_Speed$1509                                           000141 GR
- 18 A$Lab_3_3_Speed$1510                                           000143 GR
- 18 A$Lab_3_3_Speed$1511                                           000145 GR
- 18 A$Lab_3_3_Speed$1513                                           000147 GR
- 18 A$Lab_3_3_Speed$1514                                           000148 GR
- 18 A$Lab_3_3_Speed$1515                                           000149 GR
- 18 A$Lab_3_3_Speed$1516                                           00014A GR
- 18 A$Lab_3_3_Speed$1517                                           00014B GR
- 18 A$Lab_3_3_Speed$1518                                           00014C GR
- 18 A$Lab_3_3_Speed$1520                                           00014D GR
- 18 A$Lab_3_3_Speed$1521                                           000150 GR
- 18 A$Lab_3_3_Speed$1522                                           000152 GR
- 18 A$Lab_3_3_Speed$1523                                           000154 GR
- 18 A$Lab_3_3_Speed$1524                                           000155 GR
- 18 A$Lab_3_3_Speed$1525                                           000157 GR
- 18 A$Lab_3_3_Speed$1526                                           000158 GR
- 18 A$Lab_3_3_Speed$1527                                           00015A GR
- 18 A$Lab_3_3_Speed$1528                                           00015B GR
- 18 A$Lab_3_3_Speed$1529                                           00015C GR
- 18 A$Lab_3_3_Speed$1532                                           00015E GR
- 18 A$Lab_3_3_Speed$1533                                           000160 GR
- 18 A$Lab_3_3_Speed$1534                                           000161 GR
- 18 A$Lab_3_3_Speed$1535                                           000163 GR
- 18 A$Lab_3_3_Speed$1539                                           000165 GR
- 18 A$Lab_3_3_Speed$1540                                           000166 GR
- 18 A$Lab_3_3_Speed$1541                                           000168 GR
- 18 A$Lab_3_3_Speed$1543                                           00016B GR
- 18 A$Lab_3_3_Speed$1546                                           00016D GR
- 18 A$Lab_3_3_Speed$1547                                           00016F GR
- 18 A$Lab_3_3_Speed$1548                                           000172 GR
- 18 A$Lab_3_3_Speed$1549                                           000175 GR
- 18 A$Lab_3_3_Speed$1553                                           000177 GR
- 18 A$Lab_3_3_Speed$1554                                           000179 GR
- 18 A$Lab_3_3_Speed$1555                                           00017C GR
- 18 A$Lab_3_3_Speed$1556                                           00017F GR
- 18 A$Lab_3_3_Speed$1560                                           000181 GR
- 18 A$Lab_3_3_Speed$1561                                           000183 GR
- 18 A$Lab_3_3_Speed$1562                                           000186 GR
- 18 A$Lab_3_3_Speed$1563                                           000189 GR
- 18 A$Lab_3_3_Speed$1567                                           00018B GR
- 18 A$Lab_3_3_Speed$1568                                           00018D GR
- 18 A$Lab_3_3_Speed$1569                                           000190 GR
+ 18 A$Lab_3_3_Speed$1501                                           00011A GR
+ 18 A$Lab_3_3_Speed$1502                                           00011D GR
+ 18 A$Lab_3_3_Speed$1503                                           000120 GR
+ 18 A$Lab_3_3_Speed$1504                                           000123 GR
+ 18 A$Lab_3_3_Speed$1505                                           000126 GR
+ 18 A$Lab_3_3_Speed$1506                                           000129 GR
+ 18 A$Lab_3_3_Speed$1507                                           00012C GR
+ 18 A$Lab_3_3_Speed$1510                                           00012F GR
+ 18 A$Lab_3_3_Speed$1511                                           000131 GR
+ 18 A$Lab_3_3_Speed$1512                                           000134 GR
+ 18 A$Lab_3_3_Speed$1513                                           000137 GR
+ 18 A$Lab_3_3_Speed$1517                                           000139 GR
+ 18 A$Lab_3_3_Speed$1518                                           00013B GR
+ 18 A$Lab_3_3_Speed$1522                                           00013D GR
+ 18 A$Lab_3_3_Speed$1523                                           00013F GR
+ 18 A$Lab_3_3_Speed$1524                                           000141 GR
+ 18 A$Lab_3_3_Speed$1525                                           000143 GR
+ 18 A$Lab_3_3_Speed$1526                                           000145 GR
+ 18 A$Lab_3_3_Speed$1528                                           000147 GR
+ 18 A$Lab_3_3_Speed$1529                                           000148 GR
+ 18 A$Lab_3_3_Speed$1530                                           000149 GR
+ 18 A$Lab_3_3_Speed$1531                                           00014A GR
+ 18 A$Lab_3_3_Speed$1532                                           00014B GR
+ 18 A$Lab_3_3_Speed$1533                                           00014C GR
+ 18 A$Lab_3_3_Speed$1535                                           00014D GR
+ 18 A$Lab_3_3_Speed$1536                                           000150 GR
+ 18 A$Lab_3_3_Speed$1537                                           000152 GR
+ 18 A$Lab_3_3_Speed$1538                                           000154 GR
+ 18 A$Lab_3_3_Speed$1539                                           000155 GR
+ 18 A$Lab_3_3_Speed$1540                                           000157 GR
+ 18 A$Lab_3_3_Speed$1541                                           000158 GR
+ 18 A$Lab_3_3_Speed$1542                                           00015A GR
+ 18 A$Lab_3_3_Speed$1543                                           00015B GR
+ 18 A$Lab_3_3_Speed$1544                                           00015C GR
+ 18 A$Lab_3_3_Speed$1547                                           00015E GR
+ 18 A$Lab_3_3_Speed$1548                                           000160 GR
+ 18 A$Lab_3_3_Speed$1549                                           000161 GR
+ 18 A$Lab_3_3_Speed$1550                                           000163 GR
+ 18 A$Lab_3_3_Speed$1554                                           000165 GR
+ 18 A$Lab_3_3_Speed$1555                                           000166 GR
+ 18 A$Lab_3_3_Speed$1556                                           000168 GR
+ 18 A$Lab_3_3_Speed$1558                                           00016B GR
+ 18 A$Lab_3_3_Speed$1561                                           00016D GR
+ 18 A$Lab_3_3_Speed$1562                                           00016F GR
+ 18 A$Lab_3_3_Speed$1563                                           000172 GR
+ 18 A$Lab_3_3_Speed$1564                                           000175 GR
+ 18 A$Lab_3_3_Speed$1568                                           000177 GR
+ 18 A$Lab_3_3_Speed$1569                                           000179 GR
+ 18 A$Lab_3_3_Speed$1570                                           00017C GR
+ 18 A$Lab_3_3_Speed$1571                                           00017F GR
+ 18 A$Lab_3_3_Speed$1575                                           000181 GR
+ 18 A$Lab_3_3_Speed$1576                                           000183 GR
+ 18 A$Lab_3_3_Speed$1577                                           000186 GR
+ 18 A$Lab_3_3_Speed$1578                                           000189 GR
+ 18 A$Lab_3_3_Speed$1582                                           00018B GR
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 5.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
- 18 A$Lab_3_3_Speed$1570                                           000193 GR
- 18 A$Lab_3_3_Speed$1574                                           000195 GR
- 18 A$Lab_3_3_Speed$1578                                           000198 GR
- 18 A$Lab_3_3_Speed$1594                                           000199 GR
- 18 A$Lab_3_3_Speed$1599                                           00019B GR
- 18 A$Lab_3_3_Speed$1600                                           00019C GR
- 18 A$Lab_3_3_Speed$1601                                           00019D GR
- 18 A$Lab_3_3_Speed$1602                                           00019E GR
- 18 A$Lab_3_3_Speed$1603                                           00019F GR
- 18 A$Lab_3_3_Speed$1604                                           0001A1 GR
- 18 A$Lab_3_3_Speed$1605                                           0001A3 GR
- 18 A$Lab_3_3_Speed$1606                                           0001A5 GR
- 18 A$Lab_3_3_Speed$1607                                           0001A7 GR
- 18 A$Lab_3_3_Speed$1608                                           0001A9 GR
- 18 A$Lab_3_3_Speed$1609                                           0001AB GR
- 18 A$Lab_3_3_Speed$1610                                           0001AD GR
- 18 A$Lab_3_3_Speed$1611                                           0001AF GR
- 18 A$Lab_3_3_Speed$1612                                           0001B1 GR
- 18 A$Lab_3_3_Speed$1613                                           0001B4 GR
- 18 A$Lab_3_3_Speed$1614                                           0001B6 GR
- 18 A$Lab_3_3_Speed$1615                                           0001B8 GR
- 18 A$Lab_3_3_Speed$1616                                           0001BA GR
- 18 A$Lab_3_3_Speed$1617                                           0001BC GR
- 18 A$Lab_3_3_Speed$1621                                           0001BE GR
- 18 A$Lab_3_3_Speed$1622                                           0001C0 GR
- 18 A$Lab_3_3_Speed$1623                                           0001C2 GR
- 18 A$Lab_3_3_Speed$1624                                           0001C4 GR
- 18 A$Lab_3_3_Speed$1625                                           0001C6 GR
- 18 A$Lab_3_3_Speed$1626                                           0001C7 GR
- 18 A$Lab_3_3_Speed$1627                                           0001C9 GR
- 18 A$Lab_3_3_Speed$1628                                           0001CB GR
- 18 A$Lab_3_3_Speed$1629                                           0001CD GR
- 18 A$Lab_3_3_Speed$1630                                           0001CE GR
- 18 A$Lab_3_3_Speed$1631                                           0001D0 GR
- 18 A$Lab_3_3_Speed$1632                                           0001D2 GR
- 18 A$Lab_3_3_Speed$1633                                           0001D4 GR
- 18 A$Lab_3_3_Speed$1634                                           0001D5 GR
- 18 A$Lab_3_3_Speed$1635                                           0001D7 GR
- 18 A$Lab_3_3_Speed$1636                                           0001D9 GR
- 18 A$Lab_3_3_Speed$1637                                           0001DB GR
- 18 A$Lab_3_3_Speed$1638                                           0001DC GR
- 18 A$Lab_3_3_Speed$1639                                           0001DE GR
- 18 A$Lab_3_3_Speed$1640                                           0001E0 GR
- 18 A$Lab_3_3_Speed$1641                                           0001E2 GR
- 18 A$Lab_3_3_Speed$1642                                           0001E3 GR
- 18 A$Lab_3_3_Speed$1643                                           0001E5 GR
- 18 A$Lab_3_3_Speed$1644                                           0001E7 GR
- 18 A$Lab_3_3_Speed$1645                                           0001E9 GR
- 18 A$Lab_3_3_Speed$1646                                           0001EB GR
- 18 A$Lab_3_3_Speed$1647                                           0001ED GR
- 18 A$Lab_3_3_Speed$1648                                           0001EF GR
- 18 A$Lab_3_3_Speed$1649                                           0001F1 GR
- 18 A$Lab_3_3_Speed$1650                                           0001F4 GR
- 18 A$Lab_3_3_Speed$1651                                           0001F6 GR
- 18 A$Lab_3_3_Speed$1652                                           0001F8 GR
+ 18 A$Lab_3_3_Speed$1583                                           00018D GR
+ 18 A$Lab_3_3_Speed$1584                                           000190 GR
+ 18 A$Lab_3_3_Speed$1585                                           000193 GR
+ 18 A$Lab_3_3_Speed$1589                                           000195 GR
+ 18 A$Lab_3_3_Speed$1593                                           000198 GR
+ 18 A$Lab_3_3_Speed$1609                                           000199 GR
+ 18 A$Lab_3_3_Speed$1614                                           00019B GR
+ 18 A$Lab_3_3_Speed$1615                                           00019C GR
+ 18 A$Lab_3_3_Speed$1616                                           00019D GR
+ 18 A$Lab_3_3_Speed$1617                                           00019E GR
+ 18 A$Lab_3_3_Speed$1618                                           00019F GR
+ 18 A$Lab_3_3_Speed$1619                                           0001A1 GR
+ 18 A$Lab_3_3_Speed$1620                                           0001A3 GR
+ 18 A$Lab_3_3_Speed$1621                                           0001A5 GR
+ 18 A$Lab_3_3_Speed$1622                                           0001A7 GR
+ 18 A$Lab_3_3_Speed$1623                                           0001A9 GR
+ 18 A$Lab_3_3_Speed$1624                                           0001AB GR
+ 18 A$Lab_3_3_Speed$1625                                           0001AD GR
+ 18 A$Lab_3_3_Speed$1626                                           0001AF GR
+ 18 A$Lab_3_3_Speed$1627                                           0001B1 GR
+ 18 A$Lab_3_3_Speed$1628                                           0001B4 GR
+ 18 A$Lab_3_3_Speed$1629                                           0001B6 GR
+ 18 A$Lab_3_3_Speed$1630                                           0001B8 GR
+ 18 A$Lab_3_3_Speed$1631                                           0001BA GR
+ 18 A$Lab_3_3_Speed$1632                                           0001BC GR
+ 18 A$Lab_3_3_Speed$1636                                           0001BE GR
+ 18 A$Lab_3_3_Speed$1637                                           0001C0 GR
+ 18 A$Lab_3_3_Speed$1638                                           0001C2 GR
+ 18 A$Lab_3_3_Speed$1639                                           0001C4 GR
+ 18 A$Lab_3_3_Speed$1640                                           0001C6 GR
+ 18 A$Lab_3_3_Speed$1641                                           0001C7 GR
+ 18 A$Lab_3_3_Speed$1642                                           0001C9 GR
+ 18 A$Lab_3_3_Speed$1643                                           0001CB GR
+ 18 A$Lab_3_3_Speed$1644                                           0001CD GR
+ 18 A$Lab_3_3_Speed$1645                                           0001CE GR
+ 18 A$Lab_3_3_Speed$1646                                           0001D0 GR
+ 18 A$Lab_3_3_Speed$1647                                           0001D2 GR
+ 18 A$Lab_3_3_Speed$1648                                           0001D4 GR
+ 18 A$Lab_3_3_Speed$1649                                           0001D5 GR
+ 18 A$Lab_3_3_Speed$1650                                           0001D7 GR
+ 18 A$Lab_3_3_Speed$1651                                           0001D9 GR
+ 18 A$Lab_3_3_Speed$1652                                           0001DB GR
+ 18 A$Lab_3_3_Speed$1653                                           0001DC GR
+ 18 A$Lab_3_3_Speed$1654                                           0001DE GR
+ 18 A$Lab_3_3_Speed$1655                                           0001E0 GR
+ 18 A$Lab_3_3_Speed$1656                                           0001E2 GR
+ 18 A$Lab_3_3_Speed$1657                                           0001E3 GR
+ 18 A$Lab_3_3_Speed$1658                                           0001E5 GR
+ 18 A$Lab_3_3_Speed$1659                                           0001E7 GR
+ 18 A$Lab_3_3_Speed$1660                                           0001E9 GR
+ 18 A$Lab_3_3_Speed$1661                                           0001EB GR
+ 18 A$Lab_3_3_Speed$1662                                           0001ED GR
+ 18 A$Lab_3_3_Speed$1663                                           0001EF GR
+ 18 A$Lab_3_3_Speed$1664                                           0001F1 GR
+ 18 A$Lab_3_3_Speed$1665                                           0001F4 GR
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 6.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
- 18 A$Lab_3_3_Speed$1655                                           0001FA GR
- 18 A$Lab_3_3_Speed$1656                                           0001FD GR
- 18 A$Lab_3_3_Speed$1657                                           000200 GR
- 18 A$Lab_3_3_Speed$1658                                           000201 GR
- 18 A$Lab_3_3_Speed$1659                                           000204 GR
- 18 A$Lab_3_3_Speed$1660                                           000206 GR
- 18 A$Lab_3_3_Speed$1663                                           000208 GR
- 18 A$Lab_3_3_Speed$1667                                           00020A GR
- 18 A$Lab_3_3_Speed$1668                                           00020C GR
- 18 A$Lab_3_3_Speed$1669                                           00020E GR
- 18 A$Lab_3_3_Speed$1670                                           000210 GR
- 18 A$Lab_3_3_Speed$1671                                           000213 GR
- 18 A$Lab_3_3_Speed$1672                                           000215 GR
- 18 A$Lab_3_3_Speed$1673                                           000217 GR
- 18 A$Lab_3_3_Speed$1674                                           000219 GR
- 18 A$Lab_3_3_Speed$1675                                           00021B GR
- 18 A$Lab_3_3_Speed$1676                                           00021D GR
- 18 A$Lab_3_3_Speed$1677                                           000220 GR
- 18 A$Lab_3_3_Speed$1679                                           000222 GR
- 18 A$Lab_3_3_Speed$1681                                           000225 GR
- 18 A$Lab_3_3_Speed$1682                                           000228 GR
- 18 A$Lab_3_3_Speed$1683                                           000229 GR
- 18 A$Lab_3_3_Speed$1684                                           00022B GR
- 18 A$Lab_3_3_Speed$1685                                           00022D GR
- 18 A$Lab_3_3_Speed$1686                                           00022F GR
- 18 A$Lab_3_3_Speed$1687                                           000231 GR
- 18 A$Lab_3_3_Speed$1688                                           000234 GR
- 18 A$Lab_3_3_Speed$1689                                           000236 GR
- 18 A$Lab_3_3_Speed$1690                                           000238 GR
- 18 A$Lab_3_3_Speed$1691                                           00023A GR
- 18 A$Lab_3_3_Speed$1695                                           00023C GR
- 18 A$Lab_3_3_Speed$1699                                           00023F GR
- 18 A$Lab_3_3_Speed$1700                                           000241 GR
- 18 A$Lab_3_3_Speed$1701                                           000243 GR
- 18 A$Lab_3_3_Speed$1702                                           000246 GR
- 18 A$Lab_3_3_Speed$1703                                           000248 GR
- 18 A$Lab_3_3_Speed$1704                                           00024A GR
- 18 A$Lab_3_3_Speed$1705                                           00024C GR
- 18 A$Lab_3_3_Speed$1706                                           00024F GR
- 18 A$Lab_3_3_Speed$1707                                           000252 GR
- 18 A$Lab_3_3_Speed$1708                                           000253 GR
- 18 A$Lab_3_3_Speed$1709                                           000255 GR
- 18 A$Lab_3_3_Speed$1710                                           000257 GR
- 18 A$Lab_3_3_Speed$1711                                           000259 GR
- 18 A$Lab_3_3_Speed$1712                                           00025C GR
- 18 A$Lab_3_3_Speed$1713                                           00025E GR
- 18 A$Lab_3_3_Speed$1714                                           000260 GR
- 18 A$Lab_3_3_Speed$1718                                           000262 GR
- 18 A$Lab_3_3_Speed$1719                                           000264 GR
- 18 A$Lab_3_3_Speed$1720                                           000266 GR
- 18 A$Lab_3_3_Speed$1724                                           000269 GR
- 18 A$Lab_3_3_Speed$1725                                           00026A GR
- 18 A$Lab_3_3_Speed$1726                                           00026B GR
- 18 A$Lab_3_3_Speed$1727                                           00026C GR
- 18 A$Lab_3_3_Speed$1728                                           00026E GR
+ 18 A$Lab_3_3_Speed$1666                                           0001F6 GR
+ 18 A$Lab_3_3_Speed$1667                                           0001F8 GR
+ 18 A$Lab_3_3_Speed$1670                                           0001FA GR
+ 18 A$Lab_3_3_Speed$1671                                           0001FD GR
+ 18 A$Lab_3_3_Speed$1672                                           000200 GR
+ 18 A$Lab_3_3_Speed$1673                                           000201 GR
+ 18 A$Lab_3_3_Speed$1674                                           000204 GR
+ 18 A$Lab_3_3_Speed$1675                                           000206 GR
+ 18 A$Lab_3_3_Speed$1678                                           000208 GR
+ 18 A$Lab_3_3_Speed$1682                                           00020A GR
+ 18 A$Lab_3_3_Speed$1683                                           00020C GR
+ 18 A$Lab_3_3_Speed$1684                                           00020E GR
+ 18 A$Lab_3_3_Speed$1685                                           000210 GR
+ 18 A$Lab_3_3_Speed$1686                                           000213 GR
+ 18 A$Lab_3_3_Speed$1687                                           000215 GR
+ 18 A$Lab_3_3_Speed$1688                                           000217 GR
+ 18 A$Lab_3_3_Speed$1689                                           000219 GR
+ 18 A$Lab_3_3_Speed$1690                                           00021B GR
+ 18 A$Lab_3_3_Speed$1691                                           00021D GR
+ 18 A$Lab_3_3_Speed$1692                                           000220 GR
+ 18 A$Lab_3_3_Speed$1694                                           000222 GR
+ 18 A$Lab_3_3_Speed$1696                                           000225 GR
+ 18 A$Lab_3_3_Speed$1697                                           000228 GR
+ 18 A$Lab_3_3_Speed$1698                                           000229 GR
+ 18 A$Lab_3_3_Speed$1699                                           00022B GR
+ 18 A$Lab_3_3_Speed$1700                                           00022D GR
+ 18 A$Lab_3_3_Speed$1701                                           00022F GR
+ 18 A$Lab_3_3_Speed$1702                                           000231 GR
+ 18 A$Lab_3_3_Speed$1703                                           000234 GR
+ 18 A$Lab_3_3_Speed$1704                                           000236 GR
+ 18 A$Lab_3_3_Speed$1705                                           000238 GR
+ 18 A$Lab_3_3_Speed$1706                                           00023A GR
+ 18 A$Lab_3_3_Speed$1710                                           00023C GR
+ 18 A$Lab_3_3_Speed$1714                                           00023F GR
+ 18 A$Lab_3_3_Speed$1715                                           000241 GR
+ 18 A$Lab_3_3_Speed$1716                                           000243 GR
+ 18 A$Lab_3_3_Speed$1717                                           000246 GR
+ 18 A$Lab_3_3_Speed$1718                                           000248 GR
+ 18 A$Lab_3_3_Speed$1719                                           00024A GR
+ 18 A$Lab_3_3_Speed$1720                                           00024C GR
+ 18 A$Lab_3_3_Speed$1721                                           00024F GR
+ 18 A$Lab_3_3_Speed$1722                                           000252 GR
+ 18 A$Lab_3_3_Speed$1723                                           000253 GR
+ 18 A$Lab_3_3_Speed$1724                                           000255 GR
+ 18 A$Lab_3_3_Speed$1725                                           000257 GR
+ 18 A$Lab_3_3_Speed$1726                                           000259 GR
+ 18 A$Lab_3_3_Speed$1727                                           00025C GR
+ 18 A$Lab_3_3_Speed$1728                                           00025E GR
+ 18 A$Lab_3_3_Speed$1729                                           000260 GR
+ 18 A$Lab_3_3_Speed$1733                                           000262 GR
+ 18 A$Lab_3_3_Speed$1734                                           000264 GR
+ 18 A$Lab_3_3_Speed$1735                                           000266 GR
+ 18 A$Lab_3_3_Speed$1739                                           000269 GR
+ 18 A$Lab_3_3_Speed$1740                                           00026A GR
+ 18 A$Lab_3_3_Speed$1741                                           00026B GR
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 7.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
- 18 A$Lab_3_3_Speed$1729                                           00026F GR
- 18 A$Lab_3_3_Speed$1730                                           000271 GR
- 18 A$Lab_3_3_Speed$1731                                           000273 GR
- 18 A$Lab_3_3_Speed$1732                                           000275 GR
- 18 A$Lab_3_3_Speed$1733                                           000277 GR
- 18 A$Lab_3_3_Speed$1734                                           000279 GR
- 18 A$Lab_3_3_Speed$1735                                           00027B GR
- 18 A$Lab_3_3_Speed$1736                                           00027D GR
- 18 A$Lab_3_3_Speed$1737                                           00027F GR
- 18 A$Lab_3_3_Speed$1738                                           000281 GR
- 18 A$Lab_3_3_Speed$1739                                           000283 GR
- 18 A$Lab_3_3_Speed$1740                                           000285 GR
- 18 A$Lab_3_3_Speed$1741                                           000287 GR
- 18 A$Lab_3_3_Speed$1742                                           000289 GR
- 18 A$Lab_3_3_Speed$1743                                           00028B GR
- 18 A$Lab_3_3_Speed$1744                                           00028E GR
- 18 A$Lab_3_3_Speed$1745                                           000290 GR
- 18 A$Lab_3_3_Speed$1746                                           000292 GR
- 18 A$Lab_3_3_Speed$1747                                           000294 GR
- 18 A$Lab_3_3_Speed$1748                                           000296 GR
- 18 A$Lab_3_3_Speed$1749                                           000298 GR
- 18 A$Lab_3_3_Speed$1750                                           00029A GR
- 18 A$Lab_3_3_Speed$1751                                           00029C GR
- 18 A$Lab_3_3_Speed$1754                                           00029E GR
- 18 A$Lab_3_3_Speed$1755                                           0002A0 GR
- 18 A$Lab_3_3_Speed$1756                                           0002A2 GR
- 18 A$Lab_3_3_Speed$1757                                           0002A5 GR
- 18 A$Lab_3_3_Speed$1758                                           0002A7 GR
- 18 A$Lab_3_3_Speed$1759                                           0002A9 GR
- 18 A$Lab_3_3_Speed$1760                                           0002AB GR
- 18 A$Lab_3_3_Speed$1761                                           0002AE GR
- 18 A$Lab_3_3_Speed$1762                                           0002B0 GR
- 18 A$Lab_3_3_Speed$1763                                           0002B2 GR
- 18 A$Lab_3_3_Speed$1764                                           0002B4 GR
- 18 A$Lab_3_3_Speed$1765                                           0002B6 GR
- 18 A$Lab_3_3_Speed$1766                                           0002B8 GR
- 18 A$Lab_3_3_Speed$1767                                           0002BA GR
- 18 A$Lab_3_3_Speed$1768                                           0002BB GR
- 18 A$Lab_3_3_Speed$1769                                           0002BC GR
- 18 A$Lab_3_3_Speed$1770                                           0002BD GR
- 18 A$Lab_3_3_Speed$1771                                           0002BE GR
- 18 A$Lab_3_3_Speed$1772                                           0002BF GR
- 18 A$Lab_3_3_Speed$1773                                           0002C0 GR
- 18 A$Lab_3_3_Speed$1774                                           0002C1 GR
- 18 A$Lab_3_3_Speed$1775                                           0002C3 GR
- 18 A$Lab_3_3_Speed$1776                                           0002C4 GR
- 18 A$Lab_3_3_Speed$1777                                           0002C5 GR
- 18 A$Lab_3_3_Speed$1778                                           0002C7 GR
- 18 A$Lab_3_3_Speed$1782                                           0002C8 GR
- 18 A$Lab_3_3_Speed$1783                                           0002CA GR
- 18 A$Lab_3_3_Speed$1784                                           0002CC GR
- 18 A$Lab_3_3_Speed$1785                                           0002CE GR
- 18 A$Lab_3_3_Speed$1786                                           0002D0 GR
- 18 A$Lab_3_3_Speed$1787                                           0002D3 GR
- 18 A$Lab_3_3_Speed$1788                                           0002D5 GR
+ 18 A$Lab_3_3_Speed$1742                                           00026C GR
+ 18 A$Lab_3_3_Speed$1743                                           00026E GR
+ 18 A$Lab_3_3_Speed$1744                                           00026F GR
+ 18 A$Lab_3_3_Speed$1745                                           000271 GR
+ 18 A$Lab_3_3_Speed$1746                                           000273 GR
+ 18 A$Lab_3_3_Speed$1747                                           000275 GR
+ 18 A$Lab_3_3_Speed$1748                                           000277 GR
+ 18 A$Lab_3_3_Speed$1749                                           000279 GR
+ 18 A$Lab_3_3_Speed$1750                                           00027B GR
+ 18 A$Lab_3_3_Speed$1751                                           00027D GR
+ 18 A$Lab_3_3_Speed$1752                                           00027F GR
+ 18 A$Lab_3_3_Speed$1753                                           000281 GR
+ 18 A$Lab_3_3_Speed$1754                                           000283 GR
+ 18 A$Lab_3_3_Speed$1755                                           000285 GR
+ 18 A$Lab_3_3_Speed$1756                                           000287 GR
+ 18 A$Lab_3_3_Speed$1757                                           000289 GR
+ 18 A$Lab_3_3_Speed$1758                                           00028B GR
+ 18 A$Lab_3_3_Speed$1759                                           00028E GR
+ 18 A$Lab_3_3_Speed$1760                                           000290 GR
+ 18 A$Lab_3_3_Speed$1761                                           000292 GR
+ 18 A$Lab_3_3_Speed$1762                                           000294 GR
+ 18 A$Lab_3_3_Speed$1763                                           000296 GR
+ 18 A$Lab_3_3_Speed$1764                                           000298 GR
+ 18 A$Lab_3_3_Speed$1765                                           00029A GR
+ 18 A$Lab_3_3_Speed$1766                                           00029C GR
+ 18 A$Lab_3_3_Speed$1769                                           00029E GR
+ 18 A$Lab_3_3_Speed$1770                                           0002A0 GR
+ 18 A$Lab_3_3_Speed$1771                                           0002A2 GR
+ 18 A$Lab_3_3_Speed$1772                                           0002A5 GR
+ 18 A$Lab_3_3_Speed$1773                                           0002A7 GR
+ 18 A$Lab_3_3_Speed$1774                                           0002A9 GR
+ 18 A$Lab_3_3_Speed$1775                                           0002AB GR
+ 18 A$Lab_3_3_Speed$1776                                           0002AE GR
+ 18 A$Lab_3_3_Speed$1777                                           0002B0 GR
+ 18 A$Lab_3_3_Speed$1778                                           0002B2 GR
+ 18 A$Lab_3_3_Speed$1779                                           0002B4 GR
+ 18 A$Lab_3_3_Speed$1780                                           0002B6 GR
+ 18 A$Lab_3_3_Speed$1781                                           0002B8 GR
+ 18 A$Lab_3_3_Speed$1782                                           0002BA GR
+ 18 A$Lab_3_3_Speed$1783                                           0002BB GR
+ 18 A$Lab_3_3_Speed$1784                                           0002BC GR
+ 18 A$Lab_3_3_Speed$1785                                           0002BD GR
+ 18 A$Lab_3_3_Speed$1786                                           0002BE GR
+ 18 A$Lab_3_3_Speed$1787                                           0002BF GR
+ 18 A$Lab_3_3_Speed$1788                                           0002C0 GR
+ 18 A$Lab_3_3_Speed$1789                                           0002C1 GR
+ 18 A$Lab_3_3_Speed$1790                                           0002C3 GR
+ 18 A$Lab_3_3_Speed$1791                                           0002C4 GR
+ 18 A$Lab_3_3_Speed$1792                                           0002C5 GR
+ 18 A$Lab_3_3_Speed$1793                                           0002C7 GR
+ 18 A$Lab_3_3_Speed$1797                                           0002C8 GR
+ 18 A$Lab_3_3_Speed$1798                                           0002CA GR
+ 18 A$Lab_3_3_Speed$1799                                           0002CC GR
+ 18 A$Lab_3_3_Speed$1800                                           0002CE GR
+ 18 A$Lab_3_3_Speed$1801                                           0002D0 GR
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 8.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
- 18 A$Lab_3_3_Speed$1789                                           0002D7 GR
- 18 A$Lab_3_3_Speed$1790                                           0002D9 GR
- 18 A$Lab_3_3_Speed$1791                                           0002DB GR
- 18 A$Lab_3_3_Speed$1792                                           0002DD GR
- 18 A$Lab_3_3_Speed$1793                                           0002DE GR
- 18 A$Lab_3_3_Speed$1794                                           0002E1 GR
- 18 A$Lab_3_3_Speed$1795                                           0002E4 GR
- 18 A$Lab_3_3_Speed$1796                                           0002E5 GR
- 18 A$Lab_3_3_Speed$1797                                           0002E7 GR
- 18 A$Lab_3_3_Speed$1798                                           0002E9 GR
- 18 A$Lab_3_3_Speed$1799                                           0002EB GR
- 18 A$Lab_3_3_Speed$1800                                           0002ED GR
- 18 A$Lab_3_3_Speed$1801                                           0002EF GR
- 18 A$Lab_3_3_Speed$1802                                           0002F2 GR
- 18 A$Lab_3_3_Speed$1803                                           0002F4 GR
- 18 A$Lab_3_3_Speed$1804                                           0002F6 GR
- 18 A$Lab_3_3_Speed$1805                                           0002F8 GR
- 18 A$Lab_3_3_Speed$1806                                           0002FA GR
- 18 A$Lab_3_3_Speed$1810                                           0002FC GR
- 18 A$Lab_3_3_Speed$1811                                           0002FD GR
- 18 A$Lab_3_3_Speed$1812                                           0002FE GR
- 18 A$Lab_3_3_Speed$1813                                           0002FF GR
- 18 A$Lab_3_3_Speed$1814                                           000301 GR
- 18 A$Lab_3_3_Speed$1815                                           000303 GR
- 18 A$Lab_3_3_Speed$1816                                           000305 GR
- 18 A$Lab_3_3_Speed$1820                                           000308 GR
- 18 A$Lab_3_3_Speed$1821                                           00030A GR
- 18 A$Lab_3_3_Speed$1825                                           00030C GR
- 18 A$Lab_3_3_Speed$1839                                           00030D GR
- 18 A$Lab_3_3_Speed$1840                                           00030F GR
- 18 A$Lab_3_3_Speed$1841                                           000311 GR
- 18 A$Lab_3_3_Speed$1842                                           000313 GR
- 18 A$Lab_3_3_Speed$1845                                           000314 GR
- 18 A$Lab_3_3_Speed$1846                                           000316 GR
- 18 A$Lab_3_3_Speed$1847                                           000318 GR
- 18 A$Lab_3_3_Speed$1848                                           00031A GR
- 18 A$Lab_3_3_Speed$1850                                           00031C GR
- 18 A$Lab_3_3_Speed$1851                                           00031D GR
- 18 A$Lab_3_3_Speed$1852                                           00031E GR
- 18 A$Lab_3_3_Speed$1853                                           00031F GR
- 18 A$Lab_3_3_Speed$1854                                           000320 GR
- 18 A$Lab_3_3_Speed$1855                                           000321 GR
- 18 A$Lab_3_3_Speed$1856                                           000322 GR
- 18 A$Lab_3_3_Speed$1857                                           000323 GR
- 18 A$Lab_3_3_Speed$1858                                           000324 GR
- 18 A$Lab_3_3_Speed$1859                                           000325 GR
- 18 A$Lab_3_3_Speed$1860                                           000327 GR
- 18 A$Lab_3_3_Speed$1861                                           000328 GR
- 18 A$Lab_3_3_Speed$1862                                           00032B GR
- 18 A$Lab_3_3_Speed$1863                                           00032C GR
- 18 A$Lab_3_3_Speed$1864                                           00032F GR
- 18 A$Lab_3_3_Speed$1865                                           000330 GR
- 18 A$Lab_3_3_Speed$1866                                           000333 GR
- 18 A$Lab_3_3_Speed$1868                                           000334 GR
- 18 A$Lab_3_3_Speed$1872                                           000336 GR
+ 18 A$Lab_3_3_Speed$1802                                           0002D3 GR
+ 18 A$Lab_3_3_Speed$1803                                           0002D5 GR
+ 18 A$Lab_3_3_Speed$1804                                           0002D7 GR
+ 18 A$Lab_3_3_Speed$1805                                           0002D9 GR
+ 18 A$Lab_3_3_Speed$1806                                           0002DB GR
+ 18 A$Lab_3_3_Speed$1807                                           0002DD GR
+ 18 A$Lab_3_3_Speed$1808                                           0002DE GR
+ 18 A$Lab_3_3_Speed$1809                                           0002E1 GR
+ 18 A$Lab_3_3_Speed$1810                                           0002E4 GR
+ 18 A$Lab_3_3_Speed$1811                                           0002E5 GR
+ 18 A$Lab_3_3_Speed$1812                                           0002E7 GR
+ 18 A$Lab_3_3_Speed$1813                                           0002E9 GR
+ 18 A$Lab_3_3_Speed$1814                                           0002EB GR
+ 18 A$Lab_3_3_Speed$1815                                           0002ED GR
+ 18 A$Lab_3_3_Speed$1816                                           0002EF GR
+ 18 A$Lab_3_3_Speed$1817                                           0002F2 GR
+ 18 A$Lab_3_3_Speed$1818                                           0002F4 GR
+ 18 A$Lab_3_3_Speed$1819                                           0002F6 GR
+ 18 A$Lab_3_3_Speed$1820                                           0002F8 GR
+ 18 A$Lab_3_3_Speed$1821                                           0002FA GR
+ 18 A$Lab_3_3_Speed$1825                                           0002FC GR
+ 18 A$Lab_3_3_Speed$1826                                           0002FD GR
+ 18 A$Lab_3_3_Speed$1827                                           0002FE GR
+ 18 A$Lab_3_3_Speed$1828                                           0002FF GR
+ 18 A$Lab_3_3_Speed$1829                                           000301 GR
+ 18 A$Lab_3_3_Speed$1830                                           000303 GR
+ 18 A$Lab_3_3_Speed$1831                                           000305 GR
+ 18 A$Lab_3_3_Speed$1835                                           000308 GR
+ 18 A$Lab_3_3_Speed$1836                                           00030A GR
+ 18 A$Lab_3_3_Speed$1840                                           00030C GR
+ 18 A$Lab_3_3_Speed$1854                                           00030D GR
+ 18 A$Lab_3_3_Speed$1855                                           00030F GR
+ 18 A$Lab_3_3_Speed$1856                                           000311 GR
+ 18 A$Lab_3_3_Speed$1857                                           000313 GR
+ 18 A$Lab_3_3_Speed$1860                                           000314 GR
+ 18 A$Lab_3_3_Speed$1861                                           000316 GR
+ 18 A$Lab_3_3_Speed$1862                                           000318 GR
+ 18 A$Lab_3_3_Speed$1863                                           00031A GR
+ 18 A$Lab_3_3_Speed$1865                                           00031C GR
+ 18 A$Lab_3_3_Speed$1866                                           00031D GR
+ 18 A$Lab_3_3_Speed$1867                                           00031E GR
+ 18 A$Lab_3_3_Speed$1868                                           00031F GR
+ 18 A$Lab_3_3_Speed$1869                                           000320 GR
+ 18 A$Lab_3_3_Speed$1870                                           000321 GR
+ 18 A$Lab_3_3_Speed$1871                                           000322 GR
+ 18 A$Lab_3_3_Speed$1872                                           000323 GR
+ 18 A$Lab_3_3_Speed$1873                                           000324 GR
+ 18 A$Lab_3_3_Speed$1874                                           000325 GR
+ 18 A$Lab_3_3_Speed$1875                                           000327 GR
+ 18 A$Lab_3_3_Speed$1876                                           000328 GR
+ 18 A$Lab_3_3_Speed$1877                                           00032B GR
+ 18 A$Lab_3_3_Speed$1878                                           00032C GR
+ 18 A$Lab_3_3_Speed$1879                                           00032F GR
+ 18 A$Lab_3_3_Speed$1880                                           000330 GR
+ 18 A$Lab_3_3_Speed$1881                                           000333 GR
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 9.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
- 18 A$Lab_3_3_Speed$1886                                           000337 GR
- 18 A$Lab_3_3_Speed$1889                                           00033A GR
- 18 A$Lab_3_3_Speed$1893                                           00033C GR
- 18 A$Lab_3_3_Speed$1896                                           00033F GR
- 18 A$Lab_3_3_Speed$1899                                           000341 GR
- 18 A$Lab_3_3_Speed$1902                                           000343 GR
- 18 A$Lab_3_3_Speed$1915                                           000344 GR
- 18 A$Lab_3_3_Speed$1921                                           000347 GR
- 18 A$Lab_3_3_Speed$1922                                           00034A GR
- 18 A$Lab_3_3_Speed$1926                                           00034C GR
- 18 A$Lab_3_3_Speed$1939                                           00034D GR
- 18 A$Lab_3_3_Speed$1942                                           000350 GR
- 18 A$Lab_3_3_Speed$1948                                           000352 GR
- 18 A$Lab_3_3_Speed$1949                                           000355 GR
- 18 A$Lab_3_3_Speed$1953                                           000357 GR
- 18 A$Lab_3_3_Speed$1969                                           000358 GR
- 18 A$Lab_3_3_Speed$1972                                           00035B GR
- 18 A$Lab_3_3_Speed$1975                                           00035E GR
- 18 A$Lab_3_3_Speed$1980                                           000360 GR
- 18 A$Lab_3_3_Speed$1996                                           000361 GR
- 18 A$Lab_3_3_Speed$1999                                           000364 GR
- 18 A$Lab_3_3_Speed$2002                                           000366 GR
- 18 A$Lab_3_3_Speed$2005                                           000368 GR
- 18 A$Lab_3_3_Speed$2011                                           00036A GR
- 18 A$Lab_3_3_Speed$2012                                           00036D GR
- 18 A$Lab_3_3_Speed$2016                                           00036F GR
- 18 A$Lab_3_3_Speed$2019                                           000371 GR
- 18 A$Lab_3_3_Speed$2036                                           000372 GR
- 18 A$Lab_3_3_Speed$2039                                           000374 GR
- 18 A$Lab_3_3_Speed$2040                                           000376 GR
- 18 A$Lab_3_3_Speed$2041                                           000379 GR
- 18 A$Lab_3_3_Speed$2044                                           00037B GR
- 18 A$Lab_3_3_Speed$2045                                           00037D GR
- 18 A$Lab_3_3_Speed$2046                                           00037E GR
- 18 A$Lab_3_3_Speed$2047                                           000380 GR
- 18 A$Lab_3_3_Speed$2050                                           000383 GR
- 18 A$Lab_3_3_Speed$2051                                           000386 GR
- 18 A$Lab_3_3_Speed$2054                                           000389 GR
- 18 A$Lab_3_3_Speed$2056                                           00038B GR
- 18 A$Lab_3_3_Speed$2057                                           00038D GR
- 18 A$Lab_3_3_Speed$2058                                           00038F GR
- 18 A$Lab_3_3_Speed$2059                                           000390 GR
- 18 A$Lab_3_3_Speed$2060                                           000393 GR
- 18 A$Lab_3_3_Speed$2062                                           000394 GR
- 18 A$Lab_3_3_Speed$2063                                           000396 GR
- 18 A$Lab_3_3_Speed$2064                                           000398 GR
- 18 A$Lab_3_3_Speed$2065                                           000399 GR
- 18 A$Lab_3_3_Speed$2066                                           00039A GR
- 18 A$Lab_3_3_Speed$2067                                           00039B GR
- 18 A$Lab_3_3_Speed$2068                                           00039C GR
- 18 A$Lab_3_3_Speed$2069                                           00039E GR
- 18 A$Lab_3_3_Speed$2070                                           0003A0 GR
- 18 A$Lab_3_3_Speed$2071                                           0003A3 GR
- 18 A$Lab_3_3_Speed$2072                                           0003A5 GR
- 18 A$Lab_3_3_Speed$2075                                           0003A7 GR
+ 18 A$Lab_3_3_Speed$1883                                           000334 GR
+ 18 A$Lab_3_3_Speed$1887                                           000336 GR
+ 18 A$Lab_3_3_Speed$1901                                           000337 GR
+ 18 A$Lab_3_3_Speed$1904                                           00033A GR
+ 18 A$Lab_3_3_Speed$1908                                           00033C GR
+ 18 A$Lab_3_3_Speed$1911                                           00033F GR
+ 18 A$Lab_3_3_Speed$1914                                           000341 GR
+ 18 A$Lab_3_3_Speed$1917                                           000343 GR
+ 18 A$Lab_3_3_Speed$1930                                           000344 GR
+ 18 A$Lab_3_3_Speed$1936                                           000347 GR
+ 18 A$Lab_3_3_Speed$1937                                           00034A GR
+ 18 A$Lab_3_3_Speed$1941                                           00034C GR
+ 18 A$Lab_3_3_Speed$1954                                           00034D GR
+ 18 A$Lab_3_3_Speed$1957                                           000350 GR
+ 18 A$Lab_3_3_Speed$1963                                           000352 GR
+ 18 A$Lab_3_3_Speed$1964                                           000355 GR
+ 18 A$Lab_3_3_Speed$1968                                           000357 GR
+ 18 A$Lab_3_3_Speed$1984                                           000358 GR
+ 18 A$Lab_3_3_Speed$1987                                           00035B GR
+ 18 A$Lab_3_3_Speed$1990                                           00035E GR
+ 18 A$Lab_3_3_Speed$1995                                           000360 GR
+ 18 A$Lab_3_3_Speed$2011                                           000361 GR
+ 18 A$Lab_3_3_Speed$2014                                           000364 GR
+ 18 A$Lab_3_3_Speed$2017                                           000366 GR
+ 18 A$Lab_3_3_Speed$2020                                           000368 GR
+ 18 A$Lab_3_3_Speed$2026                                           00036A GR
+ 18 A$Lab_3_3_Speed$2027                                           00036D GR
+ 18 A$Lab_3_3_Speed$2031                                           00036F GR
+ 18 A$Lab_3_3_Speed$2034                                           000371 GR
+ 18 A$Lab_3_3_Speed$2051                                           000372 GR
+ 18 A$Lab_3_3_Speed$2054                                           000374 GR
+ 18 A$Lab_3_3_Speed$2055                                           000376 GR
+ 18 A$Lab_3_3_Speed$2056                                           000379 GR
+ 18 A$Lab_3_3_Speed$2059                                           00037B GR
+ 18 A$Lab_3_3_Speed$2060                                           00037D GR
+ 18 A$Lab_3_3_Speed$2061                                           00037E GR
+ 18 A$Lab_3_3_Speed$2062                                           000380 GR
+ 18 A$Lab_3_3_Speed$2065                                           000383 GR
+ 18 A$Lab_3_3_Speed$2066                                           000386 GR
+ 18 A$Lab_3_3_Speed$2069                                           000389 GR
+ 18 A$Lab_3_3_Speed$2071                                           00038B GR
+ 18 A$Lab_3_3_Speed$2072                                           00038D GR
+ 18 A$Lab_3_3_Speed$2073                                           00038F GR
+ 18 A$Lab_3_3_Speed$2074                                           000390 GR
+ 18 A$Lab_3_3_Speed$2075                                           000393 GR
+ 18 A$Lab_3_3_Speed$2077                                           000394 GR
+ 18 A$Lab_3_3_Speed$2078                                           000396 GR
+ 18 A$Lab_3_3_Speed$2079                                           000398 GR
+ 18 A$Lab_3_3_Speed$2080                                           000399 GR
+ 18 A$Lab_3_3_Speed$2081                                           00039A GR
+ 18 A$Lab_3_3_Speed$2082                                           00039B GR
+ 18 A$Lab_3_3_Speed$2083                                           00039C GR
+ 18 A$Lab_3_3_Speed$2084                                           00039E GR
+ 18 A$Lab_3_3_Speed$2085                                           0003A0 GR
+ 18 A$Lab_3_3_Speed$2086                                           0003A3 GR
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 10.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
- 18 A$Lab_3_3_Speed$2076                                           0003A8 GR
- 18 A$Lab_3_3_Speed$2077                                           0003AA GR
- 18 A$Lab_3_3_Speed$2078                                           0003AB GR
- 18 A$Lab_3_3_Speed$2079                                           0003AC GR
- 18 A$Lab_3_3_Speed$2080                                           0003AE GR
- 18 A$Lab_3_3_Speed$2081                                           0003AF GR
- 18 A$Lab_3_3_Speed$2082                                           0003B1 GR
- 18 A$Lab_3_3_Speed$2083                                           0003B3 GR
- 18 A$Lab_3_3_Speed$2084                                           0003B5 GR
- 18 A$Lab_3_3_Speed$2085                                           0003B7 GR
- 18 A$Lab_3_3_Speed$2086                                           0003BA GR
- 18 A$Lab_3_3_Speed$2087                                           0003BC GR
- 18 A$Lab_3_3_Speed$2088                                           0003BE GR
- 18 A$Lab_3_3_Speed$2089                                           0003C1 GR
- 18 A$Lab_3_3_Speed$2092                                           0003C3 GR
- 18 A$Lab_3_3_Speed$2093                                           0003C4 GR
- 18 A$Lab_3_3_Speed$2097                                           0003C6 GR
- 18 A$Lab_3_3_Speed$2098                                           0003C8 GR
- 18 A$Lab_3_3_Speed$2099                                           0003CA GR
- 18 A$Lab_3_3_Speed$2100                                           0003CB GR
- 18 A$Lab_3_3_Speed$2101                                           0003CE GR
- 18 A$Lab_3_3_Speed$2103                                           0003CF GR
- 18 A$Lab_3_3_Speed$2104                                           0003D0 GR
- 18 A$Lab_3_3_Speed$2105                                           0003D2 GR
- 18 A$Lab_3_3_Speed$2106                                           0003D3 GR
- 18 A$Lab_3_3_Speed$2107                                           0003D4 GR
- 18 A$Lab_3_3_Speed$2108                                           0003D6 GR
- 18 A$Lab_3_3_Speed$2109                                           0003D7 GR
- 18 A$Lab_3_3_Speed$2110                                           0003D9 GR
- 18 A$Lab_3_3_Speed$2111                                           0003DB GR
- 18 A$Lab_3_3_Speed$2112                                           0003DD GR
- 18 A$Lab_3_3_Speed$2113                                           0003DF GR
- 18 A$Lab_3_3_Speed$2114                                           0003E2 GR
- 18 A$Lab_3_3_Speed$2115                                           0003E4 GR
- 18 A$Lab_3_3_Speed$2118                                           0003E7 GR
- 18 A$Lab_3_3_Speed$2135                                           0003E8 GR
- 18 A$Lab_3_3_Speed$2138                                           0003EA GR
- 18 A$Lab_3_3_Speed$2139                                           0003EC GR
- 18 A$Lab_3_3_Speed$2140                                           0003EF GR
- 18 A$Lab_3_3_Speed$2143                                           0003F1 GR
- 18 A$Lab_3_3_Speed$2144                                           0003F3 GR
- 18 A$Lab_3_3_Speed$2145                                           0003F5 GR
- 18 A$Lab_3_3_Speed$2146                                           0003F6 GR
- 18 A$Lab_3_3_Speed$2147                                           0003F8 GR
- 18 A$Lab_3_3_Speed$2148                                           0003FA GR
- 18 A$Lab_3_3_Speed$2151                                           0003FD GR
- 18 A$Lab_3_3_Speed$2152                                           000400 GR
- 18 A$Lab_3_3_Speed$2155                                           000403 GR
- 18 A$Lab_3_3_Speed$2156                                           000406 GR
- 18 A$Lab_3_3_Speed$2159                                           000408 GR
- 18 A$Lab_3_3_Speed$2160                                           00040A GR
- 18 A$Lab_3_3_Speed$2161                                           00040B GR
- 18 A$Lab_3_3_Speed$2162                                           00040D GR
- 18 A$Lab_3_3_Speed$2165                                           000410 GR
- 18 A$Lab_3_3_Speed$2167                                           000412 GR
+ 18 A$Lab_3_3_Speed$2087                                           0003A5 GR
+ 18 A$Lab_3_3_Speed$2090                                           0003A7 GR
+ 18 A$Lab_3_3_Speed$2091                                           0003A8 GR
+ 18 A$Lab_3_3_Speed$2092                                           0003AA GR
+ 18 A$Lab_3_3_Speed$2093                                           0003AB GR
+ 18 A$Lab_3_3_Speed$2094                                           0003AC GR
+ 18 A$Lab_3_3_Speed$2095                                           0003AE GR
+ 18 A$Lab_3_3_Speed$2096                                           0003AF GR
+ 18 A$Lab_3_3_Speed$2097                                           0003B1 GR
+ 18 A$Lab_3_3_Speed$2098                                           0003B3 GR
+ 18 A$Lab_3_3_Speed$2099                                           0003B5 GR
+ 18 A$Lab_3_3_Speed$2100                                           0003B7 GR
+ 18 A$Lab_3_3_Speed$2101                                           0003BA GR
+ 18 A$Lab_3_3_Speed$2102                                           0003BC GR
+ 18 A$Lab_3_3_Speed$2103                                           0003BE GR
+ 18 A$Lab_3_3_Speed$2104                                           0003C1 GR
+ 18 A$Lab_3_3_Speed$2107                                           0003C3 GR
+ 18 A$Lab_3_3_Speed$2108                                           0003C4 GR
+ 18 A$Lab_3_3_Speed$2112                                           0003C6 GR
+ 18 A$Lab_3_3_Speed$2113                                           0003C8 GR
+ 18 A$Lab_3_3_Speed$2114                                           0003CA GR
+ 18 A$Lab_3_3_Speed$2115                                           0003CB GR
+ 18 A$Lab_3_3_Speed$2116                                           0003CE GR
+ 18 A$Lab_3_3_Speed$2118                                           0003CF GR
+ 18 A$Lab_3_3_Speed$2119                                           0003D0 GR
+ 18 A$Lab_3_3_Speed$2120                                           0003D2 GR
+ 18 A$Lab_3_3_Speed$2121                                           0003D3 GR
+ 18 A$Lab_3_3_Speed$2122                                           0003D4 GR
+ 18 A$Lab_3_3_Speed$2123                                           0003D6 GR
+ 18 A$Lab_3_3_Speed$2124                                           0003D7 GR
+ 18 A$Lab_3_3_Speed$2125                                           0003D9 GR
+ 18 A$Lab_3_3_Speed$2126                                           0003DB GR
+ 18 A$Lab_3_3_Speed$2127                                           0003DD GR
+ 18 A$Lab_3_3_Speed$2128                                           0003DF GR
+ 18 A$Lab_3_3_Speed$2129                                           0003E2 GR
+ 18 A$Lab_3_3_Speed$2130                                           0003E4 GR
+ 18 A$Lab_3_3_Speed$2133                                           0003E7 GR
+ 18 A$Lab_3_3_Speed$2150                                           0003E8 GR
+ 18 A$Lab_3_3_Speed$2153                                           0003EA GR
+ 18 A$Lab_3_3_Speed$2154                                           0003EC GR
+ 18 A$Lab_3_3_Speed$2155                                           0003EF GR
+ 18 A$Lab_3_3_Speed$2158                                           0003F1 GR
+ 18 A$Lab_3_3_Speed$2159                                           0003F3 GR
+ 18 A$Lab_3_3_Speed$2160                                           0003F5 GR
+ 18 A$Lab_3_3_Speed$2161                                           0003F6 GR
+ 18 A$Lab_3_3_Speed$2162                                           0003F8 GR
+ 18 A$Lab_3_3_Speed$2163                                           0003FA GR
+ 18 A$Lab_3_3_Speed$2166                                           0003FD GR
+ 18 A$Lab_3_3_Speed$2167                                           000400 GR
+ 18 A$Lab_3_3_Speed$2170                                           000403 GR
+ 18 A$Lab_3_3_Speed$2171                                           000406 GR
+ 18 A$Lab_3_3_Speed$2174                                           000408 GR
+ 18 A$Lab_3_3_Speed$2175                                           00040A GR
+ 18 A$Lab_3_3_Speed$2176                                           00040B GR
+ 18 A$Lab_3_3_Speed$2177                                           00040D GR
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 11.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
- 18 A$Lab_3_3_Speed$2168                                           000414 GR
- 18 A$Lab_3_3_Speed$2169                                           000416 GR
- 18 A$Lab_3_3_Speed$2170                                           000417 GR
- 18 A$Lab_3_3_Speed$2171                                           00041A GR
- 18 A$Lab_3_3_Speed$2173                                           00041B GR
- 18 A$Lab_3_3_Speed$2174                                           00041D GR
- 18 A$Lab_3_3_Speed$2175                                           00041F GR
- 18 A$Lab_3_3_Speed$2176                                           000420 GR
- 18 A$Lab_3_3_Speed$2177                                           000421 GR
- 18 A$Lab_3_3_Speed$2178                                           000422 GR
- 18 A$Lab_3_3_Speed$2179                                           000423 GR
- 18 A$Lab_3_3_Speed$2180                                           000425 GR
- 18 A$Lab_3_3_Speed$2181                                           000427 GR
- 18 A$Lab_3_3_Speed$2182                                           00042A GR
- 18 A$Lab_3_3_Speed$2183                                           00042C GR
- 18 A$Lab_3_3_Speed$2186                                           00042E GR
- 18 A$Lab_3_3_Speed$2189                                           000430 GR
- 18 A$Lab_3_3_Speed$2190                                           000431 GR
- 18 A$Lab_3_3_Speed$2191                                           000433 GR
- 18 A$Lab_3_3_Speed$2192                                           000434 GR
- 18 A$Lab_3_3_Speed$2193                                           000435 GR
- 18 A$Lab_3_3_Speed$2194                                           000437 GR
- 18 A$Lab_3_3_Speed$2195                                           000438 GR
- 18 A$Lab_3_3_Speed$2196                                           00043A GR
- 18 A$Lab_3_3_Speed$2197                                           00043C GR
- 18 A$Lab_3_3_Speed$2198                                           00043E GR
- 18 A$Lab_3_3_Speed$2199                                           000440 GR
- 18 A$Lab_3_3_Speed$2200                                           000442 GR
- 18 A$Lab_3_3_Speed$2201                                           000445 GR
- 18 A$Lab_3_3_Speed$2202                                           000447 GR
- 18 A$Lab_3_3_Speed$2203                                           000449 GR
- 18 A$Lab_3_3_Speed$2204                                           00044B GR
- 18 A$Lab_3_3_Speed$2205                                           00044D GR
- 18 A$Lab_3_3_Speed$2206                                           00044F GR
- 18 A$Lab_3_3_Speed$2207                                           000451 GR
- 18 A$Lab_3_3_Speed$2208                                           000453 GR
- 18 A$Lab_3_3_Speed$2209                                           000455 GR
- 18 A$Lab_3_3_Speed$2210                                           000456 GR
- 18 A$Lab_3_3_Speed$2213                                           000459 GR
- 18 A$Lab_3_3_Speed$2214                                           00045A GR
- 18 A$Lab_3_3_Speed$2218                                           00045C GR
- 18 A$Lab_3_3_Speed$2221                                           00045E GR
- 18 A$Lab_3_3_Speed$2222                                           000460 GR
- 18 A$Lab_3_3_Speed$2223                                           000462 GR
- 18 A$Lab_3_3_Speed$2224                                           000463 GR
- 18 A$Lab_3_3_Speed$2225                                           000466 GR
- 18 A$Lab_3_3_Speed$2227                                           000467 GR
- 18 A$Lab_3_3_Speed$2228                                           000468 GR
- 18 A$Lab_3_3_Speed$2229                                           00046A GR
- 18 A$Lab_3_3_Speed$2230                                           00046B GR
- 18 A$Lab_3_3_Speed$2231                                           00046C GR
- 18 A$Lab_3_3_Speed$2232                                           00046E GR
- 18 A$Lab_3_3_Speed$2233                                           00046F GR
- 18 A$Lab_3_3_Speed$2234                                           000471 GR
- 18 A$Lab_3_3_Speed$2235                                           000473 GR
+ 18 A$Lab_3_3_Speed$2180                                           000410 GR
+ 18 A$Lab_3_3_Speed$2182                                           000412 GR
+ 18 A$Lab_3_3_Speed$2183                                           000414 GR
+ 18 A$Lab_3_3_Speed$2184                                           000416 GR
+ 18 A$Lab_3_3_Speed$2185                                           000417 GR
+ 18 A$Lab_3_3_Speed$2186                                           00041A GR
+ 18 A$Lab_3_3_Speed$2188                                           00041B GR
+ 18 A$Lab_3_3_Speed$2189                                           00041D GR
+ 18 A$Lab_3_3_Speed$2190                                           00041F GR
+ 18 A$Lab_3_3_Speed$2191                                           000420 GR
+ 18 A$Lab_3_3_Speed$2192                                           000421 GR
+ 18 A$Lab_3_3_Speed$2193                                           000422 GR
+ 18 A$Lab_3_3_Speed$2194                                           000423 GR
+ 18 A$Lab_3_3_Speed$2195                                           000425 GR
+ 18 A$Lab_3_3_Speed$2196                                           000427 GR
+ 18 A$Lab_3_3_Speed$2197                                           00042A GR
+ 18 A$Lab_3_3_Speed$2198                                           00042C GR
+ 18 A$Lab_3_3_Speed$2201                                           00042E GR
+ 18 A$Lab_3_3_Speed$2204                                           000430 GR
+ 18 A$Lab_3_3_Speed$2205                                           000431 GR
+ 18 A$Lab_3_3_Speed$2206                                           000433 GR
+ 18 A$Lab_3_3_Speed$2207                                           000434 GR
+ 18 A$Lab_3_3_Speed$2208                                           000435 GR
+ 18 A$Lab_3_3_Speed$2209                                           000437 GR
+ 18 A$Lab_3_3_Speed$2210                                           000438 GR
+ 18 A$Lab_3_3_Speed$2211                                           00043A GR
+ 18 A$Lab_3_3_Speed$2212                                           00043C GR
+ 18 A$Lab_3_3_Speed$2213                                           00043E GR
+ 18 A$Lab_3_3_Speed$2214                                           000440 GR
+ 18 A$Lab_3_3_Speed$2215                                           000442 GR
+ 18 A$Lab_3_3_Speed$2216                                           000445 GR
+ 18 A$Lab_3_3_Speed$2217                                           000447 GR
+ 18 A$Lab_3_3_Speed$2218                                           000449 GR
+ 18 A$Lab_3_3_Speed$2219                                           00044B GR
+ 18 A$Lab_3_3_Speed$2220                                           00044D GR
+ 18 A$Lab_3_3_Speed$2221                                           00044F GR
+ 18 A$Lab_3_3_Speed$2222                                           000451 GR
+ 18 A$Lab_3_3_Speed$2223                                           000453 GR
+ 18 A$Lab_3_3_Speed$2224                                           000455 GR
+ 18 A$Lab_3_3_Speed$2225                                           000456 GR
+ 18 A$Lab_3_3_Speed$2228                                           000459 GR
+ 18 A$Lab_3_3_Speed$2229                                           00045A GR
+ 18 A$Lab_3_3_Speed$2233                                           00045C GR
+ 18 A$Lab_3_3_Speed$2236                                           00045E GR
+ 18 A$Lab_3_3_Speed$2237                                           000460 GR
+ 18 A$Lab_3_3_Speed$2238                                           000462 GR
+ 18 A$Lab_3_3_Speed$2239                                           000463 GR
+ 18 A$Lab_3_3_Speed$2240                                           000466 GR
+ 18 A$Lab_3_3_Speed$2242                                           000467 GR
+ 18 A$Lab_3_3_Speed$2243                                           000468 GR
+ 18 A$Lab_3_3_Speed$2244                                           00046A GR
+ 18 A$Lab_3_3_Speed$2245                                           00046B GR
+ 18 A$Lab_3_3_Speed$2246                                           00046C GR
+ 18 A$Lab_3_3_Speed$2247                                           00046E GR
+ 18 A$Lab_3_3_Speed$2248                                           00046F GR
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 12.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
- 18 A$Lab_3_3_Speed$2236                                           000475 GR
- 18 A$Lab_3_3_Speed$2237                                           000477 GR
- 18 A$Lab_3_3_Speed$2238                                           00047A GR
- 18 A$Lab_3_3_Speed$2239                                           00047C GR
- 18 A$Lab_3_3_Speed$2240                                           00047E GR
- 18 A$Lab_3_3_Speed$2241                                           000480 GR
- 18 A$Lab_3_3_Speed$2242                                           000482 GR
- 18 A$Lab_3_3_Speed$2243                                           000484 GR
- 18 A$Lab_3_3_Speed$2244                                           000486 GR
- 18 A$Lab_3_3_Speed$2245                                           000488 GR
- 18 A$Lab_3_3_Speed$2246                                           000489 GR
- 18 A$Lab_3_3_Speed$2249                                           00048C GR
- 18 A$Lab_3_3_Speed$2264                                           00048D GR
- 18 A$Lab_3_3_Speed$2267                                           000490 GR
- 18 A$Lab_3_3_Speed$2268                                           000493 GR
- 18 A$Lab_3_3_Speed$2269                                           000496 GR
- 18 A$Lab_3_3_Speed$2270                                           000499 GR
- 18 A$Lab_3_3_Speed$2271                                           00049C GR
- 18 A$Lab_3_3_Speed$2272                                           00049F GR
- 18 A$Lab_3_3_Speed$2273                                           0004A2 GR
- 18 A$Lab_3_3_Speed$2276                                           0004A5 GR
- 18 A$Lab_3_3_Speed$2279                                           0004A8 GR
- 18 A$Lab_3_3_Speed$2280                                           0004AB GR
- 18 A$Lab_3_3_Speed$2281                                           0004AE GR
- 18 A$Lab_3_3_Speed$2282                                           0004B1 GR
- 18 A$Lab_3_3_Speed$2283                                           0004B4 GR
- 18 A$Lab_3_3_Speed$2284                                           0004B7 GR
- 18 A$Lab_3_3_Speed$2285                                           0004BA GR
- 18 A$Lab_3_3_Speed$2288                                           0004BD GR
- 18 A$Lab_3_3_Speed$2291                                           0004C0 GR
- 18 A$Lab_3_3_Speed$2292                                           0004C3 GR
- 18 A$Lab_3_3_Speed$2293                                           0004C6 GR
- 18 A$Lab_3_3_Speed$2294                                           0004C9 GR
- 18 A$Lab_3_3_Speed$2295                                           0004CC GR
- 18 A$Lab_3_3_Speed$2296                                           0004CF GR
- 18 A$Lab_3_3_Speed$2297                                           0004D2 GR
- 18 A$Lab_3_3_Speed$2300                                           0004D5 GR
- 18 A$Lab_3_3_Speed$2313                                           0004D6 GR
- 18 A$Lab_3_3_Speed$2316                                           0004D9 GR
- 18 A$Lab_3_3_Speed$2317                                           0004DC GR
- 18 A$Lab_3_3_Speed$2320                                           0004DF GR
- 18 A$Lab_3_3_Speed$2323                                           0004E2 GR
- 18 A$Lab_3_3_Speed$2326                                           0004E5 GR
- 18 A$Lab_3_3_Speed$2329                                           0004E8 GR
- 18 A$Lab_3_3_Speed$2332                                           0004EB GR
- 18 A$Lab_3_3_Speed$2333                                           0004ED GR
- 18 A$Lab_3_3_Speed$2334                                           0004EF GR
- 18 A$Lab_3_3_Speed$2335                                           0004F1 GR
- 18 A$Lab_3_3_Speed$2336                                           0004F3 GR
- 18 A$Lab_3_3_Speed$2337                                           0004F5 GR
- 18 A$Lab_3_3_Speed$2338                                           0004F7 GR
- 18 A$Lab_3_3_Speed$2339                                           0004FA GR
- 18 A$Lab_3_3_Speed$2340                                           0004FC GR
- 18 A$Lab_3_3_Speed$2341                                           0004FE GR
- 18 A$Lab_3_3_Speed$2344                                           000500 GR
+ 18 A$Lab_3_3_Speed$2249                                           000471 GR
+ 18 A$Lab_3_3_Speed$2250                                           000473 GR
+ 18 A$Lab_3_3_Speed$2251                                           000475 GR
+ 18 A$Lab_3_3_Speed$2252                                           000477 GR
+ 18 A$Lab_3_3_Speed$2253                                           00047A GR
+ 18 A$Lab_3_3_Speed$2254                                           00047C GR
+ 18 A$Lab_3_3_Speed$2255                                           00047E GR
+ 18 A$Lab_3_3_Speed$2256                                           000480 GR
+ 18 A$Lab_3_3_Speed$2257                                           000482 GR
+ 18 A$Lab_3_3_Speed$2258                                           000484 GR
+ 18 A$Lab_3_3_Speed$2259                                           000486 GR
+ 18 A$Lab_3_3_Speed$2260                                           000488 GR
+ 18 A$Lab_3_3_Speed$2261                                           000489 GR
+ 18 A$Lab_3_3_Speed$2264                                           00048C GR
+ 18 A$Lab_3_3_Speed$2279                                           00048D GR
+ 18 A$Lab_3_3_Speed$2282                                           000490 GR
+ 18 A$Lab_3_3_Speed$2283                                           000493 GR
+ 18 A$Lab_3_3_Speed$2284                                           000496 GR
+ 18 A$Lab_3_3_Speed$2285                                           000499 GR
+ 18 A$Lab_3_3_Speed$2286                                           00049C GR
+ 18 A$Lab_3_3_Speed$2287                                           00049F GR
+ 18 A$Lab_3_3_Speed$2288                                           0004A2 GR
+ 18 A$Lab_3_3_Speed$2291                                           0004A5 GR
+ 18 A$Lab_3_3_Speed$2294                                           0004A8 GR
+ 18 A$Lab_3_3_Speed$2295                                           0004AB GR
+ 18 A$Lab_3_3_Speed$2296                                           0004AE GR
+ 18 A$Lab_3_3_Speed$2297                                           0004B1 GR
+ 18 A$Lab_3_3_Speed$2298                                           0004B4 GR
+ 18 A$Lab_3_3_Speed$2299                                           0004B7 GR
+ 18 A$Lab_3_3_Speed$2300                                           0004BA GR
+ 18 A$Lab_3_3_Speed$2303                                           0004BD GR
+ 18 A$Lab_3_3_Speed$2306                                           0004C0 GR
+ 18 A$Lab_3_3_Speed$2307                                           0004C3 GR
+ 18 A$Lab_3_3_Speed$2308                                           0004C6 GR
+ 18 A$Lab_3_3_Speed$2309                                           0004C9 GR
+ 18 A$Lab_3_3_Speed$2310                                           0004CC GR
+ 18 A$Lab_3_3_Speed$2311                                           0004CF GR
+ 18 A$Lab_3_3_Speed$2312                                           0004D2 GR
+ 18 A$Lab_3_3_Speed$2315                                           0004D5 GR
+ 18 A$Lab_3_3_Speed$2328                                           0004D6 GR
+ 18 A$Lab_3_3_Speed$2331                                           0004D9 GR
+ 18 A$Lab_3_3_Speed$2332                                           0004DC GR
+ 18 A$Lab_3_3_Speed$2335                                           0004DF GR
+ 18 A$Lab_3_3_Speed$2338                                           0004E2 GR
+ 18 A$Lab_3_3_Speed$2341                                           0004E5 GR
+ 18 A$Lab_3_3_Speed$2344                                           0004E8 GR
+ 18 A$Lab_3_3_Speed$2347                                           0004EB GR
+ 18 A$Lab_3_3_Speed$2348                                           0004ED GR
+ 18 A$Lab_3_3_Speed$2349                                           0004EF GR
+ 18 A$Lab_3_3_Speed$2350                                           0004F1 GR
+ 18 A$Lab_3_3_Speed$2351                                           0004F3 GR
+ 18 A$Lab_3_3_Speed$2352                                           0004F5 GR
+ 18 A$Lab_3_3_Speed$2353                                           0004F7 GR
+ 18 A$Lab_3_3_Speed$2354                                           0004FA GR
+ 18 A$Lab_3_3_Speed$2355                                           0004FC GR
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 13.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
- 18 A$Lab_3_3_Speed$2345                                           000503 GR
- 18 A$Lab_3_3_Speed$2348                                           000506 GR
- 18 A$Lab_3_3_Speed$2349                                           000508 GR
- 18 A$Lab_3_3_Speed$2350                                           00050A GR
- 18 A$Lab_3_3_Speed$2351                                           00050B GR
- 18 A$Lab_3_3_Speed$2352                                           00050C GR
- 18 A$Lab_3_3_Speed$2353                                           00050D GR
- 18 A$Lab_3_3_Speed$2354                                           00050F GR
- 18 A$Lab_3_3_Speed$2355                                           000510 GR
- 18 A$Lab_3_3_Speed$2356                                           000511 GR
- 18 A$Lab_3_3_Speed$2357                                           000512 GR
- 18 A$Lab_3_3_Speed$2358                                           000514 GR
- 18 A$Lab_3_3_Speed$2359                                           000515 GR
- 18 A$Lab_3_3_Speed$2360                                           000516 GR
- 18 A$Lab_3_3_Speed$2361                                           000517 GR
- 18 A$Lab_3_3_Speed$2362                                           000518 GR
- 18 A$Lab_3_3_Speed$2363                                           000519 GR
- 18 A$Lab_3_3_Speed$2364                                           00051A GR
- 18 A$Lab_3_3_Speed$2365                                           00051B GR
- 18 A$Lab_3_3_Speed$2366                                           00051C GR
- 18 A$Lab_3_3_Speed$2367                                           00051E GR
- 18 A$Lab_3_3_Speed$2370                                           000520 GR
- 18 A$Lab_3_3_Speed$2371                                           000523 GR
- 18 A$Lab_3_3_Speed$2375                                           000526 GR
- 18 A$Lab_3_3_Speed$2376                                           000529 GR
- 18 A$Lab_3_3_Speed$2377                                           00052C GR
- 18 A$Lab_3_3_Speed$2380                                           00052E GR
- 18 A$Lab_3_3_Speed$2393                                           00052F GR
- 18 A$Lab_3_3_Speed$2396                                           000532 GR
- 18 A$Lab_3_3_Speed$2399                                           000535 GR
- 18 A$Lab_3_3_Speed$2400                                           000537 GR
- 18 A$Lab_3_3_Speed$2401                                           000539 GR
- 18 A$Lab_3_3_Speed$2402                                           00053A GR
- 18 A$Lab_3_3_Speed$2405                                           00053C GR
- 18 A$Lab_3_3_Speed$2418                                           00053D GR
- 18 A$Lab_3_3_Speed$2421                                           000540 GR
- 18 A$Lab_3_3_Speed$2434                                           000541 GR
- 18 A$Lab_3_3_Speed$2437                                           000544 GR
- 18 A$Lab_3_3_Speed$2440                                           000546 GR
- 18 A$Lab_3_3_Speed$2453                                           000547 GR
- 18 A$Lab_3_3_Speed$2456                                           00054A GR
- 18 A$Lab_3_3_Speed$2459                                           00054D GR
- 18 A$Lab_3_3_Speed$2462                                           000550 GR
- 18 A$Lab_3_3_Speed$2465                                           000552 GR
- 18 A$Lab_3_3_Speed$2468                                           000555 GR
- 18 A$Lab_3_3_Speed$2479                                           000556 GR
- 18 A$Lab_3_3_Speed$2480                                           000558 GR
- 18 A$Lab_3_3_Speed$2483                                           00055A GR
- 18 A$Lab_3_3_Speed$2486                                           00055D GR
- 18 A$Lab_3_3_Speed$2489                                           00055F GR
- 18 A$Lab_3_3_Speed$2490                                           000561 GR
- 18 A$Lab_3_3_Speed$2491                                           000563 GR
- 18 A$Lab_3_3_Speed$2494                                           000565 GR
- 18 A$Lab_3_3_Speed$2497                                           000568 GR
- 18 A$Lab_3_3_Speed$2501                                           00056B GR
+ 18 A$Lab_3_3_Speed$2356                                           0004FE GR
+ 18 A$Lab_3_3_Speed$2359                                           000500 GR
+ 18 A$Lab_3_3_Speed$2360                                           000503 GR
+ 18 A$Lab_3_3_Speed$2363                                           000506 GR
+ 18 A$Lab_3_3_Speed$2364                                           000508 GR
+ 18 A$Lab_3_3_Speed$2365                                           00050A GR
+ 18 A$Lab_3_3_Speed$2366                                           00050B GR
+ 18 A$Lab_3_3_Speed$2367                                           00050C GR
+ 18 A$Lab_3_3_Speed$2368                                           00050D GR
+ 18 A$Lab_3_3_Speed$2369                                           00050F GR
+ 18 A$Lab_3_3_Speed$2370                                           000510 GR
+ 18 A$Lab_3_3_Speed$2371                                           000511 GR
+ 18 A$Lab_3_3_Speed$2372                                           000512 GR
+ 18 A$Lab_3_3_Speed$2373                                           000514 GR
+ 18 A$Lab_3_3_Speed$2374                                           000515 GR
+ 18 A$Lab_3_3_Speed$2375                                           000516 GR
+ 18 A$Lab_3_3_Speed$2376                                           000517 GR
+ 18 A$Lab_3_3_Speed$2377                                           000518 GR
+ 18 A$Lab_3_3_Speed$2378                                           000519 GR
+ 18 A$Lab_3_3_Speed$2379                                           00051A GR
+ 18 A$Lab_3_3_Speed$2380                                           00051B GR
+ 18 A$Lab_3_3_Speed$2381                                           00051C GR
+ 18 A$Lab_3_3_Speed$2382                                           00051E GR
+ 18 A$Lab_3_3_Speed$2385                                           000520 GR
+ 18 A$Lab_3_3_Speed$2386                                           000523 GR
+ 18 A$Lab_3_3_Speed$2390                                           000526 GR
+ 18 A$Lab_3_3_Speed$2391                                           000528 GR
+ 18 A$Lab_3_3_Speed$2392                                           00052A GR
+ 18 A$Lab_3_3_Speed$2396                                           00052C GR
+ 18 A$Lab_3_3_Speed$2397                                           00052F GR
+ 18 A$Lab_3_3_Speed$2398                                           000532 GR
+ 18 A$Lab_3_3_Speed$2401                                           000534 GR
+ 18 A$Lab_3_3_Speed$2414                                           000535 GR
+ 18 A$Lab_3_3_Speed$2417                                           000538 GR
+ 18 A$Lab_3_3_Speed$2420                                           00053B GR
+ 18 A$Lab_3_3_Speed$2421                                           00053D GR
+ 18 A$Lab_3_3_Speed$2422                                           00053F GR
+ 18 A$Lab_3_3_Speed$2423                                           000540 GR
+ 18 A$Lab_3_3_Speed$2426                                           000542 GR
+ 18 A$Lab_3_3_Speed$2439                                           000543 GR
+ 18 A$Lab_3_3_Speed$2442                                           000546 GR
+ 18 A$Lab_3_3_Speed$2455                                           000547 GR
+ 18 A$Lab_3_3_Speed$2458                                           00054A GR
+ 18 A$Lab_3_3_Speed$2461                                           00054C GR
+ 18 A$Lab_3_3_Speed$2474                                           00054D GR
+ 18 A$Lab_3_3_Speed$2477                                           000550 GR
+ 18 A$Lab_3_3_Speed$2480                                           000553 GR
+ 18 A$Lab_3_3_Speed$2483                                           000556 GR
+ 18 A$Lab_3_3_Speed$2486                                           000558 GR
+ 18 A$Lab_3_3_Speed$2489                                           00055B GR
+ 18 A$Lab_3_3_Speed$2500                                           00055C GR
+ 18 A$Lab_3_3_Speed$2501                                           00055E GR
+ 18 A$Lab_3_3_Speed$2504                                           000560 GR
+ 18 A$Lab_3_3_Speed$2507                                           000563 GR
+ 18 A$Lab_3_3_Speed$2510                                           000565 GR
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 14.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
- 18 A$Lab_3_3_Speed$2502                                           00056E GR
- 18 A$Lab_3_3_Speed$2505                                           000571 GR
- 18 A$Lab_3_3_Speed$2506                                           000573 GR
- 18 A$Lab_3_3_Speed$2510                                           000575 GR
- 18 A$Lab_3_3_Speed$2512                                           000578 GR
- 18 A$Lab_3_3_Speed$2513                                           00057A GR
- 18 A$Lab_3_3_Speed$2516                                           00057C GR
- 18 A$Lab_3_3_Speed$2537                                           00057D GR
- 18 A$Lab_3_3_Speed$2538                                           000580 GR
- 18 A$Lab_3_3_Speed$2539                                           000583 GR
+ 18 A$Lab_3_3_Speed$2511                                           000567 GR
+ 18 A$Lab_3_3_Speed$2512                                           000569 GR
+ 18 A$Lab_3_3_Speed$2515                                           00056B GR
+ 18 A$Lab_3_3_Speed$2518                                           00056E GR
+ 18 A$Lab_3_3_Speed$2522                                           000571 GR
+ 18 A$Lab_3_3_Speed$2525                                           000573 GR
+ 18 A$Lab_3_3_Speed$2526                                           000575 GR
+ 18 A$Lab_3_3_Speed$2527                                           000577 GR
+ 18 A$Lab_3_3_Speed$2528                                           000579 GR
+ 18 A$Lab_3_3_Speed$2532                                           00057C GR
+ 18 A$Lab_3_3_Speed$2533                                           00057F GR
+ 18 A$Lab_3_3_Speed$2536                                           000582 GR
+ 18 A$Lab_3_3_Speed$2539                                           000584 GR
  18 A$Lab_3_3_Speed$2540                                           000586 GR
- 18 A$Lab_3_3_Speed$2541                                           000589 GR
- 18 A$Lab_3_3_Speed$2542                                           00058C GR
- 18 A$Lab_3_3_Speed$2543                                           00058F GR
+ 18 A$Lab_3_3_Speed$2541                                           000588 GR
+ 18 A$Lab_3_3_Speed$2542                                           00058A GR
+ 18 A$Lab_3_3_Speed$2543                                           00058C GR
+ 18 A$Lab_3_3_Speed$2544                                           00058E GR
+ 18 A$Lab_3_3_Speed$2545                                           000590 GR
  18 A$Lab_3_3_Speed$2546                                           000592 GR
- 18 A$Lab_3_3_Speed$2547                                           000594 GR
- 18 A$Lab_3_3_Speed$2548                                           000596 GR
- 18 A$Lab_3_3_Speed$2549                                           000598 GR
- 18 A$Lab_3_3_Speed$2550                                           00059A GR
- 18 A$Lab_3_3_Speed$2551                                           00059B GR
- 18 A$Lab_3_3_Speed$2552                                           00059D GR
- 18 A$Lab_3_3_Speed$2553                                           00059E GR
- 18 A$Lab_3_3_Speed$2556                                           0005A0 GR
- 18 A$Lab_3_3_Speed$2559                                           0005A3 GR
- 18 A$Lab_3_3_Speed$2560                                           0005A6 GR
- 18 A$Lab_3_3_Speed$2561                                           0005A9 GR
- 18 A$Lab_3_3_Speed$2562                                           0005AC GR
- 18 A$Lab_3_3_Speed$2563                                           0005AF GR
- 18 A$Lab_3_3_Speed$2564                                           0005B2 GR
- 18 A$Lab_3_3_Speed$2565                                           0005B5 GR
- 18 A$Lab_3_3_Speed$2566                                           0005B7 GR
- 18 A$Lab_3_3_Speed$2567                                           0005B9 GR
- 18 A$Lab_3_3_Speed$2568                                           0005BC GR
- 18 A$Lab_3_3_Speed$2569                                           0005BE GR
- 18 A$Lab_3_3_Speed$2572                                           0005C0 GR
- 18 A$Lab_3_3_Speed$2573                                           0005C2 GR
- 18 A$Lab_3_3_Speed$2576                                           0005C4 GR
- 18 A$Lab_3_3_Speed$2589                                           0005C5 GR
- 18 A$Lab_3_3_Speed$2590                                           0005C7 GR
- 18 A$Lab_3_3_Speed$2593                                           0005C9 GR
- 18 A$Lab_3_3_Speed$2594                                           0005CC GR
- 18 A$Lab_3_3_Speed$2595                                           0005CF GR
- 18 A$Lab_3_3_Speed$2598                                           0005D2 GR
- 18 A$Lab_3_3_Speed$2601                                           0005D5 GR
- 18 A$Lab_3_3_Speed$2602                                           0005D7 GR
- 18 A$Lab_3_3_Speed$2603                                           0005D9 GR
- 18 A$Lab_3_3_Speed$2604                                           0005DB GR
- 18 A$Lab_3_3_Speed$2605                                           0005DD GR
- 18 A$Lab_3_3_Speed$2606                                           0005DF GR
- 18 A$Lab_3_3_Speed$2607                                           0005E1 GR
- 18 A$Lab_3_3_Speed$2608                                           0005E3 GR
- 18 A$Lab_3_3_Speed$2609                                           0005E5 GR
- 18 A$Lab_3_3_Speed$2610                                           0005E8 GR
- 18 A$Lab_3_3_Speed$2611                                           0005EA GR
- 18 A$Lab_3_3_Speed$2612                                           0005EC GR
+ 18 A$Lab_3_3_Speed$2550                                           000594 GR
+ 18 A$Lab_3_3_Speed$2552                                           000597 GR
+ 18 A$Lab_3_3_Speed$2553                                           000599 GR
+ 18 A$Lab_3_3_Speed$2556                                           00059B GR
+ 18 A$Lab_3_3_Speed$2577                                           00059C GR
+ 18 A$Lab_3_3_Speed$2578                                           00059F GR
+ 18 A$Lab_3_3_Speed$2579                                           0005A2 GR
+ 18 A$Lab_3_3_Speed$2580                                           0005A5 GR
+ 18 A$Lab_3_3_Speed$2581                                           0005A8 GR
+ 18 A$Lab_3_3_Speed$2582                                           0005AB GR
+ 18 A$Lab_3_3_Speed$2583                                           0005AE GR
+ 18 A$Lab_3_3_Speed$2586                                           0005B1 GR
+ 18 A$Lab_3_3_Speed$2587                                           0005B3 GR
+ 18 A$Lab_3_3_Speed$2588                                           0005B5 GR
+ 18 A$Lab_3_3_Speed$2589                                           0005B7 GR
+ 18 A$Lab_3_3_Speed$2590                                           0005B9 GR
+ 18 A$Lab_3_3_Speed$2591                                           0005BA GR
+ 18 A$Lab_3_3_Speed$2592                                           0005BC GR
+ 18 A$Lab_3_3_Speed$2593                                           0005BD GR
+ 18 A$Lab_3_3_Speed$2596                                           0005BF GR
+ 18 A$Lab_3_3_Speed$2599                                           0005C2 GR
+ 18 A$Lab_3_3_Speed$2600                                           0005C5 GR
+ 18 A$Lab_3_3_Speed$2601                                           0005C8 GR
+ 18 A$Lab_3_3_Speed$2602                                           0005CB GR
+ 18 A$Lab_3_3_Speed$2603                                           0005CE GR
+ 18 A$Lab_3_3_Speed$2604                                           0005D1 GR
+ 18 A$Lab_3_3_Speed$2605                                           0005D4 GR
+ 18 A$Lab_3_3_Speed$2606                                           0005D6 GR
+ 18 A$Lab_3_3_Speed$2607                                           0005D8 GR
+ 18 A$Lab_3_3_Speed$2608                                           0005DB GR
+ 18 A$Lab_3_3_Speed$2609                                           0005DD GR
+ 18 A$Lab_3_3_Speed$2612                                           0005DF GR
+ 18 A$Lab_3_3_Speed$2613                                           0005E1 GR
+ 18 A$Lab_3_3_Speed$2616                                           0005E3 GR
+ 18 A$Lab_3_3_Speed$2629                                           0005E4 GR
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 15.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
- 18 A$Lab_3_3_Speed$2616                                           0005EE GR
- 18 A$Lab_3_3_Speed$2617                                           0005F1 GR
- 18 A$Lab_3_3_Speed$2618                                           0005F4 GR
- 18 A$Lab_3_3_Speed$2619                                           0005F7 GR
- 18 A$Lab_3_3_Speed$2620                                           0005FA GR
- 18 A$Lab_3_3_Speed$2623                                           0005FD GR
- 18 A$Lab_3_3_Speed$2624                                           0005FE GR
- 18 A$Lab_3_3_Speed$2625                                           000600 GR
- 18 A$Lab_3_3_Speed$2626                                           000602 GR
- 18 A$Lab_3_3_Speed$2627                                           000604 GR
- 18 A$Lab_3_3_Speed$2628                                           000606 GR
- 18 A$Lab_3_3_Speed$2629                                           000608 GR
- 18 A$Lab_3_3_Speed$2630                                           00060B GR
- 18 A$Lab_3_3_Speed$2634                                           00060E GR
- 18 A$Lab_3_3_Speed$2635                                           00060F GR
- 18 A$Lab_3_3_Speed$2636                                           000611 GR
- 18 A$Lab_3_3_Speed$2637                                           000613 GR
- 18 A$Lab_3_3_Speed$2638                                           000615 GR
- 18 A$Lab_3_3_Speed$2639                                           000617 GR
- 18 A$Lab_3_3_Speed$2640                                           000619 GR
- 18 A$Lab_3_3_Speed$2641                                           00061C GR
- 18 A$Lab_3_3_Speed$2645                                           00061F GR
- 18 A$Lab_3_3_Speed$2646                                           000621 GR
- 18 A$Lab_3_3_Speed$2647                                           000623 GR
- 18 A$Lab_3_3_Speed$2648                                           000625 GR
- 18 A$Lab_3_3_Speed$2649                                           000627 GR
- 18 A$Lab_3_3_Speed$2650                                           000629 GR
- 18 A$Lab_3_3_Speed$2651                                           00062B GR
- 18 A$Lab_3_3_Speed$2652                                           00062D GR
- 18 A$Lab_3_3_Speed$2653                                           00062F GR
- 18 A$Lab_3_3_Speed$2654                                           000632 GR
- 18 A$Lab_3_3_Speed$2655                                           000634 GR
- 18 A$Lab_3_3_Speed$2656                                           000636 GR
- 18 A$Lab_3_3_Speed$2659                                           000638 GR
- 18 A$Lab_3_3_Speed$2660                                           00063A GR
- 18 A$Lab_3_3_Speed$2661                                           00063B GR
- 18 A$Lab_3_3_Speed$2662                                           00063D GR
- 18 A$Lab_3_3_Speed$2663                                           00063F GR
- 18 A$Lab_3_3_Speed$2664                                           000641 GR
- 18 A$Lab_3_3_Speed$2665                                           000643 GR
- 18 A$Lab_3_3_Speed$2668                                           000645 GR
- 18 A$Lab_3_3_Speed$2684                                           000646 GR
- 18 A$Lab_3_3_Speed$2685                                           000648 GR
- 18 A$Lab_3_3_Speed$2688                                           00064A GR
- 18 A$Lab_3_3_Speed$2689                                           00064C GR
- 18 A$Lab_3_3_Speed$2690                                           00064E GR
- 18 A$Lab_3_3_Speed$2691                                           00064F GR
- 18 A$Lab_3_3_Speed$2692                                           000650 GR
- 18 A$Lab_3_3_Speed$2693                                           000651 GR
- 18 A$Lab_3_3_Speed$2694                                           000652 GR
+ 18 A$Lab_3_3_Speed$2630                                           0005E6 GR
+ 18 A$Lab_3_3_Speed$2631                                           0005E8 GR
+ 18 A$Lab_3_3_Speed$2632                                           0005EA GR
+ 18 A$Lab_3_3_Speed$2633                                           0005EC GR
+ 18 A$Lab_3_3_Speed$2636                                           0005EE GR
+ 18 A$Lab_3_3_Speed$2637                                           0005F1 GR
+ 18 A$Lab_3_3_Speed$2638                                           0005F4 GR
+ 18 A$Lab_3_3_Speed$2641                                           0005F7 GR
+ 18 A$Lab_3_3_Speed$2644                                           0005FA GR
+ 18 A$Lab_3_3_Speed$2645                                           0005FC GR
+ 18 A$Lab_3_3_Speed$2646                                           0005FE GR
+ 18 A$Lab_3_3_Speed$2647                                           000600 GR
+ 18 A$Lab_3_3_Speed$2648                                           000602 GR
+ 18 A$Lab_3_3_Speed$2649                                           000604 GR
+ 18 A$Lab_3_3_Speed$2650                                           000606 GR
+ 18 A$Lab_3_3_Speed$2651                                           000608 GR
+ 18 A$Lab_3_3_Speed$2652                                           00060A GR
+ 18 A$Lab_3_3_Speed$2653                                           00060D GR
+ 18 A$Lab_3_3_Speed$2654                                           00060F GR
+ 18 A$Lab_3_3_Speed$2655                                           000611 GR
+ 18 A$Lab_3_3_Speed$2658                                           000613 GR
+ 18 A$Lab_3_3_Speed$2659                                           000615 GR
+ 18 A$Lab_3_3_Speed$2660                                           000617 GR
+ 18 A$Lab_3_3_Speed$2661                                           000619 GR
+ 18 A$Lab_3_3_Speed$2662                                           00061B GR
+ 18 A$Lab_3_3_Speed$2663                                           00061D GR
+ 18 A$Lab_3_3_Speed$2664                                           00061F GR
+ 18 A$Lab_3_3_Speed$2665                                           000621 GR
+ 18 A$Lab_3_3_Speed$2666                                           000623 GR
+ 18 A$Lab_3_3_Speed$2667                                           000626 GR
+ 18 A$Lab_3_3_Speed$2668                                           000628 GR
+ 18 A$Lab_3_3_Speed$2669                                           00062A GR
+ 18 A$Lab_3_3_Speed$2673                                           00062C GR
+ 18 A$Lab_3_3_Speed$2674                                           00062F GR
+ 18 A$Lab_3_3_Speed$2675                                           000632 GR
+ 18 A$Lab_3_3_Speed$2676                                           000635 GR
+ 18 A$Lab_3_3_Speed$2677                                           000638 GR
+ 18 A$Lab_3_3_Speed$2680                                           00063B GR
+ 18 A$Lab_3_3_Speed$2681                                           00063C GR
+ 18 A$Lab_3_3_Speed$2682                                           00063E GR
+ 18 A$Lab_3_3_Speed$2683                                           000640 GR
+ 18 A$Lab_3_3_Speed$2684                                           000642 GR
+ 18 A$Lab_3_3_Speed$2685                                           000644 GR
+ 18 A$Lab_3_3_Speed$2686                                           000646 GR
+ 18 A$Lab_3_3_Speed$2687                                           000649 GR
+ 18 A$Lab_3_3_Speed$2691                                           00064C GR
+ 18 A$Lab_3_3_Speed$2692                                           00064D GR
+ 18 A$Lab_3_3_Speed$2693                                           00064F GR
+ 18 A$Lab_3_3_Speed$2694                                           000651 GR
  18 A$Lab_3_3_Speed$2695                                           000653 GR
- 18 A$Lab_3_3_Speed$2696                                           000654 GR
- 18 A$Lab_3_3_Speed$2699                                           000655 GR
- 18 A$Lab_3_3_Speed$2700                                           000656 GR
- 18 A$Lab_3_3_Speed$2701                                           000658 GR
+ 18 A$Lab_3_3_Speed$2696                                           000655 GR
+ 18 A$Lab_3_3_Speed$2697                                           000657 GR
+ 18 A$Lab_3_3_Speed$2698                                           00065A GR
+ 18 A$Lab_3_3_Speed$2702                                           00065D GR
+ 18 A$Lab_3_3_Speed$2703                                           00065F GR
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 16.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
- 18 A$Lab_3_3_Speed$2702                                           000659 GR
- 18 A$Lab_3_3_Speed$2703                                           00065A GR
- 18 A$Lab_3_3_Speed$2704                                           00065C GR
- 18 A$Lab_3_3_Speed$2707                                           00065D GR
- 18 A$Lab_3_3_Speed$2708                                           00065E GR
- 18 A$Lab_3_3_Speed$2709                                           00065F GR
- 18 A$Lab_3_3_Speed$2710                                           000661 GR
- 18 A$Lab_3_3_Speed$2711                                           000662 GR
- 18 A$Lab_3_3_Speed$2712                                           000664 GR
- 18 A$Lab_3_3_Speed$2713                                           000666 GR
- 18 A$Lab_3_3_Speed$2714                                           000668 GR
- 18 A$Lab_3_3_Speed$2718                                           00066A GR
- 18 A$Lab_3_3_Speed$2719                                           00066B GR
- 18 A$Lab_3_3_Speed$2720                                           00066D GR
- 18 A$Lab_3_3_Speed$2721                                           00066E GR
- 18 A$Lab_3_3_Speed$2722                                           000670 GR
- 18 A$Lab_3_3_Speed$2723                                           000671 GR
- 18 A$Lab_3_3_Speed$2724                                           000673 GR
- 18 A$Lab_3_3_Speed$2725                                           000675 GR
- 18 A$Lab_3_3_Speed$2729                                           000677 GR
- 18 A$Lab_3_3_Speed$2730                                           000678 GR
- 18 A$Lab_3_3_Speed$2731                                           00067A GR
- 18 A$Lab_3_3_Speed$2732                                           00067B GR
- 18 A$Lab_3_3_Speed$2733                                           00067D GR
- 18 A$Lab_3_3_Speed$2734                                           00067E GR
- 18 A$Lab_3_3_Speed$2735                                           00067F GR
- 18 A$Lab_3_3_Speed$2736                                           000680 GR
- 18 A$Lab_3_3_Speed$2737                                           000681 GR
- 18 A$Lab_3_3_Speed$2738                                           000682 GR
- 18 A$Lab_3_3_Speed$2739                                           000684 GR
- 18 A$Lab_3_3_Speed$2740                                           000686 GR
- 18 A$Lab_3_3_Speed$2741                                           000688 GR
- 18 A$Lab_3_3_Speed$2742                                           00068A GR
- 18 A$Lab_3_3_Speed$2746                                           00068C GR
- 18 A$Lab_3_3_Speed$2747                                           00068E GR
- 18 A$Lab_3_3_Speed$2750                                           000690 GR
+ 18 A$Lab_3_3_Speed$2704                                           000660 GR
+ 18 A$Lab_3_3_Speed$2705                                           000662 GR
+ 18 A$Lab_3_3_Speed$2706                                           000664 GR
+ 18 A$Lab_3_3_Speed$2707                                           000666 GR
+ 18 A$Lab_3_3_Speed$2708                                           000668 GR
+ 18 A$Lab_3_3_Speed$2711                                           00066A GR
+ 18 A$Lab_3_3_Speed$2727                                           00066B GR
+ 18 A$Lab_3_3_Speed$2728                                           00066D GR
+ 18 A$Lab_3_3_Speed$2731                                           00066F GR
+ 18 A$Lab_3_3_Speed$2732                                           000671 GR
+ 18 A$Lab_3_3_Speed$2733                                           000673 GR
+ 18 A$Lab_3_3_Speed$2734                                           000674 GR
+ 18 A$Lab_3_3_Speed$2735                                           000675 GR
+ 18 A$Lab_3_3_Speed$2736                                           000676 GR
+ 18 A$Lab_3_3_Speed$2737                                           000677 GR
+ 18 A$Lab_3_3_Speed$2738                                           000678 GR
+ 18 A$Lab_3_3_Speed$2739                                           000679 GR
+ 18 A$Lab_3_3_Speed$2742                                           00067A GR
+ 18 A$Lab_3_3_Speed$2743                                           00067C GR
+ 18 A$Lab_3_3_Speed$2744                                           00067E GR
+ 18 A$Lab_3_3_Speed$2745                                           000681 GR
+ 18 A$Lab_3_3_Speed$2746                                           000683 GR
+ 18 A$Lab_3_3_Speed$2747                                           000685 GR
+ 18 A$Lab_3_3_Speed$2748                                           000688 GR
+ 18 A$Lab_3_3_Speed$2749                                           00068A GR
+ 18 A$Lab_3_3_Speed$2750                                           00068C GR
+ 18 A$Lab_3_3_Speed$2751                                           00068E GR
+ 18 A$Lab_3_3_Speed$2752                                           000690 GR
+ 18 A$Lab_3_3_Speed$2753                                           000691 GR
+ 18 A$Lab_3_3_Speed$2754                                           000693 GR
+ 18 A$Lab_3_3_Speed$2755                                           000694 GR
+ 18 A$Lab_3_3_Speed$2756                                           000695 GR
+ 18 A$Lab_3_3_Speed$2757                                           000697 GR
+ 18 A$Lab_3_3_Speed$2760                                           000698 GR
+ 18 A$Lab_3_3_Speed$2761                                           000699 GR
+ 18 A$Lab_3_3_Speed$2762                                           00069A GR
+ 18 A$Lab_3_3_Speed$2763                                           00069C GR
+ 18 A$Lab_3_3_Speed$2764                                           00069D GR
+ 18 A$Lab_3_3_Speed$2765                                           00069F GR
+ 18 A$Lab_3_3_Speed$2766                                           0006A1 GR
+ 18 A$Lab_3_3_Speed$2767                                           0006A3 GR
+ 18 A$Lab_3_3_Speed$2771                                           0006A5 GR
+ 18 A$Lab_3_3_Speed$2772                                           0006A6 GR
+ 18 A$Lab_3_3_Speed$2773                                           0006A8 GR
+ 18 A$Lab_3_3_Speed$2774                                           0006A9 GR
+ 18 A$Lab_3_3_Speed$2775                                           0006AB GR
+ 18 A$Lab_3_3_Speed$2776                                           0006AC GR
+ 18 A$Lab_3_3_Speed$2777                                           0006AE GR
+ 18 A$Lab_3_3_Speed$2778                                           0006B0 GR
+ 18 A$Lab_3_3_Speed$2782                                           0006B2 GR
+ 18 A$Lab_3_3_Speed$2783                                           0006B3 GR
+ 18 A$Lab_3_3_Speed$2784                                           0006B5 GR
+ 18 A$Lab_3_3_Speed$2785                                           0006B6 GR
+ 18 A$Lab_3_3_Speed$2786                                           0006B8 GR
+ 18 A$Lab_3_3_Speed$2787                                           0006BA GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 17.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+ 18 A$Lab_3_3_Speed$2788                                           0006BD GR
+ 18 A$Lab_3_3_Speed$2789                                           0006BF GR
+ 18 A$Lab_3_3_Speed$2790                                           0006C1 GR
+ 18 A$Lab_3_3_Speed$2791                                           0006C2 GR
+ 18 A$Lab_3_3_Speed$2792                                           0006C3 GR
+ 18 A$Lab_3_3_Speed$2793                                           0006C5 GR
+ 18 A$Lab_3_3_Speed$2794                                           0006C6 GR
+ 18 A$Lab_3_3_Speed$2795                                           0006C8 GR
+ 18 A$Lab_3_3_Speed$2796                                           0006CA GR
+ 18 A$Lab_3_3_Speed$2797                                           0006CC GR
+ 18 A$Lab_3_3_Speed$2798                                           0006CE GR
+ 18 A$Lab_3_3_Speed$2802                                           0006D0 GR
+ 18 A$Lab_3_3_Speed$2803                                           0006D2 GR
+ 18 A$Lab_3_3_Speed$2806                                           0006D4 GR
     A.0                                                         =  0000E0 L
     A.1                                                         =  0000E1 L
     A.2                                                         =  0000E2 L
@@ -958,11 +996,6 @@ Symbol Table
     ACC.6                                                       =  0000E6 L
     ACC.7                                                       =  0000E7 L
     B                                                           =  0000F0 L
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 17.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
     B.0                                                         =  0000F0 L
     B.1                                                         =  0000F1 L
     B.2                                                         =  0000F2 L
@@ -971,88 +1004,99 @@ Symbol Table
     B.5                                                         =  0000F5 L
     B.6                                                         =  0000F6 L
     B.7                                                         =  0000F7 L
- 18 C$Lab_3_3_Speed.c$101$1$119                                 =  000547 GR
- 18 C$Lab_3_3_Speed.c$103$1$121                                 =  000547 GR
- 18 C$Lab_3_3_Speed.c$104$1$121                                 =  00054A GR
- 18 C$Lab_3_3_Speed.c$105$1$121                                 =  00054D GR
- 18 C$Lab_3_3_Speed.c$106$1$121                                 =  000550 GR
- 18 C$Lab_3_3_Speed.c$107$1$121                                 =  000552 GR
- 18 C$Lab_3_3_Speed.c$108$1$121                                 =  000555 GR
- 18 C$Lab_3_3_Speed.c$113$1$121                                 =  000556 GR
- 18 C$Lab_3_3_Speed.c$115$1$123                                 =  00055A GR
- 18 C$Lab_3_3_Speed.c$117$2$124                                 =  00055D GR
- 18 C$Lab_3_3_Speed.c$118$2$124                                 =  00055F GR
- 18 C$Lab_3_3_Speed.c$120$3$125                                 =  000565 GR
- 18 C$Lab_3_3_Speed.c$121$3$125                                 =  000568 GR
- 18 C$Lab_3_3_Speed.c$123$2$124                                 =  00056B GR
- 18 C$Lab_3_3_Speed.c$124$2$124                                 =  000571 GR
- 18 C$Lab_3_3_Speed.c$126$1$123                                 =  000575 GR
- 18 C$Lab_3_3_Speed.c$127$1$123                                 =  00057C GR
- 18 C$Lab_3_3_Speed.c$133$1$123                                 =  00057D GR
- 18 C$Lab_3_3_Speed.c$138$1$126                                 =  00057D GR
- 18 C$Lab_3_3_Speed.c$139$1$126                                 =  000592 GR
- 18 C$Lab_3_3_Speed.c$140$1$126                                 =  0005A0 GR
- 18 C$Lab_3_3_Speed.c$141$1$126                                 =  0005A3 GR
- 18 C$Lab_3_3_Speed.c$142$1$126                                 =  0005C0 GR
- 18 C$Lab_3_3_Speed.c$143$1$126                                 =  0005C4 GR
- 18 C$Lab_3_3_Speed.c$151$1$126                                 =  0005C5 GR
- 18 C$Lab_3_3_Speed.c$167$1$127                                 =  0005C5 GR
- 18 C$Lab_3_3_Speed.c$169$2$128                                 =  0005C9 GR
- 18 C$Lab_3_3_Speed.c$170$2$128                                 =  0005D2 GR
- 18 C$Lab_3_3_Speed.c$173$2$128                                 =  0005D5 GR
- 18 C$Lab_3_3_Speed.c$175$1$127                                 =  0005EE GR
- 18 C$Lab_3_3_Speed.c$176$1$127                                 =  0005FD GR
- 18 C$Lab_3_3_Speed.c$177$1$127                                 =  00060E GR
- 18 C$Lab_3_3_Speed.c$178$1$127                                 =  00061F GR
- 18 C$Lab_3_3_Speed.c$179$1$127                                 =  000638 GR
- 18 C$Lab_3_3_Speed.c$180$1$127                                 =  000645 GR
- 18 C$Lab_3_3_Speed.c$184$1$127                                 =  000646 GR
- 18 C$Lab_3_3_Speed.c$189$1$130                                 =  00064A GR
- 18 C$Lab_3_3_Speed.c$192$1$130                                 =  000655 GR
- 18 C$Lab_3_3_Speed.c$193$1$130                                 =  00065D GR
- 18 C$Lab_3_3_Speed.c$194$1$130                                 =  00066A GR
- 18 C$Lab_3_3_Speed.c$195$1$130                                 =  000677 GR
- 18 C$Lab_3_3_Speed.c$196$1$130                                 =  00068C GR
- 18 C$Lab_3_3_Speed.c$197$1$130                                 =  000690 GR
- 16 C$Lab_3_3_Speed.c$31$1$130                                  =  000000 GR
- 16 C$Lab_3_3_Speed.c$32$1$130                                  =  000006 GR
- 16 C$Lab_3_3_Speed.c$33$1$130                                  =  00000C GR
- 16 C$Lab_3_3_Speed.c$34$1$130                                  =  000012 GR
+ 18 C$Lab_3_3_Speed.c$100$1$119                                 =  00054A GR
+ 18 C$Lab_3_3_Speed.c$101$1$119                                 =  00054C GR
+ 18 C$Lab_3_3_Speed.c$104$1$119                                 =  00054D GR
+ 18 C$Lab_3_3_Speed.c$106$1$121                                 =  00054D GR
+ 18 C$Lab_3_3_Speed.c$107$1$121                                 =  000550 GR
+ 18 C$Lab_3_3_Speed.c$108$1$121                                 =  000553 GR
+ 18 C$Lab_3_3_Speed.c$109$1$121                                 =  000556 GR
+ 18 C$Lab_3_3_Speed.c$110$1$121                                 =  000558 GR
+ 18 C$Lab_3_3_Speed.c$111$1$121                                 =  00055B GR
+ 18 C$Lab_3_3_Speed.c$116$1$121                                 =  00055C GR
+ 18 C$Lab_3_3_Speed.c$118$1$123                                 =  000560 GR
+ 18 C$Lab_3_3_Speed.c$120$2$124                                 =  000563 GR
+ 18 C$Lab_3_3_Speed.c$121$2$124                                 =  000565 GR
+ 18 C$Lab_3_3_Speed.c$123$3$125                                 =  00056B GR
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 18.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
+ 18 C$Lab_3_3_Speed.c$124$3$125                                 =  00056E GR
+ 18 C$Lab_3_3_Speed.c$126$2$124                                 =  000571 GR
+ 18 C$Lab_3_3_Speed.c$127$2$124                                 =  000573 GR
+ 18 C$Lab_3_3_Speed.c$128$2$124                                 =  00057C GR
+ 18 C$Lab_3_3_Speed.c$129$2$124                                 =  000582 GR
+ 18 C$Lab_3_3_Speed.c$130$2$124                                 =  000584 GR
+ 18 C$Lab_3_3_Speed.c$132$1$123                                 =  000594 GR
+ 18 C$Lab_3_3_Speed.c$133$1$123                                 =  00059B GR
+ 18 C$Lab_3_3_Speed.c$139$1$123                                 =  00059C GR
+ 18 C$Lab_3_3_Speed.c$144$1$126                                 =  00059C GR
+ 18 C$Lab_3_3_Speed.c$145$1$126                                 =  0005B1 GR
+ 18 C$Lab_3_3_Speed.c$146$1$126                                 =  0005BF GR
+ 18 C$Lab_3_3_Speed.c$147$1$126                                 =  0005C2 GR
+ 18 C$Lab_3_3_Speed.c$148$1$126                                 =  0005DF GR
+ 18 C$Lab_3_3_Speed.c$149$1$126                                 =  0005E3 GR
+ 18 C$Lab_3_3_Speed.c$157$1$126                                 =  0005E4 GR
+ 18 C$Lab_3_3_Speed.c$173$1$127                                 =  0005E4 GR
+ 18 C$Lab_3_3_Speed.c$175$2$128                                 =  0005EE GR
+ 18 C$Lab_3_3_Speed.c$176$2$128                                 =  0005F7 GR
+ 18 C$Lab_3_3_Speed.c$179$2$128                                 =  0005FA GR
+ 18 C$Lab_3_3_Speed.c$180$2$128                                 =  000613 GR
+ 18 C$Lab_3_3_Speed.c$182$1$127                                 =  00062C GR
+ 18 C$Lab_3_3_Speed.c$183$1$127                                 =  00063B GR
+ 18 C$Lab_3_3_Speed.c$184$1$127                                 =  00064C GR
+ 18 C$Lab_3_3_Speed.c$186$1$127                                 =  00065D GR
+ 18 C$Lab_3_3_Speed.c$187$1$127                                 =  00066A GR
+ 18 C$Lab_3_3_Speed.c$191$1$127                                 =  00066B GR
+ 18 C$Lab_3_3_Speed.c$196$1$130                                 =  00066F GR
+ 18 C$Lab_3_3_Speed.c$199$1$130                                 =  00067A GR
+ 18 C$Lab_3_3_Speed.c$200$1$130                                 =  000698 GR
+ 18 C$Lab_3_3_Speed.c$201$1$130                                 =  0006A5 GR
+ 18 C$Lab_3_3_Speed.c$202$1$130                                 =  0006B2 GR
+ 18 C$Lab_3_3_Speed.c$203$1$130                                 =  0006D0 GR
+ 18 C$Lab_3_3_Speed.c$204$1$130                                 =  0006D4 GR
+ 16 C$Lab_3_3_Speed.c$31$1$130                                  =  000000 GR
+ 16 C$Lab_3_3_Speed.c$32$1$130                                  =  000006 GR
+ 16 C$Lab_3_3_Speed.c$33$1$130                                  =  00000C GR
+ 16 C$Lab_3_3_Speed.c$34$1$130                                  =  000012 GR
  16 C$Lab_3_3_Speed.c$35$1$130                                  =  000018 GR
  16 C$Lab_3_3_Speed.c$36$1$130                                  =  00001D GR
  16 C$Lab_3_3_Speed.c$37$1$130                                  =  000021 GR
  16 C$Lab_3_3_Speed.c$38$1$130                                  =  000023 GR
  16 C$Lab_3_3_Speed.c$39$1$130                                  =  000025 GR
- 18 C$Lab_3_3_Speed.c$44$1$103                                  =  0004D6 GR
- 18 C$Lab_3_3_Speed.c$47$1$113                                  =  0004D6 GR
- 18 C$Lab_3_3_Speed.c$48$1$113                                  =  0004D9 GR
- 18 C$Lab_3_3_Speed.c$49$1$113                                  =  0004DF GR
- 18 C$Lab_3_3_Speed.c$50$1$113                                  =  0004E2 GR
- 18 C$Lab_3_3_Speed.c$51$1$113                                  =  0004E5 GR
- 18 C$Lab_3_3_Speed.c$52$1$113                                  =  0004E8 GR
- 18 C$Lab_3_3_Speed.c$55$1$113                                  =  0004EB GR
- 18 C$Lab_3_3_Speed.c$59$1$113                                  =  000500 GR
- 18 C$Lab_3_3_Speed.c$60$1$113                                  =  000506 GR
- 18 C$Lab_3_3_Speed.c$61$1$113                                  =  000520 GR
- 18 C$Lab_3_3_Speed.c$64$2$114                                  =  000526 GR
- 18 C$Lab_3_3_Speed.c$66$1$113                                  =  00052E GR
- 18 C$Lab_3_3_Speed.c$74$1$113                                  =  00052F GR
- 18 C$Lab_3_3_Speed.c$76$1$115                                  =  00052F GR
- 18 C$Lab_3_3_Speed.c$77$1$115                                  =  000532 GR
- 18 C$Lab_3_3_Speed.c$78$1$115                                  =  000535 GR
- 18 C$Lab_3_3_Speed.c$82$1$115                                  =  00053C GR
- 18 C$Lab_3_3_Speed.c$87$1$115                                  =  00053D GR
- 18 C$Lab_3_3_Speed.c$89$1$117                                  =  00053D GR
- 18 C$Lab_3_3_Speed.c$90$1$117                                  =  000540 GR
- 18 C$Lab_3_3_Speed.c$94$1$117                                  =  000541 GR
- 18 C$Lab_3_3_Speed.c$96$1$119                                  =  000541 GR
- 18 C$Lab_3_3_Speed.c$97$1$119                                  =  000544 GR
- 18 C$Lab_3_3_Speed.c$98$1$119                                  =  000546 GR
+ 16 C$Lab_3_3_Speed.c$41$1$130                                  =  000028 GR
+ 16 C$Lab_3_3_Speed.c$42$1$130                                  =  00002A GR
+ 18 C$Lab_3_3_Speed.c$46$1$103                                  =  0004D6 GR
+ 18 C$Lab_3_3_Speed.c$49$1$113                                  =  0004D6 GR
+ 18 C$Lab_3_3_Speed.c$50$1$113                                  =  0004D9 GR
+ 18 C$Lab_3_3_Speed.c$51$1$113                                  =  0004DF GR
+ 18 C$Lab_3_3_Speed.c$52$1$113                                  =  0004E2 GR
+ 18 C$Lab_3_3_Speed.c$53$1$113                                  =  0004E5 GR
+ 18 C$Lab_3_3_Speed.c$54$1$113                                  =  0004E8 GR
+ 18 C$Lab_3_3_Speed.c$57$1$113                                  =  0004EB GR
+ 18 C$Lab_3_3_Speed.c$61$1$113                                  =  000500 GR
+ 18 C$Lab_3_3_Speed.c$62$1$113                                  =  000506 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 19.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+ 18 C$Lab_3_3_Speed.c$63$1$113                                  =  000520 GR
+ 18 C$Lab_3_3_Speed.c$66$2$114                                  =  000526 GR
+ 18 C$Lab_3_3_Speed.c$67$2$114                                  =  00052C GR
+ 18 C$Lab_3_3_Speed.c$69$1$113                                  =  000534 GR
+ 18 C$Lab_3_3_Speed.c$77$1$113                                  =  000535 GR
+ 18 C$Lab_3_3_Speed.c$79$1$115                                  =  000535 GR
+ 18 C$Lab_3_3_Speed.c$80$1$115                                  =  000538 GR
+ 18 C$Lab_3_3_Speed.c$81$1$115                                  =  00053B GR
+ 18 C$Lab_3_3_Speed.c$85$1$115                                  =  000542 GR
+ 18 C$Lab_3_3_Speed.c$90$1$115                                  =  000543 GR
+ 18 C$Lab_3_3_Speed.c$92$1$117                                  =  000543 GR
+ 18 C$Lab_3_3_Speed.c$93$1$117                                  =  000546 GR
+ 18 C$Lab_3_3_Speed.c$97$1$117                                  =  000547 GR
+ 18 C$Lab_3_3_Speed.c$99$1$119                                  =  000547 GR
  18 C$c8051_SDCC.h$100$1$8                                      =  000045 GR
  18 C$c8051_SDCC.h$101$1$8                                      =  000045 GR
  18 C$c8051_SDCC.h$102$1$8                                      =  00004A GR
@@ -1078,11 +1122,6 @@ Symbol Table
  18 C$c8051_SDCC.h$70$1$4                                       =  000024 GR
  18 C$c8051_SDCC.h$71$1$4                                       =  000027 GR
  18 C$c8051_SDCC.h$73$1$4                                       =  00002A GR
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 19.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
  18 C$c8051_SDCC.h$74$1$4                                       =  00002C GR
  18 C$c8051_SDCC.h$75$1$4                                       =  00002F GR
  18 C$c8051_SDCC.h$83$1$4                                       =  000030 GR
@@ -1099,6 +1138,11 @@ Symbol Table
  18 C$i2c.h$105$1$73                                            =  0000E1 GR
  18 C$i2c.h$107$1$77                                            =  0000E4 GR
  18 C$i2c.h$109$1$77                                            =  000101 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 20.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
  18 C$i2c.h$110$1$77                                            =  000104 GR
  18 C$i2c.h$111$1$77                                            =  000119 GR
  18 C$i2c.h$114$1$77                                            =  00011A GR
@@ -1138,11 +1182,6 @@ Symbol Table
  18 C$i2c.h$201$1$88                                            =  00033F GR
  18 C$i2c.h$202$1$88                                            =  000341 GR
  18 C$i2c.h$203$1$88                                            =  000343 GR
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 20.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
  18 C$i2c.h$206$1$88                                            =  000344 GR
  18 C$i2c.h$209$1$90                                            =  000347 GR
  18 C$i2c.h$210$1$90                                            =  000347 GR
@@ -1159,6 +1198,11 @@ Symbol Table
  18 C$i2c.h$229$1$94                                            =  000360 GR
  18 C$i2c.h$230$1$94                                            =  000360 GR
  18 C$i2c.h$233$1$94                                            =  000361 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 21.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
  18 C$i2c.h$236$1$96                                            =  000361 GR
  18 C$i2c.h$237$1$96                                            =  000364 GR
  18 C$i2c.h$238$1$96                                            =  000366 GR
@@ -1198,11 +1242,6 @@ Symbol Table
  18 C$i2c.h$81$1$10                                             =  00005C GR
  18 C$i2c.h$87$1$73                                             =  000061 GR
  18 C$i2c.h$89$2$74                                             =  00007C GR
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 21.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
  18 C$i2c.h$90$1$73                                             =  000083 GR
  18 C$i2c.h$93$1$73                                             =  000099 GR
  18 C$i2c.h$94$1$73                                             =  0000C7 GR
@@ -1219,6 +1258,11 @@ Symbol Table
     ET1                                                         =  0000AB L
     ET2                                                         =  0000AD L
     EX0                                                         =  0000A8 L
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 22.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
     EX1                                                         =  0000AA L
     EXEN2                                                       =  0000CB L
     EXF2                                                        =  0000CE L
@@ -1258,11 +1302,6 @@ Symbol Table
     G$ADCEN$0$0                                                 =  0000EF G
     G$ADCINT$0$0                                                =  0000ED G
     G$ADCTM$0$0                                                 =  0000EE G
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 22.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
     G$ADLJST$0$0                                                =  0000E8 G
     G$ADSTM0$0$0                                                =  0000EA G
     G$ADSTM1$0$0                                                =  0000EB G
@@ -1279,6 +1318,11 @@ Symbol Table
     G$BUS_FTE$0$0                                               =  0000C1 G
     G$BUS_INT$0$0                                               =  0000C3 G
     G$BUS_SCL$0$0                                               =  000083 G
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 23.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
     G$BUS_START$0$0                                             =  0000C5 G
     G$BUS_STOP$0$0                                              =  0000C4 G
     G$BUS_TOE$0$0                                               =  0000C0 G
@@ -1305,8 +1349,8 @@ Symbol Table
     G$DAC1L$0$0                                                 =  0000D5 G
     G$DPH$0$0                                                   =  000083 G
     G$DPL$0$0                                                   =  000082 G
- 18 G$DeterminePWM$0$0                                          =  000646 GR
- 18 G$Drive_Motor$0$0                                           =  0005C5 GR
+ 18 G$DeterminePWM$0$0                                          =  00066B GR
+ 18 G$Drive_Motor$0$0                                           =  0005E4 GR
     G$EA$0$0                                                    =  0000AF G
     G$EIE1$0$0                                                  =  0000E6 G
     G$EIE2$0$0                                                  =  0000E7 G
@@ -1318,11 +1362,6 @@ Symbol Table
     G$ENSMB$0$0                                                 =  0000C6 G
     G$ES$0$0                                                    =  0000AC G
     G$ES0$0$0                                                   =  0000AC G
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 23.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
     G$ET0$0$0                                                   =  0000A9 G
     G$ET1$0$0                                                   =  0000AB G
     G$ET2$0$0                                                   =  0000AD G
@@ -1339,6 +1378,11 @@ Symbol Table
     G$IE1$0$0                                                   =  00008B G
     G$IP$0$0                                                    =  0000B8 G
     G$IT0$0$0                                                   =  000088 G
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 24.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
     G$IT1$0$0                                                   =  00008A G
     G$MCE0$0$0                                                  =  00009D G
     G$MODF$0$0                                                  =  0000FD G
@@ -1378,11 +1422,6 @@ Symbol Table
     G$P2_5$0$0                                                  =  0000A5 G
     G$P2_6$0$0                                                  =  0000A6 G
     G$P2_7$0$0                                                  =  0000A7 G
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 24.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
     G$P3$0$0                                                    =  0000B0 G
     G$P3IF$0$0                                                  =  0000AD G
     G$P3MDOUT$0$0                                               =  0000A7 G
@@ -1399,6 +1438,11 @@ Symbol Table
     G$P6$0$0                                                    =  000086 G
     G$P7$0$0                                                    =  000096 G
     G$P74OUT$0$0                                                =  0000B5 G
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 25.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
     G$PCA0$0$0                                                  =  00F9E9 G
     G$PCA0CN$0$0                                                =  0000D8 G
     G$PCA0CP0$0$0                                               =  00FAEA G
@@ -1424,8 +1468,8 @@ Symbol Table
     G$PCA0H$0$0                                                 =  0000F9 G
     G$PCA0L$0$0                                                 =  0000E9 G
     G$PCA0MD$0$0                                                =  0000D9 G
- 18 G$PCA_ISR$0$0                                               =  000556 GR
- 18 G$PCA_Init$0$0                                              =  000547 GR
+ 18 G$PCA_ISR$0$0                                               =  00055C GR
+ 18 G$PCA_Init$0$0                                              =  00054D GR
   5 G$PCA_START$0$0                                             =  000010 GR
     G$PCON$0$0                                                  =  000087 G
     G$PRT0CF$0$0                                                =  0000A4 G
@@ -1438,11 +1482,6 @@ Symbol Table
     G$PSW$0$0                                                   =  0000D0 G
     G$PT0$0$0                                                   =  0000B9 G
     G$PT1$0$0                                                   =  0000BB G
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 25.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
     G$PT2$0$0                                                   =  0000BD G
   5 G$PW$0$0                                                    =  000018 GR
   5 G$PW_CENTER$0$0                                             =  000012 GR
@@ -1450,7 +1489,7 @@ Symbol Table
   5 G$PW_MIN$0$0                                                =  000014 GR
     G$PX0$0$0                                                   =  0000B8 G
     G$PX1$0$0                                                   =  0000BA G
- 18 G$Port_Init$0$0                                             =  00052F GR
+ 18 G$Port_Init$0$0                                             =  000535 GR
     G$RB8$0$0                                                   =  00009A G
     G$RB80$0$0                                                  =  00009A G
     G$RCAP2$0$0                                                 =  00CBCA G
@@ -1459,6 +1498,11 @@ Symbol Table
     G$RCAP4$0$0                                                 =  00E5E4 G
     G$RCAP4H$0$0                                                =  0000E5 G
     G$RCAP4L$0$0                                                =  0000E4 G
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 26.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
     G$RCLK$0$0                                                  =  0000CD G
     G$REF0CN$0$0                                                =  0000D1 G
     G$REN$0$0                                                   =  00009C G
@@ -1469,7 +1513,7 @@ Symbol Table
     G$RS1$0$0                                                   =  0000D4 G
     G$RSTSRC$0$0                                                =  0000EF G
     G$RXOVRN$0$0                                                =  0000FC G
- 18 G$ReadRanger$0$0                                            =  00057D GR
+ 18 G$ReadRanger$0$0                                            =  00059C GR
     G$S0MODE$0$0                                                =  00009F G
     G$SADDR0$0$0                                                =  0000A9 G
     G$SADDR1$0$0                                                =  0000F3 G
@@ -1496,13 +1540,8 @@ Symbol Table
     G$SMB0STA$0$0                                               =  0000C1 G
     G$SMBFTE$0$0                                                =  0000C1 G
     G$SMBTOE$0$0                                                =  0000C0 G
- 18 G$SMB_Init$0$0                                              =  000541 GR
+ 18 G$SMB_Init$0$0                                              =  000547 GR
     G$SP$0$0                                                    =  000081 G
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 26.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
     G$SPI0CFG$0$0                                               =  00009A G
     G$SPI0CKR$0$0                                               =  00009D G
     G$SPI0CN$0$0                                                =  0000F8 G
@@ -1519,6 +1558,11 @@ Symbol Table
     G$TB8$0$0                                                   =  00009B G
     G$TB80$0$0                                                  =  00009B G
     G$TCLK$0$0                                                  =  0000CC G
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 27.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
     G$TCON$0$0                                                  =  000088 G
     G$TF0$0$0                                                   =  00008D G
     G$TF1$0$0                                                   =  00008F G
@@ -1553,16 +1597,12 @@ Symbol Table
     G$WCOL$0$0                                                  =  0000FE G
     G$WDTCN$0$0                                                 =  0000FF G
     G$XBR0$0$0                                                  =  0000E1 G
- 18 G$XBR0_Init$0$0                                             =  00053D GR
+ 18 G$XBR0_Init$0$0                                             =  000543 GR
     G$XBR1$0$0                                                  =  0000E2 G
     G$XBR2$0$0                                                  =  0000E3 G
     G$_XPAGE$0$0                                                =  0000AF G
   5 G$counts$0$0                                                =  00001A GR
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 27.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
+  5 G$delay$0$0                                                 =  000021 GR
  18 G$delay_time$0$0                                            =  00030D GR
  18 G$getchar$0$0                                               =  00004D GR
  18 G$i2c_read$0$0                                              =  000358 GR
@@ -1578,10 +1618,16 @@ Symbol Table
  18 G$main$0$0                                                  =  0004D6 GR
   5 G$neutral$0$0                                               =  00001E GR
   5 G$new_range$0$0                                             =  00001C GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 28.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
  18 G$putchar$0$0                                               =  000043 GR
   5 G$r_count$0$0                                               =  00001D GR
   5 G$range$0$0                                                 =  00001F GR
  18 G$read_keypad$0$0                                           =  00011A GR
+  5 G$start_delay$0$0                                           =  000022 GR
     IE                                                          =  0000A8 L
     IE.0                                                        =  0000A8 L
     IE.1                                                        =  0000A9 L
@@ -1604,7 +1650,7 @@ Symbol Table
     IT0                                                         =  000088 L
     IT1                                                         =  00008A L
   5 LLab_3_3_Speed.Accel_Init$Data2$1$103                       =  00000F GR
-  5 LLab_3_3_Speed.ReadRanger$Data$1$126                        =  000021 GR
+  5 LLab_3_3_Speed.ReadRanger$Data$1$126                        =  000023 GR
   5 LLab_3_3_Speed.i2c_read_data$buffer$1$99                    =  00000B GR
   5 LLab_3_3_Speed.i2c_read_data$num_bytes$1$99                 =  00000E GR
   5 LLab_3_3_Speed.i2c_read_data$start_reg$1$99                 =  00000A GR
@@ -1618,11 +1664,6 @@ Symbol Table
     OV                                                          =  0000D2 L
     P                                                           =  0000D0 L
     P0                                                          =  000080 L
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 28.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
     P0.0                                                        =  000080 L
     P0.1                                                        =  000081 L
     P0.2                                                        =  000082 L
@@ -1637,6 +1678,11 @@ Symbol Table
     P1.2                                                        =  000092 L
     P1.3                                                        =  000093 L
     P1.4                                                        =  000094 L
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 29.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
     P1.5                                                        =  000095 L
     P1.6                                                        =  000096 L
     P1.7                                                        =  000097 L
@@ -1678,11 +1724,6 @@ Symbol Table
     RCAP2H                                                      =  0000CB L
     RCAP2L                                                      =  0000CA L
     RCLK                                                        =  0000CD L
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 29.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
     REN                                                         =  00009C L
     RI                                                          =  000098 L
     RS0                                                         =  0000D3 L
@@ -1697,6 +1738,11 @@ Symbol Table
     SCON.4                                                      =  00009C L
     SCON.5                                                      =  00009D L
     SCON.6                                                      =  00009E L
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 30.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
     SCON.7                                                      =  00009F L
     SM0                                                         =  00009F L
     SM1                                                         =  00009E L
@@ -1738,25 +1784,25 @@ Symbol Table
     TR2                                                         =  0000CA L
     TXD                                                         =  0000B1 L
  18 XG$Accel_Init$0$0                                           =  0004D5 GR
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 30.
+ 18 XG$DeterminePWM$0$0                                         =  0006D4 GR
+ 18 XG$Drive_Motor$0$0                                          =  00066A GR
+ 18 XG$PCA_ISR$0$0                                              =  00059B GR
+ 18 XG$PCA_Init$0$0                                             =  00055B GR
+ 18 XG$Port_Init$0$0                                            =  000542 GR
+ 18 XG$ReadRanger$0$0                                           =  0005E3 GR
+ 18 XG$SMB_Init$0$0                                             =  00054C GR
+ 18 XG$SYSCLK_Init$0$0                                          =  000018 GR
+ 18 XG$Sys_Init$0$0                                             =  000042 GR
+ 18 XG$UART0_Init$0$0                                           =  00002F GR
+ 18 XG$XBR0_Init$0$0                                            =  000546 GR
+ 18 XG$delay_time$0$0                                           =  000336 GR
+ 18 XG$getchar$0$0                                              =  00005B GR
+ 18 XG$i2c_read$0$0                                             =  000360 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 31.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
- 18 XG$DeterminePWM$0$0                                         =  000690 GR
- 18 XG$Drive_Motor$0$0                                          =  000645 GR
- 18 XG$PCA_ISR$0$0                                              =  00057C GR
- 18 XG$PCA_Init$0$0                                             =  000555 GR
- 18 XG$Port_Init$0$0                                            =  00053C GR
- 18 XG$ReadRanger$0$0                                           =  0005C4 GR
- 18 XG$SMB_Init$0$0                                             =  000546 GR
- 18 XG$SYSCLK_Init$0$0                                          =  000018 GR
- 18 XG$Sys_Init$0$0                                             =  000042 GR
- 18 XG$UART0_Init$0$0                                           =  00002F GR
- 18 XG$XBR0_Init$0$0                                            =  000540 GR
- 18 XG$delay_time$0$0                                           =  000336 GR
- 18 XG$getchar$0$0                                              =  00005B GR
- 18 XG$i2c_read$0$0                                             =  000360 GR
  18 XG$i2c_read_and_stop$0$0                                    =  000371 GR
  18 XG$i2c_read_data$0$0                                        =  00048C GR
  18 XG$i2c_start$0$0                                            =  000343 GR
@@ -1766,7 +1812,7 @@ Symbol Table
  18 XG$kpd_input$0$0                                            =  00030C GR
  18 XG$lcd_clear$0$0                                            =  000119 GR
  18 XG$lcd_print$0$0                                            =  0000E0 GR
- 18 XG$main$0$0                                                 =  00052E GR
+ 18 XG$main$0$0                                                 =  000534 GR
  18 XG$putchar$0$0                                              =  00004C GR
  18 XG$read_keypad$0$0                                          =  000198 GR
     _AA                                                         =  0000C2 G
@@ -1798,11 +1844,6 @@ Symbol Table
     _ADCEN                                                      =  0000EF G
     _ADCINT                                                     =  0000ED G
     _ADCTM                                                      =  0000EE G
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 31.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
     _ADLJST                                                     =  0000E8 G
     _ADSTM0                                                     =  0000EA G
     _ADSTM1                                                     =  0000EB G
@@ -1817,6 +1858,11 @@ Symbol Table
     _BUS_AA                                                     =  0000C2 G
     _BUS_BUSY                                                   =  0000C7 G
     _BUS_EN                                                     =  0000C6 G
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 32.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
     _BUS_FTE                                                    =  0000C1 G
     _BUS_INT                                                    =  0000C3 G
     _BUS_SCL                                                    =  000083 G
@@ -1846,8 +1892,8 @@ Symbol Table
     _DAC1L                                                      =  0000D5 G
     _DPH                                                        =  000083 G
     _DPL                                                        =  000082 G
- 18 _DeterminePWM                                                  000646 GR
- 18 _Drive_Motor                                                   0005C5 GR
+ 18 _DeterminePWM                                                  00066B GR
+ 18 _Drive_Motor                                                   0005E4 GR
     _EA                                                         =  0000AF G
     _EIE1                                                       =  0000E6 G
     _EIE2                                                       =  0000E7 G
@@ -1858,11 +1904,6 @@ Symbol Table
     _EMI0TC                                                     =  0000A1 G
     _ENSMB                                                      =  0000C6 G
     _ES                                                         =  0000AC G
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 32.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
     _ES0                                                        =  0000AC G
     _ET0                                                        =  0000A9 G
     _ET1                                                        =  0000AB G
@@ -1877,6 +1918,11 @@ Symbol Table
     _FLSCL                                                      =  0000B6 G
     _IE                                                         =  0000A8 G
     _IE0                                                        =  000089 G
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 33.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
     _IE1                                                        =  00008B G
     _IP                                                         =  0000B8 G
     _IT0                                                        =  000088 G
@@ -1918,11 +1964,6 @@ Symbol Table
     _P2_4                                                       =  0000A4 G
     _P2_5                                                       =  0000A5 G
     _P2_6                                                       =  0000A6 G
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 33.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
     _P2_7                                                       =  0000A7 G
     _P3                                                         =  0000B0 G
     _P3IF                                                       =  0000AD G
@@ -1937,6 +1978,11 @@ Symbol Table
     _P3_7                                                       =  0000B7 G
     _P4                                                         =  000084 G
     _P5                                                         =  000085 G
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 34.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
     _P6                                                         =  000086 G
     _P7                                                         =  000096 G
     _P74OUT                                                     =  0000B5 G
@@ -1965,8 +2011,8 @@ Symbol Table
     _PCA0H                                                      =  0000F9 G
     _PCA0L                                                      =  0000E9 G
     _PCA0MD                                                     =  0000D9 G
- 18 _PCA_ISR                                                       000556 GR
- 18 _PCA_Init                                                      000547 GR
+ 18 _PCA_ISR                                                       00055C GR
+ 18 _PCA_Init                                                      00054D GR
   5 _PCA_START                                                     000010 GR
     _PCON                                                       =  000087 G
     _PRT0CF                                                     =  0000A4 G
@@ -1978,11 +2024,6 @@ Symbol Table
     _PSCTL                                                      =  00008F G
     _PSW                                                        =  0000D0 G
     _PT0                                                        =  0000B9 G
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 34.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
     _PT1                                                        =  0000BB G
     _PT2                                                        =  0000BD G
   5 _PW                                                            000018 GR
@@ -1991,12 +2032,17 @@ Symbol Table
   5 _PW_MIN                                                        000014 GR
     _PX0                                                        =  0000B8 G
     _PX1                                                        =  0000BA G
- 18 _Port_Init                                                     00052F GR
+ 18 _Port_Init                                                     000535 GR
     _RB8                                                        =  00009A G
     _RB80                                                       =  00009A G
     _RCAP2                                                      =  00CBCA G
     _RCAP2H                                                     =  0000CB G
     _RCAP2L                                                     =  0000CA G
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 35.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
     _RCAP4                                                      =  00E5E4 G
     _RCAP4H                                                     =  0000E5 G
     _RCAP4L                                                     =  0000E4 G
@@ -2010,8 +2056,8 @@ Symbol Table
     _RS1                                                        =  0000D4 G
     _RSTSRC                                                     =  0000EF G
     _RXOVRN                                                     =  0000FC G
- 18 _ReadRanger                                                    00057D GR
-  5 _ReadRanger_Data_1_126                                         000021 R
+ 18 _ReadRanger                                                    00059C GR
+  5 _ReadRanger_Data_1_126                                         000023 R
     _S0MODE                                                     =  00009F G
     _SADDR0                                                     =  0000A9 G
     _SADDR1                                                     =  0000F3 G
@@ -2038,12 +2084,7 @@ Symbol Table
     _SMB0STA                                                    =  0000C1 G
     _SMBFTE                                                     =  0000C1 G
     _SMBTOE                                                     =  0000C0 G
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 35.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
- 18 _SMB_Init                                                      000541 GR
+ 18 _SMB_Init                                                      000547 GR
     _SP                                                         =  000081 G
     _SPI0CFG                                                    =  00009A G
     _SPI0CKR                                                    =  00009D G
@@ -2057,6 +2098,11 @@ Symbol Table
  18 _SYSCLK_Init                                                   000000 GR
  18 _Sys_Init                                                      000030 GR
     _T2CON                                                      =  0000C8 G
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 36.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
     _T4CON                                                      =  0000C9 G
     _TB8                                                        =  00009B G
     _TB80                                                       =  00009B G
@@ -2095,14 +2141,9 @@ Symbol Table
     _WCOL                                                       =  0000FE G
     _WDTCN                                                      =  0000FF G
     _XBR0                                                       =  0000E1 G
- 18 _XBR0_Init                                                     00053D GR
+ 18 _XBR0_Init                                                     000543 GR
     _XBR1                                                       =  0000E2 G
     _XBR2                                                       =  0000E3 G
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 36.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
     __XPAGE                                                     =  0000AF G
  19 ___str_0                                                       000000 R
  19 ___str_1                                                       000016 R
@@ -2117,12 +2158,18 @@ Symbol Table
     __mcs51_genXINIT                                               ****** GX
     __mcs51_genXRAMCLEAR                                           ****** GX
     __mulint                                                       ****** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 37.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
     __mulint_PARM_2                                                ****** GX
     __sdcc_gsinit_startup                                          ****** GX
   F __sdcc_program_startup                                         00004E GR
   7 __start__stack                                                 000000 GR
     _bp                                                            ****** GX
   5 _counts                                                        00001A GR
+  5 _delay                                                         000021 GR
  18 _delay_time                                                    00030D GR
  18 _getchar                                                       00004D R
  18 _i2c_read                                                      000358 GR
@@ -2153,16 +2200,12 @@ Symbol Table
   5 _range                                                         00001F GR
  18 _read_keypad                                                   00011A GR
   5 _read_keypad_Data_1_78                                         000003 R
+  5 _start_delay                                                   000022 GR
     _strlen                                                        ****** GX
     _vsprintf                                                      ****** GX
     _vsprintf_PARM_2                                               ****** GX
     _vsprintf_PARM_3                                               ****** GX
     a                                                           =  0000E0 L
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 37.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
     a.0                                                         =  0000E0 L
     a.1                                                         =  0000E1 L
     a.2                                                         =  0000E2 L
@@ -2175,6 +2218,11 @@ Symbol Table
     acc                                                         =  0000E0 L
     acc.0                                                       =  0000E0 L
     acc.1                                                       =  0000E1 L
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 38.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
     acc.2                                                       =  0000E2 L
     acc.3                                                       =  0000E3 L
     acc.4                                                       =  0000E4 L
@@ -2218,11 +2266,6 @@ Symbol Table
     ie.1                                                        =  0000A9 L
     ie.2                                                        =  0000AA L
     ie.3                                                        =  0000AB L
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 38.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
     ie.4                                                        =  0000AC L
     ie.5                                                        =  0000AD L
     ie.7                                                        =  0000AF L
@@ -2235,6 +2278,11 @@ Symbol Table
     ip.1                                                        =  0000B9 L
     ip.2                                                        =  0000BA L
     ip.3                                                        =  0000BB L
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 39.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
     ip.4                                                        =  0000BC L
     ip.5                                                        =  0000BD L
     it0                                                         =  000088 L
@@ -2278,11 +2326,6 @@ Symbol Table
     p3.6                                                        =  0000B6 L
     p3.7                                                        =  0000B7 L
     pcon                                                        =  000087 L
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 39.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
     ps                                                          =  0000BC L
     psw                                                         =  0000D0 L
     psw.0                                                       =  0000D0 L
@@ -2295,6 +2338,11 @@ Symbol Table
     psw.7                                                       =  0000D7 L
     pt0                                                         =  0000B9 L
     pt1                                                         =  0000BB L
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 40.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
     pt2                                                         =  0000BD L
     px0                                                         =  0000B8 L
     px1                                                         =  0000BA L
@@ -2338,11 +2386,6 @@ Symbol Table
     tcon.2                                                      =  00008A L
     tcon.3                                                      =  00008B L
     tcon.4                                                      =  00008C L
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 40.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
     tcon.5                                                      =  00008D L
     tcon.6                                                      =  00008E L
     tcon.7                                                      =  00008F L
@@ -2355,6 +2398,11 @@ Symbol Table
     ti                                                          =  000099 L
     tl0                                                         =  00008A L
     tl1                                                         =  00008B L
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 41.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
     tl2                                                         =  0000CC L
     tmod                                                        =  000089 L
     tr0                                                         =  00008C L
@@ -2362,7 +2410,8 @@ Symbol Table
     tr2                                                         =  0000CA L
     txd                                                         =  0000B1 L
 
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 41.
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 42.
 Hexadecimal [24-Bits]
 
 Area Table
@@ -2372,7 +2421,7 @@ Area Table
    2 RSEG0                                      size      0   flags    8
    3 RSEG1                                      size      0   flags    8
    4 REG_BANK_0                                 size      8   flags    4
-   5 DSEG                                       size     23   flags    0
+   5 DSEG                                       size     25   flags    0
    6 OSEG                                       size      0   flags    4
    7 SSEG                                       size      1   flags    0
    8 ISEG                                       size      0   flags    0
@@ -2389,9 +2438,9 @@ Area Table
   13 GSINIT3                                    size      0   flags   20
   14 GSINIT4                                    size      0   flags   20
   15 GSINIT5                                    size      0   flags   20
-  16 GSINIT                                     size     28   flags   20
+  16 GSINIT                                     size     2C   flags   20
   17 GSFINAL                                    size      3   flags   20
-  18 CSEG                                       size    691   flags   20
+  18 CSEG                                       size    6D5   flags   20
   19 CONST                                      size     71   flags   20
   1A XINIT                                      size      0   flags   20
   1B CABS                                       size      0   flags   28
