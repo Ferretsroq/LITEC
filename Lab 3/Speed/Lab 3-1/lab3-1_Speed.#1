@@ -58,11 +58,10 @@ void Drive_Motor()
 	{
 		if(PW > PW_MIN)
 		PW = PW - 10; //decrease the steering pulsewidth by 10
-		
 	}
 	if(PW > PW_MAX) PW = PW_MAX;
 	if(PW < PW_MIN) PW = PW_MIN;
-	printf("\rPW is %u\n", PW);
+	
 	PCA0CP2 = 0xFFFF - PW;
 }
 //-----------------------------------------------------------------------------

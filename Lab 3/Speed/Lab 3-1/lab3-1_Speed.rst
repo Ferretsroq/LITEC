@@ -874,20 +874,20 @@
                                     874 ;--------------------------------------------------------
                                     875 	.area DSEG    (DATA)
                            000000   876 G$PCA_START$0$0==.
-      000000                        877 _PCA_START::
-      000000                        878 	.ds 2
+      000008                        877 _PCA_START::
+      000008                        878 	.ds 2
                            000002   879 G$PW_CENTER$0$0==.
-      000002                        880 _PW_CENTER::
-      000002                        881 	.ds 2
+      00000A                        880 _PW_CENTER::
+      00000A                        881 	.ds 2
                            000004   882 G$PW_MIN$0$0==.
-      000004                        883 _PW_MIN::
-      000004                        884 	.ds 2
+      00000C                        883 _PW_MIN::
+      00000C                        884 	.ds 2
                            000006   885 G$PW_MAX$0$0==.
-      000006                        886 _PW_MAX::
-      000006                        887 	.ds 2
+      00000E                        886 _PW_MAX::
+      00000E                        887 	.ds 2
                            000008   888 G$PW$0$0==.
-      000008                        889 _PW::
-      000008                        890 	.ds 2
+      000010                        889 _PW::
+      000010                        890 	.ds 2
                                     891 ;--------------------------------------------------------
                                     892 ; overlayable items in internal ram 
                                     893 ;--------------------------------------------------------
@@ -897,8 +897,8 @@
                                     897 ; Stack segment in internal ram 
                                     898 ;--------------------------------------------------------
                                     899 	.area	SSEG
-      000000                        900 __start__stack:
-      000000                        901 	.ds	1
+      00003C                        900 __start__stack:
+      00003C                        901 	.ds	1
                                     902 
                                     903 ;--------------------------------------------------------
                                     904 ; indirectly addressable internal ram data
@@ -944,7 +944,7 @@
                                     944 ;--------------------------------------------------------
                                     945 	.area HOME    (CODE)
       000000                        946 __interrupt_vect:
-      000000 02r00r00         [24]  947 	ljmp	__sdcc_gsinit_startup
+      000000 02 00 51         [24]  947 	ljmp	__sdcc_gsinit_startup
       000003 32               [24]  948 	reti
       000004                        949 	.ds	7
       00000B 32               [24]  950 	reti
@@ -963,7 +963,7 @@
       00003C                        963 	.ds	7
       000043 32               [24]  964 	reti
       000044                        965 	.ds	7
-      00004B 02r01r43         [24]  966 	ljmp	_PCA_ISR
+      00004B 02 02 0D         [24]  966 	ljmp	_PCA_ISR
                                     967 ;--------------------------------------------------------
                                     968 ; global & static initialisations
                                     969 ;--------------------------------------------------------
@@ -979,34 +979,34 @@
                                     979 	.globl __mcs51_genRAMCLEAR
                            000000   980 	C$lab3_1_Speed.c$16$1$40 ==.
                                     981 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:16: unsigned int PCA_START = 28672;
-      000000 75*00 00         [24]  982 	mov	_PCA_START,#0x00
-      000003 75*01 70         [24]  983 	mov	(_PCA_START + 1),#0x70
+      0000AA 75 08 00         [24]  982 	mov	_PCA_START,#0x00
+      0000AD 75 09 70         [24]  983 	mov	(_PCA_START + 1),#0x70
                            000006   984 	C$lab3_1_Speed.c$17$1$40 ==.
                                     985 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:17: unsigned int PW_CENTER = 2760;
-      000006 75*02 C8         [24]  986 	mov	_PW_CENTER,#0xC8
-      000009 75*03 0A         [24]  987 	mov	(_PW_CENTER + 1),#0x0A
+      0000B0 75 0A C8         [24]  986 	mov	_PW_CENTER,#0xC8
+      0000B3 75 0B 0A         [24]  987 	mov	(_PW_CENTER + 1),#0x0A
                            00000C   988 	C$lab3_1_Speed.c$18$1$40 ==.
                                     989 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:18: unsigned int PW_MIN = 2030;
-      00000C 75*04 EE         [24]  990 	mov	_PW_MIN,#0xEE
-      00000F 75*05 07         [24]  991 	mov	(_PW_MIN + 1),#0x07
+      0000B6 75 0C EE         [24]  990 	mov	_PW_MIN,#0xEE
+      0000B9 75 0D 07         [24]  991 	mov	(_PW_MIN + 1),#0x07
                            000012   992 	C$lab3_1_Speed.c$19$1$40 ==.
                                     993 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:19: unsigned int PW_MAX = 3500;
-      000012 75*06 AC         [24]  994 	mov	_PW_MAX,#0xAC
-      000015 75*07 0D         [24]  995 	mov	(_PW_MAX + 1),#0x0D
+      0000BC 75 0E AC         [24]  994 	mov	_PW_MAX,#0xAC
+      0000BF 75 0F 0D         [24]  995 	mov	(_PW_MAX + 1),#0x0D
                            000018   996 	C$lab3_1_Speed.c$20$1$40 ==.
                                     997 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:20: unsigned int PW = 0;
-      000018 E4               [12]  998 	clr	a
-      000019 F5*08            [12]  999 	mov	_PW,a
-      00001B F5*09            [12] 1000 	mov	(_PW + 1),a
+      0000C2 E4               [12]  998 	clr	a
+      0000C3 F5 10            [12]  999 	mov	_PW,a
+      0000C5 F5 11            [12] 1000 	mov	(_PW + 1),a
                                    1001 	.area GSFINAL (CODE)
-      000000 02r00r4E         [24] 1002 	ljmp	__sdcc_program_startup
+      0000C7 02 00 4E         [24] 1002 	ljmp	__sdcc_program_startup
                                    1003 ;--------------------------------------------------------
                                    1004 ; Home
                                    1005 ;--------------------------------------------------------
                                    1006 	.area HOME    (CODE)
                                    1007 	.area HOME    (CODE)
       00004E                       1008 __sdcc_program_startup:
-      00004E 02r00r5C         [24] 1009 	ljmp	_main
+      00004E 02 01 26         [24] 1009 	ljmp	_main
                                    1010 ;	return from main will return to caller
                                    1011 ;--------------------------------------------------------
                                    1012 ; code
@@ -1023,7 +1023,7 @@
                                    1023 ;	-----------------------------------------
                                    1024 ;	 function SYSCLK_Init
                                    1025 ;	-----------------------------------------
-      000000                       1026 _SYSCLK_Init:
+      0000CA                       1026 _SYSCLK_Init:
                            000007  1027 	ar7 = 0x07
                            000006  1028 	ar6 = 0x06
                            000005  1029 	ar5 = 0x05
@@ -1034,30 +1034,30 @@
                            000000  1034 	ar0 = 0x00
                            000000  1035 	C$c8051_SDCC.h$46$1$16 ==.
                                    1036 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:46: OSCXCN = 0x67;                      // start external oscillator with
-      000000 75 B1 67         [24] 1037 	mov	_OSCXCN,#0x67
+      0000CA 75 B1 67         [24] 1037 	mov	_OSCXCN,#0x67
                            000003  1038 	C$c8051_SDCC.h$49$1$16 ==.
                                    1039 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:49: for (i=0; i < 256; i++);            // wait for oscillator to start
-      000003 7E 00            [12] 1040 	mov	r6,#0x00
-      000005 7F 01            [12] 1041 	mov	r7,#0x01
-      000007                       1042 00107$:
-      000007 1E               [12] 1043 	dec	r6
-      000008 BE FF 01         [24] 1044 	cjne	r6,#0xFF,00121$
-      00000B 1F               [12] 1045 	dec	r7
-      00000C                       1046 00121$:
-      00000C EE               [12] 1047 	mov	a,r6
-      00000D 4F               [12] 1048 	orl	a,r7
-      00000E 70 F7            [24] 1049 	jnz	00107$
+      0000CD 7E 00            [12] 1040 	mov	r6,#0x00
+      0000CF 7F 01            [12] 1041 	mov	r7,#0x01
+      0000D1                       1042 00107$:
+      0000D1 1E               [12] 1043 	dec	r6
+      0000D2 BE FF 01         [24] 1044 	cjne	r6,#0xFF,00121$
+      0000D5 1F               [12] 1045 	dec	r7
+      0000D6                       1046 00121$:
+      0000D6 EE               [12] 1047 	mov	a,r6
+      0000D7 4F               [12] 1048 	orl	a,r7
+      0000D8 70 F7            [24] 1049 	jnz	00107$
                            000010  1050 	C$c8051_SDCC.h$51$1$16 ==.
                                    1051 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:51: while (!(OSCXCN & 0x80));           // Wait for crystal osc. to settle
-      000010                       1052 00102$:
-      000010 E5 B1            [12] 1053 	mov	a,_OSCXCN
-      000012 30 E7 FB         [24] 1054 	jnb	acc.7,00102$
+      0000DA                       1052 00102$:
+      0000DA E5 B1            [12] 1053 	mov	a,_OSCXCN
+      0000DC 30 E7 FB         [24] 1054 	jnb	acc.7,00102$
                            000015  1055 	C$c8051_SDCC.h$53$1$16 ==.
                                    1056 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:53: OSCICN = 0x88;                      // select external oscillator as SYSCLK
-      000015 75 B2 88         [24] 1057 	mov	_OSCICN,#0x88
+      0000DF 75 B2 88         [24] 1057 	mov	_OSCICN,#0x88
                            000018  1058 	C$c8051_SDCC.h$56$1$16 ==.
                            000018  1059 	XG$SYSCLK_Init$0$0 ==.
-      000018 22               [24] 1060 	ret
+      0000E2 22               [24] 1060 	ret
                                    1061 ;------------------------------------------------------------
                                    1062 ;Allocation info for local variables in function 'UART0_Init'
                                    1063 ;------------------------------------------------------------
@@ -1067,34 +1067,34 @@
                                    1067 ;	-----------------------------------------
                                    1068 ;	 function UART0_Init
                                    1069 ;	-----------------------------------------
-      000019                       1070 _UART0_Init:
+      0000E3                       1070 _UART0_Init:
                            000019  1071 	C$c8051_SDCC.h$66$1$18 ==.
                                    1072 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:66: SCON0  = 0x50;                      // SCON0: mode 1, 8-bit UART, enable RX
-      000019 75 98 50         [24] 1073 	mov	_SCON0,#0x50
+      0000E3 75 98 50         [24] 1073 	mov	_SCON0,#0x50
                            00001C  1074 	C$c8051_SDCC.h$67$1$18 ==.
                                    1075 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:67: TMOD   = 0x20;                      // TMOD: timer 1, mode 2, 8-bit reload
-      00001C 75 89 20         [24] 1076 	mov	_TMOD,#0x20
+      0000E6 75 89 20         [24] 1076 	mov	_TMOD,#0x20
                            00001F  1077 	C$c8051_SDCC.h$68$1$18 ==.
                                    1078 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:68: TH1    = -(SYSCLK/BAUDRATE/16);     // set Timer1 reload value for baudrate
-      00001F 75 8D DC         [24] 1079 	mov	_TH1,#0xDC
+      0000E9 75 8D DC         [24] 1079 	mov	_TH1,#0xDC
                            000022  1080 	C$c8051_SDCC.h$69$1$18 ==.
                                    1081 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:69: TR1    = 1;                         // start Timer1
-      000022 D2 8E            [12] 1082 	setb	_TR1
+      0000EC D2 8E            [12] 1082 	setb	_TR1
                            000024  1083 	C$c8051_SDCC.h$70$1$18 ==.
                                    1084 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:70: CKCON |= 0x10;                      // Timer1 uses SYSCLK as time base
-      000024 43 8E 10         [24] 1085 	orl	_CKCON,#0x10
+      0000EE 43 8E 10         [24] 1085 	orl	_CKCON,#0x10
                            000027  1086 	C$c8051_SDCC.h$71$1$18 ==.
                                    1087 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:71: PCON  |= 0x80;                      // SMOD00 = 1 (disable baud rate 
-      000027 43 87 80         [24] 1088 	orl	_PCON,#0x80
+      0000F1 43 87 80         [24] 1088 	orl	_PCON,#0x80
                            00002A  1089 	C$c8051_SDCC.h$73$1$18 ==.
                                    1090 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:73: TI0    = 1;                         // Indicate TX0 ready
-      00002A D2 99            [12] 1091 	setb	_TI0
+      0000F4 D2 99            [12] 1091 	setb	_TI0
                            00002C  1092 	C$c8051_SDCC.h$74$1$18 ==.
                                    1093 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:74: P0MDOUT |= 0x01;                    // Set TX0 to push/pull
-      00002C 43 A4 01         [24] 1094 	orl	_P0MDOUT,#0x01
+      0000F6 43 A4 01         [24] 1094 	orl	_P0MDOUT,#0x01
                            00002F  1095 	C$c8051_SDCC.h$75$1$18 ==.
                            00002F  1096 	XG$UART0_Init$0$0 ==.
-      00002F 22               [24] 1097 	ret
+      0000F9 22               [24] 1097 	ret
                                    1098 ;------------------------------------------------------------
                                    1099 ;Allocation info for local variables in function 'Sys_Init'
                                    1100 ;------------------------------------------------------------
@@ -1104,28 +1104,28 @@
                                    1104 ;	-----------------------------------------
                                    1105 ;	 function Sys_Init
                                    1106 ;	-----------------------------------------
-      000030                       1107 _Sys_Init:
+      0000FA                       1107 _Sys_Init:
                            000030  1108 	C$c8051_SDCC.h$85$1$20 ==.
                                    1109 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:85: WDTCN = 0xde;			// disable watchdog timer
-      000030 75 FF DE         [24] 1110 	mov	_WDTCN,#0xDE
+      0000FA 75 FF DE         [24] 1110 	mov	_WDTCN,#0xDE
                            000033  1111 	C$c8051_SDCC.h$86$1$20 ==.
                                    1112 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:86: WDTCN = 0xad;
-      000033 75 FF AD         [24] 1113 	mov	_WDTCN,#0xAD
+      0000FD 75 FF AD         [24] 1113 	mov	_WDTCN,#0xAD
                            000036  1114 	C$c8051_SDCC.h$88$1$20 ==.
                                    1115 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:88: SYSCLK_Init();			// initialize oscillator
-      000036 12r00r00         [24] 1116 	lcall	_SYSCLK_Init
+      000100 12 00 CA         [24] 1116 	lcall	_SYSCLK_Init
                            000039  1117 	C$c8051_SDCC.h$89$1$20 ==.
                                    1118 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:89: UART0_Init();			// initialize UART0
-      000039 12r00r19         [24] 1119 	lcall	_UART0_Init
+      000103 12 00 E3         [24] 1119 	lcall	_UART0_Init
                            00003C  1120 	C$c8051_SDCC.h$91$1$20 ==.
                                    1121 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:91: XBR0 |= 0x04;
-      00003C 43 E1 04         [24] 1122 	orl	_XBR0,#0x04
+      000106 43 E1 04         [24] 1122 	orl	_XBR0,#0x04
                            00003F  1123 	C$c8051_SDCC.h$92$1$20 ==.
                                    1124 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:92: XBR2 |= 0x40;                    	// Enable crossbar and weak pull-ups
-      00003F 43 E3 40         [24] 1125 	orl	_XBR2,#0x40
+      000109 43 E3 40         [24] 1125 	orl	_XBR2,#0x40
                            000042  1126 	C$c8051_SDCC.h$93$1$20 ==.
                            000042  1127 	XG$Sys_Init$0$0 ==.
-      000042 22               [24] 1128 	ret
+      00010C 22               [24] 1128 	ret
                                    1129 ;------------------------------------------------------------
                                    1130 ;Allocation info for local variables in function 'putchar'
                                    1131 ;------------------------------------------------------------
@@ -1137,22 +1137,22 @@
                                    1137 ;	-----------------------------------------
                                    1138 ;	 function putchar
                                    1139 ;	-----------------------------------------
-      000043                       1140 _putchar:
-      000043 AF 82            [24] 1141 	mov	r7,dpl
+      00010D                       1140 _putchar:
+      00010D AF 82            [24] 1141 	mov	r7,dpl
                            000045  1142 	C$c8051_SDCC.h$100$1$22 ==.
                                    1143 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:100: while (!TI0); 
-      000045                       1144 00101$:
+      00010F                       1144 00101$:
                            000045  1145 	C$c8051_SDCC.h$101$1$22 ==.
                                    1146 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:101: TI0 = 0;
-      000045 10 99 02         [24] 1147 	jbc	_TI0,00112$
-      000048 80 FB            [24] 1148 	sjmp	00101$
-      00004A                       1149 00112$:
+      00010F 10 99 02         [24] 1147 	jbc	_TI0,00112$
+      000112 80 FB            [24] 1148 	sjmp	00101$
+      000114                       1149 00112$:
                            00004A  1150 	C$c8051_SDCC.h$102$1$22 ==.
                                    1151 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:102: SBUF0 = c;
-      00004A 8F 99            [24] 1152 	mov	_SBUF0,r7
+      000114 8F 99            [24] 1152 	mov	_SBUF0,r7
                            00004C  1153 	C$c8051_SDCC.h$103$1$22 ==.
                            00004C  1154 	XG$putchar$0$0 ==.
-      00004C 22               [24] 1155 	ret
+      000116 22               [24] 1155 	ret
                                    1156 ;------------------------------------------------------------
                                    1157 ;Allocation info for local variables in function 'getchar'
                                    1158 ;------------------------------------------------------------
@@ -1164,27 +1164,27 @@
                                    1164 ;	-----------------------------------------
                                    1165 ;	 function getchar
                                    1166 ;	-----------------------------------------
-      00004D                       1167 _getchar:
+      000117                       1167 _getchar:
                            00004D  1168 	C$c8051_SDCC.h$111$1$24 ==.
                                    1169 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:111: while (!RI0);
-      00004D                       1170 00101$:
+      000117                       1170 00101$:
                            00004D  1171 	C$c8051_SDCC.h$112$1$24 ==.
                                    1172 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:112: RI0 = 0;
-      00004D 10 98 02         [24] 1173 	jbc	_RI0,00112$
-      000050 80 FB            [24] 1174 	sjmp	00101$
-      000052                       1175 00112$:
+      000117 10 98 02         [24] 1173 	jbc	_RI0,00112$
+      00011A 80 FB            [24] 1174 	sjmp	00101$
+      00011C                       1175 00112$:
                            000052  1176 	C$c8051_SDCC.h$113$1$24 ==.
                                    1177 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:113: c = SBUF0;
-      000052 85 99 82         [24] 1178 	mov	dpl,_SBUF0
+      00011C 85 99 82         [24] 1178 	mov	dpl,_SBUF0
                            000055  1179 	C$c8051_SDCC.h$114$1$24 ==.
                                    1180 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:114: putchar(c);                          // echo to terminal
-      000055 12r00r43         [24] 1181 	lcall	_putchar
+      00011F 12 01 0D         [24] 1181 	lcall	_putchar
                            000058  1182 	C$c8051_SDCC.h$115$1$24 ==.
                                    1183 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:115: return SBUF0;
-      000058 85 99 82         [24] 1184 	mov	dpl,_SBUF0
+      000122 85 99 82         [24] 1184 	mov	dpl,_SBUF0
                            00005B  1185 	C$c8051_SDCC.h$116$1$24 ==.
                            00005B  1186 	XG$getchar$0$0 ==.
-      00005B 22               [24] 1187 	ret
+      000125 22               [24] 1187 	ret
                                    1188 ;------------------------------------------------------------
                                    1189 ;Allocation info for local variables in function 'main'
                                    1190 ;------------------------------------------------------------
@@ -1194,69 +1194,69 @@
                                    1194 ;	-----------------------------------------
                                    1195 ;	 function main
                                    1196 ;	-----------------------------------------
-      00005C                       1197 _main:
+      000126                       1197 _main:
                            00005C  1198 	C$lab3_1_Speed.c$27$1$31 ==.
                                    1199 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:27: Sys_Init();
-      00005C 12r00r30         [24] 1200 	lcall	_Sys_Init
+      000126 12 00 FA         [24] 1200 	lcall	_Sys_Init
                            00005F  1201 	C$lab3_1_Speed.c$28$1$31 ==.
                                    1202 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:28: putchar(' '); //the quotes in this line may not format correctly
-      00005F 75 82 20         [24] 1203 	mov	dpl,#0x20
-      000062 12r00r43         [24] 1204 	lcall	_putchar
+      000129 75 82 20         [24] 1203 	mov	dpl,#0x20
+      00012C 12 01 0D         [24] 1204 	lcall	_putchar
                            000065  1205 	C$lab3_1_Speed.c$29$1$31 ==.
                                    1206 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:29: Port_Init();
-      000065 12r01r2C         [24] 1207 	lcall	_Port_Init
+      00012F 12 01 F6         [24] 1207 	lcall	_Port_Init
                            000068  1208 	C$lab3_1_Speed.c$30$1$31 ==.
                                    1209 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:30: XBR0_Init();
-      000068 12r01r30         [24] 1210 	lcall	_XBR0_Init
+      000132 12 01 FA         [24] 1210 	lcall	_XBR0_Init
                            00006B  1211 	C$lab3_1_Speed.c$31$1$31 ==.
                                    1212 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:31: PCA_Init();
-      00006B 12r01r34         [24] 1213 	lcall	_PCA_Init
+      000135 12 01 FE         [24] 1213 	lcall	_PCA_Init
                            00006E  1214 	C$lab3_1_Speed.c$33$1$31 ==.
                                    1215 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:33: printf("Embedded Control Drive Motor Control\r\n");
-      00006E 74r00            [12] 1216 	mov	a,#___str_0
-      000070 C0 E0            [24] 1217 	push	acc
-      000072 74s00            [12] 1218 	mov	a,#(___str_0 >> 8)
-      000074 C0 E0            [24] 1219 	push	acc
-      000076 74 80            [12] 1220 	mov	a,#0x80
-      000078 C0 E0            [24] 1221 	push	acc
-      00007A 12r00r00         [24] 1222 	lcall	_printf
-      00007D 15 81            [12] 1223 	dec	sp
-      00007F 15 81            [12] 1224 	dec	sp
-      000081 15 81            [12] 1225 	dec	sp
+      000138 74 56            [12] 1216 	mov	a,#___str_0
+      00013A C0 E0            [24] 1217 	push	acc
+      00013C 74 08            [12] 1218 	mov	a,#(___str_0 >> 8)
+      00013E C0 E0            [24] 1219 	push	acc
+      000140 74 80            [12] 1220 	mov	a,#0x80
+      000142 C0 E0            [24] 1221 	push	acc
+      000144 12 02 42         [24] 1222 	lcall	_printf
+      000147 15 81            [12] 1223 	dec	sp
+      000149 15 81            [12] 1224 	dec	sp
+      00014B 15 81            [12] 1225 	dec	sp
                            000083  1226 	C$lab3_1_Speed.c$35$1$31 ==.
                                    1227 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:35: PW = PW_CENTER;
-      000083 85*02*08         [24] 1228 	mov	_PW,_PW_CENTER
-      000086 85*03*09         [24] 1229 	mov	(_PW + 1),(_PW_CENTER + 1)
+      00014D 85 0A 10         [24] 1228 	mov	_PW,_PW_CENTER
+      000150 85 0B 11         [24] 1229 	mov	(_PW + 1),(_PW_CENTER + 1)
                            000089  1230 	C$lab3_1_Speed.c$36$1$31 ==.
                                    1231 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:36: PCA0CP2 = 65535 - PW;
-      000089 AC*08            [24] 1232 	mov	r4,_PW
-      00008B AD*09            [24] 1233 	mov	r5,(_PW + 1)
-      00008D E4               [12] 1234 	clr	a
-      00008E FE               [12] 1235 	mov	r6,a
-      00008F FF               [12] 1236 	mov	r7,a
-      000090 74 FF            [12] 1237 	mov	a,#0xFF
-      000092 C3               [12] 1238 	clr	c
-      000093 9C               [12] 1239 	subb	a,r4
-      000094 FC               [12] 1240 	mov	r4,a
-      000095 74 FF            [12] 1241 	mov	a,#0xFF
-      000097 9D               [12] 1242 	subb	a,r5
-      000098 FD               [12] 1243 	mov	r5,a
-      000099 E4               [12] 1244 	clr	a
-      00009A 9E               [12] 1245 	subb	a,r6
-      00009B FE               [12] 1246 	mov	r6,a
-      00009C E4               [12] 1247 	clr	a
-      00009D 9F               [12] 1248 	subb	a,r7
-      00009E FF               [12] 1249 	mov	r7,a
-      00009F 8C EC            [24] 1250 	mov	((_PCA0CP2 >> 0) & 0xFF),r4
-      0000A1 8D FC            [24] 1251 	mov	((_PCA0CP2 >> 8) & 0xFF),r5
+      000153 AC 10            [24] 1232 	mov	r4,_PW
+      000155 AD 11            [24] 1233 	mov	r5,(_PW + 1)
+      000157 E4               [12] 1234 	clr	a
+      000158 FE               [12] 1235 	mov	r6,a
+      000159 FF               [12] 1236 	mov	r7,a
+      00015A 74 FF            [12] 1237 	mov	a,#0xFF
+      00015C C3               [12] 1238 	clr	c
+      00015D 9C               [12] 1239 	subb	a,r4
+      00015E FC               [12] 1240 	mov	r4,a
+      00015F 74 FF            [12] 1241 	mov	a,#0xFF
+      000161 9D               [12] 1242 	subb	a,r5
+      000162 FD               [12] 1243 	mov	r5,a
+      000163 E4               [12] 1244 	clr	a
+      000164 9E               [12] 1245 	subb	a,r6
+      000165 FE               [12] 1246 	mov	r6,a
+      000166 E4               [12] 1247 	clr	a
+      000167 9F               [12] 1248 	subb	a,r7
+      000168 FF               [12] 1249 	mov	r7,a
+      000169 8C EC            [24] 1250 	mov	((_PCA0CP2 >> 0) & 0xFF),r4
+      00016B 8D FC            [24] 1251 	mov	((_PCA0CP2 >> 8) & 0xFF),r5
                            0000A3  1252 	C$lab3_1_Speed.c$38$1$31 ==.
                                    1253 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:38: while(1) Drive_Motor();
-      0000A3                       1254 00102$:
-      0000A3 12r00rA9         [24] 1255 	lcall	_Drive_Motor
-      0000A6 80 FB            [24] 1256 	sjmp	00102$
+      00016D                       1254 00102$:
+      00016D 12 01 73         [24] 1255 	lcall	_Drive_Motor
+      000170 80 FB            [24] 1256 	sjmp	00102$
                            0000A8  1257 	C$lab3_1_Speed.c$39$1$31 ==.
                            0000A8  1258 	XG$main$0$0 ==.
-      0000A8 22               [24] 1259 	ret
+      000172 22               [24] 1259 	ret
                                    1260 ;------------------------------------------------------------
                                    1261 ;Allocation info for local variables in function 'Drive_Motor'
                                    1262 ;------------------------------------------------------------
@@ -1268,100 +1268,100 @@
                                    1268 ;	-----------------------------------------
                                    1269 ;	 function Drive_Motor
                                    1270 ;	-----------------------------------------
-      0000A9                       1271 _Drive_Motor:
+      000173                       1271 _Drive_Motor:
                            0000A9  1272 	C$lab3_1_Speed.c$51$1$32 ==.
                                    1273 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:51: input = getchar();
-      0000A9 12r00r4D         [24] 1274 	lcall	_getchar
-      0000AC AF 82            [24] 1275 	mov	r7,dpl
+      000173 12 01 17         [24] 1274 	lcall	_getchar
+      000176 AF 82            [24] 1275 	mov	r7,dpl
                            0000AE  1276 	C$lab3_1_Speed.c$52$1$32 ==.
                                    1277 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:52: if(input == 'f') //if 'f' is pressed by the user
-      0000AE BF 66 18         [24] 1278 	cjne	r7,#0x66,00108$
+      000178 BF 66 18         [24] 1278 	cjne	r7,#0x66,00108$
                            0000B1  1279 	C$lab3_1_Speed.c$54$2$33 ==.
                                    1280 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:54: if(PW < PW_MAX)
-      0000B1 C3               [12] 1281 	clr	c
-      0000B2 E5*08            [12] 1282 	mov	a,_PW
-      0000B4 95*06            [12] 1283 	subb	a,_PW_MAX
-      0000B6 E5*09            [12] 1284 	mov	a,(_PW + 1)
-      0000B8 95*07            [12] 1285 	subb	a,(_PW_MAX + 1)
-      0000BA 50 27            [24] 1286 	jnc	00109$
+      00017B C3               [12] 1281 	clr	c
+      00017C E5 10            [12] 1282 	mov	a,_PW
+      00017E 95 0E            [12] 1283 	subb	a,_PW_MAX
+      000180 E5 11            [12] 1284 	mov	a,(_PW + 1)
+      000182 95 0F            [12] 1285 	subb	a,(_PW_MAX + 1)
+      000184 50 27            [24] 1286 	jnc	00109$
                            0000BC  1287 	C$lab3_1_Speed.c$55$2$33 ==.
                                    1288 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:55: PW = PW + 10; //increase the steering pulsewidth by 10
-      0000BC 74 0A            [12] 1289 	mov	a,#0x0A
-      0000BE 25*08            [12] 1290 	add	a,_PW
-      0000C0 F5*08            [12] 1291 	mov	_PW,a
-      0000C2 E4               [12] 1292 	clr	a
-      0000C3 35*09            [12] 1293 	addc	a,(_PW + 1)
-      0000C5 F5*09            [12] 1294 	mov	(_PW + 1),a
-      0000C7 80 1A            [24] 1295 	sjmp	00109$
-      0000C9                       1296 00108$:
+      000186 74 0A            [12] 1289 	mov	a,#0x0A
+      000188 25 10            [12] 1290 	add	a,_PW
+      00018A F5 10            [12] 1291 	mov	_PW,a
+      00018C E4               [12] 1292 	clr	a
+      00018D 35 11            [12] 1293 	addc	a,(_PW + 1)
+      00018F F5 11            [12] 1294 	mov	(_PW + 1),a
+      000191 80 1A            [24] 1295 	sjmp	00109$
+      000193                       1296 00108$:
                            0000C9  1297 	C$lab3_1_Speed.c$57$1$32 ==.
                                    1298 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:57: else if(input == 's') //if 's' is pressed by the user
-      0000C9 BF 73 17         [24] 1299 	cjne	r7,#0x73,00109$
+      000193 BF 73 17         [24] 1299 	cjne	r7,#0x73,00109$
                            0000CC  1300 	C$lab3_1_Speed.c$59$2$34 ==.
                                    1301 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:59: if(PW > PW_MIN)
-      0000CC C3               [12] 1302 	clr	c
-      0000CD E5*04            [12] 1303 	mov	a,_PW_MIN
-      0000CF 95*08            [12] 1304 	subb	a,_PW
-      0000D1 E5*05            [12] 1305 	mov	a,(_PW_MIN + 1)
-      0000D3 95*09            [12] 1306 	subb	a,(_PW + 1)
-      0000D5 50 0C            [24] 1307 	jnc	00109$
+      000196 C3               [12] 1302 	clr	c
+      000197 E5 0C            [12] 1303 	mov	a,_PW_MIN
+      000199 95 10            [12] 1304 	subb	a,_PW
+      00019B E5 0D            [12] 1305 	mov	a,(_PW_MIN + 1)
+      00019D 95 11            [12] 1306 	subb	a,(_PW + 1)
+      00019F 50 0C            [24] 1307 	jnc	00109$
                            0000D7  1308 	C$lab3_1_Speed.c$60$2$34 ==.
                                    1309 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:60: PW = PW - 10; //decrease the steering pulsewidth by 10
-      0000D7 E5*08            [12] 1310 	mov	a,_PW
-      0000D9 24 F6            [12] 1311 	add	a,#0xF6
-      0000DB F5*08            [12] 1312 	mov	_PW,a
-      0000DD E5*09            [12] 1313 	mov	a,(_PW + 1)
-      0000DF 34 FF            [12] 1314 	addc	a,#0xFF
-      0000E1 F5*09            [12] 1315 	mov	(_PW + 1),a
-      0000E3                       1316 00109$:
+      0001A1 E5 10            [12] 1310 	mov	a,_PW
+      0001A3 24 F6            [12] 1311 	add	a,#0xF6
+      0001A5 F5 10            [12] 1312 	mov	_PW,a
+      0001A7 E5 11            [12] 1313 	mov	a,(_PW + 1)
+      0001A9 34 FF            [12] 1314 	addc	a,#0xFF
+      0001AB F5 11            [12] 1315 	mov	(_PW + 1),a
+      0001AD                       1316 00109$:
                            0000E3  1317 	C$lab3_1_Speed.c$63$1$32 ==.
                                    1318 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:63: if(PW > PW_MAX) PW = PW_MAX;
-      0000E3 C3               [12] 1319 	clr	c
-      0000E4 E5*06            [12] 1320 	mov	a,_PW_MAX
-      0000E6 95*08            [12] 1321 	subb	a,_PW
-      0000E8 E5*07            [12] 1322 	mov	a,(_PW_MAX + 1)
-      0000EA 95*09            [12] 1323 	subb	a,(_PW + 1)
-      0000EC 50 06            [24] 1324 	jnc	00111$
-      0000EE 85*06*08         [24] 1325 	mov	_PW,_PW_MAX
-      0000F1 85*07*09         [24] 1326 	mov	(_PW + 1),(_PW_MAX + 1)
-      0000F4                       1327 00111$:
+      0001AD C3               [12] 1319 	clr	c
+      0001AE E5 0E            [12] 1320 	mov	a,_PW_MAX
+      0001B0 95 10            [12] 1321 	subb	a,_PW
+      0001B2 E5 0F            [12] 1322 	mov	a,(_PW_MAX + 1)
+      0001B4 95 11            [12] 1323 	subb	a,(_PW + 1)
+      0001B6 50 06            [24] 1324 	jnc	00111$
+      0001B8 85 0E 10         [24] 1325 	mov	_PW,_PW_MAX
+      0001BB 85 0F 11         [24] 1326 	mov	(_PW + 1),(_PW_MAX + 1)
+      0001BE                       1327 00111$:
                            0000F4  1328 	C$lab3_1_Speed.c$64$1$32 ==.
                                    1329 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:64: if(PW < PW_MIN) PW = PW_MIN;
-      0000F4 C3               [12] 1330 	clr	c
-      0000F5 E5*08            [12] 1331 	mov	a,_PW
-      0000F7 95*04            [12] 1332 	subb	a,_PW_MIN
-      0000F9 E5*09            [12] 1333 	mov	a,(_PW + 1)
-      0000FB 95*05            [12] 1334 	subb	a,(_PW_MIN + 1)
-      0000FD 50 06            [24] 1335 	jnc	00113$
-      0000FF 85*04*08         [24] 1336 	mov	_PW,_PW_MIN
-      000102 85*05*09         [24] 1337 	mov	(_PW + 1),(_PW_MIN + 1)
-      000105                       1338 00113$:
+      0001BE C3               [12] 1330 	clr	c
+      0001BF E5 10            [12] 1331 	mov	a,_PW
+      0001C1 95 0C            [12] 1332 	subb	a,_PW_MIN
+      0001C3 E5 11            [12] 1333 	mov	a,(_PW + 1)
+      0001C5 95 0D            [12] 1334 	subb	a,(_PW_MIN + 1)
+      0001C7 50 06            [24] 1335 	jnc	00113$
+      0001C9 85 0C 10         [24] 1336 	mov	_PW,_PW_MIN
+      0001CC 85 0D 11         [24] 1337 	mov	(_PW + 1),(_PW_MIN + 1)
+      0001CF                       1338 00113$:
                            000105  1339 	C$lab3_1_Speed.c$65$1$32 ==.
                                    1340 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:65: printf("\rPW is %u\n", PW);
-      000105 C0*08            [24] 1341 	push	_PW
-      000107 C0*09            [24] 1342 	push	(_PW + 1)
-      000109 74r27            [12] 1343 	mov	a,#___str_1
-      00010B C0 E0            [24] 1344 	push	acc
-      00010D 74s00            [12] 1345 	mov	a,#(___str_1 >> 8)
-      00010F C0 E0            [24] 1346 	push	acc
-      000111 74 80            [12] 1347 	mov	a,#0x80
-      000113 C0 E0            [24] 1348 	push	acc
-      000115 12r00r00         [24] 1349 	lcall	_printf
-      000118 E5 81            [12] 1350 	mov	a,sp
-      00011A 24 FB            [12] 1351 	add	a,#0xfb
-      00011C F5 81            [12] 1352 	mov	sp,a
+      0001CF C0 10            [24] 1341 	push	_PW
+      0001D1 C0 11            [24] 1342 	push	(_PW + 1)
+      0001D3 74 7D            [12] 1343 	mov	a,#___str_1
+      0001D5 C0 E0            [24] 1344 	push	acc
+      0001D7 74 08            [12] 1345 	mov	a,#(___str_1 >> 8)
+      0001D9 C0 E0            [24] 1346 	push	acc
+      0001DB 74 80            [12] 1347 	mov	a,#0x80
+      0001DD C0 E0            [24] 1348 	push	acc
+      0001DF 12 02 42         [24] 1349 	lcall	_printf
+      0001E2 E5 81            [12] 1350 	mov	a,sp
+      0001E4 24 FB            [12] 1351 	add	a,#0xfb
+      0001E6 F5 81            [12] 1352 	mov	sp,a
                            00011E  1353 	C$lab3_1_Speed.c$66$1$32 ==.
                                    1354 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:66: PCA0CP2 = 0xFFFF - PW;
-      00011E 74 FF            [12] 1355 	mov	a,#0xFF
-      000120 C3               [12] 1356 	clr	c
-      000121 95*08            [12] 1357 	subb	a,_PW
-      000123 F5 EC            [12] 1358 	mov	((_PCA0CP2 >> 0) & 0xFF),a
-      000125 74 FF            [12] 1359 	mov	a,#0xFF
-      000127 95*09            [12] 1360 	subb	a,(_PW + 1)
-      000129 F5 FC            [12] 1361 	mov	((_PCA0CP2 >> 8) & 0xFF),a
+      0001E8 74 FF            [12] 1355 	mov	a,#0xFF
+      0001EA C3               [12] 1356 	clr	c
+      0001EB 95 10            [12] 1357 	subb	a,_PW
+      0001ED F5 EC            [12] 1358 	mov	((_PCA0CP2 >> 0) & 0xFF),a
+      0001EF 74 FF            [12] 1359 	mov	a,#0xFF
+      0001F1 95 11            [12] 1360 	subb	a,(_PW + 1)
+      0001F3 F5 FC            [12] 1361 	mov	((_PCA0CP2 >> 8) & 0xFF),a
                            00012B  1362 	C$lab3_1_Speed.c$67$1$32 ==.
                            00012B  1363 	XG$Drive_Motor$0$0 ==.
-      00012B 22               [24] 1364 	ret
+      0001F5 22               [24] 1364 	ret
                                    1365 ;------------------------------------------------------------
                                    1366 ;Allocation info for local variables in function 'Port_Init'
                                    1367 ;------------------------------------------------------------
@@ -1371,13 +1371,13 @@
                                    1371 ;	-----------------------------------------
                                    1372 ;	 function Port_Init
                                    1373 ;	-----------------------------------------
-      00012C                       1374 _Port_Init:
+      0001F6                       1374 _Port_Init:
                            00012C  1375 	C$lab3_1_Speed.c$76$1$35 ==.
                                    1376 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:76: P1MDOUT |= 0x04;//set output pin for CEX2 in push-pull mode
-      00012C 43 A5 04         [24] 1377 	orl	_P1MDOUT,#0x04
+      0001F6 43 A5 04         [24] 1377 	orl	_P1MDOUT,#0x04
                            00012F  1378 	C$lab3_1_Speed.c$77$1$35 ==.
                            00012F  1379 	XG$Port_Init$0$0 ==.
-      00012F 22               [24] 1380 	ret
+      0001F9 22               [24] 1380 	ret
                                    1381 ;------------------------------------------------------------
                                    1382 ;Allocation info for local variables in function 'XBR0_Init'
                                    1383 ;------------------------------------------------------------
@@ -1387,13 +1387,13 @@
                                    1387 ;	-----------------------------------------
                                    1388 ;	 function XBR0_Init
                                    1389 ;	-----------------------------------------
-      000130                       1390 _XBR0_Init:
+      0001FA                       1390 _XBR0_Init:
                            000130  1391 	C$lab3_1_Speed.c$86$1$36 ==.
                                    1392 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:86: XBR0 = 0x27 ; //configure crossbar with UART, SPI, SMBus, and CEX channels as
-      000130 75 E1 27         [24] 1393 	mov	_XBR0,#0x27
+      0001FA 75 E1 27         [24] 1393 	mov	_XBR0,#0x27
                            000133  1394 	C$lab3_1_Speed.c$88$1$36 ==.
                            000133  1395 	XG$XBR0_Init$0$0 ==.
-      000133 22               [24] 1396 	ret
+      0001FD 22               [24] 1396 	ret
                                    1397 ;------------------------------------------------------------
                                    1398 ;Allocation info for local variables in function 'PCA_Init'
                                    1399 ;------------------------------------------------------------
@@ -1403,25 +1403,25 @@
                                    1403 ;	-----------------------------------------
                                    1404 ;	 function PCA_Init
                                    1405 ;	-----------------------------------------
-      000134                       1406 _PCA_Init:
+      0001FE                       1406 _PCA_Init:
                            000134  1407 	C$lab3_1_Speed.c$100$1$38 ==.
                                    1408 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:100: PCA0CPM2 = 0xC2;	// CCM2 in 16-bit compare mode
-      000134 75 DC C2         [24] 1409 	mov	_PCA0CPM2,#0xC2
+      0001FE 75 DC C2         [24] 1409 	mov	_PCA0CPM2,#0xC2
                            000137  1410 	C$lab3_1_Speed.c$101$1$38 ==.
                                    1411 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:101: PCA0CN = 0x40;		// Enable PCA Counter
-      000137 75 D8 40         [24] 1412 	mov	_PCA0CN,#0x40
+      000201 75 D8 40         [24] 1412 	mov	_PCA0CN,#0x40
                            00013A  1413 	C$lab3_1_Speed.c$102$1$38 ==.
                                    1414 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:102: PCA0MD = 0x81;		// Enable CF Interrupt and SYSCLK/12
-      00013A 75 D9 81         [24] 1415 	mov	_PCA0MD,#0x81
+      000204 75 D9 81         [24] 1415 	mov	_PCA0MD,#0x81
                            00013D  1416 	C$lab3_1_Speed.c$103$1$38 ==.
                                    1417 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:103: EA = 1;				// Enable Global Interrupts
-      00013D D2 AF            [12] 1418 	setb	_EA
+      000207 D2 AF            [12] 1418 	setb	_EA
                            00013F  1419 	C$lab3_1_Speed.c$104$1$38 ==.
                                    1420 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:104: EIE1 |= 0x08;		// Enable PCA Interrupt
-      00013F 43 E6 08         [24] 1421 	orl	_EIE1,#0x08
+      000209 43 E6 08         [24] 1421 	orl	_EIE1,#0x08
                            000142  1422 	C$lab3_1_Speed.c$105$1$38 ==.
                            000142  1423 	XG$PCA_Init$0$0 ==.
-      000142 22               [24] 1424 	ret
+      00020C 22               [24] 1424 	ret
                                    1425 ;------------------------------------------------------------
                                    1426 ;Allocation info for local variables in function 'PCA_ISR'
                                    1427 ;------------------------------------------------------------
@@ -1431,26 +1431,26 @@
                                    1431 ;	-----------------------------------------
                                    1432 ;	 function PCA_ISR
                                    1433 ;	-----------------------------------------
-      000143                       1434 _PCA_ISR:
+      00020D                       1434 _PCA_ISR:
                            000143  1435 	C$lab3_1_Speed.c$116$1$40 ==.
                                    1436 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:116: if (CF)
-      000143 30 DF 0A         [24] 1437 	jnb	_CF,00102$
+      00020D 30 DF 0A         [24] 1437 	jnb	_CF,00102$
                            000146  1438 	C$lab3_1_Speed.c$118$2$41 ==.
                                    1439 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:118: PCA0 = PCA_START;	// Start count for 20ms period
-      000146 85*00 E9         [24] 1440 	mov	((_PCA0 >> 0) & 0xFF),_PCA_START
-      000149 85*01 F9         [24] 1441 	mov	((_PCA0 >> 8) & 0xFF),(_PCA_START + 1)
+      000210 85 08 E9         [24] 1440 	mov	((_PCA0 >> 0) & 0xFF),_PCA_START
+      000213 85 09 F9         [24] 1441 	mov	((_PCA0 >> 8) & 0xFF),(_PCA_START + 1)
                            00014C  1442 	C$lab3_1_Speed.c$119$2$41 ==.
                                    1443 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:119: CF = 0;			// Clear overflow flag
-      00014C C2 DF            [12] 1444 	clr	_CF
-      00014E 80 03            [24] 1445 	sjmp	00104$
-      000150                       1446 00102$:
+      000216 C2 DF            [12] 1444 	clr	_CF
+      000218 80 03            [24] 1445 	sjmp	00104$
+      00021A                       1446 00102$:
                            000150  1447 	C$lab3_1_Speed.c$122$1$40 ==.
                                    1448 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:122: else PCA0CN &= 0xC0;		// Handle other PCA interrupt sources
-      000150 53 D8 C0         [24] 1449 	anl	_PCA0CN,#0xC0
-      000153                       1450 00104$:
+      00021A 53 D8 C0         [24] 1449 	anl	_PCA0CN,#0xC0
+      00021D                       1450 00104$:
                            000153  1451 	C$lab3_1_Speed.c$123$1$40 ==.
                            000153  1452 	XG$PCA_ISR$0$0 ==.
-      000153 32               [24] 1453 	reti
+      00021D 32               [24] 1453 	reti
                                    1454 ;	eliminated unneeded mov psw,# (no regs used in bank)
                                    1455 ;	eliminated unneeded push/pop psw
                                    1456 ;	eliminated unneeded push/pop dpl
@@ -1460,22 +1460,22 @@
                                    1460 	.area CSEG    (CODE)
                                    1461 	.area CONST   (CODE)
                            000000  1462 Flab3_1_Speed$__str_0$0$0 == .
-      000000                       1463 ___str_0:
-      000000 45 6D 62 65 64 64 65  1464 	.ascii "Embedded Control Drive Motor Control"
+      000856                       1463 ___str_0:
+      000856 45 6D 62 65 64 64 65  1464 	.ascii "Embedded Control Drive Motor Control"
              64 20 43 6F 6E 74 72
              6F 6C 20 44 72 69 76
              65 20 4D 6F 74 6F 72
              20 43 6F 6E 74 72 6F
              6C
-      000024 0D                    1465 	.db 0x0D
-      000025 0A                    1466 	.db 0x0A
-      000026 00                    1467 	.db 0x00
+      00087A 0D                    1465 	.db 0x0D
+      00087B 0A                    1466 	.db 0x0A
+      00087C 00                    1467 	.db 0x00
                            000027  1468 Flab3_1_Speed$__str_1$0$0 == .
-      000027                       1469 ___str_1:
-      000027 0D                    1470 	.db 0x0D
-      000028 50 57 20 69 73 20 25  1471 	.ascii "PW is %u"
+      00087D                       1469 ___str_1:
+      00087D 0D                    1470 	.db 0x0D
+      00087E 50 57 20 69 73 20 25  1471 	.ascii "PW is %u"
              75
-      000030 0A                    1472 	.db 0x0A
-      000031 00                    1473 	.db 0x00
+      000886 0A                    1472 	.db 0x0A
+      000887 00                    1473 	.db 0x00
                                    1474 	.area XINIT   (CODE)
                                    1475 	.area CABS    (ABS,CODE)

@@ -1,7 +1,7 @@
 ;--------------------------------------------------------
 ; File Created by SDCC : free open source ANSI-C Compiler
 ; Version 3.4.0 #8981 (Apr  5 2014) (MINGW32)
-; This file was generated Tue Mar 24 17:15:29 2015
+; This file was generated Tue Mar 31 20:29:38 2015
 ;--------------------------------------------------------
 	.module Lab3_2_Speed
 	.optsdcc -mmcs51 --model-small
@@ -2366,7 +2366,7 @@ _main:
 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:64: new_range = 0;
 	mov	_new_range,#0x00
 	C$Lab3_2_Speed.c$67$3$113 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:67: printf("The range is %u cm",range);
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:67: printf("\rThe range is %u cm\n",range);
 	push	ar6
 	push	ar7
 	mov	a,#___str_4
@@ -2593,7 +2593,9 @@ ___str_3:
 	.db 0x00
 FLab3_2_Speed$__str_4$0$0 == .
 ___str_4:
+	.db 0x0D
 	.ascii "The range is %u cm"
+	.db 0x0A
 	.db 0x00
 	.area XINIT   (CODE)
 	.area CABS    (ABS,CODE)

@@ -1,7 +1,7 @@
 ;--------------------------------------------------------
 ; File Created by SDCC : free open source ANSI-C Compiler
 ; Version 3.4.0 #8981 (Apr  5 2014) (MINGW32)
-; This file was generated Tue Mar 24 16:40:43 2015
+; This file was generated Tue Mar 31 20:07:22 2015
 ;--------------------------------------------------------
 	.module lab3_1_Speed
 	.optsdcc -mmcs51 --model-small
@@ -1314,8 +1314,8 @@ _Drive_Motor:
 	addc	a,#0xFF
 	mov	(_PW + 1),a
 00109$:
-	C$lab3_1_Speed.c$62$1$32 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:62: if(PW > PW_MAX) PW = PW_MAX;
+	C$lab3_1_Speed.c$63$1$32 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:63: if(PW > PW_MAX) PW = PW_MAX;
 	clr	c
 	mov	a,_PW_MAX
 	subb	a,_PW
@@ -1325,8 +1325,8 @@ _Drive_Motor:
 	mov	_PW,_PW_MAX
 	mov	(_PW + 1),(_PW_MAX + 1)
 00111$:
-	C$lab3_1_Speed.c$63$1$32 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:63: if(PW < PW_MIN) PW = PW_MIN;
+	C$lab3_1_Speed.c$64$1$32 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:64: if(PW < PW_MIN) PW = PW_MIN;
 	clr	c
 	mov	a,_PW
 	subb	a,_PW_MIN
@@ -1337,7 +1337,21 @@ _Drive_Motor:
 	mov	(_PW + 1),(_PW_MIN + 1)
 00113$:
 	C$lab3_1_Speed.c$65$1$32 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:65: PCA0CP2 = 0xFFFF - PW;
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:65: printf("\rPW is %u\n", PW);
+	push	_PW
+	push	(_PW + 1)
+	mov	a,#___str_1
+	push	acc
+	mov	a,#(___str_1 >> 8)
+	push	acc
+	mov	a,#0x80
+	push	acc
+	lcall	_printf
+	mov	a,sp
+	add	a,#0xfb
+	mov	sp,a
+	C$lab3_1_Speed.c$66$1$32 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:66: PCA0CP2 = 0xFFFF - PW;
 	mov	a,#0xFF
 	clr	c
 	subb	a,_PW
@@ -1345,96 +1359,96 @@ _Drive_Motor:
 	mov	a,#0xFF
 	subb	a,(_PW + 1)
 	mov	((_PCA0CP2 >> 8) & 0xFF),a
-	C$lab3_1_Speed.c$66$1$32 ==.
+	C$lab3_1_Speed.c$67$1$32 ==.
 	XG$Drive_Motor$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'Port_Init'
 ;------------------------------------------------------------
 	G$Port_Init$0$0 ==.
-	C$lab3_1_Speed.c$73$1$32 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:73: void Port_Init()
+	C$lab3_1_Speed.c$74$1$32 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:74: void Port_Init()
 ;	-----------------------------------------
 ;	 function Port_Init
 ;	-----------------------------------------
 _Port_Init:
-	C$lab3_1_Speed.c$75$1$35 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:75: P1MDOUT |= 0x04;//set output pin for CEX2 in push-pull mode
-	orl	_P1MDOUT,#0x04
 	C$lab3_1_Speed.c$76$1$35 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:76: P1MDOUT |= 0x04;//set output pin for CEX2 in push-pull mode
+	orl	_P1MDOUT,#0x04
+	C$lab3_1_Speed.c$77$1$35 ==.
 	XG$Port_Init$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'XBR0_Init'
 ;------------------------------------------------------------
 	G$XBR0_Init$0$0 ==.
-	C$lab3_1_Speed.c$83$1$35 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:83: void XBR0_Init()
+	C$lab3_1_Speed.c$84$1$35 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:84: void XBR0_Init()
 ;	-----------------------------------------
 ;	 function XBR0_Init
 ;	-----------------------------------------
 _XBR0_Init:
-	C$lab3_1_Speed.c$85$1$36 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:85: XBR0 = 0x27 ; //configure crossbar with UART, SPI, SMBus, and CEX channels as
+	C$lab3_1_Speed.c$86$1$36 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:86: XBR0 = 0x27 ; //configure crossbar with UART, SPI, SMBus, and CEX channels as
 	mov	_XBR0,#0x27
-	C$lab3_1_Speed.c$87$1$36 ==.
+	C$lab3_1_Speed.c$88$1$36 ==.
 	XG$XBR0_Init$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'PCA_Init'
 ;------------------------------------------------------------
 	G$PCA_Init$0$0 ==.
-	C$lab3_1_Speed.c$94$1$36 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:94: void PCA_Init(void)
+	C$lab3_1_Speed.c$95$1$36 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:95: void PCA_Init(void)
 ;	-----------------------------------------
 ;	 function PCA_Init
 ;	-----------------------------------------
 _PCA_Init:
-	C$lab3_1_Speed.c$99$1$38 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:99: PCA0CPM2 = 0xC2;	// CCM2 in 16-bit compare mode
-	mov	_PCA0CPM2,#0xC2
 	C$lab3_1_Speed.c$100$1$38 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:100: PCA0CN = 0x40;		// Enable PCA Counter
-	mov	_PCA0CN,#0x40
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:100: PCA0CPM2 = 0xC2;	// CCM2 in 16-bit compare mode
+	mov	_PCA0CPM2,#0xC2
 	C$lab3_1_Speed.c$101$1$38 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:101: PCA0MD = 0x81;		// Enable CF Interrupt and SYSCLK/12
-	mov	_PCA0MD,#0x81
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:101: PCA0CN = 0x40;		// Enable PCA Counter
+	mov	_PCA0CN,#0x40
 	C$lab3_1_Speed.c$102$1$38 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:102: EA = 1;				// Enable Global Interrupts
-	setb	_EA
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:102: PCA0MD = 0x81;		// Enable CF Interrupt and SYSCLK/12
+	mov	_PCA0MD,#0x81
 	C$lab3_1_Speed.c$103$1$38 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:103: EIE1 |= 0x08;		// Enable PCA Interrupt
-	orl	_EIE1,#0x08
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:103: EA = 1;				// Enable Global Interrupts
+	setb	_EA
 	C$lab3_1_Speed.c$104$1$38 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:104: EIE1 |= 0x08;		// Enable PCA Interrupt
+	orl	_EIE1,#0x08
+	C$lab3_1_Speed.c$105$1$38 ==.
 	XG$PCA_Init$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'PCA_ISR'
 ;------------------------------------------------------------
 	G$PCA_ISR$0$0 ==.
-	C$lab3_1_Speed.c$111$1$38 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:111: void PCA_ISR ( void ) __interrupt 9
+	C$lab3_1_Speed.c$112$1$38 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:112: void PCA_ISR ( void ) __interrupt 9
 ;	-----------------------------------------
 ;	 function PCA_ISR
 ;	-----------------------------------------
 _PCA_ISR:
-	C$lab3_1_Speed.c$115$1$40 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:115: if (CF)
+	C$lab3_1_Speed.c$116$1$40 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:116: if (CF)
 	jnb	_CF,00102$
-	C$lab3_1_Speed.c$117$2$41 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:117: PCA0 = PCA_START;	// Start count for 20ms period
+	C$lab3_1_Speed.c$118$2$41 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:118: PCA0 = PCA_START;	// Start count for 20ms period
 	mov	((_PCA0 >> 0) & 0xFF),_PCA_START
 	mov	((_PCA0 >> 8) & 0xFF),(_PCA_START + 1)
-	C$lab3_1_Speed.c$118$2$41 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:118: CF = 0;			// Clear overflow flag
+	C$lab3_1_Speed.c$119$2$41 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:119: CF = 0;			// Clear overflow flag
 	clr	_CF
 	sjmp	00104$
 00102$:
-	C$lab3_1_Speed.c$121$1$40 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:121: else PCA0CN &= 0xC0;		// Handle other PCA interrupt sources
+	C$lab3_1_Speed.c$122$1$40 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-1\lab3-1_Speed.c:122: else PCA0CN &= 0xC0;		// Handle other PCA interrupt sources
 	anl	_PCA0CN,#0xC0
 00104$:
-	C$lab3_1_Speed.c$122$1$40 ==.
+	C$lab3_1_Speed.c$123$1$40 ==.
 	XG$PCA_ISR$0$0 ==.
 	reti
 ;	eliminated unneeded mov psw,# (no regs used in bank)
@@ -1449,6 +1463,12 @@ Flab3_1_Speed$__str_0$0$0 == .
 ___str_0:
 	.ascii "Embedded Control Drive Motor Control"
 	.db 0x0D
+	.db 0x0A
+	.db 0x00
+Flab3_1_Speed$__str_1$0$0 == .
+___str_1:
+	.db 0x0D
+	.ascii "PW is %u"
 	.db 0x0A
 	.db 0x00
 	.area XINIT   (CODE)

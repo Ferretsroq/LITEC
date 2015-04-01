@@ -64,7 +64,7 @@ void main(void)
 			new_range = 0;
 		
 			//The above two lines change the result to centimetres
-			printf("The range is %u cm",range);
+			printf("\rThe range is %u cm\n",range);
 			
 		}
 	}	
