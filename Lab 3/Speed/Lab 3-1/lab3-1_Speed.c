@@ -1,4 +1,3 @@
-/* Sample code for speed control using PWM. */
 #include <stdio.h>
 #include <c8051_SDCC.h>
 //-----------------------------------------------------------------------------
@@ -18,6 +17,7 @@ unsigned int PW_CENTER = 2760;
 unsigned int PW_MIN = 2030;
 unsigned int PW_MAX = 3500;
 unsigned int PW = 0;
+unsigned char SecondCount = 0;
 //-----------------------------------------------------------------------------
 // Main Function
 //-----------------------------------------------------------------------------
@@ -35,6 +35,9 @@ void main(void)
 	PW = PW_CENTER;
 	PCA0CP2 = 65535 - PW;
 	//add code to set the servo motor in neutral for one second
+	printf("\rWait one second to start.\n");
+	while(SecondCount<=49);
+	printf("\rOne second has passed.\n");
 	while(1) Drive_Motor();
 }
 //-----------------------------------------------------------------------------
@@ -118,6 +121,7 @@ void PCA_ISR ( void ) __interrupt 9
 		PCA0 = PCA_START;	// Start count for 20ms period
 		CF = 0;			// Clear overflow flag
 		//printf("\rWe are getting overflows!\n");
+		if(SecondCount <= 50) SecondCount++; //This is to add a delay for the motor for one second
 	}
 	else PCA0CN &= 0xC0;		// Handle other PCA interrupt sources
 }

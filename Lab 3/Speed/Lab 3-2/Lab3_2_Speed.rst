@@ -1,7 +1,7 @@
                                       1 ;--------------------------------------------------------
                                       2 ; File Created by SDCC : free open source ANSI-C Compiler
                                       3 ; Version 3.4.0 #8981 (Apr  5 2014) (MINGW32)
-                                      4 ; This file was generated Wed Apr 01 18:18:19 2015
+                                      4 ; This file was generated Fri Apr 03 13:28:21 2015
                                       5 ;--------------------------------------------------------
                                       6 	.module Lab3_2_Speed
                                       7 	.optsdcc -mmcs51 --model-small
@@ -2312,8 +2312,8 @@
                            0004E8  2312 	C$Lab3_2_Speed.c$49$1$111 ==.
                                    2313 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:49: SMB_Init();
       0005BA 12 06 24         [24] 2314 	lcall	_SMB_Init
-                           0004EB  2315 	C$Lab3_2_Speed.c$52$1$111 ==.
-                                   2316 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:52: printf("\rEmbedded Control Steering Calibration\n");
+                           0004EB  2315 	C$Lab3_2_Speed.c$51$1$111 ==.
+                                   2316 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:51: printf("\rEmbedded Control Steering Calibration\n");
       0005BD 74 3C            [12] 2317 	mov	a,#___str_3
       0005BF C0 E0            [24] 2318 	push	acc
       0005C1 74 0E            [12] 2319 	mov	a,#(___str_3 >> 8)
@@ -2324,12 +2324,12 @@
       0005CC 15 81            [12] 2324 	dec	sp
       0005CE 15 81            [12] 2325 	dec	sp
       0005D0 15 81            [12] 2326 	dec	sp
-                           000500  2327 	C$Lab3_2_Speed.c$56$1$111 ==.
-                                   2328 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:56: PW = PW_CENTER;
+                           000500  2327 	C$Lab3_2_Speed.c$53$1$111 ==.
+                                   2328 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:53: PW = PW_CENTER;
       0005D2 85 34 3A         [24] 2329 	mov	_PW,_PW_CENTER
       0005D5 85 35 3B         [24] 2330 	mov	(_PW + 1),(_PW_CENTER + 1)
-                           000506  2331 	C$Lab3_2_Speed.c$57$1$111 ==.
-                                   2332 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:57: PCA0CP0 = 65535 - PW;	//Set initial pulsewidth
+                           000506  2331 	C$Lab3_2_Speed.c$54$1$111 ==.
+                                   2332 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:54: PCA0CP0 = 65535 - PW;	//Set initial pulsewidth
       0005D8 AC 3A            [24] 2333 	mov	r4,_PW
       0005DA AD 3B            [24] 2334 	mov	r5,(_PW + 1)
       0005DC E4               [12] 2335 	clr	a
@@ -2350,23 +2350,23 @@
       0005ED FF               [12] 2350 	mov	r7,a
       0005EE 8C EA            [24] 2351 	mov	((_PCA0CP0 >> 0) & 0xFF),r4
       0005F0 8D FA            [24] 2352 	mov	((_PCA0CP0 >> 8) & 0xFF),r5
-                           000520  2353 	C$Lab3_2_Speed.c$58$1$111 ==.
-                                   2354 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:58: while(1)
+                           000520  2353 	C$Lab3_2_Speed.c$55$1$111 ==.
+                                   2354 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:55: while(1)
       0005F2                       2355 00104$:
-                           000520  2356 	C$Lab3_2_Speed.c$60$2$112 ==.
-                                   2357 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:60: if(new_range)
+                           000520  2356 	C$Lab3_2_Speed.c$57$2$112 ==.
+                                   2357 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:57: if(new_range)
       0005F2 E5 3E            [12] 2358 	mov	a,_new_range
       0005F4 60 FC            [24] 2359 	jz	00104$
-                           000524  2360 	C$Lab3_2_Speed.c$63$3$113 ==.
-                                   2361 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:63: range = ReadRanger();
+                           000524  2360 	C$Lab3_2_Speed.c$60$3$113 ==.
+                                   2361 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:60: range = ReadRanger();
       0005F6 12 06 60         [24] 2362 	lcall	_ReadRanger
       0005F9 AE 82            [24] 2363 	mov	r6,dpl
       0005FB AF 83            [24] 2364 	mov	r7,dph
-                           00052B  2365 	C$Lab3_2_Speed.c$64$3$113 ==.
-                                   2366 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:64: new_range = 0;
+                           00052B  2365 	C$Lab3_2_Speed.c$61$3$113 ==.
+                                   2366 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:61: new_range = 0;
       0005FD 75 3E 00         [24] 2367 	mov	_new_range,#0x00
-                           00052E  2368 	C$Lab3_2_Speed.c$67$3$113 ==.
-                                   2369 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:67: printf("\rThe range is %u cm\n",range);
+                           00052E  2368 	C$Lab3_2_Speed.c$62$3$113 ==.
+                                   2369 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:62: printf("\rThe range is %u cm\n",range);
       000600 C0 06            [24] 2370 	push	ar6
       000602 C0 07            [24] 2371 	push	ar7
       000604 74 64            [12] 2372 	mov	a,#___str_4
@@ -2380,134 +2380,134 @@
       000615 24 FB            [12] 2380 	add	a,#0xfb
       000617 F5 81            [12] 2381 	mov	sp,a
       000619 80 D7            [24] 2382 	sjmp	00104$
-                           000549  2383 	C$Lab3_2_Speed.c$71$1$111 ==.
+                           000549  2383 	C$Lab3_2_Speed.c$65$1$111 ==.
                            000549  2384 	XG$main$0$0 ==.
       00061B 22               [24] 2385 	ret
                                    2386 ;------------------------------------------------------------
                                    2387 ;Allocation info for local variables in function 'Port_Init'
                                    2388 ;------------------------------------------------------------
                            00054A  2389 	G$Port_Init$0$0 ==.
-                           00054A  2390 	C$Lab3_2_Speed.c$79$1$111 ==.
-                                   2391 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:79: void Port_Init()
+                           00054A  2390 	C$Lab3_2_Speed.c$69$1$111 ==.
+                                   2391 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:69: void Port_Init()
                                    2392 ;	-----------------------------------------
                                    2393 ;	 function Port_Init
                                    2394 ;	-----------------------------------------
       00061C                       2395 _Port_Init:
-                           00054A  2396 	C$Lab3_2_Speed.c$81$1$114 ==.
-                                   2397 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:81: P1MDOUT |= 0x04; //set output pin for CEX0 in push-pull mode
+                           00054A  2396 	C$Lab3_2_Speed.c$71$1$114 ==.
+                                   2397 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:71: P1MDOUT |= 0x04; //set output pin for CEX0 in push-pull mode
       00061C 43 A5 04         [24] 2398 	orl	_P1MDOUT,#0x04
-                           00054D  2399 	C$Lab3_2_Speed.c$85$1$114 ==.
+                           00054D  2399 	C$Lab3_2_Speed.c$72$1$114 ==.
                            00054D  2400 	XG$Port_Init$0$0 ==.
       00061F 22               [24] 2401 	ret
                                    2402 ;------------------------------------------------------------
                                    2403 ;Allocation info for local variables in function 'XBR0_Init'
                                    2404 ;------------------------------------------------------------
                            00054E  2405 	G$XBR0_Init$0$0 ==.
-                           00054E  2406 	C$Lab3_2_Speed.c$90$1$114 ==.
-                                   2407 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:90: void XBR0_Init(void)
+                           00054E  2406 	C$Lab3_2_Speed.c$77$1$114 ==.
+                                   2407 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:77: void XBR0_Init(void)
                                    2408 ;	-----------------------------------------
                                    2409 ;	 function XBR0_Init
                                    2410 ;	-----------------------------------------
       000620                       2411 _XBR0_Init:
-                           00054E  2412 	C$Lab3_2_Speed.c$92$1$116 ==.
-                                   2413 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:92: XBR0 = 0x27;	//configure crossbar as directed in the laboratory
+                           00054E  2412 	C$Lab3_2_Speed.c$79$1$116 ==.
+                                   2413 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:79: XBR0 = 0x27;	//configure crossbar as directed in the laboratory
       000620 75 E1 27         [24] 2414 	mov	_XBR0,#0x27
-                           000551  2415 	C$Lab3_2_Speed.c$93$1$116 ==.
+                           000551  2415 	C$Lab3_2_Speed.c$80$1$116 ==.
                            000551  2416 	XG$XBR0_Init$0$0 ==.
       000623 22               [24] 2417 	ret
                                    2418 ;------------------------------------------------------------
                                    2419 ;Allocation info for local variables in function 'SMB_Init'
                                    2420 ;------------------------------------------------------------
                            000552  2421 	G$SMB_Init$0$0 ==.
-                           000552  2422 	C$Lab3_2_Speed.c$97$1$116 ==.
-                                   2423 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:97: void SMB_Init(void)
+                           000552  2422 	C$Lab3_2_Speed.c$84$1$116 ==.
+                                   2423 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:84: void SMB_Init(void)
                                    2424 ;	-----------------------------------------
                                    2425 ;	 function SMB_Init
                                    2426 ;	-----------------------------------------
       000624                       2427 _SMB_Init:
-                           000552  2428 	C$Lab3_2_Speed.c$99$1$118 ==.
-                                   2429 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:99: SMB0CR=0x93;	//Set SCL to 100KHz
+                           000552  2428 	C$Lab3_2_Speed.c$86$1$118 ==.
+                                   2429 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:86: SMB0CR=0x93;	//Set SCL to 100KHz
       000624 75 CF 93         [24] 2430 	mov	_SMB0CR,#0x93
-                           000555  2431 	C$Lab3_2_Speed.c$100$1$118 ==.
-                                   2432 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:100: ENSMB=1; 		//Bit 6 of SMB0CN, enable the SMBus
+                           000555  2431 	C$Lab3_2_Speed.c$87$1$118 ==.
+                                   2432 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:87: ENSMB=1; 		//Bit 6 of SMB0CN, enable the SMBus
       000627 D2 C6            [12] 2433 	setb	_ENSMB
-                           000557  2434 	C$Lab3_2_Speed.c$101$1$118 ==.
+                           000557  2434 	C$Lab3_2_Speed.c$88$1$118 ==.
                            000557  2435 	XG$SMB_Init$0$0 ==.
       000629 22               [24] 2436 	ret
                                    2437 ;------------------------------------------------------------
                                    2438 ;Allocation info for local variables in function 'PCA_Init'
                                    2439 ;------------------------------------------------------------
                            000558  2440 	G$PCA_Init$0$0 ==.
-                           000558  2441 	C$Lab3_2_Speed.c$104$1$118 ==.
-                                   2442 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:104: void PCA_Init(void)
+                           000558  2441 	C$Lab3_2_Speed.c$91$1$118 ==.
+                                   2442 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:91: void PCA_Init(void)
                                    2443 ;	-----------------------------------------
                                    2444 ;	 function PCA_Init
                                    2445 ;	-----------------------------------------
       00062A                       2446 _PCA_Init:
-                           000558  2447 	C$Lab3_2_Speed.c$106$1$120 ==.
-                                   2448 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:106: PCA0CPM2 = 0xC2;	// CCM2 in 16-bit compare mode
+                           000558  2447 	C$Lab3_2_Speed.c$93$1$120 ==.
+                                   2448 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:93: PCA0CPM2 = 0xC2;	// CCM2 in 16-bit compare mode
       00062A 75 DC C2         [24] 2449 	mov	_PCA0CPM2,#0xC2
-                           00055B  2450 	C$Lab3_2_Speed.c$107$1$120 ==.
-                                   2451 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:107: PCA0CN = 0x40;		// Enable PCA Counter
+                           00055B  2450 	C$Lab3_2_Speed.c$94$1$120 ==.
+                                   2451 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:94: PCA0CN = 0x40;		// Enable PCA Counter
       00062D 75 D8 40         [24] 2452 	mov	_PCA0CN,#0x40
-                           00055E  2453 	C$Lab3_2_Speed.c$108$1$120 ==.
-                                   2454 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:108: PCA0MD = 0x81;		// Enable CF Interrupt and SYSCLK/12
+                           00055E  2453 	C$Lab3_2_Speed.c$95$1$120 ==.
+                                   2454 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:95: PCA0MD = 0x81;		// Enable CF Interrupt and SYSCLK/12
       000630 75 D9 81         [24] 2455 	mov	_PCA0MD,#0x81
-                           000561  2456 	C$Lab3_2_Speed.c$109$1$120 ==.
-                                   2457 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:109: EA = 1;				// Enable Global Interrupts
+                           000561  2456 	C$Lab3_2_Speed.c$96$1$120 ==.
+                                   2457 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:96: EA = 1;				// Enable Global Interrupts
       000633 D2 AF            [12] 2458 	setb	_EA
-                           000563  2459 	C$Lab3_2_Speed.c$110$1$120 ==.
-                                   2460 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:110: EIE1 |= 0x08;		// Enable PCA Interrupt
+                           000563  2459 	C$Lab3_2_Speed.c$97$1$120 ==.
+                                   2460 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:97: EIE1 |= 0x08;		// Enable PCA Interrupt
       000635 43 E6 08         [24] 2461 	orl	_EIE1,#0x08
-                           000566  2462 	C$Lab3_2_Speed.c$111$1$120 ==.
+                           000566  2462 	C$Lab3_2_Speed.c$98$1$120 ==.
                            000566  2463 	XG$PCA_Init$0$0 ==.
       000638 22               [24] 2464 	ret
                                    2465 ;------------------------------------------------------------
                                    2466 ;Allocation info for local variables in function 'PCA_ISR'
                                    2467 ;------------------------------------------------------------
                            000567  2468 	G$PCA_ISR$0$0 ==.
-                           000567  2469 	C$Lab3_2_Speed.c$116$1$120 ==.
-                                   2470 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:116: void PCA_ISR ( void ) __interrupt 9
+                           000567  2469 	C$Lab3_2_Speed.c$103$1$120 ==.
+                                   2470 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:103: void PCA_ISR ( void ) __interrupt 9
                                    2471 ;	-----------------------------------------
                                    2472 ;	 function PCA_ISR
                                    2473 ;	-----------------------------------------
       000639                       2474 _PCA_ISR:
       000639 C0 E0            [24] 2475 	push	acc
       00063B C0 D0            [24] 2476 	push	psw
-                           00056B  2477 	C$Lab3_2_Speed.c$118$1$122 ==.
-                                   2478 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:118: if (CF)
+                           00056B  2477 	C$Lab3_2_Speed.c$105$1$122 ==.
+                                   2478 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:105: if (CF)
       00063D 30 DF 18         [24] 2479 	jnb	_CF,00104$
-                           00056E  2480 	C$Lab3_2_Speed.c$120$2$123 ==.
-                                   2481 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:120: r_count++;
+                           00056E  2480 	C$Lab3_2_Speed.c$107$2$123 ==.
+                                   2481 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:107: r_count++;
       000640 05 3F            [12] 2482 	inc	_r_count
-                           000570  2483 	C$Lab3_2_Speed.c$121$2$123 ==.
-                                   2484 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:121: if(r_count>=4)
+                           000570  2483 	C$Lab3_2_Speed.c$108$2$123 ==.
+                                   2484 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:108: if(r_count>=4) // This code adds an 80 ms delay for the ranger to ping
       000642 74 FC            [12] 2485 	mov	a,#0x100 - 0x04
       000644 25 3F            [12] 2486 	add	a,_r_count
       000646 50 06            [24] 2487 	jnc	00102$
-                           000576  2488 	C$Lab3_2_Speed.c$123$3$124 ==.
-                                   2489 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:123: new_range=1;
+                           000576  2488 	C$Lab3_2_Speed.c$110$3$124 ==.
+                                   2489 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:110: new_range=1;
       000648 75 3E 01         [24] 2490 	mov	_new_range,#0x01
-                           000579  2491 	C$Lab3_2_Speed.c$124$3$124 ==.
-                                   2492 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:124: r_count = 0;
+                           000579  2491 	C$Lab3_2_Speed.c$111$3$124 ==.
+                                   2492 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:111: r_count = 0;
       00064B 75 3F 00         [24] 2493 	mov	_r_count,#0x00
       00064E                       2494 00102$:
-                           00057C  2495 	C$Lab3_2_Speed.c$126$2$123 ==.
-                                   2496 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:126: PCA0 = PCA_START;	// Start count for 20ms period
+                           00057C  2495 	C$Lab3_2_Speed.c$113$2$123 ==.
+                                   2496 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:113: PCA0 = PCA_START;	// Start count for 20ms period
       00064E 85 32 E9         [24] 2497 	mov	((_PCA0 >> 0) & 0xFF),_PCA_START
       000651 85 33 F9         [24] 2498 	mov	((_PCA0 >> 8) & 0xFF),(_PCA_START + 1)
-                           000582  2499 	C$Lab3_2_Speed.c$127$2$123 ==.
-                                   2500 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:127: CF = 0;			// Clear overflow flag
+                           000582  2499 	C$Lab3_2_Speed.c$114$2$123 ==.
+                                   2500 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:114: CF = 0;			// Clear overflow flag
       000654 C2 DF            [12] 2501 	clr	_CF
       000656 80 03            [24] 2502 	sjmp	00106$
       000658                       2503 00104$:
-                           000586  2504 	C$Lab3_2_Speed.c$129$1$122 ==.
-                                   2505 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:129: else PCA0CN &= 0xC0;		// Handle other PCA interrupt sources
+                           000586  2504 	C$Lab3_2_Speed.c$116$1$122 ==.
+                                   2505 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:116: else PCA0CN &= 0xC0;		// Handle other PCA interrupt sources
       000658 53 D8 C0         [24] 2506 	anl	_PCA0CN,#0xC0
       00065B                       2507 00106$:
       00065B D0 D0            [24] 2508 	pop	psw
       00065D D0 E0            [24] 2509 	pop	acc
-                           00058D  2510 	C$Lab3_2_Speed.c$130$1$122 ==.
+                           00058D  2510 	C$Lab3_2_Speed.c$117$1$122 ==.
                            00058D  2511 	XG$PCA_ISR$0$0 ==.
       00065F 32               [24] 2512 	reti
                                    2513 ;	eliminated unneeded mov psw,# (no regs used in bank)
@@ -2522,14 +2522,14 @@
                                    2522 ;range                     Allocated to registers r6 r7 
                                    2523 ;------------------------------------------------------------
                            00058E  2524 	G$ReadRanger$0$0 ==.
-                           00058E  2525 	C$Lab3_2_Speed.c$136$1$122 ==.
-                                   2526 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:136: unsigned int ReadRanger()
+                           00058E  2525 	C$Lab3_2_Speed.c$123$1$122 ==.
+                                   2526 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:123: unsigned int ReadRanger()
                                    2527 ;	-----------------------------------------
                                    2528 ;	 function ReadRanger
                                    2529 ;	-----------------------------------------
       000660                       2530 _ReadRanger:
-                           00058E  2531 	C$Lab3_2_Speed.c$141$1$125 ==.
-                                   2532 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:141: i2c_read_data(addr, 2, Data, 2); // read two byte, starting at reg 2
+                           00058E  2531 	C$Lab3_2_Speed.c$128$1$125 ==.
+                                   2532 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:128: i2c_read_data(addr, 2, Data, 2); // read two byte, starting at reg 2
       000660 75 2D 40         [24] 2533 	mov	_i2c_read_data_PARM_3,#_ReadRanger_Data_1_125
       000663 75 2E 00         [24] 2534 	mov	(_i2c_read_data_PARM_3 + 1),#0x00
       000666 75 2F 40         [24] 2535 	mov	(_i2c_read_data_PARM_3 + 2),#0x40
@@ -2537,8 +2537,8 @@
       00066C 75 30 02         [24] 2537 	mov	_i2c_read_data_PARM_4,#0x02
       00066F 75 82 E0         [24] 2538 	mov	dpl,#0xE0
       000672 12 04 BA         [24] 2539 	lcall	_i2c_read_data
-                           0005A3  2540 	C$Lab3_2_Speed.c$142$1$125 ==.
-                                   2541 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:142: range =(((unsigned int)Data[0] << 8) | Data[1]); //combine the two values	
+                           0005A3  2540 	C$Lab3_2_Speed.c$129$1$125 ==.
+                                   2541 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:129: range =(((unsigned int)Data[0] << 8) | Data[1]); //combine the two values	
       000675 AF 40            [24] 2542 	mov	r7,_ReadRanger_Data_1_125
       000677 7E 00            [12] 2543 	mov	r6,#0x00
       000679 AC 41            [24] 2544 	mov	r4,(_ReadRanger_Data_1_125 + 0x0001)
@@ -2547,11 +2547,11 @@
       00067E 42 06            [12] 2547 	orl	ar6,a
       000680 ED               [12] 2548 	mov	a,r5
       000681 42 07            [12] 2549 	orl	ar7,a
-                           0005B1  2550 	C$Lab3_2_Speed.c$143$1$125 ==.
-                                   2551 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:143: Data[0] = 0x51 ; // write 0x51 to reg 0 of the ranger:
+                           0005B1  2550 	C$Lab3_2_Speed.c$130$1$125 ==.
+                                   2551 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:130: Data[0] = 0x51 ; // write 0x51 to reg 0 of the ranger:
       000683 75 40 51         [24] 2552 	mov	_ReadRanger_Data_1_125,#0x51
-                           0005B4  2553 	C$Lab3_2_Speed.c$144$1$125 ==.
-                                   2554 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:144: i2c_write_data(addr, 0, Data, 1) ; // write one byte of data to reg 0 at addr
+                           0005B4  2553 	C$Lab3_2_Speed.c$131$1$125 ==.
+                                   2554 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:131: i2c_write_data(addr, 0, Data, 1) ; // write one byte of data to reg 0 at addr
       000686 75 28 40         [24] 2555 	mov	_i2c_write_data_PARM_3,#_ReadRanger_Data_1_125
       000689 75 29 00         [24] 2556 	mov	(_i2c_write_data_PARM_3 + 1),#0x00
       00068C 75 2A 40         [24] 2557 	mov	(_i2c_write_data_PARM_3 + 2),#0x40
@@ -2563,11 +2563,11 @@
       00069C 12 04 44         [24] 2563 	lcall	_i2c_write_data
       00069F D0 06            [24] 2564 	pop	ar6
       0006A1 D0 07            [24] 2565 	pop	ar7
-                           0005D1  2566 	C$Lab3_2_Speed.c$145$1$125 ==.
-                                   2567 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:145: return range;
+                           0005D1  2566 	C$Lab3_2_Speed.c$132$1$125 ==.
+                                   2567 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Speed\Lab 3-2\Lab3_2_Speed.c:132: return range;
       0006A3 8E 82            [24] 2568 	mov	dpl,r6
       0006A5 8F 83            [24] 2569 	mov	dph,r7
-                           0005D5  2570 	C$Lab3_2_Speed.c$146$1$125 ==.
+                           0005D5  2570 	C$Lab3_2_Speed.c$133$1$125 ==.
                            0005D5  2571 	XG$ReadRanger$0$0 ==.
       0006A7 22               [24] 2572 	ret
                                    2573 	.area CSEG    (CODE)

@@ -47,16 +47,16 @@ C:   00000008  s_REG_BANK_1
 C:   0000000A  l_BSEG                          
 C:   0000000A  l_GSINIT2                       
 C:   00000010  s_REG_BANK_2                    
-C:   00000014  s_OSEG                          
+C:   00000015  s_OSEG                          
 C:   00000018  s_BIT_BANK                      
 C:   00000018  s_REG_BANK_3                    
-C:   0000001A  s_ISEG                          
-C:   0000001D  l_GSINIT                        
+C:   0000001F  l_GSINIT                        
 C:   00000020  s_BSEG_BYTES                    
 C:   00000020  s__CODE                         
 C:   00000022  l_GSINIT3                       
 C:   0000002A  l_GSINIT4                       
-C:   0000003C  s_SSEG                          
+C:   0000003C  s_ISEG                          
+C:   00000042  s_SSEG                          
 ASxxxx Linker V03.00 + NoICE + sdld,  page 2.
 Hexadecimal  [32-Bits]
 
@@ -66,23 +66,23 @@ CABS                                00000000    00000000 =           0. bytes (A
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   0000003D  l_CONST                         
 C:   00000051  l_HOME                          
 C:   00000051  s_GSINIT0                       
 C:   00000054  s_GSINIT1                       
 C:   00000054  s_GSINIT2                       
 C:   0000005E  s_GSINIT3                       
-C:   00000080  l_DSEG                          
+C:   00000072  l_CONST                         
+C:   0000007B  l_DSEG                          
 C:   00000080  s_GSINIT4                       
 C:   000000AA  s_GSINIT                        
 C:   000000AA  s_GSINIT5                       
-C:   000000C4  l_SSEG                          
-C:   000000C7  s_GSFINAL                       
-C:   000000CA  s_CSEG                          
+C:   000000BE  l_SSEG                          
+C:   000000C9  s_GSFINAL                       
+C:   000000CC  s_CSEG                          
 C:   00000100  l_IRAM                          
-C:   0000078C  l_CSEG                          
-C:   00000856  s_CONST                         
-C:   00000893  s_XINIT                         
+C:   000007CA  l_CSEG                          
+C:   00000896  s_CONST                         
+C:   00000908  s_XINIT                         
 
 ASxxxx Linker V03.00 + NoICE + sdld,  page 3.
 Hexadecimal  [32-Bits]
@@ -763,7 +763,7 @@ Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-DSEG                                00000000    00000080 =         128. bytes (REL,CON)
+DSEG                                00000000    0000007B =         123. bytes (REL,CON)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
@@ -777,17 +777,20 @@ DSEG                                00000000    00000080 =         128. bytes (R
      0000000E  _PW_MAX                            lab3_1_Speed
      00000010  G$PW$0$0                           lab3_1_Speed
      00000010  _PW                                lab3_1_Speed
-     00000012  _vprintf_PARM_2                    vprintf
-     00000013  _bp                                _bp
+     00000012  G$SecondCount$0$0                  lab3_1_Speed
+     00000012  _SecondCount                       lab3_1_Speed
+     00000013  _vprintf_PARM_2                    vprintf
+     00000014  _bp                                _bp
      0000002E  __print_format_PARM_2              printf_large
      00000031  __print_format_PARM_3              printf_large
      00000034  __print_format_PARM_4              printf_large
+
 ASxxxx Linker V03.00 + NoICE + sdld,  page 17.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-OSEG                                00000014    00000006 =           6. bytes (REL,OVR)
+OSEG                                00000015    00000006 =           6. bytes (REL,OVR)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
@@ -796,7 +799,7 @@ Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-ISEG                                0000001A    00000006 =           6. bytes (REL,CON)
+ISEG                                0000003C    00000006 =           6. bytes (REL,CON)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
@@ -805,11 +808,11 @@ Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-SSEG                                0000003C    000000C4 =         196. bytes (REL,OVR)
+SSEG                                00000042    000000BE =         190. bytes (REL,OVR)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-     0000003C  __start__stack                     lab3_1_Speed
+     00000042  __start__stack                     lab3_1_Speed
 
 ASxxxx Linker V03.00 + NoICE + sdld,  page 20.
 Hexadecimal  [32-Bits]
@@ -820,18 +823,18 @@ HOME                                00000000    00000051 =          81. bytes (R
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   00000000  A$lab3-1_Speed$947                 lab3_1_Speed
-C:   00000003  A$lab3-1_Speed$948                 lab3_1_Speed
-C:   0000000B  A$lab3-1_Speed$950                 lab3_1_Speed
-C:   00000013  A$lab3-1_Speed$952                 lab3_1_Speed
-C:   0000001B  A$lab3-1_Speed$954                 lab3_1_Speed
-C:   00000023  A$lab3-1_Speed$956                 lab3_1_Speed
-C:   0000002B  A$lab3-1_Speed$958                 lab3_1_Speed
-C:   00000033  A$lab3-1_Speed$960                 lab3_1_Speed
-C:   0000003B  A$lab3-1_Speed$962                 lab3_1_Speed
-C:   00000043  A$lab3-1_Speed$964                 lab3_1_Speed
-C:   0000004B  A$lab3-1_Speed$966                 lab3_1_Speed
-C:   0000004E  A$lab3-1_Speed$1009                lab3_1_Speed
+C:   00000000  A$lab3-1_Speed$951                 lab3_1_Speed
+C:   00000003  A$lab3-1_Speed$952                 lab3_1_Speed
+C:   0000000B  A$lab3-1_Speed$954                 lab3_1_Speed
+C:   00000013  A$lab3-1_Speed$956                 lab3_1_Speed
+C:   0000001B  A$lab3-1_Speed$958                 lab3_1_Speed
+C:   00000023  A$lab3-1_Speed$960                 lab3_1_Speed
+C:   0000002B  A$lab3-1_Speed$962                 lab3_1_Speed
+C:   00000033  A$lab3-1_Speed$964                 lab3_1_Speed
+C:   0000003B  A$lab3-1_Speed$966                 lab3_1_Speed
+C:   00000043  A$lab3-1_Speed$968                 lab3_1_Speed
+C:   0000004B  A$lab3-1_Speed$970                 lab3_1_Speed
+C:   0000004E  A$lab3-1_Speed$1017                lab3_1_Speed
 C:   0000004E  __sdcc_program_startup             lab3_1_Speed
 
 ASxxxx Linker V03.00 + NoICE + sdld,  page 21.
@@ -882,387 +885,432 @@ Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-GSINIT                              000000AA    0000001D =          29. bytes (REL,CON,CODE)
+GSINIT                              000000AA    0000001F =          31. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   000000AA  A$lab3-1_Speed$982                 lab3_1_Speed
-C:   000000AA  C$lab3_1_Speed.c$16$1$40           lab3_1_Speed
-C:   000000AD  A$lab3-1_Speed$983                 lab3_1_Speed
-C:   000000B0  A$lab3-1_Speed$986                 lab3_1_Speed
-C:   000000B0  C$lab3_1_Speed.c$17$1$40           lab3_1_Speed
-C:   000000B3  A$lab3-1_Speed$987                 lab3_1_Speed
-C:   000000B6  A$lab3-1_Speed$990                 lab3_1_Speed
-C:   000000B6  C$lab3_1_Speed.c$18$1$40           lab3_1_Speed
-C:   000000B9  A$lab3-1_Speed$991                 lab3_1_Speed
-C:   000000BC  A$lab3-1_Speed$994                 lab3_1_Speed
-C:   000000BC  C$lab3_1_Speed.c$19$1$40           lab3_1_Speed
-C:   000000BF  A$lab3-1_Speed$995                 lab3_1_Speed
-C:   000000C2  A$lab3-1_Speed$998                 lab3_1_Speed
-C:   000000C2  C$lab3_1_Speed.c$20$1$40           lab3_1_Speed
-C:   000000C3  A$lab3-1_Speed$999                 lab3_1_Speed
-C:   000000C5  A$lab3-1_Speed$1000                lab3_1_Speed
-
+C:   000000AA  A$lab3-1_Speed$986                 lab3_1_Speed
+C:   000000AA  C$lab3_1_Speed.c$15$1$40           lab3_1_Speed
+C:   000000AD  A$lab3-1_Speed$987                 lab3_1_Speed
+C:   000000B0  A$lab3-1_Speed$990                 lab3_1_Speed
+C:   000000B0  C$lab3_1_Speed.c$16$1$40           lab3_1_Speed
+C:   000000B3  A$lab3-1_Speed$991                 lab3_1_Speed
+C:   000000B6  A$lab3-1_Speed$994                 lab3_1_Speed
+C:   000000B6  C$lab3_1_Speed.c$17$1$40           lab3_1_Speed
+C:   000000B9  A$lab3-1_Speed$995                 lab3_1_Speed
+C:   000000BC  A$lab3-1_Speed$998                 lab3_1_Speed
+C:   000000BC  C$lab3_1_Speed.c$18$1$40           lab3_1_Speed
+C:   000000BF  A$lab3-1_Speed$999                 lab3_1_Speed
+C:   000000C2  A$lab3-1_Speed$1002                lab3_1_Speed
+C:   000000C2  C$lab3_1_Speed.c$19$1$40           lab3_1_Speed
+C:   000000C3  A$lab3-1_Speed$1003                lab3_1_Speed
+C:   000000C5  A$lab3-1_Speed$1004                lab3_1_Speed
+C:   000000C7  A$lab3-1_Speed$1008                lab3_1_Speed
+C:   000000C7  C$lab3_1_Speed.c$20$1$40           lab3_1_Speed
 ASxxxx Linker V03.00 + NoICE + sdld,  page 26.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-GSFINAL                             000000C7    00000003 =           3. bytes (REL,CON,CODE)
+GSFINAL                             000000C9    00000003 =           3. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   000000C7  A$lab3-1_Speed$1002                lab3_1_Speed
+C:   000000C9  A$lab3-1_Speed$1010                lab3_1_Speed
 
 ASxxxx Linker V03.00 + NoICE + sdld,  page 27.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000CA    0000078C =        1932. bytes (REL,CON,CODE)
+CSEG                                000000CC    000007CA =        1994. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   000000CA  A$lab3-1_Speed$1037                lab3_1_Speed
-C:   000000CA  C$c8051_SDCC.h$42$0$0              lab3_1_Speed
-C:   000000CA  C$c8051_SDCC.h$46$1$16             lab3_1_Speed
-C:   000000CA  G$SYSCLK_Init$0$0                  lab3_1_Speed
-C:   000000CA  _SYSCLK_Init                       lab3_1_Speed
-C:   000000CD  A$lab3-1_Speed$1040                lab3_1_Speed
-C:   000000CD  C$c8051_SDCC.h$49$1$16             lab3_1_Speed
-C:   000000CF  A$lab3-1_Speed$1041                lab3_1_Speed
-C:   000000D1  A$lab3-1_Speed$1043                lab3_1_Speed
-C:   000000D2  A$lab3-1_Speed$1044                lab3_1_Speed
-C:   000000D5  A$lab3-1_Speed$1045                lab3_1_Speed
-C:   000000D6  A$lab3-1_Speed$1047                lab3_1_Speed
-C:   000000D7  A$lab3-1_Speed$1048                lab3_1_Speed
-C:   000000D8  A$lab3-1_Speed$1049                lab3_1_Speed
-C:   000000DA  A$lab3-1_Speed$1053                lab3_1_Speed
-C:   000000DA  C$c8051_SDCC.h$51$1$16             lab3_1_Speed
-C:   000000DC  A$lab3-1_Speed$1054                lab3_1_Speed
-C:   000000DF  A$lab3-1_Speed$1057                lab3_1_Speed
-C:   000000DF  C$c8051_SDCC.h$53$1$16             lab3_1_Speed
-C:   000000E2  A$lab3-1_Speed$1060                lab3_1_Speed
-C:   000000E2  C$c8051_SDCC.h$56$1$16             lab3_1_Speed
-C:   000000E2  XG$SYSCLK_Init$0$0                 lab3_1_Speed
-C:   000000E3  A$lab3-1_Speed$1073                lab3_1_Speed
-C:   000000E3  C$c8051_SDCC.h$64$1$16             lab3_1_Speed
-C:   000000E3  C$c8051_SDCC.h$66$1$18             lab3_1_Speed
-C:   000000E3  G$UART0_Init$0$0                   lab3_1_Speed
-C:   000000E3  _UART0_Init                        lab3_1_Speed
-C:   000000E6  A$lab3-1_Speed$1076                lab3_1_Speed
-C:   000000E6  C$c8051_SDCC.h$67$1$18             lab3_1_Speed
-C:   000000E9  A$lab3-1_Speed$1079                lab3_1_Speed
-C:   000000E9  C$c8051_SDCC.h$68$1$18             lab3_1_Speed
-C:   000000EC  A$lab3-1_Speed$1082                lab3_1_Speed
-C:   000000EC  C$c8051_SDCC.h$69$1$18             lab3_1_Speed
-C:   000000EE  A$lab3-1_Speed$1085                lab3_1_Speed
-C:   000000EE  C$c8051_SDCC.h$70$1$18             lab3_1_Speed
-C:   000000F1  A$lab3-1_Speed$1088                lab3_1_Speed
-C:   000000F1  C$c8051_SDCC.h$71$1$18             lab3_1_Speed
-C:   000000F4  A$lab3-1_Speed$1091                lab3_1_Speed
-C:   000000F4  C$c8051_SDCC.h$73$1$18             lab3_1_Speed
-C:   000000F6  A$lab3-1_Speed$1094                lab3_1_Speed
-C:   000000F6  C$c8051_SDCC.h$74$1$18             lab3_1_Speed
-C:   000000F9  A$lab3-1_Speed$1097                lab3_1_Speed
-C:   000000F9  C$c8051_SDCC.h$75$1$18             lab3_1_Speed
-C:   000000F9  XG$UART0_Init$0$0                  lab3_1_Speed
-C:   000000FA  A$lab3-1_Speed$1110                lab3_1_Speed
-C:   000000FA  C$c8051_SDCC.h$83$1$18             lab3_1_Speed
-C:   000000FA  C$c8051_SDCC.h$85$1$20             lab3_1_Speed
-C:   000000FA  G$Sys_Init$0$0                     lab3_1_Speed
-C:   000000FA  _Sys_Init                          lab3_1_Speed
-C:   000000FD  A$lab3-1_Speed$1113                lab3_1_Speed
+C:   000000CC  A$lab3-1_Speed$1045                lab3_1_Speed
+C:   000000CC  C$c8051_SDCC.h$42$0$0              lab3_1_Speed
+C:   000000CC  C$c8051_SDCC.h$46$1$16             lab3_1_Speed
+C:   000000CC  G$SYSCLK_Init$0$0                  lab3_1_Speed
+C:   000000CC  _SYSCLK_Init                       lab3_1_Speed
+C:   000000CF  A$lab3-1_Speed$1048                lab3_1_Speed
+C:   000000CF  C$c8051_SDCC.h$49$1$16             lab3_1_Speed
+C:   000000D1  A$lab3-1_Speed$1049                lab3_1_Speed
+C:   000000D3  A$lab3-1_Speed$1051                lab3_1_Speed
+C:   000000D4  A$lab3-1_Speed$1052                lab3_1_Speed
+C:   000000D7  A$lab3-1_Speed$1053                lab3_1_Speed
+C:   000000D8  A$lab3-1_Speed$1055                lab3_1_Speed
+C:   000000D9  A$lab3-1_Speed$1056                lab3_1_Speed
+C:   000000DA  A$lab3-1_Speed$1057                lab3_1_Speed
+C:   000000DC  A$lab3-1_Speed$1061                lab3_1_Speed
+C:   000000DC  C$c8051_SDCC.h$51$1$16             lab3_1_Speed
+C:   000000DE  A$lab3-1_Speed$1062                lab3_1_Speed
+C:   000000E1  A$lab3-1_Speed$1065                lab3_1_Speed
+C:   000000E1  C$c8051_SDCC.h$53$1$16             lab3_1_Speed
+C:   000000E4  A$lab3-1_Speed$1068                lab3_1_Speed
+C:   000000E4  C$c8051_SDCC.h$56$1$16             lab3_1_Speed
+C:   000000E4  XG$SYSCLK_Init$0$0                 lab3_1_Speed
+C:   000000E5  A$lab3-1_Speed$1081                lab3_1_Speed
+C:   000000E5  C$c8051_SDCC.h$64$1$16             lab3_1_Speed
+C:   000000E5  C$c8051_SDCC.h$66$1$18             lab3_1_Speed
+C:   000000E5  G$UART0_Init$0$0                   lab3_1_Speed
+C:   000000E5  _UART0_Init                        lab3_1_Speed
+C:   000000E8  A$lab3-1_Speed$1084                lab3_1_Speed
+C:   000000E8  C$c8051_SDCC.h$67$1$18             lab3_1_Speed
+C:   000000EB  A$lab3-1_Speed$1087                lab3_1_Speed
+C:   000000EB  C$c8051_SDCC.h$68$1$18             lab3_1_Speed
+C:   000000EE  A$lab3-1_Speed$1090                lab3_1_Speed
+C:   000000EE  C$c8051_SDCC.h$69$1$18             lab3_1_Speed
+C:   000000F0  A$lab3-1_Speed$1093                lab3_1_Speed
+C:   000000F0  C$c8051_SDCC.h$70$1$18             lab3_1_Speed
+C:   000000F3  A$lab3-1_Speed$1096                lab3_1_Speed
+C:   000000F3  C$c8051_SDCC.h$71$1$18             lab3_1_Speed
+C:   000000F6  A$lab3-1_Speed$1099                lab3_1_Speed
+C:   000000F6  C$c8051_SDCC.h$73$1$18             lab3_1_Speed
+C:   000000F8  A$lab3-1_Speed$1102                lab3_1_Speed
+C:   000000F8  C$c8051_SDCC.h$74$1$18             lab3_1_Speed
+C:   000000FB  A$lab3-1_Speed$1105                lab3_1_Speed
+C:   000000FB  C$c8051_SDCC.h$75$1$18             lab3_1_Speed
+C:   000000FB  XG$UART0_Init$0$0                  lab3_1_Speed
+C:   000000FC  A$lab3-1_Speed$1118                lab3_1_Speed
+C:   000000FC  C$c8051_SDCC.h$83$1$18             lab3_1_Speed
+C:   000000FC  C$c8051_SDCC.h$85$1$20             lab3_1_Speed
+C:   000000FC  G$Sys_Init$0$0                     lab3_1_Speed
+C:   000000FC  _Sys_Init                          lab3_1_Speed
+C:   000000FF  A$lab3-1_Speed$1121                lab3_1_Speed
 ASxxxx Linker V03.00 + NoICE + sdld,  page 28.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000CA    0000078C =        1932. bytes (REL,CON,CODE)
+CSEG                                000000CC    000007CA =        1994. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   000000FD  C$c8051_SDCC.h$86$1$20             lab3_1_Speed
-C:   00000100  A$lab3-1_Speed$1116                lab3_1_Speed
-C:   00000100  C$c8051_SDCC.h$88$1$20             lab3_1_Speed
-C:   00000103  A$lab3-1_Speed$1119                lab3_1_Speed
-C:   00000103  C$c8051_SDCC.h$89$1$20             lab3_1_Speed
-C:   00000106  A$lab3-1_Speed$1122                lab3_1_Speed
-C:   00000106  C$c8051_SDCC.h$91$1$20             lab3_1_Speed
-C:   00000109  A$lab3-1_Speed$1125                lab3_1_Speed
-C:   00000109  C$c8051_SDCC.h$92$1$20             lab3_1_Speed
-C:   0000010C  A$lab3-1_Speed$1128                lab3_1_Speed
-C:   0000010C  C$c8051_SDCC.h$93$1$20             lab3_1_Speed
-C:   0000010C  XG$Sys_Init$0$0                    lab3_1_Speed
-C:   0000010D  A$lab3-1_Speed$1141                lab3_1_Speed
-C:   0000010D  C$c8051_SDCC.h$98$1$20             lab3_1_Speed
-C:   0000010D  G$putchar$0$0                      lab3_1_Speed
-C:   0000010D  _putchar                           lab3_1_Speed
-C:   0000010F  A$lab3-1_Speed$1147                lab3_1_Speed
-C:   0000010F  C$c8051_SDCC.h$100$1$22            lab3_1_Speed
-C:   0000010F  C$c8051_SDCC.h$101$1$22            lab3_1_Speed
-C:   00000112  A$lab3-1_Speed$1148                lab3_1_Speed
-C:   00000114  A$lab3-1_Speed$1152                lab3_1_Speed
-C:   00000114  C$c8051_SDCC.h$102$1$22            lab3_1_Speed
-C:   00000116  A$lab3-1_Speed$1155                lab3_1_Speed
-C:   00000116  C$c8051_SDCC.h$103$1$22            lab3_1_Speed
-C:   00000116  XG$putchar$0$0                     lab3_1_Speed
-C:   00000117  A$lab3-1_Speed$1173                lab3_1_Speed
-C:   00000117  C$c8051_SDCC.h$108$1$22            lab3_1_Speed
-C:   00000117  C$c8051_SDCC.h$111$1$24            lab3_1_Speed
-C:   00000117  C$c8051_SDCC.h$112$1$24            lab3_1_Speed
-C:   00000117  G$getchar$0$0                      lab3_1_Speed
-C:   00000117  _getchar                           lab3_1_Speed
-C:   0000011A  A$lab3-1_Speed$1174                lab3_1_Speed
-C:   0000011C  A$lab3-1_Speed$1178                lab3_1_Speed
-C:   0000011C  C$c8051_SDCC.h$113$1$24            lab3_1_Speed
-C:   0000011F  A$lab3-1_Speed$1181                lab3_1_Speed
-C:   0000011F  C$c8051_SDCC.h$114$1$24            lab3_1_Speed
-C:   00000122  A$lab3-1_Speed$1184                lab3_1_Speed
-C:   00000122  C$c8051_SDCC.h$115$1$24            lab3_1_Speed
-C:   00000125  A$lab3-1_Speed$1187                lab3_1_Speed
-C:   00000125  C$c8051_SDCC.h$116$1$24            lab3_1_Speed
-C:   00000125  XG$getchar$0$0                     lab3_1_Speed
-C:   00000126  A$lab3-1_Speed$1200                lab3_1_Speed
-C:   00000126  C$lab3_1_Speed.c$24$1$24           lab3_1_Speed
-C:   00000126  C$lab3_1_Speed.c$27$1$31           lab3_1_Speed
-C:   00000126  G$main$0$0                         lab3_1_Speed
-C:   00000126  _main                              lab3_1_Speed
-C:   00000129  A$lab3-1_Speed$1203                lab3_1_Speed
-C:   00000129  C$lab3_1_Speed.c$28$1$31           lab3_1_Speed
-C:   0000012C  A$lab3-1_Speed$1204                lab3_1_Speed
-C:   0000012F  A$lab3-1_Speed$1207                lab3_1_Speed
-C:   0000012F  C$lab3_1_Speed.c$29$1$31           lab3_1_Speed
+C:   000000FF  C$c8051_SDCC.h$86$1$20             lab3_1_Speed
+C:   00000102  A$lab3-1_Speed$1124                lab3_1_Speed
+C:   00000102  C$c8051_SDCC.h$88$1$20             lab3_1_Speed
+C:   00000105  A$lab3-1_Speed$1127                lab3_1_Speed
+C:   00000105  C$c8051_SDCC.h$89$1$20             lab3_1_Speed
+C:   00000108  A$lab3-1_Speed$1130                lab3_1_Speed
+C:   00000108  C$c8051_SDCC.h$91$1$20             lab3_1_Speed
+C:   0000010B  A$lab3-1_Speed$1133                lab3_1_Speed
+C:   0000010B  C$c8051_SDCC.h$92$1$20             lab3_1_Speed
+C:   0000010E  A$lab3-1_Speed$1136                lab3_1_Speed
+C:   0000010E  C$c8051_SDCC.h$93$1$20             lab3_1_Speed
+C:   0000010E  XG$Sys_Init$0$0                    lab3_1_Speed
+C:   0000010F  A$lab3-1_Speed$1149                lab3_1_Speed
+C:   0000010F  C$c8051_SDCC.h$98$1$20             lab3_1_Speed
+C:   0000010F  G$putchar$0$0                      lab3_1_Speed
+C:   0000010F  _putchar                           lab3_1_Speed
+C:   00000111  A$lab3-1_Speed$1155                lab3_1_Speed
+C:   00000111  C$c8051_SDCC.h$100$1$22            lab3_1_Speed
+C:   00000111  C$c8051_SDCC.h$101$1$22            lab3_1_Speed
+C:   00000114  A$lab3-1_Speed$1156                lab3_1_Speed
+C:   00000116  A$lab3-1_Speed$1160                lab3_1_Speed
+C:   00000116  C$c8051_SDCC.h$102$1$22            lab3_1_Speed
+C:   00000118  A$lab3-1_Speed$1163                lab3_1_Speed
+C:   00000118  C$c8051_SDCC.h$103$1$22            lab3_1_Speed
+C:   00000118  XG$putchar$0$0                     lab3_1_Speed
+C:   00000119  A$lab3-1_Speed$1181                lab3_1_Speed
+C:   00000119  C$c8051_SDCC.h$108$1$22            lab3_1_Speed
+C:   00000119  C$c8051_SDCC.h$111$1$24            lab3_1_Speed
+C:   00000119  C$c8051_SDCC.h$112$1$24            lab3_1_Speed
+C:   00000119  G$getchar$0$0                      lab3_1_Speed
+C:   00000119  _getchar                           lab3_1_Speed
+C:   0000011C  A$lab3-1_Speed$1182                lab3_1_Speed
+C:   0000011E  A$lab3-1_Speed$1186                lab3_1_Speed
+C:   0000011E  C$c8051_SDCC.h$113$1$24            lab3_1_Speed
+C:   00000121  A$lab3-1_Speed$1189                lab3_1_Speed
+C:   00000121  C$c8051_SDCC.h$114$1$24            lab3_1_Speed
+C:   00000124  A$lab3-1_Speed$1192                lab3_1_Speed
+C:   00000124  C$c8051_SDCC.h$115$1$24            lab3_1_Speed
+C:   00000127  A$lab3-1_Speed$1195                lab3_1_Speed
+C:   00000127  C$c8051_SDCC.h$116$1$24            lab3_1_Speed
+C:   00000127  XG$getchar$0$0                     lab3_1_Speed
+C:   00000128  A$lab3-1_Speed$1208                lab3_1_Speed
+C:   00000128  C$lab3_1_Speed.c$24$1$24           lab3_1_Speed
+C:   00000128  C$lab3_1_Speed.c$27$1$31           lab3_1_Speed
+C:   00000128  G$main$0$0                         lab3_1_Speed
+C:   00000128  _main                              lab3_1_Speed
+C:   0000012B  A$lab3-1_Speed$1211                lab3_1_Speed
+C:   0000012B  C$lab3_1_Speed.c$28$1$31           lab3_1_Speed
+C:   0000012E  A$lab3-1_Speed$1212                lab3_1_Speed
+C:   00000131  A$lab3-1_Speed$1215                lab3_1_Speed
+C:   00000131  C$lab3_1_Speed.c$29$1$31           lab3_1_Speed
 ASxxxx Linker V03.00 + NoICE + sdld,  page 29.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000CA    0000078C =        1932. bytes (REL,CON,CODE)
+CSEG                                000000CC    000007CA =        1994. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   00000132  A$lab3-1_Speed$1210                lab3_1_Speed
-C:   00000132  C$lab3_1_Speed.c$30$1$31           lab3_1_Speed
-C:   00000135  A$lab3-1_Speed$1213                lab3_1_Speed
-C:   00000135  C$lab3_1_Speed.c$31$1$31           lab3_1_Speed
-C:   00000138  A$lab3-1_Speed$1216                lab3_1_Speed
-C:   00000138  C$lab3_1_Speed.c$33$1$31           lab3_1_Speed
-C:   0000013A  A$lab3-1_Speed$1217                lab3_1_Speed
-C:   0000013C  A$lab3-1_Speed$1218                lab3_1_Speed
-C:   0000013E  A$lab3-1_Speed$1219                lab3_1_Speed
-C:   00000140  A$lab3-1_Speed$1220                lab3_1_Speed
-C:   00000142  A$lab3-1_Speed$1221                lab3_1_Speed
-C:   00000144  A$lab3-1_Speed$1222                lab3_1_Speed
-C:   00000147  A$lab3-1_Speed$1223                lab3_1_Speed
-C:   00000149  A$lab3-1_Speed$1224                lab3_1_Speed
-C:   0000014B  A$lab3-1_Speed$1225                lab3_1_Speed
-C:   0000014D  A$lab3-1_Speed$1228                lab3_1_Speed
-C:   0000014D  C$lab3_1_Speed.c$35$1$31           lab3_1_Speed
-C:   00000150  A$lab3-1_Speed$1229                lab3_1_Speed
-C:   00000153  A$lab3-1_Speed$1232                lab3_1_Speed
-C:   00000153  C$lab3_1_Speed.c$36$1$31           lab3_1_Speed
-C:   00000155  A$lab3-1_Speed$1233                lab3_1_Speed
-C:   00000157  A$lab3-1_Speed$1234                lab3_1_Speed
-C:   00000158  A$lab3-1_Speed$1235                lab3_1_Speed
-C:   00000159  A$lab3-1_Speed$1236                lab3_1_Speed
-C:   0000015A  A$lab3-1_Speed$1237                lab3_1_Speed
-C:   0000015C  A$lab3-1_Speed$1238                lab3_1_Speed
-C:   0000015D  A$lab3-1_Speed$1239                lab3_1_Speed
-C:   0000015E  A$lab3-1_Speed$1240                lab3_1_Speed
-C:   0000015F  A$lab3-1_Speed$1241                lab3_1_Speed
-C:   00000161  A$lab3-1_Speed$1242                lab3_1_Speed
-C:   00000162  A$lab3-1_Speed$1243                lab3_1_Speed
-C:   00000163  A$lab3-1_Speed$1244                lab3_1_Speed
-C:   00000164  A$lab3-1_Speed$1245                lab3_1_Speed
-C:   00000165  A$lab3-1_Speed$1246                lab3_1_Speed
-C:   00000166  A$lab3-1_Speed$1247                lab3_1_Speed
-C:   00000167  A$lab3-1_Speed$1248                lab3_1_Speed
-C:   00000168  A$lab3-1_Speed$1249                lab3_1_Speed
-C:   00000169  A$lab3-1_Speed$1250                lab3_1_Speed
-C:   0000016B  A$lab3-1_Speed$1251                lab3_1_Speed
-C:   0000016D  A$lab3-1_Speed$1255                lab3_1_Speed
+C:   00000134  A$lab3-1_Speed$1218                lab3_1_Speed
+C:   00000134  C$lab3_1_Speed.c$30$1$31           lab3_1_Speed
+C:   00000137  A$lab3-1_Speed$1221                lab3_1_Speed
+C:   00000137  C$lab3_1_Speed.c$31$1$31           lab3_1_Speed
+C:   0000013A  A$lab3-1_Speed$1224                lab3_1_Speed
+C:   0000013A  C$lab3_1_Speed.c$33$1$31           lab3_1_Speed
+C:   0000013C  A$lab3-1_Speed$1225                lab3_1_Speed
+C:   0000013E  A$lab3-1_Speed$1226                lab3_1_Speed
+C:   00000140  A$lab3-1_Speed$1227                lab3_1_Speed
+C:   00000142  A$lab3-1_Speed$1228                lab3_1_Speed
+C:   00000144  A$lab3-1_Speed$1229                lab3_1_Speed
+C:   00000146  A$lab3-1_Speed$1230                lab3_1_Speed
+C:   00000149  A$lab3-1_Speed$1231                lab3_1_Speed
+C:   0000014B  A$lab3-1_Speed$1232                lab3_1_Speed
+C:   0000014D  A$lab3-1_Speed$1233                lab3_1_Speed
+C:   0000014F  A$lab3-1_Speed$1236                lab3_1_Speed
+C:   0000014F  C$lab3_1_Speed.c$35$1$31           lab3_1_Speed
+C:   00000152  A$lab3-1_Speed$1237                lab3_1_Speed
+C:   00000155  A$lab3-1_Speed$1240                lab3_1_Speed
+C:   00000155  C$lab3_1_Speed.c$36$1$31           lab3_1_Speed
+C:   00000157  A$lab3-1_Speed$1241                lab3_1_Speed
+C:   00000159  A$lab3-1_Speed$1242                lab3_1_Speed
+C:   0000015A  A$lab3-1_Speed$1243                lab3_1_Speed
+C:   0000015B  A$lab3-1_Speed$1244                lab3_1_Speed
+C:   0000015C  A$lab3-1_Speed$1245                lab3_1_Speed
+C:   0000015E  A$lab3-1_Speed$1246                lab3_1_Speed
+C:   0000015F  A$lab3-1_Speed$1247                lab3_1_Speed
+C:   00000160  A$lab3-1_Speed$1248                lab3_1_Speed
+C:   00000161  A$lab3-1_Speed$1249                lab3_1_Speed
+C:   00000163  A$lab3-1_Speed$1250                lab3_1_Speed
+C:   00000164  A$lab3-1_Speed$1251                lab3_1_Speed
+C:   00000165  A$lab3-1_Speed$1252                lab3_1_Speed
+C:   00000166  A$lab3-1_Speed$1253                lab3_1_Speed
+C:   00000167  A$lab3-1_Speed$1254                lab3_1_Speed
+C:   00000168  A$lab3-1_Speed$1255                lab3_1_Speed
+C:   00000169  A$lab3-1_Speed$1256                lab3_1_Speed
+C:   0000016B  A$lab3-1_Speed$1257                lab3_1_Speed
+C:   0000016D  A$lab3-1_Speed$1260                lab3_1_Speed
 C:   0000016D  C$lab3_1_Speed.c$38$1$31           lab3_1_Speed
-C:   00000170  A$lab3-1_Speed$1256                lab3_1_Speed
-C:   00000172  A$lab3-1_Speed$1259                lab3_1_Speed
-C:   00000172  C$lab3_1_Speed.c$39$1$31           lab3_1_Speed
-C:   00000172  XG$main$0$0                        lab3_1_Speed
-C:   00000173  A$lab3-1_Speed$1274                lab3_1_Speed
-C:   00000173  C$lab3_1_Speed.c$47$1$31           lab3_1_Speed
-C:   00000173  C$lab3_1_Speed.c$51$1$32           lab3_1_Speed
-C:   00000173  G$Drive_Motor$0$0                  lab3_1_Speed
-C:   00000173  _Drive_Motor                       lab3_1_Speed
-C:   00000176  A$lab3-1_Speed$1275                lab3_1_Speed
+C:   0000016F  A$lab3-1_Speed$1261                lab3_1_Speed
+C:   00000171  A$lab3-1_Speed$1262                lab3_1_Speed
+C:   00000173  A$lab3-1_Speed$1263                lab3_1_Speed
+C:   00000175  A$lab3-1_Speed$1264                lab3_1_Speed
+C:   00000177  A$lab3-1_Speed$1265                lab3_1_Speed
+C:   00000179  A$lab3-1_Speed$1266                lab3_1_Speed
+C:   0000017C  A$lab3-1_Speed$1267                lab3_1_Speed
+C:   0000017E  A$lab3-1_Speed$1268                lab3_1_Speed
+C:   00000180  A$lab3-1_Speed$1269                lab3_1_Speed
+C:   00000182  A$lab3-1_Speed$1273                lab3_1_Speed
+C:   00000182  C$lab3_1_Speed.c$39$1$31           lab3_1_Speed
+C:   00000184  A$lab3-1_Speed$1274                lab3_1_Speed
 ASxxxx Linker V03.00 + NoICE + sdld,  page 30.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000CA    0000078C =        1932. bytes (REL,CON,CODE)
+CSEG                                000000CC    000007CA =        1994. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   00000178  A$lab3-1_Speed$1278                lab3_1_Speed
-C:   00000178  C$lab3_1_Speed.c$52$1$32           lab3_1_Speed
-C:   0000017B  A$lab3-1_Speed$1281                lab3_1_Speed
-C:   0000017B  C$lab3_1_Speed.c$54$2$33           lab3_1_Speed
-C:   0000017C  A$lab3-1_Speed$1282                lab3_1_Speed
-C:   0000017E  A$lab3-1_Speed$1283                lab3_1_Speed
-C:   00000180  A$lab3-1_Speed$1284                lab3_1_Speed
-C:   00000182  A$lab3-1_Speed$1285                lab3_1_Speed
-C:   00000184  A$lab3-1_Speed$1286                lab3_1_Speed
-C:   00000186  A$lab3-1_Speed$1289                lab3_1_Speed
-C:   00000186  C$lab3_1_Speed.c$55$2$33           lab3_1_Speed
-C:   00000188  A$lab3-1_Speed$1290                lab3_1_Speed
-C:   0000018A  A$lab3-1_Speed$1291                lab3_1_Speed
-C:   0000018C  A$lab3-1_Speed$1292                lab3_1_Speed
-C:   0000018D  A$lab3-1_Speed$1293                lab3_1_Speed
-C:   0000018F  A$lab3-1_Speed$1294                lab3_1_Speed
-C:   00000191  A$lab3-1_Speed$1295                lab3_1_Speed
-C:   00000193  A$lab3-1_Speed$1299                lab3_1_Speed
-C:   00000193  C$lab3_1_Speed.c$57$1$32           lab3_1_Speed
-C:   00000196  A$lab3-1_Speed$1302                lab3_1_Speed
-C:   00000196  C$lab3_1_Speed.c$59$2$34           lab3_1_Speed
-C:   00000197  A$lab3-1_Speed$1303                lab3_1_Speed
-C:   00000199  A$lab3-1_Speed$1304                lab3_1_Speed
-C:   0000019B  A$lab3-1_Speed$1305                lab3_1_Speed
-C:   0000019D  A$lab3-1_Speed$1306                lab3_1_Speed
-C:   0000019F  A$lab3-1_Speed$1307                lab3_1_Speed
-C:   000001A1  A$lab3-1_Speed$1310                lab3_1_Speed
-C:   000001A1  C$lab3_1_Speed.c$60$2$34           lab3_1_Speed
-C:   000001A3  A$lab3-1_Speed$1311                lab3_1_Speed
-C:   000001A5  A$lab3-1_Speed$1312                lab3_1_Speed
-C:   000001A7  A$lab3-1_Speed$1313                lab3_1_Speed
-C:   000001A9  A$lab3-1_Speed$1314                lab3_1_Speed
-C:   000001AB  A$lab3-1_Speed$1315                lab3_1_Speed
-C:   000001AD  A$lab3-1_Speed$1319                lab3_1_Speed
-C:   000001AD  C$lab3_1_Speed.c$63$1$32           lab3_1_Speed
-C:   000001AE  A$lab3-1_Speed$1320                lab3_1_Speed
-C:   000001B0  A$lab3-1_Speed$1321                lab3_1_Speed
-C:   000001B2  A$lab3-1_Speed$1322                lab3_1_Speed
-C:   000001B4  A$lab3-1_Speed$1323                lab3_1_Speed
-C:   000001B6  A$lab3-1_Speed$1324                lab3_1_Speed
-C:   000001B8  A$lab3-1_Speed$1325                lab3_1_Speed
-C:   000001BB  A$lab3-1_Speed$1326                lab3_1_Speed
-C:   000001BE  A$lab3-1_Speed$1330                lab3_1_Speed
-C:   000001BE  C$lab3_1_Speed.c$64$1$32           lab3_1_Speed
-C:   000001BF  A$lab3-1_Speed$1331                lab3_1_Speed
-C:   000001C1  A$lab3-1_Speed$1332                lab3_1_Speed
-C:   000001C3  A$lab3-1_Speed$1333                lab3_1_Speed
-C:   000001C5  A$lab3-1_Speed$1334                lab3_1_Speed
-C:   000001C7  A$lab3-1_Speed$1335                lab3_1_Speed
-C:   000001C9  A$lab3-1_Speed$1336                lab3_1_Speed
-C:   000001CC  A$lab3-1_Speed$1337                lab3_1_Speed
+C:   00000186  A$lab3-1_Speed$1275                lab3_1_Speed
+C:   00000188  A$lab3-1_Speed$1278                lab3_1_Speed
+C:   00000188  C$lab3_1_Speed.c$40$1$31           lab3_1_Speed
+C:   0000018A  A$lab3-1_Speed$1279                lab3_1_Speed
+C:   0000018C  A$lab3-1_Speed$1280                lab3_1_Speed
+C:   0000018E  A$lab3-1_Speed$1281                lab3_1_Speed
+C:   00000190  A$lab3-1_Speed$1282                lab3_1_Speed
+C:   00000192  A$lab3-1_Speed$1283                lab3_1_Speed
+C:   00000194  A$lab3-1_Speed$1284                lab3_1_Speed
+C:   00000197  A$lab3-1_Speed$1285                lab3_1_Speed
+C:   00000199  A$lab3-1_Speed$1286                lab3_1_Speed
+C:   0000019B  A$lab3-1_Speed$1287                lab3_1_Speed
+C:   0000019D  A$lab3-1_Speed$1291                lab3_1_Speed
+C:   0000019D  C$lab3_1_Speed.c$41$1$31           lab3_1_Speed
+C:   000001A0  A$lab3-1_Speed$1292                lab3_1_Speed
+C:   000001A2  A$lab3-1_Speed$1295                lab3_1_Speed
+C:   000001A2  C$lab3_1_Speed.c$42$1$31           lab3_1_Speed
+C:   000001A2  XG$main$0$0                        lab3_1_Speed
+C:   000001A3  A$lab3-1_Speed$1310                lab3_1_Speed
+C:   000001A3  C$lab3_1_Speed.c$50$1$31           lab3_1_Speed
+C:   000001A3  C$lab3_1_Speed.c$54$1$32           lab3_1_Speed
+C:   000001A3  G$Drive_Motor$0$0                  lab3_1_Speed
+C:   000001A3  _Drive_Motor                       lab3_1_Speed
+C:   000001A6  A$lab3-1_Speed$1311                lab3_1_Speed
+C:   000001A8  A$lab3-1_Speed$1314                lab3_1_Speed
+C:   000001A8  C$lab3_1_Speed.c$55$1$32           lab3_1_Speed
+C:   000001AB  A$lab3-1_Speed$1317                lab3_1_Speed
+C:   000001AB  C$lab3_1_Speed.c$57$2$33           lab3_1_Speed
+C:   000001AC  A$lab3-1_Speed$1318                lab3_1_Speed
+C:   000001AE  A$lab3-1_Speed$1319                lab3_1_Speed
+C:   000001B0  A$lab3-1_Speed$1320                lab3_1_Speed
+C:   000001B2  A$lab3-1_Speed$1321                lab3_1_Speed
+C:   000001B4  A$lab3-1_Speed$1322                lab3_1_Speed
+C:   000001B6  A$lab3-1_Speed$1325                lab3_1_Speed
+C:   000001B6  C$lab3_1_Speed.c$58$2$33           lab3_1_Speed
+C:   000001B8  A$lab3-1_Speed$1326                lab3_1_Speed
+C:   000001BA  A$lab3-1_Speed$1327                lab3_1_Speed
+C:   000001BC  A$lab3-1_Speed$1328                lab3_1_Speed
+C:   000001BD  A$lab3-1_Speed$1329                lab3_1_Speed
+C:   000001BF  A$lab3-1_Speed$1330                lab3_1_Speed
+C:   000001C1  A$lab3-1_Speed$1331                lab3_1_Speed
+C:   000001C3  A$lab3-1_Speed$1335                lab3_1_Speed
+C:   000001C3  C$lab3_1_Speed.c$60$1$32           lab3_1_Speed
+C:   000001C6  A$lab3-1_Speed$1338                lab3_1_Speed
+C:   000001C6  C$lab3_1_Speed.c$62$2$34           lab3_1_Speed
+C:   000001C7  A$lab3-1_Speed$1339                lab3_1_Speed
+C:   000001C9  A$lab3-1_Speed$1340                lab3_1_Speed
+C:   000001CB  A$lab3-1_Speed$1341                lab3_1_Speed
+C:   000001CD  A$lab3-1_Speed$1342                lab3_1_Speed
+C:   000001CF  A$lab3-1_Speed$1343                lab3_1_Speed
+C:   000001D1  A$lab3-1_Speed$1346                lab3_1_Speed
 ASxxxx Linker V03.00 + NoICE + sdld,  page 31.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000CA    0000078C =        1932. bytes (REL,CON,CODE)
+CSEG                                000000CC    000007CA =        1994. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   000001CF  A$lab3-1_Speed$1341                lab3_1_Speed
-C:   000001CF  C$lab3_1_Speed.c$65$1$32           lab3_1_Speed
-C:   000001D1  A$lab3-1_Speed$1342                lab3_1_Speed
-C:   000001D3  A$lab3-1_Speed$1343                lab3_1_Speed
-C:   000001D5  A$lab3-1_Speed$1344                lab3_1_Speed
-C:   000001D7  A$lab3-1_Speed$1345                lab3_1_Speed
-C:   000001D9  A$lab3-1_Speed$1346                lab3_1_Speed
-C:   000001DB  A$lab3-1_Speed$1347                lab3_1_Speed
-C:   000001DD  A$lab3-1_Speed$1348                lab3_1_Speed
-C:   000001DF  A$lab3-1_Speed$1349                lab3_1_Speed
-C:   000001E2  A$lab3-1_Speed$1350                lab3_1_Speed
-C:   000001E4  A$lab3-1_Speed$1351                lab3_1_Speed
-C:   000001E6  A$lab3-1_Speed$1352                lab3_1_Speed
-C:   000001E8  A$lab3-1_Speed$1355                lab3_1_Speed
-C:   000001E8  C$lab3_1_Speed.c$66$1$32           lab3_1_Speed
-C:   000001EA  A$lab3-1_Speed$1356                lab3_1_Speed
-C:   000001EB  A$lab3-1_Speed$1357                lab3_1_Speed
-C:   000001ED  A$lab3-1_Speed$1358                lab3_1_Speed
-C:   000001EF  A$lab3-1_Speed$1359                lab3_1_Speed
-C:   000001F1  A$lab3-1_Speed$1360                lab3_1_Speed
-C:   000001F3  A$lab3-1_Speed$1361                lab3_1_Speed
-C:   000001F5  A$lab3-1_Speed$1364                lab3_1_Speed
-C:   000001F5  C$lab3_1_Speed.c$67$1$32           lab3_1_Speed
-C:   000001F5  XG$Drive_Motor$0$0                 lab3_1_Speed
-C:   000001F6  A$lab3-1_Speed$1377                lab3_1_Speed
-C:   000001F6  C$lab3_1_Speed.c$74$1$32           lab3_1_Speed
-C:   000001F6  C$lab3_1_Speed.c$76$1$35           lab3_1_Speed
-C:   000001F6  G$Port_Init$0$0                    lab3_1_Speed
-C:   000001F6  _Port_Init                         lab3_1_Speed
-C:   000001F9  A$lab3-1_Speed$1380                lab3_1_Speed
-C:   000001F9  C$lab3_1_Speed.c$77$1$35           lab3_1_Speed
-C:   000001F9  XG$Port_Init$0$0                   lab3_1_Speed
-C:   000001FA  A$lab3-1_Speed$1393                lab3_1_Speed
-C:   000001FA  C$lab3_1_Speed.c$84$1$35           lab3_1_Speed
-C:   000001FA  C$lab3_1_Speed.c$86$1$36           lab3_1_Speed
-C:   000001FA  G$XBR0_Init$0$0                    lab3_1_Speed
-C:   000001FA  _XBR0_Init                         lab3_1_Speed
-C:   000001FD  A$lab3-1_Speed$1396                lab3_1_Speed
-C:   000001FD  C$lab3_1_Speed.c$88$1$36           lab3_1_Speed
-C:   000001FD  XG$XBR0_Init$0$0                   lab3_1_Speed
-C:   000001FE  A$lab3-1_Speed$1409                lab3_1_Speed
-C:   000001FE  C$lab3_1_Speed.c$100$1$38          lab3_1_Speed
-C:   000001FE  C$lab3_1_Speed.c$95$1$36           lab3_1_Speed
-C:   000001FE  G$PCA_Init$0$0                     lab3_1_Speed
-C:   000001FE  _PCA_Init                          lab3_1_Speed
-C:   00000201  A$lab3-1_Speed$1412                lab3_1_Speed
-C:   00000201  C$lab3_1_Speed.c$101$1$38          lab3_1_Speed
-C:   00000204  A$lab3-1_Speed$1415                lab3_1_Speed
-C:   00000204  C$lab3_1_Speed.c$102$1$38          lab3_1_Speed
-C:   00000207  A$lab3-1_Speed$1418                lab3_1_Speed
-C:   00000207  C$lab3_1_Speed.c$103$1$38          lab3_1_Speed
+C:   000001D1  C$lab3_1_Speed.c$63$2$34           lab3_1_Speed
+C:   000001D3  A$lab3-1_Speed$1347                lab3_1_Speed
+C:   000001D5  A$lab3-1_Speed$1348                lab3_1_Speed
+C:   000001D7  A$lab3-1_Speed$1349                lab3_1_Speed
+C:   000001D9  A$lab3-1_Speed$1350                lab3_1_Speed
+C:   000001DB  A$lab3-1_Speed$1351                lab3_1_Speed
+C:   000001DD  A$lab3-1_Speed$1355                lab3_1_Speed
+C:   000001DD  C$lab3_1_Speed.c$66$1$32           lab3_1_Speed
+C:   000001DE  A$lab3-1_Speed$1356                lab3_1_Speed
+C:   000001E0  A$lab3-1_Speed$1357                lab3_1_Speed
+C:   000001E2  A$lab3-1_Speed$1358                lab3_1_Speed
+C:   000001E4  A$lab3-1_Speed$1359                lab3_1_Speed
+C:   000001E6  A$lab3-1_Speed$1360                lab3_1_Speed
+C:   000001E8  A$lab3-1_Speed$1361                lab3_1_Speed
+C:   000001EB  A$lab3-1_Speed$1362                lab3_1_Speed
+C:   000001EE  A$lab3-1_Speed$1366                lab3_1_Speed
+C:   000001EE  C$lab3_1_Speed.c$67$1$32           lab3_1_Speed
+C:   000001EF  A$lab3-1_Speed$1367                lab3_1_Speed
+C:   000001F1  A$lab3-1_Speed$1368                lab3_1_Speed
+C:   000001F3  A$lab3-1_Speed$1369                lab3_1_Speed
+C:   000001F5  A$lab3-1_Speed$1370                lab3_1_Speed
+C:   000001F7  A$lab3-1_Speed$1371                lab3_1_Speed
+C:   000001F9  A$lab3-1_Speed$1372                lab3_1_Speed
+C:   000001FC  A$lab3-1_Speed$1373                lab3_1_Speed
+C:   000001FF  A$lab3-1_Speed$1377                lab3_1_Speed
+C:   000001FF  C$lab3_1_Speed.c$68$1$32           lab3_1_Speed
+C:   00000201  A$lab3-1_Speed$1378                lab3_1_Speed
+C:   00000203  A$lab3-1_Speed$1379                lab3_1_Speed
+C:   00000205  A$lab3-1_Speed$1380                lab3_1_Speed
+C:   00000207  A$lab3-1_Speed$1381                lab3_1_Speed
+C:   00000209  A$lab3-1_Speed$1382                lab3_1_Speed
+C:   0000020B  A$lab3-1_Speed$1383                lab3_1_Speed
+C:   0000020D  A$lab3-1_Speed$1384                lab3_1_Speed
+C:   0000020F  A$lab3-1_Speed$1385                lab3_1_Speed
+C:   00000212  A$lab3-1_Speed$1386                lab3_1_Speed
+C:   00000214  A$lab3-1_Speed$1387                lab3_1_Speed
+C:   00000216  A$lab3-1_Speed$1388                lab3_1_Speed
+C:   00000218  A$lab3-1_Speed$1391                lab3_1_Speed
+C:   00000218  C$lab3_1_Speed.c$69$1$32           lab3_1_Speed
+C:   0000021A  A$lab3-1_Speed$1392                lab3_1_Speed
+C:   0000021B  A$lab3-1_Speed$1393                lab3_1_Speed
+C:   0000021D  A$lab3-1_Speed$1394                lab3_1_Speed
+C:   0000021F  A$lab3-1_Speed$1395                lab3_1_Speed
+C:   00000221  A$lab3-1_Speed$1396                lab3_1_Speed
+C:   00000223  A$lab3-1_Speed$1397                lab3_1_Speed
+C:   00000225  A$lab3-1_Speed$1400                lab3_1_Speed
+C:   00000225  C$lab3_1_Speed.c$70$1$32           lab3_1_Speed
+C:   00000225  XG$Drive_Motor$0$0                 lab3_1_Speed
+C:   00000226  A$lab3-1_Speed$1413                lab3_1_Speed
+C:   00000226  C$lab3_1_Speed.c$77$1$32           lab3_1_Speed
+C:   00000226  C$lab3_1_Speed.c$79$1$35           lab3_1_Speed
 ASxxxx Linker V03.00 + NoICE + sdld,  page 32.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000CA    0000078C =        1932. bytes (REL,CON,CODE)
+CSEG                                000000CC    000007CA =        1994. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   00000209  A$lab3-1_Speed$1421                lab3_1_Speed
-C:   00000209  C$lab3_1_Speed.c$104$1$38          lab3_1_Speed
-C:   0000020C  A$lab3-1_Speed$1424                lab3_1_Speed
-C:   0000020C  C$lab3_1_Speed.c$105$1$38          lab3_1_Speed
-C:   0000020C  XG$PCA_Init$0$0                    lab3_1_Speed
-C:   0000020D  A$lab3-1_Speed$1437                lab3_1_Speed
-C:   0000020D  C$lab3_1_Speed.c$112$1$38          lab3_1_Speed
-C:   0000020D  C$lab3_1_Speed.c$116$1$40          lab3_1_Speed
-C:   0000020D  G$PCA_ISR$0$0                      lab3_1_Speed
-C:   0000020D  _PCA_ISR                           lab3_1_Speed
-C:   00000210  A$lab3-1_Speed$1440                lab3_1_Speed
-C:   00000210  C$lab3_1_Speed.c$118$2$41          lab3_1_Speed
-C:   00000213  A$lab3-1_Speed$1441                lab3_1_Speed
-C:   00000216  A$lab3-1_Speed$1444                lab3_1_Speed
-C:   00000216  C$lab3_1_Speed.c$119$2$41          lab3_1_Speed
-C:   00000218  A$lab3-1_Speed$1445                lab3_1_Speed
-C:   0000021A  A$lab3-1_Speed$1449                lab3_1_Speed
-C:   0000021A  C$lab3_1_Speed.c$122$1$40          lab3_1_Speed
-C:   0000021D  A$lab3-1_Speed$1453                lab3_1_Speed
-C:   0000021D  C$lab3_1_Speed.c$123$1$40          lab3_1_Speed
-C:   0000021D  XG$PCA_ISR$0$0                     lab3_1_Speed
-C:   00000229  _vprintf                           vprintf
-C:   00000242  _printf                            vprintf
-C:   00000314  __print_format                     printf_large
-C:   0000081E  _strlen                            _strlen
-C:   00000836  __gptrget                          _gptrget
-C:   00000852  __sdcc_external_startup            _startup
-
+C:   00000226  G$Port_Init$0$0                    lab3_1_Speed
+C:   00000226  _Port_Init                         lab3_1_Speed
+C:   00000229  A$lab3-1_Speed$1416                lab3_1_Speed
+C:   00000229  C$lab3_1_Speed.c$80$1$35           lab3_1_Speed
+C:   00000229  XG$Port_Init$0$0                   lab3_1_Speed
+C:   0000022A  A$lab3-1_Speed$1429                lab3_1_Speed
+C:   0000022A  C$lab3_1_Speed.c$87$1$35           lab3_1_Speed
+C:   0000022A  C$lab3_1_Speed.c$89$1$36           lab3_1_Speed
+C:   0000022A  G$XBR0_Init$0$0                    lab3_1_Speed
+C:   0000022A  _XBR0_Init                         lab3_1_Speed
+C:   0000022D  A$lab3-1_Speed$1432                lab3_1_Speed
+C:   0000022D  C$lab3_1_Speed.c$91$1$36           lab3_1_Speed
+C:   0000022D  XG$XBR0_Init$0$0                   lab3_1_Speed
+C:   0000022E  A$lab3-1_Speed$1445                lab3_1_Speed
+C:   0000022E  C$lab3_1_Speed.c$103$1$38          lab3_1_Speed
+C:   0000022E  C$lab3_1_Speed.c$98$1$36           lab3_1_Speed
+C:   0000022E  G$PCA_Init$0$0                     lab3_1_Speed
+C:   0000022E  _PCA_Init                          lab3_1_Speed
+C:   00000231  A$lab3-1_Speed$1448                lab3_1_Speed
+C:   00000231  C$lab3_1_Speed.c$104$1$38          lab3_1_Speed
+C:   00000234  A$lab3-1_Speed$1451                lab3_1_Speed
+C:   00000234  C$lab3_1_Speed.c$105$1$38          lab3_1_Speed
+C:   00000237  A$lab3-1_Speed$1454                lab3_1_Speed
+C:   00000237  C$lab3_1_Speed.c$106$1$38          lab3_1_Speed
+C:   00000239  A$lab3-1_Speed$1457                lab3_1_Speed
+C:   00000239  C$lab3_1_Speed.c$107$1$38          lab3_1_Speed
+C:   0000023C  A$lab3-1_Speed$1460                lab3_1_Speed
+C:   0000023C  C$lab3_1_Speed.c$108$1$38          lab3_1_Speed
+C:   0000023C  XG$PCA_Init$0$0                    lab3_1_Speed
+C:   0000023D  A$lab3-1_Speed$1471                lab3_1_Speed
+C:   0000023D  C$lab3_1_Speed.c$115$1$38          lab3_1_Speed
+C:   0000023D  G$PCA_ISR$0$0                      lab3_1_Speed
+C:   0000023D  _PCA_ISR                           lab3_1_Speed
+C:   0000023F  A$lab3-1_Speed$1472                lab3_1_Speed
+C:   00000241  A$lab3-1_Speed$1475                lab3_1_Speed
+C:   00000241  C$lab3_1_Speed.c$119$1$40          lab3_1_Speed
+C:   00000244  A$lab3-1_Speed$1478                lab3_1_Speed
+C:   00000244  C$lab3_1_Speed.c$121$2$41          lab3_1_Speed
+C:   00000247  A$lab3-1_Speed$1479                lab3_1_Speed
+C:   0000024A  A$lab3-1_Speed$1482                lab3_1_Speed
+C:   0000024A  C$lab3_1_Speed.c$122$2$41          lab3_1_Speed
+C:   0000024C  A$lab3-1_Speed$1485                lab3_1_Speed
+C:   0000024C  C$lab3_1_Speed.c$124$2$41          lab3_1_Speed
+C:   0000024E  A$lab3-1_Speed$1486                lab3_1_Speed
+C:   00000250  A$lab3-1_Speed$1487                lab3_1_Speed
+C:   00000252  A$lab3-1_Speed$1488                lab3_1_Speed
+C:   00000254  A$lab3-1_Speed$1489                lab3_1_Speed
+C:   00000256  A$lab3-1_Speed$1493                lab3_1_Speed
+C:   00000256  C$lab3_1_Speed.c$126$1$40          lab3_1_Speed
+C:   00000259  A$lab3-1_Speed$1495                lab3_1_Speed
+C:   0000025B  A$lab3-1_Speed$1496                lab3_1_Speed
 ASxxxx Linker V03.00 + NoICE + sdld,  page 33.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CONST                               00000856    0000003D =          61. bytes (REL,CON,CODE)
+CSEG                                000000CC    000007CA =        1994. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   00000856  Flab3_1_Speed$__str_0$0$0          lab3_1_Speed
-C:   0000087D  Flab3_1_Speed$__str_1$0$0          lab3_1_Speed
+C:   0000025D  A$lab3-1_Speed$1499                lab3_1_Speed
+C:   0000025D  C$lab3_1_Speed.c$127$1$40          lab3_1_Speed
+C:   0000025D  XG$PCA_ISR$0$0                     lab3_1_Speed
+C:   00000269  _vprintf                           vprintf
+C:   00000282  _printf                            vprintf
+C:   00000354  __print_format                     printf_large
+C:   0000085E  _strlen                            _strlen
+C:   00000876  __gptrget                          _gptrget
+C:   00000892  __sdcc_external_startup            _startup
 
 ASxxxx Linker V03.00 + NoICE + sdld,  page 34.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CONST                               00000896    00000072 =         114. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000896  Flab3_1_Speed$__str_0$0$0          lab3_1_Speed
+C:   000008BD  Flab3_1_Speed$__str_1$0$0          lab3_1_Speed
+C:   000008D9  Flab3_1_Speed$__str_2$0$0          lab3_1_Speed
+C:   000008F2  Flab3_1_Speed$__str_3$0$0          lab3_1_Speed
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 35.
 
 Files Linked                              [ module(s) ]
 
@@ -1293,7 +1341,7 @@ C:\Program Files (x86)\SDCC\bin\..\lib\small/libsdcc.lib
 C:\Program Files (x86)\SDCC\bin\..\lib\small/libsdcc.lib
                                           [ _bp.rel ]
 
-ASxxxx Linker V03.00 + NoICE + sdld,  page 35.
+ASxxxx Linker V03.00 + NoICE + sdld,  page 36.
 
 User Base Address Definitions
 

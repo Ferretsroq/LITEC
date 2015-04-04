@@ -18,7 +18,6 @@
 void Port_Init(void);
 void PCA_Init (void);
 void XBR0_Init(void);
-//void Steering_Servo(void);
 unsigned int ReadCompass(void);
 void PCA_ISR (void) __interrupt 9;
 void SMB_Init(void);
@@ -53,8 +52,7 @@ void main(void)
 	printf("\rEmbedded Control Compass Reading\n");
 	while(1)
 	{
-		//Steering_Servo();
-		if(new_heading && (heading_delay>=5))
+		if(new_heading && (heading_delay>=5)) // Wait for a defined delay
 		{		
 			heading = ReadCompass();
 			printf("\rThe heading is %u degrees\n",heading/10);
@@ -70,9 +68,6 @@ void main(void)
 void Port_Init()
 {
 	P1MDOUT |= 0x01; //set output pin for CEX0 in push-pull mode
-	// configure CEX0
-	// configure CEX1 just cause
-	// configure CEX2
 }
 
 
@@ -108,7 +103,7 @@ void PCA_ISR ( void ) __interrupt 9
 	if (CF)
 	{
 		h_count++;
-		if(h_count>=2)
+		if(h_count>=2)	//This sets a delay for getting a new heading
 		{
 			new_heading=1;
 			h_count = 0;

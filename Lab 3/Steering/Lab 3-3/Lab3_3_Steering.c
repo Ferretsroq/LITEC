@@ -37,6 +37,7 @@ unsigned char h_count = 0;
 unsigned int heading;
 unsigned char heading_delay = 0;
 unsigned int Desired_Heading = 0;
+__sbit __at 0xB7 SWITCH;
 
 
 
@@ -56,7 +57,7 @@ void main(void)
 	PCA0CP0 = 65535 - PW; //Set initial pulsewidth
 	while(1)
 	{
-		Steering_Servo();
+		while(!SWITCH) Steering_Servo();
 	}	
 }
 
@@ -67,9 +68,8 @@ void main(void)
 void Port_Init()
 {
 	P1MDOUT |= 0x01; //set output pin for CEX0 in push-pull mode
-	// configure CEX0
-	// configure CEX1 just cause
-	// configure CEX2
+	P3MDOUT &= 0x7F; // set input pin for 3.7 to open-drain
+	P3		|= ~0x7F;// set input pin for 3.7 to high impedence
 }
 
 
@@ -105,7 +105,7 @@ void PCA_ISR ( void ) __interrupt 9
 	if (CF)
 	{
 		h_count++;
-		if(h_count>=2)
+		if(h_count>=2)	//This gives a delay for getting a new heading
 		{
 			new_heading=1;
 			h_count = 0;
@@ -132,13 +132,15 @@ unsigned int ReadCompass(void)
 
 //--------------------------------------------------------------------------------
 // Determine and fix the error
+// This function adjusts the PW of the PCA to account for how far off the reading is
+// From our defined zero-point. 
 signed int DeterminePWM(unsigned int heading)
 {
 	signed int Error = 0;
 	unsigned int PWMe = 0;
-	unsigned char k = 1;
-	Error = Desired_Heading - heading;
-	if(Error < 1800) Error = Error + 3600;
+	unsigned char k = 1;				//Gain constant. Higher numbers turn more, lower numbers turn less.
+	Error = Desired_Heading - heading;	//Calculate the error
+	if(Error < 1800) Error = Error + 3600;	//Adjust the Error for +/- 180 degrees
 	if(Error > 1800) Error = Error - 3600;
 	PWMe = PW_CENTER + (k*Error);
 	if(PWMe < PW_MIN) PWMe = PW_MIN;
@@ -154,9 +156,8 @@ void Steering_Servo()
 		{		
 			heading = ReadCompass();
 			printf("\rThe current direction is %u\n", heading/10);
-			PW = DeterminePWM(heading);
+			PW = DeterminePWM(heading); // Adjust pulsewidth based on error function
 			PCA0CP0 = 0xFFFF - PW; // Change pulse width
-			//printf("\rThe heading is %u degrees\n",heading/10);
 			new_heading = 0;
 		}
 }

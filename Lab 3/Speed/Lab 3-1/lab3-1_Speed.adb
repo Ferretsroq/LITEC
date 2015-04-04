@@ -16,6 +16,7 @@ S:G$PW_CENTER$0$0({2}SI:U),E,0,0
 S:G$PW_MIN$0$0({2}SI:U),E,0,0
 S:G$PW_MAX$0$0({2}SI:U),E,0,0
 S:G$PW$0$0({2}SI:U),E,0,0
+S:G$SecondCount$0$0({1}SC:U),E,0,0
 S:Llab3_1_Speed.Drive_Motor$input$1$32({1}SC:S),R,0,0,[r7]
 S:G$P0$0$0({1}SC:U),I,0,0
 S:G$SP$0$0({1}SC:U),I,0,0
@@ -309,4 +310,6 @@ S:G$UART0_Init$0$0({2}DF,SV:S),C,0,0
 S:G$Sys_Init$0$0({2}DF,SV:S),C,0,0
 S:G$main$0$0({2}DF,SV:S),C,0,0
 S:Flab3_1_Speed$__str_0$0$0({39}DA39d,SC:S),D,0,0
-S:Flab3_1_Speed$__str_1$0$0({11}DA11d,SC:S),D,0,0
+S:Flab3_1_Speed$__str_1$0$0({28}DA28d,SC:S),D,0,0
+S:Flab3_1_Speed$__str_2$0$0({25}DA25d,SC:S),D,0,0
+S:Flab3_1_Speed$__str_3$0$0({11}DA11d,SC:S),D,0,0

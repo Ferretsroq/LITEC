@@ -47,12 +47,9 @@ void main(void)
 	XBR0_Init();
 	PCA_Init();
 	SMB_Init();
-	//Timer_Init();
 	//print beginning message
 	printf("\rEmbedded Control Steering Calibration\n");
 	//set PCA output to a neutral setting
-	//__________________________________________
-    //__________________________________________
     PW = PW_CENTER;
 	PCA0CP0 = 65535 - PW;	//Set initial pulsewidth
 	while(1)
@@ -62,26 +59,16 @@ void main(void)
 			unsigned int range;
 			range = ReadRanger();
 			new_range = 0;
-		
-			//The above two lines change the result to centimetres
 			printf("\rThe range is %u cm\n",range);
-			
 		}
 	}	
 }
-
-//-----------------------------------------------------------------------------
-
-
 //=============================================================================
 //-----------------------------------------------------------------------------
 // Set up ports for input and output
 void Port_Init()
 {
 	P1MDOUT |= 0x04; //set output pin for CEX0 in push-pull mode
-	// configure CEX0
-	// configure CEX1 just cause
-	// configure CEX2
 }
 
 
@@ -118,7 +105,7 @@ void PCA_ISR ( void ) __interrupt 9
 	if (CF)
 	{
 		r_count++;
-		if(r_count>=4)
+		if(r_count>=4) // This code adds an 80 ms delay for the ranger to ping
 		{
 			new_range=1;
 			r_count = 0;

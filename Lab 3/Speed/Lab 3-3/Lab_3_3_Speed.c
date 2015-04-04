@@ -52,25 +52,18 @@ void main(void)
 	XBR0_Init();
 	PCA_Init();
 	SMB_Init();
-	//Timer_Init();
 	//print beginning message
 	printf("\rEmbedded Control Steering Calibration\n");
 	//set PCA output to a neutral setting
-	//__________________________________________
-    //__________________________________________
     PW = PW_CENTER;
 	PCA0CP0 = 65535 - PW;	//Set initial pulsewidth
 	range = 45;
 	while(1)
 	{
-		while(start_delay<1);
+		while(start_delay<1); // The motor needs time to warm up before starting
 		while(!SWITCH) Drive_Motor();
 	}	
 }
-
-//-----------------------------------------------------------------------------
-
-
 //=============================================================================
 //-----------------------------------------------------------------------------
 // Set up ports for input and output
@@ -79,9 +72,6 @@ void Port_Init()
 	P1MDOUT |= 0x04; //set output pin for CEX0 in push-pull mode
 	P3MDOUT &= 0xBF; //set input pin for 3.6 to open-drain mode
 	P3		|= ~0xBF; //set input pin to high impedence
-	// configure CEX0
-	// configure CEX1 just cause
-	// configure CEX2
 }
 
 
@@ -117,7 +107,7 @@ void PCA_ISR ( void ) __interrupt 9
 {
 	if (CF)
 	{
-		r_count++;
+		r_count++;		// This code adds an 80 ms delay for the ranger to ping
 		if(r_count>=4)
 		{
 			new_range=1;
@@ -156,20 +146,6 @@ unsigned int ReadRanger()
 //
 void Drive_Motor()
 {
-	/*char input;
-	//wait for a key to be pressed
-	input = getchar();
-	if(input == 'f') //if 'f' is pressed by the user
-	{
-		if(PW < PW_MAX)
-		PW = PW + 10; //increase the steering pulsewidth by 10
-	}
-	else if(input == 's') //if 's' is pressed by the user
-	{
-		if(PW > PW_MIN)
-		PW = PW - 10; //decrease the steering pulsewidth by 10
-		
-	}*/
 	if(new_range && (delay>=5))
 		{
 			range = ReadRanger();
@@ -179,7 +155,7 @@ void Drive_Motor()
 			printf("\rThe range is %u cm\n",range);
 			printf("\rPW is %u\n", PW);
 		}
-	PW = DeterminePWM(range);
+	PW = DeterminePWM(range);	//Adjust Pulsewidth for motor control
 	if(PW > PW_MAX) PW = PW_MAX;
 	if(PW < PW_MIN) PW = PW_MIN;
 	
@@ -187,18 +163,19 @@ void Drive_Motor()
 }
 
 //--------------------------------------------------------------------------------
-// Determine and fix the error
+// This function adjusts the speed and direction of the motor based on a defined
+// zero-point that sets the motor to neutral.
 signed int DeterminePWM(unsigned int range)
 {
 	signed int Error = 0;
 	unsigned int PWMe = 0;
-	unsigned char k = 22;
-	Error = neutral - range;
-	//if(Error < 1800) Error = Error + 3600;
-	//if(Error > 1800) Error = Error - 3600;
+	unsigned char k = 20;	//Gain constant
+	Error = neutral - range;	// Calculate the error
 	PWMe = PW_CENTER + (k*Error);
 	if(PWMe < PW_MIN) PWMe = PW_MIN;
 	if(PWMe > PW_MAX) PWMe = PW_MAX;
 	if((-5<Error) && (Error<5)) PWMe = PW_CENTER;
+	// PW_CENTER is the motor in a neutral position. This is so that we don't 
+	// damage the motor by switching directions too quickly.
 	return PWMe;
 }
