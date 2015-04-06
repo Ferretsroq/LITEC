@@ -1,0 +1,145 @@
+compiler directives
+	...
+declare global variables
+	unsigned int PCA_START = 28672;
+	unsigned int PW_CENTER = 2760;
+	unsigned int PW_MIN = 2030;
+	unsigned int PW_MAX = 3500;
+	unsigned int PW = 0;
+	unsigned int counts = 0;
+	unsigned char new_range = 0;
+	unsigned char r_count = 0;
+	unsigned char neutral = 45;
+	unsigned int range;
+	unsigned char delay = 0;
+	unsigned char start_delay = 0;
+	initialize the port for the switch
+function prototypes
+	void Port_Init(void);
+	void PCA_Init (void);
+	void XBR0_Init(void);
+	unsigned int ReadRanger(void);
+	void PCA_ISR (void) __interrupt 9;
+	void SMB_Init(void);
+	void Drive_Motor(void);
+	signed int DeterminePWM(unsigned int range);
+
+//------------------------------------------------------------------------------
+main function
+	initialize system
+	initialize ports
+	initialize XBR0
+	initialize PCA board
+	initialize the SMBus
+	print "Embedded Control Steering Calibration"
+	set PCA output to a neutral setting
+	Set initial pulsewidth to neutral position
+	Set range equal to 45
+	while true
+		wait until start_delay surpasses 1 to account for delays
+		execute the Drive_Motor function until the switch is enabled
+	end while
+end main function
+
+//-----------------------------------------------------------------------------
+Functions
+//-----------------------------------------------------------------------------
+
+//-----------------------------------------------------------------------------
+// Set up ports for input and output
+Port_Init
+	set output pin for CEX0 in push-pull mode
+	set output pin for CEX0 in push-pull mode
+	set input pin for 3.6 to open-drain mode
+	set input pin to high impedence
+end Port_Init
+
+//-----------------------------------------------------------------------------
+// Set up the crossbar
+XBR0_Init
+	configure crossbar with UART, SPI, SMBus, and CEX channels as in worksheet
+end XBR0_Init
+
+//-----------------------------------------------------------------------------
+// Set up the SMB
+SMB_Init
+	Set SCL to 100KHz
+	Bit 6 of SMB0CN, enable the SMBus
+end SMB_Init
+
+//-----------------------------------------------------------------------------
+// Set up Programmable Counter Array
+PCA_Init
+	CCM2 in 16-bit compare mode
+	Enable PCA Counter
+	Enable CF Interrupt and SYSCLK/12
+	Enable Global Interrupts
+	Enable PCA Interrupt
+end PCA_Init
+
+//-----------------------------------------------------------------------------
+// Interrupt Service Routine for Programmable Counter Array Overflow Interrupt
+PCA_ISR
+	if CF overflow flag is enabled
+		increment r_count
+		if r_count >= 4
+			modify new_range to be equal to 1
+			clear r_count
+		end if statement
+		increment delay variable
+		reset delay to 0 if it surpasses 5
+		Start count for 20ms period
+		Clear overflow flag
+		print "We are getting overflows!"
+		increment start_delay if start_delay < 1 and delay is either 4 or 5
+	else
+		Handle other PCA interrupt sources
+	end if statement
+end PCA_ISR
+
+//-------------------------------------------------------------------------------
+// Ranger Reading Function
+ReadRanger
+	set the address of the sensor, 0xC0 for the compass
+	initialize Data as an array with a length of 2
+	set the range to be equal to 0 as default
+	read two byte, starting at reg 2, using i2c header file
+	set range to be the combination of the two values
+	write 0x51 to reg 0 of the ranger:
+	write one byte of data to reg 0 at addr
+	return range
+end ReadRanger
+
+//-----------------------------------------------------------------------------
+// Vary the pulsewidth based on the user input to change the speed of the drive motor.
+Drive_Motor
+	if new_range equals 1 and the delay >= 5
+		read the range from ReadRanger function
+		reset new_range to 0
+		print out the range in cm
+		print out the value for PW for debugging purposes
+	end if statement
+	PW = DeterminePWM(range);
+	if(PW > PW_MAX) PW = PW_MAX;
+	if(PW < PW_MIN) PW = PW_MIN;
+	
+	PCA0CP2 = 0xFFFF - PW;	
+end Drive_Motor
+
+//--------------------------------------------------------------------------------
+// Determine and fix the error
+DeterminePWM(range)
+{
+	// the following are calculations based on the control loop calibration method
+	signed int Error = 0;
+	unsigned int PWMe = 0;
+	unsigned char k = 22;
+	Error = neutral - range;
+	PWMe = PW_CENTER + (k*Error);
+	set PWMe equal to the minimum value for PW if PWMe < PW_MIN
+	set PWMe equal to the maximum value for PW if PWMe > PW_MAX
+	if the Error is between -5 and 5
+		set PWMe equal to PW_CENTER
+	end if statement
+	return PWMe;
+end DeterminePWM
