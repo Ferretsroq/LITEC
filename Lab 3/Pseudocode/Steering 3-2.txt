@@ -1,0 +1,94 @@
+compiler directives
+	...
+declare global variables
+	unsigned int PCA_START = 28672;
+	unsigned int PW_CENTER = 2760;
+	unsigned int PW_MIN = 2030;
+	unsigned int PW_MAX = 3500;
+	unsigned int PW = 0;
+	unsigned int counts = 0;
+	unsigned char new_heading = 0;
+	unsigned char h_count = 0;
+	unsigned int heading;
+	unsigned char heading_delay = 0;
+function prototypes
+	void Port_Init(void);
+	void PCA_Init (void);
+	void XBR0_Init(void);
+	unsigned int ReadCompass(void);
+	void PCA_ISR (void) __interrupt 9;
+	void SMB_Init(void);
+
+//------------------------------------------------------------------------------
+main function
+	initialize system
+	initialize ports
+	initialize XBR0
+	initialize PCA board
+	initialize the SMBus
+	print "Embedded Control Compass Reading"
+	while true
+		// Wait for a defined delay
+		if new_heading = 1 and heading_delay >=5
+			heading = ReadCompass();
+			print the heading for debugging
+			new_heading = 0;
+	end while statement
+end main function
+
+//-----------------------------------------------------------------------------
+// Set up ports for input and output
+Port_Init
+	set output pin for CEX0 in push-pull mode
+end Port_Init
+
+//-----------------------------------------------------------------------------
+// Set up the crossbar
+XBR0_Init
+	configure crossbar with UART, SPI, SMBus, and CEX channels as in worksheet
+end XBR0_Init
+
+//-----------------------------------------------------------------------------
+// Set up the SMB
+SMB_Init
+	Set SCL to 100KHz
+	Bit 6 of SMB0CN, enable the SMBus
+end SMB_Init
+
+//-----------------------------------------------------------------------------
+// Set up Programmable Counter Array
+PCA_Init
+	CCM0 in 16-bit compare mode
+	Enable PCA Counter
+	Enable CF Interrupt and SYSCLK/12
+	Enable Global Interrupts
+	Enable PCA Interrupt
+end PCA_Init
+
+//-----------------------------------------------------------------------------
+// Interrupt Service Routine for Programmable Counter Array Overflow Interrupt
+PCA_ISR
+	if CF overflow flag is enabled
+		increment r_count
+		if h_count >= 4
+			modify new_range to be equal to 1
+			clear h_count
+		end if statement
+		Start count for 20ms period
+		Clear overflow flag
+		print "We are getting overflows!"
+	else
+		Handle other PCA interrupt sources
+	end if statement
+end PCA_ISR
+
+//-------------------------------------------------------------------------------
+// Compass Reading Function
+ReadCompass
+	set addr as the address of the sensor, 0xC0 for the compass
+	initialize Data as an array with a length of 2
+	initialize read_heading as the heading returned in degrees between 0 and 3599
+	read two byte, starting at reg 2
+	combine the two values and store in read_heading
+	return read_heading
+end ReadCompass

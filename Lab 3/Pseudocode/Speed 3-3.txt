@@ -129,13 +129,12 @@ end Drive_Motor
 //--------------------------------------------------------------------------------
 // Determine and fix the error
 DeterminePWM(range)
-{
 	// the following are calculations based on the control loop calibration method
-	signed int Error = 0;
-	unsigned int PWMe = 0;
-	unsigned char k = 22;
-	Error = neutral - range;
-	PWMe = PW_CENTER + (k*Error);
+	initialize the variable for Error
+	initialize the variable for PWMe
+	set the gain constant k as 22
+	Error = neutral - range		// Calculate the error
+	PWMe = PW_CENTER + (k*Error)
 	set PWMe equal to the minimum value for PW if PWMe < PW_MIN
 	set PWMe equal to the maximum value for PW if PWMe > PW_MAX
 	if the Error is between -5 and 5

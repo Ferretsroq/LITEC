@@ -1,0 +1,84 @@
+compiler directives
+	...
+declare global variables
+	unsigned int PCA_START = 28672;
+	unsigned int PW_CENTER = 2760;
+	unsigned int PW_MIN = 2030;
+	unsigned int PW_MAX = 3500;
+	unsigned int PW = 0;
+	unsigned int counts = 0;
+function prototypes
+	void Port_Init(void);
+	void PCA_Init (void);
+	void XBR0_Init(void);
+	void Steering_Servo(void);
+	void PCA_ISR (void) __interrupt 9;
+
+//------------------------------------------------------------------------------
+main function
+	initialize system
+	initialize ports
+	initialize XBR0
+	initialize PCA board
+	initialize the SMBus
+	print "Embedded Control Steering Calibration"
+	set PCA output to a neutral setting
+	Set initial pulsewidth to neutral position
+	Set range equal to 45
+	while true
+		continuously run the Steering_Servo function
+	end while
+end main function
+
+//------------------------------------------------------------------------------
+Functions
+//------------------------------------------------------------------------------
+
+//-----------------------------------------------------------------------------
+Steering_Servo
+	wait for a key to be pressed
+	if 'r' is inputted
+		increment the pulsewidth by 100
+		change the pulsewidth in the PCA board
+		if pulsewidth maximum surpassed, set PW to a maximum value
+	else if 'l' is inputted
+		decrement the pulsewidth by 100
+		change the pulsewidth in the PCA board
+		if pulsewidth minimum exceeded, set PW to a minimum value
+	end if statement
+	output the value of PW for debugging
+end Steering_Servo
+
+//-----------------------------------------------------------------------------
+// Set up ports for input and output
+Port_Init
+	set output pin for CEX0 in push-pull mode
+end Port_Init
+
+//-----------------------------------------------------------------------------
+// Set up the crossbar
+XBR0_Init
+	configure crossbar with UART, SPI, SMBus, and CEX channels as in worksheet
+end XBR0_Init
+
+//-----------------------------------------------------------------------------
+// Set up Programmable Counter Array
+PCA_Init
+	CCM0 in 16-bit compare mode
+	Enable PCA Counter
+	Enable CF Interrupt and SYSCLK/12
+	Enable Global Interrupts
+	Enable PCA Interrupt
+end PCA_Init
+
+//-----------------------------------------------------------------------------
+// Interrupt Service Routine for Programmable Counter Array Overflow Interrupt
+PCA_ISR
+	if CF overflow flag is enabled
+		Start count for 20ms period
+		Clear overflow flag
+		print "We are getting overflows!"
+	else
+		Handle other PCA interrupt sources
+	end if statement
+end PCA_ISR

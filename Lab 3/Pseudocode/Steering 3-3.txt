@@ -1,0 +1,133 @@
+compiler directives
+	...
+declare global variables
+	unsigned int PCA_START = 28672;
+	unsigned int PW_CENTER = 2760;
+	unsigned int PW_MIN = 2030;
+	unsigned int PW_MAX = 3500;
+	unsigned int PW = 0;
+	unsigned int counts = 0;
+	unsigned char new_heading = 0;
+	unsigned char h_count = 0;
+	unsigned int heading;
+	unsigned char heading_delay = 0;
+	unsigned int Desired_Heading = 0;
+initialize the port for the switch
+function prototypes
+	void Port_Init(void);
+	void PCA_Init (void);
+	void XBR0_Init(void);
+	void Steering_Servo(void);
+	unsigned int ReadCompass(void);
+	void PCA_ISR (void) __interrupt 9;
+	void SMB_Init(void);
+	signed int DeterminePWM(unsigned int heading);
+	
+//------------------------------------------------------------------------------
+main function
+	initialize system
+	initialize ports
+	initialize XBR0
+	initialize PCA board
+	initialize the SMBus
+	print "Embedded Control Compass Steering"
+	Set initial pulsewidth to neutral position
+	while true
+		execute the Steering_Servo function until the switch is enabled
+	end while
+end main function
+
+//-----------------------------------------------------------------------------
+Functions
+//-----------------------------------------------------------------------------
+
+//-----------------------------------------------------------------------------
+// Set up ports for input and output
+Port_Init
+	set output pin for CEX0 in push-pull mode
+	set input pin for 3.7 to open-drain
+	set input pin for 3.7 to high impedence
+end Port_Init
+
+//-----------------------------------------------------------------------------
+// Set up the crossbar
+XBR0_Init
+	configure crossbar with UART, SPI, SMBus, and CEX channels as in worksheet
+end XBR0_Init
+
+//-----------------------------------------------------------------------------
+// Set up the SMB
+SMB_Init
+	Set SCL to 100KHz
+	Bit 6 of SMB0CN, enable the SMBus
+end SMB_Init
+
+//-----------------------------------------------------------------------------
+// Set up Programmable Counter Array
+PCA_Init
+	CCM0 in 16-bit compare mode
+	Enable PCA Counter
+	Enable CF Interrupt and SYSCLK/12
+	Enable Global Interrupts
+	Enable PCA Interrupt
+end PCA_Init
+
+//-----------------------------------------------------------------------------
+// Interrupt Service Routine for Programmable Counter Array Overflow Interrupt
+PCA_ISR
+	if CF overflow flag is enabled
+		increment h_count
+		// This gives a delay for getting a new heading
+		if h_count >= 2
+			modify new_heading to be equal to 1
+			clear h_count
+		end if statement
+		increment heading_delay
+		reset heading_delay if it surpasses 5
+		Start count for 20ms period
+		Clear overflow flag
+	else
+		Handle other PCA interrupt sources
+	end if statement
+end PCA_ISR
+
+//-------------------------------------------------------------------------------
+// Compass Reading Function
+ReadCompass
+	set addr as the address of the sensor, 0xC0 for the compass
+	initialize Data as an array with a length of 2
+	initialize read_heading as the heading returned in degrees between 0 and 3599
+	read two byte, starting at reg 2
+	combine the two values and store in read_heading
+	return read_heading
+end ReadCompass
+
+//--------------------------------------------------------------------------------
+// Determine and fix the error
+// This function adjusts the PW of the PCA to account for how far off the reading is
+// From our defined zero-point. 
+DeterminePWM(heading)
+	// the following are calculations based on the control loop calibration method
+	initialize the variable for Error
+	initialize the variable for PWMe
+	set the gain constant k as 1
+	Error = Desired_Heading - heading;	//Calculate the error
+	if(Error < 1800) Error = Error + 3600;	//Adjust the Error for +/- 180 degrees
+	if(Error > 1800) Error = Error - 3600;
+	PWMe = PW_CENTER + (k*Error)
+	set PWMe equal to the minimum value for PW if PWMe < PW_MIN
+	set PWMe equal to the maximum value for PW if PWMe > PW_MAX
+	return PWMe
+end DeterminePWM
+
+//---------------------------------------------------------------------------------
+// Steering Function
+Steering_Servo
+	if new_heading equals 1 and the heading_delay >= 5
+		set heading as the output from the function ReadCompass
+		print the current direction (heading/10) for debugging
+		Adjust pulsewidth based on error function DeterminePWM
+		Change pulse width
+		rest new_heading to 0
+	end if statement
+end Steering_Servo
