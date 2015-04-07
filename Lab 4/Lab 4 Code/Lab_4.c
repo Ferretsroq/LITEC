@@ -1,8 +1,14 @@
-/* Sample code for main function to read the compass and ranger */
+/*
+	Kathryn DiPippo, Rebecca Halzack, Seth Rutman
+	4/7/2015
+	Lab 4: Sample code for main function to read the compass and ranger
+*/
+
 #include <c8051_SDCC.h>
 #include <stdlib.h>// needed for abs function
 #include <stdio.h>
 #include <i2c.h>
+
 //-----------------------------------------------------------------------------
 // 8051 Initialization Functions
 //-----------------------------------------------------------------------------
@@ -17,7 +23,10 @@ void set_servo_PWM(void);
 int read_ranger(void); // new feature - read value, and then start a new ping
 void set_drive_PWM(void);
 int pick_heading(void); // function which allow operator to pick desired heading
-//define global variables
+
+//-----------------------------------------------------------------------------
+// Define global variables
+//-----------------------------------------------------------------------------
 unsigned int PW_CENTER = 2760;
 unsigned int PW_RIGHT = 3500;
 unsigned int PW_LEFT = 2030;
@@ -30,6 +39,7 @@ unsigned int heading;
 unsigned int range;
 unsigned char r_count; // overflow count for range
 unsigned char h_count; // overflow count for heading
+
 //-----------------------------------------------------------------------------
 // Main Function
 //-----------------------------------------------------------------------------
@@ -73,12 +83,9 @@ void main(void)
 		}
 	}
 }
+
 //-----------------------------------------------------------------------------
-// PCA_ISR
-//-----------------------------------------------------------------------------
-//
-// Interrupt Service Routine for Programmable Counter Array Overflow Interrupt
-//
+// PCA_ISR: Interrupt Service Routine for Programmable Counter Array Overflow Interrupt
 void PCA_ISR(void) __interrupt 9
 {
 	if (CF)
