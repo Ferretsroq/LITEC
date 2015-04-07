@@ -963,32 +963,32 @@ GSINIT                              000000AA    0000002B =          43. bytes (R
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
 C:   000000AA  A$Lab3_3_Steering$1100             Lab3_3_Steering
-C:   000000AA  C$Lab3_3_Steering.c$29$1$130       Lab3_3_Steering
+C:   000000AA  C$Lab3_3_Steering.c$28$1$130       Lab3_3_Steering
 C:   000000AD  A$Lab3_3_Steering$1101             Lab3_3_Steering
 C:   000000B0  A$Lab3_3_Steering$1104             Lab3_3_Steering
-C:   000000B0  C$Lab3_3_Steering.c$30$1$130       Lab3_3_Steering
+C:   000000B0  C$Lab3_3_Steering.c$29$1$130       Lab3_3_Steering
 C:   000000B3  A$Lab3_3_Steering$1105             Lab3_3_Steering
 C:   000000B6  A$Lab3_3_Steering$1108             Lab3_3_Steering
-C:   000000B6  C$Lab3_3_Steering.c$31$1$130       Lab3_3_Steering
+C:   000000B6  C$Lab3_3_Steering.c$30$1$130       Lab3_3_Steering
 C:   000000B9  A$Lab3_3_Steering$1109             Lab3_3_Steering
 C:   000000BC  A$Lab3_3_Steering$1112             Lab3_3_Steering
-C:   000000BC  C$Lab3_3_Steering.c$32$1$130       Lab3_3_Steering
+C:   000000BC  C$Lab3_3_Steering.c$31$1$130       Lab3_3_Steering
 C:   000000BF  A$Lab3_3_Steering$1113             Lab3_3_Steering
 C:   000000C2  A$Lab3_3_Steering$1116             Lab3_3_Steering
-C:   000000C2  C$Lab3_3_Steering.c$33$1$130       Lab3_3_Steering
+C:   000000C2  C$Lab3_3_Steering.c$32$1$130       Lab3_3_Steering
 C:   000000C3  A$Lab3_3_Steering$1117             Lab3_3_Steering
 C:   000000C5  A$Lab3_3_Steering$1118             Lab3_3_Steering
 C:   000000C7  A$Lab3_3_Steering$1121             Lab3_3_Steering
-C:   000000C7  C$Lab3_3_Steering.c$34$1$130       Lab3_3_Steering
+C:   000000C7  C$Lab3_3_Steering.c$33$1$130       Lab3_3_Steering
 C:   000000C9  A$Lab3_3_Steering$1122             Lab3_3_Steering
 C:   000000CB  A$Lab3_3_Steering$1126             Lab3_3_Steering
-C:   000000CB  C$Lab3_3_Steering.c$35$1$130       Lab3_3_Steering
+C:   000000CB  C$Lab3_3_Steering.c$34$1$130       Lab3_3_Steering
 C:   000000CD  A$Lab3_3_Steering$1130             Lab3_3_Steering
-C:   000000CD  C$Lab3_3_Steering.c$36$1$130       Lab3_3_Steering
+C:   000000CD  C$Lab3_3_Steering.c$35$1$130       Lab3_3_Steering
 C:   000000CF  A$Lab3_3_Steering$1134             Lab3_3_Steering
-C:   000000CF  C$Lab3_3_Steering.c$38$1$130       Lab3_3_Steering
+C:   000000CF  C$Lab3_3_Steering.c$37$1$130       Lab3_3_Steering
 C:   000000D1  A$Lab3_3_Steering$1137             Lab3_3_Steering
-C:   000000D1  C$Lab3_3_Steering.c$39$1$130       Lab3_3_Steering
+C:   000000D1  C$Lab3_3_Steering.c$38$1$130       Lab3_3_Steering
 C:   000000D3  A$Lab3_3_Steering$1138             Lab3_3_Steering
 
 ASxxxx Linker V03.00 + NoICE + sdld,  page 28.
@@ -1948,19 +1948,19 @@ C:   000005AD  A$Lab3_3_Steering$2308             Lab3_3_Steering
 C:   000005AD  C$i2c.h$298$1$103                  Lab3_3_Steering
 C:   000005AD  XG$Accel_Init$0$0                  Lab3_3_Steering
 C:   000005AE  A$Lab3_3_Steering$2321             Lab3_3_Steering
-C:   000005AE  C$Lab3_3_Steering.c$45$1$103       Lab3_3_Steering
-C:   000005AE  C$Lab3_3_Steering.c$48$1$113       Lab3_3_Steering
+C:   000005AE  C$Lab3_3_Steering.c$44$1$103       Lab3_3_Steering
+C:   000005AE  C$Lab3_3_Steering.c$47$1$113       Lab3_3_Steering
 C:   000005AE  G$main$0$0                         Lab3_3_Steering
 C:   000005AE  _main                              Lab3_3_Steering
 C:   000005B1  A$Lab3_3_Steering$2324             Lab3_3_Steering
-C:   000005B1  C$Lab3_3_Steering.c$49$1$113       Lab3_3_Steering
+C:   000005B1  C$Lab3_3_Steering.c$48$1$113       Lab3_3_Steering
 C:   000005B4  A$Lab3_3_Steering$2325             Lab3_3_Steering
 C:   000005B7  A$Lab3_3_Steering$2328             Lab3_3_Steering
-C:   000005B7  C$Lab3_3_Steering.c$50$1$113       Lab3_3_Steering
+C:   000005B7  C$Lab3_3_Steering.c$49$1$113       Lab3_3_Steering
 C:   000005BA  A$Lab3_3_Steering$2331             Lab3_3_Steering
-C:   000005BA  C$Lab3_3_Steering.c$51$1$113       Lab3_3_Steering
+C:   000005BA  C$Lab3_3_Steering.c$50$1$113       Lab3_3_Steering
 C:   000005BD  A$Lab3_3_Steering$2334             Lab3_3_Steering
-C:   000005BD  C$Lab3_3_Steering.c$52$1$113       Lab3_3_Steering
+C:   000005BD  C$Lab3_3_Steering.c$51$1$113       Lab3_3_Steering
 ASxxxx Linker V03.00 + NoICE + sdld,  page 45.
 Hexadecimal  [32-Bits]
 
@@ -1971,9 +1971,9 @@ CSEG                                000000D8    00000E06 =        3590. bytes (R
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
 C:   000005C0  A$Lab3_3_Steering$2337             Lab3_3_Steering
-C:   000005C0  C$Lab3_3_Steering.c$53$1$113       Lab3_3_Steering
+C:   000005C0  C$Lab3_3_Steering.c$52$1$113       Lab3_3_Steering
 C:   000005C3  A$Lab3_3_Steering$2340             Lab3_3_Steering
-C:   000005C3  C$Lab3_3_Steering.c$55$1$113       Lab3_3_Steering
+C:   000005C3  C$Lab3_3_Steering.c$54$1$113       Lab3_3_Steering
 C:   000005C5  A$Lab3_3_Steering$2341             Lab3_3_Steering
 C:   000005C7  A$Lab3_3_Steering$2342             Lab3_3_Steering
 C:   000005C9  A$Lab3_3_Steering$2343             Lab3_3_Steering
@@ -1984,10 +1984,10 @@ C:   000005D2  A$Lab3_3_Steering$2347             Lab3_3_Steering
 C:   000005D4  A$Lab3_3_Steering$2348             Lab3_3_Steering
 C:   000005D6  A$Lab3_3_Steering$2349             Lab3_3_Steering
 C:   000005D8  A$Lab3_3_Steering$2352             Lab3_3_Steering
-C:   000005D8  C$Lab3_3_Steering.c$56$1$113       Lab3_3_Steering
+C:   000005D8  C$Lab3_3_Steering.c$55$1$113       Lab3_3_Steering
 C:   000005DB  A$Lab3_3_Steering$2353             Lab3_3_Steering
 C:   000005DE  A$Lab3_3_Steering$2356             Lab3_3_Steering
-C:   000005DE  C$Lab3_3_Steering.c$57$1$113       Lab3_3_Steering
+C:   000005DE  C$Lab3_3_Steering.c$56$1$113       Lab3_3_Steering
 C:   000005E0  A$Lab3_3_Steering$2357             Lab3_3_Steering
 C:   000005E2  A$Lab3_3_Steering$2358             Lab3_3_Steering
 C:   000005E3  A$Lab3_3_Steering$2359             Lab3_3_Steering
@@ -2008,19 +2008,19 @@ C:   000005F3  A$Lab3_3_Steering$2373             Lab3_3_Steering
 C:   000005F4  A$Lab3_3_Steering$2374             Lab3_3_Steering
 C:   000005F6  A$Lab3_3_Steering$2375             Lab3_3_Steering
 C:   000005F8  A$Lab3_3_Steering$2379             Lab3_3_Steering
-C:   000005F8  C$Lab3_3_Steering.c$60$2$114       Lab3_3_Steering
+C:   000005F8  C$Lab3_3_Steering.c$59$2$114       Lab3_3_Steering
 C:   000005FB  A$Lab3_3_Steering$2380             Lab3_3_Steering
 C:   000005FE  A$Lab3_3_Steering$2381             Lab3_3_Steering
 C:   00000600  A$Lab3_3_Steering$2384             Lab3_3_Steering
-C:   00000600  C$Lab3_3_Steering.c$62$1$113       Lab3_3_Steering
+C:   00000600  C$Lab3_3_Steering.c$61$1$113       Lab3_3_Steering
 C:   00000600  XG$main$0$0                        Lab3_3_Steering
 C:   00000601  A$Lab3_3_Steering$2397             Lab3_3_Steering
-C:   00000601  C$Lab3_3_Steering.c$68$1$113       Lab3_3_Steering
-C:   00000601  C$Lab3_3_Steering.c$70$1$115       Lab3_3_Steering
+C:   00000601  C$Lab3_3_Steering.c$67$1$113       Lab3_3_Steering
+C:   00000601  C$Lab3_3_Steering.c$69$1$115       Lab3_3_Steering
 C:   00000601  G$Port_Init$0$0                    Lab3_3_Steering
 C:   00000601  _Port_Init                         Lab3_3_Steering
 C:   00000604  A$Lab3_3_Steering$2400             Lab3_3_Steering
-C:   00000604  C$Lab3_3_Steering.c$71$1$115       Lab3_3_Steering
+C:   00000604  C$Lab3_3_Steering.c$70$1$115       Lab3_3_Steering
 ASxxxx Linker V03.00 + NoICE + sdld,  page 46.
 Hexadecimal  [32-Bits]
 
@@ -2031,30 +2031,30 @@ CSEG                                000000D8    00000E06 =        3590. bytes (R
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
 C:   00000607  A$Lab3_3_Steering$2403             Lab3_3_Steering
-C:   00000607  C$Lab3_3_Steering.c$72$1$115       Lab3_3_Steering
+C:   00000607  C$Lab3_3_Steering.c$71$1$115       Lab3_3_Steering
 C:   00000609  A$Lab3_3_Steering$2404             Lab3_3_Steering
 C:   0000060B  A$Lab3_3_Steering$2405             Lab3_3_Steering
 C:   0000060C  A$Lab3_3_Steering$2406             Lab3_3_Steering
 C:   0000060E  A$Lab3_3_Steering$2409             Lab3_3_Steering
-C:   0000060E  C$Lab3_3_Steering.c$73$1$115       Lab3_3_Steering
+C:   0000060E  C$Lab3_3_Steering.c$72$1$115       Lab3_3_Steering
 C:   0000060E  XG$Port_Init$0$0                   Lab3_3_Steering
 C:   0000060F  A$Lab3_3_Steering$2422             Lab3_3_Steering
-C:   0000060F  C$Lab3_3_Steering.c$78$1$115       Lab3_3_Steering
-C:   0000060F  C$Lab3_3_Steering.c$80$1$117       Lab3_3_Steering
+C:   0000060F  C$Lab3_3_Steering.c$77$1$115       Lab3_3_Steering
+C:   0000060F  C$Lab3_3_Steering.c$79$1$117       Lab3_3_Steering
 C:   0000060F  G$XBR0_Init$0$0                    Lab3_3_Steering
 C:   0000060F  _XBR0_Init                         Lab3_3_Steering
 C:   00000612  A$Lab3_3_Steering$2425             Lab3_3_Steering
-C:   00000612  C$Lab3_3_Steering.c$81$1$117       Lab3_3_Steering
+C:   00000612  C$Lab3_3_Steering.c$80$1$117       Lab3_3_Steering
 C:   00000612  XG$XBR0_Init$0$0                   Lab3_3_Steering
 C:   00000613  A$Lab3_3_Steering$2438             Lab3_3_Steering
-C:   00000613  C$Lab3_3_Steering.c$85$1$117       Lab3_3_Steering
-C:   00000613  C$Lab3_3_Steering.c$87$1$119       Lab3_3_Steering
+C:   00000613  C$Lab3_3_Steering.c$84$1$117       Lab3_3_Steering
+C:   00000613  C$Lab3_3_Steering.c$86$1$119       Lab3_3_Steering
 C:   00000613  G$SMB_Init$0$0                     Lab3_3_Steering
 C:   00000613  _SMB_Init                          Lab3_3_Steering
 C:   00000616  A$Lab3_3_Steering$2441             Lab3_3_Steering
-C:   00000616  C$Lab3_3_Steering.c$88$1$119       Lab3_3_Steering
+C:   00000616  C$Lab3_3_Steering.c$87$1$119       Lab3_3_Steering
 C:   00000618  A$Lab3_3_Steering$2444             Lab3_3_Steering
-C:   00000618  C$Lab3_3_Steering.c$89$1$119       Lab3_3_Steering
+C:   00000618  C$Lab3_3_Steering.c$88$1$119       Lab3_3_Steering
 C:   00000618  XG$SMB_Init$0$0                    Lab3_3_Steering
 C:   00000619  A$Lab3_3_Steering$2457             Lab3_3_Steering
 C:   00000619  C$Lab3_3_Steering.c$92$1$119       Lab3_3_Steering

@@ -1,7 +1,7 @@
                                       1 ;--------------------------------------------------------
                                       2 ; File Created by SDCC : free open source ANSI-C Compiler
                                       3 ; Version 3.4.0 #8981 (Apr  5 2014) (MINGW32)
-                                      4 ; This file was generated Fri Apr 03 13:25:45 2015
+                                      4 ; This file was generated Tue Apr 07 13:08:19 2015
                                       5 ;--------------------------------------------------------
                                       6 	.module Lab3_3_Steering
                                       7 	.optsdcc -mmcs51 --model-small
@@ -1095,45 +1095,45 @@
                                    1095 	.globl __mcs51_genXINIT
                                    1096 	.globl __mcs51_genXRAMCLEAR
                                    1097 	.globl __mcs51_genRAMCLEAR
-                           000000  1098 	C$Lab3_3_Steering.c$29$1$130 ==.
-                                   1099 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-3\Lab3_3_Steering.c:29: unsigned int PCA_START = 28672;
+                           000000  1098 	C$Lab3_3_Steering.c$28$1$130 ==.
+                                   1099 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-3\Lab3_3_Steering.c:28: unsigned int PCA_START = 28672;
       0000AA 75 32 00         [24] 1100 	mov	_PCA_START,#0x00
       0000AD 75 33 70         [24] 1101 	mov	(_PCA_START + 1),#0x70
-                           000006  1102 	C$Lab3_3_Steering.c$30$1$130 ==.
-                                   1103 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-3\Lab3_3_Steering.c:30: unsigned int PW_CENTER = 2760;
+                           000006  1102 	C$Lab3_3_Steering.c$29$1$130 ==.
+                                   1103 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-3\Lab3_3_Steering.c:29: unsigned int PW_CENTER = 2760;
       0000B0 75 34 C8         [24] 1104 	mov	_PW_CENTER,#0xC8
       0000B3 75 35 0A         [24] 1105 	mov	(_PW_CENTER + 1),#0x0A
-                           00000C  1106 	C$Lab3_3_Steering.c$31$1$130 ==.
-                                   1107 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-3\Lab3_3_Steering.c:31: unsigned int PW_MIN = 2030;
+                           00000C  1106 	C$Lab3_3_Steering.c$30$1$130 ==.
+                                   1107 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-3\Lab3_3_Steering.c:30: unsigned int PW_MIN = 2030;
       0000B6 75 36 EE         [24] 1108 	mov	_PW_MIN,#0xEE
       0000B9 75 37 07         [24] 1109 	mov	(_PW_MIN + 1),#0x07
-                           000012  1110 	C$Lab3_3_Steering.c$32$1$130 ==.
-                                   1111 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-3\Lab3_3_Steering.c:32: unsigned int PW_MAX = 3500;
+                           000012  1110 	C$Lab3_3_Steering.c$31$1$130 ==.
+                                   1111 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-3\Lab3_3_Steering.c:31: unsigned int PW_MAX = 3500;
       0000BC 75 38 AC         [24] 1112 	mov	_PW_MAX,#0xAC
       0000BF 75 39 0D         [24] 1113 	mov	(_PW_MAX + 1),#0x0D
-                           000018  1114 	C$Lab3_3_Steering.c$33$1$130 ==.
-                                   1115 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-3\Lab3_3_Steering.c:33: unsigned int PW = 0;
+                           000018  1114 	C$Lab3_3_Steering.c$32$1$130 ==.
+                                   1115 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-3\Lab3_3_Steering.c:32: unsigned int PW = 0;
       0000C2 E4               [12] 1116 	clr	a
       0000C3 F5 3A            [12] 1117 	mov	_PW,a
       0000C5 F5 3B            [12] 1118 	mov	(_PW + 1),a
-                           00001D  1119 	C$Lab3_3_Steering.c$34$1$130 ==.
-                                   1120 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-3\Lab3_3_Steering.c:34: unsigned int counts = 0;
+                           00001D  1119 	C$Lab3_3_Steering.c$33$1$130 ==.
+                                   1120 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-3\Lab3_3_Steering.c:33: unsigned int counts = 0;
       0000C7 F5 3C            [12] 1121 	mov	_counts,a
       0000C9 F5 3D            [12] 1122 	mov	(_counts + 1),a
-                           000021  1123 	C$Lab3_3_Steering.c$35$1$130 ==.
-                                   1124 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-3\Lab3_3_Steering.c:35: unsigned char new_heading = 0;
+                           000021  1123 	C$Lab3_3_Steering.c$34$1$130 ==.
+                                   1124 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-3\Lab3_3_Steering.c:34: unsigned char new_heading = 0;
                                    1125 ;	1-genFromRTrack replaced	mov	_new_heading,#0x00
       0000CB F5 3E            [12] 1126 	mov	_new_heading,a
-                           000023  1127 	C$Lab3_3_Steering.c$36$1$130 ==.
-                                   1128 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-3\Lab3_3_Steering.c:36: unsigned char h_count = 0;
+                           000023  1127 	C$Lab3_3_Steering.c$35$1$130 ==.
+                                   1128 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-3\Lab3_3_Steering.c:35: unsigned char h_count = 0;
                                    1129 ;	1-genFromRTrack replaced	mov	_h_count,#0x00
       0000CD F5 3F            [12] 1130 	mov	_h_count,a
-                           000025  1131 	C$Lab3_3_Steering.c$38$1$130 ==.
-                                   1132 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-3\Lab3_3_Steering.c:38: unsigned char heading_delay = 0;
+                           000025  1131 	C$Lab3_3_Steering.c$37$1$130 ==.
+                                   1132 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-3\Lab3_3_Steering.c:37: unsigned char heading_delay = 0;
                                    1133 ;	1-genFromRTrack replaced	mov	_heading_delay,#0x00
       0000CF F5 42            [12] 1134 	mov	_heading_delay,a
-                           000027  1135 	C$Lab3_3_Steering.c$39$1$130 ==.
-                                   1136 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-3\Lab3_3_Steering.c:39: unsigned int Desired_Heading = 0;
+                           000027  1135 	C$Lab3_3_Steering.c$38$1$130 ==.
+                                   1136 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-3\Lab3_3_Steering.c:38: unsigned int Desired_Heading = 0;
       0000D1 F5 43            [12] 1137 	mov	_Desired_Heading,a
       0000D3 F5 44            [12] 1138 	mov	(_Desired_Heading + 1),a
                                    1139 	.area GSFINAL (CODE)
@@ -2310,33 +2310,33 @@
                                    2310 ;Allocation info for local variables in function 'main'
                                    2311 ;------------------------------------------------------------
                            0004D6  2312 	G$main$0$0 ==.
-                           0004D6  2313 	C$Lab3_3_Steering.c$45$1$103 ==.
-                                   2314 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-3\Lab3_3_Steering.c:45: void main(void)
+                           0004D6  2313 	C$Lab3_3_Steering.c$44$1$103 ==.
+                                   2314 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-3\Lab3_3_Steering.c:44: void main(void)
                                    2315 ;	-----------------------------------------
                                    2316 ;	 function main
                                    2317 ;	-----------------------------------------
       0005AE                       2318 _main:
-                           0004D6  2319 	C$Lab3_3_Steering.c$48$1$113 ==.
-                                   2320 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-3\Lab3_3_Steering.c:48: Sys_Init();
+                           0004D6  2319 	C$Lab3_3_Steering.c$47$1$113 ==.
+                                   2320 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-3\Lab3_3_Steering.c:47: Sys_Init();
       0005AE 12 01 08         [24] 2321 	lcall	_Sys_Init
-                           0004D9  2322 	C$Lab3_3_Steering.c$49$1$113 ==.
-                                   2323 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-3\Lab3_3_Steering.c:49: putchar(' '); //the quotes in this line may not format correctly
+                           0004D9  2322 	C$Lab3_3_Steering.c$48$1$113 ==.
+                                   2323 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-3\Lab3_3_Steering.c:48: putchar(' '); //the quotes in this line may not format correctly
       0005B1 75 82 20         [24] 2324 	mov	dpl,#0x20
       0005B4 12 01 1B         [24] 2325 	lcall	_putchar
-                           0004DF  2326 	C$Lab3_3_Steering.c$50$1$113 ==.
-                                   2327 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-3\Lab3_3_Steering.c:50: Port_Init();
+                           0004DF  2326 	C$Lab3_3_Steering.c$49$1$113 ==.
+                                   2327 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-3\Lab3_3_Steering.c:49: Port_Init();
       0005B7 12 06 01         [24] 2328 	lcall	_Port_Init
-                           0004E2  2329 	C$Lab3_3_Steering.c$51$1$113 ==.
-                                   2330 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-3\Lab3_3_Steering.c:51: XBR0_Init();
+                           0004E2  2329 	C$Lab3_3_Steering.c$50$1$113 ==.
+                                   2330 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-3\Lab3_3_Steering.c:50: XBR0_Init();
       0005BA 12 06 0F         [24] 2331 	lcall	_XBR0_Init
-                           0004E5  2332 	C$Lab3_3_Steering.c$52$1$113 ==.
-                                   2333 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-3\Lab3_3_Steering.c:52: PCA_Init();
+                           0004E5  2332 	C$Lab3_3_Steering.c$51$1$113 ==.
+                                   2333 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-3\Lab3_3_Steering.c:51: PCA_Init();
       0005BD 12 06 19         [24] 2334 	lcall	_PCA_Init
-                           0004E8  2335 	C$Lab3_3_Steering.c$53$1$113 ==.
-                                   2336 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-3\Lab3_3_Steering.c:53: SMB_Init();
+                           0004E8  2335 	C$Lab3_3_Steering.c$52$1$113 ==.
+                                   2336 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-3\Lab3_3_Steering.c:52: SMB_Init();
       0005C0 12 06 13         [24] 2337 	lcall	_SMB_Init
-                           0004EB  2338 	C$Lab3_3_Steering.c$55$1$113 ==.
-                                   2339 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-3\Lab3_3_Steering.c:55: printf("\rEmbedded Control Compass Steering\n");
+                           0004EB  2338 	C$Lab3_3_Steering.c$54$1$113 ==.
+                                   2339 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-3\Lab3_3_Steering.c:54: printf("\rEmbedded Control Compass Steering\n");
       0005C3 74 07            [12] 2340 	mov	a,#___str_3
       0005C5 C0 E0            [24] 2341 	push	acc
       0005C7 74 0F            [12] 2342 	mov	a,#(___str_3 >> 8)
@@ -2347,12 +2347,12 @@
       0005D2 15 81            [12] 2347 	dec	sp
       0005D4 15 81            [12] 2348 	dec	sp
       0005D6 15 81            [12] 2349 	dec	sp
-                           000500  2350 	C$Lab3_3_Steering.c$56$1$113 ==.
-                                   2351 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-3\Lab3_3_Steering.c:56: PW = PW_CENTER;
+                           000500  2350 	C$Lab3_3_Steering.c$55$1$113 ==.
+                                   2351 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-3\Lab3_3_Steering.c:55: PW = PW_CENTER;
       0005D8 85 34 3A         [24] 2352 	mov	_PW,_PW_CENTER
       0005DB 85 35 3B         [24] 2353 	mov	(_PW + 1),(_PW_CENTER + 1)
-                           000506  2354 	C$Lab3_3_Steering.c$57$1$113 ==.
-                                   2355 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-3\Lab3_3_Steering.c:57: PCA0CP0 = 65535 - PW; //Set initial pulsewidth
+                           000506  2354 	C$Lab3_3_Steering.c$56$1$113 ==.
+                                   2355 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-3\Lab3_3_Steering.c:56: PCA0CP0 = 65535 - PW; //Set initial pulsewidth
       0005DE AC 3A            [24] 2356 	mov	r4,_PW
       0005E0 AD 3B            [24] 2357 	mov	r5,(_PW + 1)
       0005E2 E4               [12] 2358 	clr	a
@@ -2373,73 +2373,73 @@
       0005F3 FF               [12] 2373 	mov	r7,a
       0005F4 8C EA            [24] 2374 	mov	((_PCA0CP0 >> 0) & 0xFF),r4
       0005F6 8D FA            [24] 2375 	mov	((_PCA0CP0 >> 8) & 0xFF),r5
-                           000520  2376 	C$Lab3_3_Steering.c$60$2$114 ==.
-                                   2377 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-3\Lab3_3_Steering.c:60: while(!SWITCH) Steering_Servo();
+                           000520  2376 	C$Lab3_3_Steering.c$59$2$114 ==.
+                                   2377 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-3\Lab3_3_Steering.c:59: while(!SWITCH) Steering_Servo();
       0005F8                       2378 00101$:
       0005F8 20 B7 FD         [24] 2379 	jb	_SWITCH,00101$
       0005FB 12 06 F1         [24] 2380 	lcall	_Steering_Servo
       0005FE 80 F8            [24] 2381 	sjmp	00101$
-                           000528  2382 	C$Lab3_3_Steering.c$62$1$113 ==.
+                           000528  2382 	C$Lab3_3_Steering.c$61$1$113 ==.
                            000528  2383 	XG$main$0$0 ==.
       000600 22               [24] 2384 	ret
                                    2385 ;------------------------------------------------------------
                                    2386 ;Allocation info for local variables in function 'Port_Init'
                                    2387 ;------------------------------------------------------------
                            000529  2388 	G$Port_Init$0$0 ==.
-                           000529  2389 	C$Lab3_3_Steering.c$68$1$113 ==.
-                                   2390 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-3\Lab3_3_Steering.c:68: void Port_Init()
+                           000529  2389 	C$Lab3_3_Steering.c$67$1$113 ==.
+                                   2390 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-3\Lab3_3_Steering.c:67: void Port_Init()
                                    2391 ;	-----------------------------------------
                                    2392 ;	 function Port_Init
                                    2393 ;	-----------------------------------------
       000601                       2394 _Port_Init:
-                           000529  2395 	C$Lab3_3_Steering.c$70$1$115 ==.
-                                   2396 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-3\Lab3_3_Steering.c:70: P1MDOUT |= 0x01; //set output pin for CEX0 in push-pull mode
+                           000529  2395 	C$Lab3_3_Steering.c$69$1$115 ==.
+                                   2396 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-3\Lab3_3_Steering.c:69: P1MDOUT |= 0x01; //set output pin for CEX0 in push-pull mode
       000601 43 A5 01         [24] 2397 	orl	_P1MDOUT,#0x01
-                           00052C  2398 	C$Lab3_3_Steering.c$71$1$115 ==.
-                                   2399 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-3\Lab3_3_Steering.c:71: P3MDOUT &= 0x7F; // set input pin for 3.7 to open-drain
+                           00052C  2398 	C$Lab3_3_Steering.c$70$1$115 ==.
+                                   2399 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-3\Lab3_3_Steering.c:70: P3MDOUT &= 0x7F; // set input pin for 3.7 to open-drain
       000604 53 A7 7F         [24] 2400 	anl	_P3MDOUT,#0x7F
-                           00052F  2401 	C$Lab3_3_Steering.c$72$1$115 ==.
-                                   2402 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-3\Lab3_3_Steering.c:72: P3		|= ~0x7F;// set input pin for 3.7 to high impedence
+                           00052F  2401 	C$Lab3_3_Steering.c$71$1$115 ==.
+                                   2402 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-3\Lab3_3_Steering.c:71: P3		|= ~0x7F;// set input pin for 3.7 to high impedence
       000607 AF B0            [24] 2403 	mov	r7,_P3
       000609 74 80            [12] 2404 	mov	a,#0x80
       00060B 4F               [12] 2405 	orl	a,r7
       00060C F5 B0            [12] 2406 	mov	_P3,a
-                           000536  2407 	C$Lab3_3_Steering.c$73$1$115 ==.
+                           000536  2407 	C$Lab3_3_Steering.c$72$1$115 ==.
                            000536  2408 	XG$Port_Init$0$0 ==.
       00060E 22               [24] 2409 	ret
                                    2410 ;------------------------------------------------------------
                                    2411 ;Allocation info for local variables in function 'XBR0_Init'
                                    2412 ;------------------------------------------------------------
                            000537  2413 	G$XBR0_Init$0$0 ==.
-                           000537  2414 	C$Lab3_3_Steering.c$78$1$115 ==.
-                                   2415 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-3\Lab3_3_Steering.c:78: void XBR0_Init(void)
+                           000537  2414 	C$Lab3_3_Steering.c$77$1$115 ==.
+                                   2415 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-3\Lab3_3_Steering.c:77: void XBR0_Init(void)
                                    2416 ;	-----------------------------------------
                                    2417 ;	 function XBR0_Init
                                    2418 ;	-----------------------------------------
       00060F                       2419 _XBR0_Init:
-                           000537  2420 	C$Lab3_3_Steering.c$80$1$117 ==.
-                                   2421 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-3\Lab3_3_Steering.c:80: XBR0 = 0x27;	//configure crossbar as directed in the laboratory
+                           000537  2420 	C$Lab3_3_Steering.c$79$1$117 ==.
+                                   2421 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-3\Lab3_3_Steering.c:79: XBR0 = 0x27;	//configure crossbar as directed in the laboratory
       00060F 75 E1 27         [24] 2422 	mov	_XBR0,#0x27
-                           00053A  2423 	C$Lab3_3_Steering.c$81$1$117 ==.
+                           00053A  2423 	C$Lab3_3_Steering.c$80$1$117 ==.
                            00053A  2424 	XG$XBR0_Init$0$0 ==.
       000612 22               [24] 2425 	ret
                                    2426 ;------------------------------------------------------------
                                    2427 ;Allocation info for local variables in function 'SMB_Init'
                                    2428 ;------------------------------------------------------------
                            00053B  2429 	G$SMB_Init$0$0 ==.
-                           00053B  2430 	C$Lab3_3_Steering.c$85$1$117 ==.
-                                   2431 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-3\Lab3_3_Steering.c:85: void SMB_Init(void)
+                           00053B  2430 	C$Lab3_3_Steering.c$84$1$117 ==.
+                                   2431 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-3\Lab3_3_Steering.c:84: void SMB_Init(void)
                                    2432 ;	-----------------------------------------
                                    2433 ;	 function SMB_Init
                                    2434 ;	-----------------------------------------
       000613                       2435 _SMB_Init:
-                           00053B  2436 	C$Lab3_3_Steering.c$87$1$119 ==.
-                                   2437 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-3\Lab3_3_Steering.c:87: SMB0CR=0x93;	//Set SCL to 100KHz
+                           00053B  2436 	C$Lab3_3_Steering.c$86$1$119 ==.
+                                   2437 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-3\Lab3_3_Steering.c:86: SMB0CR=0x93;	//Set SCL to 100KHz
       000613 75 CF 93         [24] 2438 	mov	_SMB0CR,#0x93
-                           00053E  2439 	C$Lab3_3_Steering.c$88$1$119 ==.
-                                   2440 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-3\Lab3_3_Steering.c:88: ENSMB=1; 		//Bit 6 of SMB0CN, enable the SMBus
+                           00053E  2439 	C$Lab3_3_Steering.c$87$1$119 ==.
+                                   2440 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 3\Steering\Lab 3-3\Lab3_3_Steering.c:87: ENSMB=1; 		//Bit 6 of SMB0CN, enable the SMBus
       000616 D2 C6            [12] 2441 	setb	_ENSMB
-                           000540  2442 	C$Lab3_3_Steering.c$89$1$119 ==.
+                           000540  2442 	C$Lab3_3_Steering.c$88$1$119 ==.
                            000540  2443 	XG$SMB_Init$0$0 ==.
       000618 22               [24] 2444 	ret
                                    2445 ;------------------------------------------------------------

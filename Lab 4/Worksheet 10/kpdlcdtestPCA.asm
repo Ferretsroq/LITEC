@@ -1,7 +1,7 @@
 ;--------------------------------------------------------
 ; File Created by SDCC : free open source ANSI-C Compiler
 ; Version 3.4.0 #8981 (Apr  5 2014) (MINGW32)
-; This file was generated Tue Apr 07 12:39:20 2015
+; This file was generated Tue Apr 07 13:31:21 2015
 ;--------------------------------------------------------
 	.module kpdlcdtestPCA
 	.optsdcc -mmcs51 --model-small
@@ -2233,7 +2233,7 @@ _Accel_Init:
 ;------------------------------------------------------------
 ;keypad1                   Allocated to registers r7 
 ;keypad2                   Allocated to registers r6 
-;result                    Allocated to registers r7 r5 
+;result                    Allocated to registers r6 
 ;------------------------------------------------------------
 	G$main$0$0 ==.
 	C$kpdlcdtestPCA.c$39$1$103 ==.
@@ -2317,41 +2317,20 @@ _main:
 	pop	ar7
 	C$kpdlcdtestPCA.c$61$2$114 ==.
 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:61: result = (keypad1*10) + keypad2;
-	clr	F0
-	mov	b,#0x0A
 	mov	a,r7
-	jnb	acc.7,00119$
-	cpl	F0
-	cpl	a
-	inc	a
-00119$:
+	mov	b,#0x0A
 	mul	ab
-	jnb	F0,00120$
-	cpl	a
-	add	a,#0x01
-	xch	a,b
-	cpl	a
-	addc	a,#0x00
-	xch	a,b
-00120$:
-	mov	r7,a
-	mov	r5,b
-	mov	a,r6
+	add	a,r6
+	C$kpdlcdtestPCA.c$62$2$114 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:62: printf("\rResult is %u\n", result);
+	mov	r6,a
 	rlc	a
 	subb	a,acc
-	mov	r4,a
-	mov	a,r6
-	add	a,r7
 	mov	r7,a
-	mov	a,r4
-	addc	a,r5
-	mov	r5,a
-	C$kpdlcdtestPCA.c$62$2$114 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:62: printf("Result is %u", result);
 	push	ar7
-	push	ar5
+	push	ar6
+	push	ar6
 	push	ar7
-	push	ar5
 	mov	a,#___str_5
 	push	acc
 	mov	a,#(___str_5 >> 8)
@@ -2362,8 +2341,12 @@ _main:
 	mov	a,sp
 	add	a,#0xfb
 	mov	sp,a
+	pop	ar6
+	pop	ar7
 	C$kpdlcdtestPCA.c$63$2$114 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:63: lcd_print("Result is %u", result);
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:63: lcd_print("\rResult is %u\n", result);
+	push	ar6
+	push	ar7
 	mov	a,#___str_5
 	push	acc
 	mov	a,#(___str_5 >> 8)
@@ -2601,17 +2584,27 @@ _KeyResult:
 	lcall	_pause
 	pop	ar7
 	C$kpdlcdtestPCA.c$130$1$132 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:130: if (keypad != (-1))   // keypad = -1 if no key is pressed
-	cjne	r7,#0xFF,00122$
-	sjmp	00105$
-00122$:
-	C$kpdlcdtestPCA.c$134$2$133 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:134: lcd_clear();
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:130: while(keypad == (-1))
+00101$:
+	cjne	r7,#0xFF,00103$
+	C$kpdlcdtestPCA.c$132$2$133 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:132: keypad = read_keypad();
+	lcall	_read_keypad
+	mov	r7,dpl
+	sjmp	00101$
+00103$:
+	C$kpdlcdtestPCA.c$134$1$132 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:134: if (keypad != (-1))   // keypad = -1 if no key is pressed
+	cjne	r7,#0xFF,00133$
+	sjmp	00108$
+00133$:
+	C$kpdlcdtestPCA.c$138$2$134 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:138: lcd_clear();
 	push	ar7
 	lcall	_lcd_clear
 	pop	ar7
-	C$kpdlcdtestPCA.c$135$2$133 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:135: lcd_print("Your key was:\n %c,  = Hex %X", keypad, keypad);
+	C$kpdlcdtestPCA.c$139$2$134 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:139: lcd_print("Your key was:\n %c,  = Hex %X", keypad, keypad);
 	mov	a,r7
 	mov	r5,a
 	rlc	a
@@ -2636,8 +2629,8 @@ _KeyResult:
 	mov	sp,a
 	pop	ar5
 	pop	ar6
-	C$kpdlcdtestPCA.c$136$2$133 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:136: printf("\n\rYour key was: %c,  = Hex %X", keypad, keypad);
+	C$kpdlcdtestPCA.c$140$2$134 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:140: printf("\rYour key was: %c,  = Hex %X\n", keypad, keypad);
 	push	ar5
 	push	ar6
 	push	ar5
@@ -2653,10 +2646,10 @@ _KeyResult:
 	add	a,#0xf9
 	mov	sp,a
 	pop	ar7
-	C$kpdlcdtestPCA.c$137$2$133 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:137: if(keypad == 0)printf("   **Wire Connection Error**   ");
+	C$kpdlcdtestPCA.c$141$2$134 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:141: if(keypad == 0)printf("   **Wire Connection Error**   ");
 	mov	a,r7
-	jnz	00105$
+	jnz	00108$
 	push	ar7
 	mov	a,#___str_8
 	push	acc
@@ -2669,22 +2662,22 @@ _KeyResult:
 	dec	sp
 	dec	sp
 	pop	ar7
-	C$kpdlcdtestPCA.c$139$1$132 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:139: while(keypad != -1) keypad = read_keypad(); // Waits until keypad returns a -1
-00105$:
-	cjne	r7,#0xFF,00124$
-	sjmp	00107$
-00124$:
+	C$kpdlcdtestPCA.c$143$1$132 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:143: while(keypad != -1) keypad = read_keypad(); // Waits until keypad returns a -1
+00108$:
+	cjne	r7,#0xFF,00135$
+	sjmp	00110$
+00135$:
 	lcall	_read_keypad
 	mov	r7,dpl
-	sjmp	00105$
-00107$:
-	C$kpdlcdtestPCA.c$140$1$132 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:140: return (keypad - 48);
+	sjmp	00108$
+00110$:
+	C$kpdlcdtestPCA.c$144$1$132 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:144: return (keypad - 48);
 	mov	a,r7
 	add	a,#0xD0
 	mov	dpl,a
-	C$kpdlcdtestPCA.c$141$1$132 ==.
+	C$kpdlcdtestPCA.c$145$1$132 ==.
 	XG$KeyResult$0$0 ==.
 	ret
 	.area CSEG    (CODE)
@@ -2721,7 +2714,9 @@ ___str_4:
 	.db 0x00
 FkpdlcdtestPCA$__str_5$0$0 == .
 ___str_5:
+	.db 0x0D
 	.ascii "Result is %u"
+	.db 0x0A
 	.db 0x00
 FkpdlcdtestPCA$__str_6$0$0 == .
 ___str_6:
@@ -2731,9 +2726,9 @@ ___str_6:
 	.db 0x00
 FkpdlcdtestPCA$__str_7$0$0 == .
 ___str_7:
-	.db 0x0A
 	.db 0x0D
 	.ascii "Your key was: %c,  = Hex %X"
+	.db 0x0A
 	.db 0x00
 FkpdlcdtestPCA$__str_8$0$0 == .
 ___str_8:

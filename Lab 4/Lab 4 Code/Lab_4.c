@@ -72,8 +72,6 @@ void main(void)
 		{
 			heading = read_compass();
 			set_servo_PWM(); // if new data, adjust servo PWM for compass & ranger
-			Lab 4: Heading/Ranger Integration, Battery Voltage and LCD Display Embedded Control Lab Manual
-			14
 			new_heading = 0;
 			h_count = 0;
 		}
@@ -175,6 +173,7 @@ int read_compass(void)
 void set_servo_PWM(void)
 {
 	hi
+	oh hello there
 }
 
 //-------------------------------------------------------------------------------
@@ -195,6 +194,7 @@ int read_ranger(void)
 void set_drive_PWM(void)
 {
 	hi
+	wassup
 }
 
 //-----------------------------------------------------------------------------
@@ -202,4 +202,5 @@ void set_drive_PWM(void)
 int pick_heading(void)
 {
 	hi
+	how's it going
 }

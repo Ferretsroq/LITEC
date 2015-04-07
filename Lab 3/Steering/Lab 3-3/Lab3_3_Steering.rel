@@ -670,31 +670,31 @@ A GSINIT4 size 0 flags 20 addr 0
 A GSINIT5 size 0 flags 20 addr 0
 A GSINIT size 2B flags 20 addr 0
 S A$Lab3_3_Steering$1101 Def000003
-S C$Lab3_3_Steering.c$30$1$130 Def000006
-S C$Lab3_3_Steering.c$31$1$130 Def00000C
+S C$Lab3_3_Steering.c$30$1$130 Def00000C
+S C$Lab3_3_Steering.c$31$1$130 Def000012
 S A$Lab3_3_Steering$1130 Def000023
 S A$Lab3_3_Steering$1121 Def00001D
 S A$Lab3_3_Steering$1112 Def000012
-S C$Lab3_3_Steering.c$32$1$130 Def000012
+S C$Lab3_3_Steering.c$32$1$130 Def000018
 S A$Lab3_3_Steering$1122 Def00001F
 S A$Lab3_3_Steering$1113 Def000015
 S A$Lab3_3_Steering$1104 Def000006
-S C$Lab3_3_Steering.c$33$1$130 Def000018
+S C$Lab3_3_Steering.c$33$1$130 Def00001D
 S A$Lab3_3_Steering$1105 Def000009
-S C$Lab3_3_Steering.c$34$1$130 Def00001D
-S C$Lab3_3_Steering.c$35$1$130 Def000021
+S C$Lab3_3_Steering.c$34$1$130 Def000021
+S C$Lab3_3_Steering.c$35$1$130 Def000023
 S A$Lab3_3_Steering$1134 Def000025
 S A$Lab3_3_Steering$1116 Def000018
-S C$Lab3_3_Steering.c$36$1$130 Def000023
 S A$Lab3_3_Steering$1126 Def000021
 S A$Lab3_3_Steering$1117 Def000019
 S A$Lab3_3_Steering$1108 Def00000C
+S C$Lab3_3_Steering.c$37$1$130 Def000025
+S C$Lab3_3_Steering.c$28$1$130 Def000000
 S A$Lab3_3_Steering$1118 Def00001B
 S A$Lab3_3_Steering$1109 Def00000F
-S C$Lab3_3_Steering.c$38$1$130 Def000025
-S C$Lab3_3_Steering.c$29$1$130 Def000000
+S C$Lab3_3_Steering.c$38$1$130 Def000027
+S C$Lab3_3_Steering.c$29$1$130 Def000006
 S A$Lab3_3_Steering$1137 Def000027
-S C$Lab3_3_Steering.c$39$1$130 Def000027
 S A$Lab3_3_Steering$1138 Def000029
 S A$Lab3_3_Steering$1100 Def000000
 A GSFINAL size 3 flags 20 addr 0
@@ -734,7 +734,7 @@ S A$Lab3_3_Steering$1401 Def0000B3
 S A$Lab3_3_Steering$1311 Def00004D
 S C$Lab3_3_Steering.c$149$1$129 Def000618
 S XG$Port_Init$0$0 Def000536
-S C$Lab3_3_Steering.c$50$1$113 Def0004DF
+S C$Lab3_3_Steering.c$50$1$113 Def0004E2
 S C$i2c.h$262$1$100 Def0003EA
 S G$i2c_read_and_stop$0$0 Def000361
 S A$Lab3_3_Steering$2302 Def0004C9
@@ -748,7 +748,7 @@ S A$Lab3_3_Steering$1510 Def000139
 S A$Lab3_3_Steering$1411 Def0000C4
 S A$Lab3_3_Steering$1402 Def0000B5
 S A$Lab3_3_Steering$1312 Def000050
-S C$Lab3_3_Steering.c$51$1$113 Def0004E2
+S C$Lab3_3_Steering.c$51$1$113 Def0004E5
 S C$i2c.h$272$1$100 Def00045C
 S C$i2c.h$270$2$101 Def000430
 S C$i2c.h$263$1$100 Def0003F1
@@ -777,7 +777,9 @@ S A$Lab3_3_Steering$1322 Def000058
 S A$Lab3_3_Steering$1232 Def00002C
 S A$Lab3_3_Steering$1223 Def000024
 S A$Lab3_3_Steering$1214 Def00001C
-S C$Lab3_3_Steering.c$52$1$113 Def0004E5
+S C$Lab3_3_Steering.c$61$1$113 Def000528
+S C$Lab3_3_Steering.c$52$1$113 Def0004E8
+S C$Lab3_3_Steering.c$44$1$103 Def0004D6
 S C$i2c.h$273$1$100 Def00045E
 S C$i2c.h$264$1$100 Def0003FD
 S G$i2c_read_data$0$0 Def0003E8
@@ -815,10 +817,6 @@ S A$Lab3_3_Steering$1404 Def0000B7
 S A$Lab3_3_Steering$1350 Def000068
 S A$Lab3_3_Steering$1260 Def00003C
 S A$Lab3_3_Steering$1251 Def000033
-S C$Lab3_3_Steering.c$62$1$113 Def000528
-S C$Lab3_3_Steering.c$60$2$114 Def000520
-S C$Lab3_3_Steering.c$53$1$113 Def0004E8
-S C$Lab3_3_Steering.c$45$1$103 Def0004D6
 S C$i2c.h$283$1$100 Def00048D
 S C$i2c.h$274$1$100 Def00048C
 S C$i2c.h$265$1$100 Def000403
@@ -862,7 +860,8 @@ S A$Lab3_3_Steering$1423 Def0000D0
 S A$Lab3_3_Steering$1405 Def0000BA
 S A$Lab3_3_Steering$1351 Def000069
 S A$Lab3_3_Steering$1342 Def00005C
-S C$Lab3_3_Steering.c$70$1$115 Def000529
+S C$Lab3_3_Steering.c$70$1$115 Def00052C
+S C$Lab3_3_Steering.c$54$1$113 Def0004EB
 S C$i2c.h$290$1$103 Def0004A5
 S C$i2c.h$266$1$100 Def000408
 S A$Lab3_3_Steering$2720 Def00064C
@@ -915,8 +914,8 @@ S A$Lab3_3_Steering$1235 Def00002F
 S A$Lab3_3_Steering$1226 Def000027
 S A$Lab3_3_Steering$1217 Def00001F
 S A$Lab3_3_Steering$1181 Def000007
-S C$Lab3_3_Steering.c$71$1$115 Def00052C
-S C$Lab3_3_Steering.c$55$1$113 Def0004EB
+S C$Lab3_3_Steering.c$71$1$115 Def00052F
+S C$Lab3_3_Steering.c$55$1$113 Def000500
 S C$i2c.h$267$1$100 Def000459
 S XG$delay_time$0$0 Def000336
 S A$Lab3_3_Steering$2721 Def00064E
@@ -982,8 +981,9 @@ S A$Lab3_3_Steering$1263 Def00003F
 S A$Lab3_3_Steering$1254 Def000036
 S A$Lab3_3_Steering$1191 Def000010
 S A$Lab3_3_Steering$1182 Def000008
-S C$Lab3_3_Steering.c$72$1$115 Def00052F
-S C$Lab3_3_Steering.c$56$1$113 Def000500
+S C$Lab3_3_Steering.c$72$1$115 Def000536
+S C$Lab3_3_Steering.c$56$1$113 Def000506
+S C$Lab3_3_Steering.c$47$1$113 Def0004D6
 S C$i2c.h$292$1$103 Def0004A8
 S XG$getchar$0$0 Def00005B
 S A$Lab3_3_Steering$2722 Def000650
@@ -1058,10 +1058,8 @@ S A$Lab3_3_Steering$1354 Def00006E
 S A$Lab3_3_Steering$1192 Def000012
 S A$Lab3_3_Steering$1183 Def00000B
 S C$Lab3_3_Steering.c$94$1$121 Def000541
-S C$Lab3_3_Steering.c$80$1$117 Def000537
-S C$Lab3_3_Steering.c$73$1$115 Def000536
-S C$Lab3_3_Steering.c$57$1$113 Def000506
-S C$Lab3_3_Steering.c$48$1$113 Def0004D6
+S C$Lab3_3_Steering.c$80$1$117 Def00053A
+S C$Lab3_3_Steering.c$48$1$113 Def0004D9
 S C$i2c.h$293$1$103 Def0004BD
 S G$putchar$0$0 Def000043
 S XG$UART0_Init$0$0 Def00002F
@@ -1129,8 +1127,8 @@ S A$Lab3_3_Steering$1319 Def000055
 S A$Lab3_3_Steering$1229 Def00002A
 S A$Lab3_3_Steering$1175 Def000000
 S C$Lab3_3_Steering.c$95$1$121 Def000544
-S C$Lab3_3_Steering.c$81$1$117 Def00053A
-S C$Lab3_3_Steering.c$49$1$113 Def0004D9
+S C$Lab3_3_Steering.c$67$1$113 Def000529
+S C$Lab3_3_Steering.c$49$1$113 Def0004DF
 S C$i2c.h$294$1$103 Def0004C0
 S A$Lab3_3_Steering$2733 Def000663
 S A$Lab3_3_Steering$2715 Def000641
@@ -1207,7 +1205,6 @@ S A$Lab3_3_Steering$1248 Def000030
 S A$Lab3_3_Steering$1185 Def00000C
 S XG$PCA_ISR$0$0 Def000581
 S C$Lab3_3_Steering.c$96$1$121 Def000547
-S C$Lab3_3_Steering.c$68$1$113 Def000529
 S C$i2c.h$269$2$101 Def00042E
 S G$i2c_read$0$0 Def000358
 S G$read_keypad$0$0 Def00011A
@@ -1356,6 +1353,9 @@ S A$Lab3_3_Steering$1286 Def000048
 S A$Lab3_3_Steering$1187 Def00000E
 S A$Lab3_3_Steering$1178 Def000003
 S C$Lab3_3_Steering.c$98$1$121 Def00054C
+S C$Lab3_3_Steering.c$84$1$117 Def00053B
+S C$Lab3_3_Steering.c$77$1$115 Def000537
+S C$Lab3_3_Steering.c$59$2$114 Def000520
 S _Steering_Servo Def000619
 S A$Lab3_3_Steering$2745 Def000671
 S A$Lab3_3_Steering$2736 Def000668
@@ -1415,8 +1415,7 @@ S A$Lab3_3_Steering$1359 Def00007A
 S A$Lab3_3_Steering$1179 Def000005
 S C$Lab3_3_Steering.c$99$1$121 Def00054F
 S C$Lab3_3_Steering.c$92$1$119 Def000541
-S C$Lab3_3_Steering.c$85$1$117 Def00053B
-S C$Lab3_3_Steering.c$78$1$115 Def000537
+S C$Lab3_3_Steering.c$69$1$115 Def000529
 S C$i2c.h$298$1$103 Def0004D5
 S C$i2c.h$289$1$103 Def000490
 S _i2c_read_and_stop Def000361
@@ -1543,6 +1542,8 @@ S A$Lab3_3_Steering$1578 Def000193
 S A$Lab3_3_Steering$1569 Def000183
 S A$Lab3_3_Steering$1497 Def000123
 S A$Lab3_3_Steering$1398 Def0000AE
+S C$Lab3_3_Steering.c$86$1$119 Def00053B
+S C$Lab3_3_Steering.c$79$1$117 Def000537
 S G$i2c_write_and_stop$0$0 Def00034D
 S G$lcd_print$0$0 Def00005C
 S C$c8051_SDCC.h$102$1$8 Def00004A
@@ -1568,7 +1569,7 @@ S A$Lab3_3_Steering$1687 Def000222
 S A$Lab3_3_Steering$1678 Def000210
 S A$Lab3_3_Steering$1498 Def000126
 S A$Lab3_3_Steering$1399 Def0000B0
-S C$Lab3_3_Steering.c$87$1$119 Def00053B
+S C$Lab3_3_Steering.c$87$1$119 Def00053E
 S C$i2c.h$100$1$73 Def0000E0
 S C$c8051_SDCC.h$103$1$8 Def00004C
 S A$Lab3_3_Steering$2696 Def00061D
@@ -1584,7 +1585,7 @@ S A$Lab3_3_Steering$1769 Def0002AE
 S A$Lab3_3_Steering$1697 Def000236
 S A$Lab3_3_Steering$1679 Def000213
 S A$Lab3_3_Steering$1499 Def000129
-S C$Lab3_3_Steering.c$88$1$119 Def00053E
+S C$Lab3_3_Steering.c$88$1$119 Def000540
 S G$i2c_write_data$0$0 Def000372
 S C$i2c.h$210$1$90 Def000347
 S A$Lab3_3_Steering$2697 Def00061F
@@ -1595,7 +1596,6 @@ S A$Lab3_3_Steering$1797 Def0002D7
 S A$Lab3_3_Steering$1779 Def0002BE
 S A$Lab3_3_Steering$1698 Def000238
 S A$Lab3_3_Steering$1689 Def000225
-S C$Lab3_3_Steering.c$89$1$119 Def000540
 S C$i2c.h$211$1$90 Def00034C
 S A$Lab3_3_Steering$2698 Def000621
 S A$Lab3_3_Steering$2599 Def0005B1
