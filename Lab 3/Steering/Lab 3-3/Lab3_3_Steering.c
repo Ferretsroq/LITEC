@@ -5,7 +5,6 @@
 	Description: Read the heading on a compass and correct the heading
 */
 
-
 #include <c8051_SDCC.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -87,6 +86,7 @@ void SMB_Init(void)
 	SMB0CR=0x93;	//Set SCL to 100KHz
 	ENSMB=1; 		//Bit 6 of SMB0CN, enable the SMBus
 }
+
 //-----------------------------------------------------------------------------
 // Set up Programmable Counter Array
 void PCA_Init(void)

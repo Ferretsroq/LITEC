@@ -5,12 +5,10 @@
 	Description: Read the Ultrasonic Ranger to determine speed
 */
 
-
 #include <c8051_SDCC.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <i2c.h>
-
 
 //-----------------------------------------------------------------------------
 // 8051 Initialization Functions
