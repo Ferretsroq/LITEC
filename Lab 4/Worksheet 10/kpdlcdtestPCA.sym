@@ -684,251 +684,225 @@ Symbol Table
  18 A$kpdlcdtestPCA$2226                                           0004CF GR
  18 A$kpdlcdtestPCA$2227                                           0004D2 GR
  18 A$kpdlcdtestPCA$2230                                           0004D5 GR
- 18 A$kpdlcdtestPCA$2247                                           0004D6 GR
- 18 A$kpdlcdtestPCA$2250                                           0004D9 GR
- 18 A$kpdlcdtestPCA$2253                                           0004DC GR
- 18 A$kpdlcdtestPCA$2256                                           0004DF GR
- 18 A$kpdlcdtestPCA$2259                                           0004E2 GR
- 18 A$kpdlcdtestPCA$2262                                           0004E5 GR
- 18 A$kpdlcdtestPCA$2263                                           0004E8 GR
- 18 A$kpdlcdtestPCA$2266                                           0004EB GR
- 18 A$kpdlcdtestPCA$2267                                           0004ED GR
- 18 A$kpdlcdtestPCA$2268                                           0004EF GR
- 18 A$kpdlcdtestPCA$2269                                           0004F1 GR
- 18 A$kpdlcdtestPCA$2270                                           0004F3 GR
- 18 A$kpdlcdtestPCA$2271                                           0004F5 GR
- 18 A$kpdlcdtestPCA$2272                                           0004F7 GR
- 18 A$kpdlcdtestPCA$2273                                           0004FA GR
- 18 A$kpdlcdtestPCA$2274                                           0004FC GR
- 18 A$kpdlcdtestPCA$2275                                           0004FE GR
- 18 A$kpdlcdtestPCA$2278                                           000500 GR
- 18 A$kpdlcdtestPCA$2279                                           000501 GR
- 18 A$kpdlcdtestPCA$2280                                           000503 GR
- 18 A$kpdlcdtestPCA$2284                                           000505 GR
- 18 A$kpdlcdtestPCA$2285                                           000506 GR
- 18 A$kpdlcdtestPCA$2286                                           000508 GR
- 18 A$kpdlcdtestPCA$2287                                           00050A GR
- 18 A$kpdlcdtestPCA$2288                                           00050C GR
- 18 A$kpdlcdtestPCA$2289                                           00050E GR
- 18 A$kpdlcdtestPCA$2292                                           000510 GR
- 18 A$kpdlcdtestPCA$2295                                           000513 GR
- 18 A$kpdlcdtestPCA$2296                                           000515 GR
- 18 A$kpdlcdtestPCA$2297                                           000517 GR
- 18 A$kpdlcdtestPCA$2298                                           000519 GR
- 18 A$kpdlcdtestPCA$2299                                           00051B GR
- 18 A$kpdlcdtestPCA$2300                                           00051D GR
- 18 A$kpdlcdtestPCA$2301                                           00051F GR
+ 18 A$kpdlcdtestPCA$2245                                           0004D6 GR
+ 18 A$kpdlcdtestPCA$2248                                           0004D9 GR
+ 18 A$kpdlcdtestPCA$2251                                           0004DC GR
+ 18 A$kpdlcdtestPCA$2254                                           0004DF GR
+ 18 A$kpdlcdtestPCA$2257                                           0004E2 GR
+ 18 A$kpdlcdtestPCA$2260                                           0004E5 GR
+ 18 A$kpdlcdtestPCA$2261                                           0004E8 GR
+ 18 A$kpdlcdtestPCA$2264                                           0004EB GR
+ 18 A$kpdlcdtestPCA$2265                                           0004ED GR
+ 18 A$kpdlcdtestPCA$2266                                           0004EF GR
+ 18 A$kpdlcdtestPCA$2267                                           0004F1 GR
+ 18 A$kpdlcdtestPCA$2268                                           0004F3 GR
+ 18 A$kpdlcdtestPCA$2269                                           0004F5 GR
+ 18 A$kpdlcdtestPCA$2270                                           0004F7 GR
+ 18 A$kpdlcdtestPCA$2271                                           0004FA GR
+ 18 A$kpdlcdtestPCA$2272                                           0004FC GR
+ 18 A$kpdlcdtestPCA$2273                                           0004FE GR
+ 18 A$kpdlcdtestPCA$2276                                           000500 GR
+ 18 A$kpdlcdtestPCA$2279                                           000503 GR
+ 18 A$kpdlcdtestPCA$2280                                           000504 GR
+ 18 A$kpdlcdtestPCA$2281                                           000506 GR
+ 18 A$kpdlcdtestPCA$2285                                           000508 GR
+ 18 A$kpdlcdtestPCA$2286                                           000509 GR
+ 18 A$kpdlcdtestPCA$2287                                           00050B GR
+ 18 A$kpdlcdtestPCA$2288                                           00050D GR
+ 18 A$kpdlcdtestPCA$2289                                           00050F GR
+ 18 A$kpdlcdtestPCA$2290                                           000511 GR
+ 18 A$kpdlcdtestPCA$2293                                           000513 GR
+ 18 A$kpdlcdtestPCA$2299                                           000516 GR
+ 18 A$kpdlcdtestPCA$2300                                           000519 GR
+ 18 A$kpdlcdtestPCA$2301                                           00051C GR
+ 18 A$kpdlcdtestPCA$2302                                           00051E GR
+ 18 A$kpdlcdtestPCA$2305                                           000520 GR
+ 18 A$kpdlcdtestPCA$2306                                           000522 GR
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 13.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
- 18 A$kpdlcdtestPCA$2302                                           000522 GR
- 18 A$kpdlcdtestPCA$2303                                           000524 GR
- 18 A$kpdlcdtestPCA$2304                                           000526 GR
- 18 A$kpdlcdtestPCA$2310                                           000528 GR
- 18 A$kpdlcdtestPCA$2311                                           00052B GR
- 18 A$kpdlcdtestPCA$2314                                           00052D GR
- 18 A$kpdlcdtestPCA$2315                                           00052F GR
- 18 A$kpdlcdtestPCA$2316                                           000532 GR
- 18 A$kpdlcdtestPCA$2317                                           000534 GR
- 18 A$kpdlcdtestPCA$2320                                           000536 GR
- 18 A$kpdlcdtestPCA$2321                                           000537 GR
- 18 A$kpdlcdtestPCA$2322                                           00053A GR
- 18 A$kpdlcdtestPCA$2323                                           00053B GR
- 18 A$kpdlcdtestPCA$2326                                           00053C GR
- 18 A$kpdlcdtestPCA$2327                                           00053D GR
- 18 A$kpdlcdtestPCA$2328                                           00053E GR
- 18 A$kpdlcdtestPCA$2329                                           000540 GR
- 18 A$kpdlcdtestPCA$2330                                           000541 GR
- 18 A$kpdlcdtestPCA$2331                                           000543 GR
- 18 A$kpdlcdtestPCA$2332                                           000545 GR
- 18 A$kpdlcdtestPCA$2333                                           000547 GR
- 18 A$kpdlcdtestPCA$2334                                           000549 GR
- 18 A$kpdlcdtestPCA$2335                                           00054B GR
- 18 A$kpdlcdtestPCA$2336                                           00054D GR
- 18 A$kpdlcdtestPCA$2337                                           00054F GR
- 18 A$kpdlcdtestPCA$2338                                           000551 GR
- 18 A$kpdlcdtestPCA$2339                                           000553 GR
- 18 A$kpdlcdtestPCA$2340                                           000555 GR
- 18 A$kpdlcdtestPCA$2341                                           000558 GR
- 18 A$kpdlcdtestPCA$2342                                           00055A GR
- 18 A$kpdlcdtestPCA$2343                                           00055C GR
- 18 A$kpdlcdtestPCA$2344                                           00055E GR
- 18 A$kpdlcdtestPCA$2345                                           000560 GR
- 18 A$kpdlcdtestPCA$2348                                           000562 GR
- 18 A$kpdlcdtestPCA$2349                                           000564 GR
- 18 A$kpdlcdtestPCA$2350                                           000566 GR
- 18 A$kpdlcdtestPCA$2351                                           000568 GR
- 18 A$kpdlcdtestPCA$2352                                           00056A GR
- 18 A$kpdlcdtestPCA$2353                                           00056C GR
- 18 A$kpdlcdtestPCA$2354                                           00056E GR
- 18 A$kpdlcdtestPCA$2355                                           000570 GR
- 18 A$kpdlcdtestPCA$2356                                           000572 GR
- 18 A$kpdlcdtestPCA$2357                                           000575 GR
- 18 A$kpdlcdtestPCA$2358                                           000577 GR
- 18 A$kpdlcdtestPCA$2359                                           000579 GR
- 18 A$kpdlcdtestPCA$2360                                           00057B GR
- 18 A$kpdlcdtestPCA$2363                                           00057D GR
- 18 A$kpdlcdtestPCA$2376                                           00057E GR
- 18 A$kpdlcdtestPCA$2379                                           000581 GR
- 18 A$kpdlcdtestPCA$2392                                           000582 GR
- 18 A$kpdlcdtestPCA$2395                                           000585 GR
- 18 A$kpdlcdtestPCA$2398                                           000588 GR
- 18 A$kpdlcdtestPCA$2401                                           00058A GR
- 18 A$kpdlcdtestPCA$2414                                           00058B GR
- 18 A$kpdlcdtestPCA$2417                                           00058E GR
+ 18 A$kpdlcdtestPCA$2307                                           000524 GR
+ 18 A$kpdlcdtestPCA$2308                                           000526 GR
+ 18 A$kpdlcdtestPCA$2309                                           000528 GR
+ 18 A$kpdlcdtestPCA$2310                                           00052A GR
+ 18 A$kpdlcdtestPCA$2311                                           00052C GR
+ 18 A$kpdlcdtestPCA$2312                                           00052E GR
+ 18 A$kpdlcdtestPCA$2313                                           000530 GR
+ 18 A$kpdlcdtestPCA$2314                                           000533 GR
+ 18 A$kpdlcdtestPCA$2315                                           000535 GR
+ 18 A$kpdlcdtestPCA$2316                                           000537 GR
+ 18 A$kpdlcdtestPCA$2319                                           000539 GR
+ 18 A$kpdlcdtestPCA$2320                                           00053C GR
+ 18 A$kpdlcdtestPCA$2323                                           00053E GR
+ 18 A$kpdlcdtestPCA$2336                                           00053F GR
+ 18 A$kpdlcdtestPCA$2339                                           000542 GR
+ 18 A$kpdlcdtestPCA$2352                                           000543 GR
+ 18 A$kpdlcdtestPCA$2355                                           000546 GR
+ 18 A$kpdlcdtestPCA$2358                                           000549 GR
+ 18 A$kpdlcdtestPCA$2361                                           00054B GR
+ 18 A$kpdlcdtestPCA$2374                                           00054C GR
+ 18 A$kpdlcdtestPCA$2377                                           00054F GR
+ 18 A$kpdlcdtestPCA$2380                                           000552 GR
+ 18 A$kpdlcdtestPCA$2393                                           000553 GR
+ 18 A$kpdlcdtestPCA$2396                                           000556 GR
+ 18 A$kpdlcdtestPCA$2399                                           000558 GR
+ 18 A$kpdlcdtestPCA$2410                                           000559 GR
+ 18 A$kpdlcdtestPCA$2411                                           00055B GR
+ 18 A$kpdlcdtestPCA$2416                                           00055D GR
+ 18 A$kpdlcdtestPCA$2417                                           000560 GR
+ 18 A$kpdlcdtestPCA$2421                                           000562 GR
+ 18 A$kpdlcdtestPCA$2422                                           000564 GR
+ 18 A$kpdlcdtestPCA$2423                                           000565 GR
+ 18 A$kpdlcdtestPCA$2424                                           000568 GR
+ 18 A$kpdlcdtestPCA$2428                                           00056A GR
+ 18 A$kpdlcdtestPCA$2429                                           00056C GR
+ 18 A$kpdlcdtestPCA$2430                                           00056D GR
+ 18 A$kpdlcdtestPCA$2431                                           000570 GR
+ 18 A$kpdlcdtestPCA$2435                                           000572 GR
+ 18 A$kpdlcdtestPCA$2436                                           000575 GR
+ 18 A$kpdlcdtestPCA$2439                                           000578 GR
+ 18 A$kpdlcdtestPCA$2440                                           000579 GR
+ 18 A$kpdlcdtestPCA$2441                                           00057B GR
+ 18 A$kpdlcdtestPCA$2442                                           00057D GR
+ 18 A$kpdlcdtestPCA$2443                                           00057E GR
+ 18 A$kpdlcdtestPCA$2444                                           000580 GR
+ 18 A$kpdlcdtestPCA$2447                                           000582 GR
+ 18 A$kpdlcdtestPCA$2448                                           000583 GR
+ 18 A$kpdlcdtestPCA$2449                                           000585 GR
+ 18 A$kpdlcdtestPCA$2452                                           000587 GR
+ 18 A$kpdlcdtestPCA$2454                                           000589 GR
+ 18 A$kpdlcdtestPCA$2455                                           00058C GR
+ 18 A$kpdlcdtestPCA$2456                                           00058E GR
+ 18 A$kpdlcdtestPCA$2460                                           000590 GR
+ 18 A$kpdlcdtestPCA$2462                                           000593 GR
+ 18 A$kpdlcdtestPCA$2463                                           000595 GR
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 14.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
- 18 A$kpdlcdtestPCA$2420                                           000591 GR
- 18 A$kpdlcdtestPCA$2433                                           000592 GR
- 18 A$kpdlcdtestPCA$2436                                           000595 GR
- 18 A$kpdlcdtestPCA$2439                                           000597 GR
- 18 A$kpdlcdtestPCA$2450                                           000598 GR
- 18 A$kpdlcdtestPCA$2451                                           00059A GR
- 18 A$kpdlcdtestPCA$2456                                           00059C GR
- 18 A$kpdlcdtestPCA$2457                                           00059F GR
- 18 A$kpdlcdtestPCA$2461                                           0005A1 GR
- 18 A$kpdlcdtestPCA$2462                                           0005A3 GR
- 18 A$kpdlcdtestPCA$2463                                           0005A4 GR
- 18 A$kpdlcdtestPCA$2464                                           0005A7 GR
- 18 A$kpdlcdtestPCA$2468                                           0005A9 GR
- 18 A$kpdlcdtestPCA$2469                                           0005AB GR
- 18 A$kpdlcdtestPCA$2470                                           0005AC GR
- 18 A$kpdlcdtestPCA$2471                                           0005AF GR
- 18 A$kpdlcdtestPCA$2475                                           0005B1 GR
- 18 A$kpdlcdtestPCA$2476                                           0005B4 GR
- 18 A$kpdlcdtestPCA$2479                                           0005B7 GR
- 18 A$kpdlcdtestPCA$2480                                           0005B8 GR
- 18 A$kpdlcdtestPCA$2481                                           0005BA GR
- 18 A$kpdlcdtestPCA$2482                                           0005BC GR
- 18 A$kpdlcdtestPCA$2483                                           0005BD GR
- 18 A$kpdlcdtestPCA$2484                                           0005BF GR
- 18 A$kpdlcdtestPCA$2487                                           0005C1 GR
- 18 A$kpdlcdtestPCA$2488                                           0005C2 GR
- 18 A$kpdlcdtestPCA$2489                                           0005C4 GR
- 18 A$kpdlcdtestPCA$2492                                           0005C6 GR
- 18 A$kpdlcdtestPCA$2494                                           0005C8 GR
- 18 A$kpdlcdtestPCA$2495                                           0005CB GR
- 18 A$kpdlcdtestPCA$2496                                           0005CD GR
- 18 A$kpdlcdtestPCA$2500                                           0005CF GR
- 18 A$kpdlcdtestPCA$2502                                           0005D2 GR
- 18 A$kpdlcdtestPCA$2503                                           0005D4 GR
- 18 A$kpdlcdtestPCA$2506                                           0005D6 GR
- 18 A$kpdlcdtestPCA$2523                                           0005D7 GR
- 18 A$kpdlcdtestPCA$2524                                           0005D8 GR
- 18 A$kpdlcdtestPCA$2525                                           0005DA GR
- 18 A$kpdlcdtestPCA$2529                                           0005DC GR
- 18 A$kpdlcdtestPCA$2530                                           0005DD GR
- 18 A$kpdlcdtestPCA$2531                                           0005DF GR
- 18 A$kpdlcdtestPCA$2532                                           0005E1 GR
- 18 A$kpdlcdtestPCA$2533                                           0005E3 GR
- 18 A$kpdlcdtestPCA$2534                                           0005E5 GR
- 18 A$kpdlcdtestPCA$2537                                           0005E7 GR
- 18 A$kpdlcdtestPCA$2550                                           0005E8 GR
- 18 A$kpdlcdtestPCA$2551                                           0005E9 GR
- 18 A$kpdlcdtestPCA$2552                                           0005EB GR
- 18 A$kpdlcdtestPCA$2556                                           0005ED GR
- 18 A$kpdlcdtestPCA$2557                                           0005EE GR
- 18 A$kpdlcdtestPCA$2558                                           0005F0 GR
- 18 A$kpdlcdtestPCA$2559                                           0005F2 GR
- 18 A$kpdlcdtestPCA$2560                                           0005F4 GR
- 18 A$kpdlcdtestPCA$2561                                           0005F6 GR
- 18 A$kpdlcdtestPCA$2564                                           0005F8 GR
+ 18 A$kpdlcdtestPCA$2466                                           000597 GR
+ 18 A$kpdlcdtestPCA$2483                                           000598 GR
+ 18 A$kpdlcdtestPCA$2484                                           000599 GR
+ 18 A$kpdlcdtestPCA$2485                                           00059B GR
+ 18 A$kpdlcdtestPCA$2489                                           00059D GR
+ 18 A$kpdlcdtestPCA$2490                                           00059E GR
+ 18 A$kpdlcdtestPCA$2491                                           0005A0 GR
+ 18 A$kpdlcdtestPCA$2492                                           0005A2 GR
+ 18 A$kpdlcdtestPCA$2493                                           0005A4 GR
+ 18 A$kpdlcdtestPCA$2494                                           0005A6 GR
+ 18 A$kpdlcdtestPCA$2497                                           0005A8 GR
+ 18 A$kpdlcdtestPCA$2510                                           0005A9 GR
+ 18 A$kpdlcdtestPCA$2511                                           0005AA GR
+ 18 A$kpdlcdtestPCA$2512                                           0005AC GR
+ 18 A$kpdlcdtestPCA$2516                                           0005AE GR
+ 18 A$kpdlcdtestPCA$2517                                           0005AF GR
+ 18 A$kpdlcdtestPCA$2518                                           0005B1 GR
+ 18 A$kpdlcdtestPCA$2519                                           0005B3 GR
+ 18 A$kpdlcdtestPCA$2520                                           0005B5 GR
+ 18 A$kpdlcdtestPCA$2521                                           0005B7 GR
+ 18 A$kpdlcdtestPCA$2524                                           0005B9 GR
+ 18 A$kpdlcdtestPCA$2540                                           0005BA GR
+ 18 A$kpdlcdtestPCA$2543                                           0005BC GR
+ 18 A$kpdlcdtestPCA$2544                                           0005BE GR
+ 18 A$kpdlcdtestPCA$2545                                           0005C1 GR
+ 18 A$kpdlcdtestPCA$2548                                           0005C3 GR
+ 18 A$kpdlcdtestPCA$2549                                           0005C5 GR
+ 18 A$kpdlcdtestPCA$2550                                           0005C8 GR
+ 18 A$kpdlcdtestPCA$2551                                           0005CA GR
+ 18 A$kpdlcdtestPCA$2555                                           0005CC GR
+ 18 A$kpdlcdtestPCA$2558                                           0005CF GR
+ 18 A$kpdlcdtestPCA$2559                                           0005D1 GR
+ 18 A$kpdlcdtestPCA$2560                                           0005D4 GR
+ 18 A$kpdlcdtestPCA$2561                                           0005D6 GR
+ 18 A$kpdlcdtestPCA$2562                                           0005D8 GR
+ 18 A$kpdlcdtestPCA$2566                                           0005DA GR
+ 18 A$kpdlcdtestPCA$2567                                           0005DD GR
+ 18 A$kpdlcdtestPCA$2571                                           0005DF GR
+ 18 A$kpdlcdtestPCA$2572                                           0005E1 GR
+ 18 A$kpdlcdtestPCA$2573                                           0005E4 GR
+ 18 A$kpdlcdtestPCA$2576                                           0005E6 GR
+ 18 A$kpdlcdtestPCA$2577                                           0005E7 GR
+ 18 A$kpdlcdtestPCA$2578                                           0005E8 GR
+ 18 A$kpdlcdtestPCA$2579                                           0005E9 GR
+ 18 A$kpdlcdtestPCA$2580                                           0005EB GR
+ 18 A$kpdlcdtestPCA$2581                                           0005EC GR
+ 18 A$kpdlcdtestPCA$2582                                           0005EE GR
+ 18 A$kpdlcdtestPCA$2583                                           0005F0 GR
+ 18 A$kpdlcdtestPCA$2584                                           0005F2 GR
+ 18 A$kpdlcdtestPCA$2585                                           0005F4 GR
+ 18 A$kpdlcdtestPCA$2586                                           0005F6 GR
+ 18 A$kpdlcdtestPCA$2587                                           0005F8 GR
+ 18 A$kpdlcdtestPCA$2588                                           0005FA GR
+ 18 A$kpdlcdtestPCA$2589                                           0005FC GR
+ 18 A$kpdlcdtestPCA$2590                                           0005FE GR
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 15.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
- 18 A$kpdlcdtestPCA$2579                                           0005F9 GR
- 18 A$kpdlcdtestPCA$2580                                           0005FC GR
- 18 A$kpdlcdtestPCA$2583                                           0005FE GR
- 18 A$kpdlcdtestPCA$2584                                           000600 GR
- 18 A$kpdlcdtestPCA$2585                                           000603 GR
- 18 A$kpdlcdtestPCA$2589                                           000605 GR
- 18 A$kpdlcdtestPCA$2592                                           000608 GR
- 18 A$kpdlcdtestPCA$2593                                           00060B GR
- 18 A$kpdlcdtestPCA$2594                                           00060D GR
+ 18 A$kpdlcdtestPCA$2591                                           000600 GR
+ 18 A$kpdlcdtestPCA$2592                                           000602 GR
+ 18 A$kpdlcdtestPCA$2593                                           000604 GR
+ 18 A$kpdlcdtestPCA$2594                                           000606 GR
+ 18 A$kpdlcdtestPCA$2595                                           000609 GR
+ 18 A$kpdlcdtestPCA$2596                                           00060B GR
+ 18 A$kpdlcdtestPCA$2597                                           00060D GR
  18 A$kpdlcdtestPCA$2598                                           00060F GR
- 18 A$kpdlcdtestPCA$2599                                           000612 GR
- 18 A$kpdlcdtestPCA$2603                                           000614 GR
- 18 A$kpdlcdtestPCA$2604                                           000616 GR
+ 18 A$kpdlcdtestPCA$2599                                           000611 GR
+ 18 A$kpdlcdtestPCA$2602                                           000613 GR
+ 18 A$kpdlcdtestPCA$2603                                           000615 GR
+ 18 A$kpdlcdtestPCA$2604                                           000617 GR
  18 A$kpdlcdtestPCA$2605                                           000619 GR
- 18 A$kpdlcdtestPCA$2608                                           00061B GR
- 18 A$kpdlcdtestPCA$2609                                           00061C GR
- 18 A$kpdlcdtestPCA$2610                                           00061D GR
- 18 A$kpdlcdtestPCA$2611                                           00061E GR
- 18 A$kpdlcdtestPCA$2612                                           000620 GR
- 18 A$kpdlcdtestPCA$2613                                           000621 GR
- 18 A$kpdlcdtestPCA$2614                                           000623 GR
- 18 A$kpdlcdtestPCA$2615                                           000625 GR
- 18 A$kpdlcdtestPCA$2616                                           000627 GR
- 18 A$kpdlcdtestPCA$2617                                           000629 GR
- 18 A$kpdlcdtestPCA$2618                                           00062B GR
- 18 A$kpdlcdtestPCA$2619                                           00062D GR
- 18 A$kpdlcdtestPCA$2620                                           00062F GR
- 18 A$kpdlcdtestPCA$2621                                           000631 GR
- 18 A$kpdlcdtestPCA$2622                                           000633 GR
- 18 A$kpdlcdtestPCA$2623                                           000635 GR
- 18 A$kpdlcdtestPCA$2624                                           000637 GR
- 18 A$kpdlcdtestPCA$2625                                           000639 GR
- 18 A$kpdlcdtestPCA$2626                                           00063B GR
- 18 A$kpdlcdtestPCA$2627                                           00063E GR
- 18 A$kpdlcdtestPCA$2628                                           000640 GR
- 18 A$kpdlcdtestPCA$2629                                           000642 GR
- 18 A$kpdlcdtestPCA$2630                                           000644 GR
- 18 A$kpdlcdtestPCA$2631                                           000646 GR
- 18 A$kpdlcdtestPCA$2634                                           000648 GR
- 18 A$kpdlcdtestPCA$2635                                           00064A GR
- 18 A$kpdlcdtestPCA$2636                                           00064C GR
- 18 A$kpdlcdtestPCA$2637                                           00064E GR
- 18 A$kpdlcdtestPCA$2638                                           000650 GR
- 18 A$kpdlcdtestPCA$2639                                           000652 GR
- 18 A$kpdlcdtestPCA$2640                                           000654 GR
- 18 A$kpdlcdtestPCA$2641                                           000656 GR
- 18 A$kpdlcdtestPCA$2642                                           000658 GR
- 18 A$kpdlcdtestPCA$2643                                           00065A GR
- 18 A$kpdlcdtestPCA$2644                                           00065C GR
- 18 A$kpdlcdtestPCA$2645                                           00065F GR
- 18 A$kpdlcdtestPCA$2646                                           000661 GR
- 18 A$kpdlcdtestPCA$2647                                           000663 GR
- 18 A$kpdlcdtestPCA$2648                                           000665 GR
- 18 A$kpdlcdtestPCA$2651                                           000667 GR
- 18 A$kpdlcdtestPCA$2652                                           000668 GR
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 16.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
- 18 A$kpdlcdtestPCA$2653                                           00066A GR
- 18 A$kpdlcdtestPCA$2654                                           00066C GR
- 18 A$kpdlcdtestPCA$2655                                           00066E GR
- 18 A$kpdlcdtestPCA$2656                                           000670 GR
- 18 A$kpdlcdtestPCA$2657                                           000672 GR
- 18 A$kpdlcdtestPCA$2658                                           000674 GR
- 18 A$kpdlcdtestPCA$2659                                           000676 GR
- 18 A$kpdlcdtestPCA$2660                                           000678 GR
- 18 A$kpdlcdtestPCA$2661                                           00067B GR
- 18 A$kpdlcdtestPCA$2662                                           00067D GR
- 18 A$kpdlcdtestPCA$2663                                           00067F GR
- 18 A$kpdlcdtestPCA$2664                                           000681 GR
- 18 A$kpdlcdtestPCA$2668                                           000683 GR
- 18 A$kpdlcdtestPCA$2669                                           000686 GR
- 18 A$kpdlcdtestPCA$2671                                           000688 GR
- 18 A$kpdlcdtestPCA$2672                                           00068B GR
- 18 A$kpdlcdtestPCA$2673                                           00068D GR
- 18 A$kpdlcdtestPCA$2677                                           00068F GR
- 18 A$kpdlcdtestPCA$2678                                           000690 GR
- 18 A$kpdlcdtestPCA$2679                                           000692 GR
- 18 A$kpdlcdtestPCA$2682                                           000694 GR
+ 18 A$kpdlcdtestPCA$2606                                           00061B GR
+ 18 A$kpdlcdtestPCA$2607                                           00061D GR
+ 18 A$kpdlcdtestPCA$2608                                           00061F GR
+ 18 A$kpdlcdtestPCA$2609                                           000621 GR
+ 18 A$kpdlcdtestPCA$2610                                           000623 GR
+ 18 A$kpdlcdtestPCA$2611                                           000625 GR
+ 18 A$kpdlcdtestPCA$2612                                           000627 GR
+ 18 A$kpdlcdtestPCA$2613                                           00062A GR
+ 18 A$kpdlcdtestPCA$2614                                           00062C GR
+ 18 A$kpdlcdtestPCA$2615                                           00062E GR
+ 18 A$kpdlcdtestPCA$2616                                           000630 GR
+ 18 A$kpdlcdtestPCA$2619                                           000632 GR
+ 18 A$kpdlcdtestPCA$2620                                           000633 GR
+ 18 A$kpdlcdtestPCA$2621                                           000635 GR
+ 18 A$kpdlcdtestPCA$2622                                           000637 GR
+ 18 A$kpdlcdtestPCA$2623                                           000639 GR
+ 18 A$kpdlcdtestPCA$2624                                           00063B GR
+ 18 A$kpdlcdtestPCA$2625                                           00063D GR
+ 18 A$kpdlcdtestPCA$2626                                           00063F GR
+ 18 A$kpdlcdtestPCA$2627                                           000641 GR
+ 18 A$kpdlcdtestPCA$2628                                           000643 GR
+ 18 A$kpdlcdtestPCA$2629                                           000646 GR
+ 18 A$kpdlcdtestPCA$2630                                           000648 GR
+ 18 A$kpdlcdtestPCA$2631                                           00064A GR
+ 18 A$kpdlcdtestPCA$2632                                           00064C GR
+ 18 A$kpdlcdtestPCA$2636                                           00064E GR
+ 18 A$kpdlcdtestPCA$2640                                           000650 GR
+ 18 A$kpdlcdtestPCA$2641                                           000653 GR
+ 18 A$kpdlcdtestPCA$2643                                           000655 GR
+ 18 A$kpdlcdtestPCA$2644                                           000657 GR
+ 18 A$kpdlcdtestPCA$2645                                           00065A GR
+ 18 A$kpdlcdtestPCA$2646                                           00065C GR
+ 18 A$kpdlcdtestPCA$2647                                           00065E GR
+ 18 A$kpdlcdtestPCA$2651                                           000660 GR
+ 18 A$kpdlcdtestPCA$2652                                           000661 GR
+ 18 A$kpdlcdtestPCA$2653                                           000663 GR
+ 18 A$kpdlcdtestPCA$2656                                           000665 GR
     A.0                                                         =  0000E0 L
     A.1                                                         =  0000E1 L
     A.2                                                         =  0000E2 L
     A.3                                                         =  0000E3 L
     A.4                                                         =  0000E4 L
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 16.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
     A.5                                                         =  0000E5 L
     A.6                                                         =  0000E6 L
     A.7                                                         =  0000E7 L
@@ -958,11 +932,6 @@ Symbol Table
  18 C$c8051_SDCC.h$108$1$37                                     =  00004D GR
  18 C$c8051_SDCC.h$111$1$39                                     =  00004D GR
  18 C$c8051_SDCC.h$112$1$39                                     =  00004D GR
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 17.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
  18 C$c8051_SDCC.h$113$1$39                                     =  000052 GR
  18 C$c8051_SDCC.h$114$1$39                                     =  000055 GR
  18 C$c8051_SDCC.h$115$1$39                                     =  000058 GR
@@ -989,6 +958,11 @@ Symbol Table
  18 C$c8051_SDCC.h$88$1$35                                      =  000036 GR
  18 C$c8051_SDCC.h$89$1$35                                      =  000039 GR
  18 C$c8051_SDCC.h$91$1$35                                      =  00003C GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 17.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
  18 C$c8051_SDCC.h$92$1$35                                      =  00003F GR
  18 C$c8051_SDCC.h$93$1$35                                      =  000042 GR
  18 C$c8051_SDCC.h$98$1$35                                      =  000043 GR
@@ -1018,11 +992,6 @@ Symbol Table
  18 C$i2c.h$160$1$81                                            =  0001FA GR
  18 C$i2c.h$164$1$81                                            =  0002FC GR
  18 C$i2c.h$166$3$84                                            =  00020A GR
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 18.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
  18 C$i2c.h$167$2$82                                            =  00023C GR
  18 C$i2c.h$169$3$83                                            =  00023F GR
  18 C$i2c.h$170$3$83                                            =  000262 GR
@@ -1049,6 +1018,11 @@ Symbol Table
  18 C$i2c.h$217$1$92                                            =  000350 GR
  18 C$i2c.h$218$1$92                                            =  000352 GR
  18 C$i2c.h$219$1$92                                            =  000352 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 18.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
  18 C$i2c.h$220$1$92                                            =  000357 GR
  18 C$i2c.h$223$1$92                                            =  000358 GR
  18 C$i2c.h$226$1$94                                            =  000358 GR
@@ -1078,11 +1052,6 @@ Symbol Table
  18 C$i2c.h$263$1$100                                           =  0003F1 GR
  18 C$i2c.h$264$1$100                                           =  0003FD GR
  18 C$i2c.h$265$1$100                                           =  000403 GR
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 19.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
  18 C$i2c.h$266$1$100                                           =  000408 GR
  18 C$i2c.h$267$1$100                                           =  000459 GR
  18 C$i2c.h$269$2$101                                           =  00042E GR
@@ -1106,78 +1075,83 @@ Symbol Table
  18 C$i2c.h$94$1$73                                             =  0000C7 GR
  18 C$i2c.h$96$2$76                                             =  0000AB GR
  18 C$i2c.h$99$1$73                                             =  0000CA GR
- 18 C$kpdlcdtestPCA.c$100$2$125                                 =  0005A9 GR
- 18 C$kpdlcdtestPCA.c$101$2$125                                 =  0005B1 GR
- 18 C$kpdlcdtestPCA.c$102$2$125                                 =  0005B7 GR
- 18 C$kpdlcdtestPCA.c$104$3$126                                 =  0005C1 GR
- 18 C$kpdlcdtestPCA.c$105$3$126                                 =  0005C6 GR
- 18 C$kpdlcdtestPCA.c$108$1$124                                 =  0005CF GR
- 18 C$kpdlcdtestPCA.c$109$1$124                                 =  0005D6 GR
- 18 C$kpdlcdtestPCA.c$111$1$124                                 =  0005D7 GR
- 18 C$kpdlcdtestPCA.c$113$1$128                                 =  0005D7 GR
- 18 C$kpdlcdtestPCA.c$114$1$128                                 =  0005DC GR
- 18 C$kpdlcdtestPCA.c$115$1$128                                 =  0005E7 GR
- 18 C$kpdlcdtestPCA.c$117$1$128                                 =  0005E8 GR
- 18 C$kpdlcdtestPCA.c$119$1$130                                 =  0005E8 GR
- 18 C$kpdlcdtestPCA.c$120$1$130                                 =  0005ED GR
- 18 C$kpdlcdtestPCA.c$121$1$130                                 =  0005F8 GR
- 18 C$kpdlcdtestPCA.c$123$1$130                                 =  0005F9 GR
- 18 C$kpdlcdtestPCA.c$126$1$132                                 =  0005F9 GR
- 18 C$kpdlcdtestPCA.c$127$1$132                                 =  0005FE GR
- 18 C$kpdlcdtestPCA.c$130$1$132                                 =  000605 GR
- 18 C$kpdlcdtestPCA.c$132$2$133                                 =  000608 GR
- 18 C$kpdlcdtestPCA.c$134$1$132                                 =  00060F GR
- 18 C$kpdlcdtestPCA.c$138$2$134                                 =  000614 GR
- 18 C$kpdlcdtestPCA.c$139$2$134                                 =  00061B GR
- 18 C$kpdlcdtestPCA.c$140$2$134                                 =  000648 GR
- 18 C$kpdlcdtestPCA.c$141$2$134                                 =  000667 GR
- 18 C$kpdlcdtestPCA.c$143$1$132                                 =  000683 GR
- 18 C$kpdlcdtestPCA.c$144$1$132                                 =  00068F GR
- 18 C$kpdlcdtestPCA.c$145$1$132                                 =  000694 GR
+ 18 C$kpdlcdtestPCA.c$100$1$124                                 =  00055D GR
+ 18 C$kpdlcdtestPCA.c$102$2$125                                 =  00055D GR
+ 18 C$kpdlcdtestPCA.c$103$2$125                                 =  000562 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 19.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+ 18 C$kpdlcdtestPCA.c$104$2$125                                 =  00056A GR
+ 18 C$kpdlcdtestPCA.c$105$2$125                                 =  000572 GR
+ 18 C$kpdlcdtestPCA.c$106$2$125                                 =  000578 GR
+ 18 C$kpdlcdtestPCA.c$108$3$126                                 =  000582 GR
+ 18 C$kpdlcdtestPCA.c$109$3$126                                 =  000587 GR
+ 18 C$kpdlcdtestPCA.c$112$1$124                                 =  000590 GR
+ 18 C$kpdlcdtestPCA.c$113$1$124                                 =  000597 GR
+ 18 C$kpdlcdtestPCA.c$115$1$124                                 =  000598 GR
+ 18 C$kpdlcdtestPCA.c$117$1$128                                 =  000598 GR
+ 18 C$kpdlcdtestPCA.c$118$1$128                                 =  00059D GR
+ 18 C$kpdlcdtestPCA.c$119$1$128                                 =  0005A8 GR
+ 18 C$kpdlcdtestPCA.c$121$1$128                                 =  0005A9 GR
+ 18 C$kpdlcdtestPCA.c$123$1$130                                 =  0005A9 GR
+ 18 C$kpdlcdtestPCA.c$124$1$130                                 =  0005AE GR
+ 18 C$kpdlcdtestPCA.c$125$1$130                                 =  0005B9 GR
+ 18 C$kpdlcdtestPCA.c$127$1$130                                 =  0005BA GR
+ 18 C$kpdlcdtestPCA.c$130$1$130                                 =  0005BA GR
+ 18 C$kpdlcdtestPCA.c$131$1$132                                 =  0005BC GR
+ 18 C$kpdlcdtestPCA.c$132$1$132                                 =  0005C3 GR
+ 18 C$kpdlcdtestPCA.c$135$1$132                                 =  0005CC GR
+ 18 C$kpdlcdtestPCA.c$137$2$133                                 =  0005CF GR
+ 18 C$kpdlcdtestPCA.c$139$1$132                                 =  0005DA GR
+ 18 C$kpdlcdtestPCA.c$143$2$134                                 =  0005DF GR
+ 18 C$kpdlcdtestPCA.c$144$2$134                                 =  0005E6 GR
+ 18 C$kpdlcdtestPCA.c$145$2$134                                 =  000613 GR
+ 18 C$kpdlcdtestPCA.c$146$2$134                                 =  000632 GR
+ 18 C$kpdlcdtestPCA.c$147$2$134                                 =  00064E GR
+ 18 C$kpdlcdtestPCA.c$149$1$132                                 =  000650 GR
+ 18 C$kpdlcdtestPCA.c$150$1$132                                 =  000660 GR
+ 18 C$kpdlcdtestPCA.c$151$1$132                                 =  000665 GR
  18 C$kpdlcdtestPCA.c$39$1$103                                  =  0004D6 GR
- 18 C$kpdlcdtestPCA.c$44$1$113                                  =  0004D6 GR
- 18 C$kpdlcdtestPCA.c$45$1$113                                  =  0004D9 GR
- 18 C$kpdlcdtestPCA.c$46$1$113                                  =  0004DC GR
+ 18 C$kpdlcdtestPCA.c$45$1$113                                  =  0004D6 GR
+ 18 C$kpdlcdtestPCA.c$46$1$113                                  =  0004D9 GR
+ 18 C$kpdlcdtestPCA.c$47$1$113                                  =  0004DC GR
+ 18 C$kpdlcdtestPCA.c$48$1$113                                  =  0004DF GR
+ 18 C$kpdlcdtestPCA.c$49$1$113                                  =  0004E2 GR
+ 18 C$kpdlcdtestPCA.c$50$1$113                                  =  0004E5 GR
+ 18 C$kpdlcdtestPCA.c$51$1$113                                  =  0004EB GR
+ 18 C$kpdlcdtestPCA.c$52$1$113                                  =  000500 GR
+ 18 C$kpdlcdtestPCA.c$53$1$113                                  =  000503 GR
+ 18 C$kpdlcdtestPCA.c$54$1$113                                  =  000508 GR
+ 18 C$kpdlcdtestPCA.c$55$1$113                                  =  000513 GR
+ 18 C$kpdlcdtestPCA.c$57$1$113                                  =  000516 GR
+ 18 C$kpdlcdtestPCA.c$65$2$114                                  =  000516 GR
+ 18 C$kpdlcdtestPCA.c$66$2$114                                  =  000520 GR
+ 18 C$kpdlcdtestPCA.c$67$2$114                                  =  000539 GR
+ 18 C$kpdlcdtestPCA.c$70$1$113                                  =  00053E GR
+ 18 C$kpdlcdtestPCA.c$73$1$113                                  =  00053F GR
+ 18 C$kpdlcdtestPCA.c$75$1$116                                  =  00053F GR
+ 18 C$kpdlcdtestPCA.c$76$1$116                                  =  000542 GR
+ 18 C$kpdlcdtestPCA.c$78$1$116                                  =  000543 GR
+ 18 C$kpdlcdtestPCA.c$80$1$118                                  =  000543 GR
+ 18 C$kpdlcdtestPCA.c$81$1$118                                  =  000546 GR
+ 18 C$kpdlcdtestPCA.c$82$1$118                                  =  000549 GR
+ 18 C$kpdlcdtestPCA.c$83$1$118                                  =  00054B GR
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 20.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
- 18 C$kpdlcdtestPCA.c$47$1$113                                  =  0004DF GR
- 18 C$kpdlcdtestPCA.c$48$1$113                                  =  0004E2 GR
- 18 C$kpdlcdtestPCA.c$49$1$113                                  =  0004E5 GR
- 18 C$kpdlcdtestPCA.c$50$1$113                                  =  0004EB GR
- 18 C$kpdlcdtestPCA.c$52$1$113                                  =  000500 GR
- 18 C$kpdlcdtestPCA.c$53$1$113                                  =  000505 GR
- 18 C$kpdlcdtestPCA.c$55$1$113                                  =  000510 GR
- 18 C$kpdlcdtestPCA.c$56$1$113                                  =  000513 GR
- 18 C$kpdlcdtestPCA.c$57$1$113                                  =  000528 GR
- 18 C$kpdlcdtestPCA.c$59$2$114                                  =  000528 GR
- 18 C$kpdlcdtestPCA.c$60$2$114                                  =  00052D GR
- 18 C$kpdlcdtestPCA.c$61$2$114                                  =  000536 GR
- 18 C$kpdlcdtestPCA.c$62$2$114                                  =  00053C GR
- 18 C$kpdlcdtestPCA.c$63$2$114                                  =  000562 GR
- 18 C$kpdlcdtestPCA.c$66$1$113                                  =  00057D GR
- 18 C$kpdlcdtestPCA.c$69$1$113                                  =  00057E GR
- 18 C$kpdlcdtestPCA.c$71$1$116                                  =  00057E GR
- 18 C$kpdlcdtestPCA.c$72$1$116                                  =  000581 GR
- 18 C$kpdlcdtestPCA.c$74$1$116                                  =  000582 GR
- 18 C$kpdlcdtestPCA.c$76$1$118                                  =  000582 GR
- 18 C$kpdlcdtestPCA.c$77$1$118                                  =  000585 GR
- 18 C$kpdlcdtestPCA.c$78$1$118                                  =  000588 GR
- 18 C$kpdlcdtestPCA.c$79$1$118                                  =  00058A GR
- 18 C$kpdlcdtestPCA.c$81$1$118                                  =  00058B GR
- 18 C$kpdlcdtestPCA.c$83$1$120                                  =  00058B GR
- 18 C$kpdlcdtestPCA.c$85$1$120                                  =  00058E GR
- 18 C$kpdlcdtestPCA.c$86$1$120                                  =  000591 GR
- 18 C$kpdlcdtestPCA.c$88$1$120                                  =  000592 GR
- 18 C$kpdlcdtestPCA.c$90$1$122                                  =  000592 GR
- 18 C$kpdlcdtestPCA.c$91$1$122                                  =  000595 GR
- 18 C$kpdlcdtestPCA.c$92$1$122                                  =  000597 GR
- 18 C$kpdlcdtestPCA.c$94$1$122                                  =  000598 GR
- 18 C$kpdlcdtestPCA.c$96$1$124                                  =  00059C GR
- 18 C$kpdlcdtestPCA.c$98$2$125                                  =  00059C GR
- 18 C$kpdlcdtestPCA.c$99$2$125                                  =  0005A1 GR
+ 18 C$kpdlcdtestPCA.c$85$1$118                                  =  00054C GR
+ 18 C$kpdlcdtestPCA.c$87$1$120                                  =  00054C GR
+ 18 C$kpdlcdtestPCA.c$89$1$120                                  =  00054F GR
+ 18 C$kpdlcdtestPCA.c$90$1$120                                  =  000552 GR
+ 18 C$kpdlcdtestPCA.c$92$1$120                                  =  000553 GR
+ 18 C$kpdlcdtestPCA.c$94$1$122                                  =  000553 GR
+ 18 C$kpdlcdtestPCA.c$95$1$122                                  =  000556 GR
+ 18 C$kpdlcdtestPCA.c$96$1$122                                  =  000558 GR
+ 18 C$kpdlcdtestPCA.c$98$1$122                                  =  000559 GR
     CPRL2                                                       =  0000C8 L
     CT2                                                         =  0000C9 L
     CY                                                          =  0000D7 L
@@ -1198,15 +1172,9 @@ Symbol Table
  19 FkpdlcdtestPCA$__str_2$0$0                                  =  000026 GR
  19 FkpdlcdtestPCA$__str_3$0$0                                  =  000029 GR
  19 FkpdlcdtestPCA$__str_4$0$0                                  =  000032 GR
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 21.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
- 19 FkpdlcdtestPCA$__str_5$0$0                                  =  000066 GR
- 19 FkpdlcdtestPCA$__str_6$0$0                                  =  000075 GR
- 19 FkpdlcdtestPCA$__str_7$0$0                                  =  000092 GR
- 19 FkpdlcdtestPCA$__str_8$0$0                                  =  0000B0 GR
+ 19 FkpdlcdtestPCA$__str_5$0$0                                  =  000044 GR
+ 19 FkpdlcdtestPCA$__str_6$0$0                                  =  000061 GR
+ 19 FkpdlcdtestPCA$__str_7$0$0                                  =  00007F GR
     G$AA$0$0                                                    =  0000C2 G
     G$AC$0$0                                                    =  0000D6 G
     G$ACC$0$0                                                   =  0000E0 G
@@ -1230,6 +1198,11 @@ Symbol Table
     G$ADC0LT$0$0                                                =  00C7C6 G
     G$ADC0LTH$0$0                                               =  0000C7 G
     G$ADC0LTL$0$0                                               =  0000C6 G
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 21.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
     G$ADC1$0$0                                                  =  00009C G
     G$ADC1CF$0$0                                                =  0000AB G
     G$ADC1CN$0$0                                                =  0000AA G
@@ -1258,11 +1231,6 @@ Symbol Table
     G$CCF0$0$0                                                  =  0000D8 G
     G$CCF1$0$0                                                  =  0000D9 G
     G$CCF2$0$0                                                  =  0000DA G
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 22.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
     G$CCF3$0$0                                                  =  0000DB G
     G$CCF4$0$0                                                  =  0000DC G
     G$CF$0$0                                                    =  0000DF G
@@ -1290,6 +1258,11 @@ Symbol Table
     G$EIP1$0$0                                                  =  0000F6 G
     G$EIP2$0$0                                                  =  0000F7 G
     G$EMI0CF$0$0                                                =  0000A3 G
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 22.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
     G$EMI0CN$0$0                                                =  0000AF G
     G$EMI0TC$0$0                                                =  0000A1 G
     G$ENSMB$0$0                                                 =  0000C6 G
@@ -1312,17 +1285,12 @@ Symbol Table
     G$IP$0$0                                                    =  0000B8 G
     G$IT0$0$0                                                   =  000088 G
     G$IT1$0$0                                                   =  00008A G
- 18 G$Interrupt_Init$0$0                                        =  000582 GR
- 18 G$KeyResult$0$0                                             =  0005F9 GR
+ 18 G$Interrupt_Init$0$0                                        =  000543 GR
+ 18 G$KeyResult$0$0                                             =  0005BA GR
     G$MCE0$0$0                                                  =  00009D G
     G$MODF$0$0                                                  =  0000FD G
     G$MSTEN$0$0                                                 =  0000F9 G
     G$OSCICN$0$0                                                =  0000B2 G
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 23.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
     G$OSCXCN$0$0                                                =  0000B1 G
     G$OV$0$0                                                    =  0000D2 G
     G$P$0$0                                                     =  0000D0 G
@@ -1350,6 +1318,11 @@ Symbol Table
     G$P2$0$0                                                    =  0000A0 G
     G$P2MDOUT$0$0                                               =  0000A6 G
     G$P2_0$0$0                                                  =  0000A0 G
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 23.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
     G$P2_1$0$0                                                  =  0000A1 G
     G$P2_2$0$0                                                  =  0000A2 G
     G$P2_3$0$0                                                  =  0000A3 G
@@ -1378,11 +1351,6 @@ Symbol Table
     G$PCA0CP0$0$0                                               =  00FAEA G
     G$PCA0CP1$0$0                                               =  00FBEB G
     G$PCA0CP2$0$0                                               =  00FCEC G
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 24.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
     G$PCA0CP3$0$0                                               =  00FDED G
     G$PCA0CP4$0$0                                               =  00FEEE G
     G$PCA0CPH0$0$0                                              =  0000FA G
@@ -1403,13 +1371,18 @@ Symbol Table
     G$PCA0H$0$0                                                 =  0000F9 G
     G$PCA0L$0$0                                                 =  0000E9 G
     G$PCA0MD$0$0                                                =  0000D9 G
- 18 G$PCA_ISR$0$0                                               =  000598 GR
- 18 G$PCA_Init$0$0                                              =  00058B GR
+ 18 G$PCA_ISR$0$0                                               =  000559 GR
+ 18 G$PCA_Init$0$0                                              =  00054C GR
     G$PCON$0$0                                                  =  000087 G
     G$PRT0CF$0$0                                                =  0000A4 G
     G$PRT1CF$0$0                                                =  0000A5 G
     G$PRT2CF$0$0                                                =  0000A6 G
     G$PRT3CF$0$0                                                =  0000A7 G
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 24.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
     G$PS$0$0                                                    =  0000BC G
     G$PS0$0$0                                                   =  0000BC G
     G$PSCTL$0$0                                                 =  00008F G
@@ -1419,7 +1392,7 @@ Symbol Table
     G$PT2$0$0                                                   =  0000BD G
     G$PX0$0$0                                                   =  0000B8 G
     G$PX1$0$0                                                   =  0000BA G
- 18 G$Port_Init$0$0                                             =  00057E GR
+ 18 G$Port_Init$0$0                                             =  00053F GR
     G$RB8$0$0                                                   =  00009A G
     G$RB80$0$0                                                  =  00009A G
     G$RCAP2$0$0                                                 =  00CBCA G
@@ -1438,11 +1411,6 @@ Symbol Table
     G$RS1$0$0                                                   =  0000D4 G
     G$RSTSRC$0$0                                                =  0000EF G
     G$RXOVRN$0$0                                                =  0000FC G
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 25.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
     G$S0MODE$0$0                                                =  00009F G
     G$SADDR0$0$0                                                =  0000A9 G
     G$SADDR1$0$0                                                =  0000F3 G
@@ -1467,9 +1435,14 @@ Symbol Table
     G$SMB0CR$0$0                                                =  0000CF G
     G$SMB0DAT$0$0                                               =  0000C2 G
     G$SMB0STA$0$0                                               =  0000C1 G
- 18 G$SMB0_Init$0$0                                             =  000592 GR
+ 18 G$SMB0_Init$0$0                                             =  000553 GR
     G$SMBFTE$0$0                                                =  0000C1 G
     G$SMBTOE$0$0                                                =  0000C0 G
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 25.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
     G$SP$0$0                                                    =  000081 G
     G$SPI0CFG$0$0                                               =  00009A G
     G$SPI0CKR$0$0                                               =  00009D G
@@ -1498,11 +1471,6 @@ Symbol Table
     G$TI0$0$0                                                   =  000099 G
     G$TL0$0$0                                                   =  00008A G
     G$TL1$0$0                                                   =  00008B G
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 26.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
     G$TL2$0$0                                                   =  0000CC G
     G$TL4$0$0                                                   =  0000F4 G
     G$TMOD$0$0                                                  =  000089 G
@@ -1530,6 +1498,11 @@ Symbol Table
     G$_XPAGE$0$0                                                =  0000AF G
  18 G$delay_time$0$0                                            =  00030D GR
  18 G$getchar$0$0                                               =  00004D GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 26.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
  18 G$i2c_read$0$0                                              =  000358 GR
  18 G$i2c_read_and_stop$0$0                                     =  000361 GR
  18 G$i2c_read_data$0$0                                         =  0003E8 GR
@@ -1543,10 +1516,10 @@ Symbol Table
  18 G$main$0$0                                                  =  0004D6 GR
   5 G$nCounts$0$0                                               =  000012 GR
   5 G$nOverflows$0$0                                            =  000014 GR
- 18 G$pause$0$0                                                 =  0005D7 GR
+ 18 G$pause$0$0                                                 =  000598 GR
  18 G$putchar$0$0                                               =  000043 GR
  18 G$read_keypad$0$0                                           =  00011A GR
- 18 G$wait$0$0                                                  =  0005E8 GR
+ 18 G$wait$0$0                                                  =  0005A9 GR
     IE                                                          =  0000A8 L
     IE.0                                                        =  0000A8 L
     IE.1                                                        =  0000A9 L
@@ -1558,11 +1531,6 @@ Symbol Table
     IE0                                                         =  000089 L
     IE1                                                         =  00008B L
     INT0                                                        =  0000B2 L
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 27.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
     INT1                                                        =  0000B3 L
     IP                                                          =  0000B8 L
     IP.0                                                        =  0000B8 L
@@ -1590,6 +1558,11 @@ Symbol Table
     P0.0                                                        =  000080 L
     P0.1                                                        =  000081 L
     P0.2                                                        =  000082 L
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 27.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
     P0.3                                                        =  000083 L
     P0.4                                                        =  000084 L
     P0.5                                                        =  000085 L
@@ -1618,11 +1591,6 @@ Symbol Table
     P3.1                                                        =  0000B1 L
     P3.2                                                        =  0000B2 L
     P3.3                                                        =  0000B3 L
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 28.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
     P3.4                                                        =  0000B4 L
     P3.5                                                        =  0000B5 L
     P3.6                                                        =  0000B6 L
@@ -1650,6 +1618,11 @@ Symbol Table
     REN                                                         =  00009C L
     RI                                                          =  000098 L
     RS0                                                         =  0000D3 L
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 28.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
     RS1                                                         =  0000D4 L
     RXD                                                         =  0000B0 L
     SBUF                                                        =  000099 L
@@ -1678,11 +1651,6 @@ Symbol Table
     TB8                                                         =  00009B L
     TCLK                                                        =  0000CC L
     TCON                                                        =  000088 L
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 29.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
     TCON.0                                                      =  000088 L
     TCON.1                                                      =  000089 L
     TCON.2                                                      =  00008A L
@@ -1707,12 +1675,17 @@ Symbol Table
     TR2                                                         =  0000CA L
     TXD                                                         =  0000B1 L
  18 XG$Accel_Init$0$0                                           =  0004D5 GR
- 18 XG$Interrupt_Init$0$0                                       =  00058A GR
- 18 XG$KeyResult$0$0                                            =  000694 GR
- 18 XG$PCA_ISR$0$0                                              =  0005D6 GR
- 18 XG$PCA_Init$0$0                                             =  000591 GR
- 18 XG$Port_Init$0$0                                            =  000581 GR
- 18 XG$SMB0_Init$0$0                                            =  000597 GR
+ 18 XG$Interrupt_Init$0$0                                       =  00054B GR
+ 18 XG$KeyResult$0$0                                            =  000665 GR
+ 18 XG$PCA_ISR$0$0                                              =  000597 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 29.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+ 18 XG$PCA_Init$0$0                                             =  000552 GR
+ 18 XG$Port_Init$0$0                                            =  000542 GR
+ 18 XG$SMB0_Init$0$0                                            =  000558 GR
  18 XG$SYSCLK_Init$0$0                                          =  000018 GR
  18 XG$Sys_Init$0$0                                             =  000042 GR
  18 XG$UART0_Init$0$0                                           =  00002F GR
@@ -1728,21 +1701,16 @@ Symbol Table
  18 XG$kpd_input$0$0                                            =  00030C GR
  18 XG$lcd_clear$0$0                                            =  000119 GR
  18 XG$lcd_print$0$0                                            =  0000E0 GR
- 18 XG$main$0$0                                                 =  00057D GR
- 18 XG$pause$0$0                                                =  0005E7 GR
+ 18 XG$main$0$0                                                 =  00053E GR
+ 18 XG$pause$0$0                                                =  0005A8 GR
  18 XG$putchar$0$0                                              =  00004C GR
  18 XG$read_keypad$0$0                                          =  000198 GR
- 18 XG$wait$0$0                                                 =  0005F8 GR
+ 18 XG$wait$0$0                                                 =  0005B9 GR
     _AA                                                         =  0000C2 G
     _AC                                                         =  0000D6 G
     _ACC                                                        =  0000E0 G
     _AD0BUSY                                                    =  0000EC G
     _AD0CM0                                                     =  0000EA G
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 30.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
     _AD0CM1                                                     =  0000EB G
     _AD0EN                                                      =  0000EF G
     _AD0INT                                                     =  0000ED G
@@ -1770,6 +1738,11 @@ Symbol Table
     _ADLJST                                                     =  0000E8 G
     _ADSTM0                                                     =  0000EA G
     _ADSTM1                                                     =  0000EB G
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 30.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
     _ADWINT                                                     =  0000E9 G
     _AMX0CF                                                     =  0000BA G
     _AMX0SL                                                     =  0000BB G
@@ -1798,11 +1771,6 @@ Symbol Table
     _CPT0CN                                                     =  00009E G
     _CPT1CN                                                     =  00009F G
     _CR                                                         =  0000DE G
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 31.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
     _CT2                                                        =  0000C9 G
     _CY                                                         =  0000D7 G
   5 _Counts                                                        000010 GR
@@ -1830,6 +1798,11 @@ Symbol Table
     _ET0                                                        =  0000A9 G
     _ET1                                                        =  0000AB G
     _ET2                                                        =  0000AD G
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 31.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
     _EX0                                                        =  0000A8 G
     _EX1                                                        =  0000AA G
     _EXEN2                                                      =  0000CB G
@@ -1844,8 +1817,8 @@ Symbol Table
     _IP                                                         =  0000B8 G
     _IT0                                                        =  000088 G
     _IT1                                                        =  00008A G
- 18 _Interrupt_Init                                                000582 GR
- 18 _KeyResult                                                     0005F9 GR
+ 18 _Interrupt_Init                                                000543 GR
+ 18 _KeyResult                                                     0005BA GR
     _MCE0                                                       =  00009D G
     _MODF                                                       =  0000FD G
     _MSTEN                                                      =  0000F9 G
@@ -1858,11 +1831,6 @@ Symbol Table
     _P0_0                                                       =  000080 G
     _P0_1                                                       =  000081 G
     _P0_2                                                       =  000082 G
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 32.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
     _P0_3                                                       =  000083 G
     _P0_4                                                       =  000084 G
     _P0_5                                                       =  000085 G
@@ -1890,6 +1858,11 @@ Symbol Table
     _P2_6                                                       =  0000A6 G
     _P2_7                                                       =  0000A7 G
     _P3                                                         =  0000B0 G
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 32.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
     _P3IF                                                       =  0000AD G
     _P3MDOUT                                                    =  0000A7 G
     _P3_0                                                       =  0000B0 G
@@ -1918,11 +1891,6 @@ Symbol Table
     _PCA0CPH3                                                   =  0000FD G
     _PCA0CPH4                                                   =  0000FE G
     _PCA0CPL0                                                   =  0000EA G
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 33.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
     _PCA0CPL1                                                   =  0000EB G
     _PCA0CPL2                                                   =  0000EC G
     _PCA0CPL3                                                   =  0000ED G
@@ -1935,8 +1903,8 @@ Symbol Table
     _PCA0H                                                      =  0000F9 G
     _PCA0L                                                      =  0000E9 G
     _PCA0MD                                                     =  0000D9 G
- 18 _PCA_ISR                                                       000598 GR
- 18 _PCA_Init                                                      00058B GR
+ 18 _PCA_ISR                                                       000559 GR
+ 18 _PCA_Init                                                      00054C GR
     _PCON                                                       =  000087 G
     _PRT0CF                                                     =  0000A4 G
     _PRT1CF                                                     =  0000A5 G
@@ -1950,8 +1918,13 @@ Symbol Table
     _PT1                                                        =  0000BB G
     _PT2                                                        =  0000BD G
     _PX0                                                        =  0000B8 G
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 33.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
     _PX1                                                        =  0000BA G
- 18 _Port_Init                                                     00057E GR
+ 18 _Port_Init                                                     00053F GR
     _RB8                                                        =  00009A G
     _RB80                                                       =  00009A G
     _RCAP2                                                      =  00CBCA G
@@ -1978,11 +1951,6 @@ Symbol Table
     _SBUF                                                       =  000099 G
     _SBUF0                                                      =  000099 G
     _SBUF1                                                      =  0000F2 G
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 34.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
     _SCON                                                       =  000098 G
     _SCON0                                                      =  000098 G
     _SCON1                                                      =  0000F1 G
@@ -1999,7 +1967,7 @@ Symbol Table
     _SMB0CR                                                     =  0000CF G
     _SMB0DAT                                                    =  0000C2 G
     _SMB0STA                                                    =  0000C1 G
- 18 _SMB0_Init                                                     000592 GR
+ 18 _SMB0_Init                                                     000553 GR
     _SMBFTE                                                     =  0000C1 G
     _SMBTOE                                                     =  0000C0 G
     _SP                                                         =  000081 G
@@ -2010,6 +1978,11 @@ Symbol Table
     _SPIEN                                                      =  0000F8 G
     _SPIF                                                       =  0000FF G
     _STA                                                        =  0000C5 G
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 34.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
     _STO                                                        =  0000C4 G
  18 _SYSCLK_Init                                                   000000 GR
  18 _Sys_Init                                                      000030 GR
@@ -2038,11 +2011,6 @@ Symbol Table
     _TMR2                                                       =  00CDCC G
     _TMR3                                                       =  009594 G
     _TMR3CN                                                     =  000091 G
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 35.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
     _TMR3H                                                      =  000095 G
     _TMR3L                                                      =  000094 G
     _TMR3RL                                                     =  009392 G
@@ -2065,12 +2033,16 @@ Symbol Table
  19 ___str_2                                                       000026 R
  19 ___str_3                                                       000029 R
  19 ___str_4                                                       000032 R
- 19 ___str_5                                                       000066 R
- 19 ___str_6                                                       000075 R
- 19 ___str_7                                                       000092 R
- 19 ___str_8                                                       0000B0 R
+ 19 ___str_5                                                       000044 R
+ 19 ___str_6                                                       000061 R
+ 19 ___str_7                                                       00007F R
     __gptrget                                                      ****** GX
     __gptrput                                                      ****** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 35.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
   F __interrupt_vect                                               000000 R
     __mcs51_genRAMCLEAR                                            ****** GX
     __mcs51_genXINIT                                               ****** GX
@@ -2098,11 +2070,6 @@ Symbol Table
   5 _i2c_write_data_PARM_4                                         000009 GR
  18 _kpd_input                                                     000199 GR
  18 _lcd_clear                                                     0000E1 GR
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 36.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
   5 _lcd_clear_Cmd_1_77                                            000001 R
   5 _lcd_clear_NumBytes_1_77                                       000000 R
  18 _lcd_print                                                     00005C GR
@@ -2110,7 +2077,7 @@ Symbol Table
  18 _main                                                          0004D6 GR
   5 _nCounts                                                       000012 GR
   5 _nOverflows                                                    000014 GR
- 18 _pause                                                         0005D7 GR
+ 18 _pause                                                         000598 GR
     _printf                                                        ****** GX
  18 _putchar                                                       000043 GR
  18 _read_keypad                                                   00011A GR
@@ -2119,7 +2086,7 @@ Symbol Table
     _vsprintf                                                      ****** GX
     _vsprintf_PARM_2                                               ****** GX
     _vsprintf_PARM_3                                               ****** GX
- 18 _wait                                                          0005E8 GR
+ 18 _wait                                                          0005A9 GR
     a                                                           =  0000E0 L
     a.0                                                         =  0000E0 L
     a.1                                                         =  0000E1 L
@@ -2131,6 +2098,11 @@ Symbol Table
     a.7                                                         =  0000E7 L
     ac                                                          =  0000D6 L
     acc                                                         =  0000E0 L
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 36.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
     acc.0                                                       =  0000E0 L
     acc.1                                                       =  0000E1 L
     acc.2                                                       =  0000E2 L
@@ -2158,11 +2130,6 @@ Symbol Table
     b.7                                                         =  0000F7 L
     cprl2                                                       =  0000C8 L
     ct2                                                         =  0000C9 L
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 37.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
     cy                                                          =  0000D7 L
     dph                                                         =  000083 L
     dpl                                                         =  000082 L
@@ -2191,6 +2158,11 @@ Symbol Table
     ip                                                          =  0000B8 L
     ip.0                                                        =  0000B8 L
     ip.1                                                        =  0000B9 L
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 37.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
     ip.2                                                        =  0000BA L
     ip.3                                                        =  0000BB L
     ip.4                                                        =  0000BC L
@@ -2218,11 +2190,6 @@ Symbol Table
     p1.6                                                        =  000096 L
     p1.7                                                        =  000097 L
     p2                                                          =  0000A0 L
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 38.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
     p2.0                                                        =  0000A0 L
     p2.1                                                        =  0000A1 L
     p2.2                                                        =  0000A2 L
@@ -2251,6 +2218,11 @@ Symbol Table
     psw.5                                                       =  0000D5 L
     psw.6                                                       =  0000D6 L
     psw.7                                                       =  0000D7 L
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 38.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
     pt0                                                         =  0000B9 L
     pt1                                                         =  0000BB L
     pt2                                                         =  0000BD L
@@ -2278,11 +2250,6 @@ Symbol Table
     sm0                                                         =  00009F L
     sm1                                                         =  00009E L
     sm2                                                         =  00009D L
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 39.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
     sp                                                          =  000081 L
     t2con                                                       =  0000C8 L
     t2con.0                                                     =  0000C8 L
@@ -2311,6 +2278,11 @@ Symbol Table
     th1                                                         =  00008D L
     th2                                                         =  0000CD L
     ti                                                          =  000099 L
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 39.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
     tl0                                                         =  00008A L
     tl1                                                         =  00008B L
     tl2                                                         =  0000CC L
@@ -2350,8 +2322,8 @@ Area Table
   15 GSINIT5                                    size      0   flags   20
   16 GSINIT                                     size      0   flags   20
   17 GSFINAL                                    size      3   flags   20
-  18 CSEG                                       size    695   flags   20
-  19 CONST                                      size     D0   flags   20
+  18 CSEG                                       size    666   flags   20
+  19 CONST                                      size     9F   flags   20
   1A XINIT                                      size      0   flags   20
   1B CABS                                       size      0   flags   28
 

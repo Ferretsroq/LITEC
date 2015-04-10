@@ -27,6 +27,7 @@ void set_servo_PWM(void);
 int read_ranger(void); // new feature - read value, and then start a new ping
 void set_drive_PWM(void);
 int pick_heading(void); // function which allow operator to pick desired heading
+signed int servo_error(unsigned int heading);
 
 //-----------------------------------------------------------------------------
 // Define global variables
@@ -37,12 +38,15 @@ unsigned int PW_LEFT = 2030;
 unsigned int SERVO_PW = 2760;
 unsigned int SERVO_MAX = 3500;
 unsigned int SERVO_MIN = 2030;
+unsigned int PCA_START = 28672;
 unsigned char new_heading = 0; // flag for count of compass timing
 unsigned char new_range = 0; // flag for count of ranger timing
 unsigned int heading;
 unsigned int range;
 unsigned char r_count; // overflow count for range
 unsigned char h_count; // overflow count for heading
+__sbit __at 0xB7 COMPASS_SWITCH;
+__sbit __at 0xB6 RANGER_SWITCH;
 
 //=============================================================================
 //-----------------------------------------------------------------------------
@@ -59,7 +63,7 @@ void main(void)
 	while (1)
 	{
 		run_stop = 0;
-		while (!run) // make run an sbit for the run/stop switch
+		while ((!COMPASS_SWITCH)&&(!RANGER_SWITCH)) // make run an sbit for the run/stop switch
 		{ // stay in loop until switch is in run position
 			if (run_stop == 0)
 			{
@@ -120,14 +124,15 @@ void PCA_ISR(void) __interrupt 9
 			new_heading=1;
 			h_count = 0;
 		}
+		heading_delay++;
+		if(heading_delay>5) heading_delay=0;
 		r_count++;
 		if (r_count>=4)
 		{
 			new_range = 1;
 			r_count = 0;
 		}
-		PCA0L = PCA_start;
-		PCA0H = PCA_start >> 8;
+		PCA0 = PCA_START
 	}
 	// handle other PCA interrupt sources
 	PCA0CN &= 0xC0;
@@ -172,8 +177,14 @@ int read_compass(void)
 //-----------------------------------------------------------------------------
 void set_servo_PWM(void)
 {
-	hi
-	oh hello there
+	if(new_heading && (heading_delay>=5))
+		{		
+			heading = read_compass();
+			printf("\rThe current direction is %u\n", heading/10);
+			PW = servo_error(heading); // Adjust pulsewidth based on error function
+			PCA0CP0 = 0xFFFF - PW; // Change pulse width
+			new_heading = 0;
+		}
 }
 
 //-------------------------------------------------------------------------------
@@ -202,5 +213,19 @@ void set_drive_PWM(void)
 int pick_heading(void)
 {
 	hi
-	how's it going
+	ohaider
+}
+
+signed int servo_error(unsigned int heading)
+{
+	signed int Error = 0;
+	unsigned int PWMe = 0;
+	unsigned char k = 1;				//Gain constant. Higher numbers turn more, lower numbers turn less.
+	Error = Desired_Heading - heading;	//Calculate the error
+	if(Error < 1800) Error = Error + 3600;	//Adjust the Error for +/- 180 degrees
+	if(Error > 1800) Error = Error - 3600;
+	PWMe = PW_CENTER + (k*Error);
+	if(PWMe < PW_MIN) PWMe = PW_MIN;
+	if(PWMe > PW_MAX) PWMe = PW_MAX;
+	return PWMe;
 }

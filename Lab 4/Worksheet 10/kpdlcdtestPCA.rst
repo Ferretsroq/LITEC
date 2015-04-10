@@ -1,7 +1,7 @@
                                       1 ;--------------------------------------------------------
                                       2 ; File Created by SDCC : free open source ANSI-C Compiler
                                       3 ; Version 3.4.0 #8981 (Apr  5 2014) (MINGW32)
-                                      4 ; This file was generated Tue Apr 07 13:31:21 2015
+                                      4 ; This file was generated Fri Apr 10 12:38:31 2015
                                       5 ;--------------------------------------------------------
                                       6 	.module kpdlcdtestPCA
                                       7 	.optsdcc -mmcs51 --model-small
@@ -1044,7 +1044,7 @@
       00003C                       1044 	.ds	7
       000043 32               [24] 1045 	reti
       000044                       1046 	.ds	7
-      00004B 02 06 45         [24] 1047 	ljmp	_PCA_ISR
+      00004B 02 06 06         [24] 1047 	ljmp	_PCA_ISR
                                    1048 ;--------------------------------------------------------
                                    1049 ; global & static initialisations
                                    1050 ;--------------------------------------------------------
@@ -1273,7 +1273,7 @@
       000116 86 83            [24] 1273 	mov	dph,@r0
       000118 08               [12] 1274 	inc	r0
       000119 86 F0            [24] 1275 	mov	b,@r0
-      00011B 12 0E 75         [24] 1276 	lcall	_strlen
+      00011B 12 0E 46         [24] 1276 	lcall	_strlen
       00011E E5 82            [12] 1277 	mov	a,dpl
       000120 85 83 F0         [24] 1278 	mov	b,dph
       000123 45 F0            [12] 1279 	orl	a,b
@@ -1298,12 +1298,12 @@
       00013B 86 24            [24] 1298 	mov	(_vsprintf_PARM_2 + 2),@r0
       00013D 90 00 01         [24] 1299 	mov	dptr,#_lcd_print_text_1_73
       000140 75 F0 00         [24] 1300 	mov	b,#0x00
-      000143 12 07 EA         [24] 1301 	lcall	_vsprintf
+      000143 12 07 BB         [24] 1301 	lcall	_vsprintf
                            000099  1302 	C$i2c.h$93$1$73 ==.
                                    1303 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:93: len = strlen(text);
       000146 90 00 01         [24] 1304 	mov	dptr,#_lcd_print_text_1_73
       000149 75 F0 00         [24] 1305 	mov	b,#0x00
-      00014C 12 0E 75         [24] 1306 	lcall	_strlen
+      00014C 12 0E 46         [24] 1306 	lcall	_strlen
       00014F AE 82            [24] 1307 	mov	r6,dpl
                            0000A4  1308 	C$i2c.h$94$1$73 ==.
                                    1309 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:94: for(i=0; i<len; i++)
@@ -1533,7 +1533,7 @@
       00024C 70 1D            [24] 1533 	jnz	00102$
       00024E C0 06            [24] 1534 	push	ar6
       000250 C0 05            [24] 1535 	push	ar5
-      000252 74 AD            [12] 1536 	mov	a,#___str_0
+      000252 74 7E            [12] 1536 	mov	a,#___str_0
       000254 C0 E0            [24] 1537 	push	acc
       000256 74 0E            [12] 1538 	mov	a,#(___str_0 >> 8)
       000258 C0 E0            [24] 1539 	push	acc
@@ -1570,7 +1570,7 @@
       00028D C0 E0            [24] 1570 	push	acc
       00028F E4               [12] 1571 	clr	a
       000290 C0 E0            [24] 1572 	push	acc
-      000292 74 C3            [12] 1573 	mov	a,#___str_1
+      000292 74 94            [12] 1573 	mov	a,#___str_1
       000294 C0 E0            [24] 1574 	push	acc
       000296 74 0E            [12] 1575 	mov	a,#(___str_1 >> 8)
       000298 C0 E0            [24] 1576 	push	acc
@@ -1664,7 +1664,7 @@
       000326 C0 02            [24] 1664 	push	ar2
       000328 C0 02            [24] 1665 	push	ar2
       00032A C0 04            [24] 1666 	push	ar4
-      00032C 74 D3            [12] 1667 	mov	a,#___str_2
+      00032C 74 A4            [12] 1667 	mov	a,#___str_2
       00032E C0 E0            [24] 1668 	push	acc
       000330 74 0E            [12] 1669 	mov	a,#(___str_2 >> 8)
       000332 C0 E0            [24] 1670 	push	acc
@@ -1687,7 +1687,7 @@
       000352 C0 04            [24] 1687 	push	ar4
       000354 C0 03            [24] 1688 	push	ar3
       000356 C0 02            [24] 1689 	push	ar2
-      000358 12 07 5D         [24] 1690 	lcall	__mulint
+      000358 12 07 2E         [24] 1690 	lcall	__mulint
       00035B A8 82            [24] 1691 	mov	r0,dpl
       00035D A9 83            [24] 1692 	mov	r1,dph
       00035F D0 02            [24] 1693 	pop	ar2
@@ -2012,7 +2012,7 @@
       00045E 8C 82            [24] 2012 	mov	dpl,r4
       000460 8D 83            [24] 2013 	mov	dph,r5
       000462 8E F0            [24] 2014 	mov	b,r6
-      000464 12 0E 8D         [24] 2015 	lcall	__gptrget
+      000464 12 0E 5E         [24] 2015 	lcall	__gptrget
       000467 F5 82            [12] 2016 	mov	dpl,a
       000469 C0 07            [24] 2017 	push	ar7
       00046B 12 03 F1         [24] 2018 	lcall	_i2c_write
@@ -2040,7 +2040,7 @@
       000486 8E 82            [24] 2040 	mov	dpl,r6
       000488 8F 83            [24] 2041 	mov	dph,r7
       00048A 8D F0            [24] 2042 	mov	b,r5
-      00048C 12 0E 8D         [24] 2043 	lcall	__gptrget
+      00048C 12 0E 5E         [24] 2043 	lcall	__gptrget
       00048F F5 82            [12] 2044 	mov	dpl,a
       000491 12 03 FA         [24] 2045 	lcall	_i2c_write_and_stop
                            0003E7  2046 	C$i2c.h$256$1$98 ==.
@@ -2137,7 +2137,7 @@
       0004FE 8D 83            [24] 2137 	mov	dph,r5
       000500 8E F0            [24] 2138 	mov	b,r6
       000502 EB               [12] 2139 	mov	a,r3
-      000503 12 07 42         [24] 2140 	lcall	__gptrput
+      000503 12 07 13         [24] 2140 	lcall	__gptrput
                            000459  2141 	C$i2c.h$267$1$100 ==.
                                    2142 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:267: for(j = 0; j < num_bytes - 1; j++)
       000506 0F               [12] 2143 	inc	r7
@@ -2173,7 +2173,7 @@
       000531 8F 83            [24] 2173 	mov	dph,r7
       000533 8D F0            [24] 2174 	mov	b,r5
       000535 EC               [12] 2175 	mov	a,r4
-      000536 12 07 42         [24] 2176 	lcall	__gptrput
+      000536 12 07 13         [24] 2176 	lcall	__gptrput
                            00048C  2177 	C$i2c.h$274$1$100 ==.
                            00048C  2178 	XG$i2c_read_data$0$0 ==.
       000539 22               [24] 2179 	ret
@@ -2231,526 +2231,487 @@
                                    2231 ;------------------------------------------------------------
                                    2232 ;Allocation info for local variables in function 'main'
                                    2233 ;------------------------------------------------------------
-                                   2234 ;keypad1                   Allocated to registers r7 
-                                   2235 ;keypad2                   Allocated to registers r6 
-                                   2236 ;result                    Allocated to registers r6 
-                                   2237 ;------------------------------------------------------------
-                           0004D6  2238 	G$main$0$0 ==.
-                           0004D6  2239 	C$kpdlcdtestPCA.c$39$1$103 ==.
-                                   2240 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:39: void main(void)
+                                   2234 ;kpdTest                   Allocated to registers r6 r7 
+                                   2235 ;------------------------------------------------------------
+                           0004D6  2236 	G$main$0$0 ==.
+                           0004D6  2237 	C$kpdlcdtestPCA.c$39$1$103 ==.
+                                   2238 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:39: void main(void)
+                                   2239 ;	-----------------------------------------
+                                   2240 ;	 function main
                                    2241 ;	-----------------------------------------
-                                   2242 ;	 function main
-                                   2243 ;	-----------------------------------------
-      000583                       2244 _main:
-                           0004D6  2245 	C$kpdlcdtestPCA.c$44$1$113 ==.
-                                   2246 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:44: Sys_Init();     // System Initialization - MUST BE 1st EXECUTABLE STATEMENT
-      000583 12 00 DD         [24] 2247 	lcall	_Sys_Init
-                           0004D9  2248 	C$kpdlcdtestPCA.c$45$1$113 ==.
-                                   2249 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:45: Port_Init();    // Initialize ports 2 and 3 - XBR0 set to 0x05, UART0 & SMB
-      000586 12 06 2B         [24] 2250 	lcall	_Port_Init
-                           0004DC  2251 	C$kpdlcdtestPCA.c$46$1$113 ==.
-                                   2252 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:46: Interrupt_Init();   // You may want to change XBR0 to match your SMB wiring
-      000589 12 06 2F         [24] 2253 	lcall	_Interrupt_Init
-                           0004DF  2254 	C$kpdlcdtestPCA.c$47$1$113 ==.
-                                   2255 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:47: PCA_Init();
-      00058C 12 06 38         [24] 2256 	lcall	_PCA_Init
-                           0004E2  2257 	C$kpdlcdtestPCA.c$48$1$113 ==.
-                                   2258 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:48: SMB0_Init();
-      00058F 12 06 3F         [24] 2259 	lcall	_SMB0_Init
-                           0004E5  2260 	C$kpdlcdtestPCA.c$49$1$113 ==.
-                                   2261 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:49: putchar('\r');  // Dummy write to serial port
-      000592 75 82 0D         [24] 2262 	mov	dpl,#0x0D
-      000595 12 00 F0         [24] 2263 	lcall	_putchar
-                           0004EB  2264 	C$kpdlcdtestPCA.c$50$1$113 ==.
-                                   2265 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:50: printf("\nStart\r\n");
-      000598 74 D6            [12] 2266 	mov	a,#___str_3
-      00059A C0 E0            [24] 2267 	push	acc
-      00059C 74 0E            [12] 2268 	mov	a,#(___str_3 >> 8)
-      00059E C0 E0            [24] 2269 	push	acc
-      0005A0 74 80            [12] 2270 	mov	a,#0x80
-      0005A2 C0 E0            [24] 2271 	push	acc
-      0005A4 12 08 99         [24] 2272 	lcall	_printf
-      0005A7 15 81            [12] 2273 	dec	sp
-      0005A9 15 81            [12] 2274 	dec	sp
-      0005AB 15 81            [12] 2275 	dec	sp
-                           000500  2276 	C$kpdlcdtestPCA.c$52$1$113 ==.
-                                   2277 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:52: Counts = 0;
-      0005AD E4               [12] 2278 	clr	a
-      0005AE F5 18            [12] 2279 	mov	_Counts,a
-      0005B0 F5 19            [12] 2280 	mov	(_Counts + 1),a
-                           000505  2281 	C$kpdlcdtestPCA.c$53$1$113 ==.
-                                   2282 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:53: while (Counts < 1); // Wait a long time (1s) for keypad & LCD to initialize
-      0005B2                       2283 00101$:
-      0005B2 C3               [12] 2284 	clr	c
-      0005B3 E5 18            [12] 2285 	mov	a,_Counts
-      0005B5 94 01            [12] 2286 	subb	a,#0x01
-      0005B7 E5 19            [12] 2287 	mov	a,(_Counts + 1)
-      0005B9 94 00            [12] 2288 	subb	a,#0x00
-      0005BB 40 F5            [24] 2289 	jc	00101$
-                           000510  2290 	C$kpdlcdtestPCA.c$55$1$113 ==.
-                                   2291 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:55: lcd_clear();
-      0005BD 12 01 8E         [24] 2292 	lcall	_lcd_clear
-                           000513  2293 	C$kpdlcdtestPCA.c$56$1$113 ==.
-                                   2294 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:56: lcd_print("Calibration:\nHello world!\n012_345_678:\nabc def ghij");
-      0005C0 74 DF            [12] 2295 	mov	a,#___str_4
-      0005C2 C0 E0            [24] 2296 	push	acc
-      0005C4 74 0E            [12] 2297 	mov	a,#(___str_4 >> 8)
-      0005C6 C0 E0            [24] 2298 	push	acc
-      0005C8 74 80            [12] 2299 	mov	a,#0x80
-      0005CA C0 E0            [24] 2300 	push	acc
-      0005CC 12 01 09         [24] 2301 	lcall	_lcd_print
-      0005CF 15 81            [12] 2302 	dec	sp
-      0005D1 15 81            [12] 2303 	dec	sp
-      0005D3 15 81            [12] 2304 	dec	sp
-                           000528  2305 	C$kpdlcdtestPCA.c$57$1$113 ==.
-                                   2306 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:57: while (1)
-      0005D5                       2307 00105$:
-                           000528  2308 	C$kpdlcdtestPCA.c$59$2$114 ==.
-                                   2309 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:59: keypad1 = KeyResult();
-      0005D5 12 06 A6         [24] 2310 	lcall	_KeyResult
-      0005D8 AF 82            [24] 2311 	mov	r7,dpl
-                           00052D  2312 	C$kpdlcdtestPCA.c$60$2$114 ==.
-                                   2313 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:60: keypad2 = KeyResult();
-      0005DA C0 07            [24] 2314 	push	ar7
-      0005DC 12 06 A6         [24] 2315 	lcall	_KeyResult
-      0005DF AE 82            [24] 2316 	mov	r6,dpl
-      0005E1 D0 07            [24] 2317 	pop	ar7
-                           000536  2318 	C$kpdlcdtestPCA.c$61$2$114 ==.
-                                   2319 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:61: result = (keypad1*10) + keypad2;
-      0005E3 EF               [12] 2320 	mov	a,r7
-      0005E4 75 F0 0A         [24] 2321 	mov	b,#0x0A
-      0005E7 A4               [48] 2322 	mul	ab
-      0005E8 2E               [12] 2323 	add	a,r6
-                           00053C  2324 	C$kpdlcdtestPCA.c$62$2$114 ==.
-                                   2325 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:62: printf("\rResult is %u\n", result);
-      0005E9 FE               [12] 2326 	mov	r6,a
-      0005EA 33               [12] 2327 	rlc	a
-      0005EB 95 E0            [12] 2328 	subb	a,acc
-      0005ED FF               [12] 2329 	mov	r7,a
-      0005EE C0 07            [24] 2330 	push	ar7
-      0005F0 C0 06            [24] 2331 	push	ar6
-      0005F2 C0 06            [24] 2332 	push	ar6
-      0005F4 C0 07            [24] 2333 	push	ar7
-      0005F6 74 13            [12] 2334 	mov	a,#___str_5
-      0005F8 C0 E0            [24] 2335 	push	acc
-      0005FA 74 0F            [12] 2336 	mov	a,#(___str_5 >> 8)
-      0005FC C0 E0            [24] 2337 	push	acc
-      0005FE 74 80            [12] 2338 	mov	a,#0x80
-      000600 C0 E0            [24] 2339 	push	acc
-      000602 12 08 99         [24] 2340 	lcall	_printf
-      000605 E5 81            [12] 2341 	mov	a,sp
-      000607 24 FB            [12] 2342 	add	a,#0xfb
-      000609 F5 81            [12] 2343 	mov	sp,a
-      00060B D0 06            [24] 2344 	pop	ar6
-      00060D D0 07            [24] 2345 	pop	ar7
-                           000562  2346 	C$kpdlcdtestPCA.c$63$2$114 ==.
-                                   2347 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:63: lcd_print("\rResult is %u\n", result);
-      00060F C0 06            [24] 2348 	push	ar6
-      000611 C0 07            [24] 2349 	push	ar7
-      000613 74 13            [12] 2350 	mov	a,#___str_5
-      000615 C0 E0            [24] 2351 	push	acc
-      000617 74 0F            [12] 2352 	mov	a,#(___str_5 >> 8)
-      000619 C0 E0            [24] 2353 	push	acc
-      00061B 74 80            [12] 2354 	mov	a,#0x80
-      00061D C0 E0            [24] 2355 	push	acc
-      00061F 12 01 09         [24] 2356 	lcall	_lcd_print
-      000622 E5 81            [12] 2357 	mov	a,sp
-      000624 24 FB            [12] 2358 	add	a,#0xfb
-      000626 F5 81            [12] 2359 	mov	sp,a
-      000628 80 AB            [24] 2360 	sjmp	00105$
-                           00057D  2361 	C$kpdlcdtestPCA.c$66$1$113 ==.
-                           00057D  2362 	XG$main$0$0 ==.
-      00062A 22               [24] 2363 	ret
+      000583                       2242 _main:
+                           0004D6  2243 	C$kpdlcdtestPCA.c$45$1$113 ==.
+                                   2244 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:45: Sys_Init();     // System Initialization - MUST BE 1st EXECUTABLE STATEMENT
+      000583 12 00 DD         [24] 2245 	lcall	_Sys_Init
+                           0004D9  2246 	C$kpdlcdtestPCA.c$46$1$113 ==.
+                                   2247 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:46: Port_Init();    // Initialize ports 2 and 3 - XBR0 set to 0x05, UART0 & SMB
+      000586 12 05 EC         [24] 2248 	lcall	_Port_Init
+                           0004DC  2249 	C$kpdlcdtestPCA.c$47$1$113 ==.
+                                   2250 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:47: Interrupt_Init();   // You may want to change XBR0 to match your SMB wiring
+      000589 12 05 F0         [24] 2251 	lcall	_Interrupt_Init
+                           0004DF  2252 	C$kpdlcdtestPCA.c$48$1$113 ==.
+                                   2253 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:48: PCA_Init();
+      00058C 12 05 F9         [24] 2254 	lcall	_PCA_Init
+                           0004E2  2255 	C$kpdlcdtestPCA.c$49$1$113 ==.
+                                   2256 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:49: SMB0_Init();
+      00058F 12 06 00         [24] 2257 	lcall	_SMB0_Init
+                           0004E5  2258 	C$kpdlcdtestPCA.c$50$1$113 ==.
+                                   2259 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:50: putchar('\r');  // Dummy write to serial port
+      000592 75 82 0D         [24] 2260 	mov	dpl,#0x0D
+      000595 12 00 F0         [24] 2261 	lcall	_putchar
+                           0004EB  2262 	C$kpdlcdtestPCA.c$51$1$113 ==.
+                                   2263 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:51: printf("\nStart\r\n");
+      000598 74 A7            [12] 2264 	mov	a,#___str_3
+      00059A C0 E0            [24] 2265 	push	acc
+      00059C 74 0E            [12] 2266 	mov	a,#(___str_3 >> 8)
+      00059E C0 E0            [24] 2267 	push	acc
+      0005A0 74 80            [12] 2268 	mov	a,#0x80
+      0005A2 C0 E0            [24] 2269 	push	acc
+      0005A4 12 08 6A         [24] 2270 	lcall	_printf
+      0005A7 15 81            [12] 2271 	dec	sp
+      0005A9 15 81            [12] 2272 	dec	sp
+      0005AB 15 81            [12] 2273 	dec	sp
+                           000500  2274 	C$kpdlcdtestPCA.c$52$1$113 ==.
+                                   2275 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:52: lcd_clear();
+      0005AD 12 01 8E         [24] 2276 	lcall	_lcd_clear
+                           000503  2277 	C$kpdlcdtestPCA.c$53$1$113 ==.
+                                   2278 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:53: Counts = 0;
+      0005B0 E4               [12] 2279 	clr	a
+      0005B1 F5 18            [12] 2280 	mov	_Counts,a
+      0005B3 F5 19            [12] 2281 	mov	(_Counts + 1),a
+                           000508  2282 	C$kpdlcdtestPCA.c$54$1$113 ==.
+                                   2283 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:54: while (Counts < 1); // Wait a long time (1s) for keypad & LCD to initialize
+      0005B5                       2284 00101$:
+      0005B5 C3               [12] 2285 	clr	c
+      0005B6 E5 18            [12] 2286 	mov	a,_Counts
+      0005B8 94 01            [12] 2287 	subb	a,#0x01
+      0005BA E5 19            [12] 2288 	mov	a,(_Counts + 1)
+      0005BC 94 00            [12] 2289 	subb	a,#0x00
+      0005BE 40 F5            [24] 2290 	jc	00101$
+                           000513  2291 	C$kpdlcdtestPCA.c$55$1$113 ==.
+                                   2292 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:55: lcd_clear();
+      0005C0 12 01 8E         [24] 2293 	lcall	_lcd_clear
+                           000516  2294 	C$kpdlcdtestPCA.c$57$1$113 ==.
+                                   2295 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:57: while (1)
+      0005C3                       2296 00105$:
+                           000516  2297 	C$kpdlcdtestPCA.c$65$2$114 ==.
+                                   2298 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:65: kpdTest = kpd_input(1);
+      0005C3 75 82 01         [24] 2299 	mov	dpl,#0x01
+      0005C6 12 02 46         [24] 2300 	lcall	_kpd_input
+      0005C9 AE 82            [24] 2301 	mov	r6,dpl
+      0005CB AF 83            [24] 2302 	mov	r7,dph
+                           000520  2303 	C$kpdlcdtestPCA.c$66$2$114 ==.
+                                   2304 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:66: printf("\rYou typed in %u\n", kpdTest);
+      0005CD C0 06            [24] 2305 	push	ar6
+      0005CF C0 07            [24] 2306 	push	ar7
+      0005D1 74 B0            [12] 2307 	mov	a,#___str_4
+      0005D3 C0 E0            [24] 2308 	push	acc
+      0005D5 74 0E            [12] 2309 	mov	a,#(___str_4 >> 8)
+      0005D7 C0 E0            [24] 2310 	push	acc
+      0005D9 74 80            [12] 2311 	mov	a,#0x80
+      0005DB C0 E0            [24] 2312 	push	acc
+      0005DD 12 08 6A         [24] 2313 	lcall	_printf
+      0005E0 E5 81            [12] 2314 	mov	a,sp
+      0005E2 24 FB            [12] 2315 	add	a,#0xfb
+      0005E4 F5 81            [12] 2316 	mov	sp,a
+                           000539  2317 	C$kpdlcdtestPCA.c$67$2$114 ==.
+                                   2318 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:67: lcd_clear();
+      0005E6 12 01 8E         [24] 2319 	lcall	_lcd_clear
+      0005E9 80 D8            [24] 2320 	sjmp	00105$
+                           00053E  2321 	C$kpdlcdtestPCA.c$70$1$113 ==.
+                           00053E  2322 	XG$main$0$0 ==.
+      0005EB 22               [24] 2323 	ret
+                                   2324 ;------------------------------------------------------------
+                                   2325 ;Allocation info for local variables in function 'Port_Init'
+                                   2326 ;------------------------------------------------------------
+                           00053F  2327 	G$Port_Init$0$0 ==.
+                           00053F  2328 	C$kpdlcdtestPCA.c$73$1$113 ==.
+                                   2329 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:73: void Port_Init(void)	//0x05
+                                   2330 ;	-----------------------------------------
+                                   2331 ;	 function Port_Init
+                                   2332 ;	-----------------------------------------
+      0005EC                       2333 _Port_Init:
+                           00053F  2334 	C$kpdlcdtestPCA.c$75$1$116 ==.
+                                   2335 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:75: XBR0 = 0x27;    // NOTE: Only UART0 & SMB enabled; SMB on P0.2 & P0.3
+      0005EC 75 E1 27         [24] 2336 	mov	_XBR0,#0x27
+                           000542  2337 	C$kpdlcdtestPCA.c$76$1$116 ==.
+                           000542  2338 	XG$Port_Init$0$0 ==.
+      0005EF 22               [24] 2339 	ret
+                                   2340 ;------------------------------------------------------------
+                                   2341 ;Allocation info for local variables in function 'Interrupt_Init'
+                                   2342 ;------------------------------------------------------------
+                           000543  2343 	G$Interrupt_Init$0$0 ==.
+                           000543  2344 	C$kpdlcdtestPCA.c$78$1$116 ==.
+                                   2345 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:78: void Interrupt_Init(void)
+                                   2346 ;	-----------------------------------------
+                                   2347 ;	 function Interrupt_Init
+                                   2348 ;	-----------------------------------------
+      0005F0                       2349 _Interrupt_Init:
+                           000543  2350 	C$kpdlcdtestPCA.c$80$1$118 ==.
+                                   2351 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:80: IE |= 0x02;
+      0005F0 43 A8 02         [24] 2352 	orl	_IE,#0x02
+                           000546  2353 	C$kpdlcdtestPCA.c$81$1$118 ==.
+                                   2354 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:81: EIE1 |= 0x08;
+      0005F3 43 E6 08         [24] 2355 	orl	_EIE1,#0x08
+                           000549  2356 	C$kpdlcdtestPCA.c$82$1$118 ==.
+                                   2357 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:82: EA = 1;
+      0005F6 D2 AF            [12] 2358 	setb	_EA
+                           00054B  2359 	C$kpdlcdtestPCA.c$83$1$118 ==.
+                           00054B  2360 	XG$Interrupt_Init$0$0 ==.
+      0005F8 22               [24] 2361 	ret
+                                   2362 ;------------------------------------------------------------
+                                   2363 ;Allocation info for local variables in function 'PCA_Init'
                                    2364 ;------------------------------------------------------------
-                                   2365 ;Allocation info for local variables in function 'Port_Init'
-                                   2366 ;------------------------------------------------------------
-                           00057E  2367 	G$Port_Init$0$0 ==.
-                           00057E  2368 	C$kpdlcdtestPCA.c$69$1$113 ==.
-                                   2369 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:69: void Port_Init(void)	//0x05
+                           00054C  2365 	G$PCA_Init$0$0 ==.
+                           00054C  2366 	C$kpdlcdtestPCA.c$85$1$118 ==.
+                                   2367 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:85: void PCA_Init(void)
+                                   2368 ;	-----------------------------------------
+                                   2369 ;	 function PCA_Init
                                    2370 ;	-----------------------------------------
-                                   2371 ;	 function Port_Init
-                                   2372 ;	-----------------------------------------
-      00062B                       2373 _Port_Init:
-                           00057E  2374 	C$kpdlcdtestPCA.c$71$1$116 ==.
-                                   2375 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:71: XBR0 = 0x27;    // NOTE: Only UART0 & SMB enabled; SMB on P0.2 & P0.3
-      00062B 75 E1 27         [24] 2376 	mov	_XBR0,#0x27
-                           000581  2377 	C$kpdlcdtestPCA.c$72$1$116 ==.
-                           000581  2378 	XG$Port_Init$0$0 ==.
-      00062E 22               [24] 2379 	ret
-                                   2380 ;------------------------------------------------------------
-                                   2381 ;Allocation info for local variables in function 'Interrupt_Init'
-                                   2382 ;------------------------------------------------------------
-                           000582  2383 	G$Interrupt_Init$0$0 ==.
-                           000582  2384 	C$kpdlcdtestPCA.c$74$1$116 ==.
-                                   2385 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:74: void Interrupt_Init(void)
-                                   2386 ;	-----------------------------------------
-                                   2387 ;	 function Interrupt_Init
-                                   2388 ;	-----------------------------------------
-      00062F                       2389 _Interrupt_Init:
-                           000582  2390 	C$kpdlcdtestPCA.c$76$1$118 ==.
-                                   2391 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:76: IE |= 0x02;
-      00062F 43 A8 02         [24] 2392 	orl	_IE,#0x02
-                           000585  2393 	C$kpdlcdtestPCA.c$77$1$118 ==.
-                                   2394 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:77: EIE1 |= 0x08;
-      000632 43 E6 08         [24] 2395 	orl	_EIE1,#0x08
-                           000588  2396 	C$kpdlcdtestPCA.c$78$1$118 ==.
-                                   2397 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:78: EA = 1;
-      000635 D2 AF            [12] 2398 	setb	_EA
-                           00058A  2399 	C$kpdlcdtestPCA.c$79$1$118 ==.
-                           00058A  2400 	XG$Interrupt_Init$0$0 ==.
-      000637 22               [24] 2401 	ret
+      0005F9                       2371 _PCA_Init:
+                           00054C  2372 	C$kpdlcdtestPCA.c$87$1$120 ==.
+                                   2373 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:87: PCA0MD = 0x81;      // SYSCLK/12, enable CF interrupts, suspend when idle
+      0005F9 75 D9 81         [24] 2374 	mov	_PCA0MD,#0x81
+                           00054F  2375 	C$kpdlcdtestPCA.c$89$1$120 ==.
+                                   2376 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:89: PCA0CN |= 0x40;     // enable PCA
+      0005FC 43 D8 40         [24] 2377 	orl	_PCA0CN,#0x40
+                           000552  2378 	C$kpdlcdtestPCA.c$90$1$120 ==.
+                           000552  2379 	XG$PCA_Init$0$0 ==.
+      0005FF 22               [24] 2380 	ret
+                                   2381 ;------------------------------------------------------------
+                                   2382 ;Allocation info for local variables in function 'SMB0_Init'
+                                   2383 ;------------------------------------------------------------
+                           000553  2384 	G$SMB0_Init$0$0 ==.
+                           000553  2385 	C$kpdlcdtestPCA.c$92$1$120 ==.
+                                   2386 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:92: void SMB0_Init(void)    // This was at the top, moved it here to call wait()
+                                   2387 ;	-----------------------------------------
+                                   2388 ;	 function SMB0_Init
+                                   2389 ;	-----------------------------------------
+      000600                       2390 _SMB0_Init:
+                           000553  2391 	C$kpdlcdtestPCA.c$94$1$122 ==.
+                                   2392 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:94: SMB0CR = 0x93;      // Set SCL to 100KHz
+      000600 75 CF 93         [24] 2393 	mov	_SMB0CR,#0x93
+                           000556  2394 	C$kpdlcdtestPCA.c$95$1$122 ==.
+                                   2395 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:95: ENSMB = 1;          // Enable SMBUS0
+      000603 D2 C6            [12] 2396 	setb	_ENSMB
+                           000558  2397 	C$kpdlcdtestPCA.c$96$1$122 ==.
+                           000558  2398 	XG$SMB0_Init$0$0 ==.
+      000605 22               [24] 2399 	ret
+                                   2400 ;------------------------------------------------------------
+                                   2401 ;Allocation info for local variables in function 'PCA_ISR'
                                    2402 ;------------------------------------------------------------
-                                   2403 ;Allocation info for local variables in function 'PCA_Init'
-                                   2404 ;------------------------------------------------------------
-                           00058B  2405 	G$PCA_Init$0$0 ==.
-                           00058B  2406 	C$kpdlcdtestPCA.c$81$1$118 ==.
-                                   2407 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:81: void PCA_Init(void)
+                           000559  2403 	G$PCA_ISR$0$0 ==.
+                           000559  2404 	C$kpdlcdtestPCA.c$98$1$122 ==.
+                                   2405 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:98: void PCA_ISR(void) __interrupt 9
+                                   2406 ;	-----------------------------------------
+                                   2407 ;	 function PCA_ISR
                                    2408 ;	-----------------------------------------
-                                   2409 ;	 function PCA_Init
-                                   2410 ;	-----------------------------------------
-      000638                       2411 _PCA_Init:
-                           00058B  2412 	C$kpdlcdtestPCA.c$83$1$120 ==.
-                                   2413 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:83: PCA0MD = 0x81;      // SYSCLK/12, enable CF interrupts, suspend when idle
-      000638 75 D9 81         [24] 2414 	mov	_PCA0MD,#0x81
-                           00058E  2415 	C$kpdlcdtestPCA.c$85$1$120 ==.
-                                   2416 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:85: PCA0CN |= 0x40;     // enable PCA
-      00063B 43 D8 40         [24] 2417 	orl	_PCA0CN,#0x40
-                           000591  2418 	C$kpdlcdtestPCA.c$86$1$120 ==.
-                           000591  2419 	XG$PCA_Init$0$0 ==.
-      00063E 22               [24] 2420 	ret
-                                   2421 ;------------------------------------------------------------
-                                   2422 ;Allocation info for local variables in function 'SMB0_Init'
-                                   2423 ;------------------------------------------------------------
-                           000592  2424 	G$SMB0_Init$0$0 ==.
-                           000592  2425 	C$kpdlcdtestPCA.c$88$1$120 ==.
-                                   2426 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:88: void SMB0_Init(void)    // This was at the top, moved it here to call wait()
-                                   2427 ;	-----------------------------------------
-                                   2428 ;	 function SMB0_Init
-                                   2429 ;	-----------------------------------------
-      00063F                       2430 _SMB0_Init:
-                           000592  2431 	C$kpdlcdtestPCA.c$90$1$122 ==.
-                                   2432 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:90: SMB0CR = 0x93;      // Set SCL to 100KHz
-      00063F 75 CF 93         [24] 2433 	mov	_SMB0CR,#0x93
-                           000595  2434 	C$kpdlcdtestPCA.c$91$1$122 ==.
-                                   2435 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:91: ENSMB = 1;          // Enable SMBUS0
-      000642 D2 C6            [12] 2436 	setb	_ENSMB
-                           000597  2437 	C$kpdlcdtestPCA.c$92$1$122 ==.
-                           000597  2438 	XG$SMB0_Init$0$0 ==.
-      000644 22               [24] 2439 	ret
-                                   2440 ;------------------------------------------------------------
-                                   2441 ;Allocation info for local variables in function 'PCA_ISR'
-                                   2442 ;------------------------------------------------------------
-                           000598  2443 	G$PCA_ISR$0$0 ==.
-                           000598  2444 	C$kpdlcdtestPCA.c$94$1$122 ==.
-                                   2445 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:94: void PCA_ISR(void) __interrupt 9
-                                   2446 ;	-----------------------------------------
-                                   2447 ;	 function PCA_ISR
-                                   2448 ;	-----------------------------------------
-      000645                       2449 _PCA_ISR:
-      000645 C0 E0            [24] 2450 	push	acc
-      000647 C0 D0            [24] 2451 	push	psw
-                           00059C  2452 	C$kpdlcdtestPCA.c$96$1$124 ==.
-                                   2453 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:96: if (CF)
-                           00059C  2454 	C$kpdlcdtestPCA.c$98$2$125 ==.
-                                   2455 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:98: CF = 0;                     // clear the interrupt flag
-      000649 10 DF 02         [24] 2456 	jbc	_CF,00114$
-      00064C 80 2E            [24] 2457 	sjmp	00104$
-      00064E                       2458 00114$:
-                           0005A1  2459 	C$kpdlcdtestPCA.c$99$2$125 ==.
-                                   2460 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:99: nOverflows++;               // continuous overflow counter
-      00064E 05 1C            [12] 2461 	inc	_nOverflows
-      000650 E4               [12] 2462 	clr	a
-      000651 B5 1C 02         [24] 2463 	cjne	a,_nOverflows,00115$
-      000654 05 1D            [12] 2464 	inc	(_nOverflows + 1)
-      000656                       2465 00115$:
-                           0005A9  2466 	C$kpdlcdtestPCA.c$100$2$125 ==.
-                                   2467 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:100: nCounts++;
-      000656 05 1A            [12] 2468 	inc	_nCounts
-      000658 E4               [12] 2469 	clr	a
-      000659 B5 1A 02         [24] 2470 	cjne	a,_nCounts,00116$
-      00065C 05 1B            [12] 2471 	inc	(_nCounts + 1)
-      00065E                       2472 00116$:
-                           0005B1  2473 	C$kpdlcdtestPCA.c$101$2$125 ==.
-                                   2474 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:101: PCA0 = PCA_START;
-      00065E 75 E9 00         [24] 2475 	mov	((_PCA0 >> 0) & 0xFF),#0x00
-      000661 75 F9 70         [24] 2476 	mov	((_PCA0 >> 8) & 0xFF),#0x70
-                           0005B7  2477 	C$kpdlcdtestPCA.c$102$2$125 ==.
-                                   2478 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:102: if (nCounts > 50)
-      000664 C3               [12] 2479 	clr	c
-      000665 74 32            [12] 2480 	mov	a,#0x32
-      000667 95 1A            [12] 2481 	subb	a,_nCounts
-      000669 E4               [12] 2482 	clr	a
-      00066A 95 1B            [12] 2483 	subb	a,(_nCounts + 1)
-      00066C 50 11            [24] 2484 	jnc	00106$
-                           0005C1  2485 	C$kpdlcdtestPCA.c$104$3$126 ==.
-                                   2486 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:104: nCounts = 0;
-      00066E E4               [12] 2487 	clr	a
-      00066F F5 1A            [12] 2488 	mov	_nCounts,a
-      000671 F5 1B            [12] 2489 	mov	(_nCounts + 1),a
-                           0005C6  2490 	C$kpdlcdtestPCA.c$105$3$126 ==.
-                                   2491 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:105: Counts++;               // seconds counter
-      000673 05 18            [12] 2492 	inc	_Counts
-                                   2493 ;	genFromRTrack removed	clr	a
-      000675 B5 18 07         [24] 2494 	cjne	a,_Counts,00106$
-      000678 05 19            [12] 2495 	inc	(_Counts + 1)
-      00067A 80 03            [24] 2496 	sjmp	00106$
-      00067C                       2497 00104$:
-                           0005CF  2498 	C$kpdlcdtestPCA.c$108$1$124 ==.
-                                   2499 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:108: else PCA0CN &= 0xC0;           // clear all other 9-type interrupts
-      00067C 53 D8 C0         [24] 2500 	anl	_PCA0CN,#0xC0
-      00067F                       2501 00106$:
-      00067F D0 D0            [24] 2502 	pop	psw
-      000681 D0 E0            [24] 2503 	pop	acc
-                           0005D6  2504 	C$kpdlcdtestPCA.c$109$1$124 ==.
-                           0005D6  2505 	XG$PCA_ISR$0$0 ==.
-      000683 32               [24] 2506 	reti
-                                   2507 ;	eliminated unneeded mov psw,# (no regs used in bank)
-                                   2508 ;	eliminated unneeded push/pop dpl
-                                   2509 ;	eliminated unneeded push/pop dph
-                                   2510 ;	eliminated unneeded push/pop b
-                                   2511 ;------------------------------------------------------------
-                                   2512 ;Allocation info for local variables in function 'pause'
-                                   2513 ;------------------------------------------------------------
-                           0005D7  2514 	G$pause$0$0 ==.
-                           0005D7  2515 	C$kpdlcdtestPCA.c$111$1$124 ==.
-                                   2516 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:111: void pause(void)
-                                   2517 ;	-----------------------------------------
-                                   2518 ;	 function pause
-                                   2519 ;	-----------------------------------------
-      000684                       2520 _pause:
-                           0005D7  2521 	C$kpdlcdtestPCA.c$113$1$128 ==.
-                                   2522 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:113: nCounts = 0;
-      000684 E4               [12] 2523 	clr	a
-      000685 F5 1A            [12] 2524 	mov	_nCounts,a
-      000687 F5 1B            [12] 2525 	mov	(_nCounts + 1),a
-                           0005DC  2526 	C$kpdlcdtestPCA.c$114$1$128 ==.
-                                   2527 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:114: while (nCounts < 1);// 1 count -> (65536-PCA_START) x 12/22118400 = 20ms
-      000689                       2528 00101$:
-      000689 C3               [12] 2529 	clr	c
-      00068A E5 1A            [12] 2530 	mov	a,_nCounts
-      00068C 94 01            [12] 2531 	subb	a,#0x01
-      00068E E5 1B            [12] 2532 	mov	a,(_nCounts + 1)
-      000690 94 00            [12] 2533 	subb	a,#0x00
-      000692 40 F5            [24] 2534 	jc	00101$
-                           0005E7  2535 	C$kpdlcdtestPCA.c$115$1$128 ==.
-                           0005E7  2536 	XG$pause$0$0 ==.
-      000694 22               [24] 2537 	ret
-                                   2538 ;------------------------------------------------------------
-                                   2539 ;Allocation info for local variables in function 'wait'
-                                   2540 ;------------------------------------------------------------
-                           0005E8  2541 	G$wait$0$0 ==.
-                           0005E8  2542 	C$kpdlcdtestPCA.c$117$1$128 ==.
-                                   2543 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:117: void wait(void)
-                                   2544 ;	-----------------------------------------
-                                   2545 ;	 function wait
-                                   2546 ;	-----------------------------------------
-      000695                       2547 _wait:
-                           0005E8  2548 	C$kpdlcdtestPCA.c$119$1$130 ==.
-                                   2549 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:119: nCounts = 0;
-      000695 E4               [12] 2550 	clr	a
-      000696 F5 1A            [12] 2551 	mov	_nCounts,a
-      000698 F5 1B            [12] 2552 	mov	(_nCounts + 1),a
-                           0005ED  2553 	C$kpdlcdtestPCA.c$120$1$130 ==.
-                                   2554 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:120: while (nCounts < 50);    // 50 counts -> 50 x 20ms = 1000ms
-      00069A                       2555 00101$:
-      00069A C3               [12] 2556 	clr	c
-      00069B E5 1A            [12] 2557 	mov	a,_nCounts
-      00069D 94 32            [12] 2558 	subb	a,#0x32
-      00069F E5 1B            [12] 2559 	mov	a,(_nCounts + 1)
-      0006A1 94 00            [12] 2560 	subb	a,#0x00
-      0006A3 40 F5            [24] 2561 	jc	00101$
-                           0005F8  2562 	C$kpdlcdtestPCA.c$121$1$130 ==.
-                           0005F8  2563 	XG$wait$0$0 ==.
-      0006A5 22               [24] 2564 	ret
-                                   2565 ;------------------------------------------------------------
-                                   2566 ;Allocation info for local variables in function 'KeyResult'
-                                   2567 ;------------------------------------------------------------
-                                   2568 ;keypad                    Allocated to registers r7 
-                                   2569 ;------------------------------------------------------------
-                           0005F9  2570 	G$KeyResult$0$0 ==.
-                           0005F9  2571 	C$kpdlcdtestPCA.c$123$1$130 ==.
-                                   2572 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:123: char KeyResult(void)
-                                   2573 ;	-----------------------------------------
-                                   2574 ;	 function KeyResult
-                                   2575 ;	-----------------------------------------
-      0006A6                       2576 _KeyResult:
-                           0005F9  2577 	C$kpdlcdtestPCA.c$126$1$132 ==.
-                                   2578 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:126: keypad = read_keypad();
-      0006A6 12 01 C7         [24] 2579 	lcall	_read_keypad
-      0006A9 AF 82            [24] 2580 	mov	r7,dpl
-                           0005FE  2581 	C$kpdlcdtestPCA.c$127$1$132 ==.
-                                   2582 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:127: pause();    // This pauses for 1 PCA0 counter clock cycle (20ms) 
-      0006AB C0 07            [24] 2583 	push	ar7
-      0006AD 12 06 84         [24] 2584 	lcall	_pause
-      0006B0 D0 07            [24] 2585 	pop	ar7
-                           000605  2586 	C$kpdlcdtestPCA.c$130$1$132 ==.
-                                   2587 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:130: while(keypad == (-1))
-      0006B2                       2588 00101$:
-      0006B2 BF FF 07         [24] 2589 	cjne	r7,#0xFF,00103$
-                           000608  2590 	C$kpdlcdtestPCA.c$132$2$133 ==.
-                                   2591 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:132: keypad = read_keypad();
-      0006B5 12 01 C7         [24] 2592 	lcall	_read_keypad
-      0006B8 AF 82            [24] 2593 	mov	r7,dpl
-      0006BA 80 F6            [24] 2594 	sjmp	00101$
-      0006BC                       2595 00103$:
-                           00060F  2596 	C$kpdlcdtestPCA.c$134$1$132 ==.
-                                   2597 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:134: if (keypad != (-1))   // keypad = -1 if no key is pressed
-      0006BC BF FF 02         [24] 2598 	cjne	r7,#0xFF,00133$
-      0006BF 80 6F            [24] 2599 	sjmp	00108$
-      0006C1                       2600 00133$:
-                           000614  2601 	C$kpdlcdtestPCA.c$138$2$134 ==.
-                                   2602 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:138: lcd_clear();
-      0006C1 C0 07            [24] 2603 	push	ar7
-      0006C3 12 01 8E         [24] 2604 	lcall	_lcd_clear
-      0006C6 D0 07            [24] 2605 	pop	ar7
-                           00061B  2606 	C$kpdlcdtestPCA.c$139$2$134 ==.
-                                   2607 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:139: lcd_print("Your key was:\n %c,  = Hex %X", keypad, keypad);
-      0006C8 EF               [12] 2608 	mov	a,r7
-      0006C9 FD               [12] 2609 	mov	r5,a
-      0006CA 33               [12] 2610 	rlc	a
-      0006CB 95 E0            [12] 2611 	subb	a,acc
-      0006CD FE               [12] 2612 	mov	r6,a
-      0006CE C0 07            [24] 2613 	push	ar7
-      0006D0 C0 06            [24] 2614 	push	ar6
-      0006D2 C0 05            [24] 2615 	push	ar5
-      0006D4 C0 05            [24] 2616 	push	ar5
-      0006D6 C0 06            [24] 2617 	push	ar6
-      0006D8 C0 05            [24] 2618 	push	ar5
-      0006DA C0 06            [24] 2619 	push	ar6
-      0006DC 74 22            [12] 2620 	mov	a,#___str_6
-      0006DE C0 E0            [24] 2621 	push	acc
-      0006E0 74 0F            [12] 2622 	mov	a,#(___str_6 >> 8)
-      0006E2 C0 E0            [24] 2623 	push	acc
-      0006E4 74 80            [12] 2624 	mov	a,#0x80
-      0006E6 C0 E0            [24] 2625 	push	acc
-      0006E8 12 01 09         [24] 2626 	lcall	_lcd_print
-      0006EB E5 81            [12] 2627 	mov	a,sp
-      0006ED 24 F9            [12] 2628 	add	a,#0xf9
-      0006EF F5 81            [12] 2629 	mov	sp,a
-      0006F1 D0 05            [24] 2630 	pop	ar5
-      0006F3 D0 06            [24] 2631 	pop	ar6
-                           000648  2632 	C$kpdlcdtestPCA.c$140$2$134 ==.
-                                   2633 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:140: printf("\rYour key was: %c,  = Hex %X\n", keypad, keypad);
-      0006F5 C0 05            [24] 2634 	push	ar5
-      0006F7 C0 06            [24] 2635 	push	ar6
-      0006F9 C0 05            [24] 2636 	push	ar5
-      0006FB C0 06            [24] 2637 	push	ar6
-      0006FD 74 3F            [12] 2638 	mov	a,#___str_7
-      0006FF C0 E0            [24] 2639 	push	acc
-      000701 74 0F            [12] 2640 	mov	a,#(___str_7 >> 8)
-      000703 C0 E0            [24] 2641 	push	acc
-      000705 74 80            [12] 2642 	mov	a,#0x80
-      000707 C0 E0            [24] 2643 	push	acc
-      000709 12 08 99         [24] 2644 	lcall	_printf
-      00070C E5 81            [12] 2645 	mov	a,sp
-      00070E 24 F9            [12] 2646 	add	a,#0xf9
-      000710 F5 81            [12] 2647 	mov	sp,a
-      000712 D0 07            [24] 2648 	pop	ar7
-                           000667  2649 	C$kpdlcdtestPCA.c$141$2$134 ==.
-                                   2650 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:141: if(keypad == 0)printf("   **Wire Connection Error**   ");
-      000714 EF               [12] 2651 	mov	a,r7
-      000715 70 19            [24] 2652 	jnz	00108$
-      000717 C0 07            [24] 2653 	push	ar7
-      000719 74 5D            [12] 2654 	mov	a,#___str_8
-      00071B C0 E0            [24] 2655 	push	acc
-      00071D 74 0F            [12] 2656 	mov	a,#(___str_8 >> 8)
-      00071F C0 E0            [24] 2657 	push	acc
-      000721 74 80            [12] 2658 	mov	a,#0x80
-      000723 C0 E0            [24] 2659 	push	acc
-      000725 12 08 99         [24] 2660 	lcall	_printf
-      000728 15 81            [12] 2661 	dec	sp
-      00072A 15 81            [12] 2662 	dec	sp
-      00072C 15 81            [12] 2663 	dec	sp
-      00072E D0 07            [24] 2664 	pop	ar7
-                           000683  2665 	C$kpdlcdtestPCA.c$143$1$132 ==.
-                                   2666 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:143: while(keypad != -1) keypad = read_keypad(); // Waits until keypad returns a -1
-      000730                       2667 00108$:
-      000730 BF FF 02         [24] 2668 	cjne	r7,#0xFF,00135$
-      000733 80 07            [24] 2669 	sjmp	00110$
-      000735                       2670 00135$:
-      000735 12 01 C7         [24] 2671 	lcall	_read_keypad
-      000738 AF 82            [24] 2672 	mov	r7,dpl
-      00073A 80 F4            [24] 2673 	sjmp	00108$
-      00073C                       2674 00110$:
-                           00068F  2675 	C$kpdlcdtestPCA.c$144$1$132 ==.
-                                   2676 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:144: return (keypad - 48);
-      00073C EF               [12] 2677 	mov	a,r7
-      00073D 24 D0            [12] 2678 	add	a,#0xD0
-      00073F F5 82            [12] 2679 	mov	dpl,a
-                           000694  2680 	C$kpdlcdtestPCA.c$145$1$132 ==.
-                           000694  2681 	XG$KeyResult$0$0 ==.
-      000741 22               [24] 2682 	ret
-                                   2683 	.area CSEG    (CODE)
-                                   2684 	.area CONST   (CODE)
-                           000000  2685 FkpdlcdtestPCA$__str_0$0$0 == .
-      000EAD                       2686 ___str_0:
-      000EAD 0A                    2687 	.db 0x0A
-      000EAE 54 79 70 65 20 64 69  2688 	.ascii "Type digits; end w/#"
+      000606                       2409 _PCA_ISR:
+      000606 C0 E0            [24] 2410 	push	acc
+      000608 C0 D0            [24] 2411 	push	psw
+                           00055D  2412 	C$kpdlcdtestPCA.c$100$1$124 ==.
+                                   2413 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:100: if (CF)
+                           00055D  2414 	C$kpdlcdtestPCA.c$102$2$125 ==.
+                                   2415 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:102: CF = 0;                     // clear the interrupt flag
+      00060A 10 DF 02         [24] 2416 	jbc	_CF,00114$
+      00060D 80 2E            [24] 2417 	sjmp	00104$
+      00060F                       2418 00114$:
+                           000562  2419 	C$kpdlcdtestPCA.c$103$2$125 ==.
+                                   2420 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:103: nOverflows++;               // continuous overflow counter
+      00060F 05 1C            [12] 2421 	inc	_nOverflows
+      000611 E4               [12] 2422 	clr	a
+      000612 B5 1C 02         [24] 2423 	cjne	a,_nOverflows,00115$
+      000615 05 1D            [12] 2424 	inc	(_nOverflows + 1)
+      000617                       2425 00115$:
+                           00056A  2426 	C$kpdlcdtestPCA.c$104$2$125 ==.
+                                   2427 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:104: nCounts++;
+      000617 05 1A            [12] 2428 	inc	_nCounts
+      000619 E4               [12] 2429 	clr	a
+      00061A B5 1A 02         [24] 2430 	cjne	a,_nCounts,00116$
+      00061D 05 1B            [12] 2431 	inc	(_nCounts + 1)
+      00061F                       2432 00116$:
+                           000572  2433 	C$kpdlcdtestPCA.c$105$2$125 ==.
+                                   2434 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:105: PCA0 = PCA_START;
+      00061F 75 E9 00         [24] 2435 	mov	((_PCA0 >> 0) & 0xFF),#0x00
+      000622 75 F9 70         [24] 2436 	mov	((_PCA0 >> 8) & 0xFF),#0x70
+                           000578  2437 	C$kpdlcdtestPCA.c$106$2$125 ==.
+                                   2438 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:106: if (nCounts > 50)
+      000625 C3               [12] 2439 	clr	c
+      000626 74 32            [12] 2440 	mov	a,#0x32
+      000628 95 1A            [12] 2441 	subb	a,_nCounts
+      00062A E4               [12] 2442 	clr	a
+      00062B 95 1B            [12] 2443 	subb	a,(_nCounts + 1)
+      00062D 50 11            [24] 2444 	jnc	00106$
+                           000582  2445 	C$kpdlcdtestPCA.c$108$3$126 ==.
+                                   2446 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:108: nCounts = 0;
+      00062F E4               [12] 2447 	clr	a
+      000630 F5 1A            [12] 2448 	mov	_nCounts,a
+      000632 F5 1B            [12] 2449 	mov	(_nCounts + 1),a
+                           000587  2450 	C$kpdlcdtestPCA.c$109$3$126 ==.
+                                   2451 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:109: Counts++;               // seconds counter
+      000634 05 18            [12] 2452 	inc	_Counts
+                                   2453 ;	genFromRTrack removed	clr	a
+      000636 B5 18 07         [24] 2454 	cjne	a,_Counts,00106$
+      000639 05 19            [12] 2455 	inc	(_Counts + 1)
+      00063B 80 03            [24] 2456 	sjmp	00106$
+      00063D                       2457 00104$:
+                           000590  2458 	C$kpdlcdtestPCA.c$112$1$124 ==.
+                                   2459 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:112: else PCA0CN &= 0xC0;           // clear all other 9-type interrupts
+      00063D 53 D8 C0         [24] 2460 	anl	_PCA0CN,#0xC0
+      000640                       2461 00106$:
+      000640 D0 D0            [24] 2462 	pop	psw
+      000642 D0 E0            [24] 2463 	pop	acc
+                           000597  2464 	C$kpdlcdtestPCA.c$113$1$124 ==.
+                           000597  2465 	XG$PCA_ISR$0$0 ==.
+      000644 32               [24] 2466 	reti
+                                   2467 ;	eliminated unneeded mov psw,# (no regs used in bank)
+                                   2468 ;	eliminated unneeded push/pop dpl
+                                   2469 ;	eliminated unneeded push/pop dph
+                                   2470 ;	eliminated unneeded push/pop b
+                                   2471 ;------------------------------------------------------------
+                                   2472 ;Allocation info for local variables in function 'pause'
+                                   2473 ;------------------------------------------------------------
+                           000598  2474 	G$pause$0$0 ==.
+                           000598  2475 	C$kpdlcdtestPCA.c$115$1$124 ==.
+                                   2476 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:115: void pause(void)
+                                   2477 ;	-----------------------------------------
+                                   2478 ;	 function pause
+                                   2479 ;	-----------------------------------------
+      000645                       2480 _pause:
+                           000598  2481 	C$kpdlcdtestPCA.c$117$1$128 ==.
+                                   2482 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:117: nCounts = 0;
+      000645 E4               [12] 2483 	clr	a
+      000646 F5 1A            [12] 2484 	mov	_nCounts,a
+      000648 F5 1B            [12] 2485 	mov	(_nCounts + 1),a
+                           00059D  2486 	C$kpdlcdtestPCA.c$118$1$128 ==.
+                                   2487 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:118: while (nCounts < 1);// 1 count -> (65536-PCA_START) x 12/22118400 = 20ms
+      00064A                       2488 00101$:
+      00064A C3               [12] 2489 	clr	c
+      00064B E5 1A            [12] 2490 	mov	a,_nCounts
+      00064D 94 01            [12] 2491 	subb	a,#0x01
+      00064F E5 1B            [12] 2492 	mov	a,(_nCounts + 1)
+      000651 94 00            [12] 2493 	subb	a,#0x00
+      000653 40 F5            [24] 2494 	jc	00101$
+                           0005A8  2495 	C$kpdlcdtestPCA.c$119$1$128 ==.
+                           0005A8  2496 	XG$pause$0$0 ==.
+      000655 22               [24] 2497 	ret
+                                   2498 ;------------------------------------------------------------
+                                   2499 ;Allocation info for local variables in function 'wait'
+                                   2500 ;------------------------------------------------------------
+                           0005A9  2501 	G$wait$0$0 ==.
+                           0005A9  2502 	C$kpdlcdtestPCA.c$121$1$128 ==.
+                                   2503 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:121: void wait(void)
+                                   2504 ;	-----------------------------------------
+                                   2505 ;	 function wait
+                                   2506 ;	-----------------------------------------
+      000656                       2507 _wait:
+                           0005A9  2508 	C$kpdlcdtestPCA.c$123$1$130 ==.
+                                   2509 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:123: nCounts = 0;
+      000656 E4               [12] 2510 	clr	a
+      000657 F5 1A            [12] 2511 	mov	_nCounts,a
+      000659 F5 1B            [12] 2512 	mov	(_nCounts + 1),a
+                           0005AE  2513 	C$kpdlcdtestPCA.c$124$1$130 ==.
+                                   2514 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:124: while (nCounts < 50);    // 50 counts -> 50 x 20ms = 1000ms
+      00065B                       2515 00101$:
+      00065B C3               [12] 2516 	clr	c
+      00065C E5 1A            [12] 2517 	mov	a,_nCounts
+      00065E 94 32            [12] 2518 	subb	a,#0x32
+      000660 E5 1B            [12] 2519 	mov	a,(_nCounts + 1)
+      000662 94 00            [12] 2520 	subb	a,#0x00
+      000664 40 F5            [24] 2521 	jc	00101$
+                           0005B9  2522 	C$kpdlcdtestPCA.c$125$1$130 ==.
+                           0005B9  2523 	XG$wait$0$0 ==.
+      000666 22               [24] 2524 	ret
+                                   2525 ;------------------------------------------------------------
+                                   2526 ;Allocation info for local variables in function 'KeyResult'
+                                   2527 ;------------------------------------------------------------
+                                   2528 ;keypad                    Allocated to registers r6 
+                                   2529 ;real_keypad               Allocated to registers r7 
+                                   2530 ;------------------------------------------------------------
+                           0005BA  2531 	G$KeyResult$0$0 ==.
+                           0005BA  2532 	C$kpdlcdtestPCA.c$127$1$130 ==.
+                                   2533 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:127: char KeyResult(void)
+                                   2534 ;	-----------------------------------------
+                                   2535 ;	 function KeyResult
+                                   2536 ;	-----------------------------------------
+      000667                       2537 _KeyResult:
+                           0005BA  2538 	C$kpdlcdtestPCA.c$130$1$130 ==.
+                                   2539 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:130: char real_keypad = 0;
+      000667 7F 00            [12] 2540 	mov	r7,#0x00
+                           0005BC  2541 	C$kpdlcdtestPCA.c$131$1$132 ==.
+                                   2542 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:131: keypad = read_keypad();
+      000669 C0 07            [24] 2543 	push	ar7
+      00066B 12 01 C7         [24] 2544 	lcall	_read_keypad
+      00066E AE 82            [24] 2545 	mov	r6,dpl
+                           0005C3  2546 	C$kpdlcdtestPCA.c$132$1$132 ==.
+                                   2547 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:132: pause();    // This pauses for 1 PCA0 counter clock cycle (20ms) 
+      000670 C0 06            [24] 2548 	push	ar6
+      000672 12 06 45         [24] 2549 	lcall	_pause
+      000675 D0 06            [24] 2550 	pop	ar6
+      000677 D0 07            [24] 2551 	pop	ar7
+                           0005CC  2552 	C$kpdlcdtestPCA.c$135$1$132 ==.
+                                   2553 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:135: while(keypad == (-1))
+      000679                       2554 00101$:
+      000679 BE FF 0B         [24] 2555 	cjne	r6,#0xFF,00103$
+                           0005CF  2556 	C$kpdlcdtestPCA.c$137$2$133 ==.
+                                   2557 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:137: keypad = read_keypad();
+      00067C C0 07            [24] 2558 	push	ar7
+      00067E 12 01 C7         [24] 2559 	lcall	_read_keypad
+      000681 AE 82            [24] 2560 	mov	r6,dpl
+      000683 D0 07            [24] 2561 	pop	ar7
+      000685 80 F2            [24] 2562 	sjmp	00101$
+      000687                       2563 00103$:
+                           0005DA  2564 	C$kpdlcdtestPCA.c$139$1$132 ==.
+                                   2565 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:139: if (keypad != (-1))   // keypad = -1 if no key is pressed
+      000687 BE FF 02         [24] 2566 	cjne	r6,#0xFF,00133$
+      00068A 80 71            [24] 2567 	sjmp	00108$
+      00068C                       2568 00133$:
+                           0005DF  2569 	C$kpdlcdtestPCA.c$143$2$134 ==.
+                                   2570 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:143: lcd_clear();
+      00068C C0 06            [24] 2571 	push	ar6
+      00068E 12 01 8E         [24] 2572 	lcall	_lcd_clear
+      000691 D0 06            [24] 2573 	pop	ar6
+                           0005E6  2574 	C$kpdlcdtestPCA.c$144$2$134 ==.
+                                   2575 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:144: lcd_print("Your key was:\n %c,  = Hex %X", keypad, keypad);
+      000693 EE               [12] 2576 	mov	a,r6
+      000694 FC               [12] 2577 	mov	r4,a
+      000695 33               [12] 2578 	rlc	a
+      000696 95 E0            [12] 2579 	subb	a,acc
+      000698 FD               [12] 2580 	mov	r5,a
+      000699 C0 06            [24] 2581 	push	ar6
+      00069B C0 05            [24] 2582 	push	ar5
+      00069D C0 04            [24] 2583 	push	ar4
+      00069F C0 04            [24] 2584 	push	ar4
+      0006A1 C0 05            [24] 2585 	push	ar5
+      0006A3 C0 04            [24] 2586 	push	ar4
+      0006A5 C0 05            [24] 2587 	push	ar5
+      0006A7 74 C2            [12] 2588 	mov	a,#___str_5
+      0006A9 C0 E0            [24] 2589 	push	acc
+      0006AB 74 0E            [12] 2590 	mov	a,#(___str_5 >> 8)
+      0006AD C0 E0            [24] 2591 	push	acc
+      0006AF 74 80            [12] 2592 	mov	a,#0x80
+      0006B1 C0 E0            [24] 2593 	push	acc
+      0006B3 12 01 09         [24] 2594 	lcall	_lcd_print
+      0006B6 E5 81            [12] 2595 	mov	a,sp
+      0006B8 24 F9            [12] 2596 	add	a,#0xf9
+      0006BA F5 81            [12] 2597 	mov	sp,a
+      0006BC D0 04            [24] 2598 	pop	ar4
+      0006BE D0 05            [24] 2599 	pop	ar5
+                           000613  2600 	C$kpdlcdtestPCA.c$145$2$134 ==.
+                                   2601 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:145: printf("\rYour key was: %c,  = Hex %X\n", keypad, keypad);
+      0006C0 C0 04            [24] 2602 	push	ar4
+      0006C2 C0 05            [24] 2603 	push	ar5
+      0006C4 C0 04            [24] 2604 	push	ar4
+      0006C6 C0 05            [24] 2605 	push	ar5
+      0006C8 74 DF            [12] 2606 	mov	a,#___str_6
+      0006CA C0 E0            [24] 2607 	push	acc
+      0006CC 74 0E            [12] 2608 	mov	a,#(___str_6 >> 8)
+      0006CE C0 E0            [24] 2609 	push	acc
+      0006D0 74 80            [12] 2610 	mov	a,#0x80
+      0006D2 C0 E0            [24] 2611 	push	acc
+      0006D4 12 08 6A         [24] 2612 	lcall	_printf
+      0006D7 E5 81            [12] 2613 	mov	a,sp
+      0006D9 24 F9            [12] 2614 	add	a,#0xf9
+      0006DB F5 81            [12] 2615 	mov	sp,a
+      0006DD D0 06            [24] 2616 	pop	ar6
+                           000632  2617 	C$kpdlcdtestPCA.c$146$2$134 ==.
+                                   2618 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:146: if(keypad == 0)printf("   **Wire Connection Error**   ");
+      0006DF EE               [12] 2619 	mov	a,r6
+      0006E0 70 19            [24] 2620 	jnz	00105$
+      0006E2 C0 06            [24] 2621 	push	ar6
+      0006E4 74 FD            [12] 2622 	mov	a,#___str_7
+      0006E6 C0 E0            [24] 2623 	push	acc
+      0006E8 74 0E            [12] 2624 	mov	a,#(___str_7 >> 8)
+      0006EA C0 E0            [24] 2625 	push	acc
+      0006EC 74 80            [12] 2626 	mov	a,#0x80
+      0006EE C0 E0            [24] 2627 	push	acc
+      0006F0 12 08 6A         [24] 2628 	lcall	_printf
+      0006F3 15 81            [12] 2629 	dec	sp
+      0006F5 15 81            [12] 2630 	dec	sp
+      0006F7 15 81            [12] 2631 	dec	sp
+      0006F9 D0 06            [24] 2632 	pop	ar6
+      0006FB                       2633 00105$:
+                           00064E  2634 	C$kpdlcdtestPCA.c$147$2$134 ==.
+                                   2635 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:147: real_keypad = keypad;
+      0006FB 8E 07            [24] 2636 	mov	ar7,r6
+                           000650  2637 	C$kpdlcdtestPCA.c$149$1$132 ==.
+                                   2638 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:149: while(keypad != -1) keypad = read_keypad(); // Waits until keypad returns a -1
+      0006FD                       2639 00108$:
+      0006FD BE FF 02         [24] 2640 	cjne	r6,#0xFF,00135$
+      000700 80 0B            [24] 2641 	sjmp	00110$
+      000702                       2642 00135$:
+      000702 C0 07            [24] 2643 	push	ar7
+      000704 12 01 C7         [24] 2644 	lcall	_read_keypad
+      000707 AE 82            [24] 2645 	mov	r6,dpl
+      000709 D0 07            [24] 2646 	pop	ar7
+      00070B 80 F0            [24] 2647 	sjmp	00108$
+      00070D                       2648 00110$:
+                           000660  2649 	C$kpdlcdtestPCA.c$150$1$132 ==.
+                                   2650 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:150: return (real_keypad - 48);
+      00070D EF               [12] 2651 	mov	a,r7
+      00070E 24 D0            [12] 2652 	add	a,#0xD0
+      000710 F5 82            [12] 2653 	mov	dpl,a
+                           000665  2654 	C$kpdlcdtestPCA.c$151$1$132 ==.
+                           000665  2655 	XG$KeyResult$0$0 ==.
+      000712 22               [24] 2656 	ret
+                                   2657 	.area CSEG    (CODE)
+                                   2658 	.area CONST   (CODE)
+                           000000  2659 FkpdlcdtestPCA$__str_0$0$0 == .
+      000E7E                       2660 ___str_0:
+      000E7E 0A                    2661 	.db 0x0A
+      000E7F 54 79 70 65 20 64 69  2662 	.ascii "Type digits; end w/#"
              67 69 74 73 3B 20 65
              6E 64 20 77 2F 23
-      000EC2 00                    2689 	.db 0x00
-                           000016  2690 FkpdlcdtestPCA$__str_1$0$0 == .
-      000EC3                       2691 ___str_1:
-      000EC3 20 20 20 20 20 25 63  2692 	.ascii "     %c%c%c%c%c"
+      000E93 00                    2663 	.db 0x00
+                           000016  2664 FkpdlcdtestPCA$__str_1$0$0 == .
+      000E94                       2665 ___str_1:
+      000E94 20 20 20 20 20 25 63  2666 	.ascii "     %c%c%c%c%c"
              25 63 25 63 25 63 25
              63
-      000ED2 00                    2693 	.db 0x00
-                           000026  2694 FkpdlcdtestPCA$__str_2$0$0 == .
-      000ED3                       2695 ___str_2:
-      000ED3 25 63                 2696 	.ascii "%c"
-      000ED5 00                    2697 	.db 0x00
-                           000029  2698 FkpdlcdtestPCA$__str_3$0$0 == .
-      000ED6                       2699 ___str_3:
-      000ED6 0A                    2700 	.db 0x0A
-      000ED7 53 74 61 72 74        2701 	.ascii "Start"
-      000EDC 0D                    2702 	.db 0x0D
-      000EDD 0A                    2703 	.db 0x0A
-      000EDE 00                    2704 	.db 0x00
-                           000032  2705 FkpdlcdtestPCA$__str_4$0$0 == .
-      000EDF                       2706 ___str_4:
-      000EDF 43 61 6C 69 62 72 61  2707 	.ascii "Calibration:"
-             74 69 6F 6E 3A
-      000EEB 0A                    2708 	.db 0x0A
-      000EEC 48 65 6C 6C 6F 20 77  2709 	.ascii "Hello world!"
-             6F 72 6C 64 21
-      000EF8 0A                    2710 	.db 0x0A
-      000EF9 30 31 32 5F 33 34 35  2711 	.ascii "012_345_678:"
-             5F 36 37 38 3A
-      000F05 0A                    2712 	.db 0x0A
-      000F06 61 62 63 20 64 65 66  2713 	.ascii "abc def ghij"
-             20 67 68 69 6A
-      000F12 00                    2714 	.db 0x00
-                           000066  2715 FkpdlcdtestPCA$__str_5$0$0 == .
-      000F13                       2716 ___str_5:
-      000F13 0D                    2717 	.db 0x0D
-      000F14 52 65 73 75 6C 74 20  2718 	.ascii "Result is %u"
-             69 73 20 25 75
-      000F20 0A                    2719 	.db 0x0A
-      000F21 00                    2720 	.db 0x00
-                           000075  2721 FkpdlcdtestPCA$__str_6$0$0 == .
-      000F22                       2722 ___str_6:
-      000F22 59 6F 75 72 20 6B 65  2723 	.ascii "Your key was:"
+      000EA3 00                    2667 	.db 0x00
+                           000026  2668 FkpdlcdtestPCA$__str_2$0$0 == .
+      000EA4                       2669 ___str_2:
+      000EA4 25 63                 2670 	.ascii "%c"
+      000EA6 00                    2671 	.db 0x00
+                           000029  2672 FkpdlcdtestPCA$__str_3$0$0 == .
+      000EA7                       2673 ___str_3:
+      000EA7 0A                    2674 	.db 0x0A
+      000EA8 53 74 61 72 74        2675 	.ascii "Start"
+      000EAD 0D                    2676 	.db 0x0D
+      000EAE 0A                    2677 	.db 0x0A
+      000EAF 00                    2678 	.db 0x00
+                           000032  2679 FkpdlcdtestPCA$__str_4$0$0 == .
+      000EB0                       2680 ___str_4:
+      000EB0 0D                    2681 	.db 0x0D
+      000EB1 59 6F 75 20 74 79 70  2682 	.ascii "You typed in %u"
+             65 64 20 69 6E 20 25
+             75
+      000EC0 0A                    2683 	.db 0x0A
+      000EC1 00                    2684 	.db 0x00
+                           000044  2685 FkpdlcdtestPCA$__str_5$0$0 == .
+      000EC2                       2686 ___str_5:
+      000EC2 59 6F 75 72 20 6B 65  2687 	.ascii "Your key was:"
              79 20 77 61 73 3A
-      000F2F 0A                    2724 	.db 0x0A
-      000F30 20 25 63 2C 20 20 3D  2725 	.ascii " %c,  = Hex %X"
+      000ECF 0A                    2688 	.db 0x0A
+      000ED0 20 25 63 2C 20 20 3D  2689 	.ascii " %c,  = Hex %X"
              20 48 65 78 20 25 58
-      000F3E 00                    2726 	.db 0x00
-                           000092  2727 FkpdlcdtestPCA$__str_7$0$0 == .
-      000F3F                       2728 ___str_7:
-      000F3F 0D                    2729 	.db 0x0D
-      000F40 59 6F 75 72 20 6B 65  2730 	.ascii "Your key was: %c,  = Hex %X"
+      000EDE 00                    2690 	.db 0x00
+                           000061  2691 FkpdlcdtestPCA$__str_6$0$0 == .
+      000EDF                       2692 ___str_6:
+      000EDF 0D                    2693 	.db 0x0D
+      000EE0 59 6F 75 72 20 6B 65  2694 	.ascii "Your key was: %c,  = Hex %X"
              79 20 77 61 73 3A 20
              25 63 2C 20 20 3D 20
              48 65 78 20 25 58
-      000F5B 0A                    2731 	.db 0x0A
-      000F5C 00                    2732 	.db 0x00
-                           0000B0  2733 FkpdlcdtestPCA$__str_8$0$0 == .
-      000F5D                       2734 ___str_8:
-      000F5D 20 20 20 2A 2A 57 69  2735 	.ascii "   **Wire Connection Error**   "
+      000EFB 0A                    2695 	.db 0x0A
+      000EFC 00                    2696 	.db 0x00
+                           00007F  2697 FkpdlcdtestPCA$__str_7$0$0 == .
+      000EFD                       2698 ___str_7:
+      000EFD 20 20 20 2A 2A 57 69  2699 	.ascii "   **Wire Connection Error**   "
              72 65 20 43 6F 6E 6E
              65 63 74 69 6F 6E 20
              45 72 72 6F 72 2A 2A
              20 20 20
-      000F7C 00                    2736 	.db 0x00
-                                   2737 	.area XINIT   (CODE)
-                                   2738 	.area CABS    (ABS,CODE)
+      000F1C 00                    2700 	.db 0x00
+                                   2701 	.area XINIT   (CODE)
+                                   2702 	.area CABS    (ABS,CODE)

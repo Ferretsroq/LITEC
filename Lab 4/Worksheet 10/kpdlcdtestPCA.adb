@@ -53,10 +53,9 @@ S:LkpdlcdtestPCA.Accel_Init$Data2$1$103({1}DA1d,SC:U),E,0,0
 S:G$Counts$0$0({2}SI:U),E,0,0
 S:G$nCounts$0$0({2}SI:U),E,0,0
 S:G$nOverflows$0$0({2}SI:U),E,0,0
-S:LkpdlcdtestPCA.main$keypad1$1$113({1}SC:S),R,0,0,[r7]
-S:LkpdlcdtestPCA.main$keypad2$1$113({1}SC:S),R,0,0,[r6]
-S:LkpdlcdtestPCA.main$result$1$113({1}SC:S),R,0,0,[r6]
-S:LkpdlcdtestPCA.KeyResult$keypad$1$132({1}SC:S),R,0,0,[r7]
+S:LkpdlcdtestPCA.main$kpdTest$1$113({2}SI:U),R,0,0,[r6,r7]
+S:LkpdlcdtestPCA.KeyResult$keypad$1$132({1}SC:S),R,0,0,[r6]
+S:LkpdlcdtestPCA.KeyResult$real_keypad$1$132({1}SC:S),R,0,0,[r7]
 S:LkpdlcdtestPCA.lcd_print$text$1$73({80}DA80d,SC:U),F,0,0
 S:G$P0$0$0({1}SC:U),I,0,0
 S:G$SP$0$0({1}SC:U),I,0,0
@@ -400,8 +399,7 @@ S:FkpdlcdtestPCA$__str_0$0$0({22}DA22d,SC:S),D,0,0
 S:FkpdlcdtestPCA$__str_1$0$0({16}DA16d,SC:S),D,0,0
 S:FkpdlcdtestPCA$__str_2$0$0({3}DA3d,SC:S),D,0,0
 S:FkpdlcdtestPCA$__str_3$0$0({9}DA9d,SC:S),D,0,0
-S:FkpdlcdtestPCA$__str_4$0$0({52}DA52d,SC:S),D,0,0
-S:FkpdlcdtestPCA$__str_5$0$0({15}DA15d,SC:S),D,0,0
-S:FkpdlcdtestPCA$__str_6$0$0({29}DA29d,SC:S),D,0,0
-S:FkpdlcdtestPCA$__str_7$0$0({30}DA30d,SC:S),D,0,0
-S:FkpdlcdtestPCA$__str_8$0$0({32}DA32d,SC:S),D,0,0
+S:FkpdlcdtestPCA$__str_4$0$0({18}DA18d,SC:S),D,0,0
+S:FkpdlcdtestPCA$__str_5$0$0({29}DA29d,SC:S),D,0,0
+S:FkpdlcdtestPCA$__str_6$0$0({30}DA30d,SC:S),D,0,0
+S:FkpdlcdtestPCA$__str_7$0$0({32}DA32d,SC:S),D,0,0

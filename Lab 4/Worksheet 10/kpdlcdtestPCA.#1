@@ -38,9 +38,10 @@ unsigned int Counts, nCounts, nOverflows;
 //*****************************************************************************
 void main(void)
 {
-    char keypad1;
+    /*char keypad1;
 	char keypad2;
-	char result;
+	char result;*/
+	unsigned int kpdTest;
     Sys_Init();     // System Initialization - MUST BE 1st EXECUTABLE STATEMENT
     Port_Init();    // Initialize ports 2 and 3 - XBR0 set to 0x05, UART0 & SMB
     Interrupt_Init();   // You may want to change XBR0 to match your SMB wiring
@@ -48,19 +49,22 @@ void main(void)
     SMB0_Init();
     putchar('\r');  // Dummy write to serial port
     printf("\nStart\r\n");
-
+	lcd_clear();
     Counts = 0;
     while (Counts < 1); // Wait a long time (1s) for keypad & LCD to initialize
-
     lcd_clear();
-    lcd_print("Calibration:\nHello world!\n012_345_678:\nabc def ghij");
+    //lcd_print("\rCalibration:\nHello world!\n012_345_678:\nabc def ghij");
     while (1)
     {
-		keypad1 = KeyResult();
+		/*keypad1 = KeyResult();
 		keypad2 = KeyResult();
-		result = ((keypad1)*10) + (keypad2);
+		result = (((keypad1)*10) + (keypad2));
 		printf("\rResult is %u\n", result);
-		lcd_print("\rResult is %u\n", result);
+		//printf("\rFirst number was %u, second number was %u\n", keypad1, keypad2);
+		lcd_print("\rResult is %u\n", result);*/
+		kpdTest = kpd_input(1);
+		printf("\rYou typed in %u\n", kpdTest);
+		lcd_clear();
     }
 	
 }
@@ -123,6 +127,7 @@ void wait(void)
 char KeyResult(void)
 {
 	char keypad;
+	char real_keypad = 0;
 	keypad = read_keypad();
     pause();    // This pauses for 1 PCA0 counter clock cycle (20ms) 
                     // If the keypad is read too frequently (no delay), it will
@@ -139,7 +144,8 @@ char KeyResult(void)
 		lcd_print("Your key was:\n %c,  = Hex %X", keypad, keypad);
 		printf("\rYour key was: %c,  = Hex %X\n", keypad, keypad);
 		if(keypad == 0)printf("   **Wire Connection Error**   ");
+		real_keypad = keypad;
 	}           // A returned value of 0 (0x00) indicates wiring error'
 	while(keypad != -1) keypad = read_keypad(); // Waits until keypad returns a -1
-	return (keypad - 48);
+	return (real_keypad - 48);
 }
