@@ -227,12 +227,8 @@ void set_drive_PWM(void)
 // function which allow operator to pick desired heading
 int pick_heading(void)
 {
-	unsigned int input_heading;
-	printf("\rInput desired heading on keypad, in degrees.\n");
-	printf("\rAny number above 360 will be interpreted as 360.\n");
-	input_heading = kpd_input(1);
-	if(input_heading >= 360) input_heading = 0;
-	printf("\rDesired heading is %u degrees", input_heading);
+	//hi
+	//ohaider
 }
 
 signed int servo_error(unsigned int heading)
@@ -254,7 +250,7 @@ signed int motor_error(unsigned int range)
 	signed int Error = 0;
 	unsigned int PWMe = 0;
 	unsigned char k = 20;	//Gain constant
-	Error = (desired_range) - range;	// Calculate the error
+	Error = neutral - range;	// Calculate the error
 	PWMe = RANGER_CENTER + (k*Error);
 	if(PWMe < RANGER_MIN) PWMe = RANGER_MIN;
 	if(PWMe > RANGER_MAX) PWMe = RANGER_MAX;
