@@ -29,6 +29,7 @@ void set_drive_PWM(void);
 int pick_heading(void); // function which allow operator to pick desired heading
 signed int servo_error(unsigned int heading);
 signed int motor_error(unsigned int range);
+char heading_gain(void);
 
 //-----------------------------------------------------------------------------
 // Define global variables
@@ -233,6 +234,7 @@ int pick_heading(void)
 	input_heading = kpd_input(1);
 	if(input_heading >= 360) input_heading = 0;
 	printf("\rDesired heading is %u degrees", input_heading);
+	return input_heading;
 }
 
 signed int servo_error(unsigned int heading)
@@ -262,4 +264,15 @@ signed int motor_error(unsigned int range)
 	// PW_CENTER is the motor in a neutral position. This is so that we don't 
 	// damage the motor by switching directions too quickly.
 	return PWMe;
+}
+
+char steering_gain(void)
+{
+	char input_gain;
+	printf("\rInput desired steering gain on keypad.\n");
+	printf("\rAny number below 0 will be interpreted as 1.\n");
+	input_gain = kpd_input(1);
+	if(input_gain <= 0) input_gain = 1;
+	printf("\rDesired gain is %u", input_gain);
+	return input_gain;
 }

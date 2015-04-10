@@ -1,7 +1,7 @@
 ;--------------------------------------------------------
 ; File Created by SDCC : free open source ANSI-C Compiler
 ; Version 3.4.0 #8981 (Apr  5 2014) (MINGW32)
-; This file was generated Fri Apr 10 13:14:32 2015
+; This file was generated Fri Apr 10 13:22:20 2015
 ;--------------------------------------------------------
 	.module Lab_4
 	.optsdcc -mmcs51 --model-small
@@ -9,6 +9,7 @@
 ;--------------------------------------------------------
 ; Public variables in this module
 ;--------------------------------------------------------
+	.globl _steering_gain
 	.globl _main
 	.globl _read_keypad
 	.globl _strlen
@@ -1030,11 +1031,11 @@ _COMPASS_PW::
 G$RANGER_PW$0$0==.
 _RANGER_PW::
 	.ds 2
-LLab_4.read_compass$Data$1$139==.
-_read_compass_Data_1_139:
+LLab_4.read_compass$Data$1$140==.
+_read_compass_Data_1_140:
 	.ds 2
-LLab_4.read_ranger$Data$1$144==.
-_read_ranger_Data_1_144:
+LLab_4.read_ranger$Data$1$145==.
+_read_ranger_Data_1_145:
 	.ds 2
 ;--------------------------------------------------------
 ; overlayable items in internal ram 
@@ -1133,39 +1134,39 @@ __interrupt_vect:
 	.globl __mcs51_genXINIT
 	.globl __mcs51_genXRAMCLEAR
 	.globl __mcs51_genRAMCLEAR
-	C$Lab_4.c$36$1$153 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:36: unsigned int COMPASS_CENTER = 2760;
+	C$Lab_4.c$37$1$156 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:37: unsigned int COMPASS_CENTER = 2760;
 	mov	_COMPASS_CENTER,#0xC8
 	mov	(_COMPASS_CENTER + 1),#0x0A
-	C$Lab_4.c$37$1$153 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:37: unsigned int COMPASS_MAX = 3500;
+	C$Lab_4.c$38$1$156 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:38: unsigned int COMPASS_MAX = 3500;
 	mov	_COMPASS_MAX,#0xAC
 	mov	(_COMPASS_MAX + 1),#0x0D
-	C$Lab_4.c$38$1$153 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:38: unsigned int COMPASS_MIN = 2030;
+	C$Lab_4.c$39$1$156 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:39: unsigned int COMPASS_MIN = 2030;
 	mov	_COMPASS_MIN,#0xEE
 	mov	(_COMPASS_MIN + 1),#0x07
-	C$Lab_4.c$39$1$153 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:39: unsigned int RANGER_CENTER = 2760;
+	C$Lab_4.c$40$1$156 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:40: unsigned int RANGER_CENTER = 2760;
 	mov	_RANGER_CENTER,#0xC8
 	mov	(_RANGER_CENTER + 1),#0x0A
-	C$Lab_4.c$40$1$153 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:40: unsigned int RANGER_MAX = 3500;
+	C$Lab_4.c$41$1$156 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:41: unsigned int RANGER_MAX = 3500;
 	mov	_RANGER_MAX,#0xAC
 	mov	(_RANGER_MAX + 1),#0x0D
-	C$Lab_4.c$41$1$153 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:41: unsigned int RANGER_MIN = 2030;
+	C$Lab_4.c$42$1$156 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:42: unsigned int RANGER_MIN = 2030;
 	mov	_RANGER_MIN,#0xEE
 	mov	(_RANGER_MIN + 1),#0x07
-	C$Lab_4.c$42$1$153 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:42: unsigned int PCA_START = 28672;
+	C$Lab_4.c$43$1$156 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:43: unsigned int PCA_START = 28672;
 	mov	_PCA_START,#0x00
 	mov	(_PCA_START + 1),#0x70
-	C$Lab_4.c$43$1$153 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:43: unsigned char new_heading = 0; // flag for count of compass timing
+	C$Lab_4.c$44$1$156 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:44: unsigned char new_heading = 0; // flag for count of compass timing
 	mov	_new_heading,#0x00
-	C$Lab_4.c$44$1$153 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:44: unsigned char new_range = 0; // flag for count of ranger timing
+	C$Lab_4.c$45$1$156 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:45: unsigned char new_range = 0; // flag for count of ranger timing
 	mov	_new_range,#0x00
 	.area GSFINAL (CODE)
 	ljmp	__sdcc_program_startup
@@ -2343,221 +2344,221 @@ _Accel_Init:
 ;run_stop                  Allocated to registers r7 
 ;------------------------------------------------------------
 	G$main$0$0 ==.
-	C$Lab_4.c$60$1$103 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:60: void main(void)
+	C$Lab_4.c$61$1$103 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:61: void main(void)
 ;	-----------------------------------------
 ;	 function main
 ;	-----------------------------------------
 _main:
-	C$Lab_4.c$63$1$118 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:63: Sys_Init(); // initialize board
+	C$Lab_4.c$64$1$119 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:64: Sys_Init(); // initialize board
 	lcall	_Sys_Init
-	C$Lab_4.c$64$1$118 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:64: Port_Init();
+	C$Lab_4.c$65$1$119 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:65: Port_Init();
 	lcall	_Port_Init
-	C$Lab_4.c$65$1$118 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:65: PCA_Init();
+	C$Lab_4.c$66$1$119 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:66: PCA_Init();
 	lcall	_PCA_Init
-	C$Lab_4.c$67$1$118 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:67: r_count = 0;
+	C$Lab_4.c$68$1$119 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:68: r_count = 0;
 	mov	_r_count,#0x00
-	C$Lab_4.c$68$1$118 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:68: h_count = 0;
+	C$Lab_4.c$69$1$119 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:69: h_count = 0;
 	mov	_h_count,#0x00
-	C$Lab_4.c$69$1$118 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:69: while (1)
+	C$Lab_4.c$70$1$119 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:70: while (1)
 00112$:
-	C$Lab_4.c$71$2$119 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:71: run_stop = 0;
+	C$Lab_4.c$72$2$120 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:72: run_stop = 0;
 	mov	r7,#0x00
-	C$Lab_4.c$72$2$119 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:72: while ((!COMPASS_SWITCH)&&(!RANGER_SWITCH)) // make run an sbit for the run/stop switch
+	C$Lab_4.c$73$2$120 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:73: while ((!COMPASS_SWITCH)&&(!RANGER_SWITCH)) // make run an sbit for the run/stop switch
 00104$:
 	jb	_COMPASS_SWITCH,00106$
 	jb	_RANGER_SWITCH,00106$
-	C$Lab_4.c$74$3$120 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:74: if (run_stop == 0)
+	C$Lab_4.c$75$3$121 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:75: if (run_stop == 0)
 	mov	a,r7
 	jnz	00104$
-	C$Lab_4.c$76$4$121 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:76: desired_heading = pick_heading();
+	C$Lab_4.c$77$4$122 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:77: desired_heading = pick_heading();
 	lcall	_pick_heading
 	mov	_desired_heading,dpl
 	mov	(_desired_heading + 1),dph
-	C$Lab_4.c$77$4$121 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:77: desired_range = pick_range();
+	C$Lab_4.c$78$4$122 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:78: desired_range = pick_range();
 	lcall	_pick_range
 	mov	_desired_range,dpl
 	mov	(_desired_range + 1),dph
-	C$Lab_4.c$78$4$121 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:78: run_stop = 1; // only try to update desired heading once
+	C$Lab_4.c$79$4$122 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:79: run_stop = 1; // only try to update desired heading once
 	mov	r7,#0x01
 	sjmp	00104$
 00106$:
-	C$Lab_4.c$81$2$119 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:81: if (new_heading) // enough overflows for a new heading
+	C$Lab_4.c$82$2$120 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:82: if (new_heading) // enough overflows for a new heading
 	mov	a,_new_heading
 	jz	00108$
-	C$Lab_4.c$83$3$122 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:83: heading = read_compass();
+	C$Lab_4.c$84$3$123 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:84: heading = read_compass();
 	lcall	_read_compass
 	mov	_heading,dpl
 	mov	(_heading + 1),dph
-	C$Lab_4.c$84$3$122 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:84: set_servo_PWM(); // if new data, adjust servo PWM for compass & ranger
+	C$Lab_4.c$85$3$123 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:85: set_servo_PWM(); // if new data, adjust servo PWM for compass & ranger
 	lcall	_set_servo_PWM
-	C$Lab_4.c$85$3$122 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:85: new_heading = 0;
+	C$Lab_4.c$86$3$123 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:86: new_heading = 0;
 	mov	_new_heading,#0x00
-	C$Lab_4.c$86$3$122 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:86: h_count = 0;
+	C$Lab_4.c$87$3$123 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:87: h_count = 0;
 	mov	_h_count,#0x00
 00108$:
-	C$Lab_4.c$88$2$119 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:88: if (new_range) // enough overflow for a new range
+	C$Lab_4.c$89$2$120 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:89: if (new_range) // enough overflow for a new range
 	mov	a,_new_range
 	jz	00112$
-	C$Lab_4.c$90$3$123 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:90: range = read_ranger(); // get range
+	C$Lab_4.c$91$3$124 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:91: range = read_ranger(); // get range
 	lcall	_read_ranger
 	mov	_range,dpl
 	mov	(_range + 1),dph
-	C$Lab_4.c$92$3$123 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:92: set_range_adj(); // if new data, set value to adjust steering PWM
+	C$Lab_4.c$93$3$124 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:93: set_range_adj(); // if new data, set value to adjust steering PWM
 	lcall	_set_range_adj
-	C$Lab_4.c$93$3$123 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:93: new_range = 0;
+	C$Lab_4.c$94$3$124 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:94: new_range = 0;
 	mov	_new_range,#0x00
-	C$Lab_4.c$94$3$123 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:94: r_count = 0;
+	C$Lab_4.c$95$3$124 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:95: r_count = 0;
 	mov	_r_count,#0x00
 	sjmp	00112$
-	C$Lab_4.c$97$1$118 ==.
+	C$Lab_4.c$98$1$119 ==.
 	XG$main$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'Port_Init'
 ;------------------------------------------------------------
 	G$Port_Init$0$0 ==.
-	C$Lab_4.c$102$1$118 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:102: void Port_Init()
+	C$Lab_4.c$103$1$119 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:103: void Port_Init()
 ;	-----------------------------------------
 ;	 function Port_Init
 ;	-----------------------------------------
 _Port_Init:
-	C$Lab_4.c$104$1$124 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:104: P1MDOUT |= 0x01; //set output pin for CEX0 in push-pull mode
+	C$Lab_4.c$105$1$125 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:105: P1MDOUT |= 0x01; //set output pin for CEX0 in push-pull mode
 	orl	_P1MDOUT,#0x01
-	C$Lab_4.c$105$1$124 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:105: P3MDOUT &= 0x7F; // set input pin for 3.7 to open-drain
+	C$Lab_4.c$106$1$125 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:106: P3MDOUT &= 0x7F; // set input pin for 3.7 to open-drain
 	anl	_P3MDOUT,#0x7F
-	C$Lab_4.c$106$1$124 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:106: P3		|= ~0x7F;// set input pin for 3.7 to high impedence
+	C$Lab_4.c$107$1$125 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:107: P3		|= ~0x7F;// set input pin for 3.7 to high impedence
 	mov	r7,_P3
 	mov	a,#0x80
 	orl	a,r7
 	mov	_P3,a
-	C$Lab_4.c$107$1$124 ==.
+	C$Lab_4.c$108$1$125 ==.
 	XG$Port_Init$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'PCA_Init'
 ;------------------------------------------------------------
 	G$PCA_Init$0$0 ==.
-	C$Lab_4.c$111$1$124 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:111: void PCA_Init(void)
+	C$Lab_4.c$112$1$125 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:112: void PCA_Init(void)
 ;	-----------------------------------------
 ;	 function PCA_Init
 ;	-----------------------------------------
 _PCA_Init:
-	C$Lab_4.c$113$1$126 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:113: PCA0CPM0 = 0xC2;	// CCM0 in 16-bit compare mode
+	C$Lab_4.c$114$1$127 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:114: PCA0CPM0 = 0xC2;	// CCM0 in 16-bit compare mode
 	mov	_PCA0CPM0,#0xC2
-	C$Lab_4.c$114$1$126 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:114: PCA0CN = 0x40;		// Enable PCA Counter
+	C$Lab_4.c$115$1$127 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:115: PCA0CN = 0x40;		// Enable PCA Counter
 	mov	_PCA0CN,#0x40
-	C$Lab_4.c$115$1$126 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:115: PCA0MD = 0x81;		// Enable CF Interrupt and SYSCLK/12
+	C$Lab_4.c$116$1$127 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:116: PCA0MD = 0x81;		// Enable CF Interrupt and SYSCLK/12
 	mov	_PCA0MD,#0x81
-	C$Lab_4.c$116$1$126 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:116: EA = 1;				// Enable Global Interrupts
+	C$Lab_4.c$117$1$127 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:117: EA = 1;				// Enable Global Interrupts
 	setb	_EA
-	C$Lab_4.c$117$1$126 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:117: EIE1 |= 0x08;		// Enable PCA Interrupt
+	C$Lab_4.c$118$1$127 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:118: EIE1 |= 0x08;		// Enable PCA Interrupt
 	orl	_EIE1,#0x08
-	C$Lab_4.c$118$1$126 ==.
+	C$Lab_4.c$119$1$127 ==.
 	XG$PCA_Init$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'PCA_ISR'
 ;------------------------------------------------------------
 	G$PCA_ISR$0$0 ==.
-	C$Lab_4.c$122$1$126 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:122: void PCA_ISR(void) __interrupt 9
+	C$Lab_4.c$123$1$127 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:123: void PCA_ISR(void) __interrupt 9
 ;	-----------------------------------------
 ;	 function PCA_ISR
 ;	-----------------------------------------
 _PCA_ISR:
 	push	acc
 	push	psw
-	C$Lab_4.c$124$1$128 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:124: if (CF)
-	C$Lab_4.c$126$2$129 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:126: CF = 0; // clear overflow indicator
+	C$Lab_4.c$125$1$129 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:125: if (CF)
+	C$Lab_4.c$127$2$130 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:127: CF = 0; // clear overflow indicator
 	jbc	_CF,00123$
 	sjmp	00108$
 00123$:
-	C$Lab_4.c$127$2$129 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:127: h_count++;
+	C$Lab_4.c$128$2$130 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:128: h_count++;
 	inc	_h_count
-	C$Lab_4.c$128$2$129 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:128: if (h_count>=2)
+	C$Lab_4.c$129$2$130 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:129: if (h_count>=2)
 	mov	a,#0x100 - 0x02
 	add	a,_h_count
 	jnc	00102$
-	C$Lab_4.c$130$3$130 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:130: new_heading=1;
+	C$Lab_4.c$131$3$131 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:131: new_heading=1;
 	mov	_new_heading,#0x01
-	C$Lab_4.c$131$3$130 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:131: h_count = 0;
+	C$Lab_4.c$132$3$131 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:132: h_count = 0;
 	mov	_h_count,#0x00
 00102$:
-	C$Lab_4.c$133$2$129 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:133: heading_delay++;
+	C$Lab_4.c$134$2$130 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:134: heading_delay++;
 	inc	_heading_delay
-	C$Lab_4.c$134$2$129 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:134: if(heading_delay>5) heading_delay=0;
+	C$Lab_4.c$135$2$130 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:135: if(heading_delay>5) heading_delay=0;
 	mov	a,_heading_delay
 	add	a,#0xff - 0x05
 	jnc	00104$
 	mov	_heading_delay,#0x00
 00104$:
-	C$Lab_4.c$135$2$129 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:135: r_count++;
+	C$Lab_4.c$136$2$130 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:136: r_count++;
 	inc	_r_count
-	C$Lab_4.c$136$2$129 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:136: if (r_count>=4)
+	C$Lab_4.c$137$2$130 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:137: if (r_count>=4)
 	mov	a,#0x100 - 0x04
 	add	a,_r_count
 	jnc	00106$
-	C$Lab_4.c$138$3$131 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:138: new_range = 1;
+	C$Lab_4.c$139$3$132 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:139: new_range = 1;
 	mov	_new_range,#0x01
-	C$Lab_4.c$139$3$131 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:139: r_count = 0;
+	C$Lab_4.c$140$3$132 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:140: r_count = 0;
 	mov	_r_count,#0x00
 00106$:
-	C$Lab_4.c$141$2$129 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:141: PCA0 = PCA_START;
+	C$Lab_4.c$142$2$130 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:142: PCA0 = PCA_START;
 	mov	((_PCA0 >> 0) & 0xFF),_PCA_START
 	mov	((_PCA0 >> 8) & 0xFF),(_PCA_START + 1)
 00108$:
-	C$Lab_4.c$144$1$128 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:144: PCA0CN &= 0xC0;
+	C$Lab_4.c$145$1$129 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:145: PCA0CN &= 0xC0;
 	anl	_PCA0CN,#0xC0
 	pop	psw
 	pop	acc
-	C$Lab_4.c$145$1$128 ==.
+	C$Lab_4.c$146$1$129 ==.
 	XG$PCA_ISR$0$0 ==.
 	reti
 ;	eliminated unneeded mov psw,# (no regs used in bank)
@@ -2568,90 +2569,90 @@ _PCA_ISR:
 ;Allocation info for local variables in function 'SMB_Init'
 ;------------------------------------------------------------
 	G$SMB_Init$0$0 ==.
-	C$Lab_4.c$149$1$128 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:149: void SMB_Init(void)
+	C$Lab_4.c$150$1$129 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:150: void SMB_Init(void)
 ;	-----------------------------------------
 ;	 function SMB_Init
 ;	-----------------------------------------
 _SMB_Init:
-	C$Lab_4.c$151$1$133 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:151: SMB0CR=0x93;	//Set SCL to 100KHz
+	C$Lab_4.c$152$1$134 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:152: SMB0CR=0x93;	//Set SCL to 100KHz
 	mov	_SMB0CR,#0x93
-	C$Lab_4.c$152$1$133 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:152: ENSMB=1; 		//Bit 6 of SMB0CN, enable the SMBus
+	C$Lab_4.c$153$1$134 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:153: ENSMB=1; 		//Bit 6 of SMB0CN, enable the SMBus
 	setb	_ENSMB
-	C$Lab_4.c$153$1$133 ==.
+	C$Lab_4.c$154$1$134 ==.
 	XG$SMB_Init$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'ADC_Init'
 ;------------------------------------------------------------
 	G$ADC_Init$0$0 ==.
-	C$Lab_4.c$156$1$133 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:156: void ADC_Init(void)
+	C$Lab_4.c$157$1$134 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:157: void ADC_Init(void)
 ;	-----------------------------------------
 ;	 function ADC_Init
 ;	-----------------------------------------
 _ADC_Init:
-	C$Lab_4.c$158$1$135 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:158: REF0CN = 0x03;	// Set Vref to use internal reference voltage (2.4 V)
+	C$Lab_4.c$159$1$136 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:159: REF0CN = 0x03;	// Set Vref to use internal reference voltage (2.4 V)
 	mov	_REF0CN,#0x03
-	C$Lab_4.c$159$1$135 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:159: ADC1CN = 0x80;	// Enable A/D converter (ADC1)
+	C$Lab_4.c$160$1$136 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:160: ADC1CN = 0x80;	// Enable A/D converter (ADC1)
 	mov	_ADC1CN,#0x80
-	C$Lab_4.c$160$1$135 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:160: ADC1CF |= 0x01; // Set A/D converter gain to 1
+	C$Lab_4.c$161$1$136 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:161: ADC1CF |= 0x01; // Set A/D converter gain to 1
 	orl	_ADC1CF,#0x01
-	C$Lab_4.c$161$1$135 ==.
+	C$Lab_4.c$162$1$136 ==.
 	XG$ADC_Init$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'Interrupt_Init'
 ;------------------------------------------------------------
 	G$Interrupt_Init$0$0 ==.
-	C$Lab_4.c$165$1$135 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:165: void Interrupt_Init(void)
+	C$Lab_4.c$166$1$136 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:166: void Interrupt_Init(void)
 ;	-----------------------------------------
 ;	 function Interrupt_Init
 ;	-----------------------------------------
 _Interrupt_Init:
-	C$Lab_4.c$167$1$137 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:167: EIE1 |= 0x08;	//Enable PCA0 Interrupt (bit 3) 
+	C$Lab_4.c$168$1$138 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:168: EIE1 |= 0x08;	//Enable PCA0 Interrupt (bit 3) 
 	orl	_EIE1,#0x08
-	C$Lab_4.c$168$1$137 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:168: EA = 1;			//Enable global interrupts
+	C$Lab_4.c$169$1$138 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:169: EA = 1;			//Enable global interrupts
 	setb	_EA
-	C$Lab_4.c$169$1$137 ==.
+	C$Lab_4.c$170$1$138 ==.
 	XG$Interrupt_Init$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'read_compass'
 ;------------------------------------------------------------
 ;addr                      Allocated to registers 
-;Data                      Allocated with name '_read_compass_Data_1_139'
+;Data                      Allocated with name '_read_compass_Data_1_140'
 ;read_heading              Allocated to registers 
 ;------------------------------------------------------------
 	G$read_compass$0$0 ==.
-	C$Lab_4.c$173$1$137 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:173: int read_compass(void)
+	C$Lab_4.c$174$1$138 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:174: int read_compass(void)
 ;	-----------------------------------------
 ;	 function read_compass
 ;	-----------------------------------------
 _read_compass:
-	C$Lab_4.c$178$1$139 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:178: i2c_read_data(addr, 2, Data, 2); // read two byte, starting at reg 2
-	mov	_i2c_read_data_PARM_3,#_read_compass_Data_1_139
+	C$Lab_4.c$179$1$140 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:179: i2c_read_data(addr, 2, Data, 2); // read two byte, starting at reg 2
+	mov	_i2c_read_data_PARM_3,#_read_compass_Data_1_140
 	mov	(_i2c_read_data_PARM_3 + 1),#0x00
 	mov	(_i2c_read_data_PARM_3 + 2),#0x40
 	mov	_i2c_read_data_PARM_2,#0x02
 	mov	_i2c_read_data_PARM_4,#0x02
 	mov	dpl,#0xC0
 	lcall	_i2c_read_data
-	C$Lab_4.c$179$1$139 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:179: read_heading =(((unsigned int)Data[0] << 8) | Data[1]); //combine the two values
-	mov	r7,_read_compass_Data_1_139
+	C$Lab_4.c$180$1$140 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:180: read_heading =(((unsigned int)Data[0] << 8) | Data[1]); //combine the two values
+	mov	r7,_read_compass_Data_1_140
 	mov	r6,#0x00
-	mov	r4,(_read_compass_Data_1_139 + 0x0001)
+	mov	r4,(_read_compass_Data_1_140 + 0x0001)
 	mov	r5,#0x00
 	mov	a,r4
 	orl	a,r6
@@ -2659,33 +2660,33 @@ _read_compass:
 	mov	a,r5
 	orl	a,r7
 	mov	dph,a
-	C$Lab_4.c$180$1$139 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:180: return read_heading; // the heading returned in degrees between 0 and 3599
-	C$Lab_4.c$181$1$139 ==.
+	C$Lab_4.c$181$1$140 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:181: return read_heading; // the heading returned in degrees between 0 and 3599
+	C$Lab_4.c$182$1$140 ==.
 	XG$read_compass$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'set_servo_PWM'
 ;------------------------------------------------------------
 	G$set_servo_PWM$0$0 ==.
-	C$Lab_4.c$184$1$139 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:184: void set_servo_PWM(void)
+	C$Lab_4.c$185$1$140 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:185: void set_servo_PWM(void)
 ;	-----------------------------------------
 ;	 function set_servo_PWM
 ;	-----------------------------------------
 _set_servo_PWM:
-	C$Lab_4.c$186$1$141 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:186: if(new_heading && (heading_delay>=5))
+	C$Lab_4.c$187$1$142 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:187: if(new_heading && (heading_delay>=5))
 	mov	a,_new_heading
 	jz	00104$
 	mov	a,#0x100 - 0x05
 	add	a,_heading_delay
 	jnc	00104$
-	C$Lab_4.c$188$2$142 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:188: heading = read_compass();
+	C$Lab_4.c$189$2$143 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:189: heading = read_compass();
 	lcall	_read_compass
-	C$Lab_4.c$189$1$141 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:189: printf("\rThe current direction is %u\n", heading/10);
+	C$Lab_4.c$190$1$142 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:190: printf("\rThe current direction is %u\n", heading/10);
 	mov	_heading,dpl
 	mov	(_heading + 1),dph
 	mov	__divuint_PARM_2,#0x0A
@@ -2705,15 +2706,15 @@ _set_servo_PWM:
 	mov	a,sp
 	add	a,#0xfb
 	mov	sp,a
-	C$Lab_4.c$190$2$142 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:190: COMPASS_PW = servo_error(heading); // Adjust pulsewidth based on error function
+	C$Lab_4.c$191$2$143 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:191: COMPASS_PW = servo_error(heading); // Adjust pulsewidth based on error function
 	mov	dpl,_heading
 	mov	dph,(_heading + 1)
 	lcall	_servo_error
 	mov	_COMPASS_PW,dpl
 	mov	(_COMPASS_PW + 1),dph
-	C$Lab_4.c$191$2$142 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:191: PCA0CP0 = 0xFFFF - COMPASS_PW; // Change pulse width
+	C$Lab_4.c$192$2$143 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:192: PCA0CP0 = 0xFFFF - COMPASS_PW; // Change pulse width
 	mov	a,#0xFF
 	clr	c
 	subb	a,_COMPASS_PW
@@ -2721,52 +2722,52 @@ _set_servo_PWM:
 	mov	a,#0xFF
 	subb	a,(_COMPASS_PW + 1)
 	mov	((_PCA0CP0 >> 8) & 0xFF),a
-	C$Lab_4.c$192$2$142 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:192: new_heading = 0;
+	C$Lab_4.c$193$2$143 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:193: new_heading = 0;
 	mov	_new_heading,#0x00
 00104$:
-	C$Lab_4.c$194$1$141 ==.
+	C$Lab_4.c$195$1$142 ==.
 	XG$set_servo_PWM$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'read_ranger'
 ;------------------------------------------------------------
 ;addr                      Allocated to registers 
-;Data                      Allocated with name '_read_ranger_Data_1_144'
+;Data                      Allocated with name '_read_ranger_Data_1_145'
 ;range                     Allocated to registers r6 r7 
 ;------------------------------------------------------------
 	G$read_ranger$0$0 ==.
-	C$Lab_4.c$198$1$141 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:198: int read_ranger(void)
+	C$Lab_4.c$199$1$142 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:199: int read_ranger(void)
 ;	-----------------------------------------
 ;	 function read_ranger
 ;	-----------------------------------------
 _read_ranger:
-	C$Lab_4.c$203$1$144 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:203: i2c_read_data(addr, 2, Data, 2); // read two byte, starting at reg 2
-	mov	_i2c_read_data_PARM_3,#_read_ranger_Data_1_144
+	C$Lab_4.c$204$1$145 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:204: i2c_read_data(addr, 2, Data, 2); // read two byte, starting at reg 2
+	mov	_i2c_read_data_PARM_3,#_read_ranger_Data_1_145
 	mov	(_i2c_read_data_PARM_3 + 1),#0x00
 	mov	(_i2c_read_data_PARM_3 + 2),#0x40
 	mov	_i2c_read_data_PARM_2,#0x02
 	mov	_i2c_read_data_PARM_4,#0x02
 	mov	dpl,#0xE0
 	lcall	_i2c_read_data
-	C$Lab_4.c$204$1$144 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:204: range =(((unsigned int)Data[0] << 8) | Data[1]); //combine the two values	
-	mov	r7,_read_ranger_Data_1_144
+	C$Lab_4.c$205$1$145 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:205: range =(((unsigned int)Data[0] << 8) | Data[1]); //combine the two values	
+	mov	r7,_read_ranger_Data_1_145
 	mov	r6,#0x00
-	mov	r4,(_read_ranger_Data_1_144 + 0x0001)
+	mov	r4,(_read_ranger_Data_1_145 + 0x0001)
 	mov	r5,#0x00
 	mov	a,r4
 	orl	ar6,a
 	mov	a,r5
 	orl	ar7,a
-	C$Lab_4.c$205$1$144 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:205: Data[0] = 0x51 ; // write 0x51 to reg 0 of the ranger:
-	mov	_read_ranger_Data_1_144,#0x51
-	C$Lab_4.c$206$1$144 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:206: i2c_write_data(addr, 0, Data, 1) ; // write one byte of data to reg 0 at addr
-	mov	_i2c_write_data_PARM_3,#_read_ranger_Data_1_144
+	C$Lab_4.c$206$1$145 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:206: Data[0] = 0x51 ; // write 0x51 to reg 0 of the ranger:
+	mov	_read_ranger_Data_1_145,#0x51
+	C$Lab_4.c$207$1$145 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:207: i2c_write_data(addr, 0, Data, 1) ; // write one byte of data to reg 0 at addr
+	mov	_i2c_write_data_PARM_3,#_read_ranger_Data_1_145
 	mov	(_i2c_write_data_PARM_3 + 1),#0x00
 	mov	(_i2c_write_data_PARM_3 + 2),#0x40
 	mov	_i2c_write_data_PARM_2,#0x00
@@ -2777,37 +2778,37 @@ _read_ranger:
 	lcall	_i2c_write_data
 	pop	ar6
 	pop	ar7
-	C$Lab_4.c$207$1$144 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:207: return range;
+	C$Lab_4.c$208$1$145 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:208: return range;
 	mov	dpl,r6
 	mov	dph,r7
-	C$Lab_4.c$208$1$144 ==.
+	C$Lab_4.c$209$1$145 ==.
 	XG$read_ranger$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'set_drive_PWM'
 ;------------------------------------------------------------
 	G$set_drive_PWM$0$0 ==.
-	C$Lab_4.c$211$1$144 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:211: void set_drive_PWM(void)
+	C$Lab_4.c$212$1$145 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:212: void set_drive_PWM(void)
 ;	-----------------------------------------
 ;	 function set_drive_PWM
 ;	-----------------------------------------
 _set_drive_PWM:
-	C$Lab_4.c$213$1$146 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:213: if(new_range)
+	C$Lab_4.c$214$1$147 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:214: if(new_range)
 	mov	a,_new_range
 	jz	00102$
-	C$Lab_4.c$215$2$147 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:215: range = read_ranger();
+	C$Lab_4.c$216$2$148 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:216: range = read_ranger();
 	lcall	_read_ranger
 	mov	_range,dpl
 	mov	(_range + 1),dph
-	C$Lab_4.c$216$2$147 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:216: new_range = 0;
+	C$Lab_4.c$217$2$148 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:217: new_range = 0;
 	mov	_new_range,#0x00
-	C$Lab_4.c$217$2$147 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:217: printf("\rThe range is %u cm\n",range);
+	C$Lab_4.c$218$2$148 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:218: printf("\rThe range is %u cm\n",range);
 	push	_range
 	push	(_range + 1)
 	mov	a,#___str_4
@@ -2820,8 +2821,8 @@ _set_drive_PWM:
 	mov	a,sp
 	add	a,#0xfb
 	mov	sp,a
-	C$Lab_4.c$218$2$147 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:218: printf("\rPW is %u\n", RANGER_PW);
+	C$Lab_4.c$219$2$148 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:219: printf("\rPW is %u\n", RANGER_PW);
 	push	_RANGER_PW
 	push	(_RANGER_PW + 1)
 	mov	a,#___str_5
@@ -2835,15 +2836,15 @@ _set_drive_PWM:
 	add	a,#0xfb
 	mov	sp,a
 00102$:
-	C$Lab_4.c$220$1$146 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:220: RANGER_PW = motor_error(range);	//Adjust Pulsewidth for motor control
+	C$Lab_4.c$221$1$147 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:221: RANGER_PW = motor_error(range);	//Adjust Pulsewidth for motor control
 	mov	dpl,_range
 	mov	dph,(_range + 1)
 	lcall	_motor_error
 	mov	_RANGER_PW,dpl
 	mov	(_RANGER_PW + 1),dph
-	C$Lab_4.c$221$1$146 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:221: if(RANGER_PW > RANGER_MAX) RANGER_PW = RANGER_MAX;
+	C$Lab_4.c$222$1$147 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:222: if(RANGER_PW > RANGER_MAX) RANGER_PW = RANGER_MAX;
 	clr	c
 	mov	a,_RANGER_MAX
 	subb	a,_RANGER_PW
@@ -2853,8 +2854,8 @@ _set_drive_PWM:
 	mov	_RANGER_PW,_RANGER_MAX
 	mov	(_RANGER_PW + 1),(_RANGER_MAX + 1)
 00104$:
-	C$Lab_4.c$222$1$146 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:222: if(RANGER_PW < RANGER_MIN) RANGER_PW = RANGER_MIN;
+	C$Lab_4.c$223$1$147 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:223: if(RANGER_PW < RANGER_MIN) RANGER_PW = RANGER_MIN;
 	clr	c
 	mov	a,_RANGER_PW
 	subb	a,_RANGER_MIN
@@ -2864,8 +2865,8 @@ _set_drive_PWM:
 	mov	_RANGER_PW,_RANGER_MIN
 	mov	(_RANGER_PW + 1),(_RANGER_MIN + 1)
 00106$:
-	C$Lab_4.c$223$1$146 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:223: PCA0CP2 = 0xFFFF - RANGER_PW;	
+	C$Lab_4.c$224$1$147 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:224: PCA0CP2 = 0xFFFF - RANGER_PW;	
 	mov	a,#0xFF
 	clr	c
 	subb	a,_RANGER_PW
@@ -2873,7 +2874,7 @@ _set_drive_PWM:
 	mov	a,#0xFF
 	subb	a,(_RANGER_PW + 1)
 	mov	((_PCA0CP2 >> 8) & 0xFF),a
-	C$Lab_4.c$224$1$146 ==.
+	C$Lab_4.c$225$1$147 ==.
 	XG$set_drive_PWM$0$0 ==.
 	ret
 ;------------------------------------------------------------
@@ -2882,14 +2883,14 @@ _set_drive_PWM:
 ;input_heading             Allocated to registers r6 r7 
 ;------------------------------------------------------------
 	G$pick_heading$0$0 ==.
-	C$Lab_4.c$228$1$146 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:228: int pick_heading(void)
+	C$Lab_4.c$229$1$147 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:229: int pick_heading(void)
 ;	-----------------------------------------
 ;	 function pick_heading
 ;	-----------------------------------------
 _pick_heading:
-	C$Lab_4.c$231$1$149 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:231: printf("\rInput desired heading on keypad, in degrees.\n");
+	C$Lab_4.c$232$1$150 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:232: printf("\rInput desired heading on keypad, in degrees.\n");
 	mov	a,#___str_6
 	push	acc
 	mov	a,#(___str_6 >> 8)
@@ -2900,8 +2901,8 @@ _pick_heading:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$Lab_4.c$232$1$149 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:232: printf("\rAny number above 360 will be interpreted as 360.\n");
+	C$Lab_4.c$233$1$150 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:233: printf("\rAny number above 360 will be interpreted as 360.\n");
 	mov	a,#___str_7
 	push	acc
 	mov	a,#(___str_7 >> 8)
@@ -2912,14 +2913,14 @@ _pick_heading:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$Lab_4.c$233$1$149 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:233: input_heading = kpd_input(1);
+	C$Lab_4.c$234$1$150 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:234: input_heading = kpd_input(1);
 	mov	dpl,#0x01
 	lcall	_kpd_input
 	mov	r6,dpl
 	mov	r7,dph
-	C$Lab_4.c$234$1$149 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:234: if(input_heading >= 360) input_heading = 0;
+	C$Lab_4.c$235$1$150 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:235: if(input_heading >= 360) input_heading = 0;
 	clr	c
 	mov	a,r6
 	subb	a,#0x68
@@ -2929,8 +2930,10 @@ _pick_heading:
 	mov	r6,#0x00
 	mov	r7,#0x00
 00102$:
-	C$Lab_4.c$235$1$149 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:235: printf("\rDesired heading is %u degrees", input_heading);
+	C$Lab_4.c$236$1$150 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:236: printf("\rDesired heading is %u degrees", input_heading);
+	push	ar7
+	push	ar6
 	push	ar6
 	push	ar7
 	mov	a,#___str_8
@@ -2943,7 +2946,13 @@ _pick_heading:
 	mov	a,sp
 	add	a,#0xfb
 	mov	sp,a
-	C$Lab_4.c$236$1$149 ==.
+	pop	ar6
+	pop	ar7
+	C$Lab_4.c$237$1$150 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:237: return input_heading;
+	mov	dpl,r6
+	mov	dph,r7
+	C$Lab_4.c$238$1$150 ==.
 	XG$pick_heading$0$0 ==.
 	ret
 ;------------------------------------------------------------
@@ -2955,19 +2964,19 @@ _pick_heading:
 ;k                         Allocated to registers r5 
 ;------------------------------------------------------------
 	G$servo_error$0$0 ==.
-	C$Lab_4.c$238$1$149 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:238: signed int servo_error(unsigned int heading)
+	C$Lab_4.c$240$1$150 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:240: signed int servo_error(unsigned int heading)
 ;	-----------------------------------------
 ;	 function servo_error
 ;	-----------------------------------------
 _servo_error:
 	mov	r6,dpl
 	mov	r7,dph
-	C$Lab_4.c$242$1$149 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:242: unsigned char k = 1;				//Gain constant. Higher numbers turn more, lower numbers turn less.
+	C$Lab_4.c$244$1$150 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:244: unsigned char k = 1;				//Gain constant. Higher numbers turn more, lower numbers turn less.
 	mov	r5,#0x01
-	C$Lab_4.c$243$1$151 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:243: Error = (desired_heading) - heading;	//Calculate the error
+	C$Lab_4.c$245$1$152 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:245: Error = (desired_heading) - heading;	//Calculate the error
 	mov	a,_desired_heading
 	clr	c
 	subb	a,r6
@@ -2975,8 +2984,8 @@ _servo_error:
 	mov	a,(_desired_heading + 1)
 	subb	a,r7
 	mov	r7,a
-	C$Lab_4.c$244$1$151 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:244: if(Error < 1800) Error = Error + 3600;	//Adjust the Error for +/- 180 degrees
+	C$Lab_4.c$246$1$152 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:246: if(Error < 1800) Error = Error + 3600;	//Adjust the Error for +/- 180 degrees
 	clr	c
 	mov	a,r6
 	subb	a,#0x08
@@ -2991,8 +3000,8 @@ _servo_error:
 	addc	a,r7
 	mov	r7,a
 00102$:
-	C$Lab_4.c$245$1$151 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:245: if(Error > 1800) Error = Error - 3600;
+	C$Lab_4.c$247$1$152 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:247: if(Error > 1800) Error = Error - 3600;
 	clr	c
 	mov	a,#0x08
 	subb	a,r6
@@ -3008,8 +3017,8 @@ _servo_error:
 	addc	a,#0xF1
 	mov	r7,a
 00104$:
-	C$Lab_4.c$246$1$151 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:246: PWMe = COMPASS_CENTER + (k*Error);
+	C$Lab_4.c$248$1$152 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:248: PWMe = COMPASS_CENTER + (k*Error);
 	mov	r4,#0x00
 	mov	__mulint_PARM_2,r6
 	mov	(__mulint_PARM_2 + 1),r7
@@ -3024,8 +3033,8 @@ _servo_error:
 	mov	a,r7
 	addc	a,(_COMPASS_CENTER + 1)
 	mov	r7,a
-	C$Lab_4.c$247$1$151 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:247: if(PWMe < COMPASS_MIN) PWMe = COMPASS_MIN;
+	C$Lab_4.c$249$1$152 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:249: if(PWMe < COMPASS_MIN) PWMe = COMPASS_MIN;
 	clr	c
 	mov	a,r6
 	subb	a,_COMPASS_MIN
@@ -3035,8 +3044,8 @@ _servo_error:
 	mov	r6,_COMPASS_MIN
 	mov	r7,(_COMPASS_MIN + 1)
 00106$:
-	C$Lab_4.c$248$1$151 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:248: if(PWMe > COMPASS_MAX) PWMe = COMPASS_MAX;
+	C$Lab_4.c$250$1$152 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:250: if(PWMe > COMPASS_MAX) PWMe = COMPASS_MAX;
 	clr	c
 	mov	a,_COMPASS_MAX
 	subb	a,r6
@@ -3046,11 +3055,11 @@ _servo_error:
 	mov	r6,_COMPASS_MAX
 	mov	r7,(_COMPASS_MAX + 1)
 00108$:
-	C$Lab_4.c$249$1$151 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:249: return PWMe;
+	C$Lab_4.c$251$1$152 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:251: return PWMe;
 	mov	dpl,r6
 	mov	dph,r7
-	C$Lab_4.c$250$1$151 ==.
+	C$Lab_4.c$252$1$152 ==.
 	XG$servo_error$0$0 ==.
 	ret
 ;------------------------------------------------------------
@@ -3062,16 +3071,16 @@ _servo_error:
 ;k                         Allocated to registers 
 ;------------------------------------------------------------
 	G$motor_error$0$0 ==.
-	C$Lab_4.c$252$1$151 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:252: signed int motor_error(unsigned int range)
+	C$Lab_4.c$254$1$152 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:254: signed int motor_error(unsigned int range)
 ;	-----------------------------------------
 ;	 function motor_error
 ;	-----------------------------------------
 _motor_error:
 	mov	r6,dpl
 	mov	r7,dph
-	C$Lab_4.c$257$1$153 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:257: Error = (desired_range) - range;	// Calculate the error
+	C$Lab_4.c$259$1$154 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:259: Error = (desired_range) - range;	// Calculate the error
 	mov	a,_desired_range
 	clr	c
 	subb	a,r6
@@ -3079,8 +3088,8 @@ _motor_error:
 	mov	a,(_desired_range + 1)
 	subb	a,r7
 	mov	r7,a
-	C$Lab_4.c$258$1$153 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:258: PWMe = RANGER_CENTER + (k*Error);
+	C$Lab_4.c$260$1$154 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:260: PWMe = RANGER_CENTER + (k*Error);
 	mov	__mulint_PARM_2,r6
 	mov	(__mulint_PARM_2 + 1),r7
 	mov	dptr,#0x0014
@@ -3097,8 +3106,8 @@ _motor_error:
 	mov	a,r5
 	addc	a,(_RANGER_CENTER + 1)
 	mov	r5,a
-	C$Lab_4.c$259$1$153 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:259: if(PWMe < RANGER_MIN) PWMe = RANGER_MIN;
+	C$Lab_4.c$261$1$154 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:261: if(PWMe < RANGER_MIN) PWMe = RANGER_MIN;
 	clr	c
 	mov	a,r4
 	subb	a,_RANGER_MIN
@@ -3108,8 +3117,8 @@ _motor_error:
 	mov	r4,_RANGER_MIN
 	mov	r5,(_RANGER_MIN + 1)
 00102$:
-	C$Lab_4.c$260$1$153 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:260: if(PWMe > RANGER_MAX) PWMe = RANGER_MAX;
+	C$Lab_4.c$262$1$154 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:262: if(PWMe > RANGER_MAX) PWMe = RANGER_MAX;
 	clr	c
 	mov	a,_RANGER_MAX
 	subb	a,r4
@@ -3119,8 +3128,8 @@ _motor_error:
 	mov	r4,_RANGER_MAX
 	mov	r5,(_RANGER_MAX + 1)
 00104$:
-	C$Lab_4.c$261$1$153 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:261: if((-5<Error) && (Error<5)) PWMe = RANGER_CENTER;
+	C$Lab_4.c$263$1$154 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:263: if((-5<Error) && (Error<5)) PWMe = RANGER_CENTER;
 	clr	c
 	mov	a,#0xFB
 	subb	a,r6
@@ -3139,12 +3148,91 @@ _motor_error:
 	mov	r4,_RANGER_CENTER
 	mov	r5,(_RANGER_CENTER + 1)
 00106$:
-	C$Lab_4.c$264$1$153 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:264: return PWMe;
+	C$Lab_4.c$266$1$154 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:266: return PWMe;
 	mov	dpl,r4
 	mov	dph,r5
-	C$Lab_4.c$265$1$153 ==.
+	C$Lab_4.c$267$1$154 ==.
 	XG$motor_error$0$0 ==.
+	ret
+;------------------------------------------------------------
+;Allocation info for local variables in function 'steering_gain'
+;------------------------------------------------------------
+;input_gain                Allocated to registers r6 
+;------------------------------------------------------------
+	G$steering_gain$0$0 ==.
+	C$Lab_4.c$269$1$154 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:269: char steering_gain(void)
+;	-----------------------------------------
+;	 function steering_gain
+;	-----------------------------------------
+_steering_gain:
+	C$Lab_4.c$272$1$156 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:272: printf("\rInput desired steering gain on keypad.\n");
+	mov	a,#___str_9
+	push	acc
+	mov	a,#(___str_9 >> 8)
+	push	acc
+	mov	a,#0x80
+	push	acc
+	lcall	_printf
+	dec	sp
+	dec	sp
+	dec	sp
+	C$Lab_4.c$273$1$156 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:273: printf("\rAny number below 0 will be interpreted as 1.\n");
+	mov	a,#___str_10
+	push	acc
+	mov	a,#(___str_10 >> 8)
+	push	acc
+	mov	a,#0x80
+	push	acc
+	lcall	_printf
+	dec	sp
+	dec	sp
+	dec	sp
+	C$Lab_4.c$274$1$156 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:274: input_gain = kpd_input(1);
+	mov	dpl,#0x01
+	lcall	_kpd_input
+	mov	r6,dpl
+	mov	r7,dph
+	C$Lab_4.c$275$1$156 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:275: if(input_gain <= 0) input_gain = 1;
+	clr	c
+	mov	a,#(0x00 ^ 0x80)
+	mov	b,r6
+	xrl	b,#0x80
+	subb	a,b
+	jc	00102$
+	mov	r6,#0x01
+00102$:
+	C$Lab_4.c$276$1$156 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:276: printf("\rDesired gain is %u", input_gain);
+	mov	a,r6
+	mov	r5,a
+	rlc	a
+	subb	a,acc
+	mov	r7,a
+	push	ar6
+	push	ar5
+	push	ar7
+	mov	a,#___str_11
+	push	acc
+	mov	a,#(___str_11 >> 8)
+	push	acc
+	mov	a,#0x80
+	push	acc
+	lcall	_printf
+	mov	a,sp
+	add	a,#0xfb
+	mov	sp,a
+	pop	ar6
+	C$Lab_4.c$277$1$156 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Lab 4 Code\Lab_4.c:277: return input_gain;
+	mov	dpl,r6
+	C$Lab_4.c$278$1$156 ==.
+	XG$steering_gain$0$0 ==.
 	ret
 	.area CSEG    (CODE)
 	.area CONST   (CODE)
@@ -3195,6 +3283,23 @@ FLab_4$__str_8$0$0 == .
 ___str_8:
 	.db 0x0D
 	.ascii "Desired heading is %u degrees"
+	.db 0x00
+FLab_4$__str_9$0$0 == .
+___str_9:
+	.db 0x0D
+	.ascii "Input desired steering gain on keypad."
+	.db 0x0A
+	.db 0x00
+FLab_4$__str_10$0$0 == .
+___str_10:
+	.db 0x0D
+	.ascii "Any number below 0 will be interpreted as 1."
+	.db 0x0A
+	.db 0x00
+FLab_4$__str_11$0$0 == .
+___str_11:
+	.db 0x0D
+	.ascii "Desired gain is %u"
 	.db 0x00
 	.area XINIT   (CODE)
 	.area CABS    (ABS,CODE)
