@@ -234,6 +234,7 @@ int pick_heading(void)
 	input_heading = kpd_input(1);
 	if(input_heading >= 360) input_heading = 0;
 	printf("\rDesired heading is %u degrees", input_heading);
+	return input_heading;
 }
 
 signed int servo_error(unsigned int heading)
@@ -273,4 +274,5 @@ char steering_gain(void)
 	input_gain = kpd_input(1);
 	if(input_gain <= 0) input_gain = 1;
 	printf("\rDesired gain is %u", input_gain);
+	return input_gain;
 }

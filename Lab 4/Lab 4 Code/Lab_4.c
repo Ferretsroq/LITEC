@@ -30,6 +30,7 @@ int pick_heading(void); // function which allow operator to pick desired heading
 signed int servo_error(unsigned int heading);
 signed int motor_error(unsigned int range);
 char heading_gain(void);
+char input_speed(void);
 
 //-----------------------------------------------------------------------------
 // Define global variables
@@ -52,6 +53,8 @@ unsigned int desired_range;
 unsigned char heading_delay;
 unsigned int COMPASS_PW;
 unsigned int RANGER_PW;
+unsigned char compass_gain;
+unsigned char speed;
 __sbit __at 0xB7 COMPASS_SWITCH;
 __sbit __at 0xB6 RANGER_SWITCH;
 
@@ -67,6 +70,8 @@ void main(void)
 	SMB_Init;
 	r_count = 0;
 	h_count = 0;
+	compass_gain = heading_gain();
+	speed = input_speed();
 	while (1)
 	{
 		run_stop = 0;
@@ -209,7 +214,7 @@ int read_ranger(void)
 }
 
 //-----------------------------------------------------------------------------
-void set_drive_PWM(void)
+/*void set_drive_PWM(void)
 {
 	if(new_range)
 		{
@@ -222,6 +227,18 @@ void set_drive_PWM(void)
 	if(RANGER_PW > RANGER_MAX) RANGER_PW = RANGER_MAX;
 	if(RANGER_PW < RANGER_MIN) RANGER_PW = RANGER_MIN;
 	PCA0CP2 = 0xFFFF - RANGER_PW;	
+}*/
+
+void set_drive_PWM(void)
+{
+	if(new_range)
+	{
+		new_range = 0;
+	}
+	RANGER_PW = (2760) + ((speed)*(74));
+	if(RANGER_PW > RANGER_MAX) RANGER_PW = RANGER_MAX;
+	if(RANGER_PW < RANGER_MIN) RANGER_PW = RANGER_MIN;
+	PCA0CP2 = 0xFFFF - RANGER_PW;
 }
 
 //-----------------------------------------------------------------------------
@@ -275,4 +292,16 @@ char steering_gain(void)
 	if(input_gain <= 0) input_gain = 1;
 	printf("\rDesired gain is %u", input_gain);
 	return input_gain;
+}
+
+char input_speed(void)
+{
+	char desired_speed;
+	printf("\rInput desired speed setting, between 0 and 10. Note that 0 will leave the motor still.\n");
+	printf("\rAny number below 0 will be interpreted as 0. Any number above 10 will be 10.\n");
+	desired_speed = kpd_input(1);
+	if(desired_speed <= 0) desired_speed = 0;
+	if(desired_speed >= 10) desired_speed = 10;
+	printf("\rDesired speed is %u", desired_speed);
+	return desired_speed;
 }
