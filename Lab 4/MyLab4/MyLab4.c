@@ -76,9 +76,9 @@ void Port_Init(void)
 	P1MDOUT |= 0x01; //set output pin for CEX0 in push-pull mode
 	P3MDOUT &= 0x7F; // set input pin for 3.7 to open-drain
 	P3		|= ~0x7F;// set input pin for 3.7 to high impedence
-	P1MDIN 	&= 0xEF;// set pin 1.4 for analog input
-	P1MDOUT &= 0xEF;// set input pin for 1.3 to open-drain
-	P1		|= ~0xEF;// set input pin for 1.3 to high impedence
+	P1MDIN 	&= 0xF7;// set pin 1.3 for analog input
+	P1MDOUT &= 0xF7;// set input pin for 1.3 to open-drain
+	P1		|= ~0xF7;// set input pin for 1.3 to high impedence
 
 
 }                   

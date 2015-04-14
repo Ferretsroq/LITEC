@@ -51,10 +51,10 @@ void main(void)
 	Pick_Compass_Gain();
 	while (1)
     {
-		AD_Result = read_AD_input(4);
-		voltage = ((14.4/255)*AD_Result);
-		if(delay>=5) 
+		if(delay>=5) 	//delay so that we don't get spammed with print messages
 		{
+			AD_Result = read_AD_input(4); //Read analog input on pin 1.4
+			voltage = ((14.4/255)*AD_Result); //Convert back to input voltage
 			printf("\rBattery Voltage is %u\n", voltage);
 		}
 		if(new_heading && (delay >= 5))

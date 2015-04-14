@@ -39,6 +39,7 @@ void main(void)
     Interrupt_Init();   // You may want to change XBR0 to match your SMB wiring
     PCA_Init();
     SMB0_Init();
+	ADC_Init();
     putchar('\r');  // Dummy write to serial port
     printf("\nStart\r\n");
 	lcd_clear();
