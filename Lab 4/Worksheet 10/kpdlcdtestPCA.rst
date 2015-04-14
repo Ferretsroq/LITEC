@@ -1,7 +1,7 @@
                                       1 ;--------------------------------------------------------
                                       2 ; File Created by SDCC : free open source ANSI-C Compiler
                                       3 ; Version 3.4.0 #8981 (Apr  5 2014) (MINGW32)
-                                      4 ; This file was generated Fri Apr 10 12:38:31 2015
+                                      4 ; This file was generated Tue Apr 14 12:18:05 2015
                                       5 ;--------------------------------------------------------
                                       6 	.module kpdlcdtestPCA
                                       7 	.optsdcc -mmcs51 --model-small
@@ -2295,8 +2295,8 @@
                                    2295 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:57: while (1)
       0005C3                       2296 00105$:
                            000516  2297 	C$kpdlcdtestPCA.c$65$2$114 ==.
-                                   2298 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:65: kpdTest = kpd_input(1);
-      0005C3 75 82 01         [24] 2299 	mov	dpl,#0x01
+                                   2298 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:65: kpdTest = kpd_input(0);
+      0005C3 75 82 00         [24] 2299 	mov	dpl,#0x00
       0005C6 12 02 46         [24] 2300 	lcall	_kpd_input
       0005C9 AE 82            [24] 2301 	mov	r6,dpl
       0005CB AF 83            [24] 2302 	mov	r7,dph

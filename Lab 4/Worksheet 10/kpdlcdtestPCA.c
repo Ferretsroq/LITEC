@@ -62,7 +62,7 @@ void main(void)
 		printf("\rResult is %u\n", result);
 		//printf("\rFirst number was %u, second number was %u\n", keypad1, keypad2);
 		lcd_print("\rResult is %u\n", result);*/
-		kpdTest = kpd_input(1);
+		kpdTest = kpd_input(0);
 		printf("\rYou typed in %u\n", kpdTest);
 		lcd_clear();
     }
