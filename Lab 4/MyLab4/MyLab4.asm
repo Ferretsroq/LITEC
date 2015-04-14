@@ -1,7 +1,7 @@
 ;--------------------------------------------------------
 ; File Created by SDCC : free open source ANSI-C Compiler
 ; Version 3.4.0 #8981 (Apr  5 2014) (MINGW32)
-; This file was generated Tue Apr 14 12:24:11 2015
+; This file was generated Tue Apr 14 19:23:04 2015
 ;--------------------------------------------------------
 	.module MyLab4
 	.optsdcc -mmcs51 --model-small
@@ -302,11 +302,13 @@
 	.globl _DPL
 	.globl _SP
 	.globl _P0
+	.globl _voltage
+	.globl _AD_Result
 	.globl _PW
 	.globl _heading
 	.globl _new_range
 	.globl _new_heading
-	.globl _heading_delay
+	.globl _delay
 	.globl _r_count
 	.globl _h_count
 	.globl _compass_gain
@@ -342,6 +344,8 @@
 	.globl _Pick_Heading
 	.globl _Pick_Compass_Gain
 	.globl _read_compass
+	.globl _ADC_Init
+	.globl _read_AD_input
 ;--------------------------------------------------------
 ; special function registers
 ;--------------------------------------------------------
@@ -982,8 +986,8 @@ _h_count::
 G$r_count$0$0==.
 _r_count::
 	.ds 1
-G$heading_delay$0$0==.
-_heading_delay::
+G$delay$0$0==.
+_delay::
 	.ds 1
 G$new_heading$0$0==.
 _new_heading::
@@ -997,12 +1001,19 @@ _heading::
 G$PW$0$0==.
 _PW::
 	.ds 2
-LMyLab4.read_compass$Data$1$137==.
-_read_compass_Data_1_137:
+G$AD_Result$0$0==.
+_AD_Result::
+	.ds 1
+G$voltage$0$0==.
+_voltage::
+	.ds 1
+LMyLab4.read_compass$Data$1$140==.
+_read_compass_Data_1_140:
 	.ds 2
 ;--------------------------------------------------------
 ; overlayable items in internal ram 
 ;--------------------------------------------------------
+	.area	OSEG    (OVR,DATA)
 	.area	OSEG    (OVR,DATA)
 	.area	OSEG    (OVR,DATA)
 	.area	OSEG    (OVR,DATA)
@@ -1097,8 +1108,8 @@ __interrupt_vect:
 	.globl __mcs51_genXINIT
 	.globl __mcs51_genXRAMCLEAR
 	.globl __mcs51_genRAMCLEAR
-	C$MyLab4.c$21$1$137 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:21: float compass_gain = 0;
+	C$MyLab4.c$23$1$144 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:23: float compass_gain = 0;
 	clr	a
 	mov	_compass_gain,a
 	mov	(_compass_gain + 1),a
@@ -2278,33 +2289,36 @@ _Accel_Init:
 ;Allocation info for local variables in function 'main'
 ;------------------------------------------------------------
 	G$main$0$0 ==.
-	C$MyLab4.c$31$1$103 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:31: void main(void)
+	C$MyLab4.c$35$1$103 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:35: void main(void)
 ;	-----------------------------------------
 ;	 function main
 ;	-----------------------------------------
 _main:
-	C$MyLab4.c$33$1$113 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:33: Sys_Init();     // System Initialization - MUST BE 1st EXECUTABLE STATEMENT
+	C$MyLab4.c$37$1$115 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:37: Sys_Init();     // System Initialization - MUST BE 1st EXECUTABLE STATEMENT
 	lcall	_Sys_Init
-	C$MyLab4.c$34$1$113 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:34: Port_Init();    // Initialize ports 2 and 3 - XBR0 set to 0x05, UART0 & SMB
+	C$MyLab4.c$38$1$115 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:38: Port_Init();    // Initialize ports 2 and 3 - XBR0 set to 0x05, UART0 & SMB
 	lcall	_Port_Init
-	C$MyLab4.c$35$1$113 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:35: Interrupt_Init();   // You may want to change XBR0 to match your SMB wiring
+	C$MyLab4.c$39$1$115 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:39: Interrupt_Init();   // You may want to change XBR0 to match your SMB wiring
 	lcall	_Interrupt_Init
-	C$MyLab4.c$36$1$113 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:36: PCA_Init();
+	C$MyLab4.c$40$1$115 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:40: PCA_Init();
 	lcall	_PCA_Init
-	C$MyLab4.c$37$1$113 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:37: SMB0_Init();
+	C$MyLab4.c$41$1$115 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:41: SMB0_Init();
 	lcall	_SMB0_Init
-	C$MyLab4.c$38$1$113 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:38: putchar('\r');  // Dummy write to serial port
+	C$MyLab4.c$42$1$115 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:42: ADC_Init();
+	lcall	_ADC_Init
+	C$MyLab4.c$43$1$115 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:43: putchar('\r');  // Dummy write to serial port
 	mov	dpl,#0x0D
 	lcall	_putchar
-	C$MyLab4.c$39$1$113 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:39: printf("\nStart\r\n");
+	C$MyLab4.c$44$1$115 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:44: printf("\nStart\r\n");
 	mov	a,#___str_3
 	push	acc
 	mov	a,#(___str_3 >> 8)
@@ -2315,16 +2329,16 @@ _main:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$MyLab4.c$40$1$113 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:40: lcd_clear();
+	C$MyLab4.c$45$1$115 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:45: lcd_clear();
 	lcall	_lcd_clear
-	C$MyLab4.c$41$1$113 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:41: Counts = 0;
+	C$MyLab4.c$46$1$115 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:46: Counts = 0;
 	clr	a
 	mov	_Counts,a
 	mov	(_Counts + 1),a
-	C$MyLab4.c$42$1$113 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:42: while (Counts < 1) printf("\r%u\n", nCounts); // Wait a long time (1s) for keypad & LCD to initialize
+	C$MyLab4.c$47$1$115 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:47: while (Counts < 1) printf("\r%u\n", nCounts); // Wait a long time (1s) for keypad & LCD to initialize
 00101$:
 	clr	c
 	mov	a,_Counts
@@ -2346,11 +2360,11 @@ _main:
 	mov	sp,a
 	sjmp	00101$
 00103$:
-	C$MyLab4.c$43$1$113 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:43: lcd_clear();
+	C$MyLab4.c$48$1$115 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:48: lcd_clear();
 	lcall	_lcd_clear
-	C$MyLab4.c$44$1$113 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:44: printf("\rWe get this far\n");
+	C$MyLab4.c$49$1$115 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:49: printf("\rWe get this far\n");
 	mov	a,#___str_5
 	push	acc
 	mov	a,#(___str_5 >> 8)
@@ -2361,36 +2375,59 @@ _main:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$MyLab4.c$45$1$113 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:45: Pick_Heading();
+	C$MyLab4.c$50$1$115 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:50: Pick_Heading();
 	lcall	_Pick_Heading
-	C$MyLab4.c$46$1$113 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:46: Pick_Compass_Gain();
+	C$MyLab4.c$51$1$115 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:51: Pick_Compass_Gain();
 	lcall	_Pick_Compass_Gain
-	C$MyLab4.c$47$1$113 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:47: while (1)
-00108$:
-	C$MyLab4.c$50$2$114 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:50: if(new_heading && (heading_delay >= 5))
-	mov	a,_new_heading
-	jz	00108$
+	C$MyLab4.c$52$1$115 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:52: while (1)
+00110$:
+	C$MyLab4.c$54$2$116 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:54: AD_Result = read_AD_input(4);
+	mov	dpl,#0x04
+	lcall	_read_AD_input
+	C$MyLab4.c$55$1$115 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:55: voltage = ((14.4/255)*AD_Result);
+	mov  _AD_Result,dpl
+	lcall	___uchar2fs
+	mov	r4,dpl
+	mov	r5,dph
+	mov	r6,b
+	mov	r7,a
+	push	ar4
+	push	ar5
+	push	ar6
+	push	ar7
+	mov	dptr,#0x4DB4
+	mov	b,#0x67
+	mov	a,#0x3D
+	lcall	___fsmul
+	mov	r4,dpl
+	mov	r5,dph
+	mov	r6,b
+	mov	r7,a
+	mov	a,sp
+	add	a,#0xfc
+	mov	sp,a
+	mov	dpl,r4
+	mov	dph,r5
+	mov	b,r6
+	mov	a,r7
+	lcall	___fs2uchar
+	mov	_voltage,dpl
+	C$MyLab4.c$56$2$116 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:56: if(delay>=5) 
 	clr	c
-	mov	a,_heading_delay
+	mov	a,_delay
 	xrl	a,#0x80
 	subb	a,#0x85
-	jc	00108$
-	C$MyLab4.c$52$3$115 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:52: heading = read_compass();
-	lcall	_read_compass
-	C$MyLab4.c$53$1$113 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:53: printf("\rThe current direction is %u\n", heading/10);
-	mov	_heading,dpl
-	mov	(_heading + 1),dph
-	mov	__divsint_PARM_2,#0x0A
-	mov	(__divsint_PARM_2 + 1),#0x00
-	lcall	__divsint
-	mov	r6,dpl
-	mov	r7,dph
+	jc	00105$
+	C$MyLab4.c$58$3$117 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:58: printf("\rBattery Voltage is %u\n", voltage);
+	mov	r6,_voltage
+	mov	r7,#0x00
 	push	ar6
 	push	ar7
 	mov	a,#___str_6
@@ -2403,113 +2440,159 @@ _main:
 	mov	a,sp
 	add	a,#0xfb
 	mov	sp,a
-	C$MyLab4.c$56$3$115 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:56: new_heading = 0;
+00105$:
+	C$MyLab4.c$60$2$116 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:60: if(new_heading && (delay >= 5))
+	mov	a,_new_heading
+	jz	00110$
+	clr	c
+	mov	a,_delay
+	xrl	a,#0x80
+	subb	a,#0x85
+	jc	00110$
+	C$MyLab4.c$62$3$118 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:62: heading = read_compass();
+	lcall	_read_compass
+	C$MyLab4.c$63$1$115 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:63: printf("\rThe current direction is %u\n", heading/10);
+	mov	_heading,dpl
+	mov	(_heading + 1),dph
+	mov	__divsint_PARM_2,#0x0A
+	mov	(__divsint_PARM_2 + 1),#0x00
+	lcall	__divsint
+	mov	r6,dpl
+	mov	r7,dph
+	push	ar6
+	push	ar7
+	mov	a,#___str_7
+	push	acc
+	mov	a,#(___str_7 >> 8)
+	push	acc
+	mov	a,#0x80
+	push	acc
+	lcall	_printf
+	mov	a,sp
+	add	a,#0xfb
+	mov	sp,a
+	C$MyLab4.c$66$3$118 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:66: new_heading = 0;
 	mov	_new_heading,#0x00
-	sjmp	00108$
-	C$MyLab4.c$60$1$113 ==.
+	ljmp	00110$
+	C$MyLab4.c$70$1$115 ==.
 	XG$main$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'Port_Init'
 ;------------------------------------------------------------
 	G$Port_Init$0$0 ==.
-	C$MyLab4.c$63$1$113 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:63: void Port_Init(void)	
+	C$MyLab4.c$73$1$115 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:73: void Port_Init(void)	
 ;	-----------------------------------------
 ;	 function Port_Init
 ;	-----------------------------------------
 _Port_Init:
-	C$MyLab4.c$65$1$117 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:65: XBR0 = 0x27;    
+	C$MyLab4.c$75$1$120 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:75: XBR0 = 0x27;    
 	mov	_XBR0,#0x27
-	C$MyLab4.c$66$1$117 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:66: P1MDOUT |= 0x01; //set output pin for CEX0 in push-pull mode
+	C$MyLab4.c$76$1$120 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:76: P1MDOUT |= 0x01; //set output pin for CEX0 in push-pull mode
 	orl	_P1MDOUT,#0x01
-	C$MyLab4.c$67$1$117 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:67: P3MDOUT &= 0x7F; // set input pin for 3.7 to open-drain
+	C$MyLab4.c$77$1$120 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:77: P3MDOUT &= 0x7F; // set input pin for 3.7 to open-drain
 	anl	_P3MDOUT,#0x7F
-	C$MyLab4.c$68$1$117 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:68: P3		|= ~0x7F;// set input pin for 3.7 to high impedence
+	C$MyLab4.c$78$1$120 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:78: P3		|= ~0x7F;// set input pin for 3.7 to high impedence
 	mov	r7,_P3
 	mov	a,#0x80
 	orl	a,r7
 	mov	_P3,a
-	C$MyLab4.c$69$1$117 ==.
+	C$MyLab4.c$79$1$120 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:79: P1MDIN 	&= 0xEF;// set pin 1.4 for analog input
+	anl	_P1MDIN,#0xEF
+	C$MyLab4.c$80$1$120 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:80: P1MDOUT &= 0xEF;// set input pin for 1.3 to open-drain
+	anl	_P1MDOUT,#0xEF
+	C$MyLab4.c$81$1$120 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:81: P1		|= ~0xEF;// set input pin for 1.3 to high impedence
+	mov	r7,_P1
+	mov	a,#0x10
+	orl	a,r7
+	mov	_P1,a
+	C$MyLab4.c$84$1$120 ==.
 	XG$Port_Init$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'Interrupt_Init'
 ;------------------------------------------------------------
 	G$Interrupt_Init$0$0 ==.
-	C$MyLab4.c$71$1$117 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:71: void Interrupt_Init(void)
+	C$MyLab4.c$86$1$120 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:86: void Interrupt_Init(void)
 ;	-----------------------------------------
 ;	 function Interrupt_Init
 ;	-----------------------------------------
 _Interrupt_Init:
-	C$MyLab4.c$73$1$119 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:73: IE |= 0x02;
+	C$MyLab4.c$88$1$122 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:88: IE |= 0x02;
 	orl	_IE,#0x02
-	C$MyLab4.c$74$1$119 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:74: EIE1 |= 0x08;
+	C$MyLab4.c$89$1$122 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:89: EIE1 |= 0x08;
 	orl	_EIE1,#0x08
-	C$MyLab4.c$75$1$119 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:75: EA = 1;
+	C$MyLab4.c$90$1$122 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:90: EA = 1;
 	setb	_EA
-	C$MyLab4.c$76$1$119 ==.
+	C$MyLab4.c$91$1$122 ==.
 	XG$Interrupt_Init$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'PCA_Init'
 ;------------------------------------------------------------
 	G$PCA_Init$0$0 ==.
-	C$MyLab4.c$78$1$119 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:78: void PCA_Init(void)
+	C$MyLab4.c$93$1$122 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:93: void PCA_Init(void)
 ;	-----------------------------------------
 ;	 function PCA_Init
 ;	-----------------------------------------
 _PCA_Init:
-	C$MyLab4.c$80$1$121 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:80: PCA0MD = 0x81;      // SYSCLK/12, enable CF interrupts, suspend when idle
+	C$MyLab4.c$95$1$124 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:95: PCA0MD = 0x81;      // SYSCLK/12, enable CF interrupts, suspend when idle
 	mov	_PCA0MD,#0x81
-	C$MyLab4.c$81$1$121 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:81: PCA0CPM0 = 0xC2;    // 16 bit, enable compare, enable PWM; NOT USED HERE
+	C$MyLab4.c$96$1$124 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:96: PCA0CPM0 = 0xC2;    // 16 bit, enable compare, enable PWM; NOT USED HERE
 	mov	_PCA0CPM0,#0xC2
-	C$MyLab4.c$82$1$121 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:82: PCA0CPM2 = 0xC2;
+	C$MyLab4.c$97$1$124 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:97: PCA0CPM2 = 0xC2;
 	mov	_PCA0CPM2,#0xC2
-	C$MyLab4.c$83$1$121 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:83: PCA0CN |= 0x40;     // enable PCA
+	C$MyLab4.c$98$1$124 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:98: PCA0CN |= 0x40;     // enable PCA
 	orl	_PCA0CN,#0x40
-	C$MyLab4.c$84$1$121 ==.
+	C$MyLab4.c$99$1$124 ==.
 	XG$PCA_Init$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'SMB0_Init'
 ;------------------------------------------------------------
 	G$SMB0_Init$0$0 ==.
-	C$MyLab4.c$86$1$121 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:86: void SMB0_Init(void)    // This was at the top, moved it here to call wait()
+	C$MyLab4.c$101$1$124 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:101: void SMB0_Init(void)    // This was at the top, moved it here to call wait()
 ;	-----------------------------------------
 ;	 function SMB0_Init
 ;	-----------------------------------------
 _SMB0_Init:
-	C$MyLab4.c$88$1$123 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:88: SMB0CR = 0x93;      // Set SCL to 100KHz
+	C$MyLab4.c$103$1$126 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:103: SMB0CR = 0x93;      // Set SCL to 100KHz
 	mov	_SMB0CR,#0x93
-	C$MyLab4.c$89$1$123 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:89: ENSMB = 1;          // Enable SMBUS0
+	C$MyLab4.c$104$1$126 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:104: ENSMB = 1;          // Enable SMBUS0
 	setb	_ENSMB
-	C$MyLab4.c$90$1$123 ==.
+	C$MyLab4.c$105$1$126 ==.
 	XG$SMB0_Init$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'PCA_ISR'
 ;------------------------------------------------------------
 	G$PCA_ISR$0$0 ==.
-	C$MyLab4.c$92$1$123 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:92: void PCA_ISR(void) __interrupt 9
+	C$MyLab4.c$107$1$126 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:107: void PCA_ISR(void) __interrupt 9
 ;	-----------------------------------------
 ;	 function PCA_ISR
 ;	-----------------------------------------
@@ -2517,108 +2600,108 @@ _PCA_ISR:
 	push	acc
 	push	b
 	push	psw
-	C$MyLab4.c$94$1$125 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:94: if (CF)
-	C$MyLab4.c$96$2$126 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:96: CF = 0;                     // clear the interrupt flag
+	C$MyLab4.c$109$1$128 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:109: if (CF)
+	C$MyLab4.c$111$2$129 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:111: CF = 0;                     // clear the interrupt flag
 	jbc	_CF,00129$
 	sjmp	00110$
 00129$:
-	C$MyLab4.c$97$2$126 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:97: nOverflows++;               // continuous overflow counter
+	C$MyLab4.c$112$2$129 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:112: nOverflows++;               // continuous overflow counter
 	inc	_nOverflows
 	clr	a
 	cjne	a,_nOverflows,00130$
 	inc	(_nOverflows + 1)
 00130$:
-	C$MyLab4.c$98$2$126 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:98: nCounts++;
+	C$MyLab4.c$113$2$129 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:113: nCounts++;
 	inc	_nCounts
 	clr	a
 	cjne	a,_nCounts,00131$
 	inc	(_nCounts + 1)
 00131$:
-	C$MyLab4.c$99$2$126 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:99: PCA0 = PCA_START;
+	C$MyLab4.c$114$2$129 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:114: PCA0 = PCA_START;
 	mov	((_PCA0 >> 0) & 0xFF),#0x00
 	mov	((_PCA0 >> 8) & 0xFF),#0x70
-	C$MyLab4.c$100$2$126 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:100: if (nCounts > 50)
+	C$MyLab4.c$115$2$129 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:115: if (nCounts > 50)
 	clr	c
 	mov	a,#0x32
 	subb	a,_nCounts
 	clr	a
 	subb	a,(_nCounts + 1)
 	jnc	00102$
-	C$MyLab4.c$102$3$127 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:102: nCounts = 0;
+	C$MyLab4.c$117$3$130 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:117: nCounts = 0;
 	clr	a
 	mov	_nCounts,a
 	mov	(_nCounts + 1),a
-	C$MyLab4.c$103$3$127 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:103: Counts++;               // seconds counter
+	C$MyLab4.c$118$3$130 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:118: Counts++;               // seconds counter
 	inc	_Counts
 ;	genFromRTrack removed	clr	a
 	cjne	a,_Counts,00133$
 	inc	(_Counts + 1)
 00133$:
 00102$:
-	C$MyLab4.c$105$2$126 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:105: h_count++;
+	C$MyLab4.c$120$2$129 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:120: h_count++;
 	inc	_h_count
-	C$MyLab4.c$106$2$126 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:106: if (h_count>=2)
+	C$MyLab4.c$121$2$129 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:121: if (h_count>=2)
 	clr	c
 	mov	a,_h_count
 	xrl	a,#0x80
 	subb	a,#0x82
 	jc	00104$
-	C$MyLab4.c$108$3$128 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:108: new_heading=1;
+	C$MyLab4.c$123$3$131 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:123: new_heading=1;
 	mov	_new_heading,#0x01
-	C$MyLab4.c$109$3$128 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:109: h_count = 0;
+	C$MyLab4.c$124$3$131 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:124: h_count = 0;
 	mov	_h_count,#0x00
 00104$:
-	C$MyLab4.c$111$2$126 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:111: heading_delay++;
-	inc	_heading_delay
-	C$MyLab4.c$112$2$126 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:112: if(heading_delay>5) heading_delay=0;
+	C$MyLab4.c$126$2$129 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:126: delay++;
+	inc	_delay
+	C$MyLab4.c$127$2$129 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:127: if(delay>5) delay=0;
 	clr	c
 	mov	a,#(0x05 ^ 0x80)
-	mov	b,_heading_delay
+	mov	b,_delay
 	xrl	b,#0x80
 	subb	a,b
 	jnc	00106$
-	mov	_heading_delay,#0x00
+	mov	_delay,#0x00
 00106$:
-	C$MyLab4.c$113$2$126 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:113: r_count++;
+	C$MyLab4.c$128$2$129 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:128: r_count++;
 	inc	_r_count
-	C$MyLab4.c$114$2$126 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:114: if (r_count>=4)
+	C$MyLab4.c$129$2$129 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:129: if (r_count>=4)
 	clr	c
 	mov	a,_r_count
 	xrl	a,#0x80
 	subb	a,#0x84
 	jc	00112$
-	C$MyLab4.c$116$3$129 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:116: new_range = 1;
+	C$MyLab4.c$131$3$132 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:131: new_range = 1;
 	mov	_new_range,#0x01
-	C$MyLab4.c$117$3$129 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:117: r_count = 0;
+	C$MyLab4.c$132$3$132 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:132: r_count = 0;
 	mov	_r_count,#0x00
 	sjmp	00112$
 00110$:
-	C$MyLab4.c$120$1$125 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:120: else PCA0CN &= 0xC0;           // clear all other 9-type interrupts
+	C$MyLab4.c$135$1$128 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:135: else PCA0CN &= 0xC0;           // clear all other 9-type interrupts
 	anl	_PCA0CN,#0xC0
 00112$:
 	pop	psw
 	pop	b
 	pop	acc
-	C$MyLab4.c$121$1$125 ==.
+	C$MyLab4.c$136$1$128 ==.
 	XG$PCA_ISR$0$0 ==.
 	reti
 ;	eliminated unneeded mov psw,# (no regs used in bank)
@@ -2630,20 +2713,20 @@ _PCA_ISR:
 ;user_heading              Allocated to registers r6 r7 
 ;------------------------------------------------------------
 	G$Pick_Heading$0$0 ==.
-	C$MyLab4.c$123$1$125 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:123: void Pick_Heading(void)
+	C$MyLab4.c$138$1$128 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:138: void Pick_Heading(void)
 ;	-----------------------------------------
 ;	 function Pick_Heading
 ;	-----------------------------------------
 _Pick_Heading:
-	C$MyLab4.c$126$1$131 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:126: lcd_clear();
+	C$MyLab4.c$141$1$134 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:141: lcd_clear();
 	lcall	_lcd_clear
-	C$MyLab4.c$127$1$131 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:127: lcd_print("\rEnter desired heading for the compass.\n");
-	mov	a,#___str_7
+	C$MyLab4.c$142$1$134 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:142: lcd_print("\rEnter desired heading for the compass.\n");
+	mov	a,#___str_8
 	push	acc
-	mov	a,#(___str_7 >> 8)
+	mov	a,#(___str_8 >> 8)
 	push	acc
 	mov	a,#0x80
 	push	acc
@@ -2651,14 +2734,14 @@ _Pick_Heading:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$MyLab4.c$128$1$131 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:128: user_heading = kpd_input(1);
+	C$MyLab4.c$143$1$134 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:143: user_heading = kpd_input(1);
 	mov	dpl,#0x01
 	lcall	_kpd_input
 	mov	r6,dpl
 	mov	r7,dph
-	C$MyLab4.c$129$1$131 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:129: while(user_heading > 3600) //Headings must be between 0 and 3600
+	C$MyLab4.c$144$1$134 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:144: while(user_heading > 3600) //Headings must be between 0 and 3600
 	mov	ar4,r6
 	mov	ar5,r7
 00101$:
@@ -2670,16 +2753,16 @@ _Pick_Heading:
 	xrl	b,#0x80
 	subb	a,b
 	jnc	00113$
-	C$MyLab4.c$131$2$132 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:131: user_heading -= 3600;
+	C$MyLab4.c$146$2$135 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:146: user_heading -= 3600;
 	mov	a,r4
 	add	a,#0xF0
 	mov	r4,a
 	mov	a,r5
 	addc	a,#0xF1
 	mov	r5,a
-	C$MyLab4.c$133$1$131 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:133: while(user_heading < 0)
+	C$MyLab4.c$148$1$134 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:148: while(user_heading < 0)
 	sjmp	00101$
 00113$:
 	mov	ar6,r4
@@ -2689,8 +2772,8 @@ _Pick_Heading:
 00104$:
 	mov	a,r5
 	jnb	acc.7,00114$
-	C$MyLab4.c$135$2$133 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:135: user_heading += 3600;
+	C$MyLab4.c$150$2$136 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:150: user_heading += 3600;
 	mov	a,#0x10
 	add	a,r4
 	mov	r4,a
@@ -2701,18 +2784,18 @@ _Pick_Heading:
 00114$:
 	mov	ar6,r4
 	mov	ar7,r5
-	C$MyLab4.c$137$1$131 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:137: lcd_clear();
+	C$MyLab4.c$152$1$134 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:152: lcd_clear();
 	push	ar7
 	push	ar6
 	lcall	_lcd_clear
 	pop	ar6
 	pop	ar7
-	C$MyLab4.c$138$1$131 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:138: desired_heading = user_heading;
+	C$MyLab4.c$153$1$134 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:153: desired_heading = user_heading;
 	mov	_desired_heading,r6
 	mov	(_desired_heading + 1),r7
-	C$MyLab4.c$139$1$131 ==.
+	C$MyLab4.c$154$1$134 ==.
 	XG$Pick_Heading$0$0 ==.
 	ret
 ;------------------------------------------------------------
@@ -2721,20 +2804,20 @@ _Pick_Heading:
 ;user_gain                 Allocated to registers r6 r7 
 ;------------------------------------------------------------
 	G$Pick_Compass_Gain$0$0 ==.
-	C$MyLab4.c$141$1$131 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:141: void Pick_Compass_Gain(void)
+	C$MyLab4.c$156$1$134 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:156: void Pick_Compass_Gain(void)
 ;	-----------------------------------------
 ;	 function Pick_Compass_Gain
 ;	-----------------------------------------
 _Pick_Compass_Gain:
-	C$MyLab4.c$144$1$135 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:144: lcd_clear();
+	C$MyLab4.c$159$1$138 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:159: lcd_clear();
 	lcall	_lcd_clear
-	C$MyLab4.c$145$1$135 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:145: lcd_print("\rEnter desired gain for the compass.\n");
-	mov	a,#___str_8
+	C$MyLab4.c$160$1$138 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:160: lcd_print("\rEnter desired gain for the compass.\n");
+	mov	a,#___str_9
 	push	acc
-	mov	a,#(___str_8 >> 8)
+	mov	a,#(___str_9 >> 8)
 	push	acc
 	mov	a,#0x80
 	push	acc
@@ -2742,21 +2825,21 @@ _Pick_Compass_Gain:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$MyLab4.c$146$1$135 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:146: user_gain = kpd_input(1);
+	C$MyLab4.c$161$1$138 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:161: user_gain = kpd_input(1);
 	mov	dpl,#0x01
 	lcall	_kpd_input
 	mov	r6,dpl
 	mov	r7,dph
-	C$MyLab4.c$147$1$135 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:147: lcd_clear();
+	C$MyLab4.c$162$1$138 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:162: lcd_clear();
 	push	ar7
 	push	ar6
 	lcall	_lcd_clear
 	pop	ar6
 	pop	ar7
-	C$MyLab4.c$148$1$135 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:148: compass_gain = ((user_gain)/1000);
+	C$MyLab4.c$163$1$138 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:163: compass_gain = ((user_gain)/1000);
 	mov	__divsint_PARM_2,#0xE8
 	mov	(__divsint_PARM_2 + 1),#0x03
 	mov	dpl,r6
@@ -2767,37 +2850,37 @@ _Pick_Compass_Gain:
 	mov	(_compass_gain + 1),dph
 	mov	(_compass_gain + 2),b
 	mov	(_compass_gain + 3),a
-	C$MyLab4.c$149$1$135 ==.
+	C$MyLab4.c$164$1$138 ==.
 	XG$Pick_Compass_Gain$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'read_compass'
 ;------------------------------------------------------------
 ;addr                      Allocated to registers 
-;Data                      Allocated with name '_read_compass_Data_1_137'
+;Data                      Allocated with name '_read_compass_Data_1_140'
 ;read_heading              Allocated to registers 
 ;------------------------------------------------------------
 	G$read_compass$0$0 ==.
-	C$MyLab4.c$153$1$135 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:153: int read_compass(void)
+	C$MyLab4.c$168$1$138 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:168: int read_compass(void)
 ;	-----------------------------------------
 ;	 function read_compass
 ;	-----------------------------------------
 _read_compass:
-	C$MyLab4.c$158$1$137 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:158: i2c_read_data(addr, 2, Data, 2); // read two byte, starting at reg 2
-	mov	_i2c_read_data_PARM_3,#_read_compass_Data_1_137
+	C$MyLab4.c$173$1$140 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:173: i2c_read_data(addr, 2, Data, 2); // read two byte, starting at reg 2
+	mov	_i2c_read_data_PARM_3,#_read_compass_Data_1_140
 	mov	(_i2c_read_data_PARM_3 + 1),#0x00
 	mov	(_i2c_read_data_PARM_3 + 2),#0x40
 	mov	_i2c_read_data_PARM_2,#0x02
 	mov	_i2c_read_data_PARM_4,#0x02
 	mov	dpl,#0xC0
 	lcall	_i2c_read_data
-	C$MyLab4.c$159$1$137 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:159: read_heading =(((unsigned int)Data[0] << 8) | Data[1]); //combine the two values
-	mov	r7,_read_compass_Data_1_137
+	C$MyLab4.c$174$1$140 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:174: read_heading =(((unsigned int)Data[0] << 8) | Data[1]); //combine the two values
+	mov	r7,_read_compass_Data_1_140
 	mov	r6,#0x00
-	mov	r4,(_read_compass_Data_1_137 + 0x0001)
+	mov	r4,(_read_compass_Data_1_140 + 0x0001)
 	mov	r5,#0x00
 	mov	a,r4
 	orl	a,r6
@@ -2805,10 +2888,65 @@ _read_compass:
 	mov	a,r5
 	orl	a,r7
 	mov	dph,a
-	C$MyLab4.c$160$1$137 ==.
-;	C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.c:160: return read_heading; // the heading returned in degrees between 0 and 3599
-	C$MyLab4.c$161$1$137 ==.
+	C$MyLab4.c$175$1$140 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:175: return read_heading; // the heading returned in degrees between 0 and 3599
+	C$MyLab4.c$176$1$140 ==.
 	XG$read_compass$0$0 ==.
+	ret
+;------------------------------------------------------------
+;Allocation info for local variables in function 'ADC_Init'
+;------------------------------------------------------------
+	G$ADC_Init$0$0 ==.
+	C$MyLab4.c$181$1$140 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:181: void ADC_Init(void)
+;	-----------------------------------------
+;	 function ADC_Init
+;	-----------------------------------------
+_ADC_Init:
+	C$MyLab4.c$183$1$142 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:183: REF0CN = 0x03; // Set Vref to use internal reference voltage (2.4 V)
+	mov	_REF0CN,#0x03
+	C$MyLab4.c$184$1$142 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:184: ADC1CN = 0x80; // Enable A/D converter (ADC1)
+	mov	_ADC1CN,#0x80
+	C$MyLab4.c$185$1$142 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:185: ADC1CF |= 0x01; // Set A/D converter gain to 1
+	orl	_ADC1CF,#0x01
+	C$MyLab4.c$186$1$142 ==.
+	XG$ADC_Init$0$0 ==.
+	ret
+;------------------------------------------------------------
+;Allocation info for local variables in function 'read_AD_input'
+;------------------------------------------------------------
+;n                         Allocated to registers 
+;------------------------------------------------------------
+	G$read_AD_input$0$0 ==.
+	C$MyLab4.c$190$1$142 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:190: unsigned char read_AD_input(unsigned char n)
+;	-----------------------------------------
+;	 function read_AD_input
+;	-----------------------------------------
+_read_AD_input:
+	mov	_AMX1SL,dpl
+	C$MyLab4.c$193$1$144 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:193: ADC1CN = ADC1CN & ~0x20; // Clear the "Conversion Completed" flag
+	mov	r7,_ADC1CN
+	mov	a,#0xDF
+	anl	a,r7
+	mov	_ADC1CN,a
+	C$MyLab4.c$194$1$144 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:194: ADC1CN = ADC1CN | 0x10; // Initiate A/D conversion
+	orl	_ADC1CN,#0x10
+	C$MyLab4.c$196$1$144 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:196: while ((ADC1CN & 0x20) == 0x00);// Wait for conversion to complete
+00101$:
+	mov	a,_ADC1CN
+	jnb	acc.5,00101$
+	C$MyLab4.c$198$1$144 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.c:198: return ADC1; // Return digital value in ADC1 register
+	mov	dpl,_ADC1
+	C$MyLab4.c$199$1$144 ==.
+	XG$read_AD_input$0$0 ==.
 	ret
 	.area CSEG    (CODE)
 	.area CONST   (CODE)
@@ -2847,17 +2985,23 @@ ___str_5:
 FMyLab4$__str_6$0$0 == .
 ___str_6:
 	.db 0x0D
-	.ascii "The current direction is %u"
+	.ascii "Battery Voltage is %u"
 	.db 0x0A
 	.db 0x00
 FMyLab4$__str_7$0$0 == .
 ___str_7:
 	.db 0x0D
-	.ascii "Enter desired heading for the compass."
+	.ascii "The current direction is %u"
 	.db 0x0A
 	.db 0x00
 FMyLab4$__str_8$0$0 == .
 ___str_8:
+	.db 0x0D
+	.ascii "Enter desired heading for the compass."
+	.db 0x0A
+	.db 0x00
+FMyLab4$__str_9$0$0 == .
+___str_9:
 	.db 0x0D
 	.ascii "Enter desired gain for the compass."
 	.db 0x0A

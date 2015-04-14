@@ -1,5 +1,5 @@
 -muwx
--i C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.hex
+-i C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.hex
 -M
 -Y
 -y
@@ -14,6 +14,6 @@
 -l libint
 -l liblong
 -l libfloat
-C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.rel
+C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.rel
 
 -e

@@ -70,19 +70,19 @@ C:   00000051  s_XISEG
 C:   00000054  s_GSINIT1                       
 C:   00000054  s_GSINIT2                       
 C:   0000005E  s_GSINIT3                       
-C:   00000063  s_SSEG                          
+C:   00000065  s_SSEG                          
 C:   0000007D  l_DSEG                          
 C:   00000080  s_GSINIT4                       
-C:   0000009D  l_SSEG                          
+C:   0000009B  l_SSEG                          
 C:   000000AA  s_GSINIT                        
 C:   000000AA  s_GSINIT5                       
 C:   000000B3  s_GSFINAL                       
 C:   000000B6  s_CSEG                          
-C:   000000C1  l_CONST                         
+C:   000000D9  l_CONST                         
 C:   00000100  l_IRAM                          
-C:   00000F92  l_CSEG                          
-C:   00001048  s_CONST                         
-C:   00001109  s_XINIT                         
+C:   00001199  l_CSEG                          
+C:   0000124F  s_CONST                         
+C:   00001328  s_XINIT                         
 
 ASxxxx Linker V03.00 + NoICE + sdld,  page 3.
 Hexadecimal  [32-Bits]
@@ -93,7 +93,7 @@ Area                                    Addr        Size        Decimal Bytes (A
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-     00000000  .__.ABS.                           _fsreturnval
+     00000000  .__.ABS.                           _fsget1arg
      00000080  G$P0$0$0                           MyLab4
      00000080  G$P0_0$0$0                         MyLab4
      00000080  _P0                                MyLab4
@@ -828,8 +828,8 @@ DSEG                                00000000    0000007D =         125. bytes (R
      0000003E  _h_count                           MyLab4
      0000003F  G$r_count$0$0                      MyLab4
      0000003F  _r_count                           MyLab4
-     00000040  G$heading_delay$0$0                MyLab4
-     00000040  _heading_delay                     MyLab4
+     00000040  G$delay$0$0                        MyLab4
+     00000040  _delay                             MyLab4
      00000041  G$new_heading$0$0                  MyLab4
      00000041  _new_heading                       MyLab4
      00000042  G$new_range$0$0                    MyLab4
@@ -838,11 +838,25 @@ DSEG                                00000000    0000007D =         125. bytes (R
      00000043  _heading                           MyLab4
      00000045  G$PW$0$0                           MyLab4
      00000045  _PW                                MyLab4
-     00000047  LMyLab4.read_compass$Data$1$137    MyLab4
-     00000055  __print_format_PARM_2              printf_large
-     00000058  __print_format_PARM_3              printf_large
-     0000005B  __print_format_PARM_4              printf_large
+     00000047  G$AD_Result$0$0                    MyLab4
+     00000047  _AD_Result                         MyLab4
+     00000048  G$voltage$0$0                      MyLab4
+     00000048  _voltage                           MyLab4
+     00000049  LMyLab4.read_compass$Data$1$140    MyLab4
+     00000057  __print_format_PARM_2              printf_large
 ASxxxx Linker V03.00 + NoICE + sdld,  page 18.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+DSEG                                00000000    0000007D =         125. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     0000005A  __print_format_PARM_3              printf_large
+     0000005D  __print_format_PARM_4              printf_large
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 19.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
@@ -856,7 +870,7 @@ OSEG                                00000011    00000006 =           6. bytes (R
      00000011  __gptrput_PARM_2                   _gptrput
      00000011  __mulint_PARM_2                    _mulint
 
-ASxxxx Linker V03.00 + NoICE + sdld,  page 19.
+ASxxxx Linker V03.00 + NoICE + sdld,  page 20.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
@@ -865,18 +879,18 @@ ISEG                                00000017    00000006 =           6. bytes (R
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-ASxxxx Linker V03.00 + NoICE + sdld,  page 20.
+ASxxxx Linker V03.00 + NoICE + sdld,  page 21.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-SSEG                                00000063    0000009D =         157. bytes (REL,OVR)
+SSEG                                00000065    0000009B =         155. bytes (REL,OVR)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-     00000063  __start__stack                     MyLab4
+     00000065  __start__stack                     MyLab4
 
-ASxxxx Linker V03.00 + NoICE + sdld,  page 21.
+ASxxxx Linker V03.00 + NoICE + sdld,  page 22.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
@@ -887,7 +901,7 @@ XSEG                                00000001    00000050 =          80. bytes (R
       -----  --------------------------------   ------------------------
 D:   00000001  LMyLab4.lcd_print$text$1$73        MyLab4
 
-ASxxxx Linker V03.00 + NoICE + sdld,  page 22.
+ASxxxx Linker V03.00 + NoICE + sdld,  page 23.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
@@ -896,21 +910,21 @@ HOME                                00000000    00000051 =          81. bytes (R
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   00000000  A$MyLab4$1067                      MyLab4
-C:   00000003  A$MyLab4$1068                      MyLab4
-C:   0000000B  A$MyLab4$1070                      MyLab4
-C:   00000013  A$MyLab4$1072                      MyLab4
-C:   0000001B  A$MyLab4$1074                      MyLab4
-C:   00000023  A$MyLab4$1076                      MyLab4
-C:   0000002B  A$MyLab4$1078                      MyLab4
-C:   00000033  A$MyLab4$1080                      MyLab4
-C:   0000003B  A$MyLab4$1082                      MyLab4
-C:   00000043  A$MyLab4$1084                      MyLab4
-C:   0000004B  A$MyLab4$1086                      MyLab4
-C:   0000004E  A$MyLab4$1115                      MyLab4
+C:   00000000  A$MyLab4$1078                      MyLab4
+C:   00000003  A$MyLab4$1079                      MyLab4
+C:   0000000B  A$MyLab4$1081                      MyLab4
+C:   00000013  A$MyLab4$1083                      MyLab4
+C:   0000001B  A$MyLab4$1085                      MyLab4
+C:   00000023  A$MyLab4$1087                      MyLab4
+C:   0000002B  A$MyLab4$1089                      MyLab4
+C:   00000033  A$MyLab4$1091                      MyLab4
+C:   0000003B  A$MyLab4$1093                      MyLab4
+C:   00000043  A$MyLab4$1095                      MyLab4
+C:   0000004B  A$MyLab4$1097                      MyLab4
+C:   0000004E  A$MyLab4$1126                      MyLab4
 C:   0000004E  __sdcc_program_startup             MyLab4
 
-ASxxxx Linker V03.00 + NoICE + sdld,  page 23.
+ASxxxx Linker V03.00 + NoICE + sdld,  page 24.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
@@ -921,7 +935,7 @@ GSINIT0                             00000051    00000003 =           3. bytes (R
       -----  --------------------------------   ------------------------
 C:   00000051  __sdcc_gsinit_startup              
 
-ASxxxx Linker V03.00 + NoICE + sdld,  page 24.
+ASxxxx Linker V03.00 + NoICE + sdld,  page 25.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
@@ -930,7 +944,7 @@ GSINIT2                             00000054    0000000A =          10. bytes (R
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-ASxxxx Linker V03.00 + NoICE + sdld,  page 25.
+ASxxxx Linker V03.00 + NoICE + sdld,  page 26.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
@@ -941,7 +955,7 @@ GSINIT3                             0000005E    00000022 =          34. bytes (R
       -----  --------------------------------   ------------------------
 C:   0000005E  __mcs51_genXINIT                   
 
-ASxxxx Linker V03.00 + NoICE + sdld,  page 26.
+ASxxxx Linker V03.00 + NoICE + sdld,  page 27.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
@@ -953,7 +967,7 @@ GSINIT4                             00000080    0000002A =          42. bytes (R
 C:   00000080  __mcs51_genRAMCLEAR                
 C:   00000086  __mcs51_genXRAMCLEAR               
 
-ASxxxx Linker V03.00 + NoICE + sdld,  page 27.
+ASxxxx Linker V03.00 + NoICE + sdld,  page 28.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
@@ -962,13 +976,13 @@ GSINIT                              000000AA    00000009 =           9. bytes (R
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   000000AA  A$MyLab4$1102                      MyLab4
-C:   000000AA  C$MyLab4.c$21$1$137                MyLab4
-C:   000000AB  A$MyLab4$1103                      MyLab4
-C:   000000AD  A$MyLab4$1104                      MyLab4
-C:   000000AF  A$MyLab4$1105                      MyLab4
-C:   000000B1  A$MyLab4$1106                      MyLab4
-ASxxxx Linker V03.00 + NoICE + sdld,  page 28.
+C:   000000AA  A$MyLab4$1113                      MyLab4
+C:   000000AA  C$MyLab4.c$23$1$144                MyLab4
+C:   000000AB  A$MyLab4$1114                      MyLab4
+C:   000000AD  A$MyLab4$1115                      MyLab4
+C:   000000AF  A$MyLab4$1116                      MyLab4
+C:   000000B1  A$MyLab4$1117                      MyLab4
+ASxxxx Linker V03.00 + NoICE + sdld,  page 29.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
@@ -977,1457 +991,1585 @@ GSFINAL                             000000B3    00000003 =           3. bytes (R
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   000000B3  A$MyLab4$1108                      MyLab4
+C:   000000B3  A$MyLab4$1119                      MyLab4
 
-ASxxxx Linker V03.00 + NoICE + sdld,  page 29.
-Hexadecimal  [32-Bits]
-
-Area                                    Addr        Size        Decimal Bytes (Attributes)
---------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000B6    00000F92 =        3986. bytes (REL,CON,CODE)
-
-      Value  Global                              Global Defined In Module
-      -----  --------------------------------   ------------------------
-C:   000000B6  A$MyLab4$1143                      MyLab4
-C:   000000B6  C$c8051_SDCC.h$42$0$0              MyLab4
-C:   000000B6  C$c8051_SDCC.h$46$1$31             MyLab4
-C:   000000B6  G$SYSCLK_Init$0$0                  MyLab4
-C:   000000B6  _SYSCLK_Init                       MyLab4
-C:   000000B9  A$MyLab4$1146                      MyLab4
-C:   000000B9  C$c8051_SDCC.h$49$1$31             MyLab4
-C:   000000BB  A$MyLab4$1147                      MyLab4
-C:   000000BD  A$MyLab4$1149                      MyLab4
-C:   000000BE  A$MyLab4$1150                      MyLab4
-C:   000000C1  A$MyLab4$1151                      MyLab4
-C:   000000C2  A$MyLab4$1153                      MyLab4
-C:   000000C3  A$MyLab4$1154                      MyLab4
-C:   000000C4  A$MyLab4$1155                      MyLab4
-C:   000000C6  A$MyLab4$1159                      MyLab4
-C:   000000C6  C$c8051_SDCC.h$51$1$31             MyLab4
-C:   000000C8  A$MyLab4$1160                      MyLab4
-C:   000000CB  A$MyLab4$1163                      MyLab4
-C:   000000CB  C$c8051_SDCC.h$53$1$31             MyLab4
-C:   000000CE  A$MyLab4$1166                      MyLab4
-C:   000000CE  C$c8051_SDCC.h$56$1$31             MyLab4
-C:   000000CE  XG$SYSCLK_Init$0$0                 MyLab4
-C:   000000CF  A$MyLab4$1179                      MyLab4
-C:   000000CF  C$c8051_SDCC.h$64$1$31             MyLab4
-C:   000000CF  C$c8051_SDCC.h$66$1$33             MyLab4
-C:   000000CF  G$UART0_Init$0$0                   MyLab4
-C:   000000CF  _UART0_Init                        MyLab4
-C:   000000D2  A$MyLab4$1182                      MyLab4
-C:   000000D2  C$c8051_SDCC.h$67$1$33             MyLab4
-C:   000000D5  A$MyLab4$1185                      MyLab4
-C:   000000D5  C$c8051_SDCC.h$68$1$33             MyLab4
-C:   000000D8  A$MyLab4$1188                      MyLab4
-C:   000000D8  C$c8051_SDCC.h$69$1$33             MyLab4
-C:   000000DA  A$MyLab4$1191                      MyLab4
-C:   000000DA  C$c8051_SDCC.h$70$1$33             MyLab4
-C:   000000DD  A$MyLab4$1194                      MyLab4
-C:   000000DD  C$c8051_SDCC.h$71$1$33             MyLab4
-C:   000000E0  A$MyLab4$1197                      MyLab4
-C:   000000E0  C$c8051_SDCC.h$73$1$33             MyLab4
-C:   000000E2  A$MyLab4$1200                      MyLab4
-C:   000000E2  C$c8051_SDCC.h$74$1$33             MyLab4
-C:   000000E5  A$MyLab4$1203                      MyLab4
-C:   000000E5  C$c8051_SDCC.h$75$1$33             MyLab4
-C:   000000E5  XG$UART0_Init$0$0                  MyLab4
-C:   000000E6  A$MyLab4$1216                      MyLab4
-C:   000000E6  C$c8051_SDCC.h$83$1$33             MyLab4
-C:   000000E6  C$c8051_SDCC.h$85$1$35             MyLab4
-C:   000000E6  G$Sys_Init$0$0                     MyLab4
-C:   000000E6  _Sys_Init                          MyLab4
-C:   000000E9  A$MyLab4$1219                      MyLab4
 ASxxxx Linker V03.00 + NoICE + sdld,  page 30.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000B6    00000F92 =        3986. bytes (REL,CON,CODE)
+CSEG                                000000B6    00001199 =        4505. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   000000E9  C$c8051_SDCC.h$86$1$35             MyLab4
-C:   000000EC  A$MyLab4$1222                      MyLab4
-C:   000000EC  C$c8051_SDCC.h$88$1$35             MyLab4
-C:   000000EF  A$MyLab4$1225                      MyLab4
-C:   000000EF  C$c8051_SDCC.h$89$1$35             MyLab4
-C:   000000F2  A$MyLab4$1228                      MyLab4
-C:   000000F2  C$c8051_SDCC.h$91$1$35             MyLab4
-C:   000000F5  A$MyLab4$1231                      MyLab4
-C:   000000F5  C$c8051_SDCC.h$92$1$35             MyLab4
-C:   000000F8  A$MyLab4$1234                      MyLab4
-C:   000000F8  C$c8051_SDCC.h$93$1$35             MyLab4
-C:   000000F8  XG$Sys_Init$0$0                    MyLab4
-C:   000000F9  A$MyLab4$1247                      MyLab4
-C:   000000F9  C$c8051_SDCC.h$98$1$35             MyLab4
-C:   000000F9  G$putchar$0$0                      MyLab4
-C:   000000F9  _putchar                           MyLab4
-C:   000000FB  A$MyLab4$1253                      MyLab4
-C:   000000FB  C$c8051_SDCC.h$100$1$37            MyLab4
-C:   000000FB  C$c8051_SDCC.h$101$1$37            MyLab4
-C:   000000FE  A$MyLab4$1254                      MyLab4
-C:   00000100  A$MyLab4$1258                      MyLab4
-C:   00000100  C$c8051_SDCC.h$102$1$37            MyLab4
-C:   00000102  A$MyLab4$1261                      MyLab4
-C:   00000102  C$c8051_SDCC.h$103$1$37            MyLab4
-C:   00000102  XG$putchar$0$0                     MyLab4
-C:   00000103  A$MyLab4$1279                      MyLab4
-C:   00000103  C$c8051_SDCC.h$108$1$37            MyLab4
-C:   00000103  C$c8051_SDCC.h$111$1$39            MyLab4
-C:   00000103  C$c8051_SDCC.h$112$1$39            MyLab4
-C:   00000103  G$getchar$0$0                      MyLab4
-C:   00000103  _getchar                           MyLab4
-C:   00000106  A$MyLab4$1280                      MyLab4
-C:   00000108  A$MyLab4$1284                      MyLab4
-C:   00000108  C$c8051_SDCC.h$113$1$39            MyLab4
-C:   0000010B  A$MyLab4$1287                      MyLab4
-C:   0000010B  C$c8051_SDCC.h$114$1$39            MyLab4
-C:   0000010E  A$MyLab4$1290                      MyLab4
-C:   0000010E  C$c8051_SDCC.h$115$1$39            MyLab4
-C:   00000111  A$MyLab4$1293                      MyLab4
-C:   00000111  C$c8051_SDCC.h$116$1$39            MyLab4
-C:   00000111  XG$getchar$0$0                     MyLab4
-C:   00000112  A$MyLab4$1310                      MyLab4
-C:   00000112  C$i2c.h$81$1$39                    MyLab4
-C:   00000112  G$lcd_print$0$0                    MyLab4
-C:   00000112  _lcd_print                         MyLab4
-C:   00000114  A$MyLab4$1311                      MyLab4
-C:   00000117  A$MyLab4$1314                      MyLab4
-C:   00000117  C$i2c.h$87$1$73                    MyLab4
-C:   00000119  A$MyLab4$1315                      MyLab4
-C:   0000011B  A$MyLab4$1316                      MyLab4
-C:   0000011C  A$MyLab4$1317                      MyLab4
+C:   000000B6  A$MyLab4$1154                      MyLab4
+C:   000000B6  C$c8051_SDCC.h$42$0$0              MyLab4
+C:   000000B6  C$c8051_SDCC.h$46$1$31             MyLab4
+C:   000000B6  G$SYSCLK_Init$0$0                  MyLab4
+C:   000000B6  _SYSCLK_Init                       MyLab4
+C:   000000B9  A$MyLab4$1157                      MyLab4
+C:   000000B9  C$c8051_SDCC.h$49$1$31             MyLab4
+C:   000000BB  A$MyLab4$1158                      MyLab4
+C:   000000BD  A$MyLab4$1160                      MyLab4
+C:   000000BE  A$MyLab4$1161                      MyLab4
+C:   000000C1  A$MyLab4$1162                      MyLab4
+C:   000000C2  A$MyLab4$1164                      MyLab4
+C:   000000C3  A$MyLab4$1165                      MyLab4
+C:   000000C4  A$MyLab4$1166                      MyLab4
+C:   000000C6  A$MyLab4$1170                      MyLab4
+C:   000000C6  C$c8051_SDCC.h$51$1$31             MyLab4
+C:   000000C8  A$MyLab4$1171                      MyLab4
+C:   000000CB  A$MyLab4$1174                      MyLab4
+C:   000000CB  C$c8051_SDCC.h$53$1$31             MyLab4
+C:   000000CE  A$MyLab4$1177                      MyLab4
+C:   000000CE  C$c8051_SDCC.h$56$1$31             MyLab4
+C:   000000CE  XG$SYSCLK_Init$0$0                 MyLab4
+C:   000000CF  A$MyLab4$1190                      MyLab4
+C:   000000CF  C$c8051_SDCC.h$64$1$31             MyLab4
+C:   000000CF  C$c8051_SDCC.h$66$1$33             MyLab4
+C:   000000CF  G$UART0_Init$0$0                   MyLab4
+C:   000000CF  _UART0_Init                        MyLab4
+C:   000000D2  A$MyLab4$1193                      MyLab4
+C:   000000D2  C$c8051_SDCC.h$67$1$33             MyLab4
+C:   000000D5  A$MyLab4$1196                      MyLab4
+C:   000000D5  C$c8051_SDCC.h$68$1$33             MyLab4
+C:   000000D8  A$MyLab4$1199                      MyLab4
+C:   000000D8  C$c8051_SDCC.h$69$1$33             MyLab4
+C:   000000DA  A$MyLab4$1202                      MyLab4
+C:   000000DA  C$c8051_SDCC.h$70$1$33             MyLab4
+C:   000000DD  A$MyLab4$1205                      MyLab4
+C:   000000DD  C$c8051_SDCC.h$71$1$33             MyLab4
+C:   000000E0  A$MyLab4$1208                      MyLab4
+C:   000000E0  C$c8051_SDCC.h$73$1$33             MyLab4
+C:   000000E2  A$MyLab4$1211                      MyLab4
+C:   000000E2  C$c8051_SDCC.h$74$1$33             MyLab4
+C:   000000E5  A$MyLab4$1214                      MyLab4
+C:   000000E5  C$c8051_SDCC.h$75$1$33             MyLab4
+C:   000000E5  XG$UART0_Init$0$0                  MyLab4
+C:   000000E6  A$MyLab4$1227                      MyLab4
+C:   000000E6  C$c8051_SDCC.h$83$1$33             MyLab4
+C:   000000E6  C$c8051_SDCC.h$85$1$35             MyLab4
+C:   000000E6  G$Sys_Init$0$0                     MyLab4
+C:   000000E6  _Sys_Init                          MyLab4
+C:   000000E9  A$MyLab4$1230                      MyLab4
 ASxxxx Linker V03.00 + NoICE + sdld,  page 31.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000B6    00000F92 =        3986. bytes (REL,CON,CODE)
+CSEG                                000000B6    00001199 =        4505. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   0000011E  A$MyLab4$1318                      MyLab4
-C:   0000011F  A$MyLab4$1319                      MyLab4
-C:   00000121  A$MyLab4$1320                      MyLab4
-C:   00000122  A$MyLab4$1321                      MyLab4
-C:   00000124  A$MyLab4$1322                      MyLab4
-C:   00000127  A$MyLab4$1323                      MyLab4
-C:   00000129  A$MyLab4$1324                      MyLab4
-C:   0000012C  A$MyLab4$1325                      MyLab4
-C:   0000012E  A$MyLab4$1326                      MyLab4
-C:   00000130  A$MyLab4$1327                      MyLab4
-C:   00000132  A$MyLab4$1331                      MyLab4
-C:   00000132  C$i2c.h$89$2$74                    MyLab4
-C:   00000134  A$MyLab4$1332                      MyLab4
-C:   00000136  A$MyLab4$1333                      MyLab4
-C:   00000137  A$MyLab4$1334                      MyLab4
-C:   00000139  A$MyLab4$1337                      MyLab4
-C:   00000139  C$i2c.h$90$1$73                    MyLab4
-C:   0000013B  A$MyLab4$1338                      MyLab4
-C:   0000013D  A$MyLab4$1339                      MyLab4
-C:   0000013E  A$MyLab4$1340                      MyLab4
-C:   00000140  A$MyLab4$1341                      MyLab4
-C:   00000141  A$MyLab4$1342                      MyLab4
-C:   00000143  A$MyLab4$1343                      MyLab4
-C:   00000144  A$MyLab4$1344                      MyLab4
-C:   00000146  A$MyLab4$1345                      MyLab4
-C:   00000149  A$MyLab4$1346                      MyLab4
-C:   0000014C  A$MyLab4$1347                      MyLab4
-C:   0000014F  A$MyLab4$1350                      MyLab4
-C:   0000014F  C$i2c.h$93$1$73                    MyLab4
-C:   00000152  A$MyLab4$1351                      MyLab4
-C:   00000155  A$MyLab4$1352                      MyLab4
-C:   00000158  A$MyLab4$1353                      MyLab4
-C:   0000015A  A$MyLab4$1356                      MyLab4
-C:   0000015C  A$MyLab4$1358                      MyLab4
-C:   0000015D  A$MyLab4$1359                      MyLab4
-C:   0000015E  A$MyLab4$1360                      MyLab4
-C:   0000015F  A$MyLab4$1361                      MyLab4
-C:   00000161  A$MyLab4$1364                      MyLab4
-C:   00000161  C$i2c.h$96$2$76                    MyLab4
-C:   00000162  A$MyLab4$1365                      MyLab4
-C:   00000164  A$MyLab4$1366                      MyLab4
-C:   00000166  A$MyLab4$1367                      MyLab4
-C:   00000167  A$MyLab4$1368                      MyLab4
-C:   00000169  A$MyLab4$1369                      MyLab4
-C:   0000016B  A$MyLab4$1370                      MyLab4
-C:   0000016C  A$MyLab4$1371                      MyLab4
-C:   0000016D  A$MyLab4$1372                      MyLab4
-C:   00000170  A$MyLab4$1373                      MyLab4
-C:   00000171  A$MyLab4$1374                      MyLab4
-C:   00000173  A$MyLab4$1375                      MyLab4
-C:   00000175  A$MyLab4$1376                      MyLab4
+C:   000000E9  C$c8051_SDCC.h$86$1$35             MyLab4
+C:   000000EC  A$MyLab4$1233                      MyLab4
+C:   000000EC  C$c8051_SDCC.h$88$1$35             MyLab4
+C:   000000EF  A$MyLab4$1236                      MyLab4
+C:   000000EF  C$c8051_SDCC.h$89$1$35             MyLab4
+C:   000000F2  A$MyLab4$1239                      MyLab4
+C:   000000F2  C$c8051_SDCC.h$91$1$35             MyLab4
+C:   000000F5  A$MyLab4$1242                      MyLab4
+C:   000000F5  C$c8051_SDCC.h$92$1$35             MyLab4
+C:   000000F8  A$MyLab4$1245                      MyLab4
+C:   000000F8  C$c8051_SDCC.h$93$1$35             MyLab4
+C:   000000F8  XG$Sys_Init$0$0                    MyLab4
+C:   000000F9  A$MyLab4$1258                      MyLab4
+C:   000000F9  C$c8051_SDCC.h$98$1$35             MyLab4
+C:   000000F9  G$putchar$0$0                      MyLab4
+C:   000000F9  _putchar                           MyLab4
+C:   000000FB  A$MyLab4$1264                      MyLab4
+C:   000000FB  C$c8051_SDCC.h$100$1$37            MyLab4
+C:   000000FB  C$c8051_SDCC.h$101$1$37            MyLab4
+C:   000000FE  A$MyLab4$1265                      MyLab4
+C:   00000100  A$MyLab4$1269                      MyLab4
+C:   00000100  C$c8051_SDCC.h$102$1$37            MyLab4
+C:   00000102  A$MyLab4$1272                      MyLab4
+C:   00000102  C$c8051_SDCC.h$103$1$37            MyLab4
+C:   00000102  XG$putchar$0$0                     MyLab4
+C:   00000103  A$MyLab4$1290                      MyLab4
+C:   00000103  C$c8051_SDCC.h$108$1$37            MyLab4
+C:   00000103  C$c8051_SDCC.h$111$1$39            MyLab4
+C:   00000103  C$c8051_SDCC.h$112$1$39            MyLab4
+C:   00000103  G$getchar$0$0                      MyLab4
+C:   00000103  _getchar                           MyLab4
+C:   00000106  A$MyLab4$1291                      MyLab4
+C:   00000108  A$MyLab4$1295                      MyLab4
+C:   00000108  C$c8051_SDCC.h$113$1$39            MyLab4
+C:   0000010B  A$MyLab4$1298                      MyLab4
+C:   0000010B  C$c8051_SDCC.h$114$1$39            MyLab4
+C:   0000010E  A$MyLab4$1301                      MyLab4
+C:   0000010E  C$c8051_SDCC.h$115$1$39            MyLab4
+C:   00000111  A$MyLab4$1304                      MyLab4
+C:   00000111  C$c8051_SDCC.h$116$1$39            MyLab4
+C:   00000111  XG$getchar$0$0                     MyLab4
+C:   00000112  A$MyLab4$1321                      MyLab4
+C:   00000112  C$i2c.h$81$1$39                    MyLab4
+C:   00000112  G$lcd_print$0$0                    MyLab4
+C:   00000112  _lcd_print                         MyLab4
+C:   00000114  A$MyLab4$1322                      MyLab4
+C:   00000117  A$MyLab4$1325                      MyLab4
+C:   00000117  C$i2c.h$87$1$73                    MyLab4
+C:   00000119  A$MyLab4$1326                      MyLab4
+C:   0000011B  A$MyLab4$1327                      MyLab4
+C:   0000011C  A$MyLab4$1328                      MyLab4
 ASxxxx Linker V03.00 + NoICE + sdld,  page 32.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000B6    00000F92 =        3986. bytes (REL,CON,CODE)
+CSEG                                000000B6    00001199 =        4505. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   00000176  A$MyLab4$1377                      MyLab4
-C:   00000178  A$MyLab4$1378                      MyLab4
-C:   0000017A  A$MyLab4$1379                      MyLab4
-C:   0000017C  A$MyLab4$1380                      MyLab4
-C:   0000017D  A$MyLab4$1384                      MyLab4
-C:   0000017D  C$i2c.h$94$1$73                    MyLab4
-C:   0000017E  A$MyLab4$1385                      MyLab4
-C:   00000180  A$MyLab4$1389                      MyLab4
-C:   00000180  C$i2c.h$99$1$73                    MyLab4
-C:   00000183  A$MyLab4$1390                      MyLab4
-C:   00000186  A$MyLab4$1391                      MyLab4
-C:   00000189  A$MyLab4$1392                      MyLab4
-C:   0000018C  A$MyLab4$1393                      MyLab4
-C:   0000018E  A$MyLab4$1394                      MyLab4
-C:   00000191  A$MyLab4$1395                      MyLab4
-C:   00000194  A$MyLab4$1397                      MyLab4
-C:   00000196  A$MyLab4$1400                      MyLab4
-C:   00000196  C$i2c.h$100$1$73                   MyLab4
-C:   00000196  XG$lcd_print$0$0                   MyLab4
-C:   00000197  A$MyLab4$1416                      MyLab4
-C:   00000197  C$i2c.h$103$1$73                   MyLab4
-C:   00000197  C$i2c.h$105$1$73                   MyLab4
-C:   00000197  G$lcd_clear$0$0                    MyLab4
-C:   00000197  _lcd_clear                         MyLab4
-C:   0000019A  A$MyLab4$1420                      MyLab4
-C:   0000019A  C$i2c.h$107$1$77                   MyLab4
-C:   0000019C  A$MyLab4$1421                      MyLab4
-C:   0000019E  A$MyLab4$1422                      MyLab4
-C:   000001A0  A$MyLab4$1423                      MyLab4
-C:   000001A3  A$MyLab4$1424                      MyLab4
-C:   000001A6  A$MyLab4$1425                      MyLab4
-C:   000001A9  A$MyLab4$1426                      MyLab4
-C:   000001AC  A$MyLab4$1427                      MyLab4
-C:   000001AF  A$MyLab4$1428                      MyLab4
-C:   000001B2  A$MyLab4$1429                      MyLab4
-C:   000001B5  A$MyLab4$1430                      MyLab4
-C:   000001B7  A$MyLab4$1434                      MyLab4
-C:   000001B7  C$i2c.h$109$1$77                   MyLab4
-C:   000001BA  A$MyLab4$1437                      MyLab4
-C:   000001BA  C$i2c.h$110$1$77                   MyLab4
-C:   000001BD  A$MyLab4$1438                      MyLab4
-C:   000001C0  A$MyLab4$1439                      MyLab4
-C:   000001C3  A$MyLab4$1440                      MyLab4
-C:   000001C6  A$MyLab4$1441                      MyLab4
-C:   000001C9  A$MyLab4$1442                      MyLab4
-C:   000001CC  A$MyLab4$1443                      MyLab4
-C:   000001CF  A$MyLab4$1446                      MyLab4
-C:   000001CF  C$i2c.h$111$1$77                   MyLab4
-C:   000001CF  XG$lcd_clear$0$0                   MyLab4
-C:   000001D0  A$MyLab4$1462                      MyLab4
-C:   000001D0  C$i2c.h$114$1$77                   MyLab4
+C:   0000011E  A$MyLab4$1329                      MyLab4
+C:   0000011F  A$MyLab4$1330                      MyLab4
+C:   00000121  A$MyLab4$1331                      MyLab4
+C:   00000122  A$MyLab4$1332                      MyLab4
+C:   00000124  A$MyLab4$1333                      MyLab4
+C:   00000127  A$MyLab4$1334                      MyLab4
+C:   00000129  A$MyLab4$1335                      MyLab4
+C:   0000012C  A$MyLab4$1336                      MyLab4
+C:   0000012E  A$MyLab4$1337                      MyLab4
+C:   00000130  A$MyLab4$1338                      MyLab4
+C:   00000132  A$MyLab4$1342                      MyLab4
+C:   00000132  C$i2c.h$89$2$74                    MyLab4
+C:   00000134  A$MyLab4$1343                      MyLab4
+C:   00000136  A$MyLab4$1344                      MyLab4
+C:   00000137  A$MyLab4$1345                      MyLab4
+C:   00000139  A$MyLab4$1348                      MyLab4
+C:   00000139  C$i2c.h$90$1$73                    MyLab4
+C:   0000013B  A$MyLab4$1349                      MyLab4
+C:   0000013D  A$MyLab4$1350                      MyLab4
+C:   0000013E  A$MyLab4$1351                      MyLab4
+C:   00000140  A$MyLab4$1352                      MyLab4
+C:   00000141  A$MyLab4$1353                      MyLab4
+C:   00000143  A$MyLab4$1354                      MyLab4
+C:   00000144  A$MyLab4$1355                      MyLab4
+C:   00000146  A$MyLab4$1356                      MyLab4
+C:   00000149  A$MyLab4$1357                      MyLab4
+C:   0000014C  A$MyLab4$1358                      MyLab4
+C:   0000014F  A$MyLab4$1361                      MyLab4
+C:   0000014F  C$i2c.h$93$1$73                    MyLab4
+C:   00000152  A$MyLab4$1362                      MyLab4
+C:   00000155  A$MyLab4$1363                      MyLab4
+C:   00000158  A$MyLab4$1364                      MyLab4
+C:   0000015A  A$MyLab4$1367                      MyLab4
+C:   0000015C  A$MyLab4$1369                      MyLab4
+C:   0000015D  A$MyLab4$1370                      MyLab4
+C:   0000015E  A$MyLab4$1371                      MyLab4
+C:   0000015F  A$MyLab4$1372                      MyLab4
+C:   00000161  A$MyLab4$1375                      MyLab4
+C:   00000161  C$i2c.h$96$2$76                    MyLab4
+C:   00000162  A$MyLab4$1376                      MyLab4
+C:   00000164  A$MyLab4$1377                      MyLab4
+C:   00000166  A$MyLab4$1378                      MyLab4
+C:   00000167  A$MyLab4$1379                      MyLab4
+C:   00000169  A$MyLab4$1380                      MyLab4
+C:   0000016B  A$MyLab4$1381                      MyLab4
+C:   0000016C  A$MyLab4$1382                      MyLab4
+C:   0000016D  A$MyLab4$1383                      MyLab4
+C:   00000170  A$MyLab4$1384                      MyLab4
+C:   00000171  A$MyLab4$1385                      MyLab4
+C:   00000173  A$MyLab4$1386                      MyLab4
+C:   00000175  A$MyLab4$1387                      MyLab4
 ASxxxx Linker V03.00 + NoICE + sdld,  page 33.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000B6    00000F92 =        3986. bytes (REL,CON,CODE)
+CSEG                                000000B6    00001199 =        4505. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000176  A$MyLab4$1388                      MyLab4
+C:   00000178  A$MyLab4$1389                      MyLab4
+C:   0000017A  A$MyLab4$1390                      MyLab4
+C:   0000017C  A$MyLab4$1391                      MyLab4
+C:   0000017D  A$MyLab4$1395                      MyLab4
+C:   0000017D  C$i2c.h$94$1$73                    MyLab4
+C:   0000017E  A$MyLab4$1396                      MyLab4
+C:   00000180  A$MyLab4$1400                      MyLab4
+C:   00000180  C$i2c.h$99$1$73                    MyLab4
+C:   00000183  A$MyLab4$1401                      MyLab4
+C:   00000186  A$MyLab4$1402                      MyLab4
+C:   00000189  A$MyLab4$1403                      MyLab4
+C:   0000018C  A$MyLab4$1404                      MyLab4
+C:   0000018E  A$MyLab4$1405                      MyLab4
+C:   00000191  A$MyLab4$1406                      MyLab4
+C:   00000194  A$MyLab4$1408                      MyLab4
+C:   00000196  A$MyLab4$1411                      MyLab4
+C:   00000196  C$i2c.h$100$1$73                   MyLab4
+C:   00000196  XG$lcd_print$0$0                   MyLab4
+C:   00000197  A$MyLab4$1427                      MyLab4
+C:   00000197  C$i2c.h$103$1$73                   MyLab4
+C:   00000197  C$i2c.h$105$1$73                   MyLab4
+C:   00000197  G$lcd_clear$0$0                    MyLab4
+C:   00000197  _lcd_clear                         MyLab4
+C:   0000019A  A$MyLab4$1431                      MyLab4
+C:   0000019A  C$i2c.h$107$1$77                   MyLab4
+C:   0000019C  A$MyLab4$1432                      MyLab4
+C:   0000019E  A$MyLab4$1433                      MyLab4
+C:   000001A0  A$MyLab4$1434                      MyLab4
+C:   000001A3  A$MyLab4$1435                      MyLab4
+C:   000001A6  A$MyLab4$1436                      MyLab4
+C:   000001A9  A$MyLab4$1437                      MyLab4
+C:   000001AC  A$MyLab4$1438                      MyLab4
+C:   000001AF  A$MyLab4$1439                      MyLab4
+C:   000001B2  A$MyLab4$1440                      MyLab4
+C:   000001B5  A$MyLab4$1441                      MyLab4
+C:   000001B7  A$MyLab4$1445                      MyLab4
+C:   000001B7  C$i2c.h$109$1$77                   MyLab4
+C:   000001BA  A$MyLab4$1448                      MyLab4
+C:   000001BA  C$i2c.h$110$1$77                   MyLab4
+C:   000001BD  A$MyLab4$1449                      MyLab4
+C:   000001C0  A$MyLab4$1450                      MyLab4
+C:   000001C3  A$MyLab4$1451                      MyLab4
+C:   000001C6  A$MyLab4$1452                      MyLab4
+C:   000001C9  A$MyLab4$1453                      MyLab4
+C:   000001CC  A$MyLab4$1454                      MyLab4
+C:   000001CF  A$MyLab4$1457                      MyLab4
+C:   000001CF  C$i2c.h$111$1$77                   MyLab4
+C:   000001CF  XG$lcd_clear$0$0                   MyLab4
+C:   000001D0  A$MyLab4$1473                      MyLab4
+C:   000001D0  C$i2c.h$114$1$77                   MyLab4
+ASxxxx Linker V03.00 + NoICE + sdld,  page 34.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                000000B6    00001199 =        4505. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
 C:   000001D0  C$i2c.h$118$1$78                   MyLab4
 C:   000001D0  G$read_keypad$0$0                  MyLab4
 C:   000001D0  _read_keypad                       MyLab4
-C:   000001D3  A$MyLab4$1463                      MyLab4
-C:   000001D6  A$MyLab4$1464                      MyLab4
-C:   000001D9  A$MyLab4$1465                      MyLab4
-C:   000001DC  A$MyLab4$1466                      MyLab4
-C:   000001DF  A$MyLab4$1467                      MyLab4
-C:   000001E2  A$MyLab4$1468                      MyLab4
-C:   000001E5  A$MyLab4$1471                      MyLab4
+C:   000001D3  A$MyLab4$1474                      MyLab4
+C:   000001D6  A$MyLab4$1475                      MyLab4
+C:   000001D9  A$MyLab4$1476                      MyLab4
+C:   000001DC  A$MyLab4$1477                      MyLab4
+C:   000001DF  A$MyLab4$1478                      MyLab4
+C:   000001E2  A$MyLab4$1479                      MyLab4
+C:   000001E5  A$MyLab4$1482                      MyLab4
 C:   000001E5  C$i2c.h$119$1$78                   MyLab4
-C:   000001E7  A$MyLab4$1472                      MyLab4
-C:   000001EA  A$MyLab4$1473                      MyLab4
-C:   000001ED  A$MyLab4$1474                      MyLab4
-C:   000001EF  A$MyLab4$1478                      MyLab4
-C:   000001F1  A$MyLab4$1479                      MyLab4
-C:   000001F3  A$MyLab4$1483                      MyLab4
+C:   000001E7  A$MyLab4$1483                      MyLab4
+C:   000001EA  A$MyLab4$1484                      MyLab4
+C:   000001ED  A$MyLab4$1485                      MyLab4
+C:   000001EF  A$MyLab4$1489                      MyLab4
+C:   000001F1  A$MyLab4$1490                      MyLab4
+C:   000001F3  A$MyLab4$1494                      MyLab4
 C:   000001F3  C$i2c.h$123$2$79                   MyLab4
-C:   000001F5  A$MyLab4$1484                      MyLab4
-C:   000001F7  A$MyLab4$1485                      MyLab4
-C:   000001F9  A$MyLab4$1486                      MyLab4
-C:   000001FB  A$MyLab4$1487                      MyLab4
-C:   000001FD  A$MyLab4$1489                      MyLab4
-C:   000001FE  A$MyLab4$1490                      MyLab4
-C:   000001FF  A$MyLab4$1491                      MyLab4
-C:   00000200  A$MyLab4$1492                      MyLab4
-C:   00000201  A$MyLab4$1493                      MyLab4
-C:   00000202  A$MyLab4$1494                      MyLab4
-C:   00000203  A$MyLab4$1496                      MyLab4
-C:   00000206  A$MyLab4$1497                      MyLab4
-C:   00000208  A$MyLab4$1498                      MyLab4
-C:   0000020A  A$MyLab4$1499                      MyLab4
-C:   0000020B  A$MyLab4$1500                      MyLab4
-C:   0000020D  A$MyLab4$1501                      MyLab4
-C:   0000020E  A$MyLab4$1502                      MyLab4
-C:   00000210  A$MyLab4$1503                      MyLab4
-C:   00000211  A$MyLab4$1504                      MyLab4
-C:   00000212  A$MyLab4$1505                      MyLab4
-C:   00000214  A$MyLab4$1508                      MyLab4
+C:   000001F5  A$MyLab4$1495                      MyLab4
+C:   000001F7  A$MyLab4$1496                      MyLab4
+C:   000001F9  A$MyLab4$1497                      MyLab4
+C:   000001FB  A$MyLab4$1498                      MyLab4
+C:   000001FD  A$MyLab4$1500                      MyLab4
+C:   000001FE  A$MyLab4$1501                      MyLab4
+C:   000001FF  A$MyLab4$1502                      MyLab4
+C:   00000200  A$MyLab4$1503                      MyLab4
+C:   00000201  A$MyLab4$1504                      MyLab4
+C:   00000202  A$MyLab4$1505                      MyLab4
+C:   00000203  A$MyLab4$1507                      MyLab4
+C:   00000206  A$MyLab4$1508                      MyLab4
+C:   00000208  A$MyLab4$1509                      MyLab4
+C:   0000020A  A$MyLab4$1510                      MyLab4
+C:   0000020B  A$MyLab4$1511                      MyLab4
+C:   0000020D  A$MyLab4$1512                      MyLab4
+C:   0000020E  A$MyLab4$1513                      MyLab4
+C:   00000210  A$MyLab4$1514                      MyLab4
+C:   00000211  A$MyLab4$1515                      MyLab4
+C:   00000212  A$MyLab4$1516                      MyLab4
+C:   00000214  A$MyLab4$1519                      MyLab4
 C:   00000214  C$i2c.h$124$2$79                   MyLab4
-C:   00000216  A$MyLab4$1509                      MyLab4
-C:   00000217  A$MyLab4$1510                      MyLab4
-C:   00000219  A$MyLab4$1511                      MyLab4
-C:   0000021B  A$MyLab4$1515                      MyLab4
+C:   00000216  A$MyLab4$1520                      MyLab4
+C:   00000217  A$MyLab4$1521                      MyLab4
+C:   00000219  A$MyLab4$1522                      MyLab4
+C:   0000021B  A$MyLab4$1526                      MyLab4
 C:   0000021B  C$i2c.h$121$1$78                   MyLab4
-C:   0000021C  A$MyLab4$1516                      MyLab4
-C:   0000021E  A$MyLab4$1517                      MyLab4
-C:   00000221  A$MyLab4$1519                      MyLab4
-C:   00000223  A$MyLab4$1522                      MyLab4
+C:   0000021C  A$MyLab4$1527                      MyLab4
+C:   0000021E  A$MyLab4$1528                      MyLab4
+C:   00000221  A$MyLab4$1530                      MyLab4
+C:   00000223  A$MyLab4$1533                      MyLab4
 C:   00000223  C$i2c.h$127$1$78                   MyLab4
-C:   00000225  A$MyLab4$1523                      MyLab4
-ASxxxx Linker V03.00 + NoICE + sdld,  page 34.
-Hexadecimal  [32-Bits]
-
-Area                                    Addr        Size        Decimal Bytes (Attributes)
---------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000B6    00000F92 =        3986. bytes (REL,CON,CODE)
-
-      Value  Global                              Global Defined In Module
-      -----  --------------------------------   ------------------------
-C:   00000228  A$MyLab4$1524                      MyLab4
-C:   0000022B  A$MyLab4$1525                      MyLab4
-C:   0000022D  A$MyLab4$1529                      MyLab4
-C:   0000022D  C$i2c.h$129$1$78                   MyLab4
-C:   0000022F  A$MyLab4$1530                      MyLab4
-C:   00000232  A$MyLab4$1531                      MyLab4
-C:   00000235  A$MyLab4$1532                      MyLab4
-C:   00000237  A$MyLab4$1536                      MyLab4
-C:   00000237  C$i2c.h$131$1$78                   MyLab4
-C:   00000239  A$MyLab4$1537                      MyLab4
-C:   0000023C  A$MyLab4$1538                      MyLab4
-C:   0000023F  A$MyLab4$1539                      MyLab4
-C:   00000241  A$MyLab4$1543                      MyLab4
-C:   00000241  C$i2c.h$133$1$78                   MyLab4
-C:   00000243  A$MyLab4$1544                      MyLab4
-C:   00000246  A$MyLab4$1545                      MyLab4
-C:   00000249  A$MyLab4$1546                      MyLab4
-C:   0000024B  A$MyLab4$1550                      MyLab4
-C:   0000024B  C$i2c.h$135$1$78                   MyLab4
-C:   0000024E  A$MyLab4$1554                      MyLab4
-C:   0000024E  C$i2c.h$136$1$78                   MyLab4
-C:   0000024E  XG$read_keypad$0$0                 MyLab4
-C:   0000024F  A$MyLab4$1570                      MyLab4
-C:   0000024F  C$i2c.h$148$1$78                   MyLab4
-C:   0000024F  G$kpd_input$0$0                    MyLab4
-C:   0000024F  _kpd_input                         MyLab4
-C:   00000251  A$MyLab4$1575                      MyLab4
-C:   00000251  C$i2c.h$153$1$81                   MyLab4
-C:   00000251  C$i2c.h$156$1$81                   MyLab4
-C:   00000252  A$MyLab4$1576                      MyLab4
-C:   00000253  A$MyLab4$1577                      MyLab4
-C:   00000254  A$MyLab4$1578                      MyLab4
-C:   00000255  A$MyLab4$1579                      MyLab4
-C:   00000257  A$MyLab4$1580                      MyLab4
-C:   00000259  A$MyLab4$1581                      MyLab4
-C:   0000025B  A$MyLab4$1582                      MyLab4
-C:   0000025D  A$MyLab4$1583                      MyLab4
-C:   0000025F  A$MyLab4$1584                      MyLab4
-C:   00000261  A$MyLab4$1585                      MyLab4
-C:   00000263  A$MyLab4$1586                      MyLab4
-C:   00000265  A$MyLab4$1587                      MyLab4
-C:   00000267  A$MyLab4$1588                      MyLab4
-C:   0000026A  A$MyLab4$1589                      MyLab4
-C:   0000026C  A$MyLab4$1590                      MyLab4
-C:   0000026E  A$MyLab4$1591                      MyLab4
-C:   00000270  A$MyLab4$1592                      MyLab4
-C:   00000272  A$MyLab4$1593                      MyLab4
-C:   00000274  A$MyLab4$1597                      MyLab4
-C:   00000274  C$i2c.h$158$1$81                   MyLab4
-C:   00000276  A$MyLab4$1598                      MyLab4
-C:   00000278  A$MyLab4$1599                      MyLab4
+C:   00000225  A$MyLab4$1534                      MyLab4
 ASxxxx Linker V03.00 + NoICE + sdld,  page 35.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000B6    00000F92 =        3986. bytes (REL,CON,CODE)
+CSEG                                000000B6    00001199 =        4505. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   0000027A  A$MyLab4$1600                      MyLab4
-C:   0000027C  A$MyLab4$1601                      MyLab4
-C:   0000027D  A$MyLab4$1602                      MyLab4
-C:   0000027F  A$MyLab4$1603                      MyLab4
-C:   00000281  A$MyLab4$1604                      MyLab4
-C:   00000283  A$MyLab4$1605                      MyLab4
-C:   00000284  A$MyLab4$1606                      MyLab4
-C:   00000286  A$MyLab4$1607                      MyLab4
-C:   00000288  A$MyLab4$1608                      MyLab4
-C:   0000028A  A$MyLab4$1609                      MyLab4
-C:   0000028B  A$MyLab4$1610                      MyLab4
-C:   0000028D  A$MyLab4$1611                      MyLab4
-C:   0000028F  A$MyLab4$1612                      MyLab4
-C:   00000291  A$MyLab4$1613                      MyLab4
-C:   00000292  A$MyLab4$1614                      MyLab4
-C:   00000294  A$MyLab4$1615                      MyLab4
-C:   00000296  A$MyLab4$1616                      MyLab4
-C:   00000298  A$MyLab4$1617                      MyLab4
-C:   00000299  A$MyLab4$1618                      MyLab4
-C:   0000029B  A$MyLab4$1619                      MyLab4
-C:   0000029D  A$MyLab4$1620                      MyLab4
-C:   0000029F  A$MyLab4$1621                      MyLab4
-C:   000002A1  A$MyLab4$1622                      MyLab4
-C:   000002A3  A$MyLab4$1623                      MyLab4
-C:   000002A5  A$MyLab4$1624                      MyLab4
-C:   000002A7  A$MyLab4$1625                      MyLab4
-C:   000002AA  A$MyLab4$1626                      MyLab4
-C:   000002AC  A$MyLab4$1627                      MyLab4
-C:   000002AE  A$MyLab4$1628                      MyLab4
-C:   000002B0  A$MyLab4$1631                      MyLab4
-C:   000002B0  C$i2c.h$160$1$81                   MyLab4
-C:   000002B3  A$MyLab4$1632                      MyLab4
-C:   000002B6  A$MyLab4$1633                      MyLab4
-C:   000002B7  A$MyLab4$1634                      MyLab4
-C:   000002BA  A$MyLab4$1635                      MyLab4
-C:   000002BC  A$MyLab4$1636                      MyLab4
-C:   000002BE  A$MyLab4$1639                      MyLab4
-C:   000002C0  A$MyLab4$1643                      MyLab4
-C:   000002C0  C$i2c.h$166$3$84                   MyLab4
-C:   000002C2  A$MyLab4$1644                      MyLab4
-C:   000002C4  A$MyLab4$1645                      MyLab4
-C:   000002C6  A$MyLab4$1646                      MyLab4
-C:   000002C9  A$MyLab4$1647                      MyLab4
-C:   000002CB  A$MyLab4$1648                      MyLab4
-C:   000002CD  A$MyLab4$1649                      MyLab4
-C:   000002CF  A$MyLab4$1650                      MyLab4
-C:   000002D1  A$MyLab4$1651                      MyLab4
-C:   000002D3  A$MyLab4$1652                      MyLab4
-C:   000002D6  A$MyLab4$1653                      MyLab4
-C:   000002D8  A$MyLab4$1655                      MyLab4
-C:   000002DB  A$MyLab4$1657                      MyLab4
+C:   00000228  A$MyLab4$1535                      MyLab4
+C:   0000022B  A$MyLab4$1536                      MyLab4
+C:   0000022D  A$MyLab4$1540                      MyLab4
+C:   0000022D  C$i2c.h$129$1$78                   MyLab4
+C:   0000022F  A$MyLab4$1541                      MyLab4
+C:   00000232  A$MyLab4$1542                      MyLab4
+C:   00000235  A$MyLab4$1543                      MyLab4
+C:   00000237  A$MyLab4$1547                      MyLab4
+C:   00000237  C$i2c.h$131$1$78                   MyLab4
+C:   00000239  A$MyLab4$1548                      MyLab4
+C:   0000023C  A$MyLab4$1549                      MyLab4
+C:   0000023F  A$MyLab4$1550                      MyLab4
+C:   00000241  A$MyLab4$1554                      MyLab4
+C:   00000241  C$i2c.h$133$1$78                   MyLab4
+C:   00000243  A$MyLab4$1555                      MyLab4
+C:   00000246  A$MyLab4$1556                      MyLab4
+C:   00000249  A$MyLab4$1557                      MyLab4
+C:   0000024B  A$MyLab4$1561                      MyLab4
+C:   0000024B  C$i2c.h$135$1$78                   MyLab4
+C:   0000024E  A$MyLab4$1565                      MyLab4
+C:   0000024E  C$i2c.h$136$1$78                   MyLab4
+C:   0000024E  XG$read_keypad$0$0                 MyLab4
+C:   0000024F  A$MyLab4$1581                      MyLab4
+C:   0000024F  C$i2c.h$148$1$78                   MyLab4
+C:   0000024F  G$kpd_input$0$0                    MyLab4
+C:   0000024F  _kpd_input                         MyLab4
+C:   00000251  A$MyLab4$1586                      MyLab4
+C:   00000251  C$i2c.h$153$1$81                   MyLab4
+C:   00000251  C$i2c.h$156$1$81                   MyLab4
+C:   00000252  A$MyLab4$1587                      MyLab4
+C:   00000253  A$MyLab4$1588                      MyLab4
+C:   00000254  A$MyLab4$1589                      MyLab4
+C:   00000255  A$MyLab4$1590                      MyLab4
+C:   00000257  A$MyLab4$1591                      MyLab4
+C:   00000259  A$MyLab4$1592                      MyLab4
+C:   0000025B  A$MyLab4$1593                      MyLab4
+C:   0000025D  A$MyLab4$1594                      MyLab4
+C:   0000025F  A$MyLab4$1595                      MyLab4
+C:   00000261  A$MyLab4$1596                      MyLab4
+C:   00000263  A$MyLab4$1597                      MyLab4
+C:   00000265  A$MyLab4$1598                      MyLab4
+C:   00000267  A$MyLab4$1599                      MyLab4
+C:   0000026A  A$MyLab4$1600                      MyLab4
+C:   0000026C  A$MyLab4$1601                      MyLab4
+C:   0000026E  A$MyLab4$1602                      MyLab4
+C:   00000270  A$MyLab4$1603                      MyLab4
+C:   00000272  A$MyLab4$1604                      MyLab4
+C:   00000274  A$MyLab4$1608                      MyLab4
+C:   00000274  C$i2c.h$158$1$81                   MyLab4
+C:   00000276  A$MyLab4$1609                      MyLab4
+C:   00000278  A$MyLab4$1610                      MyLab4
 ASxxxx Linker V03.00 + NoICE + sdld,  page 36.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000B6    00000F92 =        3986. bytes (REL,CON,CODE)
+CSEG                                000000B6    00001199 =        4505. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   000002DE  A$MyLab4$1658                      MyLab4
-C:   000002DF  A$MyLab4$1659                      MyLab4
-C:   000002E1  A$MyLab4$1660                      MyLab4
-C:   000002E3  A$MyLab4$1661                      MyLab4
-C:   000002E5  A$MyLab4$1662                      MyLab4
-C:   000002E7  A$MyLab4$1663                      MyLab4
-C:   000002EA  A$MyLab4$1664                      MyLab4
-C:   000002EC  A$MyLab4$1665                      MyLab4
-C:   000002EE  A$MyLab4$1666                      MyLab4
-C:   000002F0  A$MyLab4$1667                      MyLab4
-C:   000002F2  A$MyLab4$1671                      MyLab4
-C:   000002F2  C$i2c.h$167$2$82                   MyLab4
-C:   000002F5  A$MyLab4$1675                      MyLab4
-C:   000002F5  C$i2c.h$169$3$83                   MyLab4
-C:   000002F7  A$MyLab4$1676                      MyLab4
-C:   000002F9  A$MyLab4$1677                      MyLab4
-C:   000002FC  A$MyLab4$1678                      MyLab4
-C:   000002FE  A$MyLab4$1679                      MyLab4
-C:   00000300  A$MyLab4$1680                      MyLab4
-C:   00000302  A$MyLab4$1681                      MyLab4
-C:   00000305  A$MyLab4$1682                      MyLab4
-C:   00000308  A$MyLab4$1683                      MyLab4
-C:   00000309  A$MyLab4$1684                      MyLab4
-C:   0000030B  A$MyLab4$1685                      MyLab4
-C:   0000030D  A$MyLab4$1686                      MyLab4
-C:   0000030F  A$MyLab4$1687                      MyLab4
-C:   00000312  A$MyLab4$1688                      MyLab4
-C:   00000314  A$MyLab4$1689                      MyLab4
-C:   00000316  A$MyLab4$1690                      MyLab4
-C:   00000318  A$MyLab4$1694                      MyLab4
-C:   00000318  C$i2c.h$170$3$83                   MyLab4
-C:   0000031A  A$MyLab4$1695                      MyLab4
-C:   0000031C  A$MyLab4$1696                      MyLab4
-C:   0000031F  A$MyLab4$1700                      MyLab4
-C:   0000031F  C$i2c.h$174$3$84                   MyLab4
-C:   00000320  A$MyLab4$1701                      MyLab4
-C:   00000321  A$MyLab4$1702                      MyLab4
-C:   00000322  A$MyLab4$1703                      MyLab4
-C:   00000324  A$MyLab4$1704                      MyLab4
-C:   00000325  A$MyLab4$1705                      MyLab4
-C:   00000327  A$MyLab4$1706                      MyLab4
-C:   00000329  A$MyLab4$1707                      MyLab4
-C:   0000032B  A$MyLab4$1708                      MyLab4
-C:   0000032D  A$MyLab4$1709                      MyLab4
-C:   0000032F  A$MyLab4$1710                      MyLab4
-C:   00000331  A$MyLab4$1711                      MyLab4
-C:   00000333  A$MyLab4$1712                      MyLab4
-C:   00000335  A$MyLab4$1713                      MyLab4
-C:   00000337  A$MyLab4$1714                      MyLab4
-C:   00000339  A$MyLab4$1715                      MyLab4
-C:   0000033B  A$MyLab4$1716                      MyLab4
+C:   0000027A  A$MyLab4$1611                      MyLab4
+C:   0000027C  A$MyLab4$1612                      MyLab4
+C:   0000027D  A$MyLab4$1613                      MyLab4
+C:   0000027F  A$MyLab4$1614                      MyLab4
+C:   00000281  A$MyLab4$1615                      MyLab4
+C:   00000283  A$MyLab4$1616                      MyLab4
+C:   00000284  A$MyLab4$1617                      MyLab4
+C:   00000286  A$MyLab4$1618                      MyLab4
+C:   00000288  A$MyLab4$1619                      MyLab4
+C:   0000028A  A$MyLab4$1620                      MyLab4
+C:   0000028B  A$MyLab4$1621                      MyLab4
+C:   0000028D  A$MyLab4$1622                      MyLab4
+C:   0000028F  A$MyLab4$1623                      MyLab4
+C:   00000291  A$MyLab4$1624                      MyLab4
+C:   00000292  A$MyLab4$1625                      MyLab4
+C:   00000294  A$MyLab4$1626                      MyLab4
+C:   00000296  A$MyLab4$1627                      MyLab4
+C:   00000298  A$MyLab4$1628                      MyLab4
+C:   00000299  A$MyLab4$1629                      MyLab4
+C:   0000029B  A$MyLab4$1630                      MyLab4
+C:   0000029D  A$MyLab4$1631                      MyLab4
+C:   0000029F  A$MyLab4$1632                      MyLab4
+C:   000002A1  A$MyLab4$1633                      MyLab4
+C:   000002A3  A$MyLab4$1634                      MyLab4
+C:   000002A5  A$MyLab4$1635                      MyLab4
+C:   000002A7  A$MyLab4$1636                      MyLab4
+C:   000002AA  A$MyLab4$1637                      MyLab4
+C:   000002AC  A$MyLab4$1638                      MyLab4
+C:   000002AE  A$MyLab4$1639                      MyLab4
+C:   000002B0  A$MyLab4$1642                      MyLab4
+C:   000002B0  C$i2c.h$160$1$81                   MyLab4
+C:   000002B3  A$MyLab4$1643                      MyLab4
+C:   000002B6  A$MyLab4$1644                      MyLab4
+C:   000002B7  A$MyLab4$1645                      MyLab4
+C:   000002BA  A$MyLab4$1646                      MyLab4
+C:   000002BC  A$MyLab4$1647                      MyLab4
+C:   000002BE  A$MyLab4$1650                      MyLab4
+C:   000002C0  A$MyLab4$1654                      MyLab4
+C:   000002C0  C$i2c.h$166$3$84                   MyLab4
+C:   000002C2  A$MyLab4$1655                      MyLab4
+C:   000002C4  A$MyLab4$1656                      MyLab4
+C:   000002C6  A$MyLab4$1657                      MyLab4
+C:   000002C9  A$MyLab4$1658                      MyLab4
+C:   000002CB  A$MyLab4$1659                      MyLab4
+C:   000002CD  A$MyLab4$1660                      MyLab4
+C:   000002CF  A$MyLab4$1661                      MyLab4
+C:   000002D1  A$MyLab4$1662                      MyLab4
+C:   000002D3  A$MyLab4$1663                      MyLab4
+C:   000002D6  A$MyLab4$1664                      MyLab4
+C:   000002D8  A$MyLab4$1666                      MyLab4
+C:   000002DB  A$MyLab4$1668                      MyLab4
 ASxxxx Linker V03.00 + NoICE + sdld,  page 37.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000B6    00000F92 =        3986. bytes (REL,CON,CODE)
+CSEG                                000000B6    00001199 =        4505. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   0000033D  A$MyLab4$1717                      MyLab4
-C:   0000033F  A$MyLab4$1718                      MyLab4
-C:   00000341  A$MyLab4$1719                      MyLab4
-C:   00000344  A$MyLab4$1720                      MyLab4
-C:   00000346  A$MyLab4$1721                      MyLab4
-C:   00000348  A$MyLab4$1722                      MyLab4
-C:   0000034A  A$MyLab4$1723                      MyLab4
-C:   0000034C  A$MyLab4$1724                      MyLab4
-C:   0000034E  A$MyLab4$1725                      MyLab4
-C:   00000350  A$MyLab4$1726                      MyLab4
-C:   00000352  A$MyLab4$1727                      MyLab4
-C:   00000354  A$MyLab4$1730                      MyLab4
-C:   00000354  C$i2c.h$175$1$81                   MyLab4
-C:   00000356  A$MyLab4$1731                      MyLab4
-C:   00000358  A$MyLab4$1732                      MyLab4
-C:   0000035B  A$MyLab4$1733                      MyLab4
-C:   0000035D  A$MyLab4$1734                      MyLab4
-C:   0000035F  A$MyLab4$1735                      MyLab4
-C:   00000361  A$MyLab4$1736                      MyLab4
-C:   00000364  A$MyLab4$1737                      MyLab4
-C:   00000366  A$MyLab4$1738                      MyLab4
-C:   00000368  A$MyLab4$1739                      MyLab4
-C:   0000036A  A$MyLab4$1740                      MyLab4
-C:   0000036C  A$MyLab4$1741                      MyLab4
-C:   0000036E  A$MyLab4$1742                      MyLab4
-C:   00000370  A$MyLab4$1743                      MyLab4
-C:   00000371  A$MyLab4$1744                      MyLab4
-C:   00000372  A$MyLab4$1745                      MyLab4
-C:   00000373  A$MyLab4$1746                      MyLab4
-C:   00000374  A$MyLab4$1747                      MyLab4
-C:   00000375  A$MyLab4$1748                      MyLab4
-C:   00000376  A$MyLab4$1749                      MyLab4
-C:   00000377  A$MyLab4$1750                      MyLab4
-C:   00000379  A$MyLab4$1751                      MyLab4
-C:   0000037A  A$MyLab4$1752                      MyLab4
-C:   0000037B  A$MyLab4$1753                      MyLab4
-C:   0000037D  A$MyLab4$1754                      MyLab4
-C:   0000037E  A$MyLab4$1758                      MyLab4
-C:   0000037E  C$i2c.h$176$3$84                   MyLab4
-C:   00000380  A$MyLab4$1759                      MyLab4
-C:   00000382  A$MyLab4$1760                      MyLab4
-C:   00000384  A$MyLab4$1761                      MyLab4
-C:   00000386  A$MyLab4$1762                      MyLab4
-C:   00000389  A$MyLab4$1763                      MyLab4
-C:   0000038B  A$MyLab4$1764                      MyLab4
-C:   0000038D  A$MyLab4$1765                      MyLab4
-C:   0000038F  A$MyLab4$1766                      MyLab4
-C:   00000391  A$MyLab4$1767                      MyLab4
-C:   00000393  A$MyLab4$1768                      MyLab4
-C:   00000394  A$MyLab4$1769                      MyLab4
-C:   00000397  A$MyLab4$1770                      MyLab4
+C:   000002DE  A$MyLab4$1669                      MyLab4
+C:   000002DF  A$MyLab4$1670                      MyLab4
+C:   000002E1  A$MyLab4$1671                      MyLab4
+C:   000002E3  A$MyLab4$1672                      MyLab4
+C:   000002E5  A$MyLab4$1673                      MyLab4
+C:   000002E7  A$MyLab4$1674                      MyLab4
+C:   000002EA  A$MyLab4$1675                      MyLab4
+C:   000002EC  A$MyLab4$1676                      MyLab4
+C:   000002EE  A$MyLab4$1677                      MyLab4
+C:   000002F0  A$MyLab4$1678                      MyLab4
+C:   000002F2  A$MyLab4$1682                      MyLab4
+C:   000002F2  C$i2c.h$167$2$82                   MyLab4
+C:   000002F5  A$MyLab4$1686                      MyLab4
+C:   000002F5  C$i2c.h$169$3$83                   MyLab4
+C:   000002F7  A$MyLab4$1687                      MyLab4
+C:   000002F9  A$MyLab4$1688                      MyLab4
+C:   000002FC  A$MyLab4$1689                      MyLab4
+C:   000002FE  A$MyLab4$1690                      MyLab4
+C:   00000300  A$MyLab4$1691                      MyLab4
+C:   00000302  A$MyLab4$1692                      MyLab4
+C:   00000305  A$MyLab4$1693                      MyLab4
+C:   00000308  A$MyLab4$1694                      MyLab4
+C:   00000309  A$MyLab4$1695                      MyLab4
+C:   0000030B  A$MyLab4$1696                      MyLab4
+C:   0000030D  A$MyLab4$1697                      MyLab4
+C:   0000030F  A$MyLab4$1698                      MyLab4
+C:   00000312  A$MyLab4$1699                      MyLab4
+C:   00000314  A$MyLab4$1700                      MyLab4
+C:   00000316  A$MyLab4$1701                      MyLab4
+C:   00000318  A$MyLab4$1705                      MyLab4
+C:   00000318  C$i2c.h$170$3$83                   MyLab4
+C:   0000031A  A$MyLab4$1706                      MyLab4
+C:   0000031C  A$MyLab4$1707                      MyLab4
+C:   0000031F  A$MyLab4$1711                      MyLab4
+C:   0000031F  C$i2c.h$174$3$84                   MyLab4
+C:   00000320  A$MyLab4$1712                      MyLab4
+C:   00000321  A$MyLab4$1713                      MyLab4
+C:   00000322  A$MyLab4$1714                      MyLab4
+C:   00000324  A$MyLab4$1715                      MyLab4
+C:   00000325  A$MyLab4$1716                      MyLab4
+C:   00000327  A$MyLab4$1717                      MyLab4
+C:   00000329  A$MyLab4$1718                      MyLab4
+C:   0000032B  A$MyLab4$1719                      MyLab4
+C:   0000032D  A$MyLab4$1720                      MyLab4
+C:   0000032F  A$MyLab4$1721                      MyLab4
+C:   00000331  A$MyLab4$1722                      MyLab4
+C:   00000333  A$MyLab4$1723                      MyLab4
+C:   00000335  A$MyLab4$1724                      MyLab4
+C:   00000337  A$MyLab4$1725                      MyLab4
+C:   00000339  A$MyLab4$1726                      MyLab4
+C:   0000033B  A$MyLab4$1727                      MyLab4
 ASxxxx Linker V03.00 + NoICE + sdld,  page 38.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000B6    00000F92 =        3986. bytes (REL,CON,CODE)
+CSEG                                000000B6    00001199 =        4505. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   0000039A  A$MyLab4$1771                      MyLab4
-C:   0000039B  A$MyLab4$1772                      MyLab4
-C:   0000039D  A$MyLab4$1773                      MyLab4
-C:   0000039F  A$MyLab4$1774                      MyLab4
-C:   000003A1  A$MyLab4$1775                      MyLab4
-C:   000003A3  A$MyLab4$1776                      MyLab4
-C:   000003A5  A$MyLab4$1777                      MyLab4
-C:   000003A8  A$MyLab4$1778                      MyLab4
-C:   000003AA  A$MyLab4$1779                      MyLab4
-C:   000003AC  A$MyLab4$1780                      MyLab4
-C:   000003AE  A$MyLab4$1781                      MyLab4
-C:   000003B0  A$MyLab4$1782                      MyLab4
-C:   000003B2  A$MyLab4$1786                      MyLab4
-C:   000003B2  C$i2c.h$164$1$81                   MyLab4
-C:   000003B3  A$MyLab4$1787                      MyLab4
-C:   000003B4  A$MyLab4$1788                      MyLab4
-C:   000003B5  A$MyLab4$1789                      MyLab4
-C:   000003B7  A$MyLab4$1790                      MyLab4
-C:   000003B9  A$MyLab4$1791                      MyLab4
-C:   000003BB  A$MyLab4$1792                      MyLab4
-C:   000003BE  A$MyLab4$1796                      MyLab4
-C:   000003BE  C$i2c.h$179$1$81                   MyLab4
-C:   000003C0  A$MyLab4$1797                      MyLab4
-C:   000003C2  A$MyLab4$1801                      MyLab4
-C:   000003C2  C$i2c.h$180$1$81                   MyLab4
-C:   000003C2  XG$kpd_input$0$0                   MyLab4
-C:   000003C3  A$MyLab4$1815                      MyLab4
-C:   000003C3  C$i2c.h$189$1$81                   MyLab4
-C:   000003C3  G$delay_time$0$0                   MyLab4
-C:   000003C3  _delay_time                        MyLab4
-C:   000003C5  A$MyLab4$1816                      MyLab4
-C:   000003C7  A$MyLab4$1817                      MyLab4
-C:   000003C9  A$MyLab4$1818                      MyLab4
-C:   000003CA  A$MyLab4$1821                      MyLab4
-C:   000003CA  C$i2c.h$192$1$86                   MyLab4
-C:   000003CC  A$MyLab4$1822                      MyLab4
-C:   000003CE  A$MyLab4$1823                      MyLab4
-C:   000003D0  A$MyLab4$1824                      MyLab4
-C:   000003D2  A$MyLab4$1826                      MyLab4
-C:   000003D3  A$MyLab4$1827                      MyLab4
-C:   000003D4  A$MyLab4$1828                      MyLab4
-C:   000003D5  A$MyLab4$1829                      MyLab4
-C:   000003D6  A$MyLab4$1830                      MyLab4
-C:   000003D7  A$MyLab4$1831                      MyLab4
-C:   000003D8  A$MyLab4$1832                      MyLab4
-C:   000003D9  A$MyLab4$1833                      MyLab4
-C:   000003DA  A$MyLab4$1834                      MyLab4
-C:   000003DB  A$MyLab4$1835                      MyLab4
-C:   000003DD  A$MyLab4$1836                      MyLab4
-C:   000003DE  A$MyLab4$1837                      MyLab4
-C:   000003E1  A$MyLab4$1838                      MyLab4
+C:   0000033D  A$MyLab4$1728                      MyLab4
+C:   0000033F  A$MyLab4$1729                      MyLab4
+C:   00000341  A$MyLab4$1730                      MyLab4
+C:   00000344  A$MyLab4$1731                      MyLab4
+C:   00000346  A$MyLab4$1732                      MyLab4
+C:   00000348  A$MyLab4$1733                      MyLab4
+C:   0000034A  A$MyLab4$1734                      MyLab4
+C:   0000034C  A$MyLab4$1735                      MyLab4
+C:   0000034E  A$MyLab4$1736                      MyLab4
+C:   00000350  A$MyLab4$1737                      MyLab4
+C:   00000352  A$MyLab4$1738                      MyLab4
+C:   00000354  A$MyLab4$1741                      MyLab4
+C:   00000354  C$i2c.h$175$1$81                   MyLab4
+C:   00000356  A$MyLab4$1742                      MyLab4
+C:   00000358  A$MyLab4$1743                      MyLab4
+C:   0000035B  A$MyLab4$1744                      MyLab4
+C:   0000035D  A$MyLab4$1745                      MyLab4
+C:   0000035F  A$MyLab4$1746                      MyLab4
+C:   00000361  A$MyLab4$1747                      MyLab4
+C:   00000364  A$MyLab4$1748                      MyLab4
+C:   00000366  A$MyLab4$1749                      MyLab4
+C:   00000368  A$MyLab4$1750                      MyLab4
+C:   0000036A  A$MyLab4$1751                      MyLab4
+C:   0000036C  A$MyLab4$1752                      MyLab4
+C:   0000036E  A$MyLab4$1753                      MyLab4
+C:   00000370  A$MyLab4$1754                      MyLab4
+C:   00000371  A$MyLab4$1755                      MyLab4
+C:   00000372  A$MyLab4$1756                      MyLab4
+C:   00000373  A$MyLab4$1757                      MyLab4
+C:   00000374  A$MyLab4$1758                      MyLab4
+C:   00000375  A$MyLab4$1759                      MyLab4
+C:   00000376  A$MyLab4$1760                      MyLab4
+C:   00000377  A$MyLab4$1761                      MyLab4
+C:   00000379  A$MyLab4$1762                      MyLab4
+C:   0000037A  A$MyLab4$1763                      MyLab4
+C:   0000037B  A$MyLab4$1764                      MyLab4
+C:   0000037D  A$MyLab4$1765                      MyLab4
+C:   0000037E  A$MyLab4$1769                      MyLab4
+C:   0000037E  C$i2c.h$176$3$84                   MyLab4
+C:   00000380  A$MyLab4$1770                      MyLab4
+C:   00000382  A$MyLab4$1771                      MyLab4
+C:   00000384  A$MyLab4$1772                      MyLab4
+C:   00000386  A$MyLab4$1773                      MyLab4
+C:   00000389  A$MyLab4$1774                      MyLab4
+C:   0000038B  A$MyLab4$1775                      MyLab4
+C:   0000038D  A$MyLab4$1776                      MyLab4
+C:   0000038F  A$MyLab4$1777                      MyLab4
+C:   00000391  A$MyLab4$1778                      MyLab4
+C:   00000393  A$MyLab4$1779                      MyLab4
+C:   00000394  A$MyLab4$1780                      MyLab4
+C:   00000397  A$MyLab4$1781                      MyLab4
 ASxxxx Linker V03.00 + NoICE + sdld,  page 39.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000B6    00000F92 =        3986. bytes (REL,CON,CODE)
+CSEG                                000000B6    00001199 =        4505. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   000003E2  A$MyLab4$1839                      MyLab4
-C:   000003E5  A$MyLab4$1840                      MyLab4
-C:   000003E6  A$MyLab4$1841                      MyLab4
-C:   000003E9  A$MyLab4$1842                      MyLab4
-C:   000003EA  A$MyLab4$1844                      MyLab4
-C:   000003EC  A$MyLab4$1848                      MyLab4
-C:   000003EC  C$i2c.h$193$1$86                   MyLab4
-C:   000003EC  XG$delay_time$0$0                  MyLab4
-C:   000003ED  A$MyLab4$1862                      MyLab4
-C:   000003ED  C$i2c.h$196$1$86                   MyLab4
-C:   000003ED  C$i2c.h$198$1$88                   MyLab4
-C:   000003ED  G$i2c_start$0$0                    MyLab4
-C:   000003ED  _i2c_start                         MyLab4
-C:   000003F0  A$MyLab4$1865                      MyLab4
-C:   000003F0  C$i2c.h$199$1$88                   MyLab4
-C:   000003F2  A$MyLab4$1869                      MyLab4
-C:   000003F2  C$i2c.h$200$1$88                   MyLab4
-C:   000003F5  A$MyLab4$1872                      MyLab4
-C:   000003F5  C$i2c.h$201$1$88                   MyLab4
-C:   000003F7  A$MyLab4$1875                      MyLab4
-C:   000003F7  C$i2c.h$202$1$88                   MyLab4
-C:   000003F9  A$MyLab4$1878                      MyLab4
-C:   000003F9  C$i2c.h$203$1$88                   MyLab4
-C:   000003F9  XG$i2c_start$0$0                   MyLab4
-C:   000003FA  A$MyLab4$1891                      MyLab4
-C:   000003FA  C$i2c.h$206$1$88                   MyLab4
-C:   000003FA  G$i2c_write$0$0                    MyLab4
-C:   000003FA  _i2c_write                         MyLab4
-C:   000003FD  A$MyLab4$1897                      MyLab4
-C:   000003FD  C$i2c.h$209$1$90                   MyLab4
-C:   000003FD  C$i2c.h$210$1$90                   MyLab4
-C:   00000400  A$MyLab4$1898                      MyLab4
-C:   00000402  A$MyLab4$1902                      MyLab4
-C:   00000402  C$i2c.h$211$1$90                   MyLab4
-C:   00000402  XG$i2c_write$0$0                   MyLab4
-C:   00000403  A$MyLab4$1915                      MyLab4
-C:   00000403  C$i2c.h$214$1$90                   MyLab4
-C:   00000403  G$i2c_write_and_stop$0$0           MyLab4
-C:   00000403  _i2c_write_and_stop                MyLab4
-C:   00000406  A$MyLab4$1918                      MyLab4
-C:   00000406  C$i2c.h$217$1$92                   MyLab4
-C:   00000408  A$MyLab4$1924                      MyLab4
-C:   00000408  C$i2c.h$218$1$92                   MyLab4
-C:   00000408  C$i2c.h$219$1$92                   MyLab4
-C:   0000040B  A$MyLab4$1925                      MyLab4
-C:   0000040D  A$MyLab4$1929                      MyLab4
-C:   0000040D  C$i2c.h$220$1$92                   MyLab4
-C:   0000040D  XG$i2c_write_and_stop$0$0          MyLab4
-C:   0000040E  A$MyLab4$1945                      MyLab4
-C:   0000040E  C$i2c.h$223$1$92                   MyLab4
-C:   0000040E  C$i2c.h$226$1$94                   MyLab4
+C:   0000039A  A$MyLab4$1782                      MyLab4
+C:   0000039B  A$MyLab4$1783                      MyLab4
+C:   0000039D  A$MyLab4$1784                      MyLab4
+C:   0000039F  A$MyLab4$1785                      MyLab4
+C:   000003A1  A$MyLab4$1786                      MyLab4
+C:   000003A3  A$MyLab4$1787                      MyLab4
+C:   000003A5  A$MyLab4$1788                      MyLab4
+C:   000003A8  A$MyLab4$1789                      MyLab4
+C:   000003AA  A$MyLab4$1790                      MyLab4
+C:   000003AC  A$MyLab4$1791                      MyLab4
+C:   000003AE  A$MyLab4$1792                      MyLab4
+C:   000003B0  A$MyLab4$1793                      MyLab4
+C:   000003B2  A$MyLab4$1797                      MyLab4
+C:   000003B2  C$i2c.h$164$1$81                   MyLab4
+C:   000003B3  A$MyLab4$1798                      MyLab4
+C:   000003B4  A$MyLab4$1799                      MyLab4
+C:   000003B5  A$MyLab4$1800                      MyLab4
+C:   000003B7  A$MyLab4$1801                      MyLab4
+C:   000003B9  A$MyLab4$1802                      MyLab4
+C:   000003BB  A$MyLab4$1803                      MyLab4
+C:   000003BE  A$MyLab4$1807                      MyLab4
+C:   000003BE  C$i2c.h$179$1$81                   MyLab4
+C:   000003C0  A$MyLab4$1808                      MyLab4
+C:   000003C2  A$MyLab4$1812                      MyLab4
+C:   000003C2  C$i2c.h$180$1$81                   MyLab4
+C:   000003C2  XG$kpd_input$0$0                   MyLab4
+C:   000003C3  A$MyLab4$1826                      MyLab4
+C:   000003C3  C$i2c.h$189$1$81                   MyLab4
+C:   000003C3  G$delay_time$0$0                   MyLab4
+C:   000003C3  _delay_time                        MyLab4
+C:   000003C5  A$MyLab4$1827                      MyLab4
+C:   000003C7  A$MyLab4$1828                      MyLab4
+C:   000003C9  A$MyLab4$1829                      MyLab4
+C:   000003CA  A$MyLab4$1832                      MyLab4
+C:   000003CA  C$i2c.h$192$1$86                   MyLab4
+C:   000003CC  A$MyLab4$1833                      MyLab4
+C:   000003CE  A$MyLab4$1834                      MyLab4
+C:   000003D0  A$MyLab4$1835                      MyLab4
+C:   000003D2  A$MyLab4$1837                      MyLab4
+C:   000003D3  A$MyLab4$1838                      MyLab4
+C:   000003D4  A$MyLab4$1839                      MyLab4
+C:   000003D5  A$MyLab4$1840                      MyLab4
+C:   000003D6  A$MyLab4$1841                      MyLab4
+C:   000003D7  A$MyLab4$1842                      MyLab4
+C:   000003D8  A$MyLab4$1843                      MyLab4
+C:   000003D9  A$MyLab4$1844                      MyLab4
+C:   000003DA  A$MyLab4$1845                      MyLab4
+C:   000003DB  A$MyLab4$1846                      MyLab4
+C:   000003DD  A$MyLab4$1847                      MyLab4
+C:   000003DE  A$MyLab4$1848                      MyLab4
+C:   000003E1  A$MyLab4$1849                      MyLab4
 ASxxxx Linker V03.00 + NoICE + sdld,  page 40.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000B6    00000F92 =        3986. bytes (REL,CON,CODE)
+CSEG                                000000B6    00001199 =        4505. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   0000040E  G$i2c_read$0$0                     MyLab4
-C:   0000040E  _i2c_read                          MyLab4
-C:   00000411  A$MyLab4$1948                      MyLab4
-C:   00000411  C$i2c.h$227$1$94                   MyLab4
-C:   00000414  A$MyLab4$1951                      MyLab4
-C:   00000414  C$i2c.h$228$1$94                   MyLab4
-C:   00000416  A$MyLab4$1956                      MyLab4
-C:   00000416  C$i2c.h$229$1$94                   MyLab4
-C:   00000416  C$i2c.h$230$1$94                   MyLab4
-C:   00000416  XG$i2c_read$0$0                    MyLab4
-C:   00000417  A$MyLab4$1972                      MyLab4
-C:   00000417  C$i2c.h$233$1$94                   MyLab4
-C:   00000417  C$i2c.h$236$1$96                   MyLab4
-C:   00000417  G$i2c_read_and_stop$0$0            MyLab4
-C:   00000417  _i2c_read_and_stop                 MyLab4
-C:   0000041A  A$MyLab4$1975                      MyLab4
-C:   0000041A  C$i2c.h$237$1$96                   MyLab4
-C:   0000041C  A$MyLab4$1978                      MyLab4
-C:   0000041C  C$i2c.h$238$1$96                   MyLab4
-C:   0000041E  A$MyLab4$1981                      MyLab4
-C:   0000041E  C$i2c.h$239$1$96                   MyLab4
-C:   00000420  A$MyLab4$1987                      MyLab4
-C:   00000420  C$i2c.h$240$1$96                   MyLab4
-C:   00000420  C$i2c.h$241$1$96                   MyLab4
-C:   00000423  A$MyLab4$1988                      MyLab4
-C:   00000425  A$MyLab4$1992                      MyLab4
-C:   00000425  C$i2c.h$242$1$96                   MyLab4
-C:   00000427  A$MyLab4$1995                      MyLab4
-C:   00000427  C$i2c.h$243$1$96                   MyLab4
-C:   00000427  XG$i2c_read_and_stop$0$0           MyLab4
-C:   00000428  A$MyLab4$2012                      MyLab4
-C:   00000428  C$i2c.h$246$1$96                   MyLab4
-C:   00000428  G$i2c_write_data$0$0               MyLab4
-C:   00000428  _i2c_write_data                    MyLab4
-C:   0000042A  A$MyLab4$2015                      MyLab4
-C:   0000042A  C$i2c.h$250$1$98                   MyLab4
-C:   0000042C  A$MyLab4$2016                      MyLab4
-C:   0000042F  A$MyLab4$2017                      MyLab4
-C:   00000431  A$MyLab4$2020                      MyLab4
-C:   00000431  C$i2c.h$251$1$98                   MyLab4
-C:   00000433  A$MyLab4$2021                      MyLab4
-C:   00000434  A$MyLab4$2022                      MyLab4
-C:   00000436  A$MyLab4$2023                      MyLab4
-C:   00000439  A$MyLab4$2026                      MyLab4
-C:   00000439  C$i2c.h$252$1$98                   MyLab4
-C:   0000043C  A$MyLab4$2027                      MyLab4
-C:   0000043F  A$MyLab4$2030                      MyLab4
-C:   00000441  A$MyLab4$2032                      MyLab4
-C:   00000443  A$MyLab4$2033                      MyLab4
-C:   00000445  A$MyLab4$2034                      MyLab4
-C:   00000446  A$MyLab4$2035                      MyLab4
+C:   000003E2  A$MyLab4$1850                      MyLab4
+C:   000003E5  A$MyLab4$1851                      MyLab4
+C:   000003E6  A$MyLab4$1852                      MyLab4
+C:   000003E9  A$MyLab4$1853                      MyLab4
+C:   000003EA  A$MyLab4$1855                      MyLab4
+C:   000003EC  A$MyLab4$1859                      MyLab4
+C:   000003EC  C$i2c.h$193$1$86                   MyLab4
+C:   000003EC  XG$delay_time$0$0                  MyLab4
+C:   000003ED  A$MyLab4$1873                      MyLab4
+C:   000003ED  C$i2c.h$196$1$86                   MyLab4
+C:   000003ED  C$i2c.h$198$1$88                   MyLab4
+C:   000003ED  G$i2c_start$0$0                    MyLab4
+C:   000003ED  _i2c_start                         MyLab4
+C:   000003F0  A$MyLab4$1876                      MyLab4
+C:   000003F0  C$i2c.h$199$1$88                   MyLab4
+C:   000003F2  A$MyLab4$1880                      MyLab4
+C:   000003F2  C$i2c.h$200$1$88                   MyLab4
+C:   000003F5  A$MyLab4$1883                      MyLab4
+C:   000003F5  C$i2c.h$201$1$88                   MyLab4
+C:   000003F7  A$MyLab4$1886                      MyLab4
+C:   000003F7  C$i2c.h$202$1$88                   MyLab4
+C:   000003F9  A$MyLab4$1889                      MyLab4
+C:   000003F9  C$i2c.h$203$1$88                   MyLab4
+C:   000003F9  XG$i2c_start$0$0                   MyLab4
+C:   000003FA  A$MyLab4$1902                      MyLab4
+C:   000003FA  C$i2c.h$206$1$88                   MyLab4
+C:   000003FA  G$i2c_write$0$0                    MyLab4
+C:   000003FA  _i2c_write                         MyLab4
+C:   000003FD  A$MyLab4$1908                      MyLab4
+C:   000003FD  C$i2c.h$209$1$90                   MyLab4
+C:   000003FD  C$i2c.h$210$1$90                   MyLab4
+C:   00000400  A$MyLab4$1909                      MyLab4
+C:   00000402  A$MyLab4$1913                      MyLab4
+C:   00000402  C$i2c.h$211$1$90                   MyLab4
+C:   00000402  XG$i2c_write$0$0                   MyLab4
+C:   00000403  A$MyLab4$1926                      MyLab4
+C:   00000403  C$i2c.h$214$1$90                   MyLab4
+C:   00000403  G$i2c_write_and_stop$0$0           MyLab4
+C:   00000403  _i2c_write_and_stop                MyLab4
+C:   00000406  A$MyLab4$1929                      MyLab4
+C:   00000406  C$i2c.h$217$1$92                   MyLab4
+C:   00000408  A$MyLab4$1935                      MyLab4
+C:   00000408  C$i2c.h$218$1$92                   MyLab4
+C:   00000408  C$i2c.h$219$1$92                   MyLab4
+C:   0000040B  A$MyLab4$1936                      MyLab4
+C:   0000040D  A$MyLab4$1940                      MyLab4
+C:   0000040D  C$i2c.h$220$1$92                   MyLab4
+C:   0000040D  XG$i2c_write_and_stop$0$0          MyLab4
+C:   0000040E  A$MyLab4$1956                      MyLab4
+C:   0000040E  C$i2c.h$223$1$92                   MyLab4
+C:   0000040E  C$i2c.h$226$1$94                   MyLab4
 ASxxxx Linker V03.00 + NoICE + sdld,  page 41.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000B6    00000F92 =        3986. bytes (REL,CON,CODE)
+CSEG                                000000B6    00001199 =        4505. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   00000449  A$MyLab4$2036                      MyLab4
-C:   0000044A  A$MyLab4$2038                      MyLab4
-C:   0000044C  A$MyLab4$2039                      MyLab4
-C:   0000044E  A$MyLab4$2040                      MyLab4
-C:   0000044F  A$MyLab4$2041                      MyLab4
-C:   00000450  A$MyLab4$2042                      MyLab4
-C:   00000451  A$MyLab4$2043                      MyLab4
-C:   00000452  A$MyLab4$2044                      MyLab4
-C:   00000454  A$MyLab4$2045                      MyLab4
-C:   00000456  A$MyLab4$2046                      MyLab4
-C:   00000459  A$MyLab4$2047                      MyLab4
-C:   0000045B  A$MyLab4$2048                      MyLab4
-C:   0000045D  A$MyLab4$2051                      MyLab4
-C:   0000045D  C$i2c.h$254$1$98                   MyLab4
-C:   0000045E  A$MyLab4$2052                      MyLab4
-C:   00000460  A$MyLab4$2053                      MyLab4
-C:   00000461  A$MyLab4$2054                      MyLab4
-C:   00000462  A$MyLab4$2055                      MyLab4
-C:   00000464  A$MyLab4$2056                      MyLab4
-C:   00000465  A$MyLab4$2057                      MyLab4
-C:   00000467  A$MyLab4$2058                      MyLab4
-C:   00000469  A$MyLab4$2059                      MyLab4
-C:   0000046B  A$MyLab4$2060                      MyLab4
-C:   0000046D  A$MyLab4$2061                      MyLab4
-C:   00000470  A$MyLab4$2062                      MyLab4
-C:   00000472  A$MyLab4$2063                      MyLab4
-C:   00000474  A$MyLab4$2064                      MyLab4
-C:   00000477  A$MyLab4$2065                      MyLab4
-C:   00000479  A$MyLab4$2068                      MyLab4
-C:   00000479  C$i2c.h$253$1$98                   MyLab4
-C:   0000047A  A$MyLab4$2069                      MyLab4
-C:   0000047C  A$MyLab4$2073                      MyLab4
-C:   0000047C  C$i2c.h$255$1$98                   MyLab4
-C:   0000047E  A$MyLab4$2074                      MyLab4
-C:   00000480  A$MyLab4$2075                      MyLab4
-C:   00000481  A$MyLab4$2076                      MyLab4
-C:   00000484  A$MyLab4$2077                      MyLab4
-C:   00000485  A$MyLab4$2079                      MyLab4
-C:   00000486  A$MyLab4$2080                      MyLab4
-C:   00000488  A$MyLab4$2081                      MyLab4
-C:   00000489  A$MyLab4$2082                      MyLab4
-C:   0000048A  A$MyLab4$2083                      MyLab4
-C:   0000048C  A$MyLab4$2084                      MyLab4
-C:   0000048D  A$MyLab4$2085                      MyLab4
-C:   0000048F  A$MyLab4$2086                      MyLab4
-C:   00000491  A$MyLab4$2087                      MyLab4
-C:   00000493  A$MyLab4$2088                      MyLab4
-C:   00000495  A$MyLab4$2089                      MyLab4
-C:   00000498  A$MyLab4$2090                      MyLab4
-C:   0000049A  A$MyLab4$2091                      MyLab4
-C:   0000049D  A$MyLab4$2094                      MyLab4
+C:   0000040E  G$i2c_read$0$0                     MyLab4
+C:   0000040E  _i2c_read                          MyLab4
+C:   00000411  A$MyLab4$1959                      MyLab4
+C:   00000411  C$i2c.h$227$1$94                   MyLab4
+C:   00000414  A$MyLab4$1962                      MyLab4
+C:   00000414  C$i2c.h$228$1$94                   MyLab4
+C:   00000416  A$MyLab4$1967                      MyLab4
+C:   00000416  C$i2c.h$229$1$94                   MyLab4
+C:   00000416  C$i2c.h$230$1$94                   MyLab4
+C:   00000416  XG$i2c_read$0$0                    MyLab4
+C:   00000417  A$MyLab4$1983                      MyLab4
+C:   00000417  C$i2c.h$233$1$94                   MyLab4
+C:   00000417  C$i2c.h$236$1$96                   MyLab4
+C:   00000417  G$i2c_read_and_stop$0$0            MyLab4
+C:   00000417  _i2c_read_and_stop                 MyLab4
+C:   0000041A  A$MyLab4$1986                      MyLab4
+C:   0000041A  C$i2c.h$237$1$96                   MyLab4
+C:   0000041C  A$MyLab4$1989                      MyLab4
+C:   0000041C  C$i2c.h$238$1$96                   MyLab4
+C:   0000041E  A$MyLab4$1992                      MyLab4
+C:   0000041E  C$i2c.h$239$1$96                   MyLab4
+C:   00000420  A$MyLab4$1998                      MyLab4
+C:   00000420  C$i2c.h$240$1$96                   MyLab4
+C:   00000420  C$i2c.h$241$1$96                   MyLab4
+C:   00000423  A$MyLab4$1999                      MyLab4
+C:   00000425  A$MyLab4$2003                      MyLab4
+C:   00000425  C$i2c.h$242$1$96                   MyLab4
+C:   00000427  A$MyLab4$2006                      MyLab4
+C:   00000427  C$i2c.h$243$1$96                   MyLab4
+C:   00000427  XG$i2c_read_and_stop$0$0           MyLab4
+C:   00000428  A$MyLab4$2023                      MyLab4
+C:   00000428  C$i2c.h$246$1$96                   MyLab4
+C:   00000428  G$i2c_write_data$0$0               MyLab4
+C:   00000428  _i2c_write_data                    MyLab4
+C:   0000042A  A$MyLab4$2026                      MyLab4
+C:   0000042A  C$i2c.h$250$1$98                   MyLab4
+C:   0000042C  A$MyLab4$2027                      MyLab4
+C:   0000042F  A$MyLab4$2028                      MyLab4
+C:   00000431  A$MyLab4$2031                      MyLab4
+C:   00000431  C$i2c.h$251$1$98                   MyLab4
+C:   00000433  A$MyLab4$2032                      MyLab4
+C:   00000434  A$MyLab4$2033                      MyLab4
+C:   00000436  A$MyLab4$2034                      MyLab4
+C:   00000439  A$MyLab4$2037                      MyLab4
+C:   00000439  C$i2c.h$252$1$98                   MyLab4
+C:   0000043C  A$MyLab4$2038                      MyLab4
+C:   0000043F  A$MyLab4$2041                      MyLab4
+C:   00000441  A$MyLab4$2043                      MyLab4
+C:   00000443  A$MyLab4$2044                      MyLab4
+C:   00000445  A$MyLab4$2045                      MyLab4
+C:   00000446  A$MyLab4$2046                      MyLab4
 ASxxxx Linker V03.00 + NoICE + sdld,  page 42.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000B6    00000F92 =        3986. bytes (REL,CON,CODE)
+CSEG                                000000B6    00001199 =        4505. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   0000049D  C$i2c.h$256$1$98                   MyLab4
-C:   0000049D  XG$i2c_write_data$0$0              MyLab4
-C:   0000049E  A$MyLab4$2111                      MyLab4
-C:   0000049E  C$i2c.h$259$1$98                   MyLab4
-C:   0000049E  G$i2c_read_data$0$0                MyLab4
-C:   0000049E  _i2c_read_data                     MyLab4
-C:   000004A0  A$MyLab4$2114                      MyLab4
-C:   000004A0  C$i2c.h$262$1$100                  MyLab4
-C:   000004A2  A$MyLab4$2115                      MyLab4
-C:   000004A5  A$MyLab4$2116                      MyLab4
-C:   000004A7  A$MyLab4$2119                      MyLab4
-C:   000004A7  C$i2c.h$263$1$100                  MyLab4
-C:   000004A9  A$MyLab4$2120                      MyLab4
-C:   000004AB  A$MyLab4$2121                      MyLab4
-C:   000004AC  A$MyLab4$2122                      MyLab4
-C:   000004AE  A$MyLab4$2123                      MyLab4
-C:   000004B0  A$MyLab4$2124                      MyLab4
-C:   000004B3  A$MyLab4$2127                      MyLab4
-C:   000004B3  C$i2c.h$264$1$100                  MyLab4
-C:   000004B6  A$MyLab4$2128                      MyLab4
-C:   000004B9  A$MyLab4$2131                      MyLab4
-C:   000004B9  C$i2c.h$265$1$100                  MyLab4
-C:   000004BC  A$MyLab4$2132                      MyLab4
-C:   000004BE  A$MyLab4$2135                      MyLab4
-C:   000004BE  C$i2c.h$266$1$100                  MyLab4
-C:   000004C0  A$MyLab4$2136                      MyLab4
-C:   000004C1  A$MyLab4$2137                      MyLab4
-C:   000004C3  A$MyLab4$2138                      MyLab4
-C:   000004C6  A$MyLab4$2141                      MyLab4
-C:   000004C8  A$MyLab4$2143                      MyLab4
-C:   000004CA  A$MyLab4$2144                      MyLab4
-C:   000004CC  A$MyLab4$2145                      MyLab4
-C:   000004CD  A$MyLab4$2146                      MyLab4
-C:   000004D0  A$MyLab4$2147                      MyLab4
-C:   000004D1  A$MyLab4$2149                      MyLab4
-C:   000004D3  A$MyLab4$2150                      MyLab4
-C:   000004D5  A$MyLab4$2151                      MyLab4
-C:   000004D6  A$MyLab4$2152                      MyLab4
-C:   000004D7  A$MyLab4$2153                      MyLab4
-C:   000004D8  A$MyLab4$2154                      MyLab4
-C:   000004D9  A$MyLab4$2155                      MyLab4
-C:   000004DB  A$MyLab4$2156                      MyLab4
-C:   000004DD  A$MyLab4$2157                      MyLab4
-C:   000004E0  A$MyLab4$2158                      MyLab4
-C:   000004E2  A$MyLab4$2159                      MyLab4
-C:   000004E4  A$MyLab4$2162                      MyLab4
-C:   000004E4  C$i2c.h$269$2$101                  MyLab4
-C:   000004E6  A$MyLab4$2165                      MyLab4
-C:   000004E6  C$i2c.h$270$2$101                  MyLab4
-C:   000004E7  A$MyLab4$2166                      MyLab4
-C:   000004E9  A$MyLab4$2167                      MyLab4
+C:   00000449  A$MyLab4$2047                      MyLab4
+C:   0000044A  A$MyLab4$2049                      MyLab4
+C:   0000044C  A$MyLab4$2050                      MyLab4
+C:   0000044E  A$MyLab4$2051                      MyLab4
+C:   0000044F  A$MyLab4$2052                      MyLab4
+C:   00000450  A$MyLab4$2053                      MyLab4
+C:   00000451  A$MyLab4$2054                      MyLab4
+C:   00000452  A$MyLab4$2055                      MyLab4
+C:   00000454  A$MyLab4$2056                      MyLab4
+C:   00000456  A$MyLab4$2057                      MyLab4
+C:   00000459  A$MyLab4$2058                      MyLab4
+C:   0000045B  A$MyLab4$2059                      MyLab4
+C:   0000045D  A$MyLab4$2062                      MyLab4
+C:   0000045D  C$i2c.h$254$1$98                   MyLab4
+C:   0000045E  A$MyLab4$2063                      MyLab4
+C:   00000460  A$MyLab4$2064                      MyLab4
+C:   00000461  A$MyLab4$2065                      MyLab4
+C:   00000462  A$MyLab4$2066                      MyLab4
+C:   00000464  A$MyLab4$2067                      MyLab4
+C:   00000465  A$MyLab4$2068                      MyLab4
+C:   00000467  A$MyLab4$2069                      MyLab4
+C:   00000469  A$MyLab4$2070                      MyLab4
+C:   0000046B  A$MyLab4$2071                      MyLab4
+C:   0000046D  A$MyLab4$2072                      MyLab4
+C:   00000470  A$MyLab4$2073                      MyLab4
+C:   00000472  A$MyLab4$2074                      MyLab4
+C:   00000474  A$MyLab4$2075                      MyLab4
+C:   00000477  A$MyLab4$2076                      MyLab4
+C:   00000479  A$MyLab4$2079                      MyLab4
+C:   00000479  C$i2c.h$253$1$98                   MyLab4
+C:   0000047A  A$MyLab4$2080                      MyLab4
+C:   0000047C  A$MyLab4$2084                      MyLab4
+C:   0000047C  C$i2c.h$255$1$98                   MyLab4
+C:   0000047E  A$MyLab4$2085                      MyLab4
+C:   00000480  A$MyLab4$2086                      MyLab4
+C:   00000481  A$MyLab4$2087                      MyLab4
+C:   00000484  A$MyLab4$2088                      MyLab4
+C:   00000485  A$MyLab4$2090                      MyLab4
+C:   00000486  A$MyLab4$2091                      MyLab4
+C:   00000488  A$MyLab4$2092                      MyLab4
+C:   00000489  A$MyLab4$2093                      MyLab4
+C:   0000048A  A$MyLab4$2094                      MyLab4
+C:   0000048C  A$MyLab4$2095                      MyLab4
+C:   0000048D  A$MyLab4$2096                      MyLab4
+C:   0000048F  A$MyLab4$2097                      MyLab4
+C:   00000491  A$MyLab4$2098                      MyLab4
+C:   00000493  A$MyLab4$2099                      MyLab4
+C:   00000495  A$MyLab4$2100                      MyLab4
+C:   00000498  A$MyLab4$2101                      MyLab4
+C:   0000049A  A$MyLab4$2102                      MyLab4
+C:   0000049D  A$MyLab4$2105                      MyLab4
 ASxxxx Linker V03.00 + NoICE + sdld,  page 43.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000B6    00000F92 =        3986. bytes (REL,CON,CODE)
+CSEG                                000000B6    00001199 =        4505. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   000004EA  A$MyLab4$2168                      MyLab4
-C:   000004EB  A$MyLab4$2169                      MyLab4
-C:   000004ED  A$MyLab4$2170                      MyLab4
-C:   000004EE  A$MyLab4$2171                      MyLab4
-C:   000004F0  A$MyLab4$2172                      MyLab4
-C:   000004F2  A$MyLab4$2173                      MyLab4
-C:   000004F4  A$MyLab4$2174                      MyLab4
-C:   000004F6  A$MyLab4$2175                      MyLab4
-C:   000004F8  A$MyLab4$2176                      MyLab4
-C:   000004FB  A$MyLab4$2177                      MyLab4
-C:   000004FD  A$MyLab4$2178                      MyLab4
-C:   000004FF  A$MyLab4$2179                      MyLab4
-C:   00000501  A$MyLab4$2180                      MyLab4
-C:   00000503  A$MyLab4$2181                      MyLab4
-C:   00000505  A$MyLab4$2182                      MyLab4
-C:   00000507  A$MyLab4$2183                      MyLab4
-C:   00000509  A$MyLab4$2184                      MyLab4
-C:   0000050B  A$MyLab4$2185                      MyLab4
-C:   0000050C  A$MyLab4$2186                      MyLab4
-C:   0000050F  A$MyLab4$2189                      MyLab4
-C:   0000050F  C$i2c.h$267$1$100                  MyLab4
-C:   00000510  A$MyLab4$2190                      MyLab4
-C:   00000512  A$MyLab4$2194                      MyLab4
-C:   00000512  C$i2c.h$272$1$100                  MyLab4
-C:   00000514  A$MyLab4$2197                      MyLab4
-C:   00000514  C$i2c.h$273$1$100                  MyLab4
-C:   00000516  A$MyLab4$2198                      MyLab4
-C:   00000518  A$MyLab4$2199                      MyLab4
-C:   00000519  A$MyLab4$2200                      MyLab4
-C:   0000051C  A$MyLab4$2201                      MyLab4
-C:   0000051D  A$MyLab4$2203                      MyLab4
-C:   0000051E  A$MyLab4$2204                      MyLab4
-C:   00000520  A$MyLab4$2205                      MyLab4
-C:   00000521  A$MyLab4$2206                      MyLab4
-C:   00000522  A$MyLab4$2207                      MyLab4
-C:   00000524  A$MyLab4$2208                      MyLab4
-C:   00000525  A$MyLab4$2209                      MyLab4
-C:   00000527  A$MyLab4$2210                      MyLab4
-C:   00000529  A$MyLab4$2211                      MyLab4
-C:   0000052B  A$MyLab4$2212                      MyLab4
-C:   0000052D  A$MyLab4$2213                      MyLab4
-C:   00000530  A$MyLab4$2214                      MyLab4
-C:   00000532  A$MyLab4$2215                      MyLab4
-C:   00000534  A$MyLab4$2216                      MyLab4
-C:   00000536  A$MyLab4$2217                      MyLab4
-C:   00000538  A$MyLab4$2218                      MyLab4
-C:   0000053A  A$MyLab4$2219                      MyLab4
-C:   0000053C  A$MyLab4$2220                      MyLab4
-C:   0000053E  A$MyLab4$2221                      MyLab4
-C:   0000053F  A$MyLab4$2222                      MyLab4
-C:   00000542  A$MyLab4$2225                      MyLab4
+C:   0000049D  C$i2c.h$256$1$98                   MyLab4
+C:   0000049D  XG$i2c_write_data$0$0              MyLab4
+C:   0000049E  A$MyLab4$2122                      MyLab4
+C:   0000049E  C$i2c.h$259$1$98                   MyLab4
+C:   0000049E  G$i2c_read_data$0$0                MyLab4
+C:   0000049E  _i2c_read_data                     MyLab4
+C:   000004A0  A$MyLab4$2125                      MyLab4
+C:   000004A0  C$i2c.h$262$1$100                  MyLab4
+C:   000004A2  A$MyLab4$2126                      MyLab4
+C:   000004A5  A$MyLab4$2127                      MyLab4
+C:   000004A7  A$MyLab4$2130                      MyLab4
+C:   000004A7  C$i2c.h$263$1$100                  MyLab4
+C:   000004A9  A$MyLab4$2131                      MyLab4
+C:   000004AB  A$MyLab4$2132                      MyLab4
+C:   000004AC  A$MyLab4$2133                      MyLab4
+C:   000004AE  A$MyLab4$2134                      MyLab4
+C:   000004B0  A$MyLab4$2135                      MyLab4
+C:   000004B3  A$MyLab4$2138                      MyLab4
+C:   000004B3  C$i2c.h$264$1$100                  MyLab4
+C:   000004B6  A$MyLab4$2139                      MyLab4
+C:   000004B9  A$MyLab4$2142                      MyLab4
+C:   000004B9  C$i2c.h$265$1$100                  MyLab4
+C:   000004BC  A$MyLab4$2143                      MyLab4
+C:   000004BE  A$MyLab4$2146                      MyLab4
+C:   000004BE  C$i2c.h$266$1$100                  MyLab4
+C:   000004C0  A$MyLab4$2147                      MyLab4
+C:   000004C1  A$MyLab4$2148                      MyLab4
+C:   000004C3  A$MyLab4$2149                      MyLab4
+C:   000004C6  A$MyLab4$2152                      MyLab4
+C:   000004C8  A$MyLab4$2154                      MyLab4
+C:   000004CA  A$MyLab4$2155                      MyLab4
+C:   000004CC  A$MyLab4$2156                      MyLab4
+C:   000004CD  A$MyLab4$2157                      MyLab4
+C:   000004D0  A$MyLab4$2158                      MyLab4
+C:   000004D1  A$MyLab4$2160                      MyLab4
+C:   000004D3  A$MyLab4$2161                      MyLab4
+C:   000004D5  A$MyLab4$2162                      MyLab4
+C:   000004D6  A$MyLab4$2163                      MyLab4
+C:   000004D7  A$MyLab4$2164                      MyLab4
+C:   000004D8  A$MyLab4$2165                      MyLab4
+C:   000004D9  A$MyLab4$2166                      MyLab4
+C:   000004DB  A$MyLab4$2167                      MyLab4
+C:   000004DD  A$MyLab4$2168                      MyLab4
+C:   000004E0  A$MyLab4$2169                      MyLab4
+C:   000004E2  A$MyLab4$2170                      MyLab4
+C:   000004E4  A$MyLab4$2173                      MyLab4
+C:   000004E4  C$i2c.h$269$2$101                  MyLab4
+C:   000004E6  A$MyLab4$2176                      MyLab4
+C:   000004E6  C$i2c.h$270$2$101                  MyLab4
+C:   000004E7  A$MyLab4$2177                      MyLab4
+C:   000004E9  A$MyLab4$2178                      MyLab4
 ASxxxx Linker V03.00 + NoICE + sdld,  page 44.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000B6    00000F92 =        3986. bytes (REL,CON,CODE)
+CSEG                                000000B6    00001199 =        4505. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   00000542  C$i2c.h$274$1$100                  MyLab4
-C:   00000542  XG$i2c_read_data$0$0               MyLab4
-C:   00000543  A$MyLab4$2240                      MyLab4
-C:   00000543  C$i2c.h$283$1$100                  MyLab4
-C:   00000543  C$i2c.h$287$1$103                  MyLab4
-C:   00000543  G$Accel_Init$0$0                   MyLab4
-C:   00000543  _Accel_Init                        MyLab4
-C:   00000546  A$MyLab4$2243                      MyLab4
-C:   00000546  C$i2c.h$289$1$103                  MyLab4
-C:   00000549  A$MyLab4$2244                      MyLab4
-C:   0000054C  A$MyLab4$2245                      MyLab4
-C:   0000054F  A$MyLab4$2246                      MyLab4
-C:   00000552  A$MyLab4$2247                      MyLab4
-C:   00000555  A$MyLab4$2248                      MyLab4
-C:   00000558  A$MyLab4$2249                      MyLab4
-C:   0000055B  A$MyLab4$2252                      MyLab4
-C:   0000055B  C$i2c.h$290$1$103                  MyLab4
-C:   0000055E  A$MyLab4$2255                      MyLab4
-C:   0000055E  C$i2c.h$292$1$103                  MyLab4
-C:   00000561  A$MyLab4$2256                      MyLab4
-C:   00000564  A$MyLab4$2257                      MyLab4
-C:   00000567  A$MyLab4$2258                      MyLab4
-C:   0000056A  A$MyLab4$2259                      MyLab4
-C:   0000056D  A$MyLab4$2260                      MyLab4
-C:   00000570  A$MyLab4$2261                      MyLab4
-C:   00000573  A$MyLab4$2264                      MyLab4
-C:   00000573  C$i2c.h$293$1$103                  MyLab4
-C:   00000576  A$MyLab4$2267                      MyLab4
-C:   00000576  C$i2c.h$294$1$103                  MyLab4
-C:   00000579  A$MyLab4$2268                      MyLab4
-C:   0000057C  A$MyLab4$2269                      MyLab4
-C:   0000057F  A$MyLab4$2270                      MyLab4
-C:   00000582  A$MyLab4$2271                      MyLab4
-C:   00000585  A$MyLab4$2272                      MyLab4
-C:   00000588  A$MyLab4$2273                      MyLab4
-C:   0000058B  A$MyLab4$2276                      MyLab4
-C:   0000058B  C$i2c.h$298$1$103                  MyLab4
-C:   0000058B  XG$Accel_Init$0$0                  MyLab4
-C:   0000058C  A$MyLab4$2289                      MyLab4
-C:   0000058C  C$MyLab4.c$31$1$103                MyLab4
-C:   0000058C  C$MyLab4.c$33$1$113                MyLab4
-C:   0000058C  G$main$0$0                         MyLab4
-C:   0000058C  _main                              MyLab4
-C:   0000058F  A$MyLab4$2292                      MyLab4
-C:   0000058F  C$MyLab4.c$34$1$113                MyLab4
-C:   00000592  A$MyLab4$2295                      MyLab4
-C:   00000592  C$MyLab4.c$35$1$113                MyLab4
-C:   00000595  A$MyLab4$2298                      MyLab4
-C:   00000595  C$MyLab4.c$36$1$113                MyLab4
-C:   00000598  A$MyLab4$2301                      MyLab4
-C:   00000598  C$MyLab4.c$37$1$113                MyLab4
+C:   000004EA  A$MyLab4$2179                      MyLab4
+C:   000004EB  A$MyLab4$2180                      MyLab4
+C:   000004ED  A$MyLab4$2181                      MyLab4
+C:   000004EE  A$MyLab4$2182                      MyLab4
+C:   000004F0  A$MyLab4$2183                      MyLab4
+C:   000004F2  A$MyLab4$2184                      MyLab4
+C:   000004F4  A$MyLab4$2185                      MyLab4
+C:   000004F6  A$MyLab4$2186                      MyLab4
+C:   000004F8  A$MyLab4$2187                      MyLab4
+C:   000004FB  A$MyLab4$2188                      MyLab4
+C:   000004FD  A$MyLab4$2189                      MyLab4
+C:   000004FF  A$MyLab4$2190                      MyLab4
+C:   00000501  A$MyLab4$2191                      MyLab4
+C:   00000503  A$MyLab4$2192                      MyLab4
+C:   00000505  A$MyLab4$2193                      MyLab4
+C:   00000507  A$MyLab4$2194                      MyLab4
+C:   00000509  A$MyLab4$2195                      MyLab4
+C:   0000050B  A$MyLab4$2196                      MyLab4
+C:   0000050C  A$MyLab4$2197                      MyLab4
+C:   0000050F  A$MyLab4$2200                      MyLab4
+C:   0000050F  C$i2c.h$267$1$100                  MyLab4
+C:   00000510  A$MyLab4$2201                      MyLab4
+C:   00000512  A$MyLab4$2205                      MyLab4
+C:   00000512  C$i2c.h$272$1$100                  MyLab4
+C:   00000514  A$MyLab4$2208                      MyLab4
+C:   00000514  C$i2c.h$273$1$100                  MyLab4
+C:   00000516  A$MyLab4$2209                      MyLab4
+C:   00000518  A$MyLab4$2210                      MyLab4
+C:   00000519  A$MyLab4$2211                      MyLab4
+C:   0000051C  A$MyLab4$2212                      MyLab4
+C:   0000051D  A$MyLab4$2214                      MyLab4
+C:   0000051E  A$MyLab4$2215                      MyLab4
+C:   00000520  A$MyLab4$2216                      MyLab4
+C:   00000521  A$MyLab4$2217                      MyLab4
+C:   00000522  A$MyLab4$2218                      MyLab4
+C:   00000524  A$MyLab4$2219                      MyLab4
+C:   00000525  A$MyLab4$2220                      MyLab4
+C:   00000527  A$MyLab4$2221                      MyLab4
+C:   00000529  A$MyLab4$2222                      MyLab4
+C:   0000052B  A$MyLab4$2223                      MyLab4
+C:   0000052D  A$MyLab4$2224                      MyLab4
+C:   00000530  A$MyLab4$2225                      MyLab4
+C:   00000532  A$MyLab4$2226                      MyLab4
+C:   00000534  A$MyLab4$2227                      MyLab4
+C:   00000536  A$MyLab4$2228                      MyLab4
+C:   00000538  A$MyLab4$2229                      MyLab4
+C:   0000053A  A$MyLab4$2230                      MyLab4
+C:   0000053C  A$MyLab4$2231                      MyLab4
+C:   0000053E  A$MyLab4$2232                      MyLab4
+C:   0000053F  A$MyLab4$2233                      MyLab4
+C:   00000542  A$MyLab4$2236                      MyLab4
 ASxxxx Linker V03.00 + NoICE + sdld,  page 45.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000B6    00000F92 =        3986. bytes (REL,CON,CODE)
+CSEG                                000000B6    00001199 =        4505. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   0000059B  A$MyLab4$2304                      MyLab4
-C:   0000059B  C$MyLab4.c$38$1$113                MyLab4
-C:   0000059E  A$MyLab4$2305                      MyLab4
-C:   000005A1  A$MyLab4$2308                      MyLab4
-C:   000005A1  C$MyLab4.c$39$1$113                MyLab4
-C:   000005A3  A$MyLab4$2309                      MyLab4
-C:   000005A5  A$MyLab4$2310                      MyLab4
-C:   000005A7  A$MyLab4$2311                      MyLab4
-C:   000005A9  A$MyLab4$2312                      MyLab4
-C:   000005AB  A$MyLab4$2313                      MyLab4
-C:   000005AD  A$MyLab4$2314                      MyLab4
-C:   000005B0  A$MyLab4$2315                      MyLab4
-C:   000005B2  A$MyLab4$2316                      MyLab4
-C:   000005B4  A$MyLab4$2317                      MyLab4
-C:   000005B6  A$MyLab4$2320                      MyLab4
-C:   000005B6  C$MyLab4.c$40$1$113                MyLab4
-C:   000005B9  A$MyLab4$2323                      MyLab4
-C:   000005B9  C$MyLab4.c$41$1$113                MyLab4
-C:   000005BA  A$MyLab4$2324                      MyLab4
-C:   000005BC  A$MyLab4$2325                      MyLab4
-C:   000005BE  A$MyLab4$2329                      MyLab4
-C:   000005BE  C$MyLab4.c$42$1$113                MyLab4
-C:   000005BF  A$MyLab4$2330                      MyLab4
-C:   000005C1  A$MyLab4$2331                      MyLab4
-C:   000005C3  A$MyLab4$2332                      MyLab4
-C:   000005C5  A$MyLab4$2333                      MyLab4
-C:   000005C7  A$MyLab4$2334                      MyLab4
-C:   000005C9  A$MyLab4$2335                      MyLab4
-C:   000005CB  A$MyLab4$2336                      MyLab4
-C:   000005CD  A$MyLab4$2337                      MyLab4
-C:   000005CF  A$MyLab4$2338                      MyLab4
-C:   000005D1  A$MyLab4$2339                      MyLab4
-C:   000005D3  A$MyLab4$2340                      MyLab4
-C:   000005D5  A$MyLab4$2341                      MyLab4
-C:   000005D7  A$MyLab4$2342                      MyLab4
-C:   000005D9  A$MyLab4$2343                      MyLab4
-C:   000005DC  A$MyLab4$2344                      MyLab4
-C:   000005DE  A$MyLab4$2345                      MyLab4
-C:   000005E0  A$MyLab4$2346                      MyLab4
-C:   000005E2  A$MyLab4$2347                      MyLab4
-C:   000005E4  A$MyLab4$2351                      MyLab4
-C:   000005E4  C$MyLab4.c$43$1$113                MyLab4
-C:   000005E7  A$MyLab4$2354                      MyLab4
-C:   000005E7  C$MyLab4.c$44$1$113                MyLab4
-C:   000005E9  A$MyLab4$2355                      MyLab4
-C:   000005EB  A$MyLab4$2356                      MyLab4
-C:   000005ED  A$MyLab4$2357                      MyLab4
-C:   000005EF  A$MyLab4$2358                      MyLab4
-C:   000005F1  A$MyLab4$2359                      MyLab4
-C:   000005F3  A$MyLab4$2360                      MyLab4
-C:   000005F6  A$MyLab4$2361                      MyLab4
+C:   00000542  C$i2c.h$274$1$100                  MyLab4
+C:   00000542  XG$i2c_read_data$0$0               MyLab4
+C:   00000543  A$MyLab4$2251                      MyLab4
+C:   00000543  C$i2c.h$283$1$100                  MyLab4
+C:   00000543  C$i2c.h$287$1$103                  MyLab4
+C:   00000543  G$Accel_Init$0$0                   MyLab4
+C:   00000543  _Accel_Init                        MyLab4
+C:   00000546  A$MyLab4$2254                      MyLab4
+C:   00000546  C$i2c.h$289$1$103                  MyLab4
+C:   00000549  A$MyLab4$2255                      MyLab4
+C:   0000054C  A$MyLab4$2256                      MyLab4
+C:   0000054F  A$MyLab4$2257                      MyLab4
+C:   00000552  A$MyLab4$2258                      MyLab4
+C:   00000555  A$MyLab4$2259                      MyLab4
+C:   00000558  A$MyLab4$2260                      MyLab4
+C:   0000055B  A$MyLab4$2263                      MyLab4
+C:   0000055B  C$i2c.h$290$1$103                  MyLab4
+C:   0000055E  A$MyLab4$2266                      MyLab4
+C:   0000055E  C$i2c.h$292$1$103                  MyLab4
+C:   00000561  A$MyLab4$2267                      MyLab4
+C:   00000564  A$MyLab4$2268                      MyLab4
+C:   00000567  A$MyLab4$2269                      MyLab4
+C:   0000056A  A$MyLab4$2270                      MyLab4
+C:   0000056D  A$MyLab4$2271                      MyLab4
+C:   00000570  A$MyLab4$2272                      MyLab4
+C:   00000573  A$MyLab4$2275                      MyLab4
+C:   00000573  C$i2c.h$293$1$103                  MyLab4
+C:   00000576  A$MyLab4$2278                      MyLab4
+C:   00000576  C$i2c.h$294$1$103                  MyLab4
+C:   00000579  A$MyLab4$2279                      MyLab4
+C:   0000057C  A$MyLab4$2280                      MyLab4
+C:   0000057F  A$MyLab4$2281                      MyLab4
+C:   00000582  A$MyLab4$2282                      MyLab4
+C:   00000585  A$MyLab4$2283                      MyLab4
+C:   00000588  A$MyLab4$2284                      MyLab4
+C:   0000058B  A$MyLab4$2287                      MyLab4
+C:   0000058B  C$i2c.h$298$1$103                  MyLab4
+C:   0000058B  XG$Accel_Init$0$0                  MyLab4
+C:   0000058C  A$MyLab4$2300                      MyLab4
+C:   0000058C  C$MyLab4.c$35$1$103                MyLab4
+C:   0000058C  C$MyLab4.c$37$1$115                MyLab4
+C:   0000058C  G$main$0$0                         MyLab4
+C:   0000058C  _main                              MyLab4
+C:   0000058F  A$MyLab4$2303                      MyLab4
+C:   0000058F  C$MyLab4.c$38$1$115                MyLab4
+C:   00000592  A$MyLab4$2306                      MyLab4
+C:   00000592  C$MyLab4.c$39$1$115                MyLab4
+C:   00000595  A$MyLab4$2309                      MyLab4
+C:   00000595  C$MyLab4.c$40$1$115                MyLab4
+C:   00000598  A$MyLab4$2312                      MyLab4
+C:   00000598  C$MyLab4.c$41$1$115                MyLab4
 ASxxxx Linker V03.00 + NoICE + sdld,  page 46.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000B6    00000F92 =        3986. bytes (REL,CON,CODE)
+CSEG                                000000B6    00001199 =        4505. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   000005F8  A$MyLab4$2362                      MyLab4
-C:   000005FA  A$MyLab4$2363                      MyLab4
-C:   000005FC  A$MyLab4$2366                      MyLab4
-C:   000005FC  C$MyLab4.c$45$1$113                MyLab4
-C:   000005FF  A$MyLab4$2369                      MyLab4
-C:   000005FF  C$MyLab4.c$46$1$113                MyLab4
-C:   00000602  A$MyLab4$2375                      MyLab4
-C:   00000602  C$MyLab4.c$47$1$113                MyLab4
-C:   00000602  C$MyLab4.c$50$2$114                MyLab4
-C:   00000604  A$MyLab4$2376                      MyLab4
-C:   00000606  A$MyLab4$2377                      MyLab4
-C:   00000607  A$MyLab4$2378                      MyLab4
-C:   00000609  A$MyLab4$2379                      MyLab4
-C:   0000060B  A$MyLab4$2380                      MyLab4
-C:   0000060D  A$MyLab4$2381                      MyLab4
-C:   0000060F  A$MyLab4$2384                      MyLab4
-C:   0000060F  C$MyLab4.c$52$3$115                MyLab4
-C:   00000612  A$MyLab4$2387                      MyLab4
-C:   00000612  C$MyLab4.c$53$1$113                MyLab4
-C:   00000615  A$MyLab4$2388                      MyLab4
-C:   00000618  A$MyLab4$2389                      MyLab4
-C:   0000061B  A$MyLab4$2390                      MyLab4
-C:   0000061E  A$MyLab4$2391                      MyLab4
-C:   00000621  A$MyLab4$2392                      MyLab4
-C:   00000623  A$MyLab4$2393                      MyLab4
-C:   00000625  A$MyLab4$2394                      MyLab4
-C:   00000627  A$MyLab4$2395                      MyLab4
-C:   00000629  A$MyLab4$2396                      MyLab4
-C:   0000062B  A$MyLab4$2397                      MyLab4
-C:   0000062D  A$MyLab4$2398                      MyLab4
-C:   0000062F  A$MyLab4$2399                      MyLab4
-C:   00000631  A$MyLab4$2400                      MyLab4
-C:   00000633  A$MyLab4$2401                      MyLab4
-C:   00000635  A$MyLab4$2402                      MyLab4
-C:   00000638  A$MyLab4$2403                      MyLab4
-C:   0000063A  A$MyLab4$2404                      MyLab4
-C:   0000063C  A$MyLab4$2405                      MyLab4
-C:   0000063E  A$MyLab4$2408                      MyLab4
-C:   0000063E  C$MyLab4.c$56$3$115                MyLab4
-C:   00000641  A$MyLab4$2409                      MyLab4
-C:   00000643  A$MyLab4$2412                      MyLab4
-C:   00000643  C$MyLab4.c$60$1$113                MyLab4
-C:   00000643  XG$main$0$0                        MyLab4
-C:   00000644  A$MyLab4$2425                      MyLab4
-C:   00000644  C$MyLab4.c$63$1$113                MyLab4
-C:   00000644  C$MyLab4.c$65$1$117                MyLab4
-C:   00000644  G$Port_Init$0$0                    MyLab4
-C:   00000644  _Port_Init                         MyLab4
-C:   00000647  A$MyLab4$2428                      MyLab4
-C:   00000647  C$MyLab4.c$66$1$117                MyLab4
-C:   0000064A  A$MyLab4$2431                      MyLab4
+C:   0000059B  A$MyLab4$2315                      MyLab4
+C:   0000059B  C$MyLab4.c$42$1$115                MyLab4
+C:   0000059E  A$MyLab4$2316                      MyLab4
+C:   000005A1  A$MyLab4$2319                      MyLab4
+C:   000005A1  C$MyLab4.c$43$1$115                MyLab4
+C:   000005A3  A$MyLab4$2320                      MyLab4
+C:   000005A5  A$MyLab4$2321                      MyLab4
+C:   000005A7  A$MyLab4$2322                      MyLab4
+C:   000005A9  A$MyLab4$2323                      MyLab4
+C:   000005AB  A$MyLab4$2324                      MyLab4
+C:   000005AD  A$MyLab4$2325                      MyLab4
+C:   000005B0  A$MyLab4$2326                      MyLab4
+C:   000005B2  A$MyLab4$2327                      MyLab4
+C:   000005B4  A$MyLab4$2328                      MyLab4
+C:   000005B6  A$MyLab4$2331                      MyLab4
+C:   000005B6  C$MyLab4.c$44$1$115                MyLab4
+C:   000005B9  A$MyLab4$2334                      MyLab4
+C:   000005B9  C$MyLab4.c$45$1$115                MyLab4
+C:   000005BA  A$MyLab4$2335                      MyLab4
+C:   000005BC  A$MyLab4$2336                      MyLab4
+C:   000005BE  A$MyLab4$2340                      MyLab4
+C:   000005BE  C$MyLab4.c$46$1$115                MyLab4
+C:   000005BF  A$MyLab4$2341                      MyLab4
+C:   000005C1  A$MyLab4$2342                      MyLab4
+C:   000005C3  A$MyLab4$2343                      MyLab4
+C:   000005C5  A$MyLab4$2344                      MyLab4
+C:   000005C7  A$MyLab4$2345                      MyLab4
+C:   000005C9  A$MyLab4$2346                      MyLab4
+C:   000005CB  A$MyLab4$2347                      MyLab4
+C:   000005CD  A$MyLab4$2348                      MyLab4
+C:   000005CF  A$MyLab4$2349                      MyLab4
+C:   000005D1  A$MyLab4$2350                      MyLab4
+C:   000005D3  A$MyLab4$2351                      MyLab4
+C:   000005D5  A$MyLab4$2352                      MyLab4
+C:   000005D7  A$MyLab4$2353                      MyLab4
+C:   000005D9  A$MyLab4$2354                      MyLab4
+C:   000005DC  A$MyLab4$2355                      MyLab4
+C:   000005DE  A$MyLab4$2356                      MyLab4
+C:   000005E0  A$MyLab4$2357                      MyLab4
+C:   000005E2  A$MyLab4$2358                      MyLab4
+C:   000005E4  A$MyLab4$2362                      MyLab4
+C:   000005E4  C$MyLab4.c$47$1$115                MyLab4
+C:   000005E7  A$MyLab4$2365                      MyLab4
+C:   000005E7  C$MyLab4.c$48$1$115                MyLab4
+C:   000005E9  A$MyLab4$2366                      MyLab4
+C:   000005EB  A$MyLab4$2367                      MyLab4
+C:   000005ED  A$MyLab4$2368                      MyLab4
+C:   000005EF  A$MyLab4$2369                      MyLab4
+C:   000005F1  A$MyLab4$2370                      MyLab4
+C:   000005F3  A$MyLab4$2371                      MyLab4
+C:   000005F6  A$MyLab4$2372                      MyLab4
 ASxxxx Linker V03.00 + NoICE + sdld,  page 47.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000B6    00000F92 =        3986. bytes (REL,CON,CODE)
+CSEG                                000000B6    00001199 =        4505. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   0000064A  C$MyLab4.c$67$1$117                MyLab4
-C:   0000064D  A$MyLab4$2434                      MyLab4
-C:   0000064D  C$MyLab4.c$68$1$117                MyLab4
-C:   0000064F  A$MyLab4$2435                      MyLab4
-C:   00000651  A$MyLab4$2436                      MyLab4
-C:   00000652  A$MyLab4$2437                      MyLab4
-C:   00000654  A$MyLab4$2440                      MyLab4
-C:   00000654  C$MyLab4.c$69$1$117                MyLab4
-C:   00000654  XG$Port_Init$0$0                   MyLab4
-C:   00000655  A$MyLab4$2453                      MyLab4
-C:   00000655  C$MyLab4.c$71$1$117                MyLab4
-C:   00000655  C$MyLab4.c$73$1$119                MyLab4
-C:   00000655  G$Interrupt_Init$0$0               MyLab4
-C:   00000655  _Interrupt_Init                    MyLab4
-C:   00000658  A$MyLab4$2456                      MyLab4
-C:   00000658  C$MyLab4.c$74$1$119                MyLab4
-C:   0000065B  A$MyLab4$2459                      MyLab4
-C:   0000065B  C$MyLab4.c$75$1$119                MyLab4
-C:   0000065D  A$MyLab4$2462                      MyLab4
-C:   0000065D  C$MyLab4.c$76$1$119                MyLab4
-C:   0000065D  XG$Interrupt_Init$0$0              MyLab4
-C:   0000065E  A$MyLab4$2475                      MyLab4
-C:   0000065E  C$MyLab4.c$78$1$119                MyLab4
-C:   0000065E  C$MyLab4.c$80$1$121                MyLab4
-C:   0000065E  G$PCA_Init$0$0                     MyLab4
-C:   0000065E  _PCA_Init                          MyLab4
-C:   00000661  A$MyLab4$2478                      MyLab4
-C:   00000661  C$MyLab4.c$81$1$121                MyLab4
-C:   00000664  A$MyLab4$2481                      MyLab4
-C:   00000664  C$MyLab4.c$82$1$121                MyLab4
-C:   00000667  A$MyLab4$2484                      MyLab4
-C:   00000667  C$MyLab4.c$83$1$121                MyLab4
-C:   0000066A  A$MyLab4$2487                      MyLab4
-C:   0000066A  C$MyLab4.c$84$1$121                MyLab4
-C:   0000066A  XG$PCA_Init$0$0                    MyLab4
-C:   0000066B  A$MyLab4$2500                      MyLab4
-C:   0000066B  C$MyLab4.c$86$1$121                MyLab4
-C:   0000066B  C$MyLab4.c$88$1$123                MyLab4
-C:   0000066B  G$SMB0_Init$0$0                    MyLab4
-C:   0000066B  _SMB0_Init                         MyLab4
-C:   0000066E  A$MyLab4$2503                      MyLab4
-C:   0000066E  C$MyLab4.c$89$1$123                MyLab4
-C:   00000670  A$MyLab4$2506                      MyLab4
-C:   00000670  C$MyLab4.c$90$1$123                MyLab4
-C:   00000670  XG$SMB0_Init$0$0                   MyLab4
-C:   00000671  A$MyLab4$2517                      MyLab4
-C:   00000671  C$MyLab4.c$92$1$123                MyLab4
-C:   00000671  G$PCA_ISR$0$0                      MyLab4
-C:   00000671  _PCA_ISR                           MyLab4
-C:   00000673  A$MyLab4$2518                      MyLab4
-C:   00000675  A$MyLab4$2519                      MyLab4
+C:   000005F8  A$MyLab4$2373                      MyLab4
+C:   000005FA  A$MyLab4$2374                      MyLab4
+C:   000005FC  A$MyLab4$2377                      MyLab4
+C:   000005FC  C$MyLab4.c$49$1$115                MyLab4
+C:   000005FF  A$MyLab4$2380                      MyLab4
+C:   000005FF  C$MyLab4.c$50$1$115                MyLab4
+C:   00000602  A$MyLab4$2386                      MyLab4
+C:   00000602  C$MyLab4.c$51$1$115                MyLab4
+C:   00000602  C$MyLab4.c$53$2$116                MyLab4
+C:   00000605  A$MyLab4$2387                      MyLab4
+C:   00000608  A$MyLab4$2390                      MyLab4
+C:   00000608  C$MyLab4.c$54$1$115                MyLab4
+C:   0000060B  A$MyLab4$2391                      MyLab4
+C:   0000060E  A$MyLab4$2392                      MyLab4
+C:   00000610  A$MyLab4$2393                      MyLab4
+C:   00000612  A$MyLab4$2394                      MyLab4
+C:   00000614  A$MyLab4$2395                      MyLab4
+C:   00000615  A$MyLab4$2396                      MyLab4
+C:   00000617  A$MyLab4$2397                      MyLab4
+C:   00000619  A$MyLab4$2398                      MyLab4
+C:   0000061B  A$MyLab4$2399                      MyLab4
+C:   0000061D  A$MyLab4$2400                      MyLab4
+C:   00000620  A$MyLab4$2401                      MyLab4
+C:   00000623  A$MyLab4$2402                      MyLab4
+C:   00000625  A$MyLab4$2403                      MyLab4
+C:   00000628  A$MyLab4$2404                      MyLab4
+C:   0000062A  A$MyLab4$2405                      MyLab4
+C:   0000062C  A$MyLab4$2406                      MyLab4
+C:   0000062E  A$MyLab4$2407                      MyLab4
+C:   0000062F  A$MyLab4$2408                      MyLab4
+C:   00000631  A$MyLab4$2409                      MyLab4
+C:   00000633  A$MyLab4$2410                      MyLab4
+C:   00000635  A$MyLab4$2411                      MyLab4
+C:   00000637  A$MyLab4$2412                      MyLab4
+C:   00000639  A$MyLab4$2413                      MyLab4
+C:   0000063B  A$MyLab4$2414                      MyLab4
+C:   0000063C  A$MyLab4$2415                      MyLab4
+C:   0000063F  A$MyLab4$2416                      MyLab4
+C:   00000642  A$MyLab4$2419                      MyLab4
+C:   00000642  C$MyLab4.c$55$2$116                MyLab4
+C:   00000643  A$MyLab4$2420                      MyLab4
+C:   00000645  A$MyLab4$2421                      MyLab4
+C:   00000647  A$MyLab4$2422                      MyLab4
+C:   00000649  A$MyLab4$2423                      MyLab4
+C:   0000064B  A$MyLab4$2426                      MyLab4
+C:   0000064B  C$MyLab4.c$57$3$117                MyLab4
+C:   0000064D  A$MyLab4$2427                      MyLab4
+C:   0000064F  A$MyLab4$2428                      MyLab4
+C:   00000651  A$MyLab4$2429                      MyLab4
+C:   00000653  A$MyLab4$2430                      MyLab4
+C:   00000655  A$MyLab4$2431                      MyLab4
 ASxxxx Linker V03.00 + NoICE + sdld,  page 48.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000B6    00000F92 =        3986. bytes (REL,CON,CODE)
+CSEG                                000000B6    00001199 =        4505. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   00000677  A$MyLab4$2524                      MyLab4
-C:   00000677  C$MyLab4.c$94$1$125                MyLab4
-C:   00000677  C$MyLab4.c$96$2$126                MyLab4
-C:   0000067A  A$MyLab4$2525                      MyLab4
-C:   0000067C  A$MyLab4$2529                      MyLab4
-C:   0000067C  C$MyLab4.c$97$2$126                MyLab4
-C:   0000067E  A$MyLab4$2530                      MyLab4
-C:   0000067F  A$MyLab4$2531                      MyLab4
-C:   00000682  A$MyLab4$2532                      MyLab4
-C:   00000684  A$MyLab4$2536                      MyLab4
-C:   00000684  C$MyLab4.c$98$2$126                MyLab4
-C:   00000686  A$MyLab4$2537                      MyLab4
-C:   00000687  A$MyLab4$2538                      MyLab4
-C:   0000068A  A$MyLab4$2539                      MyLab4
-C:   0000068C  A$MyLab4$2543                      MyLab4
-C:   0000068C  C$MyLab4.c$99$2$126                MyLab4
-C:   0000068F  A$MyLab4$2544                      MyLab4
-C:   00000692  A$MyLab4$2547                      MyLab4
-C:   00000692  C$MyLab4.c$100$2$126               MyLab4
-C:   00000693  A$MyLab4$2548                      MyLab4
-C:   00000695  A$MyLab4$2549                      MyLab4
-C:   00000697  A$MyLab4$2550                      MyLab4
-C:   00000698  A$MyLab4$2551                      MyLab4
-C:   0000069A  A$MyLab4$2552                      MyLab4
-C:   0000069C  A$MyLab4$2555                      MyLab4
-C:   0000069C  C$MyLab4.c$102$3$127               MyLab4
-C:   0000069D  A$MyLab4$2556                      MyLab4
-C:   0000069F  A$MyLab4$2557                      MyLab4
-C:   000006A1  A$MyLab4$2560                      MyLab4
-C:   000006A1  C$MyLab4.c$103$3$127               MyLab4
-C:   000006A3  A$MyLab4$2562                      MyLab4
-C:   000006A6  A$MyLab4$2563                      MyLab4
-C:   000006A8  A$MyLab4$2568                      MyLab4
-C:   000006A8  C$MyLab4.c$105$2$126               MyLab4
-C:   000006AA  A$MyLab4$2571                      MyLab4
-C:   000006AA  C$MyLab4.c$106$2$126               MyLab4
-C:   000006AB  A$MyLab4$2572                      MyLab4
-C:   000006AD  A$MyLab4$2573                      MyLab4
-C:   000006AF  A$MyLab4$2574                      MyLab4
-C:   000006B1  A$MyLab4$2575                      MyLab4
-C:   000006B3  A$MyLab4$2578                      MyLab4
-C:   000006B3  C$MyLab4.c$108$3$128               MyLab4
-C:   000006B6  A$MyLab4$2581                      MyLab4
-C:   000006B6  C$MyLab4.c$109$3$128               MyLab4
-C:   000006B9  A$MyLab4$2585                      MyLab4
-C:   000006B9  C$MyLab4.c$111$2$126               MyLab4
-C:   000006BB  A$MyLab4$2588                      MyLab4
-C:   000006BB  C$MyLab4.c$112$2$126               MyLab4
-C:   000006BC  A$MyLab4$2589                      MyLab4
-C:   000006BE  A$MyLab4$2590                      MyLab4
-C:   000006C1  A$MyLab4$2591                      MyLab4
+C:   00000657  A$MyLab4$2432                      MyLab4
+C:   00000659  A$MyLab4$2433                      MyLab4
+C:   0000065B  A$MyLab4$2434                      MyLab4
+C:   0000065D  A$MyLab4$2435                      MyLab4
+C:   0000065F  A$MyLab4$2436                      MyLab4
+C:   00000662  A$MyLab4$2437                      MyLab4
+C:   00000664  A$MyLab4$2438                      MyLab4
+C:   00000666  A$MyLab4$2439                      MyLab4
+C:   00000668  A$MyLab4$2443                      MyLab4
+C:   00000668  C$MyLab4.c$59$2$116                MyLab4
+C:   0000066A  A$MyLab4$2444                      MyLab4
+C:   0000066C  A$MyLab4$2445                      MyLab4
+C:   0000066D  A$MyLab4$2446                      MyLab4
+C:   0000066F  A$MyLab4$2447                      MyLab4
+C:   00000671  A$MyLab4$2448                      MyLab4
+C:   00000673  A$MyLab4$2449                      MyLab4
+C:   00000675  A$MyLab4$2452                      MyLab4
+C:   00000675  C$MyLab4.c$61$3$118                MyLab4
+C:   00000678  A$MyLab4$2455                      MyLab4
+C:   00000678  C$MyLab4.c$62$1$115                MyLab4
+C:   0000067B  A$MyLab4$2456                      MyLab4
+C:   0000067E  A$MyLab4$2457                      MyLab4
+C:   00000681  A$MyLab4$2458                      MyLab4
+C:   00000684  A$MyLab4$2459                      MyLab4
+C:   00000687  A$MyLab4$2460                      MyLab4
+C:   00000689  A$MyLab4$2461                      MyLab4
+C:   0000068B  A$MyLab4$2462                      MyLab4
+C:   0000068D  A$MyLab4$2463                      MyLab4
+C:   0000068F  A$MyLab4$2464                      MyLab4
+C:   00000691  A$MyLab4$2465                      MyLab4
+C:   00000693  A$MyLab4$2466                      MyLab4
+C:   00000695  A$MyLab4$2467                      MyLab4
+C:   00000697  A$MyLab4$2468                      MyLab4
+C:   00000699  A$MyLab4$2469                      MyLab4
+C:   0000069B  A$MyLab4$2470                      MyLab4
+C:   0000069E  A$MyLab4$2471                      MyLab4
+C:   000006A0  A$MyLab4$2472                      MyLab4
+C:   000006A2  A$MyLab4$2473                      MyLab4
+C:   000006A4  A$MyLab4$2476                      MyLab4
+C:   000006A4  C$MyLab4.c$65$3$118                MyLab4
+C:   000006A7  A$MyLab4$2477                      MyLab4
+C:   000006AA  A$MyLab4$2480                      MyLab4
+C:   000006AA  C$MyLab4.c$69$1$115                MyLab4
+C:   000006AA  XG$main$0$0                        MyLab4
+C:   000006AB  A$MyLab4$2493                      MyLab4
+C:   000006AB  C$MyLab4.c$72$1$115                MyLab4
+C:   000006AB  C$MyLab4.c$74$1$120                MyLab4
+C:   000006AB  G$Port_Init$0$0                    MyLab4
+C:   000006AB  _Port_Init                         MyLab4
+C:   000006AE  A$MyLab4$2496                      MyLab4
+C:   000006AE  C$MyLab4.c$75$1$120                MyLab4
 ASxxxx Linker V03.00 + NoICE + sdld,  page 49.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000B6    00000F92 =        3986. bytes (REL,CON,CODE)
+CSEG                                000000B6    00001199 =        4505. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   000006C4  A$MyLab4$2592                      MyLab4
-C:   000006C6  A$MyLab4$2593                      MyLab4
-C:   000006C8  A$MyLab4$2594                      MyLab4
-C:   000006CB  A$MyLab4$2598                      MyLab4
-C:   000006CB  C$MyLab4.c$113$2$126               MyLab4
-C:   000006CD  A$MyLab4$2601                      MyLab4
-C:   000006CD  C$MyLab4.c$114$2$126               MyLab4
-C:   000006CE  A$MyLab4$2602                      MyLab4
-C:   000006D0  A$MyLab4$2603                      MyLab4
-C:   000006D2  A$MyLab4$2604                      MyLab4
-C:   000006D4  A$MyLab4$2605                      MyLab4
-C:   000006D6  A$MyLab4$2608                      MyLab4
-C:   000006D6  C$MyLab4.c$116$3$129               MyLab4
-C:   000006D9  A$MyLab4$2611                      MyLab4
-C:   000006D9  C$MyLab4.c$117$3$129               MyLab4
-C:   000006DC  A$MyLab4$2612                      MyLab4
-C:   000006DE  A$MyLab4$2616                      MyLab4
-C:   000006DE  C$MyLab4.c$120$1$125               MyLab4
-C:   000006E1  A$MyLab4$2618                      MyLab4
-C:   000006E3  A$MyLab4$2619                      MyLab4
-C:   000006E5  A$MyLab4$2620                      MyLab4
-C:   000006E7  A$MyLab4$2623                      MyLab4
-C:   000006E7  C$MyLab4.c$121$1$125               MyLab4
-C:   000006E7  XG$PCA_ISR$0$0                     MyLab4
-C:   000006E8  A$MyLab4$2641                      MyLab4
-C:   000006E8  C$MyLab4.c$123$1$125               MyLab4
-C:   000006E8  C$MyLab4.c$126$1$131               MyLab4
-C:   000006E8  G$Pick_Heading$0$0                 MyLab4
-C:   000006E8  _Pick_Heading                      MyLab4
-C:   000006EB  A$MyLab4$2644                      MyLab4
-C:   000006EB  C$MyLab4.c$127$1$131               MyLab4
-C:   000006ED  A$MyLab4$2645                      MyLab4
-C:   000006EF  A$MyLab4$2646                      MyLab4
-C:   000006F1  A$MyLab4$2647                      MyLab4
-C:   000006F3  A$MyLab4$2648                      MyLab4
-C:   000006F5  A$MyLab4$2649                      MyLab4
-C:   000006F7  A$MyLab4$2650                      MyLab4
-C:   000006FA  A$MyLab4$2651                      MyLab4
-C:   000006FC  A$MyLab4$2652                      MyLab4
-C:   000006FE  A$MyLab4$2653                      MyLab4
-C:   00000700  A$MyLab4$2656                      MyLab4
-C:   00000700  C$MyLab4.c$128$1$131               MyLab4
-C:   00000703  A$MyLab4$2657                      MyLab4
-C:   00000706  A$MyLab4$2658                      MyLab4
-C:   00000708  A$MyLab4$2659                      MyLab4
-C:   0000070A  A$MyLab4$2662                      MyLab4
-C:   0000070A  C$MyLab4.c$129$1$131               MyLab4
-C:   0000070C  A$MyLab4$2663                      MyLab4
-C:   0000070E  A$MyLab4$2665                      MyLab4
-C:   0000070F  A$MyLab4$2666                      MyLab4
-C:   00000711  A$MyLab4$2667                      MyLab4
+C:   000006B1  A$MyLab4$2499                      MyLab4
+C:   000006B1  C$MyLab4.c$76$1$120                MyLab4
+C:   000006B4  A$MyLab4$2502                      MyLab4
+C:   000006B4  C$MyLab4.c$77$1$120                MyLab4
+C:   000006B6  A$MyLab4$2503                      MyLab4
+C:   000006B8  A$MyLab4$2504                      MyLab4
+C:   000006B9  A$MyLab4$2505                      MyLab4
+C:   000006BB  A$MyLab4$2508                      MyLab4
+C:   000006BB  C$MyLab4.c$78$1$120                MyLab4
+C:   000006BE  A$MyLab4$2511                      MyLab4
+C:   000006BE  C$MyLab4.c$79$1$120                MyLab4
+C:   000006C1  A$MyLab4$2514                      MyLab4
+C:   000006C1  C$MyLab4.c$80$1$120                MyLab4
+C:   000006C3  A$MyLab4$2515                      MyLab4
+C:   000006C5  A$MyLab4$2516                      MyLab4
+C:   000006C6  A$MyLab4$2517                      MyLab4
+C:   000006C8  A$MyLab4$2520                      MyLab4
+C:   000006C8  C$MyLab4.c$83$1$120                MyLab4
+C:   000006C8  XG$Port_Init$0$0                   MyLab4
+C:   000006C9  A$MyLab4$2533                      MyLab4
+C:   000006C9  C$MyLab4.c$85$1$120                MyLab4
+C:   000006C9  C$MyLab4.c$87$1$122                MyLab4
+C:   000006C9  G$Interrupt_Init$0$0               MyLab4
+C:   000006C9  _Interrupt_Init                    MyLab4
+C:   000006CC  A$MyLab4$2536                      MyLab4
+C:   000006CC  C$MyLab4.c$88$1$122                MyLab4
+C:   000006CF  A$MyLab4$2539                      MyLab4
+C:   000006CF  C$MyLab4.c$89$1$122                MyLab4
+C:   000006D1  A$MyLab4$2542                      MyLab4
+C:   000006D1  C$MyLab4.c$90$1$122                MyLab4
+C:   000006D1  XG$Interrupt_Init$0$0              MyLab4
+C:   000006D2  A$MyLab4$2555                      MyLab4
+C:   000006D2  C$MyLab4.c$92$1$122                MyLab4
+C:   000006D2  C$MyLab4.c$94$1$124                MyLab4
+C:   000006D2  G$PCA_Init$0$0                     MyLab4
+C:   000006D2  _PCA_Init                          MyLab4
+C:   000006D5  A$MyLab4$2558                      MyLab4
+C:   000006D5  C$MyLab4.c$95$1$124                MyLab4
+C:   000006D8  A$MyLab4$2561                      MyLab4
+C:   000006D8  C$MyLab4.c$96$1$124                MyLab4
+C:   000006DB  A$MyLab4$2564                      MyLab4
+C:   000006DB  C$MyLab4.c$97$1$124                MyLab4
+C:   000006DE  A$MyLab4$2567                      MyLab4
+C:   000006DE  C$MyLab4.c$98$1$124                MyLab4
+C:   000006DE  XG$PCA_Init$0$0                    MyLab4
+C:   000006DF  A$MyLab4$2580                      MyLab4
+C:   000006DF  C$MyLab4.c$100$1$124               MyLab4
+C:   000006DF  C$MyLab4.c$102$1$126               MyLab4
+C:   000006DF  G$SMB0_Init$0$0                    MyLab4
+C:   000006DF  _SMB0_Init                         MyLab4
+C:   000006E2  A$MyLab4$2583                      MyLab4
 ASxxxx Linker V03.00 + NoICE + sdld,  page 50.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000B6    00000F92 =        3986. bytes (REL,CON,CODE)
+CSEG                                000000B6    00001199 =        4505. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   00000712  A$MyLab4$2668                      MyLab4
-C:   00000714  A$MyLab4$2669                      MyLab4
-C:   00000716  A$MyLab4$2670                      MyLab4
-C:   00000719  A$MyLab4$2671                      MyLab4
-C:   0000071B  A$MyLab4$2672                      MyLab4
-C:   0000071D  A$MyLab4$2675                      MyLab4
-C:   0000071D  C$MyLab4.c$131$2$132               MyLab4
-C:   0000071E  A$MyLab4$2676                      MyLab4
-C:   00000720  A$MyLab4$2677                      MyLab4
-C:   00000721  A$MyLab4$2678                      MyLab4
-C:   00000722  A$MyLab4$2679                      MyLab4
-C:   00000724  A$MyLab4$2680                      MyLab4
-C:   00000725  A$MyLab4$2683                      MyLab4
-C:   00000725  C$MyLab4.c$133$1$131               MyLab4
-C:   00000727  A$MyLab4$2685                      MyLab4
-C:   00000729  A$MyLab4$2686                      MyLab4
-C:   0000072B  A$MyLab4$2687                      MyLab4
-C:   0000072D  A$MyLab4$2688                      MyLab4
-C:   0000072F  A$MyLab4$2690                      MyLab4
-C:   00000730  A$MyLab4$2691                      MyLab4
-C:   00000733  A$MyLab4$2694                      MyLab4
-C:   00000733  C$MyLab4.c$135$2$133               MyLab4
-C:   00000735  A$MyLab4$2695                      MyLab4
-C:   00000736  A$MyLab4$2696                      MyLab4
-C:   00000737  A$MyLab4$2697                      MyLab4
-C:   00000739  A$MyLab4$2698                      MyLab4
-C:   0000073A  A$MyLab4$2699                      MyLab4
-C:   0000073B  A$MyLab4$2700                      MyLab4
-C:   0000073D  A$MyLab4$2702                      MyLab4
-C:   0000073F  A$MyLab4$2703                      MyLab4
-C:   00000741  A$MyLab4$2706                      MyLab4
-C:   00000741  C$MyLab4.c$137$1$131               MyLab4
-C:   00000743  A$MyLab4$2707                      MyLab4
-C:   00000745  A$MyLab4$2708                      MyLab4
-C:   00000748  A$MyLab4$2709                      MyLab4
-C:   0000074A  A$MyLab4$2710                      MyLab4
-C:   0000074C  A$MyLab4$2713                      MyLab4
-C:   0000074C  C$MyLab4.c$138$1$131               MyLab4
-C:   0000074E  A$MyLab4$2714                      MyLab4
-C:   00000750  A$MyLab4$2717                      MyLab4
-C:   00000750  C$MyLab4.c$139$1$131               MyLab4
-C:   00000750  XG$Pick_Heading$0$0                MyLab4
-C:   00000751  A$MyLab4$2732                      MyLab4
-C:   00000751  C$MyLab4.c$141$1$131               MyLab4
-C:   00000751  C$MyLab4.c$144$1$135               MyLab4
-C:   00000751  G$Pick_Compass_Gain$0$0            MyLab4
-C:   00000751  _Pick_Compass_Gain                 MyLab4
-C:   00000754  A$MyLab4$2735                      MyLab4
-C:   00000754  C$MyLab4.c$145$1$135               MyLab4
-C:   00000756  A$MyLab4$2736                      MyLab4
-C:   00000758  A$MyLab4$2737                      MyLab4
+C:   000006E2  C$MyLab4.c$103$1$126               MyLab4
+C:   000006E4  A$MyLab4$2586                      MyLab4
+C:   000006E4  C$MyLab4.c$104$1$126               MyLab4
+C:   000006E4  XG$SMB0_Init$0$0                   MyLab4
+C:   000006E5  A$MyLab4$2597                      MyLab4
+C:   000006E5  C$MyLab4.c$106$1$126               MyLab4
+C:   000006E5  G$PCA_ISR$0$0                      MyLab4
+C:   000006E5  _PCA_ISR                           MyLab4
+C:   000006E7  A$MyLab4$2598                      MyLab4
+C:   000006E9  A$MyLab4$2599                      MyLab4
+C:   000006EB  A$MyLab4$2604                      MyLab4
+C:   000006EB  C$MyLab4.c$108$1$128               MyLab4
+C:   000006EB  C$MyLab4.c$110$2$129               MyLab4
+C:   000006EE  A$MyLab4$2605                      MyLab4
+C:   000006F0  A$MyLab4$2609                      MyLab4
+C:   000006F0  C$MyLab4.c$111$2$129               MyLab4
+C:   000006F2  A$MyLab4$2610                      MyLab4
+C:   000006F3  A$MyLab4$2611                      MyLab4
+C:   000006F6  A$MyLab4$2612                      MyLab4
+C:   000006F8  A$MyLab4$2616                      MyLab4
+C:   000006F8  C$MyLab4.c$112$2$129               MyLab4
+C:   000006FA  A$MyLab4$2617                      MyLab4
+C:   000006FB  A$MyLab4$2618                      MyLab4
+C:   000006FE  A$MyLab4$2619                      MyLab4
+C:   00000700  A$MyLab4$2623                      MyLab4
+C:   00000700  C$MyLab4.c$113$2$129               MyLab4
+C:   00000703  A$MyLab4$2624                      MyLab4
+C:   00000706  A$MyLab4$2627                      MyLab4
+C:   00000706  C$MyLab4.c$114$2$129               MyLab4
+C:   00000707  A$MyLab4$2628                      MyLab4
+C:   00000709  A$MyLab4$2629                      MyLab4
+C:   0000070B  A$MyLab4$2630                      MyLab4
+C:   0000070C  A$MyLab4$2631                      MyLab4
+C:   0000070E  A$MyLab4$2632                      MyLab4
+C:   00000710  A$MyLab4$2635                      MyLab4
+C:   00000710  C$MyLab4.c$116$3$130               MyLab4
+C:   00000711  A$MyLab4$2636                      MyLab4
+C:   00000713  A$MyLab4$2637                      MyLab4
+C:   00000715  A$MyLab4$2640                      MyLab4
+C:   00000715  C$MyLab4.c$117$3$130               MyLab4
+C:   00000717  A$MyLab4$2642                      MyLab4
+C:   0000071A  A$MyLab4$2643                      MyLab4
+C:   0000071C  A$MyLab4$2648                      MyLab4
+C:   0000071C  C$MyLab4.c$119$2$129               MyLab4
+C:   0000071E  A$MyLab4$2651                      MyLab4
+C:   0000071E  C$MyLab4.c$120$2$129               MyLab4
+C:   0000071F  A$MyLab4$2652                      MyLab4
+C:   00000721  A$MyLab4$2653                      MyLab4
+C:   00000723  A$MyLab4$2654                      MyLab4
+C:   00000725  A$MyLab4$2655                      MyLab4
+C:   00000727  A$MyLab4$2658                      MyLab4
 ASxxxx Linker V03.00 + NoICE + sdld,  page 51.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000B6    00000F92 =        3986. bytes (REL,CON,CODE)
+CSEG                                000000B6    00001199 =        4505. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   0000075A  A$MyLab4$2738                      MyLab4
-C:   0000075C  A$MyLab4$2739                      MyLab4
-C:   0000075E  A$MyLab4$2740                      MyLab4
-C:   00000760  A$MyLab4$2741                      MyLab4
-C:   00000763  A$MyLab4$2742                      MyLab4
-C:   00000765  A$MyLab4$2743                      MyLab4
-C:   00000767  A$MyLab4$2744                      MyLab4
-C:   00000769  A$MyLab4$2747                      MyLab4
-C:   00000769  C$MyLab4.c$146$1$135               MyLab4
-C:   0000076C  A$MyLab4$2748                      MyLab4
-C:   0000076F  A$MyLab4$2749                      MyLab4
-C:   00000771  A$MyLab4$2750                      MyLab4
-C:   00000773  A$MyLab4$2753                      MyLab4
-C:   00000773  C$MyLab4.c$147$1$135               MyLab4
-C:   00000775  A$MyLab4$2754                      MyLab4
-C:   00000777  A$MyLab4$2755                      MyLab4
-C:   0000077A  A$MyLab4$2756                      MyLab4
-C:   0000077C  A$MyLab4$2757                      MyLab4
-C:   0000077E  A$MyLab4$2760                      MyLab4
-C:   0000077E  C$MyLab4.c$148$1$135               MyLab4
-C:   00000781  A$MyLab4$2761                      MyLab4
-C:   00000784  A$MyLab4$2762                      MyLab4
-C:   00000786  A$MyLab4$2763                      MyLab4
-C:   00000788  A$MyLab4$2764                      MyLab4
-C:   0000078B  A$MyLab4$2765                      MyLab4
-C:   0000078E  A$MyLab4$2766                      MyLab4
-C:   00000791  A$MyLab4$2767                      MyLab4
-C:   00000794  A$MyLab4$2768                      MyLab4
-C:   00000797  A$MyLab4$2769                      MyLab4
-C:   00000799  A$MyLab4$2772                      MyLab4
-C:   00000799  C$MyLab4.c$149$1$135               MyLab4
-C:   00000799  XG$Pick_Compass_Gain$0$0           MyLab4
-C:   0000079A  A$MyLab4$2789                      MyLab4
-C:   0000079A  C$MyLab4.c$153$1$135               MyLab4
-C:   0000079A  C$MyLab4.c$158$1$137               MyLab4
-C:   0000079A  G$read_compass$0$0                 MyLab4
-C:   0000079A  _read_compass                      MyLab4
-C:   0000079D  A$MyLab4$2790                      MyLab4
-C:   000007A0  A$MyLab4$2791                      MyLab4
-C:   000007A3  A$MyLab4$2792                      MyLab4
-C:   000007A6  A$MyLab4$2793                      MyLab4
-C:   000007A9  A$MyLab4$2794                      MyLab4
-C:   000007AC  A$MyLab4$2795                      MyLab4
-C:   000007AF  A$MyLab4$2798                      MyLab4
-C:   000007AF  C$MyLab4.c$159$1$137               MyLab4
-C:   000007B1  A$MyLab4$2799                      MyLab4
-C:   000007B3  A$MyLab4$2800                      MyLab4
-C:   000007B5  A$MyLab4$2801                      MyLab4
-C:   000007B7  A$MyLab4$2802                      MyLab4
-C:   000007B8  A$MyLab4$2803                      MyLab4
-C:   000007B9  A$MyLab4$2804                      MyLab4
+C:   00000727  C$MyLab4.c$122$3$131               MyLab4
+C:   0000072A  A$MyLab4$2661                      MyLab4
+C:   0000072A  C$MyLab4.c$123$3$131               MyLab4
+C:   0000072D  A$MyLab4$2665                      MyLab4
+C:   0000072D  C$MyLab4.c$125$2$129               MyLab4
+C:   0000072F  A$MyLab4$2668                      MyLab4
+C:   0000072F  C$MyLab4.c$126$2$129               MyLab4
+C:   00000730  A$MyLab4$2669                      MyLab4
+C:   00000732  A$MyLab4$2670                      MyLab4
+C:   00000735  A$MyLab4$2671                      MyLab4
+C:   00000738  A$MyLab4$2672                      MyLab4
+C:   0000073A  A$MyLab4$2673                      MyLab4
+C:   0000073C  A$MyLab4$2674                      MyLab4
+C:   0000073F  A$MyLab4$2678                      MyLab4
+C:   0000073F  C$MyLab4.c$127$2$129               MyLab4
+C:   00000741  A$MyLab4$2681                      MyLab4
+C:   00000741  C$MyLab4.c$128$2$129               MyLab4
+C:   00000742  A$MyLab4$2682                      MyLab4
+C:   00000744  A$MyLab4$2683                      MyLab4
+C:   00000746  A$MyLab4$2684                      MyLab4
+C:   00000748  A$MyLab4$2685                      MyLab4
+C:   0000074A  A$MyLab4$2688                      MyLab4
+C:   0000074A  C$MyLab4.c$130$3$132               MyLab4
+C:   0000074D  A$MyLab4$2691                      MyLab4
+C:   0000074D  C$MyLab4.c$131$3$132               MyLab4
+C:   00000750  A$MyLab4$2692                      MyLab4
+C:   00000752  A$MyLab4$2696                      MyLab4
+C:   00000752  C$MyLab4.c$134$1$128               MyLab4
+C:   00000755  A$MyLab4$2698                      MyLab4
+C:   00000757  A$MyLab4$2699                      MyLab4
+C:   00000759  A$MyLab4$2700                      MyLab4
+C:   0000075B  A$MyLab4$2703                      MyLab4
+C:   0000075B  C$MyLab4.c$135$1$128               MyLab4
+C:   0000075B  XG$PCA_ISR$0$0                     MyLab4
+C:   0000075C  A$MyLab4$2721                      MyLab4
+C:   0000075C  C$MyLab4.c$137$1$128               MyLab4
+C:   0000075C  C$MyLab4.c$140$1$134               MyLab4
+C:   0000075C  G$Pick_Heading$0$0                 MyLab4
+C:   0000075C  _Pick_Heading                      MyLab4
+C:   0000075F  A$MyLab4$2724                      MyLab4
+C:   0000075F  C$MyLab4.c$141$1$134               MyLab4
+C:   00000761  A$MyLab4$2725                      MyLab4
+C:   00000763  A$MyLab4$2726                      MyLab4
+C:   00000765  A$MyLab4$2727                      MyLab4
+C:   00000767  A$MyLab4$2728                      MyLab4
+C:   00000769  A$MyLab4$2729                      MyLab4
+C:   0000076B  A$MyLab4$2730                      MyLab4
+C:   0000076E  A$MyLab4$2731                      MyLab4
+C:   00000770  A$MyLab4$2732                      MyLab4
+C:   00000772  A$MyLab4$2733                      MyLab4
+C:   00000774  A$MyLab4$2736                      MyLab4
 ASxxxx Linker V03.00 + NoICE + sdld,  page 52.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000B6    00000F92 =        3986. bytes (REL,CON,CODE)
+CSEG                                000000B6    00001199 =        4505. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   000007BB  A$MyLab4$2805                      MyLab4
-C:   000007BC  A$MyLab4$2806                      MyLab4
-C:   000007BD  A$MyLab4$2807                      MyLab4
-C:   000007BF  A$MyLab4$2812                      MyLab4
-C:   000007BF  C$MyLab4.c$160$1$137               MyLab4
-C:   000007BF  C$MyLab4.c$161$1$137               MyLab4
-C:   000007BF  XG$read_compass$0$0                MyLab4
-C:   000007C0  __gptrput                          _gptrput
-C:   000007DB  __mulint                           _mulint
-C:   000007DB  __mulint_dummy                     _mulint
-C:   00000868  _vsprintf                          sprintf
-C:   000008A5  _sprintf                           sprintf
-C:   000008F3  __divuint                          _divuint
-C:   0000091C  ___sint2fs                         _sint2fs
-C:   00000934  _vprintf                           vprintf
-C:   0000094D  _printf                            vprintf
-C:   00000A1F  __print_format                     printf_large
-C:   00000F29  _strlen                            _strlen
-C:   00000F41  __gptrget                          _gptrget
-C:   00000F5D  ___slong2fs                        _slong2fs
-C:   00000F66  slong2fs_doit                      _slong2fs
-C:   00000F8A  __divsint                          _divsint
-C:   00000FC2  fs_normalize_a                     _fsnormalize
-C:   00000FF5  __sdcc_external_startup            _startup
-C:   00000FF9  fs_round_and_return                _fsreturnval
-C:   00001011  fs_zerocheck_return                _fsreturnval
-C:   0000101A  fs_return_zero                     _fsreturnval
-C:   00001022  fs_direct_return                   _fsreturnval
-C:   00001030  fs_return_inf                      _fsreturnval
-C:   0000103D  fs_return_nan                      _fsreturnval
-
+C:   00000774  C$MyLab4.c$142$1$134               MyLab4
+C:   00000777  A$MyLab4$2737                      MyLab4
+C:   0000077A  A$MyLab4$2738                      MyLab4
+C:   0000077C  A$MyLab4$2739                      MyLab4
+C:   0000077E  A$MyLab4$2742                      MyLab4
+C:   0000077E  C$MyLab4.c$143$1$134               MyLab4
+C:   00000780  A$MyLab4$2743                      MyLab4
+C:   00000782  A$MyLab4$2745                      MyLab4
+C:   00000783  A$MyLab4$2746                      MyLab4
+C:   00000785  A$MyLab4$2747                      MyLab4
+C:   00000786  A$MyLab4$2748                      MyLab4
+C:   00000788  A$MyLab4$2749                      MyLab4
+C:   0000078A  A$MyLab4$2750                      MyLab4
+C:   0000078D  A$MyLab4$2751                      MyLab4
+C:   0000078F  A$MyLab4$2752                      MyLab4
+C:   00000791  A$MyLab4$2755                      MyLab4
+C:   00000791  C$MyLab4.c$145$2$135               MyLab4
+C:   00000792  A$MyLab4$2756                      MyLab4
+C:   00000794  A$MyLab4$2757                      MyLab4
+C:   00000795  A$MyLab4$2758                      MyLab4
+C:   00000796  A$MyLab4$2759                      MyLab4
+C:   00000798  A$MyLab4$2760                      MyLab4
+C:   00000799  A$MyLab4$2763                      MyLab4
+C:   00000799  C$MyLab4.c$147$1$134               MyLab4
+C:   0000079B  A$MyLab4$2765                      MyLab4
+C:   0000079D  A$MyLab4$2766                      MyLab4
+C:   0000079F  A$MyLab4$2767                      MyLab4
+C:   000007A1  A$MyLab4$2768                      MyLab4
+C:   000007A3  A$MyLab4$2770                      MyLab4
+C:   000007A4  A$MyLab4$2771                      MyLab4
+C:   000007A7  A$MyLab4$2774                      MyLab4
+C:   000007A7  C$MyLab4.c$149$2$136               MyLab4
+C:   000007A9  A$MyLab4$2775                      MyLab4
+C:   000007AA  A$MyLab4$2776                      MyLab4
+C:   000007AB  A$MyLab4$2777                      MyLab4
+C:   000007AD  A$MyLab4$2778                      MyLab4
+C:   000007AE  A$MyLab4$2779                      MyLab4
+C:   000007AF  A$MyLab4$2780                      MyLab4
+C:   000007B1  A$MyLab4$2782                      MyLab4
+C:   000007B3  A$MyLab4$2783                      MyLab4
+C:   000007B5  A$MyLab4$2786                      MyLab4
+C:   000007B5  C$MyLab4.c$151$1$134               MyLab4
+C:   000007B7  A$MyLab4$2787                      MyLab4
+C:   000007B9  A$MyLab4$2788                      MyLab4
+C:   000007BC  A$MyLab4$2789                      MyLab4
+C:   000007BE  A$MyLab4$2790                      MyLab4
+C:   000007C0  A$MyLab4$2793                      MyLab4
+C:   000007C0  C$MyLab4.c$152$1$134               MyLab4
+C:   000007C2  A$MyLab4$2794                      MyLab4
+C:   000007C4  A$MyLab4$2797                      MyLab4
+C:   000007C4  C$MyLab4.c$153$1$134               MyLab4
 ASxxxx Linker V03.00 + NoICE + sdld,  page 53.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CONST                               00001048    000000C1 =         193. bytes (REL,CON,CODE)
+CSEG                                000000B6    00001199 =        4505. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   00001048  FMyLab4$__str_0$0$0                MyLab4
-C:   0000105E  FMyLab4$__str_1$0$0                MyLab4
-C:   0000106E  FMyLab4$__str_2$0$0                MyLab4
-C:   00001071  FMyLab4$__str_3$0$0                MyLab4
-C:   0000107A  FMyLab4$__str_4$0$0                MyLab4
-C:   0000107F  FMyLab4$__str_5$0$0                MyLab4
-C:   00001091  FMyLab4$__str_6$0$0                MyLab4
-C:   000010AF  FMyLab4$__str_7$0$0                MyLab4
-C:   000010D8  FMyLab4$__str_8$0$0                MyLab4
+C:   000007C4  XG$Pick_Heading$0$0                MyLab4
+C:   000007C5  A$MyLab4$2812                      MyLab4
+C:   000007C5  C$MyLab4.c$155$1$134               MyLab4
+C:   000007C5  C$MyLab4.c$158$1$138               MyLab4
+C:   000007C5  G$Pick_Compass_Gain$0$0            MyLab4
+C:   000007C5  _Pick_Compass_Gain                 MyLab4
+C:   000007C8  A$MyLab4$2815                      MyLab4
+C:   000007C8  C$MyLab4.c$159$1$138               MyLab4
+C:   000007CA  A$MyLab4$2816                      MyLab4
+C:   000007CC  A$MyLab4$2817                      MyLab4
+C:   000007CE  A$MyLab4$2818                      MyLab4
+C:   000007D0  A$MyLab4$2819                      MyLab4
+C:   000007D2  A$MyLab4$2820                      MyLab4
+C:   000007D4  A$MyLab4$2821                      MyLab4
+C:   000007D7  A$MyLab4$2822                      MyLab4
+C:   000007D9  A$MyLab4$2823                      MyLab4
+C:   000007DB  A$MyLab4$2824                      MyLab4
+C:   000007DD  A$MyLab4$2827                      MyLab4
+C:   000007DD  C$MyLab4.c$160$1$138               MyLab4
+C:   000007E0  A$MyLab4$2828                      MyLab4
+C:   000007E3  A$MyLab4$2829                      MyLab4
+C:   000007E5  A$MyLab4$2830                      MyLab4
+C:   000007E7  A$MyLab4$2833                      MyLab4
+C:   000007E7  C$MyLab4.c$161$1$138               MyLab4
+C:   000007E9  A$MyLab4$2834                      MyLab4
+C:   000007EB  A$MyLab4$2835                      MyLab4
+C:   000007EE  A$MyLab4$2836                      MyLab4
+C:   000007F0  A$MyLab4$2837                      MyLab4
+C:   000007F2  A$MyLab4$2840                      MyLab4
+C:   000007F2  C$MyLab4.c$162$1$138               MyLab4
+C:   000007F5  A$MyLab4$2841                      MyLab4
+C:   000007F8  A$MyLab4$2842                      MyLab4
+C:   000007FA  A$MyLab4$2843                      MyLab4
+C:   000007FC  A$MyLab4$2844                      MyLab4
+C:   000007FF  A$MyLab4$2845                      MyLab4
+C:   00000802  A$MyLab4$2846                      MyLab4
+C:   00000805  A$MyLab4$2847                      MyLab4
+C:   00000808  A$MyLab4$2848                      MyLab4
+C:   0000080B  A$MyLab4$2849                      MyLab4
+C:   0000080D  A$MyLab4$2852                      MyLab4
+C:   0000080D  C$MyLab4.c$163$1$138               MyLab4
+C:   0000080D  XG$Pick_Compass_Gain$0$0           MyLab4
+C:   0000080E  A$MyLab4$2869                      MyLab4
+C:   0000080E  C$MyLab4.c$167$1$138               MyLab4
+C:   0000080E  C$MyLab4.c$172$1$140               MyLab4
+C:   0000080E  G$read_compass$0$0                 MyLab4
+C:   0000080E  _read_compass                      MyLab4
+C:   00000811  A$MyLab4$2870                      MyLab4
+C:   00000814  A$MyLab4$2871                      MyLab4
+C:   00000817  A$MyLab4$2872                      MyLab4
+C:   0000081A  A$MyLab4$2873                      MyLab4
 ASxxxx Linker V03.00 + NoICE + sdld,  page 54.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                000000B6    00001199 =        4505. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   0000081D  A$MyLab4$2874                      MyLab4
+C:   00000820  A$MyLab4$2875                      MyLab4
+C:   00000823  A$MyLab4$2878                      MyLab4
+C:   00000823  C$MyLab4.c$173$1$140               MyLab4
+C:   00000825  A$MyLab4$2879                      MyLab4
+C:   00000827  A$MyLab4$2880                      MyLab4
+C:   00000829  A$MyLab4$2881                      MyLab4
+C:   0000082B  A$MyLab4$2882                      MyLab4
+C:   0000082C  A$MyLab4$2883                      MyLab4
+C:   0000082D  A$MyLab4$2884                      MyLab4
+C:   0000082F  A$MyLab4$2885                      MyLab4
+C:   00000830  A$MyLab4$2886                      MyLab4
+C:   00000831  A$MyLab4$2887                      MyLab4
+C:   00000833  A$MyLab4$2892                      MyLab4
+C:   00000833  C$MyLab4.c$174$1$140               MyLab4
+C:   00000833  C$MyLab4.c$175$1$140               MyLab4
+C:   00000833  XG$read_compass$0$0                MyLab4
+C:   00000834  A$MyLab4$2905                      MyLab4
+C:   00000834  C$MyLab4.c$180$1$140               MyLab4
+C:   00000834  C$MyLab4.c$182$1$142               MyLab4
+C:   00000834  G$ADC_Init$0$0                     MyLab4
+C:   00000834  _ADC_Init                          MyLab4
+C:   00000837  A$MyLab4$2908                      MyLab4
+C:   00000837  C$MyLab4.c$183$1$142               MyLab4
+C:   0000083A  A$MyLab4$2911                      MyLab4
+C:   0000083A  C$MyLab4.c$184$1$142               MyLab4
+C:   0000083D  A$MyLab4$2914                      MyLab4
+C:   0000083D  C$MyLab4.c$185$1$142               MyLab4
+C:   0000083D  XG$ADC_Init$0$0                    MyLab4
+C:   0000083E  A$MyLab4$2927                      MyLab4
+C:   0000083E  C$MyLab4.c$189$1$142               MyLab4
+C:   0000083E  G$read_AD_input$0$0                MyLab4
+C:   0000083E  _read_AD_input                     MyLab4
+C:   00000841  A$MyLab4$2930                      MyLab4
+C:   00000841  C$MyLab4.c$192$1$144               MyLab4
+C:   00000843  A$MyLab4$2931                      MyLab4
+C:   00000845  A$MyLab4$2932                      MyLab4
+C:   00000846  A$MyLab4$2933                      MyLab4
+C:   00000848  A$MyLab4$2936                      MyLab4
+C:   00000848  C$MyLab4.c$193$1$144               MyLab4
+C:   0000084B  A$MyLab4$2940                      MyLab4
+C:   0000084B  C$MyLab4.c$195$1$144               MyLab4
+C:   0000084D  A$MyLab4$2941                      MyLab4
+C:   00000850  A$MyLab4$2944                      MyLab4
+C:   00000850  C$MyLab4.c$197$1$144               MyLab4
+C:   00000853  A$MyLab4$2947                      MyLab4
+C:   00000853  C$MyLab4.c$198$1$144               MyLab4
+C:   00000853  XG$read_AD_input$0$0               MyLab4
+C:   00000854  ___fsmul                           _fsmul
+C:   000008F7  fsgetargs                          _fsget2args
+C:   00000925  fs_normalize_a                     _fsnormalize
+ASxxxx Linker V03.00 + NoICE + sdld,  page 55.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                000000B6    00001199 =        4505. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000958  __gptrput                          _gptrput
+C:   00000973  __mulint                           _mulint
+C:   00000973  __mulint_dummy                     _mulint
+C:   00000A00  _vsprintf                          sprintf
+C:   00000A3D  _sprintf                           sprintf
+C:   00000A8B  __divuint                          _divuint
+C:   00000AB4  ___sint2fs                         _sint2fs
+C:   00000AC1  fs_round_and_return                _fsreturnval
+C:   00000AD9  fs_zerocheck_return                _fsreturnval
+C:   00000AE2  fs_return_zero                     _fsreturnval
+C:   00000AEA  fs_direct_return                   _fsreturnval
+C:   00000AF8  fs_return_inf                      _fsreturnval
+C:   00000B05  fs_return_nan                      _fsreturnval
+C:   00000B1B  _vprintf                           vprintf
+C:   00000B34  _printf                            vprintf
+C:   00000C06  __print_format                     printf_large
+C:   00001110  _strlen                            _strlen
+C:   00001128  __gptrget                          _gptrget
+C:   00001144  ___uchar2fs                        _uchar2fs
+C:   0000114F  ___fs2uchar                        _fs2uchar
+C:   00001157  ___slong2fs                        _slong2fs
+C:   00001160  slong2fs_doit                      _slong2fs
+C:   00001184  ___ulong2fs                        _ulong2fs
+C:   0000118D  ulong2fs_doit                      _ulong2fs
+C:   00001197  __divsint                          _divsint
+C:   000011CF  __sdcc_external_startup            _startup
+C:   000011D3  ___fs2ulong                        _fs2ulong
+C:   000011D5  fs2ulong_begin                     _fs2ulong
+C:   000011FA  fs_rshift_a                        _fsrshift
+C:   0000123D  fsgetarg                           _fsget1arg
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 56.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CONST                               0000124F    000000D9 =         217. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   0000124F  FMyLab4$__str_0$0$0                MyLab4
+C:   00001265  FMyLab4$__str_1$0$0                MyLab4
+C:   00001275  FMyLab4$__str_2$0$0                MyLab4
+C:   00001278  FMyLab4$__str_3$0$0                MyLab4
+C:   00001281  FMyLab4$__str_4$0$0                MyLab4
+C:   00001286  FMyLab4$__str_5$0$0                MyLab4
+C:   00001298  FMyLab4$__str_6$0$0                MyLab4
+C:   000012B0  FMyLab4$__str_7$0$0                MyLab4
+C:   000012CE  FMyLab4$__str_8$0$0                MyLab4
+C:   000012F7  FMyLab4$__str_9$0$0                MyLab4
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 57.
 
 Files Linked                              [ module(s) ]
 
-C:\Users\rutmas\Documents\LITEC\Lab 4\MyLab4\MyLab4.rel
+C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\MyLab4\MyLab4.rel
                                           [  ]
 
 
 Libraries Linked                          [ object file ]
 
+C:\Program Files (x86)\SDCC\bin\..\lib\small/libfloat.lib
+                                          [ _fsmul.rel ]
+C:\Program Files (x86)\SDCC\bin\..\lib\small/libfloat.lib
+                                          [ _fsget2args.rel ]
 C:\Program Files (x86)\SDCC\bin\..\lib\small/mcs51.lib
                                           [ crtclear.rel ]
+C:\Program Files (x86)\SDCC\bin\..\lib\small/libfloat.lib
+                                          [ _fsnormalize.rel ]
 C:\Program Files (x86)\SDCC\bin\..\lib\small/mcs51.lib
                                           [ crtxinit.rel ]
 C:\Program Files (x86)\SDCC\bin\..\lib\small/libsdcc.lib
@@ -2442,6 +2584,8 @@ C:\Program Files (x86)\SDCC\bin\..\lib\small/libint.lib
                                           [ _divuint.rel ]
 C:\Program Files (x86)\SDCC\bin\..\lib\small/libfloat.lib
                                           [ _sint2fs.rel ]
+C:\Program Files (x86)\SDCC\bin\..\lib\small/libfloat.lib
+                                          [ _fsreturnval.rel ]
 C:\Program Files (x86)\SDCC\bin\..\lib\small/libsdcc.lib
                                           [ _bp.rel ]
 C:\Program Files (x86)\SDCC\bin\..\lib\small/libsdcc.lib
@@ -2455,17 +2599,25 @@ C:\Program Files (x86)\SDCC\bin\..\lib\small/mcs51.lib
 C:\Program Files (x86)\SDCC\bin\..\lib\small/libsdcc.lib
                                           [ _gptrget.rel ]
 C:\Program Files (x86)\SDCC\bin\..\lib\small/libfloat.lib
+                                          [ _uchar2fs.rel ]
+C:\Program Files (x86)\SDCC\bin\..\lib\small/libfloat.lib
+                                          [ _fs2uchar.rel ]
+C:\Program Files (x86)\SDCC\bin\..\lib\small/libfloat.lib
                                           [ _slong2fs.rel ]
+C:\Program Files (x86)\SDCC\bin\..\lib\small/libfloat.lib
+                                          [ _ulong2fs.rel ]
 C:\Program Files (x86)\SDCC\bin\..\lib\small/libint.lib
                                           [ _divsint.rel ]
-C:\Program Files (x86)\SDCC\bin\..\lib\small/libfloat.lib
-                                          [ _fsnormalize.rel ]
 C:\Program Files (x86)\SDCC\bin\..\lib\small/libsdcc.lib
                                           [ _startup.rel ]
 C:\Program Files (x86)\SDCC\bin\..\lib\small/libfloat.lib
-                                          [ _fsreturnval.rel ]
+                                          [ _fs2ulong.rel ]
+C:\Program Files (x86)\SDCC\bin\..\lib\small/libfloat.lib
+                                          [ _fsrshift.rel ]
+C:\Program Files (x86)\SDCC\bin\..\lib\small/libfloat.lib
+                                          [ _fsget1arg.rel ]
 
-ASxxxx Linker V03.00 + NoICE + sdld,  page 55.
+ASxxxx Linker V03.00 + NoICE + sdld,  page 58.
 
 User Base Address Definitions
 
