@@ -35,6 +35,7 @@ int read_ranger(void);
 void set_COMPASS_PW(void);
 void set_range_adj(void);
 signed int compass_error(unsigned int heading);
+unsigned char read_AD_input(unsigned char n);
 
 // Global variables
 unsigned int Counts, nCounts, nOverflows;
@@ -42,7 +43,7 @@ unsigned int desired_heading;
 float compass_gain = 0;
 unsigned char h_count;
 unsigned char r_count;
-unsigned char heading_delay;
+unsigned char delay;
 unsigned char new_heading;
 unsigned char new_range;
 unsigned int heading;
@@ -53,6 +54,8 @@ __sbit __at 0xB6 RANGER_SWITCH;
 unsigned int range_adj = 0;
 unsigned int compass_adj = 0;
 unsigned char ranger_gain = 40;		// between 30 and 150
+unsigned char AD_Result;
+unsigned char voltage;
 
 //=============================================================================
 //-----------------------------------------------------------------------------
@@ -63,6 +66,7 @@ void main(void)
     Port_Init();    // Initialize ports 2 and 3 - XBR0 set to 0x05, UART0 & SMB
     Interrupt_Init();   // You may want to change XBR0 to match your SMB wiring
     PCA_Init();
+	ADC_Init();
     SMB0_Init();
     putchar('\r');  // Dummy write to serial port
     printf("\nStart\r\n");
@@ -77,8 +81,13 @@ void main(void)
 	printf("\rCompass Gain\rRanger Gain\r");
 	while (1)
     {
-		
-		if(new_heading && (heading_delay >= 5))
+		if(delay>=5) 	//delay so that we don't get spammed with print messages
+		{
+			AD_Result = read_AD_input(4); //Read analog input on pin 1.4
+			voltage = ((14.4/255)*AD_Result); //Convert back to input voltage
+			printf("\rBattery Voltage is %u\n", voltage);
+		}
+		if(new_heading && (delay >= 5))
 		{
 			heading = read_compass();
 			//printf("\rThe current direction is %u\n", heading/10);
@@ -105,9 +114,12 @@ void main(void)
 void Port_Init(void)	
 {
     XBR0 = 0x27;
-	P1MDOUT |= 0x01; //set output pin for CEX0 in push-pull mode
-	P3MDOUT &= 0x7F; // set input pin for 3.7 to open-drain
-	P3		|= ~0x7F;// set input pin for 3.7 to high impedence
+	P1MDOUT |= 0x01;	//set output pin for CEX0 in push-pull mode
+	P3MDOUT &= 0x7F;	// set input pin for 3.7 to open-drain
+	P3		|= ~0x7F;	// set input pin for 3.7 to high impedence
+	P1MDIN 	&= 0xF7;	// set pin 1.3 for analog input
+	P1MDOUT &= 0xF7;	// set input pin for 1.3 to open-drain
+	P1		|= ~0xF7;	// set input pin for 1.3 to high impedence
 }                   
 
 //-----------------------------------------------------------------------------
@@ -158,8 +170,8 @@ void PCA_ISR(void) __interrupt 9
 			new_heading=1;
 			h_count = 0;
 		}
-		heading_delay++;
-		if(heading_delay>5) heading_delay=0;
+		delay++;
+		if(delay>5) delay=0;
 		r_count++;
 		if (r_count>=4)
 		{
@@ -168,6 +180,29 @@ void PCA_ISR(void) __interrupt 9
 		}
      }
      else PCA0CN &= 0xC0;           // clear all other 9-type interrupts
+}
+
+//-------------------------------------------------------------------------------
+// Analog/Digital Conversion Initialization
+
+void ADC_Init(void)
+{
+	REF0CN = 0x03; // Set Vref to use internal reference voltage (2.4 V)
+	ADC1CN = 0x80; // Enable A/D converter (ADC1)
+	ADC1CF |= 0x01; // Set A/D converter gain to 1
+}
+
+//-------------------------------------------------------------------------------
+// Analog/Digital Conversion Function
+unsigned char read_AD_input(unsigned char n)
+{
+	AMX1SL = n; // Set P1.n as the analog input for ADC1
+	ADC1CN = ADC1CN & ~0x20; // Clear the "Conversion Completed" flag
+	ADC1CN = ADC1CN | 0x10; // Initiate A/D conversion
+
+	while ((ADC1CN & 0x20) == 0x00);// Wait for conversion to complete
+
+	return ADC1; // Return digital value in ADC1 register
 }
 
 //-----------------------------------------------------------------------------
