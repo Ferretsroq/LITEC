@@ -29,9 +29,12 @@ void Interrupt_Init(void);
 void PCA_ISR(void) __interrupt 9;
 void Pick_Heading(void);
 void Pick_Compass_Gain(void);
+char Pick_Ranger_Gain(void);
 int read_compass(void);
 int read_ranger(void);
 void set_COMPASS_PW(void);
+void set_range_adj(void);
+signed int compass_error(unsigned int heading);
 
 // Global variables
 unsigned int Counts, nCounts, nOverflows;
@@ -70,13 +73,15 @@ void main(void)
 	printf("\rWe get this far\n");
 	Pick_Heading();
 	Pick_Compass_Gain();
+	printf("\n\r------------DATA COLLECTION------------\n");
+	printf("\rCompass Gain\rRanger Gain\r");
 	while (1)
     {
 		
 		if(new_heading && (heading_delay >= 5))
 		{
 			heading = read_compass();
-			printf("\rThe current direction is %u\n", heading/10);
+			//printf("\rThe current direction is %u\n", heading/10);
 			//PW = ; // Adjust pulsewidth based on error function
 			//PCA0CP0 = 0xFFFF - PW; // Change pulse width
 			new_heading = 0;
@@ -88,15 +93,18 @@ void main(void)
 			new_range = 0;
 			r_count = 0;
 		}
+		// Output the results for transfer into excel
+		
     }
 	
 }
+
 //*****************************************************************************
 //-----------------------------------------------------------------------------
 // Set up ports for input and output
 void Port_Init(void)	
 {
-    XBR0 = 0x27;    
+    XBR0 = 0x27;
 	P1MDOUT |= 0x01; //set output pin for CEX0 in push-pull mode
 	P3MDOUT &= 0x7F; // set input pin for 3.7 to open-drain
 	P3		|= ~0x7F;// set input pin for 3.7 to high impedence
@@ -220,18 +228,44 @@ int read_ranger(void)
 }
 
 //-----------------------------------------------------------------------------
-signed int ranger_error(unsigned int range)
+// if new data, set value to adjust steering PWM
+void set_range_adj(void)
+{
+	// range is the value from the ultrasonic ranger
+	if (range > MAX_RANGE)
+	{
+		range_adj = 0; //no obstacle in range, no change
+	}
+	else
+	{
+		range_adj = (int)(Pick_Ranger_Gain() * (MAX_RANGE - range)); //find adjustment
+	}
+}
+
+//-----------------------------------------------------------------------------
+char Pick_Ranger_Gain(void)
+{
+	char input_gain;
+	printf("\rInput desired steering gain on keypad.\n");
+	printf("\rAny number below 0 will be interpreted as 1.\n");
+	input_gain = kpd_input(1);
+	if(input_gain <= 0) input_gain = 1;
+	printf("\rDesired gain is %u", input_gain);
+	return input_gain;
+}
+
+//-----------------------------------------------------------------------------
+signed int compass_error(unsigned int heading)
 {
 	signed int Error = 0;
 	unsigned int PWMe = 0;
-	unsigned char k = 20;	//Gain constant
-	Error = (desired_range) - range;	// Calculate the error
-	PWMe = RANGER_CENTER + (k*Error);
-	if(PWMe < RANGER_MIN) PWMe = RANGER_MIN;
-	if(PWMe > RANGER_MAX) PWMe = RANGER_MAX;
-	if((-5<Error) && (Error<5)) PWMe = RANGER_CENTER;
-	// PW_CENTER is the motor in a neutral position. This is so that we don't 
-	// damage the motor by switching directions too quickly.
+	unsigned char k = 1;				//Gain constant. Higher numbers turn more, lower numbers turn less.
+	Error = (desired_heading) - heading;	//Calculate the error
+	if(Error < 1800) Error = Error + 3600;	//Adjust the Error for +/- 180 degrees
+	if(Error > 1800) Error = Error - 3600;
+	PWMe = COMPASS_CENTER + (k*Error);
+	if(PWMe < COMPASS_MIN) PWMe = COMPASS_MIN;
+	if(PWMe > COMPASS_MAX) PWMe = COMPASS_MAX;
 	return PWMe;
 }
 
@@ -245,9 +279,9 @@ void set_COMPASS_PW(void)
 	}
 	else
 	{
-		range_adj = (int)(ranger_gain * (MAX_RANGE – range)); //find adjustment
+		range_adj = (int)(ranger_gain * (MAX_RANGE - range)); //find adjustment
 	}
 	// compass_adj is the compass heading error multiplied by its error gain
-	compass_adj = (int)((compass_error(heading))*(Pick_Compass_Gain()));
+	compass_adj = (int)((compass_error(heading))*(compass_gain));
 	COMPASS_PW = COMPASS_CENTER + compass_adj + range_adj; //use both to adjust steering
 }
