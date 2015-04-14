@@ -1,0 +1,161 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <c8051_SDCC.h> // Include files. This file is available online in LMS
+#include <i2c.h>        // Get from LMS, THIS MUST BE INCLUDED AFTER stdio.h
+#define PCA_START 28672 // 28672 for exactly 20ms
+//-----------------------------------------------------------------------------
+// Function Prototypes
+//-----------------------------------------------------------------------------
+void Port_Init(void);   // Initialize ports for input and output
+void Interrupt_Init(void);
+void PCA_Init(void);
+void SMB0_Init(void);
+void PCA_ISR(void) __interrupt 9;
+void Pick_Heading(void);
+void Pick_Compass_Gain(void);
+int read_compass(void);
+
+// Global variables
+unsigned int Counts, nCounts, nOverflows;
+unsigned int desired_heading;
+float compass_gain = 0;
+char h_count;
+char r_count;
+char heading_delay;
+char new_heading;
+char new_range;
+int heading; 
+int PW;
+
+//*****************************************************************************
+void main(void)
+{
+    Sys_Init();     // System Initialization - MUST BE 1st EXECUTABLE STATEMENT
+    Port_Init();    // Initialize ports 2 and 3 - XBR0 set to 0x05, UART0 & SMB
+    Interrupt_Init();   // You may want to change XBR0 to match your SMB wiring
+    PCA_Init();
+    SMB0_Init();
+    putchar('\r');  // Dummy write to serial port
+    printf("\nStart\r\n");
+	lcd_clear();
+    Counts = 0;
+    while (Counts < 1) printf("\r%u\n", nCounts); // Wait a long time (1s) for keypad & LCD to initialize
+    lcd_clear();
+	printf("\rWe get this far\n");
+	Pick_Heading();
+	Pick_Compass_Gain();
+	while (1)
+    {
+		
+		if(new_heading && (heading_delay >= 5))
+		{
+			heading = read_compass();
+			printf("\rThe current direction is %u\n", heading/10);
+			//PW = ; // Adjust pulsewidth based on error function
+			//PCA0CP0 = 0xFFFF - PW; // Change pulse width
+			new_heading = 0;
+		}
+    }
+	
+}
+//*****************************************************************************
+
+void Port_Init(void)	
+{
+    XBR0 = 0x27;    
+	P1MDOUT |= 0x01; //set output pin for CEX0 in push-pull mode
+	P3MDOUT &= 0x7F; // set input pin for 3.7 to open-drain
+	P3		|= ~0x7F;// set input pin for 3.7 to high impedence
+}                   
+
+void Interrupt_Init(void)
+{
+    IE |= 0x02;
+    EIE1 |= 0x08;
+    EA = 1;
+}
+
+void PCA_Init(void)
+{
+    PCA0MD = 0x81;      // SYSCLK/12, enable CF interrupts, suspend when idle
+    PCA0CPM0 = 0xC2;    // 16 bit, enable compare, enable PWM; NOT USED HERE
+	PCA0CPM2 = 0xC2;
+    PCA0CN |= 0x40;     // enable PCA
+}
+
+void SMB0_Init(void)    // This was at the top, moved it here to call wait()
+{
+    SMB0CR = 0x93;      // Set SCL to 100KHz
+    ENSMB = 1;          // Enable SMBUS0
+}
+
+void PCA_ISR(void) __interrupt 9
+{
+    if (CF)
+    {
+        CF = 0;                     // clear the interrupt flag
+        nOverflows++;               // continuous overflow counter
+        nCounts++;
+        PCA0 = PCA_START;
+        if (nCounts > 50)
+        {
+            nCounts = 0;
+            Counts++;               // seconds counter
+        }
+		h_count++;
+		if (h_count>=2)
+		{
+			new_heading=1;
+			h_count = 0;
+		}
+		heading_delay++;
+		if(heading_delay>5) heading_delay=0;
+		r_count++;
+		if (r_count>=4)
+		{
+			new_range = 1;
+			r_count = 0;
+		}
+     }
+     else PCA0CN &= 0xC0;           // clear all other 9-type interrupts
+}
+
+void Pick_Heading(void)
+{
+	int user_heading;
+	lcd_clear();
+	lcd_print("\rEnter desired heading for the compass.\n");
+	user_heading = kpd_input(1);
+	while(user_heading > 3600) //Headings must be between 0 and 3600
+	{
+		user_heading -= 3600;
+	}
+	while(user_heading < 0)
+	{
+		user_heading += 3600;
+	}
+	lcd_clear();
+	desired_heading = user_heading;
+}
+
+void Pick_Compass_Gain(void)
+{
+	int user_gain;
+	lcd_clear();
+	lcd_print("\rEnter desired gain for the compass.\n");
+	user_gain = kpd_input(1);
+	lcd_clear();
+	compass_gain = ((user_gain)/1000);
+}
+
+//-------------------------------------------------------------------------------
+// Compass Reading Function
+int read_compass(void)
+{
+	unsigned char addr = 0xC0; // the address of the sensor, 0xC0 for the compass
+	unsigned char Data[2]; // Data is an array with a length of 2
+	unsigned int read_heading; // the heading returned in degrees between 0 and 3599
+	i2c_read_data(addr, 2, Data, 2); // read two byte, starting at reg 2
+	read_heading =(((unsigned int)Data[0] << 8) | Data[1]); //combine the two values
+	return read_heading; // the heading returned in degrees between 0 and 3599
+}
