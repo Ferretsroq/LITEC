@@ -23,13 +23,16 @@ void ADC_Init(void);
 void Interrupt_Init(void);
 void PCA_ISR(void) __interrupt 9;
 int read_compass(void);
-void set_servo_PWM(void);
+void set_compass_PWM(void);
 int read_ranger(void); // new feature - read value, and then start a new ping
-void set_drive_PWM(void);
+// void set_ranger_PWM(void);   <-- uhh is this used?
 int pick_heading(void); // function which allow operator to pick desired heading
-signed int servo_error(unsigned int heading);
-signed int motor_error(unsigned int range);
-char heading_gain(void);
+signed int compass_error(unsigned int heading);
+signed int ranger_error(unsigned int range);
+char Pick_Ranger_Gain(void);
+char Pick_Compass_Gain(void);
+void set_COMPASS_PW(void);
+
 
 //-----------------------------------------------------------------------------
 // Define global variables
@@ -54,6 +57,9 @@ unsigned int COMPASS_PW;
 unsigned int RANGER_PW;
 __sbit __at 0xB7 COMPASS_SWITCH;
 __sbit __at 0xB6 RANGER_SWITCH;
+unsigned int range_adj = 0;
+unsigned int compass_adj = 0;
+
 
 //=============================================================================
 //-----------------------------------------------------------------------------
@@ -81,14 +87,12 @@ void main(void)
 		}
 		if (new_heading) // enough overflows for a new heading
 		{
-			heading = read_compass();
-			set_servo_PWM(); // if new data, adjust servo PWM for compass & ranger
+			set_COMPASS_PWM(); // if new data, adjust servo PWM for compass & ranger
 			new_heading = 0;
 			h_count = 0;
 		}
 		if (new_range) // enough overflow for a new range
 		{
-			range = read_ranger(); // get range
 			// read_range must start a new ping after a read
 			set_range_adj(); // if new data, set value to adjust steering PWM
 			new_range = 0;
@@ -182,13 +186,13 @@ int read_compass(void)
 }
 
 //-----------------------------------------------------------------------------
-void set_servo_PWM(void)
+void set_servo_PWM(void) // steering
 {
 	if(new_heading && (heading_delay>=5))
 		{		
 			heading = read_compass();
 			printf("\rThe current direction is %u\n", heading/10);
-			COMPASS_PW = servo_error(heading); // Adjust pulsewidth based on error function
+			COMPASS_PW = compass_error(heading); // Adjust pulsewidth based on error function
 			PCA0CP0 = 0xFFFF - COMPASS_PW; // Change pulse width
 			new_heading = 0;
 		}
@@ -208,8 +212,9 @@ int read_ranger(void)
 	return range;
 }
 
+/*
 //-----------------------------------------------------------------------------
-void set_drive_PWM(void)
+void set_ranger_PWM(void) // motor
 {
 	if(new_range)
 		{
@@ -218,11 +223,12 @@ void set_drive_PWM(void)
 			printf("\rThe range is %u cm\n",range);
 			printf("\rPW is %u\n", RANGER_PW);
 		}
-	RANGER_PW = motor_error(range);	//Adjust Pulsewidth for motor control
+	RANGER_PW = ranger_error(range);	//Adjust Pulsewidth for motor control
 	if(RANGER_PW > RANGER_MAX) RANGER_PW = RANGER_MAX;
 	if(RANGER_PW < RANGER_MIN) RANGER_PW = RANGER_MIN;
 	PCA0CP2 = 0xFFFF - RANGER_PW;	
 }
+*/
 
 //-----------------------------------------------------------------------------
 // function which allow operator to pick desired heading
@@ -237,7 +243,8 @@ int pick_heading(void)
 	return input_heading;
 }
 
-signed int servo_error(unsigned int heading)
+//-----------------------------------------------------------------------------
+signed int compass_error(unsigned int heading)
 {
 	signed int Error = 0;
 	unsigned int PWMe = 0;
@@ -251,7 +258,8 @@ signed int servo_error(unsigned int heading)
 	return PWMe;
 }
 
-signed int motor_error(unsigned int range)
+//-----------------------------------------------------------------------------
+signed int ranger_error(unsigned int range)
 {
 	signed int Error = 0;
 	unsigned int PWMe = 0;
@@ -266,7 +274,8 @@ signed int motor_error(unsigned int range)
 	return PWMe;
 }
 
-char steering_gain(void)
+//-----------------------------------------------------------------------------
+char Pick_Ranger_Gain(void)
 {
 	char input_gain;
 	printf("\rInput desired steering gain on keypad.\n");
@@ -275,4 +284,21 @@ char steering_gain(void)
 	if(input_gain <= 0) input_gain = 1;
 	printf("\rDesired gain is %u", input_gain);
 	return input_gain;
+}
+
+//-----------------------------------------------------------------------------
+void set_COMPASS_PW(void)
+{
+	// range is the value from the ultrasonic ranger
+	if (range > MAX_RANGE)
+	{
+		range_adj = 0; //no obstacle in range, no change
+	}
+	else
+	{
+		range_adj = (int)(Pick_Ranger_Gain() * (MAX_RANGE – range)); //find adjustment
+	}
+	// compass_adj is the compass heading error multiplied by its error gain
+	compass_adj = (int)((compass_error(heading))*(Pick_Compass_Gain));
+	COMPASS_PW = COMPASS_CENTER + compass_adj + range_adj; //use both to adjust steering
 }
