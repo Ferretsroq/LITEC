@@ -1,2 +1,3 @@
-+ C:\PROGRA~2\SDCC\bin\sdcpp.exe -nostdinc -Wall -I"C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code" -obj-ext=.rel -D__SDCC_MODEL_SMALL -DSDCC_MODEL_SMALL -D__SDCC_FLOAT_REENT -DSDCC_FLOAT_REENT -D__SDCC=3_4_0 -DSDCC=340 -D__SDCC_REVISION=8981 -DSDCC_REVISION=8981 -D__SDCC_mcs51 -DSDCC_mcs51 -D__mcs51 -D__STDC_NO_COMPLEX__ -D__STDC_NO_THREADS__ -D__STDC_NO_ATOMICS__ -D__STDC_NO_VLA__ -isystem "C:\Program Files (x86)\SDCC\bin\..\include\mcs51" -isystem "C:\Program Files (x86)\SDCC\bin\..\include"  "C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c" 
-+ C:\PROGRA~2\SDCC\bin\sdas8051.exe -plosgffwy "SooooLab_4.rel" "SooooLab_4".asm
+?ASlink-Error-<cannot open> : "C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\Lab 4 Code\SooooLab_4.rel"
++ C:\PROGRA~2\SDCC\bin\sdld.exe -nf "C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.lk"
++ C:\PROGRA~2\SDCC\bin\sdld.exe -nf "C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.lk" returned errorcode 3

@@ -1,1 +1,4 @@
+
+?ASlink-Warning-Undefined Global '_Pick_Ranger_Gain' referenced by module 'SooooLab_4'
 + C:\PROGRA~2\SDCC\bin\sdld.exe -nf "C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\SooooLab_4.lk"
++ C:\PROGRA~2\SDCC\bin\sdld.exe -nf "C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\SooooLab_4.lk" returned errorcode 2

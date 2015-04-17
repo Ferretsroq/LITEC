@@ -1,5 +1,5 @@
 -muwx
--i C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\SooooLab_4.hex
+-i C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.hex
 -M
 -Y
 -y
@@ -14,6 +14,6 @@
 -l libint
 -l liblong
 -l libfloat
-C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.rel
+C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.rel
 
 -e

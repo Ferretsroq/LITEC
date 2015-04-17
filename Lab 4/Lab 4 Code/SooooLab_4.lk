@@ -1,0 +1,20 @@
+-muwx
+-i C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.hex
+-M
+-Y
+-y
+-b HOME = 0x0000
+-b XSEG = 0x0001
+-b PSEG = 0x0001
+-b ISEG = 0x0000
+-b BSEG = 0x0000
+-k C:\Program Files (x86)\SDCC\bin\..\lib\small
+-l mcs51
+-l libsdcc
+-l libint
+-l liblong
+-l libfloat
+C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.rel
+C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\Lab 4 Code\SooooLab_4.rel
+
+-e

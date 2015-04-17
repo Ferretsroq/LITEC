@@ -72,21 +72,25 @@ void main(void)
     printf("\nStart\r\n");
 	lcd_clear();
     Counts = 0;
-    while (Counts < 1) printf("\r%u\n", nCounts); // Wait a long time (1s) for keypad & LCD to initialize
+    while (Counts < 1); //printf("\r%u\n", nCounts); // Wait a long time (1s) for keypad & LCD to initialize
     lcd_clear();
-	printf("\rWe get this far\n");
+	//printf("\rWe get this far\n");
+	printf("\n\rPlease input data on the LCD.\n");
 	Pick_Heading();
 	Pick_Compass_Gain();
 	printf("\n\r------------DATA COLLECTION------------\n");
 	printf("\rCompass Gain\rRanger Gain\r");
 	while (1)
     {
+		printf("\r::::::HI:::::::\n");
+		/*
 		if(delay>=5) 	//delay so that we don't get spammed with print messages
 		{
 			AD_Result = read_AD_input(4); //Read analog input on pin 1.4
 			voltage = ((14.4/255)*AD_Result); //Convert back to input voltage
 			printf("\rBattery Voltage is %u\n", voltage);
 		}
+		*/
 		if(new_heading && (delay >= 5))
 		{
 			heading = read_compass();
@@ -103,9 +107,7 @@ void main(void)
 			r_count = 0;
 		}
 		// Output the results for transfer into excel
-		
-    }
-	
+    }	
 }
 
 //*****************************************************************************
@@ -223,6 +225,7 @@ void Pick_Heading(void)
 	}
 	lcd_clear();
 	desired_heading = user_heading;
+	printf("\rPick_Heading verified\n");
 }
 
 //-----------------------------------------------------------------------------
@@ -234,6 +237,7 @@ void Pick_Compass_Gain(void)
 	user_gain = kpd_input(1);
 	lcd_clear();
 	compass_gain = ((user_gain)/1000);
+	printf("\rPick_Compass_Gain verified\n");
 }
 
 //-------------------------------------------------------------------------------
@@ -277,6 +281,7 @@ void set_range_adj(void)
 	}
 }
 
+/*
 //-----------------------------------------------------------------------------
 char Pick_Ranger_Gain(void)
 {
@@ -288,6 +293,7 @@ char Pick_Ranger_Gain(void)
 	printf("\rDesired gain is %u", input_gain);
 	return input_gain;
 }
+*/
 
 //-----------------------------------------------------------------------------
 signed int compass_error(unsigned int heading)

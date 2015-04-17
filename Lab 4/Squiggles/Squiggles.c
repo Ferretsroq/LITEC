@@ -71,43 +71,77 @@ void main(void)
     putchar('\r');  // Dummy write to serial port
     printf("\nStart\r\n");
 	lcd_clear();
-    Counts = 0;
+	Counts = 0;
     while (Counts < 1); //printf("\r%u\n", nCounts); // Wait a long time (1s) for keypad & LCD to initialize
     lcd_clear();
+//    printf("\rDude we cleared it AGAIN WOW MAGIC\n");
 	//printf("\rWe get this far\n");
 	printf("\n\rPlease input data on the LCD.\n");
 	Pick_Heading();
 	Pick_Compass_Gain();
 	printf("\n\r------------DATA COLLECTION------------\n");
-	printf("\rCompass Gain\rRanger Gain\r");
+	//printf("\rCompass Gain\rRanger Gain\r");
 	while (1)
     {
-		printf("\r::::::HI:::::::\n");
-		/*
-		if(delay>=5) 	//delay so that we don't get spammed with print messages
+	//	printf("\r::::::HI:::::::\n");
+	//	printf("\rDelay: %u\n", delay);
+		if (new_range) // enough overflow for a new range
+		{
+			range = read_ranger();
+			printf("\rRange: %u\n", range);
+			// read_range must start a new ping after a read
+			printf("\rhere goes nothing\n");	
+			set_range_adj(); // if new data, set value to adjust steering PWM
+			printf("\rmission successful\n");
+			new_range = 0;
+			r_count = 0;
+		}
+		if(delay == 10) 	//delay so that we don't get spammed with print messages
 		{
 			AD_Result = read_AD_input(4); //Read analog input on pin 1.4
 			voltage = ((14.4/255)*AD_Result); //Convert back to input voltage
 			printf("\rBattery Voltage is %u\n", voltage);
+			if(new_heading)
+			{
+				heading = read_compass();
+				printf("\rThe current direction is %u\n", heading/10);
+				//printf("\rayyy lmao\n");
+				//set_COMPASS_PW(); // Adjust pulsewidth based on error function
+				//printf("\rayyyyyyyyyyyyyyyyyyyy lmaooooooooo\n");
+				//PCA0CP0 = 0xFFFF - COMPASS_PW; // Change pulse width
+			//	printf("\rNAILED IT\n");
+				new_heading = 0;
+			//	printf("\rSUCH PRO\n");
+			}		
+
 		}
-		*/
-		if(new_heading && (delay >= 5))
+//		printf("\rGood thing this no longer nonexistant code works okay\n");
+		
+		/*
+		if(new_heading && (delay == 5))
 		{
 			heading = read_compass();
-			//printf("\rThe current direction is %u\n", heading/10);
-			//PW = ; // Adjust pulsewidth based on error function
-			//PCA0CP0 = 0xFFFF - PW; // Change pulse width
+			printf("\rThe current direction is %u\n", heading/10);
+			//set_COMPASS_PW(); // Adjust pulsewidth based on error function
+			//PCA0CP0 = 0xFFFF - COMPASS_PW; // Change pulse width
 			new_heading = 0;
 		}
-		if (new_range) // enough overflow for a new range
+		*/
+
+		//printf("\rJust finished testing the new_heading code\n");
+		/*if (new_range) // enough overflow for a new range
 		{
+			range = read_ranger();
 			// read_range must start a new ping after a read
+			//printf("\rhere goes nothing\n");
 			set_range_adj(); // if new data, set value to adjust steering PWM
+			//printf("\rmission successful\n");
 			new_range = 0;
 			r_count = 0;
-		}
+		}*/
+		//printf("\r::::::SEE YA:::::::\n");
 		// Output the results for transfer into excel
-    }	
+    }
 }
 
 //*****************************************************************************
@@ -116,12 +150,13 @@ void main(void)
 void Port_Init(void)	
 {
     XBR0 = 0x27;
-	P1MDOUT |= 0x01;	//set output pin for CEX0 in push-pull mode
-	P3MDOUT &= 0x7F;	// set input pin for 3.7 to open-drain
-	P3		|= ~0x7F;	// set input pin for 3.7 to high impedence
-	P1MDIN 	&= 0xF7;	// set pin 1.3 for analog input
+	P1MDIN 	&= 0xF7;	// set pin 1.3 for analog input	
+	P1MDOUT |= 0x05;	//set output pin for CEX0 in push-pull mode
 	P1MDOUT &= 0xF7;	// set input pin for 1.3 to open-drain
 	P1		|= ~0xF7;	// set input pin for 1.3 to high impedence
+	P3MDOUT &= 0x7F;	// set input pin for 3.7 to open-drain
+	P3		|= ~0x7F;	// set input pin for 3.7 to high impedence
+	
 }                   
 
 //-----------------------------------------------------------------------------
@@ -173,7 +208,7 @@ void PCA_ISR(void) __interrupt 9
 			h_count = 0;
 		}
 		delay++;
-		if(delay>5) delay=0;
+		if(delay == 11) delay=0;
 		r_count++;
 		if (r_count>=4)
 		{
@@ -236,7 +271,7 @@ void Pick_Compass_Gain(void)
 	lcd_print("\rEnter desired gain for the compass.\n");
 	user_gain = kpd_input(1);
 	lcd_clear();
-	compass_gain = ((user_gain)/1000);
+	compass_gain = (float)((user_gain)/1000);
 	printf("\rPick_Compass_Gain verified\n");
 }
 
@@ -258,12 +293,12 @@ int read_ranger(void)
 {
 	unsigned char addr = 0xE0; // the address of the sensor, 0xC0 for the compass
 	unsigned char Data[2]; // Data is an array with a length of 2
-	unsigned int range = 0; // the range
+	unsigned int st_range = 0; // the range
 	i2c_read_data(addr, 2, Data, 2); // read two byte, starting at reg 2
-	range =(((unsigned int)Data[0] << 8) | Data[1]); //combine the two values	
+	st_range =(((unsigned int)Data[0] << 8) | Data[1]); //combine the two values	
 	Data[0] = 0x51 ; // write 0x51 to reg 0 of the ranger:
 	i2c_write_data(addr, 0, Data, 1) ; // write one byte of data to reg 0 at addr
-	return range;
+	return st_range;
 }
 
 //-----------------------------------------------------------------------------
@@ -271,13 +306,16 @@ int read_ranger(void)
 void set_range_adj(void)
 {
 	// range is the value from the ultrasonic ranger
+	printf("\n\nWELCOME TO SET_RANGE_ADJ======");
 	if (range > MAX_RANGE)
 	{
+		printf("\rWe are doing the if statement\n");
 		range_adj = 0; //no obstacle in range, no change
 	}
 	else
 	{
-		range_adj = (int)(Pick_Ranger_Gain() * (MAX_RANGE - range)); //find adjustment
+		printf("\rWe are doing the else statement\n");
+		range_adj = (int)(ranger_gain * (MAX_RANGE - range)); //find adjustment
 	}
 }
 
@@ -300,11 +338,11 @@ signed int compass_error(unsigned int heading)
 {
 	signed int Error = 0;
 	unsigned int PWMe = 0;
-	unsigned char k = 1;				//Gain constant. Higher numbers turn more, lower numbers turn less.
+//	unsigned char k = 1;				//Gain constant. Higher numbers turn more, lower numbers turn less.	
 	Error = (desired_heading) - heading;	//Calculate the error
 	if(Error < 1800) Error = Error + 3600;	//Adjust the Error for +/- 180 degrees
 	if(Error > 1800) Error = Error - 3600;
-	PWMe = COMPASS_CENTER + (k*Error);
+	PWMe = COMPASS_CENTER + ((compass_gain)*Error);
 	if(PWMe < COMPASS_MIN) PWMe = COMPASS_MIN;
 	if(PWMe > COMPASS_MAX) PWMe = COMPASS_MAX;
 	return PWMe;
@@ -313,6 +351,7 @@ signed int compass_error(unsigned int heading)
 //-----------------------------------------------------------------------------
 void set_COMPASS_PW(void)
 {
+	printf("\rWELCOME TO set_COMPASS_PW\n");
 	// range is the value from the ultrasonic ranger
 	if (range > MAX_RANGE)
 	{
@@ -323,6 +362,7 @@ void set_COMPASS_PW(void)
 		range_adj = (int)(ranger_gain * (MAX_RANGE - range)); //find adjustment
 	}
 	// compass_adj is the compass heading error multiplied by its error gain
-	compass_adj = (int)((compass_error(heading))*(compass_gain));
-	COMPASS_PW = COMPASS_CENTER + compass_adj + range_adj; //use both to adjust steering
+	compass_adj = ((compass_error(heading)));
+	printf("\rcompass_adj: %u\n", compass_adj);
+	COMPASS_PW = /*COMPASS_CENTER +*/ compass_adj + range_adj; //use both to adjust steering
 }

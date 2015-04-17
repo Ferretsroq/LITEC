@@ -1,16 +1,15 @@
 ;--------------------------------------------------------
 ; File Created by SDCC : free open source ANSI-C Compiler
 ; Version 3.4.0 #8981 (Apr  5 2014) (MINGW32)
-; This file was generated Thu Apr 16 19:14:52 2015
+; This file was generated Thu Apr 16 20:47:36 2015
 ;--------------------------------------------------------
-	.module SooooLab_4
+	.module Squiggles
 	.optsdcc -mmcs51 --model-small
 	
 ;--------------------------------------------------------
 ; Public variables in this module
 ;--------------------------------------------------------
 	.globl _main
-	.globl _Pick_Ranger_Gain
 	.globl _read_keypad
 	.globl _strlen
 	.globl _Sys_Init
@@ -950,34 +949,34 @@ _RANGER_SWITCH	=	0x00b6
 ; internal ram data
 ;--------------------------------------------------------
 	.area DSEG    (DATA)
-LSooooLab_4.lcd_clear$NumBytes$1$77==.
+LSquiggles.lcd_clear$NumBytes$1$77==.
 _lcd_clear_NumBytes_1_77:
 	.ds 1
-LSooooLab_4.lcd_clear$Cmd$1$77==.
+LSquiggles.lcd_clear$Cmd$1$77==.
 _lcd_clear_Cmd_1_77:
 	.ds 2
-LSooooLab_4.read_keypad$Data$1$78==.
+LSquiggles.read_keypad$Data$1$78==.
 _read_keypad_Data_1_78:
 	.ds 2
-LSooooLab_4.i2c_write_data$start_reg$1$97==.
+LSquiggles.i2c_write_data$start_reg$1$97==.
 _i2c_write_data_PARM_2:
 	.ds 1
-LSooooLab_4.i2c_write_data$buffer$1$97==.
+LSquiggles.i2c_write_data$buffer$1$97==.
 _i2c_write_data_PARM_3:
 	.ds 3
-LSooooLab_4.i2c_write_data$num_bytes$1$97==.
+LSquiggles.i2c_write_data$num_bytes$1$97==.
 _i2c_write_data_PARM_4:
 	.ds 1
-LSooooLab_4.i2c_read_data$start_reg$1$99==.
+LSquiggles.i2c_read_data$start_reg$1$99==.
 _i2c_read_data_PARM_2:
 	.ds 1
-LSooooLab_4.i2c_read_data$buffer$1$99==.
+LSquiggles.i2c_read_data$buffer$1$99==.
 _i2c_read_data_PARM_3:
 	.ds 3
-LSooooLab_4.i2c_read_data$num_bytes$1$99==.
+LSquiggles.i2c_read_data$num_bytes$1$99==.
 _i2c_read_data_PARM_4:
 	.ds 1
-LSooooLab_4.Accel_Init$Data2$1$103==.
+LSquiggles.Accel_Init$Data2$1$103==.
 _Accel_Init_Data2_1_103:
 	.ds 1
 G$Counts$0$0==.
@@ -1034,11 +1033,11 @@ _AD_Result::
 G$voltage$0$0==.
 _voltage::
 	.ds 1
-LSooooLab_4.read_compass$Data$1$149==.
-_read_compass_Data_1_149:
+LSquiggles.read_compass$Data$1$150==.
+_read_compass_Data_1_150:
 	.ds 2
-LSooooLab_4.read_ranger$Data$1$151==.
-_read_ranger_Data_1_151:
+LSquiggles.read_ranger$Data$1$152==.
+_read_ranger_Data_1_152:
 	.ds 2
 ;--------------------------------------------------------
 ; overlayable items in internal ram 
@@ -1079,7 +1078,7 @@ __start__stack:
 ; external ram data
 ;--------------------------------------------------------
 	.area XSEG    (XDATA)
-LSooooLab_4.lcd_print$text$1$73==.
+LSquiggles.lcd_print$text$1$73==.
 _lcd_print_text_1_73:
 	.ds 80
 ;--------------------------------------------------------
@@ -1138,23 +1137,28 @@ __interrupt_vect:
 	.globl __mcs51_genXINIT
 	.globl __mcs51_genXRAMCLEAR
 	.globl __mcs51_genRAMCLEAR
-	C$SooooLab_4.c$43$1$159 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:43: float compass_gain = 0;
+	C$Squiggles.c$43$1$160 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:43: float compass_gain = 0;
 	clr	a
 	mov	_compass_gain,a
 	mov	(_compass_gain + 1),a
 	mov	(_compass_gain + 2),a
 	mov	(_compass_gain + 3),a
-	C$SooooLab_4.c$54$1$159 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:54: unsigned int range_adj = 0;
+	C$Squiggles.c$50$1$160 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:50: unsigned int range = 70;
+	mov	_range,#0x46
+;	1-genFromRTrack replaced	mov	(_range + 1),#0x00
+	mov	(_range + 1),a
+	C$Squiggles.c$54$1$160 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:54: unsigned int range_adj = 0;
 	mov	_range_adj,a
 	mov	(_range_adj + 1),a
-	C$SooooLab_4.c$55$1$159 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:55: unsigned int compass_adj = 0;
+	C$Squiggles.c$55$1$160 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:55: unsigned int compass_adj = 0;
 	mov	_compass_adj,a
 	mov	(_compass_adj + 1),a
-	C$SooooLab_4.c$56$1$159 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:56: unsigned char ranger_gain = 40;		// between 30 and 150
+	C$Squiggles.c$56$1$160 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:56: unsigned char ranger_gain = 40;		// between 30 and 150
 	mov	_ranger_gain,#0x28
 	.area GSFINAL (CODE)
 	ljmp	__sdcc_program_startup
@@ -2330,36 +2334,36 @@ _Accel_Init:
 ;Allocation info for local variables in function 'main'
 ;------------------------------------------------------------
 	G$main$0$0 ==.
-	C$SooooLab_4.c$63$1$103 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:63: void main(void)
+	C$Squiggles.c$63$1$103 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:63: void main(void)
 ;	-----------------------------------------
 ;	 function main
 ;	-----------------------------------------
 _main:
-	C$SooooLab_4.c$65$1$120 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:65: Sys_Init();     // System Initialization - MUST BE 1st EXECUTABLE STATEMENT
+	C$Squiggles.c$65$1$120 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:65: Sys_Init();     // System Initialization - MUST BE 1st EXECUTABLE STATEMENT
 	lcall	_Sys_Init
-	C$SooooLab_4.c$66$1$120 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:66: Port_Init();    // Initialize ports 2 and 3 - XBR0 set to 0x05, UART0 & SMB
+	C$Squiggles.c$66$1$120 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:66: Port_Init();    // Initialize ports 2 and 3 - XBR0 set to 0x05, UART0 & SMB
 	lcall	_Port_Init
-	C$SooooLab_4.c$67$1$120 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:67: Interrupt_Init();   // You may want to change XBR0 to match your SMB wiring
+	C$Squiggles.c$67$1$120 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:67: Interrupt_Init();   // You may want to change XBR0 to match your SMB wiring
 	lcall	_Interrupt_Init
-	C$SooooLab_4.c$68$1$120 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:68: PCA_Init();
+	C$Squiggles.c$68$1$120 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:68: PCA_Init();
 	lcall	_PCA_Init
-	C$SooooLab_4.c$69$1$120 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:69: ADC_Init();
+	C$Squiggles.c$69$1$120 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:69: ADC_Init();
 	lcall	_ADC_Init
-	C$SooooLab_4.c$70$1$120 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:70: SMB0_Init();
+	C$Squiggles.c$70$1$120 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:70: SMB0_Init();
 	lcall	_SMB0_Init
-	C$SooooLab_4.c$71$1$120 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:71: putchar('\r');  // Dummy write to serial port
+	C$Squiggles.c$71$1$120 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:71: putchar('\r');  // Dummy write to serial port
 	mov	dpl,#0x0D
 	lcall	_putchar
-	C$SooooLab_4.c$72$1$120 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:72: printf("\nStart\r\n");
+	C$Squiggles.c$72$1$120 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:72: printf("\nStart\r\n");
 	mov	a,#___str_3
 	push	acc
 	mov	a,#(___str_3 >> 8)
@@ -2370,16 +2374,16 @@ _main:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$SooooLab_4.c$73$1$120 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:73: lcd_clear();
+	C$Squiggles.c$73$1$120 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:73: lcd_clear();
 	lcall	_lcd_clear
-	C$SooooLab_4.c$74$1$120 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:74: Counts = 0;
+	C$Squiggles.c$74$1$120 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:74: Counts = 0;
 	clr	a
 	mov	_Counts,a
 	mov	(_Counts + 1),a
-	C$SooooLab_4.c$75$1$120 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:75: while (Counts < 1); //printf("\r%u\n", nCounts); // Wait a long time (1s) for keypad & LCD to initialize
+	C$Squiggles.c$75$1$120 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:75: while (Counts < 1); //printf("\r%u\n", nCounts); // Wait a long time (1s) for keypad & LCD to initialize
 00101$:
 	clr	c
 	mov	a,_Counts
@@ -2387,11 +2391,11 @@ _main:
 	mov	a,(_Counts + 1)
 	subb	a,#0x00
 	jc	00101$
-	C$SooooLab_4.c$76$1$120 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:76: lcd_clear();
+	C$Squiggles.c$76$1$120 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:76: lcd_clear();
 	lcall	_lcd_clear
-	C$SooooLab_4.c$78$1$120 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:78: printf("\n\rPlease input data on the LCD.\n");
+	C$Squiggles.c$79$1$120 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:79: printf("\n\rPlease input data on the LCD.\n");
 	mov	a,#___str_4
 	push	acc
 	mov	a,#(___str_4 >> 8)
@@ -2402,14 +2406,14 @@ _main:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$SooooLab_4.c$79$1$120 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:79: Pick_Heading();
+	C$Squiggles.c$80$1$120 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:80: Pick_Heading();
 	lcall	_Pick_Heading
-	C$SooooLab_4.c$80$1$120 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:80: Pick_Compass_Gain();
+	C$Squiggles.c$81$1$120 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:81: Pick_Compass_Gain();
 	lcall	_Pick_Compass_Gain
-	C$SooooLab_4.c$81$1$120 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:81: printf("\n\r------------DATA COLLECTION------------\n");
+	C$Squiggles.c$82$1$120 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:82: printf("\n\r------------DATA COLLECTION------------\n");
 	mov	a,#___str_5
 	push	acc
 	mov	a,#(___str_5 >> 8)
@@ -2420,8 +2424,11 @@ _main:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$SooooLab_4.c$82$1$120 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:82: printf("\rCompass Gain\rRanger Gain\r");
+	C$Squiggles.c$84$1$120 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:84: while (1)
+00111$:
+	C$Squiggles.c$86$2$121 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:86: printf("\r::::::HI:::::::\n");
 	mov	a,#___str_6
 	push	acc
 	mov	a,#(___str_6 >> 8)
@@ -2432,11 +2439,19 @@ _main:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$SooooLab_4.c$83$1$120 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:83: while (1)
-00110$:
-	C$SooooLab_4.c$85$2$121 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:85: printf("\r::::::HI:::::::\n");
+	C$Squiggles.c$88$2$121 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:88: if (new_range) // enough overflow for a new range
+	mov	a,_new_range
+	jz	00105$
+	C$Squiggles.c$90$3$122 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:90: range = read_ranger();
+	lcall	_read_ranger
+	mov	_range,dpl
+	mov	(_range + 1),dph
+	C$Squiggles.c$91$3$122 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:91: printf("\rRange: %u\n", range);
+	push	_range
+	push	(_range + 1)
 	mov	a,#___str_7
 	push	acc
 	mov	a,#(___str_7 >> 8)
@@ -2444,254 +2459,344 @@ _main:
 	mov	a,#0x80
 	push	acc
 	lcall	_printf
+	mov	a,sp
+	add	a,#0xfb
+	mov	sp,a
+	C$Squiggles.c$93$3$122 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:93: printf("\rhere goes nothing\n");	
+	mov	a,#___str_8
+	push	acc
+	mov	a,#(___str_8 >> 8)
+	push	acc
+	mov	a,#0x80
+	push	acc
+	lcall	_printf
 	dec	sp
 	dec	sp
 	dec	sp
-	C$SooooLab_4.c$94$2$121 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:94: if(new_heading && (delay >= 5))
+	C$Squiggles.c$94$3$122 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:94: set_range_adj(); // if new data, set value to adjust steering PWM
+	lcall	_set_range_adj
+	C$Squiggles.c$95$3$122 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:95: printf("\rmission successful\n");
+	mov	a,#___str_9
+	push	acc
+	mov	a,#(___str_9 >> 8)
+	push	acc
+	mov	a,#0x80
+	push	acc
+	lcall	_printf
+	dec	sp
+	dec	sp
+	dec	sp
+	C$Squiggles.c$96$3$122 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:96: new_range = 0;
+	mov	_new_range,#0x00
+	C$Squiggles.c$97$3$122 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:97: r_count = 0;
+	mov	_r_count,#0x00
+00105$:
+	C$Squiggles.c$99$2$121 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:99: if(delay == 10) 	//delay so that we don't get spammed with print messages
+	mov	a,#0x0A
+	cjne	a,_delay,00111$
+	C$Squiggles.c$101$3$123 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:101: AD_Result = read_AD_input(4); //Read analog input on pin 1.4
+	mov	dpl,#0x04
+	lcall	_read_AD_input
+	C$Squiggles.c$102$1$120 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:102: voltage = ((14.4/255)*AD_Result); //Convert back to input voltage
+	mov  _AD_Result,dpl
+	lcall	___uchar2fs
+	mov	r4,dpl
+	mov	r5,dph
+	mov	r6,b
+	mov	r7,a
+	push	ar4
+	push	ar5
+	push	ar6
+	push	ar7
+	mov	dptr,#0x4DB4
+	mov	b,#0x67
+	mov	a,#0x3D
+	lcall	___fsmul
+	mov	r4,dpl
+	mov	r5,dph
+	mov	r6,b
+	mov	r7,a
+	mov	a,sp
+	add	a,#0xfc
+	mov	sp,a
+	mov	dpl,r4
+	mov	dph,r5
+	mov	b,r6
+	mov	a,r7
+	lcall	___fs2uchar
+	mov	_voltage,dpl
+	C$Squiggles.c$103$3$123 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:103: printf("\rBattery Voltage is %u\n", voltage);
+	mov	r6,_voltage
+	mov	r7,#0x00
+	push	ar6
+	push	ar7
+	mov	a,#___str_10
+	push	acc
+	mov	a,#(___str_10 >> 8)
+	push	acc
+	mov	a,#0x80
+	push	acc
+	lcall	_printf
+	mov	a,sp
+	add	a,#0xfb
+	mov	sp,a
+	C$Squiggles.c$104$3$123 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:104: if(new_heading)
 	mov	a,_new_heading
-	jz	00105$
-	mov	a,#0x100 - 0x05
-	add	a,_delay
-	jnc	00105$
-	C$SooooLab_4.c$96$3$122 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:96: heading = read_compass();
+	jnz	00137$
+	ljmp	00111$
+00137$:
+	C$Squiggles.c$106$4$124 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:106: heading = read_compass();
 	lcall	_read_compass
+	C$Squiggles.c$107$1$120 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:107: printf("\rThe current direction is %u\n", heading/10);
 	mov	_heading,dpl
 	mov	(_heading + 1),dph
-	C$SooooLab_4.c$100$3$122 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:100: new_heading = 0;
+	mov	__divuint_PARM_2,#0x0A
+	mov	(__divuint_PARM_2 + 1),#0x00
+	lcall	__divuint
+	mov	r6,dpl
+	mov	r7,dph
+	push	ar6
+	push	ar7
+	mov	a,#___str_11
+	push	acc
+	mov	a,#(___str_11 >> 8)
+	push	acc
+	mov	a,#0x80
+	push	acc
+	lcall	_printf
+	mov	a,sp
+	add	a,#0xfb
+	mov	sp,a
+	C$Squiggles.c$113$4$124 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:113: new_heading = 0;
 	mov	_new_heading,#0x00
-00105$:
-	C$SooooLab_4.c$102$2$121 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:102: if (new_range) // enough overflow for a new range
-	mov	a,_new_range
-	jz	00110$
-	C$SooooLab_4.c$105$3$123 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:105: set_range_adj(); // if new data, set value to adjust steering PWM
-	lcall	_set_range_adj
-	C$SooooLab_4.c$106$3$123 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:106: new_range = 0;
-	mov	_new_range,#0x00
-	C$SooooLab_4.c$107$3$123 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:107: r_count = 0;
-	mov	_r_count,#0x00
-	sjmp	00110$
-	C$SooooLab_4.c$111$1$120 ==.
+	ljmp	00111$
+	C$Squiggles.c$145$1$120 ==.
 	XG$main$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'Port_Init'
 ;------------------------------------------------------------
 	G$Port_Init$0$0 ==.
-	C$SooooLab_4.c$116$1$120 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:116: void Port_Init(void)	
+	C$Squiggles.c$150$1$120 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:150: void Port_Init(void)	
 ;	-----------------------------------------
 ;	 function Port_Init
 ;	-----------------------------------------
 _Port_Init:
-	C$SooooLab_4.c$118$1$125 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:118: XBR0 = 0x27;
+	C$Squiggles.c$152$1$126 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:152: XBR0 = 0x27;
 	mov	_XBR0,#0x27
-	C$SooooLab_4.c$119$1$125 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:119: P1MDOUT |= 0x01;	//set output pin for CEX0 in push-pull mode
-	orl	_P1MDOUT,#0x01
-	C$SooooLab_4.c$120$1$125 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:120: P3MDOUT &= 0x7F;	// set input pin for 3.7 to open-drain
-	anl	_P3MDOUT,#0x7F
-	C$SooooLab_4.c$121$1$125 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:121: P3		|= ~0x7F;	// set input pin for 3.7 to high impedence
-	mov	r7,_P3
-	mov	a,#0x80
-	orl	a,r7
-	mov	_P3,a
-	C$SooooLab_4.c$122$1$125 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:122: P1MDIN 	&= 0xF7;	// set pin 1.3 for analog input
+	C$Squiggles.c$153$1$126 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:153: P1MDIN 	&= 0xF7;	// set pin 1.3 for analog input	
 	anl	_P1MDIN,#0xF7
-	C$SooooLab_4.c$123$1$125 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:123: P1MDOUT &= 0xF7;	// set input pin for 1.3 to open-drain
+	C$Squiggles.c$154$1$126 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:154: P1MDOUT |= 0x05;	//set output pin for CEX0 in push-pull mode
+	orl	_P1MDOUT,#0x05
+	C$Squiggles.c$155$1$126 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:155: P1MDOUT &= 0xF7;	// set input pin for 1.3 to open-drain
 	anl	_P1MDOUT,#0xF7
-	C$SooooLab_4.c$124$1$125 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:124: P1		|= ~0xF7;	// set input pin for 1.3 to high impedence
+	C$Squiggles.c$156$1$126 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:156: P1		|= ~0xF7;	// set input pin for 1.3 to high impedence
 	mov	r7,_P1
 	mov	a,#0x08
 	orl	a,r7
 	mov	_P1,a
-	C$SooooLab_4.c$125$1$125 ==.
+	C$Squiggles.c$157$1$126 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:157: P3MDOUT &= 0x7F;	// set input pin for 3.7 to open-drain
+	anl	_P3MDOUT,#0x7F
+	C$Squiggles.c$158$1$126 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:158: P3		|= ~0x7F;	// set input pin for 3.7 to high impedence
+	mov	r7,_P3
+	mov	a,#0x80
+	orl	a,r7
+	mov	_P3,a
+	C$Squiggles.c$160$1$126 ==.
 	XG$Port_Init$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'Interrupt_Init'
 ;------------------------------------------------------------
 	G$Interrupt_Init$0$0 ==.
-	C$SooooLab_4.c$129$1$125 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:129: void Interrupt_Init(void)
+	C$Squiggles.c$164$1$126 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:164: void Interrupt_Init(void)
 ;	-----------------------------------------
 ;	 function Interrupt_Init
 ;	-----------------------------------------
 _Interrupt_Init:
-	C$SooooLab_4.c$131$1$127 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:131: IE |= 0x02;
+	C$Squiggles.c$166$1$128 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:166: IE |= 0x02;
 	orl	_IE,#0x02
-	C$SooooLab_4.c$132$1$127 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:132: EIE1 |= 0x08;
+	C$Squiggles.c$167$1$128 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:167: EIE1 |= 0x08;
 	orl	_EIE1,#0x08
-	C$SooooLab_4.c$133$1$127 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:133: EA = 1;
+	C$Squiggles.c$168$1$128 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:168: EA = 1;
 	setb	_EA
-	C$SooooLab_4.c$134$1$127 ==.
+	C$Squiggles.c$169$1$128 ==.
 	XG$Interrupt_Init$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'PCA_Init'
 ;------------------------------------------------------------
 	G$PCA_Init$0$0 ==.
-	C$SooooLab_4.c$138$1$127 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:138: void PCA_Init(void)
+	C$Squiggles.c$173$1$128 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:173: void PCA_Init(void)
 ;	-----------------------------------------
 ;	 function PCA_Init
 ;	-----------------------------------------
 _PCA_Init:
-	C$SooooLab_4.c$140$1$129 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:140: PCA0MD = 0x81;      // SYSCLK/12, enable CF interrupts, suspend when idle
+	C$Squiggles.c$175$1$130 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:175: PCA0MD = 0x81;      // SYSCLK/12, enable CF interrupts, suspend when idle
 	mov	_PCA0MD,#0x81
-	C$SooooLab_4.c$141$1$129 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:141: PCA0CPM0 = 0xC2;    // 16 bit, enable compare, enable PWM; NOT USED HERE
+	C$Squiggles.c$176$1$130 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:176: PCA0CPM0 = 0xC2;    // 16 bit, enable compare, enable PWM; NOT USED HERE
 	mov	_PCA0CPM0,#0xC2
-	C$SooooLab_4.c$142$1$129 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:142: PCA0CPM2 = 0xC2;
+	C$Squiggles.c$177$1$130 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:177: PCA0CPM2 = 0xC2;
 	mov	_PCA0CPM2,#0xC2
-	C$SooooLab_4.c$143$1$129 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:143: PCA0CN |= 0x40;     // enable PCA
+	C$Squiggles.c$178$1$130 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:178: PCA0CN |= 0x40;     // enable PCA
 	orl	_PCA0CN,#0x40
-	C$SooooLab_4.c$144$1$129 ==.
+	C$Squiggles.c$179$1$130 ==.
 	XG$PCA_Init$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'SMB0_Init'
 ;------------------------------------------------------------
 	G$SMB0_Init$0$0 ==.
-	C$SooooLab_4.c$148$1$129 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:148: void SMB0_Init(void)    // This was at the top, moved it here to call wait()
+	C$Squiggles.c$183$1$130 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:183: void SMB0_Init(void)    // This was at the top, moved it here to call wait()
 ;	-----------------------------------------
 ;	 function SMB0_Init
 ;	-----------------------------------------
 _SMB0_Init:
-	C$SooooLab_4.c$150$1$131 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:150: SMB0CR = 0x93;      // Set SCL to 100KHz
+	C$Squiggles.c$185$1$132 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:185: SMB0CR = 0x93;      // Set SCL to 100KHz
 	mov	_SMB0CR,#0x93
-	C$SooooLab_4.c$151$1$131 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:151: ENSMB = 1;          // Enable SMBUS0
+	C$Squiggles.c$186$1$132 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:186: ENSMB = 1;          // Enable SMBUS0
 	setb	_ENSMB
-	C$SooooLab_4.c$152$1$131 ==.
+	C$Squiggles.c$187$1$132 ==.
 	XG$SMB0_Init$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'PCA_ISR'
 ;------------------------------------------------------------
 	G$PCA_ISR$0$0 ==.
-	C$SooooLab_4.c$156$1$131 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:156: void PCA_ISR(void) __interrupt 9
+	C$Squiggles.c$191$1$132 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:191: void PCA_ISR(void) __interrupt 9
 ;	-----------------------------------------
 ;	 function PCA_ISR
 ;	-----------------------------------------
 _PCA_ISR:
 	push	acc
 	push	psw
-	C$SooooLab_4.c$158$1$133 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:158: if (CF)
-	C$SooooLab_4.c$160$2$134 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:160: CF = 0;                     // clear the interrupt flag
+	C$Squiggles.c$193$1$134 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:193: if (CF)
+	C$Squiggles.c$195$2$135 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:195: CF = 0;                     // clear the interrupt flag
 	jbc	_CF,00129$
 	sjmp	00110$
 00129$:
-	C$SooooLab_4.c$161$2$134 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:161: nOverflows++;               // continuous overflow counter
+	C$Squiggles.c$196$2$135 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:196: nOverflows++;               // continuous overflow counter
 	inc	_nOverflows
 	clr	a
 	cjne	a,_nOverflows,00130$
 	inc	(_nOverflows + 1)
 00130$:
-	C$SooooLab_4.c$162$2$134 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:162: nCounts++;
+	C$Squiggles.c$197$2$135 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:197: nCounts++;
 	inc	_nCounts
 	clr	a
 	cjne	a,_nCounts,00131$
 	inc	(_nCounts + 1)
 00131$:
-	C$SooooLab_4.c$163$2$134 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:163: PCA0 = PCA_START;
+	C$Squiggles.c$198$2$135 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:198: PCA0 = PCA_START;
 	mov	((_PCA0 >> 0) & 0xFF),#0x00
 	mov	((_PCA0 >> 8) & 0xFF),#0x70
-	C$SooooLab_4.c$164$2$134 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:164: if (nCounts > 50)
+	C$Squiggles.c$199$2$135 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:199: if (nCounts > 50)
 	clr	c
 	mov	a,#0x32
 	subb	a,_nCounts
 	clr	a
 	subb	a,(_nCounts + 1)
 	jnc	00102$
-	C$SooooLab_4.c$166$3$135 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:166: nCounts = 0;
+	C$Squiggles.c$201$3$136 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:201: nCounts = 0;
 	clr	a
 	mov	_nCounts,a
 	mov	(_nCounts + 1),a
-	C$SooooLab_4.c$167$3$135 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:167: Counts++;               // seconds counter
+	C$Squiggles.c$202$3$136 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:202: Counts++;               // seconds counter
 	inc	_Counts
 ;	genFromRTrack removed	clr	a
 	cjne	a,_Counts,00133$
 	inc	(_Counts + 1)
 00133$:
 00102$:
-	C$SooooLab_4.c$169$2$134 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:169: h_count++;
+	C$Squiggles.c$204$2$135 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:204: h_count++;
 	inc	_h_count
-	C$SooooLab_4.c$170$2$134 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:170: if (h_count>=2)
+	C$Squiggles.c$205$2$135 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:205: if (h_count>=2)
 	mov	a,#0x100 - 0x02
 	add	a,_h_count
 	jnc	00104$
-	C$SooooLab_4.c$172$3$136 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:172: new_heading=1;
+	C$Squiggles.c$207$3$137 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:207: new_heading=1;
 	mov	_new_heading,#0x01
-	C$SooooLab_4.c$173$3$136 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:173: h_count = 0;
+	C$Squiggles.c$208$3$137 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:208: h_count = 0;
 	mov	_h_count,#0x00
 00104$:
-	C$SooooLab_4.c$175$2$134 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:175: delay++;
+	C$Squiggles.c$210$2$135 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:210: delay++;
 	inc	_delay
-	C$SooooLab_4.c$176$2$134 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:176: if(delay>5) delay=0;
-	mov	a,_delay
-	add	a,#0xff - 0x05
-	jnc	00106$
+	C$Squiggles.c$211$2$135 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:211: if(delay == 11) delay=0;
+	mov	a,#0x0B
+	cjne	a,_delay,00106$
 	mov	_delay,#0x00
 00106$:
-	C$SooooLab_4.c$177$2$134 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:177: r_count++;
+	C$Squiggles.c$212$2$135 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:212: r_count++;
 	inc	_r_count
-	C$SooooLab_4.c$178$2$134 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:178: if (r_count>=4)
+	C$Squiggles.c$213$2$135 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:213: if (r_count>=4)
 	mov	a,#0x100 - 0x04
 	add	a,_r_count
 	jnc	00112$
-	C$SooooLab_4.c$180$3$137 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:180: new_range = 1;
+	C$Squiggles.c$215$3$138 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:215: new_range = 1;
 	mov	_new_range,#0x01
-	C$SooooLab_4.c$181$3$137 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:181: r_count = 0;
+	C$Squiggles.c$216$3$138 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:216: r_count = 0;
 	mov	_r_count,#0x00
 	sjmp	00112$
 00110$:
-	C$SooooLab_4.c$184$1$133 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:184: else PCA0CN &= 0xC0;           // clear all other 9-type interrupts
+	C$Squiggles.c$219$1$134 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:219: else PCA0CN &= 0xC0;           // clear all other 9-type interrupts
 	anl	_PCA0CN,#0xC0
 00112$:
 	pop	psw
 	pop	acc
-	C$SooooLab_4.c$185$1$133 ==.
+	C$Squiggles.c$220$1$134 ==.
 	XG$PCA_ISR$0$0 ==.
 	reti
 ;	eliminated unneeded mov psw,# (no regs used in bank)
@@ -2702,22 +2807,22 @@ _PCA_ISR:
 ;Allocation info for local variables in function 'ADC_Init'
 ;------------------------------------------------------------
 	G$ADC_Init$0$0 ==.
-	C$SooooLab_4.c$190$1$133 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:190: void ADC_Init(void)
+	C$Squiggles.c$225$1$134 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:225: void ADC_Init(void)
 ;	-----------------------------------------
 ;	 function ADC_Init
 ;	-----------------------------------------
 _ADC_Init:
-	C$SooooLab_4.c$192$1$139 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:192: REF0CN = 0x03; // Set Vref to use internal reference voltage (2.4 V)
+	C$Squiggles.c$227$1$140 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:227: REF0CN = 0x03; // Set Vref to use internal reference voltage (2.4 V)
 	mov	_REF0CN,#0x03
-	C$SooooLab_4.c$193$1$139 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:193: ADC1CN = 0x80; // Enable A/D converter (ADC1)
+	C$Squiggles.c$228$1$140 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:228: ADC1CN = 0x80; // Enable A/D converter (ADC1)
 	mov	_ADC1CN,#0x80
-	C$SooooLab_4.c$194$1$139 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:194: ADC1CF |= 0x01; // Set A/D converter gain to 1
+	C$Squiggles.c$229$1$140 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:229: ADC1CF |= 0x01; // Set A/D converter gain to 1
 	orl	_ADC1CF,#0x01
-	C$SooooLab_4.c$195$1$139 ==.
+	C$Squiggles.c$230$1$140 ==.
 	XG$ADC_Init$0$0 ==.
 	ret
 ;------------------------------------------------------------
@@ -2726,31 +2831,31 @@ _ADC_Init:
 ;n                         Allocated to registers 
 ;------------------------------------------------------------
 	G$read_AD_input$0$0 ==.
-	C$SooooLab_4.c$199$1$139 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:199: unsigned char read_AD_input(unsigned char n)
+	C$Squiggles.c$234$1$140 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:234: unsigned char read_AD_input(unsigned char n)
 ;	-----------------------------------------
 ;	 function read_AD_input
 ;	-----------------------------------------
 _read_AD_input:
 	mov	_AMX1SL,dpl
-	C$SooooLab_4.c$202$1$141 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:202: ADC1CN = ADC1CN & ~0x20; // Clear the "Conversion Completed" flag
+	C$Squiggles.c$237$1$142 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:237: ADC1CN = ADC1CN & ~0x20; // Clear the "Conversion Completed" flag
 	mov	r7,_ADC1CN
 	mov	a,#0xDF
 	anl	a,r7
 	mov	_ADC1CN,a
-	C$SooooLab_4.c$203$1$141 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:203: ADC1CN = ADC1CN | 0x10; // Initiate A/D conversion
+	C$Squiggles.c$238$1$142 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:238: ADC1CN = ADC1CN | 0x10; // Initiate A/D conversion
 	orl	_ADC1CN,#0x10
-	C$SooooLab_4.c$205$1$141 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:205: while ((ADC1CN & 0x20) == 0x00);// Wait for conversion to complete
+	C$Squiggles.c$240$1$142 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:240: while ((ADC1CN & 0x20) == 0x00);// Wait for conversion to complete
 00101$:
 	mov	a,_ADC1CN
 	jnb	acc.5,00101$
-	C$SooooLab_4.c$207$1$141 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:207: return ADC1; // Return digital value in ADC1 register
+	C$Squiggles.c$242$1$142 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:242: return ADC1; // Return digital value in ADC1 register
 	mov	dpl,_ADC1
-	C$SooooLab_4.c$208$1$141 ==.
+	C$Squiggles.c$243$1$142 ==.
 	XG$read_AD_input$0$0 ==.
 	ret
 ;------------------------------------------------------------
@@ -2759,20 +2864,20 @@ _read_AD_input:
 ;user_heading              Allocated to registers r6 r7 
 ;------------------------------------------------------------
 	G$Pick_Heading$0$0 ==.
-	C$SooooLab_4.c$212$1$141 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:212: void Pick_Heading(void)
+	C$Squiggles.c$247$1$142 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:247: void Pick_Heading(void)
 ;	-----------------------------------------
 ;	 function Pick_Heading
 ;	-----------------------------------------
 _Pick_Heading:
-	C$SooooLab_4.c$215$1$143 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:215: lcd_clear();
+	C$Squiggles.c$250$1$144 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:250: lcd_clear();
 	lcall	_lcd_clear
-	C$SooooLab_4.c$216$1$143 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:216: lcd_print("\rEnter desired heading for the compass.\n");
-	mov	a,#___str_8
+	C$Squiggles.c$251$1$144 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:251: lcd_print("\rEnter desired heading for the compass.\n");
+	mov	a,#___str_12
 	push	acc
-	mov	a,#(___str_8 >> 8)
+	mov	a,#(___str_12 >> 8)
 	push	acc
 	mov	a,#0x80
 	push	acc
@@ -2780,14 +2885,14 @@ _Pick_Heading:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$SooooLab_4.c$217$1$143 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:217: user_heading = kpd_input(1);
+	C$Squiggles.c$252$1$144 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:252: user_heading = kpd_input(1);
 	mov	dpl,#0x01
 	lcall	_kpd_input
 	mov	r6,dpl
 	mov	r7,dph
-	C$SooooLab_4.c$218$1$143 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:218: while(user_heading > 3600) //Headings must be between 0 and 3600
+	C$Squiggles.c$253$1$144 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:253: while(user_heading > 3600) //Headings must be between 0 and 3600
 	mov	ar4,r6
 	mov	ar5,r7
 00101$:
@@ -2799,16 +2904,16 @@ _Pick_Heading:
 	xrl	b,#0x80
 	subb	a,b
 	jnc	00113$
-	C$SooooLab_4.c$220$2$144 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:220: user_heading -= 3600;
+	C$Squiggles.c$255$2$145 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:255: user_heading -= 3600;
 	mov	a,r4
 	add	a,#0xF0
 	mov	r4,a
 	mov	a,r5
 	addc	a,#0xF1
 	mov	r5,a
-	C$SooooLab_4.c$222$1$143 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:222: while(user_heading < 0)
+	C$Squiggles.c$257$1$144 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:257: while(user_heading < 0)
 	sjmp	00101$
 00113$:
 	mov	ar6,r4
@@ -2818,8 +2923,8 @@ _Pick_Heading:
 00104$:
 	mov	a,r5
 	jnb	acc.7,00114$
-	C$SooooLab_4.c$224$2$145 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:224: user_heading += 3600;
+	C$Squiggles.c$259$2$146 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:259: user_heading += 3600;
 	mov	a,#0x10
 	add	a,r4
 	mov	r4,a
@@ -2830,22 +2935,22 @@ _Pick_Heading:
 00114$:
 	mov	ar6,r4
 	mov	ar7,r5
-	C$SooooLab_4.c$226$1$143 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:226: lcd_clear();
+	C$Squiggles.c$261$1$144 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:261: lcd_clear();
 	push	ar7
 	push	ar6
 	lcall	_lcd_clear
 	pop	ar6
 	pop	ar7
-	C$SooooLab_4.c$227$1$143 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:227: desired_heading = user_heading;
+	C$Squiggles.c$262$1$144 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:262: desired_heading = user_heading;
 	mov	_desired_heading,r6
 	mov	(_desired_heading + 1),r7
-	C$SooooLab_4.c$228$1$143 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:228: printf("\rPick_Heading verified\n");
-	mov	a,#___str_9
+	C$Squiggles.c$263$1$144 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:263: printf("\rPick_Heading verified\n");
+	mov	a,#___str_13
 	push	acc
-	mov	a,#(___str_9 >> 8)
+	mov	a,#(___str_13 >> 8)
 	push	acc
 	mov	a,#0x80
 	push	acc
@@ -2853,7 +2958,7 @@ _Pick_Heading:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$SooooLab_4.c$229$1$143 ==.
+	C$Squiggles.c$264$1$144 ==.
 	XG$Pick_Heading$0$0 ==.
 	ret
 ;------------------------------------------------------------
@@ -2862,20 +2967,20 @@ _Pick_Heading:
 ;user_gain                 Allocated to registers r6 r7 
 ;------------------------------------------------------------
 	G$Pick_Compass_Gain$0$0 ==.
-	C$SooooLab_4.c$232$1$143 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:232: void Pick_Compass_Gain(void)
+	C$Squiggles.c$267$1$144 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:267: void Pick_Compass_Gain(void)
 ;	-----------------------------------------
 ;	 function Pick_Compass_Gain
 ;	-----------------------------------------
 _Pick_Compass_Gain:
-	C$SooooLab_4.c$235$1$147 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:235: lcd_clear();
+	C$Squiggles.c$270$1$148 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:270: lcd_clear();
 	lcall	_lcd_clear
-	C$SooooLab_4.c$236$1$147 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:236: lcd_print("\rEnter desired gain for the compass.\n");
-	mov	a,#___str_10
+	C$Squiggles.c$271$1$148 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:271: lcd_print("\rEnter desired gain for the compass.\n");
+	mov	a,#___str_14
 	push	acc
-	mov	a,#(___str_10 >> 8)
+	mov	a,#(___str_14 >> 8)
 	push	acc
 	mov	a,#0x80
 	push	acc
@@ -2883,21 +2988,21 @@ _Pick_Compass_Gain:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$SooooLab_4.c$237$1$147 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:237: user_gain = kpd_input(1);
+	C$Squiggles.c$272$1$148 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:272: user_gain = kpd_input(1);
 	mov	dpl,#0x01
 	lcall	_kpd_input
 	mov	r6,dpl
 	mov	r7,dph
-	C$SooooLab_4.c$238$1$147 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:238: lcd_clear();
+	C$Squiggles.c$273$1$148 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:273: lcd_clear();
 	push	ar7
 	push	ar6
 	lcall	_lcd_clear
 	pop	ar6
 	pop	ar7
-	C$SooooLab_4.c$239$1$147 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:239: compass_gain = ((user_gain)/1000);
+	C$Squiggles.c$274$1$148 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:274: compass_gain = (float)((user_gain)/1000);
 	mov	__divsint_PARM_2,#0xE8
 	mov	(__divsint_PARM_2 + 1),#0x03
 	mov	dpl,r6
@@ -2908,11 +3013,11 @@ _Pick_Compass_Gain:
 	mov	(_compass_gain + 1),dph
 	mov	(_compass_gain + 2),b
 	mov	(_compass_gain + 3),a
-	C$SooooLab_4.c$240$1$147 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:240: printf("\rPick_Compass_Gain verified\n");
-	mov	a,#___str_11
+	C$Squiggles.c$275$1$148 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:275: printf("\rPick_Compass_Gain verified\n");
+	mov	a,#___str_15
 	push	acc
-	mov	a,#(___str_11 >> 8)
+	mov	a,#(___str_15 >> 8)
 	push	acc
 	mov	a,#0x80
 	push	acc
@@ -2920,37 +3025,37 @@ _Pick_Compass_Gain:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$SooooLab_4.c$241$1$147 ==.
+	C$Squiggles.c$276$1$148 ==.
 	XG$Pick_Compass_Gain$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'read_compass'
 ;------------------------------------------------------------
 ;addr                      Allocated to registers 
-;Data                      Allocated with name '_read_compass_Data_1_149'
+;Data                      Allocated with name '_read_compass_Data_1_150'
 ;read_heading              Allocated to registers 
 ;------------------------------------------------------------
 	G$read_compass$0$0 ==.
-	C$SooooLab_4.c$245$1$147 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:245: int read_compass(void)
+	C$Squiggles.c$280$1$148 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:280: int read_compass(void)
 ;	-----------------------------------------
 ;	 function read_compass
 ;	-----------------------------------------
 _read_compass:
-	C$SooooLab_4.c$250$1$149 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:250: i2c_read_data(addr, 2, Data, 2); // read two byte, starting at reg 2
-	mov	_i2c_read_data_PARM_3,#_read_compass_Data_1_149
+	C$Squiggles.c$285$1$150 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:285: i2c_read_data(addr, 2, Data, 2); // read two byte, starting at reg 2
+	mov	_i2c_read_data_PARM_3,#_read_compass_Data_1_150
 	mov	(_i2c_read_data_PARM_3 + 1),#0x00
 	mov	(_i2c_read_data_PARM_3 + 2),#0x40
 	mov	_i2c_read_data_PARM_2,#0x02
 	mov	_i2c_read_data_PARM_4,#0x02
 	mov	dpl,#0xC0
 	lcall	_i2c_read_data
-	C$SooooLab_4.c$251$1$149 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:251: read_heading =(((unsigned int)Data[0] << 8) | Data[1]); //combine the two values
-	mov	r7,_read_compass_Data_1_149
+	C$Squiggles.c$286$1$150 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:286: read_heading =(((unsigned int)Data[0] << 8) | Data[1]); //combine the two values
+	mov	r7,_read_compass_Data_1_150
 	mov	r6,#0x00
-	mov	r4,(_read_compass_Data_1_149 + 0x0001)
+	mov	r4,(_read_compass_Data_1_150 + 0x0001)
 	mov	r5,#0x00
 	mov	a,r4
 	orl	a,r6
@@ -2958,50 +3063,50 @@ _read_compass:
 	mov	a,r5
 	orl	a,r7
 	mov	dph,a
-	C$SooooLab_4.c$252$1$149 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:252: return read_heading; // the heading returned in degrees between 0 and 3599
-	C$SooooLab_4.c$253$1$149 ==.
+	C$Squiggles.c$287$1$150 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:287: return read_heading; // the heading returned in degrees between 0 and 3599
+	C$Squiggles.c$288$1$150 ==.
 	XG$read_compass$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'read_ranger'
 ;------------------------------------------------------------
 ;addr                      Allocated to registers 
-;Data                      Allocated with name '_read_ranger_Data_1_151'
-;range                     Allocated to registers r6 r7 
+;Data                      Allocated with name '_read_ranger_Data_1_152'
+;st_range                  Allocated to registers r6 r7 
 ;------------------------------------------------------------
 	G$read_ranger$0$0 ==.
-	C$SooooLab_4.c$257$1$149 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:257: int read_ranger(void)
+	C$Squiggles.c$292$1$150 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:292: int read_ranger(void)
 ;	-----------------------------------------
 ;	 function read_ranger
 ;	-----------------------------------------
 _read_ranger:
-	C$SooooLab_4.c$262$1$151 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:262: i2c_read_data(addr, 2, Data, 2); // read two byte, starting at reg 2
-	mov	_i2c_read_data_PARM_3,#_read_ranger_Data_1_151
+	C$Squiggles.c$297$1$152 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:297: i2c_read_data(addr, 2, Data, 2); // read two byte, starting at reg 2
+	mov	_i2c_read_data_PARM_3,#_read_ranger_Data_1_152
 	mov	(_i2c_read_data_PARM_3 + 1),#0x00
 	mov	(_i2c_read_data_PARM_3 + 2),#0x40
 	mov	_i2c_read_data_PARM_2,#0x02
 	mov	_i2c_read_data_PARM_4,#0x02
 	mov	dpl,#0xE0
 	lcall	_i2c_read_data
-	C$SooooLab_4.c$263$1$151 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:263: range =(((unsigned int)Data[0] << 8) | Data[1]); //combine the two values	
-	mov	r7,_read_ranger_Data_1_151
+	C$Squiggles.c$298$1$152 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:298: st_range =(((unsigned int)Data[0] << 8) | Data[1]); //combine the two values	
+	mov	r7,_read_ranger_Data_1_152
 	mov	r6,#0x00
-	mov	r4,(_read_ranger_Data_1_151 + 0x0001)
+	mov	r4,(_read_ranger_Data_1_152 + 0x0001)
 	mov	r5,#0x00
 	mov	a,r4
 	orl	ar6,a
 	mov	a,r5
 	orl	ar7,a
-	C$SooooLab_4.c$264$1$151 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:264: Data[0] = 0x51 ; // write 0x51 to reg 0 of the ranger:
-	mov	_read_ranger_Data_1_151,#0x51
-	C$SooooLab_4.c$265$1$151 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:265: i2c_write_data(addr, 0, Data, 1) ; // write one byte of data to reg 0 at addr
-	mov	_i2c_write_data_PARM_3,#_read_ranger_Data_1_151
+	C$Squiggles.c$299$1$152 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:299: Data[0] = 0x51 ; // write 0x51 to reg 0 of the ranger:
+	mov	_read_ranger_Data_1_152,#0x51
+	C$Squiggles.c$300$1$152 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:300: i2c_write_data(addr, 0, Data, 1) ; // write one byte of data to reg 0 at addr
+	mov	_i2c_write_data_PARM_3,#_read_ranger_Data_1_152
 	mov	(_i2c_write_data_PARM_3 + 1),#0x00
 	mov	(_i2c_write_data_PARM_3 + 2),#0x40
 	mov	_i2c_write_data_PARM_2,#0x00
@@ -3012,42 +3117,76 @@ _read_ranger:
 	lcall	_i2c_write_data
 	pop	ar6
 	pop	ar7
-	C$SooooLab_4.c$266$1$151 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:266: return range;
+	C$Squiggles.c$301$1$152 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:301: return st_range;
 	mov	dpl,r6
 	mov	dph,r7
-	C$SooooLab_4.c$267$1$151 ==.
+	C$Squiggles.c$302$1$152 ==.
 	XG$read_ranger$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'set_range_adj'
 ;------------------------------------------------------------
 	G$set_range_adj$0$0 ==.
-	C$SooooLab_4.c$271$1$151 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:271: void set_range_adj(void)
+	C$Squiggles.c$306$1$152 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:306: void set_range_adj(void)
 ;	-----------------------------------------
 ;	 function set_range_adj
 ;	-----------------------------------------
 _set_range_adj:
-	C$SooooLab_4.c$274$1$153 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:274: if (range > MAX_RANGE)
+	C$Squiggles.c$309$1$154 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:309: printf("\n\nWELCOME TO SET_RANGE_ADJ======");
+	mov	a,#___str_16
+	push	acc
+	mov	a,#(___str_16 >> 8)
+	push	acc
+	mov	a,#0x80
+	push	acc
+	lcall	_printf
+	dec	sp
+	dec	sp
+	dec	sp
+	C$Squiggles.c$310$1$154 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:310: if (range > MAX_RANGE)
 	clr	c
 	mov	a,#0x3C
 	subb	a,_range
 	clr	a
 	subb	a,(_range + 1)
 	jnc	00102$
-	C$SooooLab_4.c$276$2$154 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:276: range_adj = 0; //no obstacle in range, no change
+	C$Squiggles.c$312$2$155 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:312: printf("\rWe are doing the if statement\n");
+	mov	a,#___str_17
+	push	acc
+	mov	a,#(___str_17 >> 8)
+	push	acc
+	mov	a,#0x80
+	push	acc
+	lcall	_printf
+	dec	sp
+	dec	sp
+	dec	sp
+	C$Squiggles.c$313$2$155 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:313: range_adj = 0; //no obstacle in range, no change
 	clr	a
 	mov	_range_adj,a
 	mov	(_range_adj + 1),a
 	sjmp	00104$
 00102$:
-	C$SooooLab_4.c$280$2$155 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:280: range_adj = (int)(Pick_Ranger_Gain() * (MAX_RANGE - range)); //find adjustment
-	lcall	_Pick_Ranger_Gain
-	mov	r7,dpl
+	C$Squiggles.c$317$2$156 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:317: printf("\rWe are doing the else statement\n");
+	mov	a,#___str_18
+	push	acc
+	mov	a,#(___str_18 >> 8)
+	push	acc
+	mov	a,#0x80
+	push	acc
+	lcall	_printf
+	dec	sp
+	dec	sp
+	dec	sp
+	C$Squiggles.c$318$2$156 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:318: range_adj = (int)(ranger_gain * (MAX_RANGE - range)); //find adjustment
 	mov	a,#0x3C
 	clr	c
 	subb	a,_range
@@ -3055,19 +3194,17 @@ _set_range_adj:
 	clr	a
 	subb	a,(_range + 1)
 	mov	(__mulint_PARM_2 + 1),a
-	mov	a,r7
-	rlc	a
-	subb	a,acc
-	mov	r6,a
-	mov	dpl,r7
-	mov	dph,r6
+	mov	r6,_ranger_gain
+	mov	r7,#0x00
+	mov	dpl,r6
+	mov	dph,r7
 	lcall	__mulint
 	mov	r6,dpl
 	mov	r7,dph
 	mov	_range_adj,r6
 	mov	(_range_adj + 1),r7
 00104$:
-	C$SooooLab_4.c$282$1$153 ==.
+	C$Squiggles.c$320$1$154 ==.
 	XG$set_range_adj$0$0 ==.
 	ret
 ;------------------------------------------------------------
@@ -3076,22 +3213,18 @@ _set_range_adj:
 ;heading                   Allocated to registers r6 r7 
 ;Error                     Allocated to registers r6 r7 
 ;PWMe                      Allocated to registers r6 r7 
-;k                         Allocated to registers r5 
 ;------------------------------------------------------------
 	G$compass_error$0$0 ==.
-	C$SooooLab_4.c$299$1$153 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:299: signed int compass_error(unsigned int heading)
+	C$Squiggles.c$337$1$154 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:337: signed int compass_error(unsigned int heading)
 ;	-----------------------------------------
 ;	 function compass_error
 ;	-----------------------------------------
 _compass_error:
 	mov	r6,dpl
 	mov	r7,dph
-	C$SooooLab_4.c$303$1$153 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:303: unsigned char k = 1;				//Gain constant. Higher numbers turn more, lower numbers turn less.
-	mov	r5,#0x01
-	C$SooooLab_4.c$304$1$157 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:304: Error = (desired_heading) - heading;	//Calculate the error
+	C$Squiggles.c$342$1$158 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:342: Error = (desired_heading) - heading;	//Calculate the error
 	mov	a,_desired_heading
 	clr	c
 	subb	a,r6
@@ -3099,8 +3232,8 @@ _compass_error:
 	mov	a,(_desired_heading + 1)
 	subb	a,r7
 	mov	r7,a
-	C$SooooLab_4.c$305$1$157 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:305: if(Error < 1800) Error = Error + 3600;	//Adjust the Error for +/- 180 degrees
+	C$Squiggles.c$343$1$158 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:343: if(Error < 1800) Error = Error + 3600;	//Adjust the Error for +/- 180 degrees
 	clr	c
 	mov	a,r6
 	subb	a,#0x08
@@ -3115,8 +3248,8 @@ _compass_error:
 	addc	a,r7
 	mov	r7,a
 00102$:
-	C$SooooLab_4.c$306$1$157 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:306: if(Error > 1800) Error = Error - 3600;
+	C$Squiggles.c$344$1$158 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:344: if(Error > 1800) Error = Error - 3600;
 	clr	c
 	mov	a,#0x08
 	subb	a,r6
@@ -3132,23 +3265,60 @@ _compass_error:
 	addc	a,#0xF1
 	mov	r7,a
 00104$:
-	C$SooooLab_4.c$307$1$157 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:307: PWMe = COMPASS_CENTER + (k*Error);
-	mov	r4,#0x00
-	mov	__mulint_PARM_2,r6
-	mov	(__mulint_PARM_2 + 1),r7
-	mov	dpl,r5
-	mov	dph,r4
-	lcall	__mulint
-	mov	a,dpl
-	mov	b,dph
-	add	a,#0xC8
-	mov	r6,a
-	mov	a,#0x0A
-	addc	a,b
+	C$Squiggles.c$345$1$158 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:345: PWMe = COMPASS_CENTER + ((compass_gain)*Error);
+	mov	dpl,r6
+	mov	dph,r7
+	lcall	___sint2fs
+	mov	r4,dpl
+	mov	r5,dph
+	mov	r6,b
 	mov	r7,a
-	C$SooooLab_4.c$308$1$157 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:308: if(PWMe < COMPASS_MIN) PWMe = COMPASS_MIN;
+	push	ar4
+	push	ar5
+	push	ar6
+	push	ar7
+	mov	dpl,_compass_gain
+	mov	dph,(_compass_gain + 1)
+	mov	b,(_compass_gain + 2)
+	mov	a,(_compass_gain + 3)
+	lcall	___fsmul
+	mov	r4,dpl
+	mov	r5,dph
+	mov	r6,b
+	mov	r7,a
+	mov	a,sp
+	add	a,#0xfc
+	mov	sp,a
+	clr	a
+	push	acc
+	mov	a,#0x80
+	push	acc
+	mov	a,#0x2C
+	push	acc
+	mov	a,#0x45
+	push	acc
+	mov	dpl,r4
+	mov	dph,r5
+	mov	b,r6
+	mov	a,r7
+	lcall	___fsadd
+	mov	r4,dpl
+	mov	r5,dph
+	mov	r6,b
+	mov	r7,a
+	mov	a,sp
+	add	a,#0xfc
+	mov	sp,a
+	mov	dpl,r4
+	mov	dph,r5
+	mov	b,r6
+	mov	a,r7
+	lcall	___fs2uint
+	mov	r6,dpl
+	mov	r7,dph
+	C$Squiggles.c$346$1$158 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:346: if(PWMe < COMPASS_MIN) PWMe = COMPASS_MIN;
 	clr	c
 	mov	a,r6
 	subb	a,#0xEE
@@ -3158,8 +3328,8 @@ _compass_error:
 	mov	r6,#0xEE
 	mov	r7,#0x07
 00106$:
-	C$SooooLab_4.c$309$1$157 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:309: if(PWMe > COMPASS_MAX) PWMe = COMPASS_MAX;
+	C$Squiggles.c$347$1$158 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:347: if(PWMe > COMPASS_MAX) PWMe = COMPASS_MAX;
 	clr	c
 	mov	a,#0xAC
 	subb	a,r6
@@ -3169,40 +3339,52 @@ _compass_error:
 	mov	r6,#0xAC
 	mov	r7,#0x0D
 00108$:
-	C$SooooLab_4.c$310$1$157 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:310: return PWMe;
+	C$Squiggles.c$348$1$158 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:348: return PWMe;
 	mov	dpl,r6
 	mov	dph,r7
-	C$SooooLab_4.c$311$1$157 ==.
+	C$Squiggles.c$349$1$158 ==.
 	XG$compass_error$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'set_COMPASS_PW'
 ;------------------------------------------------------------
 	G$set_COMPASS_PW$0$0 ==.
-	C$SooooLab_4.c$314$1$157 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:314: void set_COMPASS_PW(void)
+	C$Squiggles.c$352$1$158 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:352: void set_COMPASS_PW(void)
 ;	-----------------------------------------
 ;	 function set_COMPASS_PW
 ;	-----------------------------------------
 _set_COMPASS_PW:
-	C$SooooLab_4.c$317$1$159 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:317: if (range > MAX_RANGE)
+	C$Squiggles.c$354$1$160 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:354: printf("\rWELCOME TO set_COMPASS_PW\n");
+	mov	a,#___str_19
+	push	acc
+	mov	a,#(___str_19 >> 8)
+	push	acc
+	mov	a,#0x80
+	push	acc
+	lcall	_printf
+	dec	sp
+	dec	sp
+	dec	sp
+	C$Squiggles.c$356$1$160 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:356: if (range > MAX_RANGE)
 	clr	c
 	mov	a,#0x3C
 	subb	a,_range
 	clr	a
 	subb	a,(_range + 1)
 	jnc	00102$
-	C$SooooLab_4.c$319$2$160 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:319: range_adj = 0; //no obstacle in range, no change
+	C$Squiggles.c$358$2$161 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:358: range_adj = 0; //no obstacle in range, no change
 	clr	a
 	mov	_range_adj,a
 	mov	(_range_adj + 1),a
 	sjmp	00103$
 00102$:
-	C$SooooLab_4.c$323$2$161 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:323: range_adj = (int)(ranger_gain * (MAX_RANGE - range)); //find adjustment
+	C$Squiggles.c$362$2$162 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:362: range_adj = (int)(ranger_gain * (MAX_RANGE - range)); //find adjustment
 	mov	a,#0x3C
 	clr	c
 	subb	a,_range
@@ -3220,128 +3402,162 @@ _set_COMPASS_PW:
 	mov	_range_adj,r6
 	mov	(_range_adj + 1),r7
 00103$:
-	C$SooooLab_4.c$326$1$159 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:326: compass_adj = (int)((compass_error(heading))*(compass_gain));
+	C$Squiggles.c$365$1$160 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:365: compass_adj = ((compass_error(heading)));
 	mov	dpl,_heading
 	mov	dph,(_heading + 1)
 	lcall	_compass_error
-	lcall	___sint2fs
-	mov	r4,dpl
-	mov	r5,dph
-	mov	r6,b
-	mov	r7,a
-	push	_compass_gain
-	push	(_compass_gain + 1)
-	push	(_compass_gain + 2)
-	push	(_compass_gain + 3)
-	mov	dpl,r4
-	mov	dph,r5
-	mov	b,r6
-	mov	a,r7
-	lcall	___fsmul
-	mov	r4,dpl
-	mov	r5,dph
-	mov	r6,b
-	mov	r7,a
-	mov	a,sp
-	add	a,#0xfc
-	mov	sp,a
-	mov	dpl,r4
-	mov	dph,r5
-	mov	b,r6
-	mov	a,r7
-	lcall	___fs2sint
 	mov	_compass_adj,dpl
 	mov	(_compass_adj + 1),dph
-	C$SooooLab_4.c$327$1$159 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Lab 4 Code\SooooLab_4.c:327: COMPASS_PW = COMPASS_CENTER + compass_adj + range_adj; //use both to adjust steering
-	mov	a,#0xC8
-	add	a,_compass_adj
-	mov	r6,a
-	mov	a,#0x0A
-	addc	a,(_compass_adj + 1)
-	mov	r7,a
+	C$Squiggles.c$366$1$160 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:366: printf("\rcompass_adj: %u\n", compass_adj);
+	push	_compass_adj
+	push	(_compass_adj + 1)
+	mov	a,#___str_20
+	push	acc
+	mov	a,#(___str_20 >> 8)
+	push	acc
+	mov	a,#0x80
+	push	acc
+	lcall	_printf
+	mov	a,sp
+	add	a,#0xfb
+	mov	sp,a
+	C$Squiggles.c$367$1$160 ==.
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Squiggles\Squiggles.c:367: COMPASS_PW = /*COMPASS_CENTER +*/ compass_adj + range_adj; //use both to adjust steering
 	mov	a,_range_adj
-	add	a,r6
+	add	a,_compass_adj
 	mov	_COMPASS_PW,a
 	mov	a,(_range_adj + 1)
-	addc	a,r7
+	addc	a,(_compass_adj + 1)
 	mov	(_COMPASS_PW + 1),a
-	C$SooooLab_4.c$328$1$159 ==.
+	C$Squiggles.c$368$1$160 ==.
 	XG$set_COMPASS_PW$0$0 ==.
 	ret
 	.area CSEG    (CODE)
 	.area CONST   (CODE)
-FSooooLab_4$__str_0$0$0 == .
+FSquiggles$__str_0$0$0 == .
 ___str_0:
 	.db 0x0A
 	.ascii "Type digits; end w/#"
 	.db 0x00
-FSooooLab_4$__str_1$0$0 == .
+FSquiggles$__str_1$0$0 == .
 ___str_1:
 	.ascii "     %c%c%c%c%c"
 	.db 0x00
-FSooooLab_4$__str_2$0$0 == .
+FSquiggles$__str_2$0$0 == .
 ___str_2:
 	.ascii "%c"
 	.db 0x00
-FSooooLab_4$__str_3$0$0 == .
+FSquiggles$__str_3$0$0 == .
 ___str_3:
 	.db 0x0A
 	.ascii "Start"
 	.db 0x0D
 	.db 0x0A
 	.db 0x00
-FSooooLab_4$__str_4$0$0 == .
+FSquiggles$__str_4$0$0 == .
 ___str_4:
 	.db 0x0A
 	.db 0x0D
 	.ascii "Please input data on the LCD."
 	.db 0x0A
 	.db 0x00
-FSooooLab_4$__str_5$0$0 == .
+FSquiggles$__str_5$0$0 == .
 ___str_5:
 	.db 0x0A
 	.db 0x0D
 	.ascii "------------DATA COLLECTION------------"
 	.db 0x0A
 	.db 0x00
-FSooooLab_4$__str_6$0$0 == .
+FSquiggles$__str_6$0$0 == .
 ___str_6:
-	.db 0x0D
-	.ascii "Compass Gain"
-	.db 0x0D
-	.ascii "Ranger Gain"
-	.db 0x0D
-	.db 0x00
-FSooooLab_4$__str_7$0$0 == .
-___str_7:
 	.db 0x0D
 	.ascii "::::::HI:::::::"
 	.db 0x0A
 	.db 0x00
-FSooooLab_4$__str_8$0$0 == .
+FSquiggles$__str_7$0$0 == .
+___str_7:
+	.db 0x0D
+	.ascii "Range: %u"
+	.db 0x0A
+	.db 0x00
+FSquiggles$__str_8$0$0 == .
 ___str_8:
+	.db 0x0D
+	.ascii "here goes nothing"
+	.db 0x0A
+	.db 0x00
+FSquiggles$__str_9$0$0 == .
+___str_9:
+	.db 0x0D
+	.ascii "mission successful"
+	.db 0x0A
+	.db 0x00
+FSquiggles$__str_10$0$0 == .
+___str_10:
+	.db 0x0D
+	.ascii "Battery Voltage is %u"
+	.db 0x0A
+	.db 0x00
+FSquiggles$__str_11$0$0 == .
+___str_11:
+	.db 0x0D
+	.ascii "The current direction is %u"
+	.db 0x0A
+	.db 0x00
+FSquiggles$__str_12$0$0 == .
+___str_12:
 	.db 0x0D
 	.ascii "Enter desired heading for the compass."
 	.db 0x0A
 	.db 0x00
-FSooooLab_4$__str_9$0$0 == .
-___str_9:
+FSquiggles$__str_13$0$0 == .
+___str_13:
 	.db 0x0D
 	.ascii "Pick_Heading verified"
 	.db 0x0A
 	.db 0x00
-FSooooLab_4$__str_10$0$0 == .
-___str_10:
+FSquiggles$__str_14$0$0 == .
+___str_14:
 	.db 0x0D
 	.ascii "Enter desired gain for the compass."
 	.db 0x0A
 	.db 0x00
-FSooooLab_4$__str_11$0$0 == .
-___str_11:
+FSquiggles$__str_15$0$0 == .
+___str_15:
 	.db 0x0D
 	.ascii "Pick_Compass_Gain verified"
+	.db 0x0A
+	.db 0x00
+FSquiggles$__str_16$0$0 == .
+___str_16:
+	.db 0x0A
+	.db 0x0A
+	.ascii "WELCOME TO SET_RANGE_ADJ======"
+	.db 0x00
+FSquiggles$__str_17$0$0 == .
+___str_17:
+	.db 0x0D
+	.ascii "We are doing the if statement"
+	.db 0x0A
+	.db 0x00
+FSquiggles$__str_18$0$0 == .
+___str_18:
+	.db 0x0D
+	.ascii "We are doing the else statement"
+	.db 0x0A
+	.db 0x00
+FSquiggles$__str_19$0$0 == .
+___str_19:
+	.db 0x0D
+	.ascii "WELCOME TO set_COMPASS_PW"
+	.db 0x0A
+	.db 0x00
+FSquiggles$__str_20$0$0 == .
+___str_20:
+	.db 0x0D
+	.ascii "compass_adj: %u"
 	.db 0x0A
 	.db 0x00
 	.area XINIT   (CODE)
