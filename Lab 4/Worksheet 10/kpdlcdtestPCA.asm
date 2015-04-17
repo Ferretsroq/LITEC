@@ -1,7 +1,7 @@
 ;--------------------------------------------------------
 ; File Created by SDCC : free open source ANSI-C Compiler
 ; Version 3.4.0 #8981 (Apr  5 2014) (MINGW32)
-; This file was generated Tue Apr 14 12:18:05 2015
+; This file was generated Fri Apr 17 11:22:35 2015
 ;--------------------------------------------------------
 	.module kpdlcdtestPCA
 	.optsdcc -mmcs51 --model-small
@@ -2235,32 +2235,32 @@ _Accel_Init:
 ;------------------------------------------------------------
 	G$main$0$0 ==.
 	C$kpdlcdtestPCA.c$39$1$103 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:39: void main(void)
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:39: void main(void)
 ;	-----------------------------------------
 ;	 function main
 ;	-----------------------------------------
 _main:
 	C$kpdlcdtestPCA.c$45$1$113 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:45: Sys_Init();     // System Initialization - MUST BE 1st EXECUTABLE STATEMENT
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:45: Sys_Init();     // System Initialization - MUST BE 1st EXECUTABLE STATEMENT
 	lcall	_Sys_Init
 	C$kpdlcdtestPCA.c$46$1$113 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:46: Port_Init();    // Initialize ports 2 and 3 - XBR0 set to 0x05, UART0 & SMB
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:46: Port_Init();    // Initialize ports 2 and 3 - XBR0 set to 0x05, UART0 & SMB
 	lcall	_Port_Init
 	C$kpdlcdtestPCA.c$47$1$113 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:47: Interrupt_Init();   // You may want to change XBR0 to match your SMB wiring
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:47: Interrupt_Init();   // You may want to change XBR0 to match your SMB wiring
 	lcall	_Interrupt_Init
 	C$kpdlcdtestPCA.c$48$1$113 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:48: PCA_Init();
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:48: PCA_Init();
 	lcall	_PCA_Init
 	C$kpdlcdtestPCA.c$49$1$113 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:49: SMB0_Init();
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:49: SMB0_Init();
 	lcall	_SMB0_Init
 	C$kpdlcdtestPCA.c$50$1$113 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:50: putchar('\r');  // Dummy write to serial port
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:50: putchar('\r');  // Dummy write to serial port
 	mov	dpl,#0x0D
 	lcall	_putchar
 	C$kpdlcdtestPCA.c$51$1$113 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:51: printf("\nStart\r\n");
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:51: printf("\nStart\r\n");
 	mov	a,#___str_3
 	push	acc
 	mov	a,#(___str_3 >> 8)
@@ -2272,15 +2272,15 @@ _main:
 	dec	sp
 	dec	sp
 	C$kpdlcdtestPCA.c$52$1$113 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:52: lcd_clear();
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:52: lcd_clear();
 	lcall	_lcd_clear
 	C$kpdlcdtestPCA.c$53$1$113 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:53: Counts = 0;
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:53: Counts = 0;
 	clr	a
 	mov	_Counts,a
 	mov	(_Counts + 1),a
 	C$kpdlcdtestPCA.c$54$1$113 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:54: while (Counts < 1); // Wait a long time (1s) for keypad & LCD to initialize
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:54: while (Counts < 1); // Wait a long time (1s) for keypad & LCD to initialize
 00101$:
 	clr	c
 	mov	a,_Counts
@@ -2289,19 +2289,19 @@ _main:
 	subb	a,#0x00
 	jc	00101$
 	C$kpdlcdtestPCA.c$55$1$113 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:55: lcd_clear();
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:55: lcd_clear();
 	lcall	_lcd_clear
 	C$kpdlcdtestPCA.c$57$1$113 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:57: while (1)
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:57: while (1)
 00105$:
 	C$kpdlcdtestPCA.c$65$2$114 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:65: kpdTest = kpd_input(0);
-	mov	dpl,#0x00
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:65: kpdTest = kpd_input(1);
+	mov	dpl,#0x01
 	lcall	_kpd_input
 	mov	r6,dpl
 	mov	r7,dph
 	C$kpdlcdtestPCA.c$66$2$114 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:66: printf("\rYou typed in %u\n", kpdTest);
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:66: printf("\rYou typed in %u\n", kpdTest);
 	push	ar6
 	push	ar7
 	mov	a,#___str_4
@@ -2315,7 +2315,7 @@ _main:
 	add	a,#0xfb
 	mov	sp,a
 	C$kpdlcdtestPCA.c$67$2$114 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:67: lcd_clear();
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:67: lcd_clear();
 	lcall	_lcd_clear
 	sjmp	00105$
 	C$kpdlcdtestPCA.c$70$1$113 ==.
@@ -2326,13 +2326,13 @@ _main:
 ;------------------------------------------------------------
 	G$Port_Init$0$0 ==.
 	C$kpdlcdtestPCA.c$73$1$113 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:73: void Port_Init(void)	//0x05
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:73: void Port_Init(void)	//0x05
 ;	-----------------------------------------
 ;	 function Port_Init
 ;	-----------------------------------------
 _Port_Init:
 	C$kpdlcdtestPCA.c$75$1$116 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:75: XBR0 = 0x27;    // NOTE: Only UART0 & SMB enabled; SMB on P0.2 & P0.3
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:75: XBR0 = 0x27;    // NOTE: Only UART0 & SMB enabled; SMB on P0.2 & P0.3
 	mov	_XBR0,#0x27
 	C$kpdlcdtestPCA.c$76$1$116 ==.
 	XG$Port_Init$0$0 ==.
@@ -2342,19 +2342,19 @@ _Port_Init:
 ;------------------------------------------------------------
 	G$Interrupt_Init$0$0 ==.
 	C$kpdlcdtestPCA.c$78$1$116 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:78: void Interrupt_Init(void)
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:78: void Interrupt_Init(void)
 ;	-----------------------------------------
 ;	 function Interrupt_Init
 ;	-----------------------------------------
 _Interrupt_Init:
 	C$kpdlcdtestPCA.c$80$1$118 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:80: IE |= 0x02;
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:80: IE |= 0x02;
 	orl	_IE,#0x02
 	C$kpdlcdtestPCA.c$81$1$118 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:81: EIE1 |= 0x08;
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:81: EIE1 |= 0x08;
 	orl	_EIE1,#0x08
 	C$kpdlcdtestPCA.c$82$1$118 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:82: EA = 1;
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:82: EA = 1;
 	setb	_EA
 	C$kpdlcdtestPCA.c$83$1$118 ==.
 	XG$Interrupt_Init$0$0 ==.
@@ -2364,16 +2364,16 @@ _Interrupt_Init:
 ;------------------------------------------------------------
 	G$PCA_Init$0$0 ==.
 	C$kpdlcdtestPCA.c$85$1$118 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:85: void PCA_Init(void)
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:85: void PCA_Init(void)
 ;	-----------------------------------------
 ;	 function PCA_Init
 ;	-----------------------------------------
 _PCA_Init:
 	C$kpdlcdtestPCA.c$87$1$120 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:87: PCA0MD = 0x81;      // SYSCLK/12, enable CF interrupts, suspend when idle
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:87: PCA0MD = 0x81;      // SYSCLK/12, enable CF interrupts, suspend when idle
 	mov	_PCA0MD,#0x81
 	C$kpdlcdtestPCA.c$89$1$120 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:89: PCA0CN |= 0x40;     // enable PCA
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:89: PCA0CN |= 0x40;     // enable PCA
 	orl	_PCA0CN,#0x40
 	C$kpdlcdtestPCA.c$90$1$120 ==.
 	XG$PCA_Init$0$0 ==.
@@ -2383,16 +2383,16 @@ _PCA_Init:
 ;------------------------------------------------------------
 	G$SMB0_Init$0$0 ==.
 	C$kpdlcdtestPCA.c$92$1$120 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:92: void SMB0_Init(void)    // This was at the top, moved it here to call wait()
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:92: void SMB0_Init(void)    // This was at the top, moved it here to call wait()
 ;	-----------------------------------------
 ;	 function SMB0_Init
 ;	-----------------------------------------
 _SMB0_Init:
 	C$kpdlcdtestPCA.c$94$1$122 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:94: SMB0CR = 0x93;      // Set SCL to 100KHz
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:94: SMB0CR = 0x93;      // Set SCL to 100KHz
 	mov	_SMB0CR,#0x93
 	C$kpdlcdtestPCA.c$95$1$122 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:95: ENSMB = 1;          // Enable SMBUS0
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:95: ENSMB = 1;          // Enable SMBUS0
 	setb	_ENSMB
 	C$kpdlcdtestPCA.c$96$1$122 ==.
 	XG$SMB0_Init$0$0 ==.
@@ -2402,7 +2402,7 @@ _SMB0_Init:
 ;------------------------------------------------------------
 	G$PCA_ISR$0$0 ==.
 	C$kpdlcdtestPCA.c$98$1$122 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:98: void PCA_ISR(void) __interrupt 9
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:98: void PCA_ISR(void) __interrupt 9
 ;	-----------------------------------------
 ;	 function PCA_ISR
 ;	-----------------------------------------
@@ -2410,32 +2410,32 @@ _PCA_ISR:
 	push	acc
 	push	psw
 	C$kpdlcdtestPCA.c$100$1$124 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:100: if (CF)
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:100: if (CF)
 	C$kpdlcdtestPCA.c$102$2$125 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:102: CF = 0;                     // clear the interrupt flag
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:102: CF = 0;                     // clear the interrupt flag
 	jbc	_CF,00114$
 	sjmp	00104$
 00114$:
 	C$kpdlcdtestPCA.c$103$2$125 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:103: nOverflows++;               // continuous overflow counter
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:103: nOverflows++;               // continuous overflow counter
 	inc	_nOverflows
 	clr	a
 	cjne	a,_nOverflows,00115$
 	inc	(_nOverflows + 1)
 00115$:
 	C$kpdlcdtestPCA.c$104$2$125 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:104: nCounts++;
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:104: nCounts++;
 	inc	_nCounts
 	clr	a
 	cjne	a,_nCounts,00116$
 	inc	(_nCounts + 1)
 00116$:
 	C$kpdlcdtestPCA.c$105$2$125 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:105: PCA0 = PCA_START;
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:105: PCA0 = PCA_START;
 	mov	((_PCA0 >> 0) & 0xFF),#0x00
 	mov	((_PCA0 >> 8) & 0xFF),#0x70
 	C$kpdlcdtestPCA.c$106$2$125 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:106: if (nCounts > 50)
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:106: if (nCounts > 50)
 	clr	c
 	mov	a,#0x32
 	subb	a,_nCounts
@@ -2443,12 +2443,12 @@ _PCA_ISR:
 	subb	a,(_nCounts + 1)
 	jnc	00106$
 	C$kpdlcdtestPCA.c$108$3$126 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:108: nCounts = 0;
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:108: nCounts = 0;
 	clr	a
 	mov	_nCounts,a
 	mov	(_nCounts + 1),a
 	C$kpdlcdtestPCA.c$109$3$126 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:109: Counts++;               // seconds counter
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:109: Counts++;               // seconds counter
 	inc	_Counts
 ;	genFromRTrack removed	clr	a
 	cjne	a,_Counts,00106$
@@ -2456,7 +2456,7 @@ _PCA_ISR:
 	sjmp	00106$
 00104$:
 	C$kpdlcdtestPCA.c$112$1$124 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:112: else PCA0CN &= 0xC0;           // clear all other 9-type interrupts
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:112: else PCA0CN &= 0xC0;           // clear all other 9-type interrupts
 	anl	_PCA0CN,#0xC0
 00106$:
 	pop	psw
@@ -2473,18 +2473,18 @@ _PCA_ISR:
 ;------------------------------------------------------------
 	G$pause$0$0 ==.
 	C$kpdlcdtestPCA.c$115$1$124 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:115: void pause(void)
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:115: void pause(void)
 ;	-----------------------------------------
 ;	 function pause
 ;	-----------------------------------------
 _pause:
 	C$kpdlcdtestPCA.c$117$1$128 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:117: nCounts = 0;
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:117: nCounts = 0;
 	clr	a
 	mov	_nCounts,a
 	mov	(_nCounts + 1),a
 	C$kpdlcdtestPCA.c$118$1$128 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:118: while (nCounts < 1);// 1 count -> (65536-PCA_START) x 12/22118400 = 20ms
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:118: while (nCounts < 1);// 1 count -> (65536-PCA_START) x 12/22118400 = 20ms
 00101$:
 	clr	c
 	mov	a,_nCounts
@@ -2500,18 +2500,18 @@ _pause:
 ;------------------------------------------------------------
 	G$wait$0$0 ==.
 	C$kpdlcdtestPCA.c$121$1$128 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:121: void wait(void)
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:121: void wait(void)
 ;	-----------------------------------------
 ;	 function wait
 ;	-----------------------------------------
 _wait:
 	C$kpdlcdtestPCA.c$123$1$130 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:123: nCounts = 0;
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:123: nCounts = 0;
 	clr	a
 	mov	_nCounts,a
 	mov	(_nCounts + 1),a
 	C$kpdlcdtestPCA.c$124$1$130 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:124: while (nCounts < 50);    // 50 counts -> 50 x 20ms = 1000ms
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:124: while (nCounts < 50);    // 50 counts -> 50 x 20ms = 1000ms
 00101$:
 	clr	c
 	mov	a,_nCounts
@@ -2530,31 +2530,31 @@ _wait:
 ;------------------------------------------------------------
 	G$KeyResult$0$0 ==.
 	C$kpdlcdtestPCA.c$127$1$130 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:127: char KeyResult(void)
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:127: char KeyResult(void)
 ;	-----------------------------------------
 ;	 function KeyResult
 ;	-----------------------------------------
 _KeyResult:
 	C$kpdlcdtestPCA.c$130$1$130 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:130: char real_keypad = 0;
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:130: char real_keypad = 0;
 	mov	r7,#0x00
 	C$kpdlcdtestPCA.c$131$1$132 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:131: keypad = read_keypad();
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:131: keypad = read_keypad();
 	push	ar7
 	lcall	_read_keypad
 	mov	r6,dpl
 	C$kpdlcdtestPCA.c$132$1$132 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:132: pause();    // This pauses for 1 PCA0 counter clock cycle (20ms) 
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:132: pause();    // This pauses for 1 PCA0 counter clock cycle (20ms) 
 	push	ar6
 	lcall	_pause
 	pop	ar6
 	pop	ar7
 	C$kpdlcdtestPCA.c$135$1$132 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:135: while(keypad == (-1))
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:135: while(keypad == (-1))
 00101$:
 	cjne	r6,#0xFF,00103$
 	C$kpdlcdtestPCA.c$137$2$133 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:137: keypad = read_keypad();
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:137: keypad = read_keypad();
 	push	ar7
 	lcall	_read_keypad
 	mov	r6,dpl
@@ -2562,17 +2562,17 @@ _KeyResult:
 	sjmp	00101$
 00103$:
 	C$kpdlcdtestPCA.c$139$1$132 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:139: if (keypad != (-1))   // keypad = -1 if no key is pressed
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:139: if (keypad != (-1))   // keypad = -1 if no key is pressed
 	cjne	r6,#0xFF,00133$
 	sjmp	00108$
 00133$:
 	C$kpdlcdtestPCA.c$143$2$134 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:143: lcd_clear();
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:143: lcd_clear();
 	push	ar6
 	lcall	_lcd_clear
 	pop	ar6
 	C$kpdlcdtestPCA.c$144$2$134 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:144: lcd_print("Your key was:\n %c,  = Hex %X", keypad, keypad);
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:144: lcd_print("Your key was:\n %c,  = Hex %X", keypad, keypad);
 	mov	a,r6
 	mov	r4,a
 	rlc	a
@@ -2598,7 +2598,7 @@ _KeyResult:
 	pop	ar4
 	pop	ar5
 	C$kpdlcdtestPCA.c$145$2$134 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:145: printf("\rYour key was: %c,  = Hex %X\n", keypad, keypad);
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:145: printf("\rYour key was: %c,  = Hex %X\n", keypad, keypad);
 	push	ar4
 	push	ar5
 	push	ar4
@@ -2615,7 +2615,7 @@ _KeyResult:
 	mov	sp,a
 	pop	ar6
 	C$kpdlcdtestPCA.c$146$2$134 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:146: if(keypad == 0)printf("   **Wire Connection Error**   ");
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:146: if(keypad == 0)printf("   **Wire Connection Error**   ");
 	mov	a,r6
 	jnz	00105$
 	push	ar6
@@ -2632,10 +2632,10 @@ _KeyResult:
 	pop	ar6
 00105$:
 	C$kpdlcdtestPCA.c$147$2$134 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:147: real_keypad = keypad;
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:147: real_keypad = keypad;
 	mov	ar7,r6
 	C$kpdlcdtestPCA.c$149$1$132 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:149: while(keypad != -1) keypad = read_keypad(); // Waits until keypad returns a -1
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:149: while(keypad != -1) keypad = read_keypad(); // Waits until keypad returns a -1
 00108$:
 	cjne	r6,#0xFF,00135$
 	sjmp	00110$
@@ -2647,7 +2647,7 @@ _KeyResult:
 	sjmp	00108$
 00110$:
 	C$kpdlcdtestPCA.c$150$1$132 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:150: return (real_keypad - 48);
+;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.c:150: return (real_keypad - 48);
 	mov	a,r7
 	add	a,#0xD0
 	mov	dpl,a

@@ -1,5 +1,5 @@
 -muwx
--i C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\Worksheet10.hex
+-i C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Worksheet 10\Worksheet10.hex
 -M
 -Y
 -y
@@ -14,6 +14,6 @@
 -l libint
 -l liblong
 -l libfloat
-C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.rel
+C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 4\Worksheet 10\kpdlcdtestPCA.rel
 
 -e
