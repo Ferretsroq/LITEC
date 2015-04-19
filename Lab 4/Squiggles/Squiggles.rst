@@ -1,7 +1,7 @@
                                       1 ;--------------------------------------------------------
                                       2 ; File Created by SDCC : free open source ANSI-C Compiler
                                       3 ; Version 3.4.0 #8981 (Apr  5 2014) (MINGW32)
-                                      4 ; This file was generated Sun Apr 19 18:46:09 2015
+                                      4 ; This file was generated Sun Apr 19 19:24:39 2015
                                       5 ;--------------------------------------------------------
                                       6 	.module Squiggles
                                       7 	.optsdcc -mmcs51 --model-small
@@ -304,57 +304,57 @@
                                     304 	.globl _DPL
                                     305 	.globl _SP
                                     306 	.globl _P0
-                                    307 	.globl _Data
-                                    308 	.globl _voltage
-                                    309 	.globl _AD_Result
-                                    310 	.globl _ranger_gain
-                                    311 	.globl _compass_adj
-                                    312 	.globl _range_adj
-                                    313 	.globl _COMPASS_PW
-                                    314 	.globl _range
-                                    315 	.globl _heading
-                                    316 	.globl _new_range
-                                    317 	.globl _new_heading
-                                    318 	.globl _delay
-                                    319 	.globl _r_count
-                                    320 	.globl _h_count
-                                    321 	.globl _compass_gain
-                                    322 	.globl _desired_heading
-                                    323 	.globl _nOverflows
-                                    324 	.globl _nCounts
-                                    325 	.globl _Counts
-                                    326 	.globl _i2c_read_data_PARM_4
-                                    327 	.globl _i2c_read_data_PARM_3
-                                    328 	.globl _i2c_read_data_PARM_2
-                                    329 	.globl _i2c_write_data_PARM_4
-                                    330 	.globl _i2c_write_data_PARM_3
-                                    331 	.globl _i2c_write_data_PARM_2
-                                    332 	.globl _putchar
-                                    333 	.globl _getchar
-                                    334 	.globl _lcd_print
-                                    335 	.globl _lcd_clear
-                                    336 	.globl _kpd_input
-                                    337 	.globl _delay_time
-                                    338 	.globl _i2c_start
-                                    339 	.globl _i2c_write
-                                    340 	.globl _i2c_write_and_stop
-                                    341 	.globl _i2c_read
-                                    342 	.globl _i2c_read_and_stop
-                                    343 	.globl _i2c_write_data
-                                    344 	.globl _i2c_read_data
-                                    345 	.globl _Accel_Init
-                                    346 	.globl _Port_Init
-                                    347 	.globl _Interrupt_Init
-                                    348 	.globl _PCA_Init
-                                    349 	.globl _SMB0_Init
-                                    350 	.globl _PCA_ISR
-                                    351 	.globl _ADC_Init
-                                    352 	.globl _read_AD_input
-                                    353 	.globl _Pick_Heading
-                                    354 	.globl _Pick_Compass_Gain
-                                    355 	.globl _read_compass
-                                    356 	.globl _read_ranger
-                                    357 	.globl _set_range_adj
+                                    307 	.globl _print_delay
+                                    308 	.globl _Data
+                                    309 	.globl _voltage
+                                    310 	.globl _AD_Result
+                                    311 	.globl _ranger_gain
+                                    312 	.globl _compass_adj
+                                    313 	.globl _range_adj
+                                    314 	.globl _COMPASS_PW
+                                    315 	.globl _range
+                                    316 	.globl _heading
+                                    317 	.globl _new_range
+                                    318 	.globl _new_heading
+                                    319 	.globl _delay
+                                    320 	.globl _r_count
+                                    321 	.globl _h_count
+                                    322 	.globl _compass_gain
+                                    323 	.globl _desired_heading
+                                    324 	.globl _nOverflows
+                                    325 	.globl _nCounts
+                                    326 	.globl _Counts
+                                    327 	.globl _i2c_read_data_PARM_4
+                                    328 	.globl _i2c_read_data_PARM_3
+                                    329 	.globl _i2c_read_data_PARM_2
+                                    330 	.globl _i2c_write_data_PARM_4
+                                    331 	.globl _i2c_write_data_PARM_3
+                                    332 	.globl _i2c_write_data_PARM_2
+                                    333 	.globl _putchar
+                                    334 	.globl _getchar
+                                    335 	.globl _lcd_print
+                                    336 	.globl _lcd_clear
+                                    337 	.globl _kpd_input
+                                    338 	.globl _delay_time
+                                    339 	.globl _i2c_start
+                                    340 	.globl _i2c_write
+                                    341 	.globl _i2c_write_and_stop
+                                    342 	.globl _i2c_read
+                                    343 	.globl _i2c_read_and_stop
+                                    344 	.globl _i2c_write_data
+                                    345 	.globl _i2c_read_data
+                                    346 	.globl _Accel_Init
+                                    347 	.globl _Port_Init
+                                    348 	.globl _Interrupt_Init
+                                    349 	.globl _PCA_Init
+                                    350 	.globl _SMB0_Init
+                                    351 	.globl _PCA_ISR
+                                    352 	.globl _ADC_Init
+                                    353 	.globl _read_AD_input
+                                    354 	.globl _Pick_Heading
+                                    355 	.globl _Pick_Compass_Gain
+                                    356 	.globl _read_compass
+                                    357 	.globl _read_ranger
                                     358 	.globl _set_COMPASS_PW
                                     359 ;--------------------------------------------------------
                                     360 ; special function registers
@@ -1036,2463 +1036,2503 @@
                            00002E  1036 G$Data$0$0==.
       000050                       1037 _Data::
       000050                       1038 	.ds 2
-                           000030  1039 LSquiggles.read_compass$Data$1$154==.
-      000052                       1040 _read_compass_Data_1_154:
-      000052                       1041 	.ds 2
-                                   1042 ;--------------------------------------------------------
-                                   1043 ; overlayable items in internal ram 
-                                   1044 ;--------------------------------------------------------
-                                   1045 	.area	OSEG    (OVR,DATA)
-                                   1046 	.area	OSEG    (OVR,DATA)
-                                   1047 	.area	OSEG    (OVR,DATA)
+                           000030  1039 G$print_delay$0$0==.
+      000052                       1040 _print_delay::
+      000052                       1041 	.ds 1
+                           000031  1042 LSquiggles.read_compass$Data$1$155==.
+      000053                       1043 _read_compass_Data_1_155:
+      000053                       1044 	.ds 2
+                                   1045 ;--------------------------------------------------------
+                                   1046 ; overlayable items in internal ram 
+                                   1047 ;--------------------------------------------------------
                                    1048 	.area	OSEG    (OVR,DATA)
                                    1049 	.area	OSEG    (OVR,DATA)
                                    1050 	.area	OSEG    (OVR,DATA)
                                    1051 	.area	OSEG    (OVR,DATA)
                                    1052 	.area	OSEG    (OVR,DATA)
-                                   1053 ;--------------------------------------------------------
-                                   1054 ; Stack segment in internal ram 
-                                   1055 ;--------------------------------------------------------
-                                   1056 	.area	SSEG
-      00006E                       1057 __start__stack:
-      00006E                       1058 	.ds	1
-                                   1059 
-                                   1060 ;--------------------------------------------------------
-                                   1061 ; indirectly addressable internal ram data
-                                   1062 ;--------------------------------------------------------
-                                   1063 	.area ISEG    (DATA)
-                                   1064 ;--------------------------------------------------------
-                                   1065 ; absolute internal ram data
-                                   1066 ;--------------------------------------------------------
-                                   1067 	.area IABS    (ABS,DATA)
-                                   1068 	.area IABS    (ABS,DATA)
+                                   1053 	.area	OSEG    (OVR,DATA)
+                                   1054 	.area	OSEG    (OVR,DATA)
+                                   1055 	.area	OSEG    (OVR,DATA)
+                                   1056 ;--------------------------------------------------------
+                                   1057 ; Stack segment in internal ram 
+                                   1058 ;--------------------------------------------------------
+                                   1059 	.area	SSEG
+      00006F                       1060 __start__stack:
+      00006F                       1061 	.ds	1
+                                   1062 
+                                   1063 ;--------------------------------------------------------
+                                   1064 ; indirectly addressable internal ram data
+                                   1065 ;--------------------------------------------------------
+                                   1066 	.area ISEG    (DATA)
+                                   1067 ;--------------------------------------------------------
+                                   1068 ; absolute internal ram data
                                    1069 ;--------------------------------------------------------
-                                   1070 ; bit data
-                                   1071 ;--------------------------------------------------------
-                                   1072 	.area BSEG    (BIT)
-                                   1073 ;--------------------------------------------------------
-                                   1074 ; paged external ram data
-                                   1075 ;--------------------------------------------------------
-                                   1076 	.area PSEG    (PAG,XDATA)
-                                   1077 ;--------------------------------------------------------
-                                   1078 ; external ram data
-                                   1079 ;--------------------------------------------------------
-                                   1080 	.area XSEG    (XDATA)
-                           000000  1081 LSquiggles.lcd_print$text$1$73==.
-      000001                       1082 _lcd_print_text_1_73:
-      000001                       1083 	.ds 80
-                                   1084 ;--------------------------------------------------------
-                                   1085 ; absolute external ram data
-                                   1086 ;--------------------------------------------------------
-                                   1087 	.area XABS    (ABS,XDATA)
-                                   1088 ;--------------------------------------------------------
-                                   1089 ; external initialized ram data
-                                   1090 ;--------------------------------------------------------
-                                   1091 	.area XISEG   (XDATA)
-                                   1092 	.area HOME    (CODE)
-                                   1093 	.area GSINIT0 (CODE)
-                                   1094 	.area GSINIT1 (CODE)
-                                   1095 	.area GSINIT2 (CODE)
-                                   1096 	.area GSINIT3 (CODE)
-                                   1097 	.area GSINIT4 (CODE)
-                                   1098 	.area GSINIT5 (CODE)
-                                   1099 	.area GSINIT  (CODE)
-                                   1100 	.area GSFINAL (CODE)
-                                   1101 	.area CSEG    (CODE)
-                                   1102 ;--------------------------------------------------------
-                                   1103 ; interrupt vector 
-                                   1104 ;--------------------------------------------------------
-                                   1105 	.area HOME    (CODE)
-      000000                       1106 __interrupt_vect:
-      000000 02 00 51         [24] 1107 	ljmp	__sdcc_gsinit_startup
-      000003 32               [24] 1108 	reti
-      000004                       1109 	.ds	7
-      00000B 32               [24] 1110 	reti
-      00000C                       1111 	.ds	7
-      000013 32               [24] 1112 	reti
-      000014                       1113 	.ds	7
-      00001B 32               [24] 1114 	reti
-      00001C                       1115 	.ds	7
-      000023 32               [24] 1116 	reti
-      000024                       1117 	.ds	7
-      00002B 32               [24] 1118 	reti
-      00002C                       1119 	.ds	7
-      000033 32               [24] 1120 	reti
-      000034                       1121 	.ds	7
-      00003B 32               [24] 1122 	reti
-      00003C                       1123 	.ds	7
-      000043 32               [24] 1124 	reti
-      000044                       1125 	.ds	7
-      00004B 02 07 6D         [24] 1126 	ljmp	_PCA_ISR
-                                   1127 ;--------------------------------------------------------
-                                   1128 ; global & static initialisations
-                                   1129 ;--------------------------------------------------------
-                                   1130 	.area HOME    (CODE)
-                                   1131 	.area GSINIT  (CODE)
-                                   1132 	.area GSFINAL (CODE)
-                                   1133 	.area GSINIT  (CODE)
-                                   1134 	.globl __sdcc_gsinit_startup
-                                   1135 	.globl __sdcc_program_startup
-                                   1136 	.globl __start__stack
-                                   1137 	.globl __mcs51_genXINIT
-                                   1138 	.globl __mcs51_genXRAMCLEAR
-                                   1139 	.globl __mcs51_genRAMCLEAR
-                           000000  1140 	C$Squiggles.c$44$1$162 ==.
-                                   1141 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:44: unsigned int desired_heading = 410;
-      0000AA 75 38 9A         [24] 1142 	mov	_desired_heading,#0x9A
-      0000AD 75 39 01         [24] 1143 	mov	(_desired_heading + 1),#0x01
-                           000006  1144 	C$Squiggles.c$45$1$162 ==.
-                                   1145 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:45: float compass_gain = 0.1;
-      0000B0 75 3A CD         [24] 1146 	mov	_compass_gain,#0xCD
-      0000B3 75 3B CC         [24] 1147 	mov	(_compass_gain + 1),#0xCC
-      0000B6 75 3C CC         [24] 1148 	mov	(_compass_gain + 2),#0xCC
-      0000B9 75 3D 3D         [24] 1149 	mov	(_compass_gain + 3),#0x3D
-                           000012  1150 	C$Squiggles.c$56$1$162 ==.
-                                   1151 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:56: unsigned int range_adj = 0;
-      0000BC E4               [12] 1152 	clr	a
-      0000BD F5 49            [12] 1153 	mov	_range_adj,a
-      0000BF F5 4A            [12] 1154 	mov	(_range_adj + 1),a
-                           000017  1155 	C$Squiggles.c$57$1$162 ==.
-                                   1156 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:57: unsigned int compass_adj = 0;
-      0000C1 F5 4B            [12] 1157 	mov	_compass_adj,a
-      0000C3 F5 4C            [12] 1158 	mov	(_compass_adj + 1),a
-                           00001B  1159 	C$Squiggles.c$58$1$162 ==.
-                                   1160 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:58: unsigned char ranger_gain = 40;		// between 30 and 150
-      0000C5 75 4D 28         [24] 1161 	mov	_ranger_gain,#0x28
-                                   1162 	.area GSFINAL (CODE)
-      0000C8 02 00 4E         [24] 1163 	ljmp	__sdcc_program_startup
-                                   1164 ;--------------------------------------------------------
-                                   1165 ; Home
-                                   1166 ;--------------------------------------------------------
-                                   1167 	.area HOME    (CODE)
-                                   1168 	.area HOME    (CODE)
-      00004E                       1169 __sdcc_program_startup:
-      00004E 02 05 A1         [24] 1170 	ljmp	_main
-                                   1171 ;	return from main will return to caller
-                                   1172 ;--------------------------------------------------------
-                                   1173 ; code
-                                   1174 ;--------------------------------------------------------
-                                   1175 	.area CSEG    (CODE)
-                                   1176 ;------------------------------------------------------------
-                                   1177 ;Allocation info for local variables in function 'SYSCLK_Init'
-                                   1178 ;------------------------------------------------------------
-                                   1179 ;i                         Allocated to registers 
-                                   1180 ;------------------------------------------------------------
-                           000000  1181 	G$SYSCLK_Init$0$0 ==.
-                           000000  1182 	C$c8051_SDCC.h$42$0$0 ==.
-                                   1183 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:42: void SYSCLK_Init(void)
-                                   1184 ;	-----------------------------------------
-                                   1185 ;	 function SYSCLK_Init
-                                   1186 ;	-----------------------------------------
-      0000CB                       1187 _SYSCLK_Init:
-                           000007  1188 	ar7 = 0x07
-                           000006  1189 	ar6 = 0x06
-                           000005  1190 	ar5 = 0x05
-                           000004  1191 	ar4 = 0x04
-                           000003  1192 	ar3 = 0x03
-                           000002  1193 	ar2 = 0x02
-                           000001  1194 	ar1 = 0x01
-                           000000  1195 	ar0 = 0x00
-                           000000  1196 	C$c8051_SDCC.h$46$1$31 ==.
-                                   1197 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:46: OSCXCN = 0x67;                      // start external oscillator with
-      0000CB 75 B1 67         [24] 1198 	mov	_OSCXCN,#0x67
-                           000003  1199 	C$c8051_SDCC.h$49$1$31 ==.
-                                   1200 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:49: for (i=0; i < 256; i++);            // wait for oscillator to start
-      0000CE 7E 00            [12] 1201 	mov	r6,#0x00
-      0000D0 7F 01            [12] 1202 	mov	r7,#0x01
-      0000D2                       1203 00107$:
-      0000D2 1E               [12] 1204 	dec	r6
-      0000D3 BE FF 01         [24] 1205 	cjne	r6,#0xFF,00121$
-      0000D6 1F               [12] 1206 	dec	r7
-      0000D7                       1207 00121$:
-      0000D7 EE               [12] 1208 	mov	a,r6
-      0000D8 4F               [12] 1209 	orl	a,r7
-      0000D9 70 F7            [24] 1210 	jnz	00107$
-                           000010  1211 	C$c8051_SDCC.h$51$1$31 ==.
-                                   1212 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:51: while (!(OSCXCN & 0x80));           // Wait for crystal osc. to settle
-      0000DB                       1213 00102$:
-      0000DB E5 B1            [12] 1214 	mov	a,_OSCXCN
-      0000DD 30 E7 FB         [24] 1215 	jnb	acc.7,00102$
-                           000015  1216 	C$c8051_SDCC.h$53$1$31 ==.
-                                   1217 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:53: OSCICN = 0x88;                      // select external oscillator as SYSCLK
-      0000E0 75 B2 88         [24] 1218 	mov	_OSCICN,#0x88
-                           000018  1219 	C$c8051_SDCC.h$56$1$31 ==.
-                           000018  1220 	XG$SYSCLK_Init$0$0 ==.
-      0000E3 22               [24] 1221 	ret
-                                   1222 ;------------------------------------------------------------
-                                   1223 ;Allocation info for local variables in function 'UART0_Init'
-                                   1224 ;------------------------------------------------------------
-                           000019  1225 	G$UART0_Init$0$0 ==.
-                           000019  1226 	C$c8051_SDCC.h$64$1$31 ==.
-                                   1227 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:64: void UART0_Init(void)
-                                   1228 ;	-----------------------------------------
-                                   1229 ;	 function UART0_Init
-                                   1230 ;	-----------------------------------------
-      0000E4                       1231 _UART0_Init:
-                           000019  1232 	C$c8051_SDCC.h$66$1$33 ==.
-                                   1233 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:66: SCON0  = 0x50;                      // SCON0: mode 1, 8-bit UART, enable RX
-      0000E4 75 98 50         [24] 1234 	mov	_SCON0,#0x50
-                           00001C  1235 	C$c8051_SDCC.h$67$1$33 ==.
-                                   1236 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:67: TMOD   = 0x20;                      // TMOD: timer 1, mode 2, 8-bit reload
-      0000E7 75 89 20         [24] 1237 	mov	_TMOD,#0x20
-                           00001F  1238 	C$c8051_SDCC.h$68$1$33 ==.
-                                   1239 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:68: TH1    = -(SYSCLK/BAUDRATE/16);     // set Timer1 reload value for baudrate
-      0000EA 75 8D DC         [24] 1240 	mov	_TH1,#0xDC
-                           000022  1241 	C$c8051_SDCC.h$69$1$33 ==.
-                                   1242 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:69: TR1    = 1;                         // start Timer1
-      0000ED D2 8E            [12] 1243 	setb	_TR1
-                           000024  1244 	C$c8051_SDCC.h$70$1$33 ==.
-                                   1245 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:70: CKCON |= 0x10;                      // Timer1 uses SYSCLK as time base
-      0000EF 43 8E 10         [24] 1246 	orl	_CKCON,#0x10
-                           000027  1247 	C$c8051_SDCC.h$71$1$33 ==.
-                                   1248 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:71: PCON  |= 0x80;                      // SMOD00 = 1 (disable baud rate 
-      0000F2 43 87 80         [24] 1249 	orl	_PCON,#0x80
-                           00002A  1250 	C$c8051_SDCC.h$73$1$33 ==.
-                                   1251 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:73: TI0    = 1;                         // Indicate TX0 ready
-      0000F5 D2 99            [12] 1252 	setb	_TI0
-                           00002C  1253 	C$c8051_SDCC.h$74$1$33 ==.
-                                   1254 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:74: P0MDOUT |= 0x01;                    // Set TX0 to push/pull
-      0000F7 43 A4 01         [24] 1255 	orl	_P0MDOUT,#0x01
-                           00002F  1256 	C$c8051_SDCC.h$75$1$33 ==.
-                           00002F  1257 	XG$UART0_Init$0$0 ==.
-      0000FA 22               [24] 1258 	ret
-                                   1259 ;------------------------------------------------------------
-                                   1260 ;Allocation info for local variables in function 'Sys_Init'
-                                   1261 ;------------------------------------------------------------
-                           000030  1262 	G$Sys_Init$0$0 ==.
-                           000030  1263 	C$c8051_SDCC.h$83$1$33 ==.
-                                   1264 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:83: void Sys_Init(void)
-                                   1265 ;	-----------------------------------------
-                                   1266 ;	 function Sys_Init
-                                   1267 ;	-----------------------------------------
-      0000FB                       1268 _Sys_Init:
-                           000030  1269 	C$c8051_SDCC.h$85$1$35 ==.
-                                   1270 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:85: WDTCN = 0xde;			// disable watchdog timer
-      0000FB 75 FF DE         [24] 1271 	mov	_WDTCN,#0xDE
-                           000033  1272 	C$c8051_SDCC.h$86$1$35 ==.
-                                   1273 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:86: WDTCN = 0xad;
-      0000FE 75 FF AD         [24] 1274 	mov	_WDTCN,#0xAD
-                           000036  1275 	C$c8051_SDCC.h$88$1$35 ==.
-                                   1276 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:88: SYSCLK_Init();			// initialize oscillator
-      000101 12 00 CB         [24] 1277 	lcall	_SYSCLK_Init
-                           000039  1278 	C$c8051_SDCC.h$89$1$35 ==.
-                                   1279 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:89: UART0_Init();			// initialize UART0
-      000104 12 00 E4         [24] 1280 	lcall	_UART0_Init
-                           00003C  1281 	C$c8051_SDCC.h$91$1$35 ==.
-                                   1282 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:91: XBR0 |= 0x04;
-      000107 43 E1 04         [24] 1283 	orl	_XBR0,#0x04
-                           00003F  1284 	C$c8051_SDCC.h$92$1$35 ==.
-                                   1285 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:92: XBR2 |= 0x40;                    	// Enable crossbar and weak pull-ups
-      00010A 43 E3 40         [24] 1286 	orl	_XBR2,#0x40
-                           000042  1287 	C$c8051_SDCC.h$93$1$35 ==.
-                           000042  1288 	XG$Sys_Init$0$0 ==.
-      00010D 22               [24] 1289 	ret
-                                   1290 ;------------------------------------------------------------
-                                   1291 ;Allocation info for local variables in function 'putchar'
-                                   1292 ;------------------------------------------------------------
-                                   1293 ;c                         Allocated to registers r7 
-                                   1294 ;------------------------------------------------------------
-                           000043  1295 	G$putchar$0$0 ==.
-                           000043  1296 	C$c8051_SDCC.h$98$1$35 ==.
-                                   1297 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:98: void putchar(char c)
-                                   1298 ;	-----------------------------------------
-                                   1299 ;	 function putchar
-                                   1300 ;	-----------------------------------------
-      00010E                       1301 _putchar:
-      00010E AF 82            [24] 1302 	mov	r7,dpl
-                           000045  1303 	C$c8051_SDCC.h$100$1$37 ==.
-                                   1304 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:100: while (!TI0); 
-      000110                       1305 00101$:
-                           000045  1306 	C$c8051_SDCC.h$101$1$37 ==.
-                                   1307 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:101: TI0 = 0;
-      000110 10 99 02         [24] 1308 	jbc	_TI0,00112$
-      000113 80 FB            [24] 1309 	sjmp	00101$
-      000115                       1310 00112$:
-                           00004A  1311 	C$c8051_SDCC.h$102$1$37 ==.
-                                   1312 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:102: SBUF0 = c;
-      000115 8F 99            [24] 1313 	mov	_SBUF0,r7
-                           00004C  1314 	C$c8051_SDCC.h$103$1$37 ==.
-                           00004C  1315 	XG$putchar$0$0 ==.
-      000117 22               [24] 1316 	ret
-                                   1317 ;------------------------------------------------------------
-                                   1318 ;Allocation info for local variables in function 'getchar'
-                                   1319 ;------------------------------------------------------------
-                                   1320 ;c                         Allocated to registers 
-                                   1321 ;------------------------------------------------------------
-                           00004D  1322 	G$getchar$0$0 ==.
-                           00004D  1323 	C$c8051_SDCC.h$108$1$37 ==.
-                                   1324 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:108: char getchar(void)
-                                   1325 ;	-----------------------------------------
-                                   1326 ;	 function getchar
-                                   1327 ;	-----------------------------------------
-      000118                       1328 _getchar:
-                           00004D  1329 	C$c8051_SDCC.h$111$1$39 ==.
-                                   1330 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:111: while (!RI0);
-      000118                       1331 00101$:
-                           00004D  1332 	C$c8051_SDCC.h$112$1$39 ==.
-                                   1333 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:112: RI0 = 0;
-      000118 10 98 02         [24] 1334 	jbc	_RI0,00112$
-      00011B 80 FB            [24] 1335 	sjmp	00101$
-      00011D                       1336 00112$:
-                           000052  1337 	C$c8051_SDCC.h$113$1$39 ==.
-                                   1338 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:113: c = SBUF0;
-      00011D 85 99 82         [24] 1339 	mov	dpl,_SBUF0
-                           000055  1340 	C$c8051_SDCC.h$114$1$39 ==.
-                                   1341 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:114: putchar(c);                          // echo to terminal
-      000120 12 01 0E         [24] 1342 	lcall	_putchar
-                           000058  1343 	C$c8051_SDCC.h$115$1$39 ==.
-                                   1344 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:115: return SBUF0;
-      000123 85 99 82         [24] 1345 	mov	dpl,_SBUF0
-                           00005B  1346 	C$c8051_SDCC.h$116$1$39 ==.
-                           00005B  1347 	XG$getchar$0$0 ==.
-      000126 22               [24] 1348 	ret
-                                   1349 ;------------------------------------------------------------
-                                   1350 ;Allocation info for local variables in function 'lcd_print'
-                                   1351 ;------------------------------------------------------------
-                                   1352 ;fmt                       Allocated to stack - _bp -5
-                                   1353 ;len                       Allocated to registers r6 
-                                   1354 ;i                         Allocated to registers 
-                                   1355 ;ap                        Allocated to registers 
-                                   1356 ;text                      Allocated with name '_lcd_print_text_1_73'
-                                   1357 ;------------------------------------------------------------
-                           00005C  1358 	G$lcd_print$0$0 ==.
-                           00005C  1359 	C$i2c.h$81$1$39 ==.
-                                   1360 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:81: void lcd_print(const char *fmt, ...)
-                                   1361 ;	-----------------------------------------
-                                   1362 ;	 function lcd_print
-                                   1363 ;	-----------------------------------------
-      000127                       1364 _lcd_print:
-      000127 C0 0F            [24] 1365 	push	_bp
-      000129 85 81 0F         [24] 1366 	mov	_bp,sp
-                           000061  1367 	C$i2c.h$87$1$73 ==.
-                                   1368 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:87: if ( strlen(fmt) <= 0 ) return;   //If there is no data to print, return
-      00012C E5 0F            [12] 1369 	mov	a,_bp
-      00012E 24 FB            [12] 1370 	add	a,#0xfb
-      000130 F8               [12] 1371 	mov	r0,a
-      000131 86 82            [24] 1372 	mov	dpl,@r0
-      000133 08               [12] 1373 	inc	r0
-      000134 86 83            [24] 1374 	mov	dph,@r0
-      000136 08               [12] 1375 	inc	r0
-      000137 86 F0            [24] 1376 	mov	b,@r0
-      000139 12 13 DD         [24] 1377 	lcall	_strlen
-      00013C E5 82            [12] 1378 	mov	a,dpl
-      00013E 85 83 F0         [24] 1379 	mov	b,dph
-      000141 45 F0            [12] 1380 	orl	a,b
-      000143 70 02            [24] 1381 	jnz	00102$
-      000145 80 62            [24] 1382 	sjmp	00109$
-      000147                       1383 00102$:
-                           00007C  1384 	C$i2c.h$89$2$74 ==.
-                                   1385 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:89: va_start(ap, fmt);
-      000147 E5 0F            [12] 1386 	mov	a,_bp
-      000149 24 FB            [12] 1387 	add	a,#0xFB
-      00014B FF               [12] 1388 	mov	r7,a
-      00014C 8F 0B            [24] 1389 	mov	_vsprintf_PARM_3,r7
-                           000083  1390 	C$i2c.h$90$1$73 ==.
-                                   1391 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:90: vsprintf(text, fmt, ap);
-      00014E E5 0F            [12] 1392 	mov	a,_bp
-      000150 24 FB            [12] 1393 	add	a,#0xfb
-      000152 F8               [12] 1394 	mov	r0,a
-      000153 86 08            [24] 1395 	mov	_vsprintf_PARM_2,@r0
-      000155 08               [12] 1396 	inc	r0
-      000156 86 09            [24] 1397 	mov	(_vsprintf_PARM_2 + 1),@r0
-      000158 08               [12] 1398 	inc	r0
-      000159 86 0A            [24] 1399 	mov	(_vsprintf_PARM_2 + 2),@r0
-      00015B 90 00 01         [24] 1400 	mov	dptr,#_lcd_print_text_1_73
-      00015E 75 F0 00         [24] 1401 	mov	b,#0x00
-      000161 12 0C 43         [24] 1402 	lcall	_vsprintf
-                           000099  1403 	C$i2c.h$93$1$73 ==.
-                                   1404 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:93: len = strlen(text);
-      000164 90 00 01         [24] 1405 	mov	dptr,#_lcd_print_text_1_73
-      000167 75 F0 00         [24] 1406 	mov	b,#0x00
-      00016A 12 13 DD         [24] 1407 	lcall	_strlen
-      00016D AE 82            [24] 1408 	mov	r6,dpl
-                           0000A4  1409 	C$i2c.h$94$1$73 ==.
-                                   1410 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:94: for(i=0; i<len; i++)
-      00016F 7F 00            [12] 1411 	mov	r7,#0x00
-      000171                       1412 00107$:
-      000171 C3               [12] 1413 	clr	c
-      000172 EF               [12] 1414 	mov	a,r7
-      000173 9E               [12] 1415 	subb	a,r6
-      000174 50 1F            [24] 1416 	jnc	00105$
-                           0000AB  1417 	C$i2c.h$96$2$76 ==.
-                                   1418 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:96: if(text[i] == (unsigned char)'\n') text[i] = 13;
-      000176 EF               [12] 1419 	mov	a,r7
-      000177 24 01            [12] 1420 	add	a,#_lcd_print_text_1_73
-      000179 F5 82            [12] 1421 	mov	dpl,a
-      00017B E4               [12] 1422 	clr	a
-      00017C 34 00            [12] 1423 	addc	a,#(_lcd_print_text_1_73 >> 8)
-      00017E F5 83            [12] 1424 	mov	dph,a
-      000180 E0               [24] 1425 	movx	a,@dptr
-      000181 FD               [12] 1426 	mov	r5,a
-      000182 BD 0A 0D         [24] 1427 	cjne	r5,#0x0A,00108$
-      000185 EF               [12] 1428 	mov	a,r7
-      000186 24 01            [12] 1429 	add	a,#_lcd_print_text_1_73
-      000188 F5 82            [12] 1430 	mov	dpl,a
-      00018A E4               [12] 1431 	clr	a
-      00018B 34 00            [12] 1432 	addc	a,#(_lcd_print_text_1_73 >> 8)
-      00018D F5 83            [12] 1433 	mov	dph,a
-      00018F 74 0D            [12] 1434 	mov	a,#0x0D
-      000191 F0               [24] 1435 	movx	@dptr,a
-      000192                       1436 00108$:
-                           0000C7  1437 	C$i2c.h$94$1$73 ==.
-                                   1438 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:94: for(i=0; i<len; i++)
-      000192 0F               [12] 1439 	inc	r7
-      000193 80 DC            [24] 1440 	sjmp	00107$
-      000195                       1441 00105$:
-                           0000CA  1442 	C$i2c.h$99$1$73 ==.
-                                   1443 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:99: i2c_write_data(0xC6, 0x00, text, len);
-      000195 75 28 01         [24] 1444 	mov	_i2c_write_data_PARM_3,#_lcd_print_text_1_73
-      000198 75 29 00         [24] 1445 	mov	(_i2c_write_data_PARM_3 + 1),#(_lcd_print_text_1_73 >> 8)
-      00019B 75 2A 00         [24] 1446 	mov	(_i2c_write_data_PARM_3 + 2),#0x00
-      00019E 75 27 00         [24] 1447 	mov	_i2c_write_data_PARM_2,#0x00
-      0001A1 8E 2B            [24] 1448 	mov	_i2c_write_data_PARM_4,r6
-      0001A3 75 82 C6         [24] 1449 	mov	dpl,#0xC6
-      0001A6 12 04 3D         [24] 1450 	lcall	_i2c_write_data
-      0001A9                       1451 00109$:
-      0001A9 D0 0F            [24] 1452 	pop	_bp
-                           0000E0  1453 	C$i2c.h$100$1$73 ==.
-                           0000E0  1454 	XG$lcd_print$0$0 ==.
-      0001AB 22               [24] 1455 	ret
-                                   1456 ;------------------------------------------------------------
-                                   1457 ;Allocation info for local variables in function 'lcd_clear'
-                                   1458 ;------------------------------------------------------------
-                                   1459 ;NumBytes                  Allocated with name '_lcd_clear_NumBytes_1_77'
-                                   1460 ;Cmd                       Allocated with name '_lcd_clear_Cmd_1_77'
-                                   1461 ;------------------------------------------------------------
-                           0000E1  1462 	G$lcd_clear$0$0 ==.
-                           0000E1  1463 	C$i2c.h$103$1$73 ==.
-                                   1464 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:103: void lcd_clear()
-                                   1465 ;	-----------------------------------------
-                                   1466 ;	 function lcd_clear
-                                   1467 ;	-----------------------------------------
-      0001AC                       1468 _lcd_clear:
-                           0000E1  1469 	C$i2c.h$105$1$73 ==.
-                                   1470 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:105: unsigned char NumBytes=0, Cmd[2];
-      0001AC 75 22 00         [24] 1471 	mov	_lcd_clear_NumBytes_1_77,#0x00
-                           0000E4  1472 	C$i2c.h$107$1$77 ==.
-                                   1473 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:107: while(NumBytes < 64) i2c_read_data(0xC6, 0x00, &NumBytes, 1);
-      0001AF                       1474 00101$:
-      0001AF 74 C0            [12] 1475 	mov	a,#0x100 - 0x40
-      0001B1 25 22            [12] 1476 	add	a,_lcd_clear_NumBytes_1_77
-      0001B3 40 17            [24] 1477 	jc	00103$
-      0001B5 75 2D 22         [24] 1478 	mov	_i2c_read_data_PARM_3,#_lcd_clear_NumBytes_1_77
-      0001B8 75 2E 00         [24] 1479 	mov	(_i2c_read_data_PARM_3 + 1),#0x00
-      0001BB 75 2F 40         [24] 1480 	mov	(_i2c_read_data_PARM_3 + 2),#0x40
-      0001BE 75 2C 00         [24] 1481 	mov	_i2c_read_data_PARM_2,#0x00
-      0001C1 75 30 01         [24] 1482 	mov	_i2c_read_data_PARM_4,#0x01
-      0001C4 75 82 C6         [24] 1483 	mov	dpl,#0xC6
-      0001C7 12 04 B3         [24] 1484 	lcall	_i2c_read_data
-      0001CA 80 E3            [24] 1485 	sjmp	00101$
-      0001CC                       1486 00103$:
-                           000101  1487 	C$i2c.h$109$1$77 ==.
-                                   1488 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:109: Cmd[0] = 12;
-      0001CC 75 23 0C         [24] 1489 	mov	_lcd_clear_Cmd_1_77,#0x0C
-                           000104  1490 	C$i2c.h$110$1$77 ==.
-                                   1491 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:110: i2c_write_data(0xC6, 0x00, Cmd, 1);
-      0001CF 75 28 23         [24] 1492 	mov	_i2c_write_data_PARM_3,#_lcd_clear_Cmd_1_77
-      0001D2 75 29 00         [24] 1493 	mov	(_i2c_write_data_PARM_3 + 1),#0x00
-      0001D5 75 2A 40         [24] 1494 	mov	(_i2c_write_data_PARM_3 + 2),#0x40
-      0001D8 75 27 00         [24] 1495 	mov	_i2c_write_data_PARM_2,#0x00
-      0001DB 75 2B 01         [24] 1496 	mov	_i2c_write_data_PARM_4,#0x01
-      0001DE 75 82 C6         [24] 1497 	mov	dpl,#0xC6
-      0001E1 12 04 3D         [24] 1498 	lcall	_i2c_write_data
-                           000119  1499 	C$i2c.h$111$1$77 ==.
-                           000119  1500 	XG$lcd_clear$0$0 ==.
-      0001E4 22               [24] 1501 	ret
-                                   1502 ;------------------------------------------------------------
-                                   1503 ;Allocation info for local variables in function 'read_keypad'
-                                   1504 ;------------------------------------------------------------
-                                   1505 ;i                         Allocated to registers r7 
-                                   1506 ;Data                      Allocated with name '_read_keypad_Data_1_78'
-                                   1507 ;------------------------------------------------------------
-                           00011A  1508 	G$read_keypad$0$0 ==.
-                           00011A  1509 	C$i2c.h$114$1$77 ==.
-                                   1510 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:114: char read_keypad()
-                                   1511 ;	-----------------------------------------
-                                   1512 ;	 function read_keypad
-                                   1513 ;	-----------------------------------------
-      0001E5                       1514 _read_keypad:
-                           00011A  1515 	C$i2c.h$118$1$78 ==.
-                                   1516 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:118: i2c_read_data(0xC6, 0x01, Data, 2); //Read I2C data on address 192, register 1, 2 bytes of data.
-      0001E5 75 2D 25         [24] 1517 	mov	_i2c_read_data_PARM_3,#_read_keypad_Data_1_78
-      0001E8 75 2E 00         [24] 1518 	mov	(_i2c_read_data_PARM_3 + 1),#0x00
-      0001EB 75 2F 40         [24] 1519 	mov	(_i2c_read_data_PARM_3 + 2),#0x40
-      0001EE 75 2C 01         [24] 1520 	mov	_i2c_read_data_PARM_2,#0x01
-      0001F1 75 30 02         [24] 1521 	mov	_i2c_read_data_PARM_4,#0x02
-      0001F4 75 82 C6         [24] 1522 	mov	dpl,#0xC6
-      0001F7 12 04 B3         [24] 1523 	lcall	_i2c_read_data
-                           00012F  1524 	C$i2c.h$119$1$78 ==.
-                                   1525 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:119: if(Data[0] == 0xFF) return 0;  //No response on bus, no display
-      0001FA 74 FF            [12] 1526 	mov	a,#0xFF
-      0001FC B5 25 05         [24] 1527 	cjne	a,_read_keypad_Data_1_78,00102$
-      0001FF 75 82 00         [24] 1528 	mov	dpl,#0x00
-      000202 80 5F            [24] 1529 	sjmp	00116$
-      000204                       1530 00102$:
-                           000139  1531 	C$i2c.h$121$1$78 ==.
-                                   1532 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:121: for(i=0; i<8; i++)             //loop 8 times
-      000204 7F 00            [12] 1533 	mov	r7,#0x00
-      000206 8F 06            [24] 1534 	mov	ar6,r7
-      000208                       1535 00114$:
-                           00013D  1536 	C$i2c.h$123$2$79 ==.
-                                   1537 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:123: if(Data[0] & (0x01 << i))  //find the ASCII value of the keypad read, if it is the current loop value
-      000208 8E F0            [24] 1538 	mov	b,r6
-      00020A 05 F0            [12] 1539 	inc	b
-      00020C 7C 01            [12] 1540 	mov	r4,#0x01
-      00020E 7D 00            [12] 1541 	mov	r5,#0x00
-      000210 80 06            [24] 1542 	sjmp	00145$
-      000212                       1543 00144$:
-      000212 EC               [12] 1544 	mov	a,r4
-      000213 2C               [12] 1545 	add	a,r4
-      000214 FC               [12] 1546 	mov	r4,a
-      000215 ED               [12] 1547 	mov	a,r5
-      000216 33               [12] 1548 	rlc	a
-      000217 FD               [12] 1549 	mov	r5,a
-      000218                       1550 00145$:
-      000218 D5 F0 F7         [24] 1551 	djnz	b,00144$
-      00021B AA 25            [24] 1552 	mov	r2,_read_keypad_Data_1_78
-      00021D 7B 00            [12] 1553 	mov	r3,#0x00
-      00021F EA               [12] 1554 	mov	a,r2
-      000220 52 04            [12] 1555 	anl	ar4,a
-      000222 EB               [12] 1556 	mov	a,r3
-      000223 52 05            [12] 1557 	anl	ar5,a
-      000225 EC               [12] 1558 	mov	a,r4
-      000226 4D               [12] 1559 	orl	a,r5
-      000227 60 07            [24] 1560 	jz	00115$
-                           00015E  1561 	C$i2c.h$124$2$79 ==.
-                                   1562 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:124: return i+49;
-      000229 74 31            [12] 1563 	mov	a,#0x31
-      00022B 2F               [12] 1564 	add	a,r7
-      00022C F5 82            [12] 1565 	mov	dpl,a
-      00022E 80 33            [24] 1566 	sjmp	00116$
-      000230                       1567 00115$:
-                           000165  1568 	C$i2c.h$121$1$78 ==.
-                                   1569 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:121: for(i=0; i<8; i++)             //loop 8 times
-      000230 0E               [12] 1570 	inc	r6
-      000231 8E 07            [24] 1571 	mov	ar7,r6
-      000233 BE 08 00         [24] 1572 	cjne	r6,#0x08,00147$
-      000236                       1573 00147$:
-      000236 40 D0            [24] 1574 	jc	00114$
-                           00016D  1575 	C$i2c.h$127$1$78 ==.
-                                   1576 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:127: if(Data[1] & 0x01) return '9'; //if the value is equal to 9 return 9.
-      000238 E5 26            [12] 1577 	mov	a,(_read_keypad_Data_1_78 + 0x0001)
-      00023A 30 E0 05         [24] 1578 	jnb	acc.0,00107$
-      00023D 75 82 39         [24] 1579 	mov	dpl,#0x39
-      000240 80 21            [24] 1580 	sjmp	00116$
-      000242                       1581 00107$:
-                           000177  1582 	C$i2c.h$129$1$78 ==.
-                                   1583 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:129: if(Data[1] & 0x02) return '*'; //if the value is equal to the star.
-      000242 E5 26            [12] 1584 	mov	a,(_read_keypad_Data_1_78 + 0x0001)
-      000244 30 E1 05         [24] 1585 	jnb	acc.1,00109$
-      000247 75 82 2A         [24] 1586 	mov	dpl,#0x2A
-      00024A 80 17            [24] 1587 	sjmp	00116$
-      00024C                       1588 00109$:
-                           000181  1589 	C$i2c.h$131$1$78 ==.
-                                   1590 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:131: if(Data[1] & 0x04) return '0'; //if the value is equal to the 0 key
-      00024C E5 26            [12] 1591 	mov	a,(_read_keypad_Data_1_78 + 0x0001)
-      00024E 30 E2 05         [24] 1592 	jnb	acc.2,00111$
-      000251 75 82 30         [24] 1593 	mov	dpl,#0x30
-      000254 80 0D            [24] 1594 	sjmp	00116$
-      000256                       1595 00111$:
-                           00018B  1596 	C$i2c.h$133$1$78 ==.
-                                   1597 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:133: if(Data[1] & 0x08) return '#'; //if the value is equal to the pound key
-      000256 E5 26            [12] 1598 	mov	a,(_read_keypad_Data_1_78 + 0x0001)
-      000258 30 E3 05         [24] 1599 	jnb	acc.3,00113$
-      00025B 75 82 23         [24] 1600 	mov	dpl,#0x23
-      00025E 80 03            [24] 1601 	sjmp	00116$
-      000260                       1602 00113$:
-                           000195  1603 	C$i2c.h$135$1$78 ==.
-                                   1604 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:135: return -1;                     //else return a numerical -1 (0xFF)
-      000260 75 82 FF         [24] 1605 	mov	dpl,#0xFF
-      000263                       1606 00116$:
-                           000198  1607 	C$i2c.h$136$1$78 ==.
-                           000198  1608 	XG$read_keypad$0$0 ==.
-      000263 22               [24] 1609 	ret
+                                   1070 	.area IABS    (ABS,DATA)
+                                   1071 	.area IABS    (ABS,DATA)
+                                   1072 ;--------------------------------------------------------
+                                   1073 ; bit data
+                                   1074 ;--------------------------------------------------------
+                                   1075 	.area BSEG    (BIT)
+                                   1076 ;--------------------------------------------------------
+                                   1077 ; paged external ram data
+                                   1078 ;--------------------------------------------------------
+                                   1079 	.area PSEG    (PAG,XDATA)
+                                   1080 ;--------------------------------------------------------
+                                   1081 ; external ram data
+                                   1082 ;--------------------------------------------------------
+                                   1083 	.area XSEG    (XDATA)
+                           000000  1084 LSquiggles.lcd_print$text$1$73==.
+      000001                       1085 _lcd_print_text_1_73:
+      000001                       1086 	.ds 80
+                                   1087 ;--------------------------------------------------------
+                                   1088 ; absolute external ram data
+                                   1089 ;--------------------------------------------------------
+                                   1090 	.area XABS    (ABS,XDATA)
+                                   1091 ;--------------------------------------------------------
+                                   1092 ; external initialized ram data
+                                   1093 ;--------------------------------------------------------
+                                   1094 	.area XISEG   (XDATA)
+                                   1095 	.area HOME    (CODE)
+                                   1096 	.area GSINIT0 (CODE)
+                                   1097 	.area GSINIT1 (CODE)
+                                   1098 	.area GSINIT2 (CODE)
+                                   1099 	.area GSINIT3 (CODE)
+                                   1100 	.area GSINIT4 (CODE)
+                                   1101 	.area GSINIT5 (CODE)
+                                   1102 	.area GSINIT  (CODE)
+                                   1103 	.area GSFINAL (CODE)
+                                   1104 	.area CSEG    (CODE)
+                                   1105 ;--------------------------------------------------------
+                                   1106 ; interrupt vector 
+                                   1107 ;--------------------------------------------------------
+                                   1108 	.area HOME    (CODE)
+      000000                       1109 __interrupt_vect:
+      000000 02 00 51         [24] 1110 	ljmp	__sdcc_gsinit_startup
+      000003 32               [24] 1111 	reti
+      000004                       1112 	.ds	7
+      00000B 32               [24] 1113 	reti
+      00000C                       1114 	.ds	7
+      000013 32               [24] 1115 	reti
+      000014                       1116 	.ds	7
+      00001B 32               [24] 1117 	reti
+      00001C                       1118 	.ds	7
+      000023 32               [24] 1119 	reti
+      000024                       1120 	.ds	7
+      00002B 32               [24] 1121 	reti
+      00002C                       1122 	.ds	7
+      000033 32               [24] 1123 	reti
+      000034                       1124 	.ds	7
+      00003B 32               [24] 1125 	reti
+      00003C                       1126 	.ds	7
+      000043 32               [24] 1127 	reti
+      000044                       1128 	.ds	7
+      00004B 02 07 E3         [24] 1129 	ljmp	_PCA_ISR
+                                   1130 ;--------------------------------------------------------
+                                   1131 ; global & static initialisations
+                                   1132 ;--------------------------------------------------------
+                                   1133 	.area HOME    (CODE)
+                                   1134 	.area GSINIT  (CODE)
+                                   1135 	.area GSFINAL (CODE)
+                                   1136 	.area GSINIT  (CODE)
+                                   1137 	.globl __sdcc_gsinit_startup
+                                   1138 	.globl __sdcc_program_startup
+                                   1139 	.globl __start__stack
+                                   1140 	.globl __mcs51_genXINIT
+                                   1141 	.globl __mcs51_genXRAMCLEAR
+                                   1142 	.globl __mcs51_genRAMCLEAR
+                           000000  1143 	C$Squiggles.c$54$1$159 ==.
+                                   1144 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:54: unsigned int range_adj = 0;
+      0000AA E4               [12] 1145 	clr	a
+      0000AB F5 49            [12] 1146 	mov	_range_adj,a
+      0000AD F5 4A            [12] 1147 	mov	(_range_adj + 1),a
+                           000005  1148 	C$Squiggles.c$55$1$159 ==.
+                                   1149 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:55: unsigned int compass_adj = 0;
+      0000AF F5 4B            [12] 1150 	mov	_compass_adj,a
+      0000B1 F5 4C            [12] 1151 	mov	(_compass_adj + 1),a
+                           000009  1152 	C$Squiggles.c$56$1$159 ==.
+                                   1153 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:56: unsigned char ranger_gain = 40;		// between 30 and 150
+      0000B3 75 4D 28         [24] 1154 	mov	_ranger_gain,#0x28
+                                   1155 	.area GSFINAL (CODE)
+      0000B6 02 00 4E         [24] 1156 	ljmp	__sdcc_program_startup
+                                   1157 ;--------------------------------------------------------
+                                   1158 ; Home
+                                   1159 ;--------------------------------------------------------
+                                   1160 	.area HOME    (CODE)
+                                   1161 	.area HOME    (CODE)
+      00004E                       1162 __sdcc_program_startup:
+      00004E 02 05 8F         [24] 1163 	ljmp	_main
+                                   1164 ;	return from main will return to caller
+                                   1165 ;--------------------------------------------------------
+                                   1166 ; code
+                                   1167 ;--------------------------------------------------------
+                                   1168 	.area CSEG    (CODE)
+                                   1169 ;------------------------------------------------------------
+                                   1170 ;Allocation info for local variables in function 'SYSCLK_Init'
+                                   1171 ;------------------------------------------------------------
+                                   1172 ;i                         Allocated to registers 
+                                   1173 ;------------------------------------------------------------
+                           000000  1174 	G$SYSCLK_Init$0$0 ==.
+                           000000  1175 	C$c8051_SDCC.h$42$0$0 ==.
+                                   1176 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:42: void SYSCLK_Init(void)
+                                   1177 ;	-----------------------------------------
+                                   1178 ;	 function SYSCLK_Init
+                                   1179 ;	-----------------------------------------
+      0000B9                       1180 _SYSCLK_Init:
+                           000007  1181 	ar7 = 0x07
+                           000006  1182 	ar6 = 0x06
+                           000005  1183 	ar5 = 0x05
+                           000004  1184 	ar4 = 0x04
+                           000003  1185 	ar3 = 0x03
+                           000002  1186 	ar2 = 0x02
+                           000001  1187 	ar1 = 0x01
+                           000000  1188 	ar0 = 0x00
+                           000000  1189 	C$c8051_SDCC.h$46$1$31 ==.
+                                   1190 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:46: OSCXCN = 0x67;                      // start external oscillator with
+      0000B9 75 B1 67         [24] 1191 	mov	_OSCXCN,#0x67
+                           000003  1192 	C$c8051_SDCC.h$49$1$31 ==.
+                                   1193 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:49: for (i=0; i < 256; i++);            // wait for oscillator to start
+      0000BC 7E 00            [12] 1194 	mov	r6,#0x00
+      0000BE 7F 01            [12] 1195 	mov	r7,#0x01
+      0000C0                       1196 00107$:
+      0000C0 1E               [12] 1197 	dec	r6
+      0000C1 BE FF 01         [24] 1198 	cjne	r6,#0xFF,00121$
+      0000C4 1F               [12] 1199 	dec	r7
+      0000C5                       1200 00121$:
+      0000C5 EE               [12] 1201 	mov	a,r6
+      0000C6 4F               [12] 1202 	orl	a,r7
+      0000C7 70 F7            [24] 1203 	jnz	00107$
+                           000010  1204 	C$c8051_SDCC.h$51$1$31 ==.
+                                   1205 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:51: while (!(OSCXCN & 0x80));           // Wait for crystal osc. to settle
+      0000C9                       1206 00102$:
+      0000C9 E5 B1            [12] 1207 	mov	a,_OSCXCN
+      0000CB 30 E7 FB         [24] 1208 	jnb	acc.7,00102$
+                           000015  1209 	C$c8051_SDCC.h$53$1$31 ==.
+                                   1210 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:53: OSCICN = 0x88;                      // select external oscillator as SYSCLK
+      0000CE 75 B2 88         [24] 1211 	mov	_OSCICN,#0x88
+                           000018  1212 	C$c8051_SDCC.h$56$1$31 ==.
+                           000018  1213 	XG$SYSCLK_Init$0$0 ==.
+      0000D1 22               [24] 1214 	ret
+                                   1215 ;------------------------------------------------------------
+                                   1216 ;Allocation info for local variables in function 'UART0_Init'
+                                   1217 ;------------------------------------------------------------
+                           000019  1218 	G$UART0_Init$0$0 ==.
+                           000019  1219 	C$c8051_SDCC.h$64$1$31 ==.
+                                   1220 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:64: void UART0_Init(void)
+                                   1221 ;	-----------------------------------------
+                                   1222 ;	 function UART0_Init
+                                   1223 ;	-----------------------------------------
+      0000D2                       1224 _UART0_Init:
+                           000019  1225 	C$c8051_SDCC.h$66$1$33 ==.
+                                   1226 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:66: SCON0  = 0x50;                      // SCON0: mode 1, 8-bit UART, enable RX
+      0000D2 75 98 50         [24] 1227 	mov	_SCON0,#0x50
+                           00001C  1228 	C$c8051_SDCC.h$67$1$33 ==.
+                                   1229 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:67: TMOD   = 0x20;                      // TMOD: timer 1, mode 2, 8-bit reload
+      0000D5 75 89 20         [24] 1230 	mov	_TMOD,#0x20
+                           00001F  1231 	C$c8051_SDCC.h$68$1$33 ==.
+                                   1232 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:68: TH1    = -(SYSCLK/BAUDRATE/16);     // set Timer1 reload value for baudrate
+      0000D8 75 8D DC         [24] 1233 	mov	_TH1,#0xDC
+                           000022  1234 	C$c8051_SDCC.h$69$1$33 ==.
+                                   1235 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:69: TR1    = 1;                         // start Timer1
+      0000DB D2 8E            [12] 1236 	setb	_TR1
+                           000024  1237 	C$c8051_SDCC.h$70$1$33 ==.
+                                   1238 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:70: CKCON |= 0x10;                      // Timer1 uses SYSCLK as time base
+      0000DD 43 8E 10         [24] 1239 	orl	_CKCON,#0x10
+                           000027  1240 	C$c8051_SDCC.h$71$1$33 ==.
+                                   1241 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:71: PCON  |= 0x80;                      // SMOD00 = 1 (disable baud rate 
+      0000E0 43 87 80         [24] 1242 	orl	_PCON,#0x80
+                           00002A  1243 	C$c8051_SDCC.h$73$1$33 ==.
+                                   1244 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:73: TI0    = 1;                         // Indicate TX0 ready
+      0000E3 D2 99            [12] 1245 	setb	_TI0
+                           00002C  1246 	C$c8051_SDCC.h$74$1$33 ==.
+                                   1247 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:74: P0MDOUT |= 0x01;                    // Set TX0 to push/pull
+      0000E5 43 A4 01         [24] 1248 	orl	_P0MDOUT,#0x01
+                           00002F  1249 	C$c8051_SDCC.h$75$1$33 ==.
+                           00002F  1250 	XG$UART0_Init$0$0 ==.
+      0000E8 22               [24] 1251 	ret
+                                   1252 ;------------------------------------------------------------
+                                   1253 ;Allocation info for local variables in function 'Sys_Init'
+                                   1254 ;------------------------------------------------------------
+                           000030  1255 	G$Sys_Init$0$0 ==.
+                           000030  1256 	C$c8051_SDCC.h$83$1$33 ==.
+                                   1257 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:83: void Sys_Init(void)
+                                   1258 ;	-----------------------------------------
+                                   1259 ;	 function Sys_Init
+                                   1260 ;	-----------------------------------------
+      0000E9                       1261 _Sys_Init:
+                           000030  1262 	C$c8051_SDCC.h$85$1$35 ==.
+                                   1263 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:85: WDTCN = 0xde;			// disable watchdog timer
+      0000E9 75 FF DE         [24] 1264 	mov	_WDTCN,#0xDE
+                           000033  1265 	C$c8051_SDCC.h$86$1$35 ==.
+                                   1266 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:86: WDTCN = 0xad;
+      0000EC 75 FF AD         [24] 1267 	mov	_WDTCN,#0xAD
+                           000036  1268 	C$c8051_SDCC.h$88$1$35 ==.
+                                   1269 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:88: SYSCLK_Init();			// initialize oscillator
+      0000EF 12 00 B9         [24] 1270 	lcall	_SYSCLK_Init
+                           000039  1271 	C$c8051_SDCC.h$89$1$35 ==.
+                                   1272 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:89: UART0_Init();			// initialize UART0
+      0000F2 12 00 D2         [24] 1273 	lcall	_UART0_Init
+                           00003C  1274 	C$c8051_SDCC.h$91$1$35 ==.
+                                   1275 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:91: XBR0 |= 0x04;
+      0000F5 43 E1 04         [24] 1276 	orl	_XBR0,#0x04
+                           00003F  1277 	C$c8051_SDCC.h$92$1$35 ==.
+                                   1278 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:92: XBR2 |= 0x40;                    	// Enable crossbar and weak pull-ups
+      0000F8 43 E3 40         [24] 1279 	orl	_XBR2,#0x40
+                           000042  1280 	C$c8051_SDCC.h$93$1$35 ==.
+                           000042  1281 	XG$Sys_Init$0$0 ==.
+      0000FB 22               [24] 1282 	ret
+                                   1283 ;------------------------------------------------------------
+                                   1284 ;Allocation info for local variables in function 'putchar'
+                                   1285 ;------------------------------------------------------------
+                                   1286 ;c                         Allocated to registers r7 
+                                   1287 ;------------------------------------------------------------
+                           000043  1288 	G$putchar$0$0 ==.
+                           000043  1289 	C$c8051_SDCC.h$98$1$35 ==.
+                                   1290 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:98: void putchar(char c)
+                                   1291 ;	-----------------------------------------
+                                   1292 ;	 function putchar
+                                   1293 ;	-----------------------------------------
+      0000FC                       1294 _putchar:
+      0000FC AF 82            [24] 1295 	mov	r7,dpl
+                           000045  1296 	C$c8051_SDCC.h$100$1$37 ==.
+                                   1297 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:100: while (!TI0); 
+      0000FE                       1298 00101$:
+                           000045  1299 	C$c8051_SDCC.h$101$1$37 ==.
+                                   1300 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:101: TI0 = 0;
+      0000FE 10 99 02         [24] 1301 	jbc	_TI0,00112$
+      000101 80 FB            [24] 1302 	sjmp	00101$
+      000103                       1303 00112$:
+                           00004A  1304 	C$c8051_SDCC.h$102$1$37 ==.
+                                   1305 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:102: SBUF0 = c;
+      000103 8F 99            [24] 1306 	mov	_SBUF0,r7
+                           00004C  1307 	C$c8051_SDCC.h$103$1$37 ==.
+                           00004C  1308 	XG$putchar$0$0 ==.
+      000105 22               [24] 1309 	ret
+                                   1310 ;------------------------------------------------------------
+                                   1311 ;Allocation info for local variables in function 'getchar'
+                                   1312 ;------------------------------------------------------------
+                                   1313 ;c                         Allocated to registers 
+                                   1314 ;------------------------------------------------------------
+                           00004D  1315 	G$getchar$0$0 ==.
+                           00004D  1316 	C$c8051_SDCC.h$108$1$37 ==.
+                                   1317 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:108: char getchar(void)
+                                   1318 ;	-----------------------------------------
+                                   1319 ;	 function getchar
+                                   1320 ;	-----------------------------------------
+      000106                       1321 _getchar:
+                           00004D  1322 	C$c8051_SDCC.h$111$1$39 ==.
+                                   1323 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:111: while (!RI0);
+      000106                       1324 00101$:
+                           00004D  1325 	C$c8051_SDCC.h$112$1$39 ==.
+                                   1326 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:112: RI0 = 0;
+      000106 10 98 02         [24] 1327 	jbc	_RI0,00112$
+      000109 80 FB            [24] 1328 	sjmp	00101$
+      00010B                       1329 00112$:
+                           000052  1330 	C$c8051_SDCC.h$113$1$39 ==.
+                                   1331 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:113: c = SBUF0;
+      00010B 85 99 82         [24] 1332 	mov	dpl,_SBUF0
+                           000055  1333 	C$c8051_SDCC.h$114$1$39 ==.
+                                   1334 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:114: putchar(c);                          // echo to terminal
+      00010E 12 00 FC         [24] 1335 	lcall	_putchar
+                           000058  1336 	C$c8051_SDCC.h$115$1$39 ==.
+                                   1337 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/c8051_SDCC.h:115: return SBUF0;
+      000111 85 99 82         [24] 1338 	mov	dpl,_SBUF0
+                           00005B  1339 	C$c8051_SDCC.h$116$1$39 ==.
+                           00005B  1340 	XG$getchar$0$0 ==.
+      000114 22               [24] 1341 	ret
+                                   1342 ;------------------------------------------------------------
+                                   1343 ;Allocation info for local variables in function 'lcd_print'
+                                   1344 ;------------------------------------------------------------
+                                   1345 ;fmt                       Allocated to stack - _bp -5
+                                   1346 ;len                       Allocated to registers r6 
+                                   1347 ;i                         Allocated to registers 
+                                   1348 ;ap                        Allocated to registers 
+                                   1349 ;text                      Allocated with name '_lcd_print_text_1_73'
+                                   1350 ;------------------------------------------------------------
+                           00005C  1351 	G$lcd_print$0$0 ==.
+                           00005C  1352 	C$i2c.h$81$1$39 ==.
+                                   1353 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:81: void lcd_print(const char *fmt, ...)
+                                   1354 ;	-----------------------------------------
+                                   1355 ;	 function lcd_print
+                                   1356 ;	-----------------------------------------
+      000115                       1357 _lcd_print:
+      000115 C0 0F            [24] 1358 	push	_bp
+      000117 85 81 0F         [24] 1359 	mov	_bp,sp
+                           000061  1360 	C$i2c.h$87$1$73 ==.
+                                   1361 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:87: if ( strlen(fmt) <= 0 ) return;   //If there is no data to print, return
+      00011A E5 0F            [12] 1362 	mov	a,_bp
+      00011C 24 FB            [12] 1363 	add	a,#0xfb
+      00011E F8               [12] 1364 	mov	r0,a
+      00011F 86 82            [24] 1365 	mov	dpl,@r0
+      000121 08               [12] 1366 	inc	r0
+      000122 86 83            [24] 1367 	mov	dph,@r0
+      000124 08               [12] 1368 	inc	r0
+      000125 86 F0            [24] 1369 	mov	b,@r0
+      000127 12 14 2C         [24] 1370 	lcall	_strlen
+      00012A E5 82            [12] 1371 	mov	a,dpl
+      00012C 85 83 F0         [24] 1372 	mov	b,dph
+      00012F 45 F0            [12] 1373 	orl	a,b
+      000131 70 02            [24] 1374 	jnz	00102$
+      000133 80 62            [24] 1375 	sjmp	00109$
+      000135                       1376 00102$:
+                           00007C  1377 	C$i2c.h$89$2$74 ==.
+                                   1378 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:89: va_start(ap, fmt);
+      000135 E5 0F            [12] 1379 	mov	a,_bp
+      000137 24 FB            [12] 1380 	add	a,#0xFB
+      000139 FF               [12] 1381 	mov	r7,a
+      00013A 8F 0B            [24] 1382 	mov	_vsprintf_PARM_3,r7
+                           000083  1383 	C$i2c.h$90$1$73 ==.
+                                   1384 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:90: vsprintf(text, fmt, ap);
+      00013C E5 0F            [12] 1385 	mov	a,_bp
+      00013E 24 FB            [12] 1386 	add	a,#0xfb
+      000140 F8               [12] 1387 	mov	r0,a
+      000141 86 08            [24] 1388 	mov	_vsprintf_PARM_2,@r0
+      000143 08               [12] 1389 	inc	r0
+      000144 86 09            [24] 1390 	mov	(_vsprintf_PARM_2 + 1),@r0
+      000146 08               [12] 1391 	inc	r0
+      000147 86 0A            [24] 1392 	mov	(_vsprintf_PARM_2 + 2),@r0
+      000149 90 00 01         [24] 1393 	mov	dptr,#_lcd_print_text_1_73
+      00014C 75 F0 00         [24] 1394 	mov	b,#0x00
+      00014F 12 0C BB         [24] 1395 	lcall	_vsprintf
+                           000099  1396 	C$i2c.h$93$1$73 ==.
+                                   1397 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:93: len = strlen(text);
+      000152 90 00 01         [24] 1398 	mov	dptr,#_lcd_print_text_1_73
+      000155 75 F0 00         [24] 1399 	mov	b,#0x00
+      000158 12 14 2C         [24] 1400 	lcall	_strlen
+      00015B AE 82            [24] 1401 	mov	r6,dpl
+                           0000A4  1402 	C$i2c.h$94$1$73 ==.
+                                   1403 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:94: for(i=0; i<len; i++)
+      00015D 7F 00            [12] 1404 	mov	r7,#0x00
+      00015F                       1405 00107$:
+      00015F C3               [12] 1406 	clr	c
+      000160 EF               [12] 1407 	mov	a,r7
+      000161 9E               [12] 1408 	subb	a,r6
+      000162 50 1F            [24] 1409 	jnc	00105$
+                           0000AB  1410 	C$i2c.h$96$2$76 ==.
+                                   1411 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:96: if(text[i] == (unsigned char)'\n') text[i] = 13;
+      000164 EF               [12] 1412 	mov	a,r7
+      000165 24 01            [12] 1413 	add	a,#_lcd_print_text_1_73
+      000167 F5 82            [12] 1414 	mov	dpl,a
+      000169 E4               [12] 1415 	clr	a
+      00016A 34 00            [12] 1416 	addc	a,#(_lcd_print_text_1_73 >> 8)
+      00016C F5 83            [12] 1417 	mov	dph,a
+      00016E E0               [24] 1418 	movx	a,@dptr
+      00016F FD               [12] 1419 	mov	r5,a
+      000170 BD 0A 0D         [24] 1420 	cjne	r5,#0x0A,00108$
+      000173 EF               [12] 1421 	mov	a,r7
+      000174 24 01            [12] 1422 	add	a,#_lcd_print_text_1_73
+      000176 F5 82            [12] 1423 	mov	dpl,a
+      000178 E4               [12] 1424 	clr	a
+      000179 34 00            [12] 1425 	addc	a,#(_lcd_print_text_1_73 >> 8)
+      00017B F5 83            [12] 1426 	mov	dph,a
+      00017D 74 0D            [12] 1427 	mov	a,#0x0D
+      00017F F0               [24] 1428 	movx	@dptr,a
+      000180                       1429 00108$:
+                           0000C7  1430 	C$i2c.h$94$1$73 ==.
+                                   1431 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:94: for(i=0; i<len; i++)
+      000180 0F               [12] 1432 	inc	r7
+      000181 80 DC            [24] 1433 	sjmp	00107$
+      000183                       1434 00105$:
+                           0000CA  1435 	C$i2c.h$99$1$73 ==.
+                                   1436 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:99: i2c_write_data(0xC6, 0x00, text, len);
+      000183 75 28 01         [24] 1437 	mov	_i2c_write_data_PARM_3,#_lcd_print_text_1_73
+      000186 75 29 00         [24] 1438 	mov	(_i2c_write_data_PARM_3 + 1),#(_lcd_print_text_1_73 >> 8)
+      000189 75 2A 00         [24] 1439 	mov	(_i2c_write_data_PARM_3 + 2),#0x00
+      00018C 75 27 00         [24] 1440 	mov	_i2c_write_data_PARM_2,#0x00
+      00018F 8E 2B            [24] 1441 	mov	_i2c_write_data_PARM_4,r6
+      000191 75 82 C6         [24] 1442 	mov	dpl,#0xC6
+      000194 12 04 2B         [24] 1443 	lcall	_i2c_write_data
+      000197                       1444 00109$:
+      000197 D0 0F            [24] 1445 	pop	_bp
+                           0000E0  1446 	C$i2c.h$100$1$73 ==.
+                           0000E0  1447 	XG$lcd_print$0$0 ==.
+      000199 22               [24] 1448 	ret
+                                   1449 ;------------------------------------------------------------
+                                   1450 ;Allocation info for local variables in function 'lcd_clear'
+                                   1451 ;------------------------------------------------------------
+                                   1452 ;NumBytes                  Allocated with name '_lcd_clear_NumBytes_1_77'
+                                   1453 ;Cmd                       Allocated with name '_lcd_clear_Cmd_1_77'
+                                   1454 ;------------------------------------------------------------
+                           0000E1  1455 	G$lcd_clear$0$0 ==.
+                           0000E1  1456 	C$i2c.h$103$1$73 ==.
+                                   1457 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:103: void lcd_clear()
+                                   1458 ;	-----------------------------------------
+                                   1459 ;	 function lcd_clear
+                                   1460 ;	-----------------------------------------
+      00019A                       1461 _lcd_clear:
+                           0000E1  1462 	C$i2c.h$105$1$73 ==.
+                                   1463 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:105: unsigned char NumBytes=0, Cmd[2];
+      00019A 75 22 00         [24] 1464 	mov	_lcd_clear_NumBytes_1_77,#0x00
+                           0000E4  1465 	C$i2c.h$107$1$77 ==.
+                                   1466 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:107: while(NumBytes < 64) i2c_read_data(0xC6, 0x00, &NumBytes, 1);
+      00019D                       1467 00101$:
+      00019D 74 C0            [12] 1468 	mov	a,#0x100 - 0x40
+      00019F 25 22            [12] 1469 	add	a,_lcd_clear_NumBytes_1_77
+      0001A1 40 17            [24] 1470 	jc	00103$
+      0001A3 75 2D 22         [24] 1471 	mov	_i2c_read_data_PARM_3,#_lcd_clear_NumBytes_1_77
+      0001A6 75 2E 00         [24] 1472 	mov	(_i2c_read_data_PARM_3 + 1),#0x00
+      0001A9 75 2F 40         [24] 1473 	mov	(_i2c_read_data_PARM_3 + 2),#0x40
+      0001AC 75 2C 00         [24] 1474 	mov	_i2c_read_data_PARM_2,#0x00
+      0001AF 75 30 01         [24] 1475 	mov	_i2c_read_data_PARM_4,#0x01
+      0001B2 75 82 C6         [24] 1476 	mov	dpl,#0xC6
+      0001B5 12 04 A1         [24] 1477 	lcall	_i2c_read_data
+      0001B8 80 E3            [24] 1478 	sjmp	00101$
+      0001BA                       1479 00103$:
+                           000101  1480 	C$i2c.h$109$1$77 ==.
+                                   1481 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:109: Cmd[0] = 12;
+      0001BA 75 23 0C         [24] 1482 	mov	_lcd_clear_Cmd_1_77,#0x0C
+                           000104  1483 	C$i2c.h$110$1$77 ==.
+                                   1484 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:110: i2c_write_data(0xC6, 0x00, Cmd, 1);
+      0001BD 75 28 23         [24] 1485 	mov	_i2c_write_data_PARM_3,#_lcd_clear_Cmd_1_77
+      0001C0 75 29 00         [24] 1486 	mov	(_i2c_write_data_PARM_3 + 1),#0x00
+      0001C3 75 2A 40         [24] 1487 	mov	(_i2c_write_data_PARM_3 + 2),#0x40
+      0001C6 75 27 00         [24] 1488 	mov	_i2c_write_data_PARM_2,#0x00
+      0001C9 75 2B 01         [24] 1489 	mov	_i2c_write_data_PARM_4,#0x01
+      0001CC 75 82 C6         [24] 1490 	mov	dpl,#0xC6
+      0001CF 12 04 2B         [24] 1491 	lcall	_i2c_write_data
+                           000119  1492 	C$i2c.h$111$1$77 ==.
+                           000119  1493 	XG$lcd_clear$0$0 ==.
+      0001D2 22               [24] 1494 	ret
+                                   1495 ;------------------------------------------------------------
+                                   1496 ;Allocation info for local variables in function 'read_keypad'
+                                   1497 ;------------------------------------------------------------
+                                   1498 ;i                         Allocated to registers r7 
+                                   1499 ;Data                      Allocated with name '_read_keypad_Data_1_78'
+                                   1500 ;------------------------------------------------------------
+                           00011A  1501 	G$read_keypad$0$0 ==.
+                           00011A  1502 	C$i2c.h$114$1$77 ==.
+                                   1503 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:114: char read_keypad()
+                                   1504 ;	-----------------------------------------
+                                   1505 ;	 function read_keypad
+                                   1506 ;	-----------------------------------------
+      0001D3                       1507 _read_keypad:
+                           00011A  1508 	C$i2c.h$118$1$78 ==.
+                                   1509 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:118: i2c_read_data(0xC6, 0x01, Data, 2); //Read I2C data on address 192, register 1, 2 bytes of data.
+      0001D3 75 2D 25         [24] 1510 	mov	_i2c_read_data_PARM_3,#_read_keypad_Data_1_78
+      0001D6 75 2E 00         [24] 1511 	mov	(_i2c_read_data_PARM_3 + 1),#0x00
+      0001D9 75 2F 40         [24] 1512 	mov	(_i2c_read_data_PARM_3 + 2),#0x40
+      0001DC 75 2C 01         [24] 1513 	mov	_i2c_read_data_PARM_2,#0x01
+      0001DF 75 30 02         [24] 1514 	mov	_i2c_read_data_PARM_4,#0x02
+      0001E2 75 82 C6         [24] 1515 	mov	dpl,#0xC6
+      0001E5 12 04 A1         [24] 1516 	lcall	_i2c_read_data
+                           00012F  1517 	C$i2c.h$119$1$78 ==.
+                                   1518 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:119: if(Data[0] == 0xFF) return 0;  //No response on bus, no display
+      0001E8 74 FF            [12] 1519 	mov	a,#0xFF
+      0001EA B5 25 05         [24] 1520 	cjne	a,_read_keypad_Data_1_78,00102$
+      0001ED 75 82 00         [24] 1521 	mov	dpl,#0x00
+      0001F0 80 5F            [24] 1522 	sjmp	00116$
+      0001F2                       1523 00102$:
+                           000139  1524 	C$i2c.h$121$1$78 ==.
+                                   1525 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:121: for(i=0; i<8; i++)             //loop 8 times
+      0001F2 7F 00            [12] 1526 	mov	r7,#0x00
+      0001F4 8F 06            [24] 1527 	mov	ar6,r7
+      0001F6                       1528 00114$:
+                           00013D  1529 	C$i2c.h$123$2$79 ==.
+                                   1530 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:123: if(Data[0] & (0x01 << i))  //find the ASCII value of the keypad read, if it is the current loop value
+      0001F6 8E F0            [24] 1531 	mov	b,r6
+      0001F8 05 F0            [12] 1532 	inc	b
+      0001FA 7C 01            [12] 1533 	mov	r4,#0x01
+      0001FC 7D 00            [12] 1534 	mov	r5,#0x00
+      0001FE 80 06            [24] 1535 	sjmp	00145$
+      000200                       1536 00144$:
+      000200 EC               [12] 1537 	mov	a,r4
+      000201 2C               [12] 1538 	add	a,r4
+      000202 FC               [12] 1539 	mov	r4,a
+      000203 ED               [12] 1540 	mov	a,r5
+      000204 33               [12] 1541 	rlc	a
+      000205 FD               [12] 1542 	mov	r5,a
+      000206                       1543 00145$:
+      000206 D5 F0 F7         [24] 1544 	djnz	b,00144$
+      000209 AA 25            [24] 1545 	mov	r2,_read_keypad_Data_1_78
+      00020B 7B 00            [12] 1546 	mov	r3,#0x00
+      00020D EA               [12] 1547 	mov	a,r2
+      00020E 52 04            [12] 1548 	anl	ar4,a
+      000210 EB               [12] 1549 	mov	a,r3
+      000211 52 05            [12] 1550 	anl	ar5,a
+      000213 EC               [12] 1551 	mov	a,r4
+      000214 4D               [12] 1552 	orl	a,r5
+      000215 60 07            [24] 1553 	jz	00115$
+                           00015E  1554 	C$i2c.h$124$2$79 ==.
+                                   1555 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:124: return i+49;
+      000217 74 31            [12] 1556 	mov	a,#0x31
+      000219 2F               [12] 1557 	add	a,r7
+      00021A F5 82            [12] 1558 	mov	dpl,a
+      00021C 80 33            [24] 1559 	sjmp	00116$
+      00021E                       1560 00115$:
+                           000165  1561 	C$i2c.h$121$1$78 ==.
+                                   1562 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:121: for(i=0; i<8; i++)             //loop 8 times
+      00021E 0E               [12] 1563 	inc	r6
+      00021F 8E 07            [24] 1564 	mov	ar7,r6
+      000221 BE 08 00         [24] 1565 	cjne	r6,#0x08,00147$
+      000224                       1566 00147$:
+      000224 40 D0            [24] 1567 	jc	00114$
+                           00016D  1568 	C$i2c.h$127$1$78 ==.
+                                   1569 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:127: if(Data[1] & 0x01) return '9'; //if the value is equal to 9 return 9.
+      000226 E5 26            [12] 1570 	mov	a,(_read_keypad_Data_1_78 + 0x0001)
+      000228 30 E0 05         [24] 1571 	jnb	acc.0,00107$
+      00022B 75 82 39         [24] 1572 	mov	dpl,#0x39
+      00022E 80 21            [24] 1573 	sjmp	00116$
+      000230                       1574 00107$:
+                           000177  1575 	C$i2c.h$129$1$78 ==.
+                                   1576 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:129: if(Data[1] & 0x02) return '*'; //if the value is equal to the star.
+      000230 E5 26            [12] 1577 	mov	a,(_read_keypad_Data_1_78 + 0x0001)
+      000232 30 E1 05         [24] 1578 	jnb	acc.1,00109$
+      000235 75 82 2A         [24] 1579 	mov	dpl,#0x2A
+      000238 80 17            [24] 1580 	sjmp	00116$
+      00023A                       1581 00109$:
+                           000181  1582 	C$i2c.h$131$1$78 ==.
+                                   1583 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:131: if(Data[1] & 0x04) return '0'; //if the value is equal to the 0 key
+      00023A E5 26            [12] 1584 	mov	a,(_read_keypad_Data_1_78 + 0x0001)
+      00023C 30 E2 05         [24] 1585 	jnb	acc.2,00111$
+      00023F 75 82 30         [24] 1586 	mov	dpl,#0x30
+      000242 80 0D            [24] 1587 	sjmp	00116$
+      000244                       1588 00111$:
+                           00018B  1589 	C$i2c.h$133$1$78 ==.
+                                   1590 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:133: if(Data[1] & 0x08) return '#'; //if the value is equal to the pound key
+      000244 E5 26            [12] 1591 	mov	a,(_read_keypad_Data_1_78 + 0x0001)
+      000246 30 E3 05         [24] 1592 	jnb	acc.3,00113$
+      000249 75 82 23         [24] 1593 	mov	dpl,#0x23
+      00024C 80 03            [24] 1594 	sjmp	00116$
+      00024E                       1595 00113$:
+                           000195  1596 	C$i2c.h$135$1$78 ==.
+                                   1597 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:135: return -1;                     //else return a numerical -1 (0xFF)
+      00024E 75 82 FF         [24] 1598 	mov	dpl,#0xFF
+      000251                       1599 00116$:
+                           000198  1600 	C$i2c.h$136$1$78 ==.
+                           000198  1601 	XG$read_keypad$0$0 ==.
+      000251 22               [24] 1602 	ret
+                                   1603 ;------------------------------------------------------------
+                                   1604 ;Allocation info for local variables in function 'kpd_input'
+                                   1605 ;------------------------------------------------------------
+                                   1606 ;mode                      Allocated to registers r7 
+                                   1607 ;sum                       Allocated to registers r5 r6 
+                                   1608 ;key                       Allocated to registers r3 
+                                   1609 ;i                         Allocated to registers 
                                    1610 ;------------------------------------------------------------
-                                   1611 ;Allocation info for local variables in function 'kpd_input'
-                                   1612 ;------------------------------------------------------------
-                                   1613 ;mode                      Allocated to registers r7 
-                                   1614 ;sum                       Allocated to registers r5 r6 
-                                   1615 ;key                       Allocated to registers r3 
-                                   1616 ;i                         Allocated to registers 
-                                   1617 ;------------------------------------------------------------
-                           000199  1618 	G$kpd_input$0$0 ==.
-                           000199  1619 	C$i2c.h$148$1$78 ==.
-                                   1620 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:148: unsigned int kpd_input(char mode)
-                                   1621 ;	-----------------------------------------
-                                   1622 ;	 function kpd_input
-                                   1623 ;	-----------------------------------------
-      000264                       1624 _kpd_input:
-      000264 AF 82            [24] 1625 	mov	r7,dpl
-                           00019B  1626 	C$i2c.h$153$1$81 ==.
-                                   1627 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:153: sum = 0;
-                           00019B  1628 	C$i2c.h$156$1$81 ==.
-                                   1629 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:156: if(mode==0)lcd_print("\nType digits; end w/#");
-      000266 E4               [12] 1630 	clr	a
-      000267 FD               [12] 1631 	mov	r5,a
-      000268 FE               [12] 1632 	mov	r6,a
-      000269 EF               [12] 1633 	mov	a,r7
-      00026A 70 1D            [24] 1634 	jnz	00102$
-      00026C C0 06            [24] 1635 	push	ar6
-      00026E C0 05            [24] 1636 	push	ar5
-      000270 74 1C            [12] 1637 	mov	a,#___str_0
-      000272 C0 E0            [24] 1638 	push	acc
-      000274 74 15            [12] 1639 	mov	a,#(___str_0 >> 8)
-      000276 C0 E0            [24] 1640 	push	acc
-      000278 74 80            [12] 1641 	mov	a,#0x80
-      00027A C0 E0            [24] 1642 	push	acc
-      00027C 12 01 27         [24] 1643 	lcall	_lcd_print
-      00027F 15 81            [12] 1644 	dec	sp
-      000281 15 81            [12] 1645 	dec	sp
-      000283 15 81            [12] 1646 	dec	sp
-      000285 D0 05            [24] 1647 	pop	ar5
-      000287 D0 06            [24] 1648 	pop	ar6
-      000289                       1649 00102$:
-                           0001BE  1650 	C$i2c.h$158$1$81 ==.
-                                   1651 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:158: lcd_print("     %c%c%c%c%c",0x08,0x08,0x08,0x08,0x08);
-      000289 C0 06            [24] 1652 	push	ar6
-      00028B C0 05            [24] 1653 	push	ar5
-      00028D 74 08            [12] 1654 	mov	a,#0x08
-      00028F C0 E0            [24] 1655 	push	acc
-      000291 E4               [12] 1656 	clr	a
-      000292 C0 E0            [24] 1657 	push	acc
-      000294 74 08            [12] 1658 	mov	a,#0x08
-      000296 C0 E0            [24] 1659 	push	acc
-      000298 E4               [12] 1660 	clr	a
-      000299 C0 E0            [24] 1661 	push	acc
-      00029B 74 08            [12] 1662 	mov	a,#0x08
-      00029D C0 E0            [24] 1663 	push	acc
-      00029F E4               [12] 1664 	clr	a
-      0002A0 C0 E0            [24] 1665 	push	acc
-      0002A2 74 08            [12] 1666 	mov	a,#0x08
-      0002A4 C0 E0            [24] 1667 	push	acc
-      0002A6 E4               [12] 1668 	clr	a
-      0002A7 C0 E0            [24] 1669 	push	acc
-      0002A9 74 08            [12] 1670 	mov	a,#0x08
-      0002AB C0 E0            [24] 1671 	push	acc
-      0002AD E4               [12] 1672 	clr	a
-      0002AE C0 E0            [24] 1673 	push	acc
-      0002B0 74 32            [12] 1674 	mov	a,#___str_1
-      0002B2 C0 E0            [24] 1675 	push	acc
-      0002B4 74 15            [12] 1676 	mov	a,#(___str_1 >> 8)
-      0002B6 C0 E0            [24] 1677 	push	acc
-      0002B8 74 80            [12] 1678 	mov	a,#0x80
-      0002BA C0 E0            [24] 1679 	push	acc
-      0002BC 12 01 27         [24] 1680 	lcall	_lcd_print
-      0002BF E5 81            [12] 1681 	mov	a,sp
-      0002C1 24 F3            [12] 1682 	add	a,#0xf3
-      0002C3 F5 81            [12] 1683 	mov	sp,a
-                           0001FA  1684 	C$i2c.h$160$1$81 ==.
-                                   1685 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:160: delay_time(500000);	//Add 20ms delay before reading i2c in loop
-      0002C5 90 A1 20         [24] 1686 	mov	dptr,#0xA120
-      0002C8 75 F0 07         [24] 1687 	mov	b,#0x07
-      0002CB E4               [12] 1688 	clr	a
-      0002CC 12 03 D8         [24] 1689 	lcall	_delay_time
-      0002CF D0 05            [24] 1690 	pop	ar5
-      0002D1 D0 06            [24] 1691 	pop	ar6
-                           000208  1692 	C$i2c.h$164$1$81 ==.
-                                   1693 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:164: for(i=0; i<5; i++)
-      0002D3 7F 00            [12] 1694 	mov	r7,#0x00
-                           00020A  1695 	C$i2c.h$166$3$84 ==.
-                                   1696 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:166: while(((key=read_keypad()) == -1) || (key == '*'))delay_time(10000);
-      0002D5                       1697 00104$:
-      0002D5 C0 07            [24] 1698 	push	ar7
-      0002D7 C0 06            [24] 1699 	push	ar6
-      0002D9 C0 05            [24] 1700 	push	ar5
-      0002DB 12 01 E5         [24] 1701 	lcall	_read_keypad
-      0002DE AC 82            [24] 1702 	mov	r4,dpl
-      0002E0 D0 05            [24] 1703 	pop	ar5
-      0002E2 D0 06            [24] 1704 	pop	ar6
-      0002E4 D0 07            [24] 1705 	pop	ar7
-      0002E6 8C 03            [24] 1706 	mov	ar3,r4
-      0002E8 BC FF 02         [24] 1707 	cjne	r4,#0xFF,00146$
-      0002EB 80 03            [24] 1708 	sjmp	00105$
-      0002ED                       1709 00146$:
-      0002ED BB 2A 17         [24] 1710 	cjne	r3,#0x2A,00106$
-      0002F0                       1711 00105$:
-      0002F0 90 27 10         [24] 1712 	mov	dptr,#0x2710
-      0002F3 E4               [12] 1713 	clr	a
-      0002F4 F5 F0            [12] 1714 	mov	b,a
-      0002F6 C0 07            [24] 1715 	push	ar7
-      0002F8 C0 06            [24] 1716 	push	ar6
-      0002FA C0 05            [24] 1717 	push	ar5
-      0002FC 12 03 D8         [24] 1718 	lcall	_delay_time
-      0002FF D0 05            [24] 1719 	pop	ar5
-      000301 D0 06            [24] 1720 	pop	ar6
-      000303 D0 07            [24] 1721 	pop	ar7
-      000305 80 CE            [24] 1722 	sjmp	00104$
-      000307                       1723 00106$:
-                           00023C  1724 	C$i2c.h$167$2$82 ==.
-                                   1725 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:167: if(key == '#')
-      000307 BB 23 2A         [24] 1726 	cjne	r3,#0x23,00114$
-                           00023F  1727 	C$i2c.h$169$3$83 ==.
-                                   1728 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:169: while(read_keypad() == '#')delay_time(10000);
-      00030A                       1729 00107$:
-      00030A C0 06            [24] 1730 	push	ar6
-      00030C C0 05            [24] 1731 	push	ar5
-      00030E 12 01 E5         [24] 1732 	lcall	_read_keypad
-      000311 AC 82            [24] 1733 	mov	r4,dpl
-      000313 D0 05            [24] 1734 	pop	ar5
-      000315 D0 06            [24] 1735 	pop	ar6
-      000317 BC 23 13         [24] 1736 	cjne	r4,#0x23,00109$
-      00031A 90 27 10         [24] 1737 	mov	dptr,#0x2710
-      00031D E4               [12] 1738 	clr	a
-      00031E F5 F0            [12] 1739 	mov	b,a
-      000320 C0 06            [24] 1740 	push	ar6
-      000322 C0 05            [24] 1741 	push	ar5
-      000324 12 03 D8         [24] 1742 	lcall	_delay_time
-      000327 D0 05            [24] 1743 	pop	ar5
-      000329 D0 06            [24] 1744 	pop	ar6
-      00032B 80 DD            [24] 1745 	sjmp	00107$
-      00032D                       1746 00109$:
-                           000262  1747 	C$i2c.h$170$3$83 ==.
-                                   1748 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:170: return sum;
-      00032D 8D 82            [24] 1749 	mov	dpl,r5
-      00032F 8E 83            [24] 1750 	mov	dph,r6
-      000331 02 03 D7         [24] 1751 	ljmp	00119$
-      000334                       1752 00114$:
-                           000269  1753 	C$i2c.h$174$3$84 ==.
-                                   1754 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:174: lcd_print("%c", key);
-      000334 EB               [12] 1755 	mov	a,r3
-      000335 FA               [12] 1756 	mov	r2,a
-      000336 33               [12] 1757 	rlc	a
-      000337 95 E0            [12] 1758 	subb	a,acc
-      000339 FC               [12] 1759 	mov	r4,a
-      00033A C0 07            [24] 1760 	push	ar7
-      00033C C0 06            [24] 1761 	push	ar6
-      00033E C0 05            [24] 1762 	push	ar5
-      000340 C0 04            [24] 1763 	push	ar4
-      000342 C0 03            [24] 1764 	push	ar3
-      000344 C0 02            [24] 1765 	push	ar2
-      000346 C0 02            [24] 1766 	push	ar2
-      000348 C0 04            [24] 1767 	push	ar4
-      00034A 74 42            [12] 1768 	mov	a,#___str_2
-      00034C C0 E0            [24] 1769 	push	acc
-      00034E 74 15            [12] 1770 	mov	a,#(___str_2 >> 8)
-      000350 C0 E0            [24] 1771 	push	acc
-      000352 74 80            [12] 1772 	mov	a,#0x80
-      000354 C0 E0            [24] 1773 	push	acc
-      000356 12 01 27         [24] 1774 	lcall	_lcd_print
-      000359 E5 81            [12] 1775 	mov	a,sp
-      00035B 24 FB            [12] 1776 	add	a,#0xfb
-      00035D F5 81            [12] 1777 	mov	sp,a
-      00035F D0 02            [24] 1778 	pop	ar2
-      000361 D0 03            [24] 1779 	pop	ar3
-      000363 D0 04            [24] 1780 	pop	ar4
-      000365 D0 05            [24] 1781 	pop	ar5
-      000367 D0 06            [24] 1782 	pop	ar6
-                           00029E  1783 	C$i2c.h$175$1$81 ==.
-                                   1784 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:175: sum = sum*10 + key - '0';
-      000369 8D 11            [24] 1785 	mov	__mulint_PARM_2,r5
-      00036B 8E 12            [24] 1786 	mov	(__mulint_PARM_2 + 1),r6
-      00036D 90 00 0A         [24] 1787 	mov	dptr,#0x000A
-      000370 C0 04            [24] 1788 	push	ar4
-      000372 C0 03            [24] 1789 	push	ar3
-      000374 C0 02            [24] 1790 	push	ar2
-      000376 12 0B B6         [24] 1791 	lcall	__mulint
-      000379 A8 82            [24] 1792 	mov	r0,dpl
-      00037B A9 83            [24] 1793 	mov	r1,dph
-      00037D D0 02            [24] 1794 	pop	ar2
-      00037F D0 03            [24] 1795 	pop	ar3
-      000381 D0 04            [24] 1796 	pop	ar4
-      000383 D0 07            [24] 1797 	pop	ar7
-      000385 EA               [12] 1798 	mov	a,r2
-      000386 28               [12] 1799 	add	a,r0
-      000387 F8               [12] 1800 	mov	r0,a
-      000388 EC               [12] 1801 	mov	a,r4
-      000389 39               [12] 1802 	addc	a,r1
-      00038A F9               [12] 1803 	mov	r1,a
-      00038B E8               [12] 1804 	mov	a,r0
-      00038C 24 D0            [12] 1805 	add	a,#0xD0
-      00038E FD               [12] 1806 	mov	r5,a
-      00038F E9               [12] 1807 	mov	a,r1
-      000390 34 FF            [12] 1808 	addc	a,#0xFF
-      000392 FE               [12] 1809 	mov	r6,a
-                           0002C8  1810 	C$i2c.h$176$3$84 ==.
-                                   1811 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:176: while(read_keypad() == key)delay_time(10000); //wait for key to be released
-      000393                       1812 00110$:
-      000393 C0 07            [24] 1813 	push	ar7
-      000395 C0 06            [24] 1814 	push	ar6
-      000397 C0 05            [24] 1815 	push	ar5
-      000399 C0 03            [24] 1816 	push	ar3
-      00039B 12 01 E5         [24] 1817 	lcall	_read_keypad
-      00039E AC 82            [24] 1818 	mov	r4,dpl
-      0003A0 D0 03            [24] 1819 	pop	ar3
-      0003A2 D0 05            [24] 1820 	pop	ar5
-      0003A4 D0 06            [24] 1821 	pop	ar6
-      0003A6 D0 07            [24] 1822 	pop	ar7
-      0003A8 EC               [12] 1823 	mov	a,r4
-      0003A9 B5 03 1B         [24] 1824 	cjne	a,ar3,00118$
-      0003AC 90 27 10         [24] 1825 	mov	dptr,#0x2710
-      0003AF E4               [12] 1826 	clr	a
-      0003B0 F5 F0            [12] 1827 	mov	b,a
-      0003B2 C0 07            [24] 1828 	push	ar7
-      0003B4 C0 06            [24] 1829 	push	ar6
-      0003B6 C0 05            [24] 1830 	push	ar5
-      0003B8 C0 03            [24] 1831 	push	ar3
-      0003BA 12 03 D8         [24] 1832 	lcall	_delay_time
-      0003BD D0 03            [24] 1833 	pop	ar3
-      0003BF D0 05            [24] 1834 	pop	ar5
-      0003C1 D0 06            [24] 1835 	pop	ar6
-      0003C3 D0 07            [24] 1836 	pop	ar7
-      0003C5 80 CC            [24] 1837 	sjmp	00110$
-      0003C7                       1838 00118$:
-                           0002FC  1839 	C$i2c.h$164$1$81 ==.
-                                   1840 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:164: for(i=0; i<5; i++)
-      0003C7 0F               [12] 1841 	inc	r7
-      0003C8 C3               [12] 1842 	clr	c
-      0003C9 EF               [12] 1843 	mov	a,r7
-      0003CA 64 80            [12] 1844 	xrl	a,#0x80
-      0003CC 94 85            [12] 1845 	subb	a,#0x85
-      0003CE 50 03            [24] 1846 	jnc	00155$
-      0003D0 02 02 D5         [24] 1847 	ljmp	00104$
-      0003D3                       1848 00155$:
-                           000308  1849 	C$i2c.h$179$1$81 ==.
-                                   1850 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:179: return sum;
-      0003D3 8D 82            [24] 1851 	mov	dpl,r5
-      0003D5 8E 83            [24] 1852 	mov	dph,r6
-      0003D7                       1853 00119$:
-                           00030C  1854 	C$i2c.h$180$1$81 ==.
-                           00030C  1855 	XG$kpd_input$0$0 ==.
-      0003D7 22               [24] 1856 	ret
-                                   1857 ;------------------------------------------------------------
-                                   1858 ;Allocation info for local variables in function 'delay_time'
-                                   1859 ;------------------------------------------------------------
-                                   1860 ;time_end                  Allocated to registers r4 r5 r6 r7 
-                                   1861 ;index                     Allocated to registers 
-                                   1862 ;------------------------------------------------------------
-                           00030D  1863 	G$delay_time$0$0 ==.
-                           00030D  1864 	C$i2c.h$189$1$81 ==.
-                                   1865 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:189: void delay_time (unsigned long time_end)
-                                   1866 ;	-----------------------------------------
-                                   1867 ;	 function delay_time
-                                   1868 ;	-----------------------------------------
-      0003D8                       1869 _delay_time:
-      0003D8 AC 82            [24] 1870 	mov	r4,dpl
-      0003DA AD 83            [24] 1871 	mov	r5,dph
-      0003DC AE F0            [24] 1872 	mov	r6,b
-      0003DE FF               [12] 1873 	mov	r7,a
-                           000314  1874 	C$i2c.h$192$1$86 ==.
-                                   1875 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:192: for (index = 0; index < time_end; index++); //for loop delay
-      0003DF 78 00            [12] 1876 	mov	r0,#0x00
-      0003E1 79 00            [12] 1877 	mov	r1,#0x00
-      0003E3 7A 00            [12] 1878 	mov	r2,#0x00
-      0003E5 7B 00            [12] 1879 	mov	r3,#0x00
-      0003E7                       1880 00103$:
-      0003E7 C3               [12] 1881 	clr	c
-      0003E8 E8               [12] 1882 	mov	a,r0
-      0003E9 9C               [12] 1883 	subb	a,r4
-      0003EA E9               [12] 1884 	mov	a,r1
-      0003EB 9D               [12] 1885 	subb	a,r5
-      0003EC EA               [12] 1886 	mov	a,r2
-      0003ED 9E               [12] 1887 	subb	a,r6
-      0003EE EB               [12] 1888 	mov	a,r3
-      0003EF 9F               [12] 1889 	subb	a,r7
-      0003F0 50 0F            [24] 1890 	jnc	00105$
-      0003F2 08               [12] 1891 	inc	r0
-      0003F3 B8 00 09         [24] 1892 	cjne	r0,#0x00,00115$
-      0003F6 09               [12] 1893 	inc	r1
-      0003F7 B9 00 05         [24] 1894 	cjne	r1,#0x00,00115$
-      0003FA 0A               [12] 1895 	inc	r2
-      0003FB BA 00 E9         [24] 1896 	cjne	r2,#0x00,00103$
-      0003FE 0B               [12] 1897 	inc	r3
-      0003FF                       1898 00115$:
-      0003FF 80 E6            [24] 1899 	sjmp	00103$
-      000401                       1900 00105$:
-                           000336  1901 	C$i2c.h$193$1$86 ==.
-                           000336  1902 	XG$delay_time$0$0 ==.
-      000401 22               [24] 1903 	ret
-                                   1904 ;------------------------------------------------------------
-                                   1905 ;Allocation info for local variables in function 'i2c_start'
-                                   1906 ;------------------------------------------------------------
-                           000337  1907 	G$i2c_start$0$0 ==.
-                           000337  1908 	C$i2c.h$196$1$86 ==.
-                                   1909 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:196: void i2c_start(void)
-                                   1910 ;	-----------------------------------------
-                                   1911 ;	 function i2c_start
-                                   1912 ;	-----------------------------------------
-      000402                       1913 _i2c_start:
-                           000337  1914 	C$i2c.h$198$1$88 ==.
-                                   1915 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:198: while(BUSY);              //Wait until SMBus0 is free
-      000402                       1916 00101$:
-      000402 20 C7 FD         [24] 1917 	jb	_BUSY,00101$
-                           00033A  1918 	C$i2c.h$199$1$88 ==.
-                                   1919 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:199: STA = 1;                  //Set Start Bit
-      000405 D2 C5            [12] 1920 	setb	_STA
-                           00033C  1921 	C$i2c.h$200$1$88 ==.
-                                   1922 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:200: while(!SI);               //Wait until start sent
-      000407                       1923 00104$:
-      000407 30 C3 FD         [24] 1924 	jnb	_SI,00104$
-                           00033F  1925 	C$i2c.h$201$1$88 ==.
-                                   1926 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:201: STA = 0;                  //Clear start bit
-      00040A C2 C5            [12] 1927 	clr	_STA
-                           000341  1928 	C$i2c.h$202$1$88 ==.
-                                   1929 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:202: SI = 0;                   //Clear SI
-      00040C C2 C3            [12] 1930 	clr	_SI
-                           000343  1931 	C$i2c.h$203$1$88 ==.
-                           000343  1932 	XG$i2c_start$0$0 ==.
-      00040E 22               [24] 1933 	ret
-                                   1934 ;------------------------------------------------------------
-                                   1935 ;Allocation info for local variables in function 'i2c_write'
-                                   1936 ;------------------------------------------------------------
-                                   1937 ;output_data               Allocated to registers 
-                                   1938 ;------------------------------------------------------------
-                           000344  1939 	G$i2c_write$0$0 ==.
-                           000344  1940 	C$i2c.h$206$1$88 ==.
-                                   1941 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:206: void i2c_write(unsigned char output_data)
-                                   1942 ;	-----------------------------------------
-                                   1943 ;	 function i2c_write
-                                   1944 ;	-----------------------------------------
-      00040F                       1945 _i2c_write:
-      00040F 85 82 C2         [24] 1946 	mov	_SMB0DAT,dpl
-                           000347  1947 	C$i2c.h$209$1$90 ==.
-                                   1948 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:209: while(!SI);               //Wait until send is complete
-      000412                       1949 00101$:
-                           000347  1950 	C$i2c.h$210$1$90 ==.
-                                   1951 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:210: SI = 0;                   //Clear SI
-      000412 10 C3 02         [24] 1952 	jbc	_SI,00112$
-      000415 80 FB            [24] 1953 	sjmp	00101$
-      000417                       1954 00112$:
-                           00034C  1955 	C$i2c.h$211$1$90 ==.
-                           00034C  1956 	XG$i2c_write$0$0 ==.
-      000417 22               [24] 1957 	ret
-                                   1958 ;------------------------------------------------------------
-                                   1959 ;Allocation info for local variables in function 'i2c_write_and_stop'
-                                   1960 ;------------------------------------------------------------
-                                   1961 ;output_data               Allocated to registers 
-                                   1962 ;------------------------------------------------------------
-                           00034D  1963 	G$i2c_write_and_stop$0$0 ==.
-                           00034D  1964 	C$i2c.h$214$1$90 ==.
-                                   1965 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:214: void i2c_write_and_stop(unsigned char output_data)
-                                   1966 ;	-----------------------------------------
-                                   1967 ;	 function i2c_write_and_stop
-                                   1968 ;	-----------------------------------------
-      000418                       1969 _i2c_write_and_stop:
-      000418 85 82 C2         [24] 1970 	mov	_SMB0DAT,dpl
-                           000350  1971 	C$i2c.h$217$1$92 ==.
-                                   1972 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:217: STO = 1;                  //Set stop bit
-      00041B D2 C4            [12] 1973 	setb	_STO
-                           000352  1974 	C$i2c.h$218$1$92 ==.
-                                   1975 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:218: while(!SI);               //Wait until send is complete
-      00041D                       1976 00101$:
-                           000352  1977 	C$i2c.h$219$1$92 ==.
-                                   1978 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:219: SI = 0;                   //clear SI
-      00041D 10 C3 02         [24] 1979 	jbc	_SI,00112$
-      000420 80 FB            [24] 1980 	sjmp	00101$
-      000422                       1981 00112$:
-                           000357  1982 	C$i2c.h$220$1$92 ==.
-                           000357  1983 	XG$i2c_write_and_stop$0$0 ==.
-      000422 22               [24] 1984 	ret
-                                   1985 ;------------------------------------------------------------
-                                   1986 ;Allocation info for local variables in function 'i2c_read'
-                                   1987 ;------------------------------------------------------------
-                                   1988 ;input_data                Allocated to registers 
-                                   1989 ;------------------------------------------------------------
-                           000358  1990 	G$i2c_read$0$0 ==.
-                           000358  1991 	C$i2c.h$223$1$92 ==.
-                                   1992 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:223: unsigned char i2c_read(void)
-                                   1993 ;	-----------------------------------------
-                                   1994 ;	 function i2c_read
-                                   1995 ;	-----------------------------------------
-      000423                       1996 _i2c_read:
-                           000358  1997 	C$i2c.h$226$1$94 ==.
-                                   1998 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:226: while(!SI);                //Wait until we have data to read
-      000423                       1999 00101$:
-      000423 30 C3 FD         [24] 2000 	jnb	_SI,00101$
-                           00035B  2001 	C$i2c.h$227$1$94 ==.
-                                   2002 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:227: input_data = SMB0DAT;      //Read the data
-      000426 85 C2 82         [24] 2003 	mov	dpl,_SMB0DAT
-                           00035E  2004 	C$i2c.h$228$1$94 ==.
-                                   2005 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:228: SI = 0;                    //Clear SI
-      000429 C2 C3            [12] 2006 	clr	_SI
-                           000360  2007 	C$i2c.h$229$1$94 ==.
-                                   2008 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:229: return input_data;         //Return the read data
-                           000360  2009 	C$i2c.h$230$1$94 ==.
-                           000360  2010 	XG$i2c_read$0$0 ==.
-      00042B 22               [24] 2011 	ret
-                                   2012 ;------------------------------------------------------------
-                                   2013 ;Allocation info for local variables in function 'i2c_read_and_stop'
-                                   2014 ;------------------------------------------------------------
-                                   2015 ;input_data                Allocated to registers r7 
-                                   2016 ;------------------------------------------------------------
-                           000361  2017 	G$i2c_read_and_stop$0$0 ==.
-                           000361  2018 	C$i2c.h$233$1$94 ==.
-                                   2019 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:233: unsigned char i2c_read_and_stop(void)
-                                   2020 ;	-----------------------------------------
-                                   2021 ;	 function i2c_read_and_stop
-                                   2022 ;	-----------------------------------------
-      00042C                       2023 _i2c_read_and_stop:
-                           000361  2024 	C$i2c.h$236$1$96 ==.
-                                   2025 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:236: while(!SI);                //Wait until we have data to read
-      00042C                       2026 00101$:
-      00042C 30 C3 FD         [24] 2027 	jnb	_SI,00101$
-                           000364  2028 	C$i2c.h$237$1$96 ==.
-                                   2029 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:237: input_data = SMB0DAT;      //Read the data
-      00042F AF C2            [24] 2030 	mov	r7,_SMB0DAT
-                           000366  2031 	C$i2c.h$238$1$96 ==.
-                                   2032 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:238: SI = 0;                    //Clear SI
-      000431 C2 C3            [12] 2033 	clr	_SI
-                           000368  2034 	C$i2c.h$239$1$96 ==.
-                                   2035 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:239: STO = 1;                   //Set stop bit
-      000433 D2 C4            [12] 2036 	setb	_STO
-                           00036A  2037 	C$i2c.h$240$1$96 ==.
-                                   2038 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:240: while(!SI);                //Wait for stop
-      000435                       2039 00104$:
-                           00036A  2040 	C$i2c.h$241$1$96 ==.
-                                   2041 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:241: SI = 0;
-      000435 10 C3 02         [24] 2042 	jbc	_SI,00122$
-      000438 80 FB            [24] 2043 	sjmp	00104$
-      00043A                       2044 00122$:
-                           00036F  2045 	C$i2c.h$242$1$96 ==.
-                                   2046 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:242: return input_data;         //Return the read data
-      00043A 8F 82            [24] 2047 	mov	dpl,r7
-                           000371  2048 	C$i2c.h$243$1$96 ==.
-                           000371  2049 	XG$i2c_read_and_stop$0$0 ==.
-      00043C 22               [24] 2050 	ret
-                                   2051 ;------------------------------------------------------------
-                                   2052 ;Allocation info for local variables in function 'i2c_write_data'
-                                   2053 ;------------------------------------------------------------
-                                   2054 ;start_reg                 Allocated with name '_i2c_write_data_PARM_2'
-                                   2055 ;buffer                    Allocated with name '_i2c_write_data_PARM_3'
-                                   2056 ;num_bytes                 Allocated with name '_i2c_write_data_PARM_4'
-                                   2057 ;addr                      Allocated to registers r7 
-                                   2058 ;i                         Allocated to registers 
-                                   2059 ;------------------------------------------------------------
-                           000372  2060 	G$i2c_write_data$0$0 ==.
-                           000372  2061 	C$i2c.h$246$1$96 ==.
-                                   2062 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:246: void i2c_write_data(unsigned char addr, unsigned char start_reg, unsigned char *buffer, unsigned char num_bytes)
-                                   2063 ;	-----------------------------------------
-                                   2064 ;	 function i2c_write_data
-                                   2065 ;	-----------------------------------------
-      00043D                       2066 _i2c_write_data:
-      00043D AF 82            [24] 2067 	mov	r7,dpl
-                           000374  2068 	C$i2c.h$250$1$98 ==.
-                                   2069 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:250: i2c_start();               //initiate I2C transfer
-      00043F C0 07            [24] 2070 	push	ar7
-      000441 12 04 02         [24] 2071 	lcall	_i2c_start
-      000444 D0 07            [24] 2072 	pop	ar7
-                           00037B  2073 	C$i2c.h$251$1$98 ==.
-                                   2074 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:251: i2c_write(addr & ~0x01);   //write the desired address to the bus
-      000446 74 FE            [12] 2075 	mov	a,#0xFE
-      000448 5F               [12] 2076 	anl	a,r7
-      000449 F5 82            [12] 2077 	mov	dpl,a
-      00044B 12 04 0F         [24] 2078 	lcall	_i2c_write
-                           000383  2079 	C$i2c.h$252$1$98 ==.
-                                   2080 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:252: i2c_write(start_reg);      //write the start register to the bus
-      00044E 85 27 82         [24] 2081 	mov	dpl,_i2c_write_data_PARM_2
-      000451 12 04 0F         [24] 2082 	lcall	_i2c_write
-                           000389  2083 	C$i2c.h$253$1$98 ==.
-                                   2084 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:253: for(i=0; i<num_bytes-1; i++) //write the data to the register(s)
-      000454 7F 00            [12] 2085 	mov	r7,#0x00
-      000456                       2086 00103$:
-      000456 AD 2B            [24] 2087 	mov	r5,_i2c_write_data_PARM_4
-      000458 7E 00            [12] 2088 	mov	r6,#0x00
-      00045A 1D               [12] 2089 	dec	r5
-      00045B BD FF 01         [24] 2090 	cjne	r5,#0xFF,00114$
-      00045E 1E               [12] 2091 	dec	r6
-      00045F                       2092 00114$:
-      00045F 8F 03            [24] 2093 	mov	ar3,r7
-      000461 7C 00            [12] 2094 	mov	r4,#0x00
-      000463 C3               [12] 2095 	clr	c
-      000464 EB               [12] 2096 	mov	a,r3
-      000465 9D               [12] 2097 	subb	a,r5
-      000466 EC               [12] 2098 	mov	a,r4
-      000467 64 80            [12] 2099 	xrl	a,#0x80
-      000469 8E F0            [24] 2100 	mov	b,r6
-      00046B 63 F0 80         [24] 2101 	xrl	b,#0x80
-      00046E 95 F0            [12] 2102 	subb	a,b
-      000470 50 1F            [24] 2103 	jnc	00101$
-                           0003A7  2104 	C$i2c.h$254$1$98 ==.
-                                   2105 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:254: i2c_write(buffer[i]);
-      000472 EF               [12] 2106 	mov	a,r7
-      000473 25 28            [12] 2107 	add	a,_i2c_write_data_PARM_3
-      000475 FC               [12] 2108 	mov	r4,a
-      000476 E4               [12] 2109 	clr	a
-      000477 35 29            [12] 2110 	addc	a,(_i2c_write_data_PARM_3 + 1)
-      000479 FD               [12] 2111 	mov	r5,a
-      00047A AE 2A            [24] 2112 	mov	r6,(_i2c_write_data_PARM_3 + 2)
-      00047C 8C 82            [24] 2113 	mov	dpl,r4
-      00047E 8D 83            [24] 2114 	mov	dph,r5
-      000480 8E F0            [24] 2115 	mov	b,r6
-      000482 12 13 F5         [24] 2116 	lcall	__gptrget
-      000485 F5 82            [12] 2117 	mov	dpl,a
-      000487 C0 07            [24] 2118 	push	ar7
-      000489 12 04 0F         [24] 2119 	lcall	_i2c_write
-      00048C D0 07            [24] 2120 	pop	ar7
-                           0003C3  2121 	C$i2c.h$253$1$98 ==.
-                                   2122 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:253: for(i=0; i<num_bytes-1; i++) //write the data to the register(s)
-      00048E 0F               [12] 2123 	inc	r7
-      00048F 80 C5            [24] 2124 	sjmp	00103$
-      000491                       2125 00101$:
-                           0003C6  2126 	C$i2c.h$255$1$98 ==.
-                                   2127 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:255: i2c_write_and_stop(buffer[num_bytes-1]); //Stop transfer
-      000491 AE 2B            [24] 2128 	mov	r6,_i2c_write_data_PARM_4
-      000493 7F 00            [12] 2129 	mov	r7,#0x00
-      000495 1E               [12] 2130 	dec	r6
-      000496 BE FF 01         [24] 2131 	cjne	r6,#0xFF,00116$
-      000499 1F               [12] 2132 	dec	r7
-      00049A                       2133 00116$:
-      00049A EE               [12] 2134 	mov	a,r6
-      00049B 25 28            [12] 2135 	add	a,_i2c_write_data_PARM_3
-      00049D FE               [12] 2136 	mov	r6,a
-      00049E EF               [12] 2137 	mov	a,r7
-      00049F 35 29            [12] 2138 	addc	a,(_i2c_write_data_PARM_3 + 1)
-      0004A1 FF               [12] 2139 	mov	r7,a
-      0004A2 AD 2A            [24] 2140 	mov	r5,(_i2c_write_data_PARM_3 + 2)
-      0004A4 8E 82            [24] 2141 	mov	dpl,r6
-      0004A6 8F 83            [24] 2142 	mov	dph,r7
-      0004A8 8D F0            [24] 2143 	mov	b,r5
-      0004AA 12 13 F5         [24] 2144 	lcall	__gptrget
-      0004AD F5 82            [12] 2145 	mov	dpl,a
-      0004AF 12 04 18         [24] 2146 	lcall	_i2c_write_and_stop
-                           0003E7  2147 	C$i2c.h$256$1$98 ==.
-                           0003E7  2148 	XG$i2c_write_data$0$0 ==.
-      0004B2 22               [24] 2149 	ret
-                                   2150 ;------------------------------------------------------------
-                                   2151 ;Allocation info for local variables in function 'i2c_read_data'
-                                   2152 ;------------------------------------------------------------
-                                   2153 ;start_reg                 Allocated with name '_i2c_read_data_PARM_2'
-                                   2154 ;buffer                    Allocated with name '_i2c_read_data_PARM_3'
-                                   2155 ;num_bytes                 Allocated with name '_i2c_read_data_PARM_4'
-                                   2156 ;addr                      Allocated to registers r7 
-                                   2157 ;j                         Allocated to registers 
-                                   2158 ;------------------------------------------------------------
-                           0003E8  2159 	G$i2c_read_data$0$0 ==.
-                           0003E8  2160 	C$i2c.h$259$1$98 ==.
-                                   2161 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:259: void i2c_read_data(unsigned char addr, unsigned char start_reg, unsigned char *buffer, unsigned char num_bytes)
-                                   2162 ;	-----------------------------------------
-                                   2163 ;	 function i2c_read_data
-                                   2164 ;	-----------------------------------------
-      0004B3                       2165 _i2c_read_data:
-      0004B3 AF 82            [24] 2166 	mov	r7,dpl
-                           0003EA  2167 	C$i2c.h$262$1$100 ==.
-                                   2168 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:262: i2c_start();               //Start I2C transfer
-      0004B5 C0 07            [24] 2169 	push	ar7
-      0004B7 12 04 02         [24] 2170 	lcall	_i2c_start
-      0004BA D0 07            [24] 2171 	pop	ar7
-                           0003F1  2172 	C$i2c.h$263$1$100 ==.
-                                   2173 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:263: i2c_write(addr & ~0x01);   //Write address of device that will be written to, send 0
-      0004BC 8F 06            [24] 2174 	mov	ar6,r7
-      0004BE 74 FE            [12] 2175 	mov	a,#0xFE
-      0004C0 5E               [12] 2176 	anl	a,r6
-      0004C1 F5 82            [12] 2177 	mov	dpl,a
-      0004C3 C0 07            [24] 2178 	push	ar7
-      0004C5 12 04 0F         [24] 2179 	lcall	_i2c_write
-                           0003FD  2180 	C$i2c.h$264$1$100 ==.
-                                   2181 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:264: i2c_write_and_stop(start_reg); //Write & stop the 1st register to be read
-      0004C8 85 2C 82         [24] 2182 	mov	dpl,_i2c_read_data_PARM_2
-      0004CB 12 04 18         [24] 2183 	lcall	_i2c_write_and_stop
-                           000403  2184 	C$i2c.h$265$1$100 ==.
-                                   2185 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:265: i2c_start();               //Start I2C transfer
-      0004CE 12 04 02         [24] 2186 	lcall	_i2c_start
-      0004D1 D0 07            [24] 2187 	pop	ar7
-                           000408  2188 	C$i2c.h$266$1$100 ==.
-                                   2189 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:266: i2c_write(addr | 0x01);    //Write address again, this time indicating a read operation
-      0004D3 74 01            [12] 2190 	mov	a,#0x01
-      0004D5 4F               [12] 2191 	orl	a,r7
-      0004D6 F5 82            [12] 2192 	mov	dpl,a
-      0004D8 12 04 0F         [24] 2193 	lcall	_i2c_write
-                           000410  2194 	C$i2c.h$267$1$100 ==.
-                                   2195 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:267: for(j = 0; j < num_bytes - 1; j++)
-      0004DB 7F 00            [12] 2196 	mov	r7,#0x00
-      0004DD                       2197 00103$:
-      0004DD AD 30            [24] 2198 	mov	r5,_i2c_read_data_PARM_4
-      0004DF 7E 00            [12] 2199 	mov	r6,#0x00
-      0004E1 1D               [12] 2200 	dec	r5
-      0004E2 BD FF 01         [24] 2201 	cjne	r5,#0xFF,00114$
-      0004E5 1E               [12] 2202 	dec	r6
-      0004E6                       2203 00114$:
-      0004E6 8F 03            [24] 2204 	mov	ar3,r7
-      0004E8 7C 00            [12] 2205 	mov	r4,#0x00
-      0004EA C3               [12] 2206 	clr	c
-      0004EB EB               [12] 2207 	mov	a,r3
-      0004EC 9D               [12] 2208 	subb	a,r5
-      0004ED EC               [12] 2209 	mov	a,r4
-      0004EE 64 80            [12] 2210 	xrl	a,#0x80
-      0004F0 8E F0            [24] 2211 	mov	b,r6
-      0004F2 63 F0 80         [24] 2212 	xrl	b,#0x80
-      0004F5 95 F0            [12] 2213 	subb	a,b
-      0004F7 50 2E            [24] 2214 	jnc	00101$
-                           00042E  2215 	C$i2c.h$269$2$101 ==.
-                                   2216 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:269: AA = 1;                //Set acknowledge bit
-      0004F9 D2 C2            [12] 2217 	setb	_AA
-                           000430  2218 	C$i2c.h$270$2$101 ==.
-                                   2219 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:270: buffer[j] = i2c_read();//Read data, save it in buffer
-      0004FB EF               [12] 2220 	mov	a,r7
-      0004FC 25 2D            [12] 2221 	add	a,_i2c_read_data_PARM_3
-      0004FE FC               [12] 2222 	mov	r4,a
-      0004FF E4               [12] 2223 	clr	a
-      000500 35 2E            [12] 2224 	addc	a,(_i2c_read_data_PARM_3 + 1)
-      000502 FD               [12] 2225 	mov	r5,a
-      000503 AE 2F            [24] 2226 	mov	r6,(_i2c_read_data_PARM_3 + 2)
-      000505 C0 07            [24] 2227 	push	ar7
-      000507 C0 06            [24] 2228 	push	ar6
-      000509 C0 05            [24] 2229 	push	ar5
-      00050B C0 04            [24] 2230 	push	ar4
-      00050D 12 04 23         [24] 2231 	lcall	_i2c_read
-      000510 AB 82            [24] 2232 	mov	r3,dpl
-      000512 D0 04            [24] 2233 	pop	ar4
-      000514 D0 05            [24] 2234 	pop	ar5
-      000516 D0 06            [24] 2235 	pop	ar6
-      000518 D0 07            [24] 2236 	pop	ar7
-      00051A 8C 82            [24] 2237 	mov	dpl,r4
-      00051C 8D 83            [24] 2238 	mov	dph,r5
-      00051E 8E F0            [24] 2239 	mov	b,r6
-      000520 EB               [12] 2240 	mov	a,r3
-      000521 12 0B 9B         [24] 2241 	lcall	__gptrput
-                           000459  2242 	C$i2c.h$267$1$100 ==.
-                                   2243 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:267: for(j = 0; j < num_bytes - 1; j++)
-      000524 0F               [12] 2244 	inc	r7
-      000525 80 B6            [24] 2245 	sjmp	00103$
-      000527                       2246 00101$:
-                           00045C  2247 	C$i2c.h$272$1$100 ==.
-                                   2248 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:272: AA = 0;
-      000527 C2 C2            [12] 2249 	clr	_AA
-                           00045E  2250 	C$i2c.h$273$1$100 ==.
-                                   2251 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:273: buffer[num_bytes - 1] = i2c_read_and_stop(); //Read the last byte and stop, save it in the buffer
-      000529 AE 30            [24] 2252 	mov	r6,_i2c_read_data_PARM_4
-      00052B 7F 00            [12] 2253 	mov	r7,#0x00
-      00052D 1E               [12] 2254 	dec	r6
-      00052E BE FF 01         [24] 2255 	cjne	r6,#0xFF,00116$
-      000531 1F               [12] 2256 	dec	r7
-      000532                       2257 00116$:
-      000532 EE               [12] 2258 	mov	a,r6
-      000533 25 2D            [12] 2259 	add	a,_i2c_read_data_PARM_3
-      000535 FE               [12] 2260 	mov	r6,a
-      000536 EF               [12] 2261 	mov	a,r7
-      000537 35 2E            [12] 2262 	addc	a,(_i2c_read_data_PARM_3 + 1)
-      000539 FF               [12] 2263 	mov	r7,a
-      00053A AD 2F            [24] 2264 	mov	r5,(_i2c_read_data_PARM_3 + 2)
-      00053C C0 07            [24] 2265 	push	ar7
-      00053E C0 06            [24] 2266 	push	ar6
-      000540 C0 05            [24] 2267 	push	ar5
-      000542 12 04 2C         [24] 2268 	lcall	_i2c_read_and_stop
-      000545 AC 82            [24] 2269 	mov	r4,dpl
-      000547 D0 05            [24] 2270 	pop	ar5
-      000549 D0 06            [24] 2271 	pop	ar6
-      00054B D0 07            [24] 2272 	pop	ar7
-      00054D 8E 82            [24] 2273 	mov	dpl,r6
-      00054F 8F 83            [24] 2274 	mov	dph,r7
-      000551 8D F0            [24] 2275 	mov	b,r5
-      000553 EC               [12] 2276 	mov	a,r4
-      000554 12 0B 9B         [24] 2277 	lcall	__gptrput
-                           00048C  2278 	C$i2c.h$274$1$100 ==.
-                           00048C  2279 	XG$i2c_read_data$0$0 ==.
-      000557 22               [24] 2280 	ret
-                                   2281 ;------------------------------------------------------------
-                                   2282 ;Allocation info for local variables in function 'Accel_Init'
-                                   2283 ;------------------------------------------------------------
-                                   2284 ;Data2                     Allocated with name '_Accel_Init_Data2_1_103'
-                                   2285 ;------------------------------------------------------------
-                           00048D  2286 	G$Accel_Init$0$0 ==.
-                           00048D  2287 	C$i2c.h$283$1$100 ==.
-                                   2288 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:283: void Accel_Init(void)
-                                   2289 ;	-----------------------------------------
-                                   2290 ;	 function Accel_Init
-                                   2291 ;	-----------------------------------------
-      000558                       2292 _Accel_Init:
-                           00048D  2293 	C$i2c.h$287$1$103 ==.
-                                   2294 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:287: Data2[0]=0x23;	//normal power mode, 50Hz ODR, y & x axes enabled
-      000558 75 31 23         [24] 2295 	mov	_Accel_Init_Data2_1_103,#0x23
-                           000490  2296 	C$i2c.h$289$1$103 ==.
-                                   2297 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:289: i2c_write_data(addr_accel, 0x20, Data2, 1);
-      00055B 75 28 31         [24] 2298 	mov	_i2c_write_data_PARM_3,#_Accel_Init_Data2_1_103
-      00055E 75 29 00         [24] 2299 	mov	(_i2c_write_data_PARM_3 + 1),#0x00
-      000561 75 2A 40         [24] 2300 	mov	(_i2c_write_data_PARM_3 + 2),#0x40
-      000564 75 27 20         [24] 2301 	mov	_i2c_write_data_PARM_2,#0x20
-      000567 75 2B 01         [24] 2302 	mov	_i2c_write_data_PARM_4,#0x01
-      00056A 75 82 30         [24] 2303 	mov	dpl,#0x30
-      00056D 12 04 3D         [24] 2304 	lcall	_i2c_write_data
-                           0004A5  2305 	C$i2c.h$290$1$103 ==.
-                                   2306 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:290: Data2[0]=0x00;	//Default - no filtering
-      000570 75 31 00         [24] 2307 	mov	_Accel_Init_Data2_1_103,#0x00
-                           0004A8  2308 	C$i2c.h$292$1$103 ==.
-                                   2309 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:292: i2c_write_data(addr_accel, 0x21, Data2, 1);
-      000573 75 28 31         [24] 2310 	mov	_i2c_write_data_PARM_3,#_Accel_Init_Data2_1_103
-      000576 75 29 00         [24] 2311 	mov	(_i2c_write_data_PARM_3 + 1),#0x00
-      000579 75 2A 40         [24] 2312 	mov	(_i2c_write_data_PARM_3 + 2),#0x40
-      00057C 75 27 21         [24] 2313 	mov	_i2c_write_data_PARM_2,#0x21
-      00057F 75 2B 01         [24] 2314 	mov	_i2c_write_data_PARM_4,#0x01
-      000582 75 82 30         [24] 2315 	mov	dpl,#0x30
-      000585 12 04 3D         [24] 2316 	lcall	_i2c_write_data
-                           0004BD  2317 	C$i2c.h$293$1$103 ==.
-                                   2318 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:293: Data2[0]=0x00;	//default - no interrupts enabled
-      000588 75 31 00         [24] 2319 	mov	_Accel_Init_Data2_1_103,#0x00
-                           0004C0  2320 	C$i2c.h$294$1$103 ==.
-                                   2321 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:294: i2c_write_data(addr_accel, 0x22, Data2, 1);
-      00058B 75 28 31         [24] 2322 	mov	_i2c_write_data_PARM_3,#_Accel_Init_Data2_1_103
-      00058E 75 29 00         [24] 2323 	mov	(_i2c_write_data_PARM_3 + 1),#0x00
-      000591 75 2A 40         [24] 2324 	mov	(_i2c_write_data_PARM_3 + 2),#0x40
-      000594 75 27 22         [24] 2325 	mov	_i2c_write_data_PARM_2,#0x22
-      000597 75 2B 01         [24] 2326 	mov	_i2c_write_data_PARM_4,#0x01
-      00059A 75 82 30         [24] 2327 	mov	dpl,#0x30
-      00059D 12 04 3D         [24] 2328 	lcall	_i2c_write_data
-                           0004D5  2329 	C$i2c.h$298$1$103 ==.
-                           0004D5  2330 	XG$Accel_Init$0$0 ==.
-      0005A0 22               [24] 2331 	ret
-                                   2332 ;------------------------------------------------------------
-                                   2333 ;Allocation info for local variables in function 'main'
-                                   2334 ;------------------------------------------------------------
-                           0004D6  2335 	G$main$0$0 ==.
-                           0004D6  2336 	C$Squiggles.c$66$1$103 ==.
-                                   2337 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:66: void main(void)
-                                   2338 ;	-----------------------------------------
-                                   2339 ;	 function main
-                                   2340 ;	-----------------------------------------
-      0005A1                       2341 _main:
-                           0004D6  2342 	C$Squiggles.c$68$1$120 ==.
-                                   2343 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:68: Sys_Init();     // System Initialization - MUST BE 1st EXECUTABLE STATEMENT
-      0005A1 12 00 FB         [24] 2344 	lcall	_Sys_Init
-                           0004D9  2345 	C$Squiggles.c$69$1$120 ==.
-                                   2346 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:69: Port_Init();    // Initialize ports 2 and 3 - XBR0 set to 0x05, UART0 & SMB
-      0005A4 12 07 33         [24] 2347 	lcall	_Port_Init
-                           0004DC  2348 	C$Squiggles.c$70$1$120 ==.
-                                   2349 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:70: Interrupt_Init();   // You may want to change XBR0 to match your SMB wiring
-      0005A7 12 07 51         [24] 2350 	lcall	_Interrupt_Init
-                           0004DF  2351 	C$Squiggles.c$71$1$120 ==.
-                                   2352 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:71: PCA_Init();
-      0005AA 12 07 5A         [24] 2353 	lcall	_PCA_Init
-                           0004E2  2354 	C$Squiggles.c$72$1$120 ==.
-                                   2355 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:72: ADC_Init();
-      0005AD 12 07 CA         [24] 2356 	lcall	_ADC_Init
-                           0004E5  2357 	C$Squiggles.c$73$1$120 ==.
-                                   2358 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:73: SMB0_Init();
-      0005B0 12 07 67         [24] 2359 	lcall	_SMB0_Init
-                           0004E8  2360 	C$Squiggles.c$74$1$120 ==.
-                                   2361 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:74: putchar('\r');  // Dummy write to serial port
-      0005B3 75 82 0D         [24] 2362 	mov	dpl,#0x0D
-      0005B6 12 01 0E         [24] 2363 	lcall	_putchar
-                           0004EE  2364 	C$Squiggles.c$75$1$120 ==.
-                                   2365 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:75: printf("\nStart\r\n");
-      0005B9 74 45            [12] 2366 	mov	a,#___str_3
-      0005BB C0 E0            [24] 2367 	push	acc
-      0005BD 74 15            [12] 2368 	mov	a,#(___str_3 >> 8)
-      0005BF C0 E0            [24] 2369 	push	acc
-      0005C1 74 80            [12] 2370 	mov	a,#0x80
-      0005C3 C0 E0            [24] 2371 	push	acc
-      0005C5 12 0D E7         [24] 2372 	lcall	_printf
-      0005C8 15 81            [12] 2373 	dec	sp
-      0005CA 15 81            [12] 2374 	dec	sp
-      0005CC 15 81            [12] 2375 	dec	sp
-                           000503  2376 	C$Squiggles.c$76$1$120 ==.
-                                   2377 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:76: PCA0CP0 = 0xFFFF - COMPASS_CENTER;
-      0005CE 75 EA 37         [24] 2378 	mov	((_PCA0CP0 >> 0) & 0xFF),#0x37
-      0005D1 75 FA F5         [24] 2379 	mov	((_PCA0CP0 >> 8) & 0xFF),#0xF5
-                           000509  2380 	C$Squiggles.c$77$1$120 ==.
-                                   2381 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:77: PCA0CP2 = 0xFFFF - COMPASS_CENTER; //Car isn't moving to start
-      0005D4 75 EC 37         [24] 2382 	mov	((_PCA0CP2 >> 0) & 0xFF),#0x37
-      0005D7 75 FC F5         [24] 2383 	mov	((_PCA0CP2 >> 8) & 0xFF),#0xF5
-                           00050F  2384 	C$Squiggles.c$79$1$120 ==.
-                                   2385 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:79: printf("\rWe cleared it\n");
-      0005DA 74 4E            [12] 2386 	mov	a,#___str_4
-      0005DC C0 E0            [24] 2387 	push	acc
-      0005DE 74 15            [12] 2388 	mov	a,#(___str_4 >> 8)
-      0005E0 C0 E0            [24] 2389 	push	acc
-      0005E2 74 80            [12] 2390 	mov	a,#0x80
-      0005E4 C0 E0            [24] 2391 	push	acc
-      0005E6 12 0D E7         [24] 2392 	lcall	_printf
-      0005E9 15 81            [12] 2393 	dec	sp
-      0005EB 15 81            [12] 2394 	dec	sp
-      0005ED 15 81            [12] 2395 	dec	sp
-                           000524  2396 	C$Squiggles.c$80$1$120 ==.
-                                   2397 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:80: Counts = 0;
-      0005EF E4               [12] 2398 	clr	a
-      0005F0 F5 32            [12] 2399 	mov	_Counts,a
-      0005F2 F5 33            [12] 2400 	mov	(_Counts + 1),a
-                           000529  2401 	C$Squiggles.c$81$1$120 ==.
-                                   2402 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:81: while (Counts < 1); //{ printf("\r%u\n", nCounts); } // Wait a long time (1s) for keypad & LCD to initialize
-      0005F4                       2403 00101$:
-      0005F4 C3               [12] 2404 	clr	c
-      0005F5 E5 32            [12] 2405 	mov	a,_Counts
-      0005F7 94 01            [12] 2406 	subb	a,#0x01
-      0005F9 E5 33            [12] 2407 	mov	a,(_Counts + 1)
-      0005FB 94 00            [12] 2408 	subb	a,#0x00
-      0005FD 40 F5            [24] 2409 	jc	00101$
-                           000534  2410 	C$Squiggles.c$88$1$120 ==.
-                                   2411 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:88: printf("\n\r------------DATA COLLECTION------------\n");
-      0005FF 74 5E            [12] 2412 	mov	a,#___str_5
-      000601 C0 E0            [24] 2413 	push	acc
-      000603 74 15            [12] 2414 	mov	a,#(___str_5 >> 8)
-      000605 C0 E0            [24] 2415 	push	acc
-      000607 74 80            [12] 2416 	mov	a,#0x80
-      000609 C0 E0            [24] 2417 	push	acc
-      00060B 12 0D E7         [24] 2418 	lcall	_printf
-      00060E 15 81            [12] 2419 	dec	sp
-      000610 15 81            [12] 2420 	dec	sp
-      000612 15 81            [12] 2421 	dec	sp
-                           000549  2422 	C$Squiggles.c$95$2$121 ==.
-                                   2423 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:95: while(!RANGER_SWITCH && !COMPASS_SWITCH)
-      000614                       2424 00121$:
-      000614 30 B6 03         [24] 2425 	jnb	_RANGER_SWITCH,00175$
-      000617 02 07 1A         [24] 2426 	ljmp	00123$
-      00061A                       2427 00175$:
-      00061A 30 B7 03         [24] 2428 	jnb	_COMPASS_SWITCH,00176$
-      00061D 02 07 1A         [24] 2429 	ljmp	00123$
-      000620                       2430 00176$:
-                           000555  2431 	C$Squiggles.c$97$3$122 ==.
-                                   2432 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:97: if ((new_range)) // enough overflow for a new range
-      000620 E5 42            [12] 2433 	mov	a,_new_range
-      000622 60 5D            [24] 2434 	jz	00113$
-                           000559  2435 	C$Squiggles.c$99$4$123 ==.
-                                   2436 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:99: range = read_ranger();
-      000624 12 08 EC         [24] 2437 	lcall	_read_ranger
-      000627 85 82 45         [24] 2438 	mov	_range,dpl
-      00062A 85 83 46         [24] 2439 	mov	(_range + 1),dph
-                           000562  2440 	C$Squiggles.c$100$4$123 ==.
-                                   2441 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:100: printf("\rRange: %u\n", range);
-      00062D C0 45            [24] 2442 	push	_range
-      00062F C0 46            [24] 2443 	push	(_range + 1)
-      000631 74 89            [12] 2444 	mov	a,#___str_6
-      000633 C0 E0            [24] 2445 	push	acc
-      000635 74 15            [12] 2446 	mov	a,#(___str_6 >> 8)
-      000637 C0 E0            [24] 2447 	push	acc
-      000639 74 80            [12] 2448 	mov	a,#0x80
-      00063B C0 E0            [24] 2449 	push	acc
-      00063D 12 0D E7         [24] 2450 	lcall	_printf
-      000640 E5 81            [12] 2451 	mov	a,sp
-      000642 24 FB            [12] 2452 	add	a,#0xfb
-      000644 F5 81            [12] 2453 	mov	sp,a
-                           00057B  2454 	C$Squiggles.c$102$4$123 ==.
-                                   2455 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:102: if ((range != 0) && (range != 0xFFFF))
-      000646 E5 45            [12] 2456 	mov	a,_range
-      000648 45 46            [12] 2457 	orl	a,(_range + 1)
-      00064A 60 30            [24] 2458 	jz	00109$
-      00064C 74 FF            [12] 2459 	mov	a,#0xFF
-      00064E B5 45 07         [24] 2460 	cjne	a,_range,00179$
-      000651 74 FF            [12] 2461 	mov	a,#0xFF
-      000653 B5 46 02         [24] 2462 	cjne	a,(_range + 1),00179$
-      000656 80 24            [24] 2463 	sjmp	00109$
-      000658                       2464 00179$:
-                           00058D  2465 	C$Squiggles.c$104$5$124 ==.
-                                   2466 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:104: if((range < 15) && (range != 0)) PCA0CP2 = 0xFFFF - COMPASS_CENTER; //Stop if near an object
-      000658 C3               [12] 2467 	clr	c
-      000659 E5 45            [12] 2468 	mov	a,_range
-      00065B 94 0F            [12] 2469 	subb	a,#0x0F
-      00065D E5 46            [12] 2470 	mov	a,(_range + 1)
-      00065F 94 00            [12] 2471 	subb	a,#0x00
-      000661 50 0E            [24] 2472 	jnc	00105$
-      000663 E5 45            [12] 2473 	mov	a,_range
-      000665 45 46            [12] 2474 	orl	a,(_range + 1)
-      000667 60 08            [24] 2475 	jz	00105$
-      000669 75 EC 37         [24] 2476 	mov	((_PCA0CP2 >> 0) & 0xFF),#0x37
-      00066C 75 FC F5         [24] 2477 	mov	((_PCA0CP2 >> 8) & 0xFF),#0xF5
-      00066F 80 06            [24] 2478 	sjmp	00106$
-      000671                       2479 00105$:
-                           0005A6  2480 	C$Squiggles.c$105$5$124 ==.
-                                   2481 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:105: else PCA0CP2 = 0xFFFF - 2900;
-      000671 75 EC AB         [24] 2482 	mov	((_PCA0CP2 >> 0) & 0xFF),#0xAB
-      000674 75 FC F4         [24] 2483 	mov	((_PCA0CP2 >> 8) & 0xFF),#0xF4
-      000677                       2484 00106$:
-                           0005AC  2485 	C$Squiggles.c$108$5$124 ==.
-                                   2486 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:108: new_range = 0;
-      000677 75 42 00         [24] 2487 	mov	_new_range,#0x00
-      00067A 80 05            [24] 2488 	sjmp	00113$
-      00067C                       2489 00109$:
-                           0005B1  2490 	C$Squiggles.c$114$5$125 ==.
-                                   2491 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:114: range_adj = 0;
-      00067C E4               [12] 2492 	clr	a
-      00067D F5 49            [12] 2493 	mov	_range_adj,a
-      00067F F5 4A            [12] 2494 	mov	(_range_adj + 1),a
-      000681                       2495 00113$:
-                           0005B6  2496 	C$Squiggles.c$117$3$122 ==.
-                                   2497 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:117: if(delay == 10) 	//delay so that we don't get spammed with print messages
-      000681 74 0A            [12] 2498 	mov	a,#0x0A
-      000683 B5 40 5D         [24] 2499 	cjne	a,_delay,00115$
-                           0005BB  2500 	C$Squiggles.c$119$4$126 ==.
-                                   2501 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:119: AD_Result = read_AD_input(5); //Read analog input on pin 1.5
-      000686 75 82 05         [24] 2502 	mov	dpl,#0x05
-      000689 12 07 D4         [24] 2503 	lcall	_read_AD_input
-                           0005C1  2504 	C$Squiggles.c$120$1$120 ==.
-                                   2505 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:120: voltage = ((14.4/255)*AD_Result); //Convert back to input voltage
-      00068C 85 82 4E         [24] 2506 	mov  _AD_Result,dpl
-      00068F 12 14 11         [24] 2507 	lcall	___uchar2fs
-      000692 AC 82            [24] 2508 	mov	r4,dpl
-      000694 AD 83            [24] 2509 	mov	r5,dph
-      000696 AE F0            [24] 2510 	mov	r6,b
-      000698 FF               [12] 2511 	mov	r7,a
-      000699 C0 04            [24] 2512 	push	ar4
-      00069B C0 05            [24] 2513 	push	ar5
-      00069D C0 06            [24] 2514 	push	ar6
-      00069F C0 07            [24] 2515 	push	ar7
-      0006A1 90 4D B4         [24] 2516 	mov	dptr,#0x4DB4
-      0006A4 75 F0 67         [24] 2517 	mov	b,#0x67
-      0006A7 74 3D            [12] 2518 	mov	a,#0x3D
-      0006A9 12 0A 97         [24] 2519 	lcall	___fsmul
-      0006AC AC 82            [24] 2520 	mov	r4,dpl
-      0006AE AD 83            [24] 2521 	mov	r5,dph
-      0006B0 AE F0            [24] 2522 	mov	r6,b
-      0006B2 FF               [12] 2523 	mov	r7,a
-      0006B3 E5 81            [12] 2524 	mov	a,sp
-      0006B5 24 FC            [12] 2525 	add	a,#0xfc
-      0006B7 F5 81            [12] 2526 	mov	sp,a
-      0006B9 8C 82            [24] 2527 	mov	dpl,r4
-      0006BB 8D 83            [24] 2528 	mov	dph,r5
-      0006BD 8E F0            [24] 2529 	mov	b,r6
-      0006BF EF               [12] 2530 	mov	a,r7
-      0006C0 12 14 1C         [24] 2531 	lcall	___fs2uchar
-      0006C3 85 82 4F         [24] 2532 	mov	_voltage,dpl
-                           0005FB  2533 	C$Squiggles.c$121$4$126 ==.
-                                   2534 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:121: printf("\rBattery Voltage is %u\n", voltage);
-      0006C6 AE 4F            [24] 2535 	mov	r6,_voltage
-      0006C8 7F 00            [12] 2536 	mov	r7,#0x00
-      0006CA C0 06            [24] 2537 	push	ar6
-      0006CC C0 07            [24] 2538 	push	ar7
-      0006CE 74 95            [12] 2539 	mov	a,#___str_7
-      0006D0 C0 E0            [24] 2540 	push	acc
-      0006D2 74 15            [12] 2541 	mov	a,#(___str_7 >> 8)
-      0006D4 C0 E0            [24] 2542 	push	acc
-      0006D6 74 80            [12] 2543 	mov	a,#0x80
-      0006D8 C0 E0            [24] 2544 	push	acc
-      0006DA 12 0D E7         [24] 2545 	lcall	_printf
-      0006DD E5 81            [12] 2546 	mov	a,sp
-      0006DF 24 FB            [12] 2547 	add	a,#0xfb
-      0006E1 F5 81            [12] 2548 	mov	sp,a
-      0006E3                       2549 00115$:
-                           000618  2550 	C$Squiggles.c$123$3$122 ==.
-                                   2551 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:123: if((new_heading))
-      0006E3 E5 41            [12] 2552 	mov	a,_new_heading
-      0006E5 70 03            [24] 2553 	jnz	00184$
-      0006E7 02 06 14         [24] 2554 	ljmp	00121$
-      0006EA                       2555 00184$:
-                           00061F  2556 	C$Squiggles.c$125$4$127 ==.
-                                   2557 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:125: if(delay == 10) heading = read_compass();
-      0006EA 74 0A            [12] 2558 	mov	a,#0x0A
-      0006EC B5 40 09         [24] 2559 	cjne	a,_delay,00117$
-      0006EF 12 08 C6         [24] 2560 	lcall	_read_compass
-      0006F2 85 82 43         [24] 2561 	mov	_heading,dpl
-      0006F5 85 83 44         [24] 2562 	mov	(_heading + 1),dph
-      0006F8                       2563 00117$:
-                           00062D  2564 	C$Squiggles.c$126$4$127 ==.
-                                   2565 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:126: printf("\rThe current direction is %u\n", heading);
-      0006F8 C0 43            [24] 2566 	push	_heading
-      0006FA C0 44            [24] 2567 	push	(_heading + 1)
-      0006FC 74 AD            [12] 2568 	mov	a,#___str_8
-      0006FE C0 E0            [24] 2569 	push	acc
-      000700 74 15            [12] 2570 	mov	a,#(___str_8 >> 8)
-      000702 C0 E0            [24] 2571 	push	acc
-      000704 74 80            [12] 2572 	mov	a,#0x80
-      000706 C0 E0            [24] 2573 	push	acc
-      000708 12 0D E7         [24] 2574 	lcall	_printf
-      00070B E5 81            [12] 2575 	mov	a,sp
-      00070D 24 FB            [12] 2576 	add	a,#0xfb
-      00070F F5 81            [12] 2577 	mov	sp,a
-                           000646  2578 	C$Squiggles.c$127$4$127 ==.
-                                   2579 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:127: set_COMPASS_PW(); // Adjust pulsewidth based on error function
-      000711 12 09 65         [24] 2580 	lcall	_set_COMPASS_PW
-                           000649  2581 	C$Squiggles.c$128$4$127 ==.
-                                   2582 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:128: new_heading = 0;
-      000714 75 41 00         [24] 2583 	mov	_new_heading,#0x00
-      000717 02 06 14         [24] 2584 	ljmp	00121$
-      00071A                       2585 00123$:
-                           00064F  2586 	C$Squiggles.c$137$2$121 ==.
-                                   2587 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:137: if(RANGER_SWITCH || COMPASS_SWITCH)
-      00071A 20 B6 06         [24] 2588 	jb	_RANGER_SWITCH,00124$
-      00071D 20 B7 03         [24] 2589 	jb	_COMPASS_SWITCH,00188$
-      000720 02 06 14         [24] 2590 	ljmp	00121$
-      000723                       2591 00188$:
-      000723                       2592 00124$:
-                           000658  2593 	C$Squiggles.c$139$3$128 ==.
-                                   2594 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:139: PCA0CP0 = 0xFFFF - COMPASS_CENTER;
-      000723 75 EA 37         [24] 2595 	mov	((_PCA0CP0 >> 0) & 0xFF),#0x37
-      000726 75 FA F5         [24] 2596 	mov	((_PCA0CP0 >> 8) & 0xFF),#0xF5
-                           00065E  2597 	C$Squiggles.c$140$3$128 ==.
-                                   2598 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:140: PCA0CP2 = 0xFFFF - COMPASS_CENTER;
-      000729 75 EC 37         [24] 2599 	mov	((_PCA0CP2 >> 0) & 0xFF),#0x37
-      00072C 75 FC F5         [24] 2600 	mov	((_PCA0CP2 >> 8) & 0xFF),#0xF5
-      00072F 02 06 14         [24] 2601 	ljmp	00121$
-                           000667  2602 	C$Squiggles.c$143$1$120 ==.
-                           000667  2603 	XG$main$0$0 ==.
-      000732 22               [24] 2604 	ret
-                                   2605 ;------------------------------------------------------------
-                                   2606 ;Allocation info for local variables in function 'Port_Init'
-                                   2607 ;------------------------------------------------------------
-                           000668  2608 	G$Port_Init$0$0 ==.
-                           000668  2609 	C$Squiggles.c$147$1$120 ==.
-                                   2610 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:147: void Port_Init(void)	
-                                   2611 ;	-----------------------------------------
-                                   2612 ;	 function Port_Init
-                                   2613 ;	-----------------------------------------
-      000733                       2614 _Port_Init:
-                           000668  2615 	C$Squiggles.c$149$1$130 ==.
-                                   2616 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:149: XBR0 = 0x27;
-      000733 75 E1 27         [24] 2617 	mov	_XBR0,#0x27
-                           00066B  2618 	C$Squiggles.c$150$1$130 ==.
-                                   2619 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:150: P1MDIN 	&= 0xDF;	// set pin 1.3 for analog input	
-      000736 53 BD DF         [24] 2620 	anl	_P1MDIN,#0xDF
-                           00066E  2621 	C$Squiggles.c$151$1$130 ==.
-                                   2622 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:151: P1MDOUT |= 0x05;	//set output pin for CEX0 in push-pull mode
-      000739 43 A5 05         [24] 2623 	orl	_P1MDOUT,#0x05
-                           000671  2624 	C$Squiggles.c$152$1$130 ==.
-                                   2625 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:152: P1MDOUT &= 0xDF;	// set input pin for 1.3 to open-drain
-      00073C 53 A5 DF         [24] 2626 	anl	_P1MDOUT,#0xDF
-                           000674  2627 	C$Squiggles.c$153$1$130 ==.
-                                   2628 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:153: P1		|= ~0xDF;	// set input pin for 1.3 to high impedence
-      00073F AF 90            [24] 2629 	mov	r7,_P1
-      000741 74 20            [12] 2630 	mov	a,#0x20
-      000743 4F               [12] 2631 	orl	a,r7
-      000744 F5 90            [12] 2632 	mov	_P1,a
-                           00067B  2633 	C$Squiggles.c$154$1$130 ==.
-                                   2634 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:154: P3MDOUT &= 0x7F;	// set input pin for 3.7 to open-drain
-      000746 53 A7 7F         [24] 2635 	anl	_P3MDOUT,#0x7F
-                           00067E  2636 	C$Squiggles.c$155$1$130 ==.
-                                   2637 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:155: P3		|= ~0x7F;	// set input pin for 3.7 to high impedence
-      000749 AF B0            [24] 2638 	mov	r7,_P3
-      00074B 74 80            [12] 2639 	mov	a,#0x80
-      00074D 4F               [12] 2640 	orl	a,r7
-      00074E F5 B0            [12] 2641 	mov	_P3,a
-                           000685  2642 	C$Squiggles.c$157$1$130 ==.
-                           000685  2643 	XG$Port_Init$0$0 ==.
-      000750 22               [24] 2644 	ret
-                                   2645 ;------------------------------------------------------------
-                                   2646 ;Allocation info for local variables in function 'Interrupt_Init'
-                                   2647 ;------------------------------------------------------------
-                           000686  2648 	G$Interrupt_Init$0$0 ==.
-                           000686  2649 	C$Squiggles.c$161$1$130 ==.
-                                   2650 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:161: void Interrupt_Init(void)
-                                   2651 ;	-----------------------------------------
-                                   2652 ;	 function Interrupt_Init
-                                   2653 ;	-----------------------------------------
-      000751                       2654 _Interrupt_Init:
-                           000686  2655 	C$Squiggles.c$163$1$132 ==.
-                                   2656 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:163: IE |= 0x02;
-      000751 43 A8 02         [24] 2657 	orl	_IE,#0x02
-                           000689  2658 	C$Squiggles.c$164$1$132 ==.
-                                   2659 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:164: EIE1 |= 0x08;
-      000754 43 E6 08         [24] 2660 	orl	_EIE1,#0x08
-                           00068C  2661 	C$Squiggles.c$165$1$132 ==.
-                                   2662 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:165: EA = 1;
-      000757 D2 AF            [12] 2663 	setb	_EA
-                           00068E  2664 	C$Squiggles.c$166$1$132 ==.
-                           00068E  2665 	XG$Interrupt_Init$0$0 ==.
-      000759 22               [24] 2666 	ret
-                                   2667 ;------------------------------------------------------------
-                                   2668 ;Allocation info for local variables in function 'PCA_Init'
-                                   2669 ;------------------------------------------------------------
-                           00068F  2670 	G$PCA_Init$0$0 ==.
-                           00068F  2671 	C$Squiggles.c$170$1$132 ==.
-                                   2672 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:170: void PCA_Init(void)
-                                   2673 ;	-----------------------------------------
-                                   2674 ;	 function PCA_Init
-                                   2675 ;	-----------------------------------------
-      00075A                       2676 _PCA_Init:
-                           00068F  2677 	C$Squiggles.c$172$1$134 ==.
-                                   2678 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:172: PCA0MD = 0x81;      // SYSCLK/12, enable CF interrupts, suspend when idle
-      00075A 75 D9 81         [24] 2679 	mov	_PCA0MD,#0x81
-                           000692  2680 	C$Squiggles.c$173$1$134 ==.
-                                   2681 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:173: PCA0CPM0 = 0xC2;    // 16 bit, enable compare, enable PWM; NOT USED HERE
-      00075D 75 DA C2         [24] 2682 	mov	_PCA0CPM0,#0xC2
-                           000695  2683 	C$Squiggles.c$174$1$134 ==.
-                                   2684 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:174: PCA0CPM2 = 0xC2;
-      000760 75 DC C2         [24] 2685 	mov	_PCA0CPM2,#0xC2
-                           000698  2686 	C$Squiggles.c$175$1$134 ==.
-                                   2687 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:175: PCA0CN = 0x40;     // enable PCA
-      000763 75 D8 40         [24] 2688 	mov	_PCA0CN,#0x40
-                           00069B  2689 	C$Squiggles.c$176$1$134 ==.
-                           00069B  2690 	XG$PCA_Init$0$0 ==.
-      000766 22               [24] 2691 	ret
-                                   2692 ;------------------------------------------------------------
-                                   2693 ;Allocation info for local variables in function 'SMB0_Init'
-                                   2694 ;------------------------------------------------------------
-                           00069C  2695 	G$SMB0_Init$0$0 ==.
-                           00069C  2696 	C$Squiggles.c$180$1$134 ==.
-                                   2697 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:180: void SMB0_Init(void)    // This was at the top, moved it here to call wait()
-                                   2698 ;	-----------------------------------------
-                                   2699 ;	 function SMB0_Init
-                                   2700 ;	-----------------------------------------
-      000767                       2701 _SMB0_Init:
-                           00069C  2702 	C$Squiggles.c$182$1$136 ==.
-                                   2703 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:182: SMB0CR = 0x93;      // Set SCL to 100KHz
-      000767 75 CF 93         [24] 2704 	mov	_SMB0CR,#0x93
-                           00069F  2705 	C$Squiggles.c$183$1$136 ==.
-                                   2706 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:183: ENSMB = 1;          // Enable SMBUS0
-      00076A D2 C6            [12] 2707 	setb	_ENSMB
-                           0006A1  2708 	C$Squiggles.c$184$1$136 ==.
-                           0006A1  2709 	XG$SMB0_Init$0$0 ==.
-      00076C 22               [24] 2710 	ret
-                                   2711 ;------------------------------------------------------------
-                                   2712 ;Allocation info for local variables in function 'PCA_ISR'
-                                   2713 ;------------------------------------------------------------
-                           0006A2  2714 	G$PCA_ISR$0$0 ==.
-                           0006A2  2715 	C$Squiggles.c$188$1$136 ==.
-                                   2716 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:188: void PCA_ISR(void) __interrupt 9
-                                   2717 ;	-----------------------------------------
-                                   2718 ;	 function PCA_ISR
-                                   2719 ;	-----------------------------------------
-      00076D                       2720 _PCA_ISR:
-      00076D C0 E0            [24] 2721 	push	acc
-      00076F C0 D0            [24] 2722 	push	psw
-                           0006A6  2723 	C$Squiggles.c$190$1$138 ==.
-                                   2724 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:190: if (CF)
-                           0006A6  2725 	C$Squiggles.c$192$2$139 ==.
-                                   2726 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:192: CF = 0;                     // clear the interrupt flag
-      000771 10 DF 02         [24] 2727 	jbc	_CF,00129$
-      000774 80 4C            [24] 2728 	sjmp	00110$
-      000776                       2729 00129$:
-                           0006AB  2730 	C$Squiggles.c$194$2$139 ==.
-                                   2731 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:194: nCounts++;
-      000776 05 34            [12] 2732 	inc	_nCounts
-      000778 E4               [12] 2733 	clr	a
-      000779 B5 34 02         [24] 2734 	cjne	a,_nCounts,00130$
-      00077C 05 35            [12] 2735 	inc	(_nCounts + 1)
-      00077E                       2736 00130$:
-                           0006B3  2737 	C$Squiggles.c$195$2$139 ==.
-                                   2738 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:195: PCA0 = PCA_START;
-      00077E 75 E9 00         [24] 2739 	mov	((_PCA0 >> 0) & 0xFF),#0x00
-      000781 75 F9 70         [24] 2740 	mov	((_PCA0 >> 8) & 0xFF),#0x70
-                           0006B9  2741 	C$Squiggles.c$196$2$139 ==.
-                                   2742 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:196: if (nCounts > 50)
-      000784 C3               [12] 2743 	clr	c
-      000785 74 32            [12] 2744 	mov	a,#0x32
-      000787 95 34            [12] 2745 	subb	a,_nCounts
-      000789 E4               [12] 2746 	clr	a
-      00078A 95 35            [12] 2747 	subb	a,(_nCounts + 1)
-      00078C 50 0C            [24] 2748 	jnc	00102$
-                           0006C3  2749 	C$Squiggles.c$198$3$140 ==.
-                                   2750 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:198: nCounts = 0;
-      00078E E4               [12] 2751 	clr	a
-      00078F F5 34            [12] 2752 	mov	_nCounts,a
-      000791 F5 35            [12] 2753 	mov	(_nCounts + 1),a
-                           0006C8  2754 	C$Squiggles.c$199$3$140 ==.
-                                   2755 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:199: Counts++;               // seconds counter
-      000793 05 32            [12] 2756 	inc	_Counts
-                                   2757 ;	genFromRTrack removed	clr	a
-      000795 B5 32 02         [24] 2758 	cjne	a,_Counts,00132$
-      000798 05 33            [12] 2759 	inc	(_Counts + 1)
-      00079A                       2760 00132$:
-      00079A                       2761 00102$:
-                           0006CF  2762 	C$Squiggles.c$201$2$139 ==.
-                                   2763 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:201: h_count++;
-      00079A 05 3E            [12] 2764 	inc	_h_count
-                           0006D1  2765 	C$Squiggles.c$202$2$139 ==.
-                                   2766 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:202: if (h_count>=2)
-      00079C 74 FE            [12] 2767 	mov	a,#0x100 - 0x02
-      00079E 25 3E            [12] 2768 	add	a,_h_count
-      0007A0 50 06            [24] 2769 	jnc	00104$
-                           0006D7  2770 	C$Squiggles.c$204$3$141 ==.
-                                   2771 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:204: new_heading=1;
-      0007A2 75 41 01         [24] 2772 	mov	_new_heading,#0x01
-                           0006DA  2773 	C$Squiggles.c$205$3$141 ==.
-                                   2774 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:205: h_count = 0;
-      0007A5 75 3E 00         [24] 2775 	mov	_h_count,#0x00
-      0007A8                       2776 00104$:
-                           0006DD  2777 	C$Squiggles.c$207$2$139 ==.
-                                   2778 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:207: delay++;
-      0007A8 05 40            [12] 2779 	inc	_delay
-                           0006DF  2780 	C$Squiggles.c$208$2$139 ==.
-                                   2781 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:208: if(delay == 11) delay=0;
-      0007AA 74 0B            [12] 2782 	mov	a,#0x0B
-      0007AC B5 40 03         [24] 2783 	cjne	a,_delay,00106$
-      0007AF 75 40 00         [24] 2784 	mov	_delay,#0x00
-      0007B2                       2785 00106$:
-                           0006E7  2786 	C$Squiggles.c$209$2$139 ==.
-                                   2787 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:209: r_count++;
-      0007B2 05 3F            [12] 2788 	inc	_r_count
-                           0006E9  2789 	C$Squiggles.c$210$2$139 ==.
-                                   2790 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:210: if (r_count>=4)
-      0007B4 74 FC            [12] 2791 	mov	a,#0x100 - 0x04
-      0007B6 25 3F            [12] 2792 	add	a,_r_count
-      0007B8 50 0B            [24] 2793 	jnc	00112$
-                           0006EF  2794 	C$Squiggles.c$212$3$142 ==.
-                                   2795 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:212: new_range = 1;
-      0007BA 75 42 01         [24] 2796 	mov	_new_range,#0x01
-                           0006F2  2797 	C$Squiggles.c$213$3$142 ==.
-                                   2798 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:213: r_count = 0;
-      0007BD 75 3F 00         [24] 2799 	mov	_r_count,#0x00
-      0007C0 80 03            [24] 2800 	sjmp	00112$
-      0007C2                       2801 00110$:
-                           0006F7  2802 	C$Squiggles.c$216$1$138 ==.
-                                   2803 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:216: else PCA0CN &= 0xC0;           // clear all other 9-type interrupts
-      0007C2 53 D8 C0         [24] 2804 	anl	_PCA0CN,#0xC0
-      0007C5                       2805 00112$:
-      0007C5 D0 D0            [24] 2806 	pop	psw
-      0007C7 D0 E0            [24] 2807 	pop	acc
-                           0006FE  2808 	C$Squiggles.c$217$1$138 ==.
-                           0006FE  2809 	XG$PCA_ISR$0$0 ==.
-      0007C9 32               [24] 2810 	reti
-                                   2811 ;	eliminated unneeded mov psw,# (no regs used in bank)
-                                   2812 ;	eliminated unneeded push/pop dpl
-                                   2813 ;	eliminated unneeded push/pop dph
-                                   2814 ;	eliminated unneeded push/pop b
-                                   2815 ;------------------------------------------------------------
-                                   2816 ;Allocation info for local variables in function 'ADC_Init'
-                                   2817 ;------------------------------------------------------------
-                           0006FF  2818 	G$ADC_Init$0$0 ==.
-                           0006FF  2819 	C$Squiggles.c$222$1$138 ==.
-                                   2820 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:222: void ADC_Init(void)
-                                   2821 ;	-----------------------------------------
-                                   2822 ;	 function ADC_Init
-                                   2823 ;	-----------------------------------------
-      0007CA                       2824 _ADC_Init:
-                           0006FF  2825 	C$Squiggles.c$224$1$144 ==.
-                                   2826 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:224: REF0CN = 0x03; // Set Vref to use internal reference voltage (2.4 V)
-      0007CA 75 D1 03         [24] 2827 	mov	_REF0CN,#0x03
-                           000702  2828 	C$Squiggles.c$225$1$144 ==.
-                                   2829 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:225: ADC1CN = 0x80; // Enable A/D converter (ADC1)
-      0007CD 75 AA 80         [24] 2830 	mov	_ADC1CN,#0x80
-                           000705  2831 	C$Squiggles.c$226$1$144 ==.
-                                   2832 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:226: ADC1CF |= 0x01; // Set A/D converter gain to 1
-      0007D0 43 AB 01         [24] 2833 	orl	_ADC1CF,#0x01
-                           000708  2834 	C$Squiggles.c$227$1$144 ==.
-                           000708  2835 	XG$ADC_Init$0$0 ==.
-      0007D3 22               [24] 2836 	ret
-                                   2837 ;------------------------------------------------------------
-                                   2838 ;Allocation info for local variables in function 'read_AD_input'
-                                   2839 ;------------------------------------------------------------
-                                   2840 ;n                         Allocated to registers 
-                                   2841 ;------------------------------------------------------------
-                           000709  2842 	G$read_AD_input$0$0 ==.
-                           000709  2843 	C$Squiggles.c$231$1$144 ==.
-                                   2844 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:231: unsigned char read_AD_input(unsigned char n)
-                                   2845 ;	-----------------------------------------
-                                   2846 ;	 function read_AD_input
-                                   2847 ;	-----------------------------------------
-      0007D4                       2848 _read_AD_input:
-      0007D4 85 82 AC         [24] 2849 	mov	_AMX1SL,dpl
-                           00070C  2850 	C$Squiggles.c$234$1$146 ==.
-                                   2851 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:234: ADC1CN = ADC1CN & ~0x20; // Clear the "Conversion Completed" flag
-      0007D7 AF AA            [24] 2852 	mov	r7,_ADC1CN
-      0007D9 74 DF            [12] 2853 	mov	a,#0xDF
-      0007DB 5F               [12] 2854 	anl	a,r7
-      0007DC F5 AA            [12] 2855 	mov	_ADC1CN,a
-                           000713  2856 	C$Squiggles.c$235$1$146 ==.
-                                   2857 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:235: ADC1CN = ADC1CN | 0x10; // Initiate A/D conversion
-      0007DE 43 AA 10         [24] 2858 	orl	_ADC1CN,#0x10
-                           000716  2859 	C$Squiggles.c$237$1$146 ==.
-                                   2860 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:237: while ((ADC1CN & 0x20) == 0x00);// Wait for conversion to complete
-      0007E1                       2861 00101$:
-      0007E1 E5 AA            [12] 2862 	mov	a,_ADC1CN
-      0007E3 30 E5 FB         [24] 2863 	jnb	acc.5,00101$
-                           00071B  2864 	C$Squiggles.c$239$1$146 ==.
-                                   2865 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:239: return ADC1; // Return digital value in ADC1 register
-      0007E6 85 9C 82         [24] 2866 	mov	dpl,_ADC1
-                           00071E  2867 	C$Squiggles.c$240$1$146 ==.
-                           00071E  2868 	XG$read_AD_input$0$0 ==.
-      0007E9 22               [24] 2869 	ret
-                                   2870 ;------------------------------------------------------------
-                                   2871 ;Allocation info for local variables in function 'Pick_Heading'
-                                   2872 ;------------------------------------------------------------
-                                   2873 ;user_heading              Allocated to registers r6 r7 
-                                   2874 ;------------------------------------------------------------
-                           00071F  2875 	G$Pick_Heading$0$0 ==.
-                           00071F  2876 	C$Squiggles.c$244$1$146 ==.
-                                   2877 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:244: void Pick_Heading(void)
-                                   2878 ;	-----------------------------------------
-                                   2879 ;	 function Pick_Heading
-                                   2880 ;	-----------------------------------------
-      0007EA                       2881 _Pick_Heading:
-                           00071F  2882 	C$Squiggles.c$247$1$148 ==.
-                                   2883 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:247: lcd_clear();
-      0007EA 12 01 AC         [24] 2884 	lcall	_lcd_clear
-                           000722  2885 	C$Squiggles.c$248$1$148 ==.
-                                   2886 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:248: lcd_print("\rEnter desired heading for the compass.\n");
-      0007ED 74 CB            [12] 2887 	mov	a,#___str_9
-      0007EF C0 E0            [24] 2888 	push	acc
-      0007F1 74 15            [12] 2889 	mov	a,#(___str_9 >> 8)
-      0007F3 C0 E0            [24] 2890 	push	acc
-      0007F5 74 80            [12] 2891 	mov	a,#0x80
-      0007F7 C0 E0            [24] 2892 	push	acc
-      0007F9 12 01 27         [24] 2893 	lcall	_lcd_print
-      0007FC 15 81            [12] 2894 	dec	sp
-      0007FE 15 81            [12] 2895 	dec	sp
-      000800 15 81            [12] 2896 	dec	sp
-                           000737  2897 	C$Squiggles.c$249$1$148 ==.
-                                   2898 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:249: user_heading = kpd_input(1);
-      000802 75 82 01         [24] 2899 	mov	dpl,#0x01
-      000805 12 02 64         [24] 2900 	lcall	_kpd_input
-      000808 AE 82            [24] 2901 	mov	r6,dpl
-      00080A AF 83            [24] 2902 	mov	r7,dph
-                           000741  2903 	C$Squiggles.c$250$1$148 ==.
-                                   2904 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:250: while(user_heading > 3600) //Headings must be between 0 and 3600
-      00080C 8E 04            [24] 2905 	mov	ar4,r6
-      00080E 8F 05            [24] 2906 	mov	ar5,r7
-      000810                       2907 00101$:
-      000810 C3               [12] 2908 	clr	c
-      000811 74 10            [12] 2909 	mov	a,#0x10
-      000813 9C               [12] 2910 	subb	a,r4
-      000814 74 8E            [12] 2911 	mov	a,#(0x0E ^ 0x80)
-      000816 8D F0            [24] 2912 	mov	b,r5
-      000818 63 F0 80         [24] 2913 	xrl	b,#0x80
-      00081B 95 F0            [12] 2914 	subb	a,b
-      00081D 50 0A            [24] 2915 	jnc	00113$
-                           000754  2916 	C$Squiggles.c$252$2$149 ==.
-                                   2917 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:252: user_heading -= 3600;
-      00081F EC               [12] 2918 	mov	a,r4
-      000820 24 F0            [12] 2919 	add	a,#0xF0
-      000822 FC               [12] 2920 	mov	r4,a
-      000823 ED               [12] 2921 	mov	a,r5
-      000824 34 F1            [12] 2922 	addc	a,#0xF1
-      000826 FD               [12] 2923 	mov	r5,a
-                           00075C  2924 	C$Squiggles.c$254$1$148 ==.
-                                   2925 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:254: while(user_heading < 0)
-      000827 80 E7            [24] 2926 	sjmp	00101$
-      000829                       2927 00113$:
-      000829 8C 06            [24] 2928 	mov	ar6,r4
-      00082B 8D 07            [24] 2929 	mov	ar7,r5
-      00082D 8E 04            [24] 2930 	mov	ar4,r6
-      00082F 8F 05            [24] 2931 	mov	ar5,r7
-      000831                       2932 00104$:
-      000831 ED               [12] 2933 	mov	a,r5
-      000832 30 E7 0A         [24] 2934 	jnb	acc.7,00114$
-                           00076A  2935 	C$Squiggles.c$256$2$150 ==.
-                                   2936 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:256: user_heading += 3600;
-      000835 74 10            [12] 2937 	mov	a,#0x10
-      000837 2C               [12] 2938 	add	a,r4
-      000838 FC               [12] 2939 	mov	r4,a
-      000839 74 0E            [12] 2940 	mov	a,#0x0E
-      00083B 3D               [12] 2941 	addc	a,r5
-      00083C FD               [12] 2942 	mov	r5,a
-      00083D 80 F2            [24] 2943 	sjmp	00104$
-      00083F                       2944 00114$:
-      00083F 8C 06            [24] 2945 	mov	ar6,r4
-      000841 8D 07            [24] 2946 	mov	ar7,r5
-                           000778  2947 	C$Squiggles.c$258$1$148 ==.
-                                   2948 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:258: lcd_clear();
-      000843 C0 07            [24] 2949 	push	ar7
-      000845 C0 06            [24] 2950 	push	ar6
-      000847 12 01 AC         [24] 2951 	lcall	_lcd_clear
-      00084A D0 06            [24] 2952 	pop	ar6
-      00084C D0 07            [24] 2953 	pop	ar7
-                           000783  2954 	C$Squiggles.c$259$1$148 ==.
-                                   2955 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:259: desired_heading = user_heading;
-      00084E 8E 38            [24] 2956 	mov	_desired_heading,r6
-      000850 8F 39            [24] 2957 	mov	(_desired_heading + 1),r7
-                           000787  2958 	C$Squiggles.c$260$1$148 ==.
-                                   2959 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:260: printf("\rPick_Heading verified\n");
-      000852 74 F4            [12] 2960 	mov	a,#___str_10
-      000854 C0 E0            [24] 2961 	push	acc
-      000856 74 15            [12] 2962 	mov	a,#(___str_10 >> 8)
-      000858 C0 E0            [24] 2963 	push	acc
-      00085A 74 80            [12] 2964 	mov	a,#0x80
-      00085C C0 E0            [24] 2965 	push	acc
-      00085E 12 0D E7         [24] 2966 	lcall	_printf
-      000861 15 81            [12] 2967 	dec	sp
-      000863 15 81            [12] 2968 	dec	sp
-      000865 15 81            [12] 2969 	dec	sp
-                           00079C  2970 	C$Squiggles.c$261$1$148 ==.
-                           00079C  2971 	XG$Pick_Heading$0$0 ==.
-      000867 22               [24] 2972 	ret
-                                   2973 ;------------------------------------------------------------
-                                   2974 ;Allocation info for local variables in function 'Pick_Compass_Gain'
-                                   2975 ;------------------------------------------------------------
-                                   2976 ;user_gain                 Allocated to registers r6 r7 
-                                   2977 ;------------------------------------------------------------
-                           00079D  2978 	G$Pick_Compass_Gain$0$0 ==.
-                           00079D  2979 	C$Squiggles.c$264$1$148 ==.
-                                   2980 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:264: void Pick_Compass_Gain(void)
-                                   2981 ;	-----------------------------------------
-                                   2982 ;	 function Pick_Compass_Gain
-                                   2983 ;	-----------------------------------------
-      000868                       2984 _Pick_Compass_Gain:
-                           00079D  2985 	C$Squiggles.c$267$1$152 ==.
-                                   2986 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:267: lcd_clear();
-      000868 12 01 AC         [24] 2987 	lcall	_lcd_clear
-                           0007A0  2988 	C$Squiggles.c$268$1$152 ==.
-                                   2989 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:268: lcd_print("\rEnter desired gain for the compass.\n");
-      00086B 74 0C            [12] 2990 	mov	a,#___str_11
-      00086D C0 E0            [24] 2991 	push	acc
-      00086F 74 16            [12] 2992 	mov	a,#(___str_11 >> 8)
-      000871 C0 E0            [24] 2993 	push	acc
-      000873 74 80            [12] 2994 	mov	a,#0x80
-      000875 C0 E0            [24] 2995 	push	acc
-      000877 12 01 27         [24] 2996 	lcall	_lcd_print
-      00087A 15 81            [12] 2997 	dec	sp
-      00087C 15 81            [12] 2998 	dec	sp
-      00087E 15 81            [12] 2999 	dec	sp
-                           0007B5  3000 	C$Squiggles.c$269$1$152 ==.
-                                   3001 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:269: user_gain = kpd_input(1);
-      000880 75 82 01         [24] 3002 	mov	dpl,#0x01
-      000883 12 02 64         [24] 3003 	lcall	_kpd_input
-      000886 AE 82            [24] 3004 	mov	r6,dpl
-      000888 AF 83            [24] 3005 	mov	r7,dph
-                           0007BF  3006 	C$Squiggles.c$270$1$152 ==.
-                                   3007 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:270: lcd_clear();
-      00088A C0 07            [24] 3008 	push	ar7
-      00088C C0 06            [24] 3009 	push	ar6
-      00088E 12 01 AC         [24] 3010 	lcall	_lcd_clear
-      000891 D0 06            [24] 3011 	pop	ar6
-      000893 D0 07            [24] 3012 	pop	ar7
-                           0007CA  3013 	C$Squiggles.c$271$1$152 ==.
-                                   3014 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:271: compass_gain = (float)((user_gain)/1000);
-      000895 75 11 E8         [24] 3015 	mov	__divsint_PARM_2,#0xE8
-      000898 75 12 03         [24] 3016 	mov	(__divsint_PARM_2 + 1),#0x03
-      00089B 8E 82            [24] 3017 	mov	dpl,r6
-      00089D 8F 83            [24] 3018 	mov	dph,r7
-      00089F 12 14 64         [24] 3019 	lcall	__divsint
-      0008A2 12 0D 50         [24] 3020 	lcall	___sint2fs
-      0008A5 85 82 3A         [24] 3021 	mov	_compass_gain,dpl
-      0008A8 85 83 3B         [24] 3022 	mov	(_compass_gain + 1),dph
-      0008AB 85 F0 3C         [24] 3023 	mov	(_compass_gain + 2),b
-      0008AE F5 3D            [12] 3024 	mov	(_compass_gain + 3),a
-                           0007E5  3025 	C$Squiggles.c$272$1$152 ==.
-                                   3026 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:272: printf("\rPick_Compass_Gain verified\n");
-      0008B0 74 32            [12] 3027 	mov	a,#___str_12
-      0008B2 C0 E0            [24] 3028 	push	acc
-      0008B4 74 16            [12] 3029 	mov	a,#(___str_12 >> 8)
-      0008B6 C0 E0            [24] 3030 	push	acc
-      0008B8 74 80            [12] 3031 	mov	a,#0x80
-      0008BA C0 E0            [24] 3032 	push	acc
-      0008BC 12 0D E7         [24] 3033 	lcall	_printf
-      0008BF 15 81            [12] 3034 	dec	sp
-      0008C1 15 81            [12] 3035 	dec	sp
-      0008C3 15 81            [12] 3036 	dec	sp
-                           0007FA  3037 	C$Squiggles.c$273$1$152 ==.
-                           0007FA  3038 	XG$Pick_Compass_Gain$0$0 ==.
-      0008C5 22               [24] 3039 	ret
-                                   3040 ;------------------------------------------------------------
-                                   3041 ;Allocation info for local variables in function 'read_compass'
-                                   3042 ;------------------------------------------------------------
-                                   3043 ;addr                      Allocated to registers 
-                                   3044 ;Data                      Allocated with name '_read_compass_Data_1_154'
-                                   3045 ;read_heading              Allocated to registers 
-                                   3046 ;------------------------------------------------------------
-                           0007FB  3047 	G$read_compass$0$0 ==.
-                           0007FB  3048 	C$Squiggles.c$277$1$152 ==.
-                                   3049 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:277: int read_compass(void)
-                                   3050 ;	-----------------------------------------
-                                   3051 ;	 function read_compass
-                                   3052 ;	-----------------------------------------
-      0008C6                       3053 _read_compass:
-                           0007FB  3054 	C$Squiggles.c$282$1$154 ==.
-                                   3055 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:282: i2c_read_data(addr, 2, Data, 2); // read two byte, starting at reg 2
-      0008C6 75 2D 52         [24] 3056 	mov	_i2c_read_data_PARM_3,#_read_compass_Data_1_154
-      0008C9 75 2E 00         [24] 3057 	mov	(_i2c_read_data_PARM_3 + 1),#0x00
-      0008CC 75 2F 40         [24] 3058 	mov	(_i2c_read_data_PARM_3 + 2),#0x40
-      0008CF 75 2C 02         [24] 3059 	mov	_i2c_read_data_PARM_2,#0x02
-      0008D2 75 30 02         [24] 3060 	mov	_i2c_read_data_PARM_4,#0x02
-      0008D5 75 82 C0         [24] 3061 	mov	dpl,#0xC0
-      0008D8 12 04 B3         [24] 3062 	lcall	_i2c_read_data
-                           000810  3063 	C$Squiggles.c$283$1$154 ==.
-                                   3064 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:283: read_heading =(((unsigned int)Data[0] << 8) | Data[1]); //combine the two values
-      0008DB AF 52            [24] 3065 	mov	r7,_read_compass_Data_1_154
-      0008DD 7E 00            [12] 3066 	mov	r6,#0x00
-      0008DF AC 53            [24] 3067 	mov	r4,(_read_compass_Data_1_154 + 0x0001)
-      0008E1 7D 00            [12] 3068 	mov	r5,#0x00
-      0008E3 EC               [12] 3069 	mov	a,r4
-      0008E4 4E               [12] 3070 	orl	a,r6
-      0008E5 F5 82            [12] 3071 	mov	dpl,a
-      0008E7 ED               [12] 3072 	mov	a,r5
-      0008E8 4F               [12] 3073 	orl	a,r7
-      0008E9 F5 83            [12] 3074 	mov	dph,a
-                           000820  3075 	C$Squiggles.c$284$1$154 ==.
-                                   3076 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:284: return read_heading; // the heading returned in degrees between 0 and 3599
-                           000820  3077 	C$Squiggles.c$285$1$154 ==.
-                           000820  3078 	XG$read_compass$0$0 ==.
-      0008EB 22               [24] 3079 	ret
-                                   3080 ;------------------------------------------------------------
-                                   3081 ;Allocation info for local variables in function 'read_ranger'
-                                   3082 ;------------------------------------------------------------
-                                   3083 ;addr                      Allocated to registers 
-                                   3084 ;st_range                  Allocated to registers r6 r7 
-                                   3085 ;------------------------------------------------------------
-                           000821  3086 	G$read_ranger$0$0 ==.
-                           000821  3087 	C$Squiggles.c$289$1$154 ==.
-                                   3088 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:289: int read_ranger(void)
-                                   3089 ;	-----------------------------------------
-                                   3090 ;	 function read_ranger
-                                   3091 ;	-----------------------------------------
-      0008EC                       3092 _read_ranger:
-                           000821  3093 	C$Squiggles.c$293$1$156 ==.
-                                   3094 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:293: i2c_read_data(addr, 2, Data, 2); // read two byte, starting at reg 2
-      0008EC 75 2D 50         [24] 3095 	mov	_i2c_read_data_PARM_3,#_Data
-      0008EF 75 2E 00         [24] 3096 	mov	(_i2c_read_data_PARM_3 + 1),#0x00
-      0008F2 75 2F 40         [24] 3097 	mov	(_i2c_read_data_PARM_3 + 2),#0x40
-      0008F5 75 2C 02         [24] 3098 	mov	_i2c_read_data_PARM_2,#0x02
-      0008F8 75 30 02         [24] 3099 	mov	_i2c_read_data_PARM_4,#0x02
-      0008FB 75 82 E0         [24] 3100 	mov	dpl,#0xE0
-      0008FE 12 04 B3         [24] 3101 	lcall	_i2c_read_data
-                           000836  3102 	C$Squiggles.c$294$1$156 ==.
-                                   3103 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:294: st_range =(((unsigned int)Data[0] << 8) | Data[1]); //combine the two values
-      000901 AF 50            [24] 3104 	mov	r7,_Data
-      000903 7E 00            [12] 3105 	mov	r6,#0x00
-      000905 AC 51            [24] 3106 	mov	r4,(_Data + 0x0001)
-      000907 7D 00            [12] 3107 	mov	r5,#0x00
-      000909 EC               [12] 3108 	mov	a,r4
-      00090A 42 06            [12] 3109 	orl	ar6,a
-      00090C ED               [12] 3110 	mov	a,r5
-      00090D 42 07            [12] 3111 	orl	ar7,a
-                           000844  3112 	C$Squiggles.c$296$1$156 ==.
-                                   3113 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:296: Data[0] = 0x51 ; // write 0x51 to reg 0 of the ranger:
-      00090F 75 50 51         [24] 3114 	mov	_Data,#0x51
-                           000847  3115 	C$Squiggles.c$297$1$156 ==.
-                                   3116 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:297: i2c_write_data(addr, 0, Data, 1) ; // write one byte of data to reg 0 at addr
-      000912 75 28 50         [24] 3117 	mov	_i2c_write_data_PARM_3,#_Data
-      000915 75 29 00         [24] 3118 	mov	(_i2c_write_data_PARM_3 + 1),#0x00
-      000918 75 2A 40         [24] 3119 	mov	(_i2c_write_data_PARM_3 + 2),#0x40
-      00091B 75 27 00         [24] 3120 	mov	_i2c_write_data_PARM_2,#0x00
-      00091E 75 2B 01         [24] 3121 	mov	_i2c_write_data_PARM_4,#0x01
-      000921 75 82 E0         [24] 3122 	mov	dpl,#0xE0
-      000924 C0 07            [24] 3123 	push	ar7
-      000926 C0 06            [24] 3124 	push	ar6
-      000928 12 04 3D         [24] 3125 	lcall	_i2c_write_data
-      00092B D0 06            [24] 3126 	pop	ar6
-      00092D D0 07            [24] 3127 	pop	ar7
-                           000864  3128 	C$Squiggles.c$298$1$156 ==.
-                                   3129 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:298: return st_range;
-      00092F 8E 82            [24] 3130 	mov	dpl,r6
-      000931 8F 83            [24] 3131 	mov	dph,r7
-                           000868  3132 	C$Squiggles.c$299$1$156 ==.
-                           000868  3133 	XG$read_ranger$0$0 ==.
-      000933 22               [24] 3134 	ret
-                                   3135 ;------------------------------------------------------------
-                                   3136 ;Allocation info for local variables in function 'set_range_adj'
-                                   3137 ;------------------------------------------------------------
-                           000869  3138 	G$set_range_adj$0$0 ==.
-                           000869  3139 	C$Squiggles.c$303$1$156 ==.
-                                   3140 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:303: void set_range_adj(void)
-                                   3141 ;	-----------------------------------------
-                                   3142 ;	 function set_range_adj
-                                   3143 ;	-----------------------------------------
-      000934                       3144 _set_range_adj:
-                           000869  3145 	C$Squiggles.c$308$1$158 ==.
-                                   3146 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:308: if (range > MAX_RANGE)
-      000934 C3               [12] 3147 	clr	c
-      000935 74 37            [12] 3148 	mov	a,#0x37
-      000937 95 45            [12] 3149 	subb	a,_range
-      000939 E4               [12] 3150 	clr	a
-      00093A 95 46            [12] 3151 	subb	a,(_range + 1)
-      00093C 50 07            [24] 3152 	jnc	00102$
-                           000873  3153 	C$Squiggles.c$311$2$159 ==.
-                                   3154 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:311: range_adj = 0; //no obstacle in range, no change
-      00093E E4               [12] 3155 	clr	a
-      00093F F5 49            [12] 3156 	mov	_range_adj,a
-      000941 F5 4A            [12] 3157 	mov	(_range_adj + 1),a
-      000943 80 1F            [24] 3158 	sjmp	00104$
-      000945                       3159 00102$:
-                           00087A  3160 	C$Squiggles.c$316$2$160 ==.
-                                   3161 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:316: range_adj = (int)(ranger_gain * (MAX_RANGE - range)); //find adjustment
-      000945 74 37            [12] 3162 	mov	a,#0x37
-      000947 C3               [12] 3163 	clr	c
-      000948 95 45            [12] 3164 	subb	a,_range
-      00094A F5 11            [12] 3165 	mov	__mulint_PARM_2,a
-      00094C E4               [12] 3166 	clr	a
-      00094D 95 46            [12] 3167 	subb	a,(_range + 1)
-      00094F F5 12            [12] 3168 	mov	(__mulint_PARM_2 + 1),a
-      000951 AE 4D            [24] 3169 	mov	r6,_ranger_gain
-      000953 7F 00            [12] 3170 	mov	r7,#0x00
-      000955 8E 82            [24] 3171 	mov	dpl,r6
-      000957 8F 83            [24] 3172 	mov	dph,r7
-      000959 12 0B B6         [24] 3173 	lcall	__mulint
-      00095C AE 82            [24] 3174 	mov	r6,dpl
-      00095E AF 83            [24] 3175 	mov	r7,dph
-      000960 8E 49            [24] 3176 	mov	_range_adj,r6
-      000962 8F 4A            [24] 3177 	mov	(_range_adj + 1),r7
-      000964                       3178 00104$:
-                           000899  3179 	C$Squiggles.c$318$1$158 ==.
-                           000899  3180 	XG$set_range_adj$0$0 ==.
-      000964 22               [24] 3181 	ret
-                                   3182 ;------------------------------------------------------------
-                                   3183 ;Allocation info for local variables in function 'set_COMPASS_PW'
-                                   3184 ;------------------------------------------------------------
-                                   3185 ;Error                     Allocated to registers r6 r7 
-                                   3186 ;------------------------------------------------------------
-                           00089A  3187 	G$set_COMPASS_PW$0$0 ==.
-                           00089A  3188 	C$Squiggles.c$380$1$158 ==.
-                                   3189 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:380: void set_COMPASS_PW(void)
-                                   3190 ;	-----------------------------------------
-                                   3191 ;	 function set_COMPASS_PW
-                                   3192 ;	-----------------------------------------
-      000965                       3193 _set_COMPASS_PW:
-                           00089A  3194 	C$Squiggles.c$384$1$162 ==.
-                                   3195 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:384: Error = (desired_heading) - heading;	//Calculate the error
-      000965 E5 38            [12] 3196 	mov	a,_desired_heading
-      000967 C3               [12] 3197 	clr	c
-      000968 95 43            [12] 3198 	subb	a,_heading
-      00096A FE               [12] 3199 	mov	r6,a
-      00096B E5 39            [12] 3200 	mov	a,(_desired_heading + 1)
-      00096D 95 44            [12] 3201 	subb	a,(_heading + 1)
-      00096F FF               [12] 3202 	mov	r7,a
-                           0008A5  3203 	C$Squiggles.c$390$1$162 ==.
-                                   3204 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:390: if(Error < -1800) Error = Error + 3600;
-      000970 C3               [12] 3205 	clr	c
-      000971 EE               [12] 3206 	mov	a,r6
-      000972 94 F8            [12] 3207 	subb	a,#0xF8
-      000974 EF               [12] 3208 	mov	a,r7
-      000975 64 80            [12] 3209 	xrl	a,#0x80
-      000977 94 78            [12] 3210 	subb	a,#0x78
-      000979 50 08            [24] 3211 	jnc	00102$
-      00097B 74 10            [12] 3212 	mov	a,#0x10
-      00097D 2E               [12] 3213 	add	a,r6
-      00097E FE               [12] 3214 	mov	r6,a
-      00097F 74 0E            [12] 3215 	mov	a,#0x0E
-      000981 3F               [12] 3216 	addc	a,r7
-      000982 FF               [12] 3217 	mov	r7,a
-      000983                       3218 00102$:
-                           0008B8  3219 	C$Squiggles.c$391$1$162 ==.
-                                   3220 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:391: if(Error > 1800) Error = Error - 3600;
-      000983 C3               [12] 3221 	clr	c
-      000984 74 08            [12] 3222 	mov	a,#0x08
-      000986 9E               [12] 3223 	subb	a,r6
-      000987 74 87            [12] 3224 	mov	a,#(0x07 ^ 0x80)
-      000989 8F F0            [24] 3225 	mov	b,r7
-      00098B 63 F0 80         [24] 3226 	xrl	b,#0x80
-      00098E 95 F0            [12] 3227 	subb	a,b
-      000990 50 08            [24] 3228 	jnc	00104$
-      000992 EE               [12] 3229 	mov	a,r6
-      000993 24 F0            [12] 3230 	add	a,#0xF0
-      000995 FE               [12] 3231 	mov	r6,a
-      000996 EF               [12] 3232 	mov	a,r7
-      000997 34 F1            [12] 3233 	addc	a,#0xF1
-      000999 FF               [12] 3234 	mov	r7,a
-      00099A                       3235 00104$:
-                           0008CF  3236 	C$Squiggles.c$393$1$162 ==.
-                                   3237 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:393: if (range > MAX_RANGE) 
-      00099A C3               [12] 3238 	clr	c
-      00099B 74 37            [12] 3239 	mov	a,#0x37
-      00099D 95 45            [12] 3240 	subb	a,_range
-      00099F E4               [12] 3241 	clr	a
-      0009A0 95 46            [12] 3242 	subb	a,(_range + 1)
-      0009A2 50 07            [24] 3243 	jnc	00106$
-                           0008D9  3244 	C$Squiggles.c$395$2$163 ==.
-                                   3245 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:395: range_adj = 0; //no obstacle in range, no change
-      0009A4 E4               [12] 3246 	clr	a
-      0009A5 F5 49            [12] 3247 	mov	_range_adj,a
-      0009A7 F5 4A            [12] 3248 	mov	(_range_adj + 1),a
-      0009A9 80 27            [24] 3249 	sjmp	00107$
-      0009AB                       3250 00106$:
-                           0008E0  3251 	C$Squiggles.c$399$2$164 ==.
-                                   3252 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:399: range_adj = (int)(ranger_gain * (MAX_RANGE - range)); //find adjustment
-      0009AB 74 37            [12] 3253 	mov	a,#0x37
-      0009AD C3               [12] 3254 	clr	c
-      0009AE 95 45            [12] 3255 	subb	a,_range
-      0009B0 F5 11            [12] 3256 	mov	__mulint_PARM_2,a
-      0009B2 E4               [12] 3257 	clr	a
-      0009B3 95 46            [12] 3258 	subb	a,(_range + 1)
-      0009B5 F5 12            [12] 3259 	mov	(__mulint_PARM_2 + 1),a
-      0009B7 AC 4D            [24] 3260 	mov	r4,_ranger_gain
-      0009B9 7D 00            [12] 3261 	mov	r5,#0x00
-      0009BB 8C 82            [24] 3262 	mov	dpl,r4
-      0009BD 8D 83            [24] 3263 	mov	dph,r5
-      0009BF C0 07            [24] 3264 	push	ar7
-      0009C1 C0 06            [24] 3265 	push	ar6
-      0009C3 12 0B B6         [24] 3266 	lcall	__mulint
-      0009C6 AC 82            [24] 3267 	mov	r4,dpl
-      0009C8 AD 83            [24] 3268 	mov	r5,dph
-      0009CA D0 06            [24] 3269 	pop	ar6
-      0009CC D0 07            [24] 3270 	pop	ar7
-      0009CE 8C 49            [24] 3271 	mov	_range_adj,r4
-      0009D0 8D 4A            [24] 3272 	mov	(_range_adj + 1),r5
-      0009D2                       3273 00107$:
-                           000907  3274 	C$Squiggles.c$403$1$162 ==.
-                                   3275 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:403: COMPASS_PW = COMPASS_CENTER + range_adj + (compass_gain*Error);
-      0009D2 74 C8            [12] 3276 	mov	a,#0xC8
-      0009D4 25 49            [12] 3277 	add	a,_range_adj
-      0009D6 FC               [12] 3278 	mov	r4,a
-      0009D7 74 0A            [12] 3279 	mov	a,#0x0A
-      0009D9 35 4A            [12] 3280 	addc	a,(_range_adj + 1)
-      0009DB FD               [12] 3281 	mov	r5,a
-      0009DC 8E 82            [24] 3282 	mov	dpl,r6
-      0009DE 8F 83            [24] 3283 	mov	dph,r7
-      0009E0 C0 05            [24] 3284 	push	ar5
-      0009E2 C0 04            [24] 3285 	push	ar4
-      0009E4 12 0D 50         [24] 3286 	lcall	___sint2fs
-      0009E7 AA 82            [24] 3287 	mov	r2,dpl
-      0009E9 AB 83            [24] 3288 	mov	r3,dph
-      0009EB AE F0            [24] 3289 	mov	r6,b
-      0009ED FF               [12] 3290 	mov	r7,a
-      0009EE C0 02            [24] 3291 	push	ar2
-      0009F0 C0 03            [24] 3292 	push	ar3
-      0009F2 C0 06            [24] 3293 	push	ar6
-      0009F4 C0 07            [24] 3294 	push	ar7
-      0009F6 85 3A 82         [24] 3295 	mov	dpl,_compass_gain
-      0009F9 85 3B 83         [24] 3296 	mov	dph,(_compass_gain + 1)
-      0009FC 85 3C F0         [24] 3297 	mov	b,(_compass_gain + 2)
-      0009FF E5 3D            [12] 3298 	mov	a,(_compass_gain + 3)
-      000A01 12 0A 97         [24] 3299 	lcall	___fsmul
-      000A04 AA 82            [24] 3300 	mov	r2,dpl
-      000A06 AB 83            [24] 3301 	mov	r3,dph
-      000A08 AE F0            [24] 3302 	mov	r6,b
-      000A0A FF               [12] 3303 	mov	r7,a
-      000A0B E5 81            [12] 3304 	mov	a,sp
-      000A0D 24 FC            [12] 3305 	add	a,#0xfc
-      000A0F F5 81            [12] 3306 	mov	sp,a
-      000A11 D0 04            [24] 3307 	pop	ar4
-      000A13 D0 05            [24] 3308 	pop	ar5
-      000A15 8C 82            [24] 3309 	mov	dpl,r4
-      000A17 8D 83            [24] 3310 	mov	dph,r5
-      000A19 C0 07            [24] 3311 	push	ar7
-      000A1B C0 06            [24] 3312 	push	ar6
-      000A1D C0 03            [24] 3313 	push	ar3
-      000A1F C0 02            [24] 3314 	push	ar2
-      000A21 12 0D 5D         [24] 3315 	lcall	___uint2fs
-      000A24 A8 82            [24] 3316 	mov	r0,dpl
-      000A26 A9 83            [24] 3317 	mov	r1,dph
-      000A28 AC F0            [24] 3318 	mov	r4,b
-      000A2A FD               [12] 3319 	mov	r5,a
-      000A2B D0 02            [24] 3320 	pop	ar2
-      000A2D D0 03            [24] 3321 	pop	ar3
-      000A2F D0 06            [24] 3322 	pop	ar6
-      000A31 D0 07            [24] 3323 	pop	ar7
-      000A33 C0 02            [24] 3324 	push	ar2
-      000A35 C0 03            [24] 3325 	push	ar3
-      000A37 C0 06            [24] 3326 	push	ar6
-      000A39 C0 07            [24] 3327 	push	ar7
-      000A3B 88 82            [24] 3328 	mov	dpl,r0
-      000A3D 89 83            [24] 3329 	mov	dph,r1
-      000A3F 8C F0            [24] 3330 	mov	b,r4
-      000A41 ED               [12] 3331 	mov	a,r5
-      000A42 12 0C F7         [24] 3332 	lcall	___fsadd
-      000A45 AC 82            [24] 3333 	mov	r4,dpl
-      000A47 AD 83            [24] 3334 	mov	r5,dph
-      000A49 AE F0            [24] 3335 	mov	r6,b
-      000A4B FF               [12] 3336 	mov	r7,a
-      000A4C E5 81            [12] 3337 	mov	a,sp
-      000A4E 24 FC            [12] 3338 	add	a,#0xfc
-      000A50 F5 81            [12] 3339 	mov	sp,a
-      000A52 8C 82            [24] 3340 	mov	dpl,r4
-      000A54 8D 83            [24] 3341 	mov	dph,r5
-      000A56 8E F0            [24] 3342 	mov	b,r6
-      000A58 EF               [12] 3343 	mov	a,r7
-      000A59 12 0D 69         [24] 3344 	lcall	___fs2uint
-      000A5C 85 82 47         [24] 3345 	mov	_COMPASS_PW,dpl
-      000A5F 85 83 48         [24] 3346 	mov	(_COMPASS_PW + 1),dph
-                           000997  3347 	C$Squiggles.c$405$1$162 ==.
-                                   3348 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:405: if(COMPASS_PW < COMPASS_MIN)
-      000A62 C3               [12] 3349 	clr	c
-      000A63 E5 47            [12] 3350 	mov	a,_COMPASS_PW
-      000A65 94 EE            [12] 3351 	subb	a,#0xEE
-      000A67 E5 48            [12] 3352 	mov	a,(_COMPASS_PW + 1)
-      000A69 94 07            [12] 3353 	subb	a,#0x07
-      000A6B 50 06            [24] 3354 	jnc	00109$
-                           0009A2  3355 	C$Squiggles.c$407$2$165 ==.
-                                   3356 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:407: COMPASS_PW = COMPASS_MIN;
-      000A6D 75 47 EE         [24] 3357 	mov	_COMPASS_PW,#0xEE
-      000A70 75 48 07         [24] 3358 	mov	(_COMPASS_PW + 1),#0x07
-      000A73                       3359 00109$:
-                           0009A8  3360 	C$Squiggles.c$409$1$162 ==.
-                                   3361 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:409: if(COMPASS_PW > COMPASS_MAX)
-      000A73 C3               [12] 3362 	clr	c
-      000A74 74 AC            [12] 3363 	mov	a,#0xAC
-      000A76 95 47            [12] 3364 	subb	a,_COMPASS_PW
-      000A78 74 0D            [12] 3365 	mov	a,#0x0D
-      000A7A 95 48            [12] 3366 	subb	a,(_COMPASS_PW + 1)
-      000A7C 50 06            [24] 3367 	jnc	00111$
-                           0009B3  3368 	C$Squiggles.c$411$2$166 ==.
-                                   3369 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:411: COMPASS_PW = COMPASS_MAX;
-      000A7E 75 47 AC         [24] 3370 	mov	_COMPASS_PW,#0xAC
-      000A81 75 48 0D         [24] 3371 	mov	(_COMPASS_PW + 1),#0x0D
-      000A84                       3372 00111$:
-                           0009B9  3373 	C$Squiggles.c$413$1$162 ==.
-                                   3374 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:413: if(delay == 10)
-      000A84 74 0A            [12] 3375 	mov	a,#0x0A
-      000A86 B5 40 0D         [24] 3376 	cjne	a,_delay,00114$
-                           0009BE  3377 	C$Squiggles.c$415$2$167 ==.
-                                   3378 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:415: PCA0CP0 = 0xFFFF - COMPASS_PW; // Change pulse width
-      000A89 74 FF            [12] 3379 	mov	a,#0xFF
-      000A8B C3               [12] 3380 	clr	c
-      000A8C 95 47            [12] 3381 	subb	a,_COMPASS_PW
-      000A8E F5 EA            [12] 3382 	mov	((_PCA0CP0 >> 0) & 0xFF),a
-      000A90 74 FF            [12] 3383 	mov	a,#0xFF
-      000A92 95 48            [12] 3384 	subb	a,(_COMPASS_PW + 1)
-      000A94 F5 FA            [12] 3385 	mov	((_PCA0CP0 >> 8) & 0xFF),a
-      000A96                       3386 00114$:
-                           0009CB  3387 	C$Squiggles.c$424$1$162 ==.
-                           0009CB  3388 	XG$set_COMPASS_PW$0$0 ==.
-      000A96 22               [24] 3389 	ret
-                                   3390 	.area CSEG    (CODE)
-                                   3391 	.area CONST   (CODE)
-                           000000  3392 FSquiggles$__str_0$0$0 == .
-      00151C                       3393 ___str_0:
-      00151C 0A                    3394 	.db 0x0A
-      00151D 54 79 70 65 20 64 69  3395 	.ascii "Type digits; end w/#"
+                           000199  1611 	G$kpd_input$0$0 ==.
+                           000199  1612 	C$i2c.h$148$1$78 ==.
+                                   1613 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:148: unsigned int kpd_input(char mode)
+                                   1614 ;	-----------------------------------------
+                                   1615 ;	 function kpd_input
+                                   1616 ;	-----------------------------------------
+      000252                       1617 _kpd_input:
+      000252 AF 82            [24] 1618 	mov	r7,dpl
+                           00019B  1619 	C$i2c.h$153$1$81 ==.
+                                   1620 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:153: sum = 0;
+                           00019B  1621 	C$i2c.h$156$1$81 ==.
+                                   1622 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:156: if(mode==0)lcd_print("\nType digits; end w/#");
+      000254 E4               [12] 1623 	clr	a
+      000255 FD               [12] 1624 	mov	r5,a
+      000256 FE               [12] 1625 	mov	r6,a
+      000257 EF               [12] 1626 	mov	a,r7
+      000258 70 1D            [24] 1627 	jnz	00102$
+      00025A C0 06            [24] 1628 	push	ar6
+      00025C C0 05            [24] 1629 	push	ar5
+      00025E 74 6B            [12] 1630 	mov	a,#___str_0
+      000260 C0 E0            [24] 1631 	push	acc
+      000262 74 15            [12] 1632 	mov	a,#(___str_0 >> 8)
+      000264 C0 E0            [24] 1633 	push	acc
+      000266 74 80            [12] 1634 	mov	a,#0x80
+      000268 C0 E0            [24] 1635 	push	acc
+      00026A 12 01 15         [24] 1636 	lcall	_lcd_print
+      00026D 15 81            [12] 1637 	dec	sp
+      00026F 15 81            [12] 1638 	dec	sp
+      000271 15 81            [12] 1639 	dec	sp
+      000273 D0 05            [24] 1640 	pop	ar5
+      000275 D0 06            [24] 1641 	pop	ar6
+      000277                       1642 00102$:
+                           0001BE  1643 	C$i2c.h$158$1$81 ==.
+                                   1644 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:158: lcd_print("     %c%c%c%c%c",0x08,0x08,0x08,0x08,0x08);
+      000277 C0 06            [24] 1645 	push	ar6
+      000279 C0 05            [24] 1646 	push	ar5
+      00027B 74 08            [12] 1647 	mov	a,#0x08
+      00027D C0 E0            [24] 1648 	push	acc
+      00027F E4               [12] 1649 	clr	a
+      000280 C0 E0            [24] 1650 	push	acc
+      000282 74 08            [12] 1651 	mov	a,#0x08
+      000284 C0 E0            [24] 1652 	push	acc
+      000286 E4               [12] 1653 	clr	a
+      000287 C0 E0            [24] 1654 	push	acc
+      000289 74 08            [12] 1655 	mov	a,#0x08
+      00028B C0 E0            [24] 1656 	push	acc
+      00028D E4               [12] 1657 	clr	a
+      00028E C0 E0            [24] 1658 	push	acc
+      000290 74 08            [12] 1659 	mov	a,#0x08
+      000292 C0 E0            [24] 1660 	push	acc
+      000294 E4               [12] 1661 	clr	a
+      000295 C0 E0            [24] 1662 	push	acc
+      000297 74 08            [12] 1663 	mov	a,#0x08
+      000299 C0 E0            [24] 1664 	push	acc
+      00029B E4               [12] 1665 	clr	a
+      00029C C0 E0            [24] 1666 	push	acc
+      00029E 74 81            [12] 1667 	mov	a,#___str_1
+      0002A0 C0 E0            [24] 1668 	push	acc
+      0002A2 74 15            [12] 1669 	mov	a,#(___str_1 >> 8)
+      0002A4 C0 E0            [24] 1670 	push	acc
+      0002A6 74 80            [12] 1671 	mov	a,#0x80
+      0002A8 C0 E0            [24] 1672 	push	acc
+      0002AA 12 01 15         [24] 1673 	lcall	_lcd_print
+      0002AD E5 81            [12] 1674 	mov	a,sp
+      0002AF 24 F3            [12] 1675 	add	a,#0xf3
+      0002B1 F5 81            [12] 1676 	mov	sp,a
+                           0001FA  1677 	C$i2c.h$160$1$81 ==.
+                                   1678 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:160: delay_time(500000);	//Add 20ms delay before reading i2c in loop
+      0002B3 90 A1 20         [24] 1679 	mov	dptr,#0xA120
+      0002B6 75 F0 07         [24] 1680 	mov	b,#0x07
+      0002B9 E4               [12] 1681 	clr	a
+      0002BA 12 03 C6         [24] 1682 	lcall	_delay_time
+      0002BD D0 05            [24] 1683 	pop	ar5
+      0002BF D0 06            [24] 1684 	pop	ar6
+                           000208  1685 	C$i2c.h$164$1$81 ==.
+                                   1686 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:164: for(i=0; i<5; i++)
+      0002C1 7F 00            [12] 1687 	mov	r7,#0x00
+                           00020A  1688 	C$i2c.h$166$3$84 ==.
+                                   1689 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:166: while(((key=read_keypad()) == -1) || (key == '*'))delay_time(10000);
+      0002C3                       1690 00104$:
+      0002C3 C0 07            [24] 1691 	push	ar7
+      0002C5 C0 06            [24] 1692 	push	ar6
+      0002C7 C0 05            [24] 1693 	push	ar5
+      0002C9 12 01 D3         [24] 1694 	lcall	_read_keypad
+      0002CC AC 82            [24] 1695 	mov	r4,dpl
+      0002CE D0 05            [24] 1696 	pop	ar5
+      0002D0 D0 06            [24] 1697 	pop	ar6
+      0002D2 D0 07            [24] 1698 	pop	ar7
+      0002D4 8C 03            [24] 1699 	mov	ar3,r4
+      0002D6 BC FF 02         [24] 1700 	cjne	r4,#0xFF,00146$
+      0002D9 80 03            [24] 1701 	sjmp	00105$
+      0002DB                       1702 00146$:
+      0002DB BB 2A 17         [24] 1703 	cjne	r3,#0x2A,00106$
+      0002DE                       1704 00105$:
+      0002DE 90 27 10         [24] 1705 	mov	dptr,#0x2710
+      0002E1 E4               [12] 1706 	clr	a
+      0002E2 F5 F0            [12] 1707 	mov	b,a
+      0002E4 C0 07            [24] 1708 	push	ar7
+      0002E6 C0 06            [24] 1709 	push	ar6
+      0002E8 C0 05            [24] 1710 	push	ar5
+      0002EA 12 03 C6         [24] 1711 	lcall	_delay_time
+      0002ED D0 05            [24] 1712 	pop	ar5
+      0002EF D0 06            [24] 1713 	pop	ar6
+      0002F1 D0 07            [24] 1714 	pop	ar7
+      0002F3 80 CE            [24] 1715 	sjmp	00104$
+      0002F5                       1716 00106$:
+                           00023C  1717 	C$i2c.h$167$2$82 ==.
+                                   1718 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:167: if(key == '#')
+      0002F5 BB 23 2A         [24] 1719 	cjne	r3,#0x23,00114$
+                           00023F  1720 	C$i2c.h$169$3$83 ==.
+                                   1721 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:169: while(read_keypad() == '#')delay_time(10000);
+      0002F8                       1722 00107$:
+      0002F8 C0 06            [24] 1723 	push	ar6
+      0002FA C0 05            [24] 1724 	push	ar5
+      0002FC 12 01 D3         [24] 1725 	lcall	_read_keypad
+      0002FF AC 82            [24] 1726 	mov	r4,dpl
+      000301 D0 05            [24] 1727 	pop	ar5
+      000303 D0 06            [24] 1728 	pop	ar6
+      000305 BC 23 13         [24] 1729 	cjne	r4,#0x23,00109$
+      000308 90 27 10         [24] 1730 	mov	dptr,#0x2710
+      00030B E4               [12] 1731 	clr	a
+      00030C F5 F0            [12] 1732 	mov	b,a
+      00030E C0 06            [24] 1733 	push	ar6
+      000310 C0 05            [24] 1734 	push	ar5
+      000312 12 03 C6         [24] 1735 	lcall	_delay_time
+      000315 D0 05            [24] 1736 	pop	ar5
+      000317 D0 06            [24] 1737 	pop	ar6
+      000319 80 DD            [24] 1738 	sjmp	00107$
+      00031B                       1739 00109$:
+                           000262  1740 	C$i2c.h$170$3$83 ==.
+                                   1741 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:170: return sum;
+      00031B 8D 82            [24] 1742 	mov	dpl,r5
+      00031D 8E 83            [24] 1743 	mov	dph,r6
+      00031F 02 03 C5         [24] 1744 	ljmp	00119$
+      000322                       1745 00114$:
+                           000269  1746 	C$i2c.h$174$3$84 ==.
+                                   1747 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:174: lcd_print("%c", key);
+      000322 EB               [12] 1748 	mov	a,r3
+      000323 FA               [12] 1749 	mov	r2,a
+      000324 33               [12] 1750 	rlc	a
+      000325 95 E0            [12] 1751 	subb	a,acc
+      000327 FC               [12] 1752 	mov	r4,a
+      000328 C0 07            [24] 1753 	push	ar7
+      00032A C0 06            [24] 1754 	push	ar6
+      00032C C0 05            [24] 1755 	push	ar5
+      00032E C0 04            [24] 1756 	push	ar4
+      000330 C0 03            [24] 1757 	push	ar3
+      000332 C0 02            [24] 1758 	push	ar2
+      000334 C0 02            [24] 1759 	push	ar2
+      000336 C0 04            [24] 1760 	push	ar4
+      000338 74 91            [12] 1761 	mov	a,#___str_2
+      00033A C0 E0            [24] 1762 	push	acc
+      00033C 74 15            [12] 1763 	mov	a,#(___str_2 >> 8)
+      00033E C0 E0            [24] 1764 	push	acc
+      000340 74 80            [12] 1765 	mov	a,#0x80
+      000342 C0 E0            [24] 1766 	push	acc
+      000344 12 01 15         [24] 1767 	lcall	_lcd_print
+      000347 E5 81            [12] 1768 	mov	a,sp
+      000349 24 FB            [12] 1769 	add	a,#0xfb
+      00034B F5 81            [12] 1770 	mov	sp,a
+      00034D D0 02            [24] 1771 	pop	ar2
+      00034F D0 03            [24] 1772 	pop	ar3
+      000351 D0 04            [24] 1773 	pop	ar4
+      000353 D0 05            [24] 1774 	pop	ar5
+      000355 D0 06            [24] 1775 	pop	ar6
+                           00029E  1776 	C$i2c.h$175$1$81 ==.
+                                   1777 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:175: sum = sum*10 + key - '0';
+      000357 8D 11            [24] 1778 	mov	__mulint_PARM_2,r5
+      000359 8E 12            [24] 1779 	mov	(__mulint_PARM_2 + 1),r6
+      00035B 90 00 0A         [24] 1780 	mov	dptr,#0x000A
+      00035E C0 04            [24] 1781 	push	ar4
+      000360 C0 03            [24] 1782 	push	ar3
+      000362 C0 02            [24] 1783 	push	ar2
+      000364 12 0C 2E         [24] 1784 	lcall	__mulint
+      000367 A8 82            [24] 1785 	mov	r0,dpl
+      000369 A9 83            [24] 1786 	mov	r1,dph
+      00036B D0 02            [24] 1787 	pop	ar2
+      00036D D0 03            [24] 1788 	pop	ar3
+      00036F D0 04            [24] 1789 	pop	ar4
+      000371 D0 07            [24] 1790 	pop	ar7
+      000373 EA               [12] 1791 	mov	a,r2
+      000374 28               [12] 1792 	add	a,r0
+      000375 F8               [12] 1793 	mov	r0,a
+      000376 EC               [12] 1794 	mov	a,r4
+      000377 39               [12] 1795 	addc	a,r1
+      000378 F9               [12] 1796 	mov	r1,a
+      000379 E8               [12] 1797 	mov	a,r0
+      00037A 24 D0            [12] 1798 	add	a,#0xD0
+      00037C FD               [12] 1799 	mov	r5,a
+      00037D E9               [12] 1800 	mov	a,r1
+      00037E 34 FF            [12] 1801 	addc	a,#0xFF
+      000380 FE               [12] 1802 	mov	r6,a
+                           0002C8  1803 	C$i2c.h$176$3$84 ==.
+                                   1804 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:176: while(read_keypad() == key)delay_time(10000); //wait for key to be released
+      000381                       1805 00110$:
+      000381 C0 07            [24] 1806 	push	ar7
+      000383 C0 06            [24] 1807 	push	ar6
+      000385 C0 05            [24] 1808 	push	ar5
+      000387 C0 03            [24] 1809 	push	ar3
+      000389 12 01 D3         [24] 1810 	lcall	_read_keypad
+      00038C AC 82            [24] 1811 	mov	r4,dpl
+      00038E D0 03            [24] 1812 	pop	ar3
+      000390 D0 05            [24] 1813 	pop	ar5
+      000392 D0 06            [24] 1814 	pop	ar6
+      000394 D0 07            [24] 1815 	pop	ar7
+      000396 EC               [12] 1816 	mov	a,r4
+      000397 B5 03 1B         [24] 1817 	cjne	a,ar3,00118$
+      00039A 90 27 10         [24] 1818 	mov	dptr,#0x2710
+      00039D E4               [12] 1819 	clr	a
+      00039E F5 F0            [12] 1820 	mov	b,a
+      0003A0 C0 07            [24] 1821 	push	ar7
+      0003A2 C0 06            [24] 1822 	push	ar6
+      0003A4 C0 05            [24] 1823 	push	ar5
+      0003A6 C0 03            [24] 1824 	push	ar3
+      0003A8 12 03 C6         [24] 1825 	lcall	_delay_time
+      0003AB D0 03            [24] 1826 	pop	ar3
+      0003AD D0 05            [24] 1827 	pop	ar5
+      0003AF D0 06            [24] 1828 	pop	ar6
+      0003B1 D0 07            [24] 1829 	pop	ar7
+      0003B3 80 CC            [24] 1830 	sjmp	00110$
+      0003B5                       1831 00118$:
+                           0002FC  1832 	C$i2c.h$164$1$81 ==.
+                                   1833 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:164: for(i=0; i<5; i++)
+      0003B5 0F               [12] 1834 	inc	r7
+      0003B6 C3               [12] 1835 	clr	c
+      0003B7 EF               [12] 1836 	mov	a,r7
+      0003B8 64 80            [12] 1837 	xrl	a,#0x80
+      0003BA 94 85            [12] 1838 	subb	a,#0x85
+      0003BC 50 03            [24] 1839 	jnc	00155$
+      0003BE 02 02 C3         [24] 1840 	ljmp	00104$
+      0003C1                       1841 00155$:
+                           000308  1842 	C$i2c.h$179$1$81 ==.
+                                   1843 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:179: return sum;
+      0003C1 8D 82            [24] 1844 	mov	dpl,r5
+      0003C3 8E 83            [24] 1845 	mov	dph,r6
+      0003C5                       1846 00119$:
+                           00030C  1847 	C$i2c.h$180$1$81 ==.
+                           00030C  1848 	XG$kpd_input$0$0 ==.
+      0003C5 22               [24] 1849 	ret
+                                   1850 ;------------------------------------------------------------
+                                   1851 ;Allocation info for local variables in function 'delay_time'
+                                   1852 ;------------------------------------------------------------
+                                   1853 ;time_end                  Allocated to registers r4 r5 r6 r7 
+                                   1854 ;index                     Allocated to registers 
+                                   1855 ;------------------------------------------------------------
+                           00030D  1856 	G$delay_time$0$0 ==.
+                           00030D  1857 	C$i2c.h$189$1$81 ==.
+                                   1858 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:189: void delay_time (unsigned long time_end)
+                                   1859 ;	-----------------------------------------
+                                   1860 ;	 function delay_time
+                                   1861 ;	-----------------------------------------
+      0003C6                       1862 _delay_time:
+      0003C6 AC 82            [24] 1863 	mov	r4,dpl
+      0003C8 AD 83            [24] 1864 	mov	r5,dph
+      0003CA AE F0            [24] 1865 	mov	r6,b
+      0003CC FF               [12] 1866 	mov	r7,a
+                           000314  1867 	C$i2c.h$192$1$86 ==.
+                                   1868 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:192: for (index = 0; index < time_end; index++); //for loop delay
+      0003CD 78 00            [12] 1869 	mov	r0,#0x00
+      0003CF 79 00            [12] 1870 	mov	r1,#0x00
+      0003D1 7A 00            [12] 1871 	mov	r2,#0x00
+      0003D3 7B 00            [12] 1872 	mov	r3,#0x00
+      0003D5                       1873 00103$:
+      0003D5 C3               [12] 1874 	clr	c
+      0003D6 E8               [12] 1875 	mov	a,r0
+      0003D7 9C               [12] 1876 	subb	a,r4
+      0003D8 E9               [12] 1877 	mov	a,r1
+      0003D9 9D               [12] 1878 	subb	a,r5
+      0003DA EA               [12] 1879 	mov	a,r2
+      0003DB 9E               [12] 1880 	subb	a,r6
+      0003DC EB               [12] 1881 	mov	a,r3
+      0003DD 9F               [12] 1882 	subb	a,r7
+      0003DE 50 0F            [24] 1883 	jnc	00105$
+      0003E0 08               [12] 1884 	inc	r0
+      0003E1 B8 00 09         [24] 1885 	cjne	r0,#0x00,00115$
+      0003E4 09               [12] 1886 	inc	r1
+      0003E5 B9 00 05         [24] 1887 	cjne	r1,#0x00,00115$
+      0003E8 0A               [12] 1888 	inc	r2
+      0003E9 BA 00 E9         [24] 1889 	cjne	r2,#0x00,00103$
+      0003EC 0B               [12] 1890 	inc	r3
+      0003ED                       1891 00115$:
+      0003ED 80 E6            [24] 1892 	sjmp	00103$
+      0003EF                       1893 00105$:
+                           000336  1894 	C$i2c.h$193$1$86 ==.
+                           000336  1895 	XG$delay_time$0$0 ==.
+      0003EF 22               [24] 1896 	ret
+                                   1897 ;------------------------------------------------------------
+                                   1898 ;Allocation info for local variables in function 'i2c_start'
+                                   1899 ;------------------------------------------------------------
+                           000337  1900 	G$i2c_start$0$0 ==.
+                           000337  1901 	C$i2c.h$196$1$86 ==.
+                                   1902 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:196: void i2c_start(void)
+                                   1903 ;	-----------------------------------------
+                                   1904 ;	 function i2c_start
+                                   1905 ;	-----------------------------------------
+      0003F0                       1906 _i2c_start:
+                           000337  1907 	C$i2c.h$198$1$88 ==.
+                                   1908 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:198: while(BUSY);              //Wait until SMBus0 is free
+      0003F0                       1909 00101$:
+      0003F0 20 C7 FD         [24] 1910 	jb	_BUSY,00101$
+                           00033A  1911 	C$i2c.h$199$1$88 ==.
+                                   1912 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:199: STA = 1;                  //Set Start Bit
+      0003F3 D2 C5            [12] 1913 	setb	_STA
+                           00033C  1914 	C$i2c.h$200$1$88 ==.
+                                   1915 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:200: while(!SI);               //Wait until start sent
+      0003F5                       1916 00104$:
+      0003F5 30 C3 FD         [24] 1917 	jnb	_SI,00104$
+                           00033F  1918 	C$i2c.h$201$1$88 ==.
+                                   1919 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:201: STA = 0;                  //Clear start bit
+      0003F8 C2 C5            [12] 1920 	clr	_STA
+                           000341  1921 	C$i2c.h$202$1$88 ==.
+                                   1922 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:202: SI = 0;                   //Clear SI
+      0003FA C2 C3            [12] 1923 	clr	_SI
+                           000343  1924 	C$i2c.h$203$1$88 ==.
+                           000343  1925 	XG$i2c_start$0$0 ==.
+      0003FC 22               [24] 1926 	ret
+                                   1927 ;------------------------------------------------------------
+                                   1928 ;Allocation info for local variables in function 'i2c_write'
+                                   1929 ;------------------------------------------------------------
+                                   1930 ;output_data               Allocated to registers 
+                                   1931 ;------------------------------------------------------------
+                           000344  1932 	G$i2c_write$0$0 ==.
+                           000344  1933 	C$i2c.h$206$1$88 ==.
+                                   1934 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:206: void i2c_write(unsigned char output_data)
+                                   1935 ;	-----------------------------------------
+                                   1936 ;	 function i2c_write
+                                   1937 ;	-----------------------------------------
+      0003FD                       1938 _i2c_write:
+      0003FD 85 82 C2         [24] 1939 	mov	_SMB0DAT,dpl
+                           000347  1940 	C$i2c.h$209$1$90 ==.
+                                   1941 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:209: while(!SI);               //Wait until send is complete
+      000400                       1942 00101$:
+                           000347  1943 	C$i2c.h$210$1$90 ==.
+                                   1944 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:210: SI = 0;                   //Clear SI
+      000400 10 C3 02         [24] 1945 	jbc	_SI,00112$
+      000403 80 FB            [24] 1946 	sjmp	00101$
+      000405                       1947 00112$:
+                           00034C  1948 	C$i2c.h$211$1$90 ==.
+                           00034C  1949 	XG$i2c_write$0$0 ==.
+      000405 22               [24] 1950 	ret
+                                   1951 ;------------------------------------------------------------
+                                   1952 ;Allocation info for local variables in function 'i2c_write_and_stop'
+                                   1953 ;------------------------------------------------------------
+                                   1954 ;output_data               Allocated to registers 
+                                   1955 ;------------------------------------------------------------
+                           00034D  1956 	G$i2c_write_and_stop$0$0 ==.
+                           00034D  1957 	C$i2c.h$214$1$90 ==.
+                                   1958 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:214: void i2c_write_and_stop(unsigned char output_data)
+                                   1959 ;	-----------------------------------------
+                                   1960 ;	 function i2c_write_and_stop
+                                   1961 ;	-----------------------------------------
+      000406                       1962 _i2c_write_and_stop:
+      000406 85 82 C2         [24] 1963 	mov	_SMB0DAT,dpl
+                           000350  1964 	C$i2c.h$217$1$92 ==.
+                                   1965 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:217: STO = 1;                  //Set stop bit
+      000409 D2 C4            [12] 1966 	setb	_STO
+                           000352  1967 	C$i2c.h$218$1$92 ==.
+                                   1968 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:218: while(!SI);               //Wait until send is complete
+      00040B                       1969 00101$:
+                           000352  1970 	C$i2c.h$219$1$92 ==.
+                                   1971 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:219: SI = 0;                   //clear SI
+      00040B 10 C3 02         [24] 1972 	jbc	_SI,00112$
+      00040E 80 FB            [24] 1973 	sjmp	00101$
+      000410                       1974 00112$:
+                           000357  1975 	C$i2c.h$220$1$92 ==.
+                           000357  1976 	XG$i2c_write_and_stop$0$0 ==.
+      000410 22               [24] 1977 	ret
+                                   1978 ;------------------------------------------------------------
+                                   1979 ;Allocation info for local variables in function 'i2c_read'
+                                   1980 ;------------------------------------------------------------
+                                   1981 ;input_data                Allocated to registers 
+                                   1982 ;------------------------------------------------------------
+                           000358  1983 	G$i2c_read$0$0 ==.
+                           000358  1984 	C$i2c.h$223$1$92 ==.
+                                   1985 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:223: unsigned char i2c_read(void)
+                                   1986 ;	-----------------------------------------
+                                   1987 ;	 function i2c_read
+                                   1988 ;	-----------------------------------------
+      000411                       1989 _i2c_read:
+                           000358  1990 	C$i2c.h$226$1$94 ==.
+                                   1991 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:226: while(!SI);                //Wait until we have data to read
+      000411                       1992 00101$:
+      000411 30 C3 FD         [24] 1993 	jnb	_SI,00101$
+                           00035B  1994 	C$i2c.h$227$1$94 ==.
+                                   1995 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:227: input_data = SMB0DAT;      //Read the data
+      000414 85 C2 82         [24] 1996 	mov	dpl,_SMB0DAT
+                           00035E  1997 	C$i2c.h$228$1$94 ==.
+                                   1998 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:228: SI = 0;                    //Clear SI
+      000417 C2 C3            [12] 1999 	clr	_SI
+                           000360  2000 	C$i2c.h$229$1$94 ==.
+                                   2001 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:229: return input_data;         //Return the read data
+                           000360  2002 	C$i2c.h$230$1$94 ==.
+                           000360  2003 	XG$i2c_read$0$0 ==.
+      000419 22               [24] 2004 	ret
+                                   2005 ;------------------------------------------------------------
+                                   2006 ;Allocation info for local variables in function 'i2c_read_and_stop'
+                                   2007 ;------------------------------------------------------------
+                                   2008 ;input_data                Allocated to registers r7 
+                                   2009 ;------------------------------------------------------------
+                           000361  2010 	G$i2c_read_and_stop$0$0 ==.
+                           000361  2011 	C$i2c.h$233$1$94 ==.
+                                   2012 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:233: unsigned char i2c_read_and_stop(void)
+                                   2013 ;	-----------------------------------------
+                                   2014 ;	 function i2c_read_and_stop
+                                   2015 ;	-----------------------------------------
+      00041A                       2016 _i2c_read_and_stop:
+                           000361  2017 	C$i2c.h$236$1$96 ==.
+                                   2018 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:236: while(!SI);                //Wait until we have data to read
+      00041A                       2019 00101$:
+      00041A 30 C3 FD         [24] 2020 	jnb	_SI,00101$
+                           000364  2021 	C$i2c.h$237$1$96 ==.
+                                   2022 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:237: input_data = SMB0DAT;      //Read the data
+      00041D AF C2            [24] 2023 	mov	r7,_SMB0DAT
+                           000366  2024 	C$i2c.h$238$1$96 ==.
+                                   2025 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:238: SI = 0;                    //Clear SI
+      00041F C2 C3            [12] 2026 	clr	_SI
+                           000368  2027 	C$i2c.h$239$1$96 ==.
+                                   2028 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:239: STO = 1;                   //Set stop bit
+      000421 D2 C4            [12] 2029 	setb	_STO
+                           00036A  2030 	C$i2c.h$240$1$96 ==.
+                                   2031 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:240: while(!SI);                //Wait for stop
+      000423                       2032 00104$:
+                           00036A  2033 	C$i2c.h$241$1$96 ==.
+                                   2034 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:241: SI = 0;
+      000423 10 C3 02         [24] 2035 	jbc	_SI,00122$
+      000426 80 FB            [24] 2036 	sjmp	00104$
+      000428                       2037 00122$:
+                           00036F  2038 	C$i2c.h$242$1$96 ==.
+                                   2039 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:242: return input_data;         //Return the read data
+      000428 8F 82            [24] 2040 	mov	dpl,r7
+                           000371  2041 	C$i2c.h$243$1$96 ==.
+                           000371  2042 	XG$i2c_read_and_stop$0$0 ==.
+      00042A 22               [24] 2043 	ret
+                                   2044 ;------------------------------------------------------------
+                                   2045 ;Allocation info for local variables in function 'i2c_write_data'
+                                   2046 ;------------------------------------------------------------
+                                   2047 ;start_reg                 Allocated with name '_i2c_write_data_PARM_2'
+                                   2048 ;buffer                    Allocated with name '_i2c_write_data_PARM_3'
+                                   2049 ;num_bytes                 Allocated with name '_i2c_write_data_PARM_4'
+                                   2050 ;addr                      Allocated to registers r7 
+                                   2051 ;i                         Allocated to registers 
+                                   2052 ;------------------------------------------------------------
+                           000372  2053 	G$i2c_write_data$0$0 ==.
+                           000372  2054 	C$i2c.h$246$1$96 ==.
+                                   2055 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:246: void i2c_write_data(unsigned char addr, unsigned char start_reg, unsigned char *buffer, unsigned char num_bytes)
+                                   2056 ;	-----------------------------------------
+                                   2057 ;	 function i2c_write_data
+                                   2058 ;	-----------------------------------------
+      00042B                       2059 _i2c_write_data:
+      00042B AF 82            [24] 2060 	mov	r7,dpl
+                           000374  2061 	C$i2c.h$250$1$98 ==.
+                                   2062 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:250: i2c_start();               //initiate I2C transfer
+      00042D C0 07            [24] 2063 	push	ar7
+      00042F 12 03 F0         [24] 2064 	lcall	_i2c_start
+      000432 D0 07            [24] 2065 	pop	ar7
+                           00037B  2066 	C$i2c.h$251$1$98 ==.
+                                   2067 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:251: i2c_write(addr & ~0x01);   //write the desired address to the bus
+      000434 74 FE            [12] 2068 	mov	a,#0xFE
+      000436 5F               [12] 2069 	anl	a,r7
+      000437 F5 82            [12] 2070 	mov	dpl,a
+      000439 12 03 FD         [24] 2071 	lcall	_i2c_write
+                           000383  2072 	C$i2c.h$252$1$98 ==.
+                                   2073 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:252: i2c_write(start_reg);      //write the start register to the bus
+      00043C 85 27 82         [24] 2074 	mov	dpl,_i2c_write_data_PARM_2
+      00043F 12 03 FD         [24] 2075 	lcall	_i2c_write
+                           000389  2076 	C$i2c.h$253$1$98 ==.
+                                   2077 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:253: for(i=0; i<num_bytes-1; i++) //write the data to the register(s)
+      000442 7F 00            [12] 2078 	mov	r7,#0x00
+      000444                       2079 00103$:
+      000444 AD 2B            [24] 2080 	mov	r5,_i2c_write_data_PARM_4
+      000446 7E 00            [12] 2081 	mov	r6,#0x00
+      000448 1D               [12] 2082 	dec	r5
+      000449 BD FF 01         [24] 2083 	cjne	r5,#0xFF,00114$
+      00044C 1E               [12] 2084 	dec	r6
+      00044D                       2085 00114$:
+      00044D 8F 03            [24] 2086 	mov	ar3,r7
+      00044F 7C 00            [12] 2087 	mov	r4,#0x00
+      000451 C3               [12] 2088 	clr	c
+      000452 EB               [12] 2089 	mov	a,r3
+      000453 9D               [12] 2090 	subb	a,r5
+      000454 EC               [12] 2091 	mov	a,r4
+      000455 64 80            [12] 2092 	xrl	a,#0x80
+      000457 8E F0            [24] 2093 	mov	b,r6
+      000459 63 F0 80         [24] 2094 	xrl	b,#0x80
+      00045C 95 F0            [12] 2095 	subb	a,b
+      00045E 50 1F            [24] 2096 	jnc	00101$
+                           0003A7  2097 	C$i2c.h$254$1$98 ==.
+                                   2098 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:254: i2c_write(buffer[i]);
+      000460 EF               [12] 2099 	mov	a,r7
+      000461 25 28            [12] 2100 	add	a,_i2c_write_data_PARM_3
+      000463 FC               [12] 2101 	mov	r4,a
+      000464 E4               [12] 2102 	clr	a
+      000465 35 29            [12] 2103 	addc	a,(_i2c_write_data_PARM_3 + 1)
+      000467 FD               [12] 2104 	mov	r5,a
+      000468 AE 2A            [24] 2105 	mov	r6,(_i2c_write_data_PARM_3 + 2)
+      00046A 8C 82            [24] 2106 	mov	dpl,r4
+      00046C 8D 83            [24] 2107 	mov	dph,r5
+      00046E 8E F0            [24] 2108 	mov	b,r6
+      000470 12 14 44         [24] 2109 	lcall	__gptrget
+      000473 F5 82            [12] 2110 	mov	dpl,a
+      000475 C0 07            [24] 2111 	push	ar7
+      000477 12 03 FD         [24] 2112 	lcall	_i2c_write
+      00047A D0 07            [24] 2113 	pop	ar7
+                           0003C3  2114 	C$i2c.h$253$1$98 ==.
+                                   2115 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:253: for(i=0; i<num_bytes-1; i++) //write the data to the register(s)
+      00047C 0F               [12] 2116 	inc	r7
+      00047D 80 C5            [24] 2117 	sjmp	00103$
+      00047F                       2118 00101$:
+                           0003C6  2119 	C$i2c.h$255$1$98 ==.
+                                   2120 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:255: i2c_write_and_stop(buffer[num_bytes-1]); //Stop transfer
+      00047F AE 2B            [24] 2121 	mov	r6,_i2c_write_data_PARM_4
+      000481 7F 00            [12] 2122 	mov	r7,#0x00
+      000483 1E               [12] 2123 	dec	r6
+      000484 BE FF 01         [24] 2124 	cjne	r6,#0xFF,00116$
+      000487 1F               [12] 2125 	dec	r7
+      000488                       2126 00116$:
+      000488 EE               [12] 2127 	mov	a,r6
+      000489 25 28            [12] 2128 	add	a,_i2c_write_data_PARM_3
+      00048B FE               [12] 2129 	mov	r6,a
+      00048C EF               [12] 2130 	mov	a,r7
+      00048D 35 29            [12] 2131 	addc	a,(_i2c_write_data_PARM_3 + 1)
+      00048F FF               [12] 2132 	mov	r7,a
+      000490 AD 2A            [24] 2133 	mov	r5,(_i2c_write_data_PARM_3 + 2)
+      000492 8E 82            [24] 2134 	mov	dpl,r6
+      000494 8F 83            [24] 2135 	mov	dph,r7
+      000496 8D F0            [24] 2136 	mov	b,r5
+      000498 12 14 44         [24] 2137 	lcall	__gptrget
+      00049B F5 82            [12] 2138 	mov	dpl,a
+      00049D 12 04 06         [24] 2139 	lcall	_i2c_write_and_stop
+                           0003E7  2140 	C$i2c.h$256$1$98 ==.
+                           0003E7  2141 	XG$i2c_write_data$0$0 ==.
+      0004A0 22               [24] 2142 	ret
+                                   2143 ;------------------------------------------------------------
+                                   2144 ;Allocation info for local variables in function 'i2c_read_data'
+                                   2145 ;------------------------------------------------------------
+                                   2146 ;start_reg                 Allocated with name '_i2c_read_data_PARM_2'
+                                   2147 ;buffer                    Allocated with name '_i2c_read_data_PARM_3'
+                                   2148 ;num_bytes                 Allocated with name '_i2c_read_data_PARM_4'
+                                   2149 ;addr                      Allocated to registers r7 
+                                   2150 ;j                         Allocated to registers 
+                                   2151 ;------------------------------------------------------------
+                           0003E8  2152 	G$i2c_read_data$0$0 ==.
+                           0003E8  2153 	C$i2c.h$259$1$98 ==.
+                                   2154 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:259: void i2c_read_data(unsigned char addr, unsigned char start_reg, unsigned char *buffer, unsigned char num_bytes)
+                                   2155 ;	-----------------------------------------
+                                   2156 ;	 function i2c_read_data
+                                   2157 ;	-----------------------------------------
+      0004A1                       2158 _i2c_read_data:
+      0004A1 AF 82            [24] 2159 	mov	r7,dpl
+                           0003EA  2160 	C$i2c.h$262$1$100 ==.
+                                   2161 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:262: i2c_start();               //Start I2C transfer
+      0004A3 C0 07            [24] 2162 	push	ar7
+      0004A5 12 03 F0         [24] 2163 	lcall	_i2c_start
+      0004A8 D0 07            [24] 2164 	pop	ar7
+                           0003F1  2165 	C$i2c.h$263$1$100 ==.
+                                   2166 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:263: i2c_write(addr & ~0x01);   //Write address of device that will be written to, send 0
+      0004AA 8F 06            [24] 2167 	mov	ar6,r7
+      0004AC 74 FE            [12] 2168 	mov	a,#0xFE
+      0004AE 5E               [12] 2169 	anl	a,r6
+      0004AF F5 82            [12] 2170 	mov	dpl,a
+      0004B1 C0 07            [24] 2171 	push	ar7
+      0004B3 12 03 FD         [24] 2172 	lcall	_i2c_write
+                           0003FD  2173 	C$i2c.h$264$1$100 ==.
+                                   2174 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:264: i2c_write_and_stop(start_reg); //Write & stop the 1st register to be read
+      0004B6 85 2C 82         [24] 2175 	mov	dpl,_i2c_read_data_PARM_2
+      0004B9 12 04 06         [24] 2176 	lcall	_i2c_write_and_stop
+                           000403  2177 	C$i2c.h$265$1$100 ==.
+                                   2178 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:265: i2c_start();               //Start I2C transfer
+      0004BC 12 03 F0         [24] 2179 	lcall	_i2c_start
+      0004BF D0 07            [24] 2180 	pop	ar7
+                           000408  2181 	C$i2c.h$266$1$100 ==.
+                                   2182 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:266: i2c_write(addr | 0x01);    //Write address again, this time indicating a read operation
+      0004C1 74 01            [12] 2183 	mov	a,#0x01
+      0004C3 4F               [12] 2184 	orl	a,r7
+      0004C4 F5 82            [12] 2185 	mov	dpl,a
+      0004C6 12 03 FD         [24] 2186 	lcall	_i2c_write
+                           000410  2187 	C$i2c.h$267$1$100 ==.
+                                   2188 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:267: for(j = 0; j < num_bytes - 1; j++)
+      0004C9 7F 00            [12] 2189 	mov	r7,#0x00
+      0004CB                       2190 00103$:
+      0004CB AD 30            [24] 2191 	mov	r5,_i2c_read_data_PARM_4
+      0004CD 7E 00            [12] 2192 	mov	r6,#0x00
+      0004CF 1D               [12] 2193 	dec	r5
+      0004D0 BD FF 01         [24] 2194 	cjne	r5,#0xFF,00114$
+      0004D3 1E               [12] 2195 	dec	r6
+      0004D4                       2196 00114$:
+      0004D4 8F 03            [24] 2197 	mov	ar3,r7
+      0004D6 7C 00            [12] 2198 	mov	r4,#0x00
+      0004D8 C3               [12] 2199 	clr	c
+      0004D9 EB               [12] 2200 	mov	a,r3
+      0004DA 9D               [12] 2201 	subb	a,r5
+      0004DB EC               [12] 2202 	mov	a,r4
+      0004DC 64 80            [12] 2203 	xrl	a,#0x80
+      0004DE 8E F0            [24] 2204 	mov	b,r6
+      0004E0 63 F0 80         [24] 2205 	xrl	b,#0x80
+      0004E3 95 F0            [12] 2206 	subb	a,b
+      0004E5 50 2E            [24] 2207 	jnc	00101$
+                           00042E  2208 	C$i2c.h$269$2$101 ==.
+                                   2209 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:269: AA = 1;                //Set acknowledge bit
+      0004E7 D2 C2            [12] 2210 	setb	_AA
+                           000430  2211 	C$i2c.h$270$2$101 ==.
+                                   2212 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:270: buffer[j] = i2c_read();//Read data, save it in buffer
+      0004E9 EF               [12] 2213 	mov	a,r7
+      0004EA 25 2D            [12] 2214 	add	a,_i2c_read_data_PARM_3
+      0004EC FC               [12] 2215 	mov	r4,a
+      0004ED E4               [12] 2216 	clr	a
+      0004EE 35 2E            [12] 2217 	addc	a,(_i2c_read_data_PARM_3 + 1)
+      0004F0 FD               [12] 2218 	mov	r5,a
+      0004F1 AE 2F            [24] 2219 	mov	r6,(_i2c_read_data_PARM_3 + 2)
+      0004F3 C0 07            [24] 2220 	push	ar7
+      0004F5 C0 06            [24] 2221 	push	ar6
+      0004F7 C0 05            [24] 2222 	push	ar5
+      0004F9 C0 04            [24] 2223 	push	ar4
+      0004FB 12 04 11         [24] 2224 	lcall	_i2c_read
+      0004FE AB 82            [24] 2225 	mov	r3,dpl
+      000500 D0 04            [24] 2226 	pop	ar4
+      000502 D0 05            [24] 2227 	pop	ar5
+      000504 D0 06            [24] 2228 	pop	ar6
+      000506 D0 07            [24] 2229 	pop	ar7
+      000508 8C 82            [24] 2230 	mov	dpl,r4
+      00050A 8D 83            [24] 2231 	mov	dph,r5
+      00050C 8E F0            [24] 2232 	mov	b,r6
+      00050E EB               [12] 2233 	mov	a,r3
+      00050F 12 0C 13         [24] 2234 	lcall	__gptrput
+                           000459  2235 	C$i2c.h$267$1$100 ==.
+                                   2236 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:267: for(j = 0; j < num_bytes - 1; j++)
+      000512 0F               [12] 2237 	inc	r7
+      000513 80 B6            [24] 2238 	sjmp	00103$
+      000515                       2239 00101$:
+                           00045C  2240 	C$i2c.h$272$1$100 ==.
+                                   2241 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:272: AA = 0;
+      000515 C2 C2            [12] 2242 	clr	_AA
+                           00045E  2243 	C$i2c.h$273$1$100 ==.
+                                   2244 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:273: buffer[num_bytes - 1] = i2c_read_and_stop(); //Read the last byte and stop, save it in the buffer
+      000517 AE 30            [24] 2245 	mov	r6,_i2c_read_data_PARM_4
+      000519 7F 00            [12] 2246 	mov	r7,#0x00
+      00051B 1E               [12] 2247 	dec	r6
+      00051C BE FF 01         [24] 2248 	cjne	r6,#0xFF,00116$
+      00051F 1F               [12] 2249 	dec	r7
+      000520                       2250 00116$:
+      000520 EE               [12] 2251 	mov	a,r6
+      000521 25 2D            [12] 2252 	add	a,_i2c_read_data_PARM_3
+      000523 FE               [12] 2253 	mov	r6,a
+      000524 EF               [12] 2254 	mov	a,r7
+      000525 35 2E            [12] 2255 	addc	a,(_i2c_read_data_PARM_3 + 1)
+      000527 FF               [12] 2256 	mov	r7,a
+      000528 AD 2F            [24] 2257 	mov	r5,(_i2c_read_data_PARM_3 + 2)
+      00052A C0 07            [24] 2258 	push	ar7
+      00052C C0 06            [24] 2259 	push	ar6
+      00052E C0 05            [24] 2260 	push	ar5
+      000530 12 04 1A         [24] 2261 	lcall	_i2c_read_and_stop
+      000533 AC 82            [24] 2262 	mov	r4,dpl
+      000535 D0 05            [24] 2263 	pop	ar5
+      000537 D0 06            [24] 2264 	pop	ar6
+      000539 D0 07            [24] 2265 	pop	ar7
+      00053B 8E 82            [24] 2266 	mov	dpl,r6
+      00053D 8F 83            [24] 2267 	mov	dph,r7
+      00053F 8D F0            [24] 2268 	mov	b,r5
+      000541 EC               [12] 2269 	mov	a,r4
+      000542 12 0C 13         [24] 2270 	lcall	__gptrput
+                           00048C  2271 	C$i2c.h$274$1$100 ==.
+                           00048C  2272 	XG$i2c_read_data$0$0 ==.
+      000545 22               [24] 2273 	ret
+                                   2274 ;------------------------------------------------------------
+                                   2275 ;Allocation info for local variables in function 'Accel_Init'
+                                   2276 ;------------------------------------------------------------
+                                   2277 ;Data2                     Allocated with name '_Accel_Init_Data2_1_103'
+                                   2278 ;------------------------------------------------------------
+                           00048D  2279 	G$Accel_Init$0$0 ==.
+                           00048D  2280 	C$i2c.h$283$1$100 ==.
+                                   2281 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:283: void Accel_Init(void)
+                                   2282 ;	-----------------------------------------
+                                   2283 ;	 function Accel_Init
+                                   2284 ;	-----------------------------------------
+      000546                       2285 _Accel_Init:
+                           00048D  2286 	C$i2c.h$287$1$103 ==.
+                                   2287 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:287: Data2[0]=0x23;	//normal power mode, 50Hz ODR, y & x axes enabled
+      000546 75 31 23         [24] 2288 	mov	_Accel_Init_Data2_1_103,#0x23
+                           000490  2289 	C$i2c.h$289$1$103 ==.
+                                   2290 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:289: i2c_write_data(addr_accel, 0x20, Data2, 1);
+      000549 75 28 31         [24] 2291 	mov	_i2c_write_data_PARM_3,#_Accel_Init_Data2_1_103
+      00054C 75 29 00         [24] 2292 	mov	(_i2c_write_data_PARM_3 + 1),#0x00
+      00054F 75 2A 40         [24] 2293 	mov	(_i2c_write_data_PARM_3 + 2),#0x40
+      000552 75 27 20         [24] 2294 	mov	_i2c_write_data_PARM_2,#0x20
+      000555 75 2B 01         [24] 2295 	mov	_i2c_write_data_PARM_4,#0x01
+      000558 75 82 30         [24] 2296 	mov	dpl,#0x30
+      00055B 12 04 2B         [24] 2297 	lcall	_i2c_write_data
+                           0004A5  2298 	C$i2c.h$290$1$103 ==.
+                                   2299 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:290: Data2[0]=0x00;	//Default - no filtering
+      00055E 75 31 00         [24] 2300 	mov	_Accel_Init_Data2_1_103,#0x00
+                           0004A8  2301 	C$i2c.h$292$1$103 ==.
+                                   2302 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:292: i2c_write_data(addr_accel, 0x21, Data2, 1);
+      000561 75 28 31         [24] 2303 	mov	_i2c_write_data_PARM_3,#_Accel_Init_Data2_1_103
+      000564 75 29 00         [24] 2304 	mov	(_i2c_write_data_PARM_3 + 1),#0x00
+      000567 75 2A 40         [24] 2305 	mov	(_i2c_write_data_PARM_3 + 2),#0x40
+      00056A 75 27 21         [24] 2306 	mov	_i2c_write_data_PARM_2,#0x21
+      00056D 75 2B 01         [24] 2307 	mov	_i2c_write_data_PARM_4,#0x01
+      000570 75 82 30         [24] 2308 	mov	dpl,#0x30
+      000573 12 04 2B         [24] 2309 	lcall	_i2c_write_data
+                           0004BD  2310 	C$i2c.h$293$1$103 ==.
+                                   2311 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:293: Data2[0]=0x00;	//default - no interrupts enabled
+      000576 75 31 00         [24] 2312 	mov	_Accel_Init_Data2_1_103,#0x00
+                           0004C0  2313 	C$i2c.h$294$1$103 ==.
+                                   2314 ;	C:/Program Files (x86)/SDCC/bin/../include/mcs51/i2c.h:294: i2c_write_data(addr_accel, 0x22, Data2, 1);
+      000579 75 28 31         [24] 2315 	mov	_i2c_write_data_PARM_3,#_Accel_Init_Data2_1_103
+      00057C 75 29 00         [24] 2316 	mov	(_i2c_write_data_PARM_3 + 1),#0x00
+      00057F 75 2A 40         [24] 2317 	mov	(_i2c_write_data_PARM_3 + 2),#0x40
+      000582 75 27 22         [24] 2318 	mov	_i2c_write_data_PARM_2,#0x22
+      000585 75 2B 01         [24] 2319 	mov	_i2c_write_data_PARM_4,#0x01
+      000588 75 82 30         [24] 2320 	mov	dpl,#0x30
+      00058B 12 04 2B         [24] 2321 	lcall	_i2c_write_data
+                           0004D5  2322 	C$i2c.h$298$1$103 ==.
+                           0004D5  2323 	XG$Accel_Init$0$0 ==.
+      00058E 22               [24] 2324 	ret
+                                   2325 ;------------------------------------------------------------
+                                   2326 ;Allocation info for local variables in function 'main'
+                                   2327 ;------------------------------------------------------------
+                           0004D6  2328 	G$main$0$0 ==.
+                           0004D6  2329 	C$Squiggles.c$65$1$103 ==.
+                                   2330 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:65: void main(void)
+                                   2331 ;	-----------------------------------------
+                                   2332 ;	 function main
+                                   2333 ;	-----------------------------------------
+      00058F                       2334 _main:
+                           0004D6  2335 	C$Squiggles.c$67$1$120 ==.
+                                   2336 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:67: Sys_Init();     // System Initialization - MUST BE 1st EXECUTABLE STATEMENT
+      00058F 12 00 E9         [24] 2337 	lcall	_Sys_Init
+                           0004D9  2338 	C$Squiggles.c$68$1$120 ==.
+                                   2339 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:68: Port_Init();    
+      000592 12 07 A9         [24] 2340 	lcall	_Port_Init
+                           0004DC  2341 	C$Squiggles.c$69$1$120 ==.
+                                   2342 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:69: Interrupt_Init();   
+      000595 12 07 C7         [24] 2343 	lcall	_Interrupt_Init
+                           0004DF  2344 	C$Squiggles.c$70$1$120 ==.
+                                   2345 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:70: PCA_Init();
+      000598 12 07 D0         [24] 2346 	lcall	_PCA_Init
+                           0004E2  2347 	C$Squiggles.c$71$1$120 ==.
+                                   2348 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:71: ADC_Init();
+      00059B 12 08 4A         [24] 2349 	lcall	_ADC_Init
+                           0004E5  2350 	C$Squiggles.c$72$1$120 ==.
+                                   2351 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:72: SMB0_Init();
+      00059E 12 07 DD         [24] 2352 	lcall	_SMB0_Init
+                           0004E8  2353 	C$Squiggles.c$73$1$120 ==.
+                                   2354 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:73: putchar('\r');  // Dummy write to serial port
+      0005A1 75 82 0D         [24] 2355 	mov	dpl,#0x0D
+      0005A4 12 00 FC         [24] 2356 	lcall	_putchar
+                           0004EE  2357 	C$Squiggles.c$74$1$120 ==.
+                                   2358 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:74: printf("\nStart\r\n");
+      0005A7 74 94            [12] 2359 	mov	a,#___str_3
+      0005A9 C0 E0            [24] 2360 	push	acc
+      0005AB 74 15            [12] 2361 	mov	a,#(___str_3 >> 8)
+      0005AD C0 E0            [24] 2362 	push	acc
+      0005AF 74 80            [12] 2363 	mov	a,#0x80
+      0005B1 C0 E0            [24] 2364 	push	acc
+      0005B3 12 0E 36         [24] 2365 	lcall	_printf
+      0005B6 15 81            [12] 2366 	dec	sp
+      0005B8 15 81            [12] 2367 	dec	sp
+      0005BA 15 81            [12] 2368 	dec	sp
+                           000503  2369 	C$Squiggles.c$75$1$120 ==.
+                                   2370 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:75: PCA0CP0 = 0xFFFF - COMPASS_CENTER;
+      0005BC 75 EA 37         [24] 2371 	mov	((_PCA0CP0 >> 0) & 0xFF),#0x37
+      0005BF 75 FA F5         [24] 2372 	mov	((_PCA0CP0 >> 8) & 0xFF),#0xF5
+                           000509  2373 	C$Squiggles.c$76$1$120 ==.
+                                   2374 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:76: PCA0CP2 = 0xFFFF - COMPASS_CENTER; //Car isn't moving to start
+      0005C2 75 EC 37         [24] 2375 	mov	((_PCA0CP2 >> 0) & 0xFF),#0x37
+      0005C5 75 FC F5         [24] 2376 	mov	((_PCA0CP2 >> 8) & 0xFF),#0xF5
+                           00050F  2377 	C$Squiggles.c$77$1$120 ==.
+                                   2378 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:77: lcd_clear();
+      0005C8 12 01 9A         [24] 2379 	lcall	_lcd_clear
+                           000512  2380 	C$Squiggles.c$78$1$120 ==.
+                                   2381 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:78: Counts = 0;
+      0005CB E4               [12] 2382 	clr	a
+      0005CC F5 32            [12] 2383 	mov	_Counts,a
+      0005CE F5 33            [12] 2384 	mov	(_Counts + 1),a
+                           000517  2385 	C$Squiggles.c$79$1$120 ==.
+                                   2386 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:79: while (Counts < 1); //{ printf("\r%u\n", nCounts); } // Wait a long time (1s) for keypad & LCD to initialize
+      0005D0                       2387 00101$:
+      0005D0 C3               [12] 2388 	clr	c
+      0005D1 E5 32            [12] 2389 	mov	a,_Counts
+      0005D3 94 01            [12] 2390 	subb	a,#0x01
+      0005D5 E5 33            [12] 2391 	mov	a,(_Counts + 1)
+      0005D7 94 00            [12] 2392 	subb	a,#0x00
+      0005D9 40 F5            [24] 2393 	jc	00101$
+                           000522  2394 	C$Squiggles.c$80$1$120 ==.
+                                   2395 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:80: lcd_clear();
+      0005DB 12 01 9A         [24] 2396 	lcall	_lcd_clear
+                           000525  2397 	C$Squiggles.c$81$1$120 ==.
+                                   2398 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:81: printf("\n\rPlease input data on the LCD.\n");
+      0005DE 74 9D            [12] 2399 	mov	a,#___str_4
+      0005E0 C0 E0            [24] 2400 	push	acc
+      0005E2 74 15            [12] 2401 	mov	a,#(___str_4 >> 8)
+      0005E4 C0 E0            [24] 2402 	push	acc
+      0005E6 74 80            [12] 2403 	mov	a,#0x80
+      0005E8 C0 E0            [24] 2404 	push	acc
+      0005EA 12 0E 36         [24] 2405 	lcall	_printf
+      0005ED 15 81            [12] 2406 	dec	sp
+      0005EF 15 81            [12] 2407 	dec	sp
+      0005F1 15 81            [12] 2408 	dec	sp
+                           00053A  2409 	C$Squiggles.c$82$1$120 ==.
+                                   2410 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:82: Pick_Heading();
+      0005F3 12 08 6A         [24] 2411 	lcall	_Pick_Heading
+                           00053D  2412 	C$Squiggles.c$83$1$120 ==.
+                                   2413 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:83: Pick_Compass_Gain();
+      0005F6 12 08 E8         [24] 2414 	lcall	_Pick_Compass_Gain
+                           000540  2415 	C$Squiggles.c$84$1$120 ==.
+                                   2416 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:84: printf("\n\r------------DATA COLLECTION------------\n");
+      0005F9 74 BE            [12] 2417 	mov	a,#___str_5
+      0005FB C0 E0            [24] 2418 	push	acc
+      0005FD 74 15            [12] 2419 	mov	a,#(___str_5 >> 8)
+      0005FF C0 E0            [24] 2420 	push	acc
+      000601 74 80            [12] 2421 	mov	a,#0x80
+      000603 C0 E0            [24] 2422 	push	acc
+      000605 12 0E 36         [24] 2423 	lcall	_printf
+      000608 15 81            [12] 2424 	dec	sp
+      00060A 15 81            [12] 2425 	dec	sp
+      00060C 15 81            [12] 2426 	dec	sp
+                           000555  2427 	C$Squiggles.c$87$2$121 ==.
+                                   2428 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:87: while(!RANGER_SWITCH && !COMPASS_SWITCH)
+      00060E                       2429 00123$:
+      00060E 30 B6 03         [24] 2430 	jnb	_RANGER_SWITCH,00180$
+      000611 02 07 90         [24] 2431 	ljmp	00125$
+      000614                       2432 00180$:
+      000614 30 B7 03         [24] 2433 	jnb	_COMPASS_SWITCH,00181$
+      000617 02 07 90         [24] 2434 	ljmp	00125$
+      00061A                       2435 00181$:
+                           000561  2436 	C$Squiggles.c$89$3$122 ==.
+                                   2437 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:89: if ((new_range)) // enough overflow for a new range
+      00061A E5 42            [12] 2438 	mov	a,_new_range
+      00061C 60 44            [24] 2439 	jz	00113$
+                           000565  2440 	C$Squiggles.c$91$4$123 ==.
+                                   2441 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:91: range = read_ranger();	// Read the distance
+      00061E 12 09 6C         [24] 2442 	lcall	_read_ranger
+      000621 85 82 45         [24] 2443 	mov	_range,dpl
+      000624 85 83 46         [24] 2444 	mov	(_range + 1),dph
+                           00056E  2445 	C$Squiggles.c$93$4$123 ==.
+                                   2446 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:93: if ((range != 0) && (range != 0xFFFF)) //Ignores dummy values from the ranger
+      000627 E5 45            [12] 2447 	mov	a,_range
+      000629 45 46            [12] 2448 	orl	a,(_range + 1)
+      00062B 60 30            [24] 2449 	jz	00109$
+      00062D 74 FF            [12] 2450 	mov	a,#0xFF
+      00062F B5 45 07         [24] 2451 	cjne	a,_range,00184$
+      000632 74 FF            [12] 2452 	mov	a,#0xFF
+      000634 B5 46 02         [24] 2453 	cjne	a,(_range + 1),00184$
+      000637 80 24            [24] 2454 	sjmp	00109$
+      000639                       2455 00184$:
+                           000580  2456 	C$Squiggles.c$95$5$124 ==.
+                                   2457 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:95: if((range < 15) && (range != 0)) PCA0CP2 = 0xFFFF - COMPASS_CENTER; //Stop if near an object
+      000639 C3               [12] 2458 	clr	c
+      00063A E5 45            [12] 2459 	mov	a,_range
+      00063C 94 0F            [12] 2460 	subb	a,#0x0F
+      00063E E5 46            [12] 2461 	mov	a,(_range + 1)
+      000640 94 00            [12] 2462 	subb	a,#0x00
+      000642 50 0E            [24] 2463 	jnc	00105$
+      000644 E5 45            [12] 2464 	mov	a,_range
+      000646 45 46            [12] 2465 	orl	a,(_range + 1)
+      000648 60 08            [24] 2466 	jz	00105$
+      00064A 75 EC 37         [24] 2467 	mov	((_PCA0CP2 >> 0) & 0xFF),#0x37
+      00064D 75 FC F5         [24] 2468 	mov	((_PCA0CP2 >> 8) & 0xFF),#0xF5
+      000650 80 06            [24] 2469 	sjmp	00106$
+      000652                       2470 00105$:
+                           000599  2471 	C$Squiggles.c$96$5$124 ==.
+                                   2472 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:96: else PCA0CP2 = 0xFFFF - 2900; //Car moves at a constant speed otherwise
+      000652 75 EC AB         [24] 2473 	mov	((_PCA0CP2 >> 0) & 0xFF),#0xAB
+      000655 75 FC F4         [24] 2474 	mov	((_PCA0CP2 >> 8) & 0xFF),#0xF4
+      000658                       2475 00106$:
+                           00059F  2476 	C$Squiggles.c$98$5$124 ==.
+                                   2477 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:98: new_range = 0;	//Clear and wait for next signal
+      000658 75 42 00         [24] 2478 	mov	_new_range,#0x00
+      00065B 80 05            [24] 2479 	sjmp	00113$
+      00065D                       2480 00109$:
+                           0005A4  2481 	C$Squiggles.c$102$5$125 ==.
+                                   2482 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:102: range_adj = 0;
+      00065D E4               [12] 2483 	clr	a
+      00065E F5 49            [12] 2484 	mov	_range_adj,a
+      000660 F5 4A            [12] 2485 	mov	(_range_adj + 1),a
+      000662                       2486 00113$:
+                           0005A9  2487 	C$Squiggles.c$105$3$122 ==.
+                                   2488 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:105: if(delay == 10) 	//delay so that we don't get spammed with print messages
+      000662 74 0A            [12] 2489 	mov	a,#0x0A
+      000664 B5 40 40         [24] 2490 	cjne	a,_delay,00115$
+                           0005AE  2491 	C$Squiggles.c$107$4$126 ==.
+                                   2492 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:107: AD_Result = read_AD_input(5); //Read analog input on pin 1.5
+      000667 75 82 05         [24] 2493 	mov	dpl,#0x05
+      00066A 12 08 54         [24] 2494 	lcall	_read_AD_input
+                           0005B4  2495 	C$Squiggles.c$108$1$120 ==.
+                                   2496 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:108: voltage = ((14.4/255)*AD_Result); //Convert back to input voltage
+      00066D 85 82 4E         [24] 2497 	mov  _AD_Result,dpl
+      000670 12 14 60         [24] 2498 	lcall	___uchar2fs
+      000673 AC 82            [24] 2499 	mov	r4,dpl
+      000675 AD 83            [24] 2500 	mov	r5,dph
+      000677 AE F0            [24] 2501 	mov	r6,b
+      000679 FF               [12] 2502 	mov	r7,a
+      00067A C0 04            [24] 2503 	push	ar4
+      00067C C0 05            [24] 2504 	push	ar5
+      00067E C0 06            [24] 2505 	push	ar6
+      000680 C0 07            [24] 2506 	push	ar7
+      000682 90 4D B4         [24] 2507 	mov	dptr,#0x4DB4
+      000685 75 F0 67         [24] 2508 	mov	b,#0x67
+      000688 74 3D            [12] 2509 	mov	a,#0x3D
+      00068A 12 0B 0F         [24] 2510 	lcall	___fsmul
+      00068D AC 82            [24] 2511 	mov	r4,dpl
+      00068F AD 83            [24] 2512 	mov	r5,dph
+      000691 AE F0            [24] 2513 	mov	r6,b
+      000693 FF               [12] 2514 	mov	r7,a
+      000694 E5 81            [12] 2515 	mov	a,sp
+      000696 24 FC            [12] 2516 	add	a,#0xfc
+      000698 F5 81            [12] 2517 	mov	sp,a
+      00069A 8C 82            [24] 2518 	mov	dpl,r4
+      00069C 8D 83            [24] 2519 	mov	dph,r5
+      00069E 8E F0            [24] 2520 	mov	b,r6
+      0006A0 EF               [12] 2521 	mov	a,r7
+      0006A1 12 14 6B         [24] 2522 	lcall	___fs2uchar
+      0006A4 85 82 4F         [24] 2523 	mov	_voltage,dpl
+      0006A7                       2524 00115$:
+                           0005EE  2525 	C$Squiggles.c$110$3$122 ==.
+                                   2526 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:110: if((new_heading))	// enough overflow for a new heading
+      0006A7 E5 41            [12] 2527 	mov	a,_new_heading
+      0006A9 60 14            [24] 2528 	jz	00119$
+                           0005F2  2529 	C$Squiggles.c$112$4$127 ==.
+                                   2530 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:112: if(delay == 10) heading = read_compass();	// Delays
+      0006AB 74 0A            [12] 2531 	mov	a,#0x0A
+      0006AD B5 40 09         [24] 2532 	cjne	a,_delay,00117$
+      0006B0 12 09 46         [24] 2533 	lcall	_read_compass
+      0006B3 85 82 43         [24] 2534 	mov	_heading,dpl
+      0006B6 85 83 44         [24] 2535 	mov	(_heading + 1),dph
+      0006B9                       2536 00117$:
+                           000600  2537 	C$Squiggles.c$114$4$127 ==.
+                                   2538 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:114: set_COMPASS_PW(); // Adjust pulsewidth based on error function
+      0006B9 12 09 B4         [24] 2539 	lcall	_set_COMPASS_PW
+                           000603  2540 	C$Squiggles.c$115$4$127 ==.
+                                   2541 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:115: new_heading = 0;
+      0006BC 75 41 00         [24] 2542 	mov	_new_heading,#0x00
+      0006BF                       2543 00119$:
+                           000606  2544 	C$Squiggles.c$117$3$122 ==.
+                                   2545 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:117: if(print_delay == 20)
+      0006BF 74 14            [12] 2546 	mov	a,#0x14
+      0006C1 B5 52 02         [24] 2547 	cjne	a,_print_delay,00192$
+      0006C4 80 03            [24] 2548 	sjmp	00193$
+      0006C6                       2549 00192$:
+      0006C6 02 06 0E         [24] 2550 	ljmp	00123$
+      0006C9                       2551 00193$:
+                           000610  2552 	C$Squiggles.c$119$4$128 ==.
+                                   2553 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:119: printf("\rRange: %u\n", range);
+      0006C9 C0 45            [24] 2554 	push	_range
+      0006CB C0 46            [24] 2555 	push	(_range + 1)
+      0006CD 74 E9            [12] 2556 	mov	a,#___str_6
+      0006CF C0 E0            [24] 2557 	push	acc
+      0006D1 74 15            [12] 2558 	mov	a,#(___str_6 >> 8)
+      0006D3 C0 E0            [24] 2559 	push	acc
+      0006D5 74 80            [12] 2560 	mov	a,#0x80
+      0006D7 C0 E0            [24] 2561 	push	acc
+      0006D9 12 0E 36         [24] 2562 	lcall	_printf
+      0006DC E5 81            [12] 2563 	mov	a,sp
+      0006DE 24 FB            [12] 2564 	add	a,#0xfb
+      0006E0 F5 81            [12] 2565 	mov	sp,a
+                           000629  2566 	C$Squiggles.c$120$1$120 ==.
+                                   2567 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:120: printf("\rHeading: %u\n", heading/10);
+      0006E2 75 11 0A         [24] 2568 	mov	__divuint_PARM_2,#0x0A
+      0006E5 75 12 00         [24] 2569 	mov	(__divuint_PARM_2 + 1),#0x00
+      0006E8 85 43 82         [24] 2570 	mov	dpl,_heading
+      0006EB 85 44 83         [24] 2571 	mov	dph,(_heading + 1)
+      0006EE 12 0A E6         [24] 2572 	lcall	__divuint
+      0006F1 AE 82            [24] 2573 	mov	r6,dpl
+      0006F3 AF 83            [24] 2574 	mov	r7,dph
+      0006F5 C0 06            [24] 2575 	push	ar6
+      0006F7 C0 07            [24] 2576 	push	ar7
+      0006F9 74 F5            [12] 2577 	mov	a,#___str_7
+      0006FB C0 E0            [24] 2578 	push	acc
+      0006FD 74 15            [12] 2579 	mov	a,#(___str_7 >> 8)
+      0006FF C0 E0            [24] 2580 	push	acc
+      000701 74 80            [12] 2581 	mov	a,#0x80
+      000703 C0 E0            [24] 2582 	push	acc
+      000705 12 0E 36         [24] 2583 	lcall	_printf
+      000708 E5 81            [12] 2584 	mov	a,sp
+      00070A 24 FB            [12] 2585 	add	a,#0xfb
+      00070C F5 81            [12] 2586 	mov	sp,a
+                           000655  2587 	C$Squiggles.c$121$4$128 ==.
+                                   2588 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:121: printf("\rVoltage is %u\n", voltage);
+      00070E AE 4F            [24] 2589 	mov	r6,_voltage
+      000710 7F 00            [12] 2590 	mov	r7,#0x00
+      000712 C0 06            [24] 2591 	push	ar6
+      000714 C0 07            [24] 2592 	push	ar7
+      000716 74 03            [12] 2593 	mov	a,#___str_8
+      000718 C0 E0            [24] 2594 	push	acc
+      00071A 74 16            [12] 2595 	mov	a,#(___str_8 >> 8)
+      00071C C0 E0            [24] 2596 	push	acc
+      00071E 74 80            [12] 2597 	mov	a,#0x80
+      000720 C0 E0            [24] 2598 	push	acc
+      000722 12 0E 36         [24] 2599 	lcall	_printf
+      000725 E5 81            [12] 2600 	mov	a,sp
+      000727 24 FB            [12] 2601 	add	a,#0xfb
+      000729 F5 81            [12] 2602 	mov	sp,a
+                           000672  2603 	C$Squiggles.c$122$4$128 ==.
+                                   2604 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:122: lcd_print("\rRange: %u\n", range);
+      00072B C0 45            [24] 2605 	push	_range
+      00072D C0 46            [24] 2606 	push	(_range + 1)
+      00072F 74 E9            [12] 2607 	mov	a,#___str_6
+      000731 C0 E0            [24] 2608 	push	acc
+      000733 74 15            [12] 2609 	mov	a,#(___str_6 >> 8)
+      000735 C0 E0            [24] 2610 	push	acc
+      000737 74 80            [12] 2611 	mov	a,#0x80
+      000739 C0 E0            [24] 2612 	push	acc
+      00073B 12 01 15         [24] 2613 	lcall	_lcd_print
+      00073E E5 81            [12] 2614 	mov	a,sp
+      000740 24 FB            [12] 2615 	add	a,#0xfb
+      000742 F5 81            [12] 2616 	mov	sp,a
+                           00068B  2617 	C$Squiggles.c$123$1$120 ==.
+                                   2618 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:123: lcd_print("\rHeading: %u\n", heading/10);
+      000744 75 11 0A         [24] 2619 	mov	__divuint_PARM_2,#0x0A
+      000747 75 12 00         [24] 2620 	mov	(__divuint_PARM_2 + 1),#0x00
+      00074A 85 43 82         [24] 2621 	mov	dpl,_heading
+      00074D 85 44 83         [24] 2622 	mov	dph,(_heading + 1)
+      000750 12 0A E6         [24] 2623 	lcall	__divuint
+      000753 AE 82            [24] 2624 	mov	r6,dpl
+      000755 AF 83            [24] 2625 	mov	r7,dph
+      000757 C0 06            [24] 2626 	push	ar6
+      000759 C0 07            [24] 2627 	push	ar7
+      00075B 74 F5            [12] 2628 	mov	a,#___str_7
+      00075D C0 E0            [24] 2629 	push	acc
+      00075F 74 15            [12] 2630 	mov	a,#(___str_7 >> 8)
+      000761 C0 E0            [24] 2631 	push	acc
+      000763 74 80            [12] 2632 	mov	a,#0x80
+      000765 C0 E0            [24] 2633 	push	acc
+      000767 12 01 15         [24] 2634 	lcall	_lcd_print
+      00076A E5 81            [12] 2635 	mov	a,sp
+      00076C 24 FB            [12] 2636 	add	a,#0xfb
+      00076E F5 81            [12] 2637 	mov	sp,a
+                           0006B7  2638 	C$Squiggles.c$124$4$128 ==.
+                                   2639 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:124: lcd_print("\rVoltage: %u\n", voltage);
+      000770 AE 4F            [24] 2640 	mov	r6,_voltage
+      000772 7F 00            [12] 2641 	mov	r7,#0x00
+      000774 C0 06            [24] 2642 	push	ar6
+      000776 C0 07            [24] 2643 	push	ar7
+      000778 74 13            [12] 2644 	mov	a,#___str_9
+      00077A C0 E0            [24] 2645 	push	acc
+      00077C 74 16            [12] 2646 	mov	a,#(___str_9 >> 8)
+      00077E C0 E0            [24] 2647 	push	acc
+      000780 74 80            [12] 2648 	mov	a,#0x80
+      000782 C0 E0            [24] 2649 	push	acc
+      000784 12 01 15         [24] 2650 	lcall	_lcd_print
+      000787 E5 81            [12] 2651 	mov	a,sp
+      000789 24 FB            [12] 2652 	add	a,#0xfb
+      00078B F5 81            [12] 2653 	mov	sp,a
+      00078D 02 06 0E         [24] 2654 	ljmp	00123$
+      000790                       2655 00125$:
+                           0006D7  2656 	C$Squiggles.c$129$2$121 ==.
+                                   2657 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:129: if(RANGER_SWITCH || COMPASS_SWITCH)
+      000790 20 B6 06         [24] 2658 	jb	_RANGER_SWITCH,00126$
+      000793 20 B7 03         [24] 2659 	jb	_COMPASS_SWITCH,00195$
+      000796 02 06 0E         [24] 2660 	ljmp	00123$
+      000799                       2661 00195$:
+      000799                       2662 00126$:
+                           0006E0  2663 	C$Squiggles.c$131$3$129 ==.
+                                   2664 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:131: PCA0CP0 = 0xFFFF - COMPASS_CENTER;
+      000799 75 EA 37         [24] 2665 	mov	((_PCA0CP0 >> 0) & 0xFF),#0x37
+      00079C 75 FA F5         [24] 2666 	mov	((_PCA0CP0 >> 8) & 0xFF),#0xF5
+                           0006E6  2667 	C$Squiggles.c$132$3$129 ==.
+                                   2668 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:132: PCA0CP2 = 0xFFFF - COMPASS_CENTER;
+      00079F 75 EC 37         [24] 2669 	mov	((_PCA0CP2 >> 0) & 0xFF),#0x37
+      0007A2 75 FC F5         [24] 2670 	mov	((_PCA0CP2 >> 8) & 0xFF),#0xF5
+      0007A5 02 06 0E         [24] 2671 	ljmp	00123$
+                           0006EF  2672 	C$Squiggles.c$135$1$120 ==.
+                           0006EF  2673 	XG$main$0$0 ==.
+      0007A8 22               [24] 2674 	ret
+                                   2675 ;------------------------------------------------------------
+                                   2676 ;Allocation info for local variables in function 'Port_Init'
+                                   2677 ;------------------------------------------------------------
+                           0006F0  2678 	G$Port_Init$0$0 ==.
+                           0006F0  2679 	C$Squiggles.c$139$1$120 ==.
+                                   2680 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:139: void Port_Init(void)	
+                                   2681 ;	-----------------------------------------
+                                   2682 ;	 function Port_Init
+                                   2683 ;	-----------------------------------------
+      0007A9                       2684 _Port_Init:
+                           0006F0  2685 	C$Squiggles.c$141$1$131 ==.
+                                   2686 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:141: XBR0 = 0x27;
+      0007A9 75 E1 27         [24] 2687 	mov	_XBR0,#0x27
+                           0006F3  2688 	C$Squiggles.c$142$1$131 ==.
+                                   2689 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:142: P1MDIN 	&= 0xDF;	// set pin 1.3 for analog input	
+      0007AC 53 BD DF         [24] 2690 	anl	_P1MDIN,#0xDF
+                           0006F6  2691 	C$Squiggles.c$143$1$131 ==.
+                                   2692 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:143: P1MDOUT |= 0x05;	//set output pin for CEX0 in push-pull mode
+      0007AF 43 A5 05         [24] 2693 	orl	_P1MDOUT,#0x05
+                           0006F9  2694 	C$Squiggles.c$144$1$131 ==.
+                                   2695 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:144: P1MDOUT &= 0xDF;	// set input pin for 1.3 to open-drain
+      0007B2 53 A5 DF         [24] 2696 	anl	_P1MDOUT,#0xDF
+                           0006FC  2697 	C$Squiggles.c$145$1$131 ==.
+                                   2698 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:145: P1		|= ~0xDF;	// set input pin for 1.3 to high impedence
+      0007B5 AF 90            [24] 2699 	mov	r7,_P1
+      0007B7 74 20            [12] 2700 	mov	a,#0x20
+      0007B9 4F               [12] 2701 	orl	a,r7
+      0007BA F5 90            [12] 2702 	mov	_P1,a
+                           000703  2703 	C$Squiggles.c$146$1$131 ==.
+                                   2704 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:146: P3MDOUT &= 0x7F;	// set input pin for 3.7 to open-drain
+      0007BC 53 A7 7F         [24] 2705 	anl	_P3MDOUT,#0x7F
+                           000706  2706 	C$Squiggles.c$147$1$131 ==.
+                                   2707 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:147: P3		|= ~0x7F;	// set input pin for 3.7 to high impedence
+      0007BF AF B0            [24] 2708 	mov	r7,_P3
+      0007C1 74 80            [12] 2709 	mov	a,#0x80
+      0007C3 4F               [12] 2710 	orl	a,r7
+      0007C4 F5 B0            [12] 2711 	mov	_P3,a
+                           00070D  2712 	C$Squiggles.c$149$1$131 ==.
+                           00070D  2713 	XG$Port_Init$0$0 ==.
+      0007C6 22               [24] 2714 	ret
+                                   2715 ;------------------------------------------------------------
+                                   2716 ;Allocation info for local variables in function 'Interrupt_Init'
+                                   2717 ;------------------------------------------------------------
+                           00070E  2718 	G$Interrupt_Init$0$0 ==.
+                           00070E  2719 	C$Squiggles.c$153$1$131 ==.
+                                   2720 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:153: void Interrupt_Init(void)
+                                   2721 ;	-----------------------------------------
+                                   2722 ;	 function Interrupt_Init
+                                   2723 ;	-----------------------------------------
+      0007C7                       2724 _Interrupt_Init:
+                           00070E  2725 	C$Squiggles.c$155$1$133 ==.
+                                   2726 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:155: IE |= 0x02;
+      0007C7 43 A8 02         [24] 2727 	orl	_IE,#0x02
+                           000711  2728 	C$Squiggles.c$156$1$133 ==.
+                                   2729 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:156: EIE1 |= 0x08;
+      0007CA 43 E6 08         [24] 2730 	orl	_EIE1,#0x08
+                           000714  2731 	C$Squiggles.c$157$1$133 ==.
+                                   2732 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:157: EA = 1;
+      0007CD D2 AF            [12] 2733 	setb	_EA
+                           000716  2734 	C$Squiggles.c$158$1$133 ==.
+                           000716  2735 	XG$Interrupt_Init$0$0 ==.
+      0007CF 22               [24] 2736 	ret
+                                   2737 ;------------------------------------------------------------
+                                   2738 ;Allocation info for local variables in function 'PCA_Init'
+                                   2739 ;------------------------------------------------------------
+                           000717  2740 	G$PCA_Init$0$0 ==.
+                           000717  2741 	C$Squiggles.c$162$1$133 ==.
+                                   2742 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:162: void PCA_Init(void)
+                                   2743 ;	-----------------------------------------
+                                   2744 ;	 function PCA_Init
+                                   2745 ;	-----------------------------------------
+      0007D0                       2746 _PCA_Init:
+                           000717  2747 	C$Squiggles.c$164$1$135 ==.
+                                   2748 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:164: PCA0MD = 0x81;      // SYSCLK/12, enable CF interrupts, suspend when idle
+      0007D0 75 D9 81         [24] 2749 	mov	_PCA0MD,#0x81
+                           00071A  2750 	C$Squiggles.c$165$1$135 ==.
+                                   2751 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:165: PCA0CPM0 = 0xC2;    // 16 bit, enable compare, enable PWM; NOT USED HERE
+      0007D3 75 DA C2         [24] 2752 	mov	_PCA0CPM0,#0xC2
+                           00071D  2753 	C$Squiggles.c$166$1$135 ==.
+                                   2754 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:166: PCA0CPM2 = 0xC2;
+      0007D6 75 DC C2         [24] 2755 	mov	_PCA0CPM2,#0xC2
+                           000720  2756 	C$Squiggles.c$167$1$135 ==.
+                                   2757 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:167: PCA0CN = 0x40;     // enable PCA
+      0007D9 75 D8 40         [24] 2758 	mov	_PCA0CN,#0x40
+                           000723  2759 	C$Squiggles.c$168$1$135 ==.
+                           000723  2760 	XG$PCA_Init$0$0 ==.
+      0007DC 22               [24] 2761 	ret
+                                   2762 ;------------------------------------------------------------
+                                   2763 ;Allocation info for local variables in function 'SMB0_Init'
+                                   2764 ;------------------------------------------------------------
+                           000724  2765 	G$SMB0_Init$0$0 ==.
+                           000724  2766 	C$Squiggles.c$172$1$135 ==.
+                                   2767 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:172: void SMB0_Init(void)    // This was at the top, moved it here to call wait()
+                                   2768 ;	-----------------------------------------
+                                   2769 ;	 function SMB0_Init
+                                   2770 ;	-----------------------------------------
+      0007DD                       2771 _SMB0_Init:
+                           000724  2772 	C$Squiggles.c$174$1$137 ==.
+                                   2773 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:174: SMB0CR = 0x93;      // Set SCL to 100KHz
+      0007DD 75 CF 93         [24] 2774 	mov	_SMB0CR,#0x93
+                           000727  2775 	C$Squiggles.c$175$1$137 ==.
+                                   2776 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:175: ENSMB = 1;          // Enable SMBUS0
+      0007E0 D2 C6            [12] 2777 	setb	_ENSMB
+                           000729  2778 	C$Squiggles.c$176$1$137 ==.
+                           000729  2779 	XG$SMB0_Init$0$0 ==.
+      0007E2 22               [24] 2780 	ret
+                                   2781 ;------------------------------------------------------------
+                                   2782 ;Allocation info for local variables in function 'PCA_ISR'
+                                   2783 ;------------------------------------------------------------
+                           00072A  2784 	G$PCA_ISR$0$0 ==.
+                           00072A  2785 	C$Squiggles.c$180$1$137 ==.
+                                   2786 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:180: void PCA_ISR(void) __interrupt 9
+                                   2787 ;	-----------------------------------------
+                                   2788 ;	 function PCA_ISR
+                                   2789 ;	-----------------------------------------
+      0007E3                       2790 _PCA_ISR:
+      0007E3 C0 E0            [24] 2791 	push	acc
+      0007E5 C0 D0            [24] 2792 	push	psw
+                           00072E  2793 	C$Squiggles.c$182$1$139 ==.
+                                   2794 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:182: if (CF)
+                           00072E  2795 	C$Squiggles.c$184$2$140 ==.
+                                   2796 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:184: CF = 0;                     // clear the interrupt flag
+      0007E7 10 DF 02         [24] 2797 	jbc	_CF,00134$
+      0007EA 80 56            [24] 2798 	sjmp	00112$
+      0007EC                       2799 00134$:
+                           000733  2800 	C$Squiggles.c$185$2$140 ==.
+                                   2801 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:185: nCounts++;					// Counts overflows for initial delay
+      0007EC 05 34            [12] 2802 	inc	_nCounts
+      0007EE E4               [12] 2803 	clr	a
+      0007EF B5 34 02         [24] 2804 	cjne	a,_nCounts,00135$
+      0007F2 05 35            [12] 2805 	inc	(_nCounts + 1)
+      0007F4                       2806 00135$:
+                           00073B  2807 	C$Squiggles.c$186$2$140 ==.
+                                   2808 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:186: PCA0 = PCA_START;
+      0007F4 75 E9 00         [24] 2809 	mov	((_PCA0 >> 0) & 0xFF),#0x00
+      0007F7 75 F9 70         [24] 2810 	mov	((_PCA0 >> 8) & 0xFF),#0x70
+                           000741  2811 	C$Squiggles.c$187$2$140 ==.
+                                   2812 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:187: if (nCounts > 50)
+      0007FA C3               [12] 2813 	clr	c
+      0007FB 74 32            [12] 2814 	mov	a,#0x32
+      0007FD 95 34            [12] 2815 	subb	a,_nCounts
+      0007FF E4               [12] 2816 	clr	a
+      000800 95 35            [12] 2817 	subb	a,(_nCounts + 1)
+      000802 50 0C            [24] 2818 	jnc	00102$
+                           00074B  2819 	C$Squiggles.c$189$3$141 ==.
+                                   2820 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:189: nCounts = 0;
+      000804 E4               [12] 2821 	clr	a
+      000805 F5 34            [12] 2822 	mov	_nCounts,a
+      000807 F5 35            [12] 2823 	mov	(_nCounts + 1),a
+                           000750  2824 	C$Squiggles.c$190$3$141 ==.
+                                   2825 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:190: Counts++;               // seconds counter
+      000809 05 32            [12] 2826 	inc	_Counts
+                                   2827 ;	genFromRTrack removed	clr	a
+      00080B B5 32 02         [24] 2828 	cjne	a,_Counts,00137$
+      00080E 05 33            [12] 2829 	inc	(_Counts + 1)
+      000810                       2830 00137$:
+      000810                       2831 00102$:
+                           000757  2832 	C$Squiggles.c$192$2$140 ==.
+                                   2833 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:192: h_count++;					// delay 
+      000810 05 3E            [12] 2834 	inc	_h_count
+                           000759  2835 	C$Squiggles.c$193$2$140 ==.
+                                   2836 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:193: if (h_count>=2)
+      000812 74 FE            [12] 2837 	mov	a,#0x100 - 0x02
+      000814 25 3E            [12] 2838 	add	a,_h_count
+      000816 50 06            [24] 2839 	jnc	00104$
+                           00075F  2840 	C$Squiggles.c$195$3$142 ==.
+                                   2841 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:195: new_heading=1;
+      000818 75 41 01         [24] 2842 	mov	_new_heading,#0x01
+                           000762  2843 	C$Squiggles.c$196$3$142 ==.
+                                   2844 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:196: h_count = 0;
+      00081B 75 3E 00         [24] 2845 	mov	_h_count,#0x00
+      00081E                       2846 00104$:
+                           000765  2847 	C$Squiggles.c$198$2$140 ==.
+                                   2848 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:198: delay++;
+      00081E 05 40            [12] 2849 	inc	_delay
+                           000767  2850 	C$Squiggles.c$199$2$140 ==.
+                                   2851 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:199: if(delay == 11) delay=0;
+      000820 74 0B            [12] 2852 	mov	a,#0x0B
+      000822 B5 40 03         [24] 2853 	cjne	a,_delay,00106$
+      000825 75 40 00         [24] 2854 	mov	_delay,#0x00
+      000828                       2855 00106$:
+                           00076F  2856 	C$Squiggles.c$200$2$140 ==.
+                                   2857 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:200: print_delay++;
+      000828 05 52            [12] 2858 	inc	_print_delay
+                           000771  2859 	C$Squiggles.c$201$2$140 ==.
+                                   2860 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:201: if(print_delay == 21) print_delay = 0;
+      00082A 74 15            [12] 2861 	mov	a,#0x15
+      00082C B5 52 03         [24] 2862 	cjne	a,_print_delay,00108$
+      00082F 75 52 00         [24] 2863 	mov	_print_delay,#0x00
+      000832                       2864 00108$:
+                           000779  2865 	C$Squiggles.c$202$2$140 ==.
+                                   2866 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:202: r_count++;
+      000832 05 3F            [12] 2867 	inc	_r_count
+                           00077B  2868 	C$Squiggles.c$203$2$140 ==.
+                                   2869 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:203: if (r_count>=4)
+      000834 74 FC            [12] 2870 	mov	a,#0x100 - 0x04
+      000836 25 3F            [12] 2871 	add	a,_r_count
+      000838 50 0B            [24] 2872 	jnc	00114$
+                           000781  2873 	C$Squiggles.c$205$3$143 ==.
+                                   2874 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:205: new_range = 1;
+      00083A 75 42 01         [24] 2875 	mov	_new_range,#0x01
+                           000784  2876 	C$Squiggles.c$206$3$143 ==.
+                                   2877 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:206: r_count = 0;
+      00083D 75 3F 00         [24] 2878 	mov	_r_count,#0x00
+      000840 80 03            [24] 2879 	sjmp	00114$
+      000842                       2880 00112$:
+                           000789  2881 	C$Squiggles.c$209$1$139 ==.
+                                   2882 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:209: else PCA0CN &= 0xC0;           // clear all other 9-type interrupts
+      000842 53 D8 C0         [24] 2883 	anl	_PCA0CN,#0xC0
+      000845                       2884 00114$:
+      000845 D0 D0            [24] 2885 	pop	psw
+      000847 D0 E0            [24] 2886 	pop	acc
+                           000790  2887 	C$Squiggles.c$210$1$139 ==.
+                           000790  2888 	XG$PCA_ISR$0$0 ==.
+      000849 32               [24] 2889 	reti
+                                   2890 ;	eliminated unneeded mov psw,# (no regs used in bank)
+                                   2891 ;	eliminated unneeded push/pop dpl
+                                   2892 ;	eliminated unneeded push/pop dph
+                                   2893 ;	eliminated unneeded push/pop b
+                                   2894 ;------------------------------------------------------------
+                                   2895 ;Allocation info for local variables in function 'ADC_Init'
+                                   2896 ;------------------------------------------------------------
+                           000791  2897 	G$ADC_Init$0$0 ==.
+                           000791  2898 	C$Squiggles.c$215$1$139 ==.
+                                   2899 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:215: void ADC_Init(void)
+                                   2900 ;	-----------------------------------------
+                                   2901 ;	 function ADC_Init
+                                   2902 ;	-----------------------------------------
+      00084A                       2903 _ADC_Init:
+                           000791  2904 	C$Squiggles.c$217$1$145 ==.
+                                   2905 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:217: REF0CN = 0x03; // Set Vref to use internal reference voltage (2.4 V)
+      00084A 75 D1 03         [24] 2906 	mov	_REF0CN,#0x03
+                           000794  2907 	C$Squiggles.c$218$1$145 ==.
+                                   2908 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:218: ADC1CN = 0x80; // Enable A/D converter (ADC1)
+      00084D 75 AA 80         [24] 2909 	mov	_ADC1CN,#0x80
+                           000797  2910 	C$Squiggles.c$219$1$145 ==.
+                                   2911 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:219: ADC1CF |= 0x01; // Set A/D converter gain to 1
+      000850 43 AB 01         [24] 2912 	orl	_ADC1CF,#0x01
+                           00079A  2913 	C$Squiggles.c$220$1$145 ==.
+                           00079A  2914 	XG$ADC_Init$0$0 ==.
+      000853 22               [24] 2915 	ret
+                                   2916 ;------------------------------------------------------------
+                                   2917 ;Allocation info for local variables in function 'read_AD_input'
+                                   2918 ;------------------------------------------------------------
+                                   2919 ;n                         Allocated to registers 
+                                   2920 ;------------------------------------------------------------
+                           00079B  2921 	G$read_AD_input$0$0 ==.
+                           00079B  2922 	C$Squiggles.c$224$1$145 ==.
+                                   2923 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:224: unsigned char read_AD_input(unsigned char n)
+                                   2924 ;	-----------------------------------------
+                                   2925 ;	 function read_AD_input
+                                   2926 ;	-----------------------------------------
+      000854                       2927 _read_AD_input:
+      000854 85 82 AC         [24] 2928 	mov	_AMX1SL,dpl
+                           00079E  2929 	C$Squiggles.c$227$1$147 ==.
+                                   2930 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:227: ADC1CN = ADC1CN & ~0x20; // Clear the "Conversion Completed" flag
+      000857 AF AA            [24] 2931 	mov	r7,_ADC1CN
+      000859 74 DF            [12] 2932 	mov	a,#0xDF
+      00085B 5F               [12] 2933 	anl	a,r7
+      00085C F5 AA            [12] 2934 	mov	_ADC1CN,a
+                           0007A5  2935 	C$Squiggles.c$228$1$147 ==.
+                                   2936 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:228: ADC1CN = ADC1CN | 0x10; // Initiate A/D conversion
+      00085E 43 AA 10         [24] 2937 	orl	_ADC1CN,#0x10
+                           0007A8  2938 	C$Squiggles.c$230$1$147 ==.
+                                   2939 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:230: while ((ADC1CN & 0x20) == 0x00);// Wait for conversion to complete
+      000861                       2940 00101$:
+      000861 E5 AA            [12] 2941 	mov	a,_ADC1CN
+      000863 30 E5 FB         [24] 2942 	jnb	acc.5,00101$
+                           0007AD  2943 	C$Squiggles.c$232$1$147 ==.
+                                   2944 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:232: return ADC1; // Return digital value in ADC1 register
+      000866 85 9C 82         [24] 2945 	mov	dpl,_ADC1
+                           0007B0  2946 	C$Squiggles.c$233$1$147 ==.
+                           0007B0  2947 	XG$read_AD_input$0$0 ==.
+      000869 22               [24] 2948 	ret
+                                   2949 ;------------------------------------------------------------
+                                   2950 ;Allocation info for local variables in function 'Pick_Heading'
+                                   2951 ;------------------------------------------------------------
+                                   2952 ;user_heading              Allocated to registers r6 r7 
+                                   2953 ;------------------------------------------------------------
+                           0007B1  2954 	G$Pick_Heading$0$0 ==.
+                           0007B1  2955 	C$Squiggles.c$237$1$147 ==.
+                                   2956 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:237: void Pick_Heading(void)
+                                   2957 ;	-----------------------------------------
+                                   2958 ;	 function Pick_Heading
+                                   2959 ;	-----------------------------------------
+      00086A                       2960 _Pick_Heading:
+                           0007B1  2961 	C$Squiggles.c$240$1$149 ==.
+                                   2962 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:240: lcd_clear();
+      00086A 12 01 9A         [24] 2963 	lcall	_lcd_clear
+                           0007B4  2964 	C$Squiggles.c$241$1$149 ==.
+                                   2965 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:241: lcd_print("\rEnter desired heading for the compass.\n");
+      00086D 74 21            [12] 2966 	mov	a,#___str_10
+      00086F C0 E0            [24] 2967 	push	acc
+      000871 74 16            [12] 2968 	mov	a,#(___str_10 >> 8)
+      000873 C0 E0            [24] 2969 	push	acc
+      000875 74 80            [12] 2970 	mov	a,#0x80
+      000877 C0 E0            [24] 2971 	push	acc
+      000879 12 01 15         [24] 2972 	lcall	_lcd_print
+      00087C 15 81            [12] 2973 	dec	sp
+      00087E 15 81            [12] 2974 	dec	sp
+      000880 15 81            [12] 2975 	dec	sp
+                           0007C9  2976 	C$Squiggles.c$242$1$149 ==.
+                                   2977 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:242: user_heading = kpd_input(1);
+      000882 75 82 01         [24] 2978 	mov	dpl,#0x01
+      000885 12 02 52         [24] 2979 	lcall	_kpd_input
+      000888 AE 82            [24] 2980 	mov	r6,dpl
+      00088A AF 83            [24] 2981 	mov	r7,dph
+                           0007D3  2982 	C$Squiggles.c$243$1$149 ==.
+                                   2983 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:243: while(user_heading > 3600) //Headings must be between 0 and 3600
+      00088C 8E 04            [24] 2984 	mov	ar4,r6
+      00088E 8F 05            [24] 2985 	mov	ar5,r7
+      000890                       2986 00101$:
+      000890 C3               [12] 2987 	clr	c
+      000891 74 10            [12] 2988 	mov	a,#0x10
+      000893 9C               [12] 2989 	subb	a,r4
+      000894 74 8E            [12] 2990 	mov	a,#(0x0E ^ 0x80)
+      000896 8D F0            [24] 2991 	mov	b,r5
+      000898 63 F0 80         [24] 2992 	xrl	b,#0x80
+      00089B 95 F0            [12] 2993 	subb	a,b
+      00089D 50 0A            [24] 2994 	jnc	00113$
+                           0007E6  2995 	C$Squiggles.c$245$2$150 ==.
+                                   2996 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:245: user_heading -= 3600;
+      00089F EC               [12] 2997 	mov	a,r4
+      0008A0 24 F0            [12] 2998 	add	a,#0xF0
+      0008A2 FC               [12] 2999 	mov	r4,a
+      0008A3 ED               [12] 3000 	mov	a,r5
+      0008A4 34 F1            [12] 3001 	addc	a,#0xF1
+      0008A6 FD               [12] 3002 	mov	r5,a
+                           0007EE  3003 	C$Squiggles.c$247$1$149 ==.
+                                   3004 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:247: while(user_heading < 0)
+      0008A7 80 E7            [24] 3005 	sjmp	00101$
+      0008A9                       3006 00113$:
+      0008A9 8C 06            [24] 3007 	mov	ar6,r4
+      0008AB 8D 07            [24] 3008 	mov	ar7,r5
+      0008AD 8E 04            [24] 3009 	mov	ar4,r6
+      0008AF 8F 05            [24] 3010 	mov	ar5,r7
+      0008B1                       3011 00104$:
+      0008B1 ED               [12] 3012 	mov	a,r5
+      0008B2 30 E7 0A         [24] 3013 	jnb	acc.7,00114$
+                           0007FC  3014 	C$Squiggles.c$249$2$151 ==.
+                                   3015 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:249: user_heading += 3600;
+      0008B5 74 10            [12] 3016 	mov	a,#0x10
+      0008B7 2C               [12] 3017 	add	a,r4
+      0008B8 FC               [12] 3018 	mov	r4,a
+      0008B9 74 0E            [12] 3019 	mov	a,#0x0E
+      0008BB 3D               [12] 3020 	addc	a,r5
+      0008BC FD               [12] 3021 	mov	r5,a
+      0008BD 80 F2            [24] 3022 	sjmp	00104$
+      0008BF                       3023 00114$:
+      0008BF 8C 06            [24] 3024 	mov	ar6,r4
+      0008C1 8D 07            [24] 3025 	mov	ar7,r5
+                           00080A  3026 	C$Squiggles.c$251$1$149 ==.
+                                   3027 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:251: lcd_clear();
+      0008C3 C0 07            [24] 3028 	push	ar7
+      0008C5 C0 06            [24] 3029 	push	ar6
+      0008C7 12 01 9A         [24] 3030 	lcall	_lcd_clear
+      0008CA D0 06            [24] 3031 	pop	ar6
+      0008CC D0 07            [24] 3032 	pop	ar7
+                           000815  3033 	C$Squiggles.c$252$1$149 ==.
+                                   3034 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:252: desired_heading = user_heading;
+      0008CE 8E 38            [24] 3035 	mov	_desired_heading,r6
+      0008D0 8F 39            [24] 3036 	mov	(_desired_heading + 1),r7
+                           000819  3037 	C$Squiggles.c$253$1$149 ==.
+                                   3038 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:253: printf("\rPick_Heading verified\n");
+      0008D2 74 4A            [12] 3039 	mov	a,#___str_11
+      0008D4 C0 E0            [24] 3040 	push	acc
+      0008D6 74 16            [12] 3041 	mov	a,#(___str_11 >> 8)
+      0008D8 C0 E0            [24] 3042 	push	acc
+      0008DA 74 80            [12] 3043 	mov	a,#0x80
+      0008DC C0 E0            [24] 3044 	push	acc
+      0008DE 12 0E 36         [24] 3045 	lcall	_printf
+      0008E1 15 81            [12] 3046 	dec	sp
+      0008E3 15 81            [12] 3047 	dec	sp
+      0008E5 15 81            [12] 3048 	dec	sp
+                           00082E  3049 	C$Squiggles.c$254$1$149 ==.
+                           00082E  3050 	XG$Pick_Heading$0$0 ==.
+      0008E7 22               [24] 3051 	ret
+                                   3052 ;------------------------------------------------------------
+                                   3053 ;Allocation info for local variables in function 'Pick_Compass_Gain'
+                                   3054 ;------------------------------------------------------------
+                                   3055 ;user_gain                 Allocated to registers r6 r7 
+                                   3056 ;------------------------------------------------------------
+                           00082F  3057 	G$Pick_Compass_Gain$0$0 ==.
+                           00082F  3058 	C$Squiggles.c$258$1$149 ==.
+                                   3059 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:258: void Pick_Compass_Gain(void)
+                                   3060 ;	-----------------------------------------
+                                   3061 ;	 function Pick_Compass_Gain
+                                   3062 ;	-----------------------------------------
+      0008E8                       3063 _Pick_Compass_Gain:
+                           00082F  3064 	C$Squiggles.c$261$1$153 ==.
+                                   3065 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:261: lcd_clear();
+      0008E8 12 01 9A         [24] 3066 	lcall	_lcd_clear
+                           000832  3067 	C$Squiggles.c$262$1$153 ==.
+                                   3068 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:262: lcd_print("\rEnter desired gain for the compass.\n");
+      0008EB 74 62            [12] 3069 	mov	a,#___str_12
+      0008ED C0 E0            [24] 3070 	push	acc
+      0008EF 74 16            [12] 3071 	mov	a,#(___str_12 >> 8)
+      0008F1 C0 E0            [24] 3072 	push	acc
+      0008F3 74 80            [12] 3073 	mov	a,#0x80
+      0008F5 C0 E0            [24] 3074 	push	acc
+      0008F7 12 01 15         [24] 3075 	lcall	_lcd_print
+      0008FA 15 81            [12] 3076 	dec	sp
+      0008FC 15 81            [12] 3077 	dec	sp
+      0008FE 15 81            [12] 3078 	dec	sp
+                           000847  3079 	C$Squiggles.c$263$1$153 ==.
+                                   3080 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:263: user_gain = kpd_input(1);	// Obtain the gain from the user
+      000900 75 82 01         [24] 3081 	mov	dpl,#0x01
+      000903 12 02 52         [24] 3082 	lcall	_kpd_input
+      000906 AE 82            [24] 3083 	mov	r6,dpl
+      000908 AF 83            [24] 3084 	mov	r7,dph
+                           000851  3085 	C$Squiggles.c$264$1$153 ==.
+                                   3086 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:264: lcd_clear();
+      00090A C0 07            [24] 3087 	push	ar7
+      00090C C0 06            [24] 3088 	push	ar6
+      00090E 12 01 9A         [24] 3089 	lcall	_lcd_clear
+      000911 D0 06            [24] 3090 	pop	ar6
+      000913 D0 07            [24] 3091 	pop	ar7
+                           00085C  3092 	C$Squiggles.c$265$1$153 ==.
+                                   3093 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:265: compass_gain = (float)((user_gain)/1000); //Decimal value
+      000915 75 11 E8         [24] 3094 	mov	__divsint_PARM_2,#0xE8
+      000918 75 12 03         [24] 3095 	mov	(__divsint_PARM_2 + 1),#0x03
+      00091B 8E 82            [24] 3096 	mov	dpl,r6
+      00091D 8F 83            [24] 3097 	mov	dph,r7
+      00091F 12 14 B3         [24] 3098 	lcall	__divsint
+      000922 12 0D 9F         [24] 3099 	lcall	___sint2fs
+      000925 85 82 3A         [24] 3100 	mov	_compass_gain,dpl
+      000928 85 83 3B         [24] 3101 	mov	(_compass_gain + 1),dph
+      00092B 85 F0 3C         [24] 3102 	mov	(_compass_gain + 2),b
+      00092E F5 3D            [12] 3103 	mov	(_compass_gain + 3),a
+                           000877  3104 	C$Squiggles.c$266$1$153 ==.
+                                   3105 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:266: printf("\rPick_Compass_Gain verified\n");
+      000930 74 88            [12] 3106 	mov	a,#___str_13
+      000932 C0 E0            [24] 3107 	push	acc
+      000934 74 16            [12] 3108 	mov	a,#(___str_13 >> 8)
+      000936 C0 E0            [24] 3109 	push	acc
+      000938 74 80            [12] 3110 	mov	a,#0x80
+      00093A C0 E0            [24] 3111 	push	acc
+      00093C 12 0E 36         [24] 3112 	lcall	_printf
+      00093F 15 81            [12] 3113 	dec	sp
+      000941 15 81            [12] 3114 	dec	sp
+      000943 15 81            [12] 3115 	dec	sp
+                           00088C  3116 	C$Squiggles.c$267$1$153 ==.
+                           00088C  3117 	XG$Pick_Compass_Gain$0$0 ==.
+      000945 22               [24] 3118 	ret
+                                   3119 ;------------------------------------------------------------
+                                   3120 ;Allocation info for local variables in function 'read_compass'
+                                   3121 ;------------------------------------------------------------
+                                   3122 ;addr                      Allocated to registers 
+                                   3123 ;Data                      Allocated with name '_read_compass_Data_1_155'
+                                   3124 ;read_heading              Allocated to registers 
+                                   3125 ;------------------------------------------------------------
+                           00088D  3126 	G$read_compass$0$0 ==.
+                           00088D  3127 	C$Squiggles.c$271$1$153 ==.
+                                   3128 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:271: int read_compass(void)
+                                   3129 ;	-----------------------------------------
+                                   3130 ;	 function read_compass
+                                   3131 ;	-----------------------------------------
+      000946                       3132 _read_compass:
+                           00088D  3133 	C$Squiggles.c$276$1$155 ==.
+                                   3134 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:276: i2c_read_data(addr, 2, Data, 2); // read two byte, starting at reg 2
+      000946 75 2D 53         [24] 3135 	mov	_i2c_read_data_PARM_3,#_read_compass_Data_1_155
+      000949 75 2E 00         [24] 3136 	mov	(_i2c_read_data_PARM_3 + 1),#0x00
+      00094C 75 2F 40         [24] 3137 	mov	(_i2c_read_data_PARM_3 + 2),#0x40
+      00094F 75 2C 02         [24] 3138 	mov	_i2c_read_data_PARM_2,#0x02
+      000952 75 30 02         [24] 3139 	mov	_i2c_read_data_PARM_4,#0x02
+      000955 75 82 C0         [24] 3140 	mov	dpl,#0xC0
+      000958 12 04 A1         [24] 3141 	lcall	_i2c_read_data
+                           0008A2  3142 	C$Squiggles.c$277$1$155 ==.
+                                   3143 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:277: read_heading =(((unsigned int)Data[0] << 8) | Data[1]); //combine the two values
+      00095B AF 53            [24] 3144 	mov	r7,_read_compass_Data_1_155
+      00095D 7E 00            [12] 3145 	mov	r6,#0x00
+      00095F AC 54            [24] 3146 	mov	r4,(_read_compass_Data_1_155 + 0x0001)
+      000961 7D 00            [12] 3147 	mov	r5,#0x00
+      000963 EC               [12] 3148 	mov	a,r4
+      000964 4E               [12] 3149 	orl	a,r6
+      000965 F5 82            [12] 3150 	mov	dpl,a
+      000967 ED               [12] 3151 	mov	a,r5
+      000968 4F               [12] 3152 	orl	a,r7
+      000969 F5 83            [12] 3153 	mov	dph,a
+                           0008B2  3154 	C$Squiggles.c$278$1$155 ==.
+                                   3155 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:278: return read_heading; // the heading returned in degrees between 0 and 3599
+                           0008B2  3156 	C$Squiggles.c$279$1$155 ==.
+                           0008B2  3157 	XG$read_compass$0$0 ==.
+      00096B 22               [24] 3158 	ret
+                                   3159 ;------------------------------------------------------------
+                                   3160 ;Allocation info for local variables in function 'read_ranger'
+                                   3161 ;------------------------------------------------------------
+                                   3162 ;addr                      Allocated to registers 
+                                   3163 ;st_range                  Allocated to registers r6 r7 
+                                   3164 ;------------------------------------------------------------
+                           0008B3  3165 	G$read_ranger$0$0 ==.
+                           0008B3  3166 	C$Squiggles.c$283$1$155 ==.
+                                   3167 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:283: int read_ranger(void)
+                                   3168 ;	-----------------------------------------
+                                   3169 ;	 function read_ranger
+                                   3170 ;	-----------------------------------------
+      00096C                       3171 _read_ranger:
+                           0008B3  3172 	C$Squiggles.c$287$1$157 ==.
+                                   3173 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:287: i2c_read_data(addr, 2, Data, 2); // read two byte, starting at reg 2
+      00096C 75 2D 50         [24] 3174 	mov	_i2c_read_data_PARM_3,#_Data
+      00096F 75 2E 00         [24] 3175 	mov	(_i2c_read_data_PARM_3 + 1),#0x00
+      000972 75 2F 40         [24] 3176 	mov	(_i2c_read_data_PARM_3 + 2),#0x40
+      000975 75 2C 02         [24] 3177 	mov	_i2c_read_data_PARM_2,#0x02
+      000978 75 30 02         [24] 3178 	mov	_i2c_read_data_PARM_4,#0x02
+      00097B 75 82 E0         [24] 3179 	mov	dpl,#0xE0
+      00097E 12 04 A1         [24] 3180 	lcall	_i2c_read_data
+                           0008C8  3181 	C$Squiggles.c$288$1$157 ==.
+                                   3182 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:288: st_range =(((unsigned int)Data[0] << 8) | Data[1]); //combine the two values
+      000981 AF 50            [24] 3183 	mov	r7,_Data
+      000983 7E 00            [12] 3184 	mov	r6,#0x00
+      000985 AC 51            [24] 3185 	mov	r4,(_Data + 0x0001)
+      000987 7D 00            [12] 3186 	mov	r5,#0x00
+      000989 EC               [12] 3187 	mov	a,r4
+      00098A 42 06            [12] 3188 	orl	ar6,a
+      00098C ED               [12] 3189 	mov	a,r5
+      00098D 42 07            [12] 3190 	orl	ar7,a
+                           0008D6  3191 	C$Squiggles.c$290$1$157 ==.
+                                   3192 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:290: Data[0] = 0x51 ; // write 0x51 to reg 0 of the ranger:
+      00098F 75 50 51         [24] 3193 	mov	_Data,#0x51
+                           0008D9  3194 	C$Squiggles.c$291$1$157 ==.
+                                   3195 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:291: i2c_write_data(addr, 0, Data, 1) ; // write one byte of data to reg 0 at addr
+      000992 75 28 50         [24] 3196 	mov	_i2c_write_data_PARM_3,#_Data
+      000995 75 29 00         [24] 3197 	mov	(_i2c_write_data_PARM_3 + 1),#0x00
+      000998 75 2A 40         [24] 3198 	mov	(_i2c_write_data_PARM_3 + 2),#0x40
+      00099B 75 27 00         [24] 3199 	mov	_i2c_write_data_PARM_2,#0x00
+      00099E 75 2B 01         [24] 3200 	mov	_i2c_write_data_PARM_4,#0x01
+      0009A1 75 82 E0         [24] 3201 	mov	dpl,#0xE0
+      0009A4 C0 07            [24] 3202 	push	ar7
+      0009A6 C0 06            [24] 3203 	push	ar6
+      0009A8 12 04 2B         [24] 3204 	lcall	_i2c_write_data
+      0009AB D0 06            [24] 3205 	pop	ar6
+      0009AD D0 07            [24] 3206 	pop	ar7
+                           0008F6  3207 	C$Squiggles.c$292$1$157 ==.
+                                   3208 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:292: return st_range;
+      0009AF 8E 82            [24] 3209 	mov	dpl,r6
+      0009B1 8F 83            [24] 3210 	mov	dph,r7
+                           0008FA  3211 	C$Squiggles.c$293$1$157 ==.
+                           0008FA  3212 	XG$read_ranger$0$0 ==.
+      0009B3 22               [24] 3213 	ret
+                                   3214 ;------------------------------------------------------------
+                                   3215 ;Allocation info for local variables in function 'set_COMPASS_PW'
+                                   3216 ;------------------------------------------------------------
+                                   3217 ;Error                     Allocated to registers r6 r7 
+                                   3218 ;------------------------------------------------------------
+                           0008FB  3219 	G$set_COMPASS_PW$0$0 ==.
+                           0008FB  3220 	C$Squiggles.c$297$1$157 ==.
+                                   3221 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:297: void set_COMPASS_PW(void)
+                                   3222 ;	-----------------------------------------
+                                   3223 ;	 function set_COMPASS_PW
+                                   3224 ;	-----------------------------------------
+      0009B4                       3225 _set_COMPASS_PW:
+                           0008FB  3226 	C$Squiggles.c$301$1$159 ==.
+                                   3227 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:301: Error = (desired_heading) - heading;	//Calculate the error
+      0009B4 E5 38            [12] 3228 	mov	a,_desired_heading
+      0009B6 C3               [12] 3229 	clr	c
+      0009B7 95 43            [12] 3230 	subb	a,_heading
+      0009B9 FE               [12] 3231 	mov	r6,a
+      0009BA E5 39            [12] 3232 	mov	a,(_desired_heading + 1)
+      0009BC 95 44            [12] 3233 	subb	a,(_heading + 1)
+      0009BE FF               [12] 3234 	mov	r7,a
+                           000906  3235 	C$Squiggles.c$302$1$159 ==.
+                                   3236 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:302: if(Error < -1800) Error = Error + 3600; //Adjust error so that we turn efficiently
+      0009BF C3               [12] 3237 	clr	c
+      0009C0 EE               [12] 3238 	mov	a,r6
+      0009C1 94 F8            [12] 3239 	subb	a,#0xF8
+      0009C3 EF               [12] 3240 	mov	a,r7
+      0009C4 64 80            [12] 3241 	xrl	a,#0x80
+      0009C6 94 78            [12] 3242 	subb	a,#0x78
+      0009C8 50 08            [24] 3243 	jnc	00102$
+      0009CA 74 10            [12] 3244 	mov	a,#0x10
+      0009CC 2E               [12] 3245 	add	a,r6
+      0009CD FE               [12] 3246 	mov	r6,a
+      0009CE 74 0E            [12] 3247 	mov	a,#0x0E
+      0009D0 3F               [12] 3248 	addc	a,r7
+      0009D1 FF               [12] 3249 	mov	r7,a
+      0009D2                       3250 00102$:
+                           000919  3251 	C$Squiggles.c$303$1$159 ==.
+                                   3252 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:303: if(Error > 1800) Error = Error - 3600;
+      0009D2 C3               [12] 3253 	clr	c
+      0009D3 74 08            [12] 3254 	mov	a,#0x08
+      0009D5 9E               [12] 3255 	subb	a,r6
+      0009D6 74 87            [12] 3256 	mov	a,#(0x07 ^ 0x80)
+      0009D8 8F F0            [24] 3257 	mov	b,r7
+      0009DA 63 F0 80         [24] 3258 	xrl	b,#0x80
+      0009DD 95 F0            [12] 3259 	subb	a,b
+      0009DF 50 08            [24] 3260 	jnc	00104$
+      0009E1 EE               [12] 3261 	mov	a,r6
+      0009E2 24 F0            [12] 3262 	add	a,#0xF0
+      0009E4 FE               [12] 3263 	mov	r6,a
+      0009E5 EF               [12] 3264 	mov	a,r7
+      0009E6 34 F1            [12] 3265 	addc	a,#0xF1
+      0009E8 FF               [12] 3266 	mov	r7,a
+      0009E9                       3267 00104$:
+                           000930  3268 	C$Squiggles.c$305$1$159 ==.
+                                   3269 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:305: if (range > MAX_RANGE) 
+      0009E9 C3               [12] 3270 	clr	c
+      0009EA 74 37            [12] 3271 	mov	a,#0x37
+      0009EC 95 45            [12] 3272 	subb	a,_range
+      0009EE E4               [12] 3273 	clr	a
+      0009EF 95 46            [12] 3274 	subb	a,(_range + 1)
+      0009F1 50 07            [24] 3275 	jnc	00106$
+                           00093A  3276 	C$Squiggles.c$307$2$160 ==.
+                                   3277 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:307: range_adj = 0; //no obstacle in range, no change
+      0009F3 E4               [12] 3278 	clr	a
+      0009F4 F5 49            [12] 3279 	mov	_range_adj,a
+      0009F6 F5 4A            [12] 3280 	mov	(_range_adj + 1),a
+      0009F8 80 27            [24] 3281 	sjmp	00107$
+      0009FA                       3282 00106$:
+                           000941  3283 	C$Squiggles.c$311$2$161 ==.
+                                   3284 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:311: range_adj = (int)(ranger_gain * (MAX_RANGE - range)); //weight adjustment by distance
+      0009FA 74 37            [12] 3285 	mov	a,#0x37
+      0009FC C3               [12] 3286 	clr	c
+      0009FD 95 45            [12] 3287 	subb	a,_range
+      0009FF F5 11            [12] 3288 	mov	__mulint_PARM_2,a
+      000A01 E4               [12] 3289 	clr	a
+      000A02 95 46            [12] 3290 	subb	a,(_range + 1)
+      000A04 F5 12            [12] 3291 	mov	(__mulint_PARM_2 + 1),a
+      000A06 AC 4D            [24] 3292 	mov	r4,_ranger_gain
+      000A08 7D 00            [12] 3293 	mov	r5,#0x00
+      000A0A 8C 82            [24] 3294 	mov	dpl,r4
+      000A0C 8D 83            [24] 3295 	mov	dph,r5
+      000A0E C0 07            [24] 3296 	push	ar7
+      000A10 C0 06            [24] 3297 	push	ar6
+      000A12 12 0C 2E         [24] 3298 	lcall	__mulint
+      000A15 AC 82            [24] 3299 	mov	r4,dpl
+      000A17 AD 83            [24] 3300 	mov	r5,dph
+      000A19 D0 06            [24] 3301 	pop	ar6
+      000A1B D0 07            [24] 3302 	pop	ar7
+      000A1D 8C 49            [24] 3303 	mov	_range_adj,r4
+      000A1F 8D 4A            [24] 3304 	mov	(_range_adj + 1),r5
+      000A21                       3305 00107$:
+                           000968  3306 	C$Squiggles.c$314$1$159 ==.
+                                   3307 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:314: COMPASS_PW = COMPASS_CENTER + range_adj + (compass_gain*Error);
+      000A21 74 C8            [12] 3308 	mov	a,#0xC8
+      000A23 25 49            [12] 3309 	add	a,_range_adj
+      000A25 FC               [12] 3310 	mov	r4,a
+      000A26 74 0A            [12] 3311 	mov	a,#0x0A
+      000A28 35 4A            [12] 3312 	addc	a,(_range_adj + 1)
+      000A2A FD               [12] 3313 	mov	r5,a
+      000A2B 8E 82            [24] 3314 	mov	dpl,r6
+      000A2D 8F 83            [24] 3315 	mov	dph,r7
+      000A2F C0 05            [24] 3316 	push	ar5
+      000A31 C0 04            [24] 3317 	push	ar4
+      000A33 12 0D 9F         [24] 3318 	lcall	___sint2fs
+      000A36 AA 82            [24] 3319 	mov	r2,dpl
+      000A38 AB 83            [24] 3320 	mov	r3,dph
+      000A3A AE F0            [24] 3321 	mov	r6,b
+      000A3C FF               [12] 3322 	mov	r7,a
+      000A3D C0 02            [24] 3323 	push	ar2
+      000A3F C0 03            [24] 3324 	push	ar3
+      000A41 C0 06            [24] 3325 	push	ar6
+      000A43 C0 07            [24] 3326 	push	ar7
+      000A45 85 3A 82         [24] 3327 	mov	dpl,_compass_gain
+      000A48 85 3B 83         [24] 3328 	mov	dph,(_compass_gain + 1)
+      000A4B 85 3C F0         [24] 3329 	mov	b,(_compass_gain + 2)
+      000A4E E5 3D            [12] 3330 	mov	a,(_compass_gain + 3)
+      000A50 12 0B 0F         [24] 3331 	lcall	___fsmul
+      000A53 AA 82            [24] 3332 	mov	r2,dpl
+      000A55 AB 83            [24] 3333 	mov	r3,dph
+      000A57 AE F0            [24] 3334 	mov	r6,b
+      000A59 FF               [12] 3335 	mov	r7,a
+      000A5A E5 81            [12] 3336 	mov	a,sp
+      000A5C 24 FC            [12] 3337 	add	a,#0xfc
+      000A5E F5 81            [12] 3338 	mov	sp,a
+      000A60 D0 04            [24] 3339 	pop	ar4
+      000A62 D0 05            [24] 3340 	pop	ar5
+      000A64 8C 82            [24] 3341 	mov	dpl,r4
+      000A66 8D 83            [24] 3342 	mov	dph,r5
+      000A68 C0 07            [24] 3343 	push	ar7
+      000A6A C0 06            [24] 3344 	push	ar6
+      000A6C C0 03            [24] 3345 	push	ar3
+      000A6E C0 02            [24] 3346 	push	ar2
+      000A70 12 0D AC         [24] 3347 	lcall	___uint2fs
+      000A73 A8 82            [24] 3348 	mov	r0,dpl
+      000A75 A9 83            [24] 3349 	mov	r1,dph
+      000A77 AC F0            [24] 3350 	mov	r4,b
+      000A79 FD               [12] 3351 	mov	r5,a
+      000A7A D0 02            [24] 3352 	pop	ar2
+      000A7C D0 03            [24] 3353 	pop	ar3
+      000A7E D0 06            [24] 3354 	pop	ar6
+      000A80 D0 07            [24] 3355 	pop	ar7
+      000A82 C0 02            [24] 3356 	push	ar2
+      000A84 C0 03            [24] 3357 	push	ar3
+      000A86 C0 06            [24] 3358 	push	ar6
+      000A88 C0 07            [24] 3359 	push	ar7
+      000A8A 88 82            [24] 3360 	mov	dpl,r0
+      000A8C 89 83            [24] 3361 	mov	dph,r1
+      000A8E 8C F0            [24] 3362 	mov	b,r4
+      000A90 ED               [12] 3363 	mov	a,r5
+      000A91 12 0D 46         [24] 3364 	lcall	___fsadd
+      000A94 AC 82            [24] 3365 	mov	r4,dpl
+      000A96 AD 83            [24] 3366 	mov	r5,dph
+      000A98 AE F0            [24] 3367 	mov	r6,b
+      000A9A FF               [12] 3368 	mov	r7,a
+      000A9B E5 81            [12] 3369 	mov	a,sp
+      000A9D 24 FC            [12] 3370 	add	a,#0xfc
+      000A9F F5 81            [12] 3371 	mov	sp,a
+      000AA1 8C 82            [24] 3372 	mov	dpl,r4
+      000AA3 8D 83            [24] 3373 	mov	dph,r5
+      000AA5 8E F0            [24] 3374 	mov	b,r6
+      000AA7 EF               [12] 3375 	mov	a,r7
+      000AA8 12 0D B8         [24] 3376 	lcall	___fs2uint
+      000AAB 85 82 47         [24] 3377 	mov	_COMPASS_PW,dpl
+      000AAE 85 83 48         [24] 3378 	mov	(_COMPASS_PW + 1),dph
+                           0009F8  3379 	C$Squiggles.c$316$1$159 ==.
+                                   3380 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:316: if(COMPASS_PW < COMPASS_MIN)
+      000AB1 C3               [12] 3381 	clr	c
+      000AB2 E5 47            [12] 3382 	mov	a,_COMPASS_PW
+      000AB4 94 EE            [12] 3383 	subb	a,#0xEE
+      000AB6 E5 48            [12] 3384 	mov	a,(_COMPASS_PW + 1)
+      000AB8 94 07            [12] 3385 	subb	a,#0x07
+      000ABA 50 06            [24] 3386 	jnc	00109$
+                           000A03  3387 	C$Squiggles.c$318$2$162 ==.
+                                   3388 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:318: COMPASS_PW = COMPASS_MIN;
+      000ABC 75 47 EE         [24] 3389 	mov	_COMPASS_PW,#0xEE
+      000ABF 75 48 07         [24] 3390 	mov	(_COMPASS_PW + 1),#0x07
+      000AC2                       3391 00109$:
+                           000A09  3392 	C$Squiggles.c$320$1$159 ==.
+                                   3393 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:320: if(COMPASS_PW > COMPASS_MAX)
+      000AC2 C3               [12] 3394 	clr	c
+      000AC3 74 AC            [12] 3395 	mov	a,#0xAC
+      000AC5 95 47            [12] 3396 	subb	a,_COMPASS_PW
+      000AC7 74 0D            [12] 3397 	mov	a,#0x0D
+      000AC9 95 48            [12] 3398 	subb	a,(_COMPASS_PW + 1)
+      000ACB 50 06            [24] 3399 	jnc	00111$
+                           000A14  3400 	C$Squiggles.c$322$2$163 ==.
+                                   3401 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:322: COMPASS_PW = COMPASS_MAX;
+      000ACD 75 47 AC         [24] 3402 	mov	_COMPASS_PW,#0xAC
+      000AD0 75 48 0D         [24] 3403 	mov	(_COMPASS_PW + 1),#0x0D
+      000AD3                       3404 00111$:
+                           000A1A  3405 	C$Squiggles.c$324$1$159 ==.
+                                   3406 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:324: if(delay == 10) //Delay to avoid overloading system
+      000AD3 74 0A            [12] 3407 	mov	a,#0x0A
+      000AD5 B5 40 0D         [24] 3408 	cjne	a,_delay,00114$
+                           000A1F  3409 	C$Squiggles.c$326$2$164 ==.
+                                   3410 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:326: PCA0CP0 = 0xFFFF - COMPASS_PW; // Change pulse width
+      000AD8 74 FF            [12] 3411 	mov	a,#0xFF
+      000ADA C3               [12] 3412 	clr	c
+      000ADB 95 47            [12] 3413 	subb	a,_COMPASS_PW
+      000ADD F5 EA            [12] 3414 	mov	((_PCA0CP0 >> 0) & 0xFF),a
+      000ADF 74 FF            [12] 3415 	mov	a,#0xFF
+      000AE1 95 48            [12] 3416 	subb	a,(_COMPASS_PW + 1)
+      000AE3 F5 FA            [12] 3417 	mov	((_PCA0CP0 >> 8) & 0xFF),a
+      000AE5                       3418 00114$:
+                           000A2C  3419 	C$Squiggles.c$328$1$159 ==.
+                           000A2C  3420 	XG$set_COMPASS_PW$0$0 ==.
+      000AE5 22               [24] 3421 	ret
+                                   3422 	.area CSEG    (CODE)
+                                   3423 	.area CONST   (CODE)
+                           000000  3424 FSquiggles$__str_0$0$0 == .
+      00156B                       3425 ___str_0:
+      00156B 0A                    3426 	.db 0x0A
+      00156C 54 79 70 65 20 64 69  3427 	.ascii "Type digits; end w/#"
              67 69 74 73 3B 20 65
              6E 64 20 77 2F 23
-      001531 00                    3396 	.db 0x00
-                           000016  3397 FSquiggles$__str_1$0$0 == .
-      001532                       3398 ___str_1:
-      001532 20 20 20 20 20 25 63  3399 	.ascii "     %c%c%c%c%c"
+      001580 00                    3428 	.db 0x00
+                           000016  3429 FSquiggles$__str_1$0$0 == .
+      001581                       3430 ___str_1:
+      001581 20 20 20 20 20 25 63  3431 	.ascii "     %c%c%c%c%c"
              25 63 25 63 25 63 25
              63
-      001541 00                    3400 	.db 0x00
-                           000026  3401 FSquiggles$__str_2$0$0 == .
-      001542                       3402 ___str_2:
-      001542 25 63                 3403 	.ascii "%c"
-      001544 00                    3404 	.db 0x00
-                           000029  3405 FSquiggles$__str_3$0$0 == .
-      001545                       3406 ___str_3:
-      001545 0A                    3407 	.db 0x0A
-      001546 53 74 61 72 74        3408 	.ascii "Start"
-      00154B 0D                    3409 	.db 0x0D
-      00154C 0A                    3410 	.db 0x0A
-      00154D 00                    3411 	.db 0x00
-                           000032  3412 FSquiggles$__str_4$0$0 == .
-      00154E                       3413 ___str_4:
-      00154E 0D                    3414 	.db 0x0D
-      00154F 57 65 20 63 6C 65 61  3415 	.ascii "We cleared it"
-             72 65 64 20 69 74
-      00155C 0A                    3416 	.db 0x0A
-      00155D 00                    3417 	.db 0x00
-                           000042  3418 FSquiggles$__str_5$0$0 == .
-      00155E                       3419 ___str_5:
-      00155E 0A                    3420 	.db 0x0A
-      00155F 0D                    3421 	.db 0x0D
-      001560 2D 2D 2D 2D 2D 2D 2D  3422 	.ascii "------------DATA COLLECTION------------"
+      001590 00                    3432 	.db 0x00
+                           000026  3433 FSquiggles$__str_2$0$0 == .
+      001591                       3434 ___str_2:
+      001591 25 63                 3435 	.ascii "%c"
+      001593 00                    3436 	.db 0x00
+                           000029  3437 FSquiggles$__str_3$0$0 == .
+      001594                       3438 ___str_3:
+      001594 0A                    3439 	.db 0x0A
+      001595 53 74 61 72 74        3440 	.ascii "Start"
+      00159A 0D                    3441 	.db 0x0D
+      00159B 0A                    3442 	.db 0x0A
+      00159C 00                    3443 	.db 0x00
+                           000032  3444 FSquiggles$__str_4$0$0 == .
+      00159D                       3445 ___str_4:
+      00159D 0A                    3446 	.db 0x0A
+      00159E 0D                    3447 	.db 0x0D
+      00159F 50 6C 65 61 73 65 20  3448 	.ascii "Please input data on the LCD."
+             69 6E 70 75 74 20 64
+             61 74 61 20 6F 6E 20
+             74 68 65 20 4C 43 44
+             2E
+      0015BC 0A                    3449 	.db 0x0A
+      0015BD 00                    3450 	.db 0x00
+                           000053  3451 FSquiggles$__str_5$0$0 == .
+      0015BE                       3452 ___str_5:
+      0015BE 0A                    3453 	.db 0x0A
+      0015BF 0D                    3454 	.db 0x0D
+      0015C0 2D 2D 2D 2D 2D 2D 2D  3455 	.ascii "------------DATA COLLECTION------------"
              2D 2D 2D 2D 2D 44 41
              54 41 20 43 4F 4C 4C
              45 43 54 49 4F 4E 2D
              2D 2D 2D 2D 2D 2D 2D
              2D 2D 2D 2D
-      001587 0A                    3423 	.db 0x0A
-      001588 00                    3424 	.db 0x00
-                           00006D  3425 FSquiggles$__str_6$0$0 == .
-      001589                       3426 ___str_6:
-      001589 0D                    3427 	.db 0x0D
-      00158A 52 61 6E 67 65 3A 20  3428 	.ascii "Range: %u"
+      0015E7 0A                    3456 	.db 0x0A
+      0015E8 00                    3457 	.db 0x00
+                           00007E  3458 FSquiggles$__str_6$0$0 == .
+      0015E9                       3459 ___str_6:
+      0015E9 0D                    3460 	.db 0x0D
+      0015EA 52 61 6E 67 65 3A 20  3461 	.ascii "Range: %u"
              25 75
-      001593 0A                    3429 	.db 0x0A
-      001594 00                    3430 	.db 0x00
-                           000079  3431 FSquiggles$__str_7$0$0 == .
-      001595                       3432 ___str_7:
-      001595 0D                    3433 	.db 0x0D
-      001596 42 61 74 74 65 72 79  3434 	.ascii "Battery Voltage is %u"
-             20 56 6F 6C 74 61 67
-             65 20 69 73 20 25 75
-      0015AB 0A                    3435 	.db 0x0A
-      0015AC 00                    3436 	.db 0x00
-                           000091  3437 FSquiggles$__str_8$0$0 == .
-      0015AD                       3438 ___str_8:
-      0015AD 0D                    3439 	.db 0x0D
-      0015AE 54 68 65 20 63 75 72  3440 	.ascii "The current direction is %u"
-             72 65 6E 74 20 64 69
-             72 65 63 74 69 6F 6E
+      0015F3 0A                    3462 	.db 0x0A
+      0015F4 00                    3463 	.db 0x00
+                           00008A  3464 FSquiggles$__str_7$0$0 == .
+      0015F5                       3465 ___str_7:
+      0015F5 0D                    3466 	.db 0x0D
+      0015F6 48 65 61 64 69 6E 67  3467 	.ascii "Heading: %u"
+             3A 20 25 75
+      001601 0A                    3468 	.db 0x0A
+      001602 00                    3469 	.db 0x00
+                           000098  3470 FSquiggles$__str_8$0$0 == .
+      001603                       3471 ___str_8:
+      001603 0D                    3472 	.db 0x0D
+      001604 56 6F 6C 74 61 67 65  3473 	.ascii "Voltage is %u"
              20 69 73 20 25 75
-      0015C9 0A                    3441 	.db 0x0A
-      0015CA 00                    3442 	.db 0x00
-                           0000AF  3443 FSquiggles$__str_9$0$0 == .
-      0015CB                       3444 ___str_9:
-      0015CB 0D                    3445 	.db 0x0D
-      0015CC 45 6E 74 65 72 20 64  3446 	.ascii "Enter desired heading for the compass."
+      001611 0A                    3474 	.db 0x0A
+      001612 00                    3475 	.db 0x00
+                           0000A8  3476 FSquiggles$__str_9$0$0 == .
+      001613                       3477 ___str_9:
+      001613 0D                    3478 	.db 0x0D
+      001614 56 6F 6C 74 61 67 65  3479 	.ascii "Voltage: %u"
+             3A 20 25 75
+      00161F 0A                    3480 	.db 0x0A
+      001620 00                    3481 	.db 0x00
+                           0000B6  3482 FSquiggles$__str_10$0$0 == .
+      001621                       3483 ___str_10:
+      001621 0D                    3484 	.db 0x0D
+      001622 45 6E 74 65 72 20 64  3485 	.ascii "Enter desired heading for the compass."
              65 73 69 72 65 64 20
              68 65 61 64 69 6E 67
              20 66 6F 72 20 74 68
              65 20 63 6F 6D 70 61
              73 73 2E
-      0015F2 0A                    3447 	.db 0x0A
-      0015F3 00                    3448 	.db 0x00
-                           0000D8  3449 FSquiggles$__str_10$0$0 == .
-      0015F4                       3450 ___str_10:
-      0015F4 0D                    3451 	.db 0x0D
-      0015F5 50 69 63 6B 5F 48 65  3452 	.ascii "Pick_Heading verified"
+      001648 0A                    3486 	.db 0x0A
+      001649 00                    3487 	.db 0x00
+                           0000DF  3488 FSquiggles$__str_11$0$0 == .
+      00164A                       3489 ___str_11:
+      00164A 0D                    3490 	.db 0x0D
+      00164B 50 69 63 6B 5F 48 65  3491 	.ascii "Pick_Heading verified"
              61 64 69 6E 67 20 76
              65 72 69 66 69 65 64
-      00160A 0A                    3453 	.db 0x0A
-      00160B 00                    3454 	.db 0x00
-                           0000F0  3455 FSquiggles$__str_11$0$0 == .
-      00160C                       3456 ___str_11:
-      00160C 0D                    3457 	.db 0x0D
-      00160D 45 6E 74 65 72 20 64  3458 	.ascii "Enter desired gain for the compass."
+      001660 0A                    3492 	.db 0x0A
+      001661 00                    3493 	.db 0x00
+                           0000F7  3494 FSquiggles$__str_12$0$0 == .
+      001662                       3495 ___str_12:
+      001662 0D                    3496 	.db 0x0D
+      001663 45 6E 74 65 72 20 64  3497 	.ascii "Enter desired gain for the compass."
              65 73 69 72 65 64 20
              67 61 69 6E 20 66 6F
              72 20 74 68 65 20 63
              6F 6D 70 61 73 73 2E
-      001630 0A                    3459 	.db 0x0A
-      001631 00                    3460 	.db 0x00
-                           000116  3461 FSquiggles$__str_12$0$0 == .
-      001632                       3462 ___str_12:
-      001632 0D                    3463 	.db 0x0D
-      001633 50 69 63 6B 5F 43 6F  3464 	.ascii "Pick_Compass_Gain verified"
+      001686 0A                    3498 	.db 0x0A
+      001687 00                    3499 	.db 0x00
+                           00011D  3500 FSquiggles$__str_13$0$0 == .
+      001688                       3501 ___str_13:
+      001688 0D                    3502 	.db 0x0D
+      001689 50 69 63 6B 5F 43 6F  3503 	.ascii "Pick_Compass_Gain verified"
              6D 70 61 73 73 5F 47
              61 69 6E 20 76 65 72
              69 66 69 65 64
-      00164D 0A                    3465 	.db 0x0A
-      00164E 00                    3466 	.db 0x00
-                                   3467 	.area XINIT   (CODE)
-                                   3468 	.area CABS    (ABS,CODE)
+      0016A3 0A                    3504 	.db 0x0A
+      0016A4 00                    3505 	.db 0x00
+                                   3506 	.area XINIT   (CODE)
+                                   3507 	.area CABS    (ABS,CODE)
