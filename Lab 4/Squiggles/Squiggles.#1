@@ -95,7 +95,8 @@ void main(void)
 		if ((new_range)) // enough overflow for a new range
 		{
 			range = read_ranger();
-			if(range != 0xFFFF) printf("\rRange: %u\n", range);
+			printf("\rRange: %u\n", range);
+			//if(range != 0xFFFF) printf("\rRange: %u\n", range);
 			if ((range != 0) && (range != 0xFFFF))
 			{
 				if((range < 15) && (range != 0)) PCA0CP2 = 0xFFFF - COMPASS_CENTER; //Stop if near an object
@@ -103,7 +104,7 @@ void main(void)
 				// read_range must start a new ping after a read	
 				//set_range_adj(); // if new data, set value to adjust steering PWM
 				new_range = 0;
-				r_count = 0;
+				//r_count = 0;
 			}
 			else   // extraneous value read in; ignore and keep moving
 			{
@@ -118,13 +119,18 @@ void main(void)
 			//printf("\rBattery Voltage is %u\n", voltage);
 		}
 		if((new_heading))
-			{
-				if(delay >= 10) heading = read_compass();
-				//printf("\rThe current direction is %u\n", heading/10);
-				set_COMPASS_PW(); // Adjust pulsewidth based on error function
-				PCA0CP0 = 0xFFFF - COMPASS_PW; // Change pulse width
-				new_heading = 0;
-			}	
+		{
+			if(delay == 10) heading = read_compass();
+			printf("\rThe current direction is %u\n", heading/10);
+			set_COMPASS_PW(); // Adjust pulsewidth based on error function
+
+			new_heading = 0;
+		}
+		/*if(delay == 10)
+		{
+			printf("\rRange: %u", range);
+			printf("\rHeading: %u", heading/10);
+		}*/
 		// Output the results for transfer into excel
     }
 }
@@ -160,7 +166,7 @@ void PCA_Init(void)
     PCA0MD = 0x81;      // SYSCLK/12, enable CF interrupts, suspend when idle
     PCA0CPM0 = 0xC2;    // 16 bit, enable compare, enable PWM; NOT USED HERE
 	PCA0CPM2 = 0xC2;
-    PCA0CN |= 0x40;     // enable PCA
+    PCA0CN = 0x40;     // enable PCA
 }
 
 //-----------------------------------------------------------------------------
@@ -378,8 +384,14 @@ void set_COMPASS_PW(void)
 	if(Error < -1800) Error = Error + 3600;
 	if(Error > 1800) Error = Error - 3600;
 	// range_adj equations
-	if (range > MAX_RANGE) { range_adj = 0; } //no obstacle in range, no change
-	else { range_adj = (int)(ranger_gain * (MAX_RANGE - range)); } //find adjustment
+	if (range > MAX_RANGE) 
+	{
+		 range_adj = 0; //no obstacle in range, no change
+	} 
+	else 
+	{ 
+		range_adj = (int)(ranger_gain * (MAX_RANGE - range)); //find adjustment
+	} 
 	
 	// actual calculation for the pulse width
 	COMPASS_PW = COMPASS_CENTER + range_adj + (compass_gain*Error);
@@ -391,6 +403,10 @@ void set_COMPASS_PW(void)
 	if(COMPASS_PW > COMPASS_MAX)
 	{
 		COMPASS_PW = COMPASS_MAX;
+	}
+	if(delay == 10)
+	{
+		PCA0CP0 = 0xFFFF - COMPASS_PW; // Change pulse width
 	}
 	//COMPASS_PW = PWMe;
 	// range is the value from the ultrasonic ranger

@@ -78,11 +78,11 @@ C:   000000AA  s_GSINIT
 C:   000000AA  s_GSINIT5                       
 C:   000000C6  s_GSFINAL                       
 C:   000000C9  s_CSEG                          
-C:   000000F8  l_CONST                         
 C:   00000100  l_IRAM                          
-C:   000013ED  l_CSEG                          
-C:   000014B6  s_CONST                         
-C:   000015AE  s_XINIT                         
+C:   00000116  l_CONST                         
+C:   0000140E  l_CSEG                          
+C:   000014D7  s_CONST                         
+C:   000015ED  s_XINIT                         
 
 ASxxxx Linker V03.00 + NoICE + sdld,  page 3.
 Hexadecimal  [32-Bits]
@@ -1024,7 +1024,7 @@ Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000C9    000013ED =        5101. bytes (REL,CON,CODE)
+CSEG                                000000C9    0000140E =        5134. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
@@ -1083,7 +1083,7 @@ Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000C9    000013ED =        5101. bytes (REL,CON,CODE)
+CSEG                                000000C9    0000140E =        5134. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
@@ -1143,7 +1143,7 @@ Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000C9    000013ED =        5101. bytes (REL,CON,CODE)
+CSEG                                000000C9    0000140E =        5134. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
@@ -1203,7 +1203,7 @@ Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000C9    000013ED =        5101. bytes (REL,CON,CODE)
+CSEG                                000000C9    0000140E =        5134. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
@@ -1263,7 +1263,7 @@ Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000C9    000013ED =        5101. bytes (REL,CON,CODE)
+CSEG                                000000C9    0000140E =        5134. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
@@ -1323,7 +1323,7 @@ Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000C9    000013ED =        5101. bytes (REL,CON,CODE)
+CSEG                                000000C9    0000140E =        5134. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
@@ -1383,7 +1383,7 @@ Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000C9    000013ED =        5101. bytes (REL,CON,CODE)
+CSEG                                000000C9    0000140E =        5134. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
@@ -1443,7 +1443,7 @@ Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000C9    000013ED =        5101. bytes (REL,CON,CODE)
+CSEG                                000000C9    0000140E =        5134. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
@@ -1503,7 +1503,7 @@ Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000C9    000013ED =        5101. bytes (REL,CON,CODE)
+CSEG                                000000C9    0000140E =        5134. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
@@ -1563,7 +1563,7 @@ Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000C9    000013ED =        5101. bytes (REL,CON,CODE)
+CSEG                                000000C9    0000140E =        5134. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
@@ -1623,7 +1623,7 @@ Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000C9    000013ED =        5101. bytes (REL,CON,CODE)
+CSEG                                000000C9    0000140E =        5134. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
@@ -1683,7 +1683,7 @@ Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000C9    000013ED =        5101. bytes (REL,CON,CODE)
+CSEG                                000000C9    0000140E =        5134. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
@@ -1743,7 +1743,7 @@ Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000C9    000013ED =        5101. bytes (REL,CON,CODE)
+CSEG                                000000C9    0000140E =        5134. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
@@ -1803,7 +1803,7 @@ Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000C9    000013ED =        5101. bytes (REL,CON,CODE)
+CSEG                                000000C9    0000140E =        5134. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
@@ -1863,7 +1863,7 @@ Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000C9    000013ED =        5101. bytes (REL,CON,CODE)
+CSEG                                000000C9    0000140E =        5134. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
@@ -1923,7 +1923,7 @@ Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000C9    000013ED =        5101. bytes (REL,CON,CODE)
+CSEG                                000000C9    0000140E =        5134. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
@@ -1983,7 +1983,7 @@ Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000C9    000013ED =        5101. bytes (REL,CON,CODE)
+CSEG                                000000C9    0000140E =        5134. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
@@ -2043,7 +2043,7 @@ Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000C9    000013ED =        5101. bytes (REL,CON,CODE)
+CSEG                                000000C9    0000140E =        5134. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
@@ -2051,852 +2051,877 @@ C:   00000607  A$Squiggles$2421                   Squiggles
 C:   0000060A  A$Squiggles$2424                   Squiggles
 C:   0000060A  C$Squiggles.c$98$3$122             Squiggles
 C:   0000060C  A$Squiggles$2425                   Squiggles
-C:   0000060F  A$Squiggles$2426                   Squiggles
-C:   00000611  A$Squiggles$2427                   Squiggles
-C:   00000614  A$Squiggles$2428                   Squiggles
+C:   0000060E  A$Squiggles$2426                   Squiggles
+C:   00000610  A$Squiggles$2427                   Squiggles
+C:   00000612  A$Squiggles$2428                   Squiggles
+C:   00000614  A$Squiggles$2429                   Squiggles
 C:   00000616  A$Squiggles$2430                   Squiggles
 C:   00000618  A$Squiggles$2431                   Squiggles
 C:   0000061A  A$Squiggles$2432                   Squiggles
-C:   0000061C  A$Squiggles$2433                   Squiggles
-C:   0000061E  A$Squiggles$2434                   Squiggles
-C:   00000620  A$Squiggles$2435                   Squiggles
-C:   00000622  A$Squiggles$2436                   Squiggles
-C:   00000624  A$Squiggles$2437                   Squiggles
-C:   00000626  A$Squiggles$2438                   Squiggles
-C:   00000629  A$Squiggles$2439                   Squiggles
-C:   0000062B  A$Squiggles$2440                   Squiggles
-C:   0000062D  A$Squiggles$2441                   Squiggles
-C:   0000062F  A$Squiggles$2445                   Squiggles
-C:   0000062F  C$Squiggles.c$99$3$122             Squiggles
-C:   00000631  A$Squiggles$2446                   Squiggles
-C:   00000633  A$Squiggles$2447                   Squiggles
-C:   00000635  A$Squiggles$2448                   Squiggles
-C:   00000637  A$Squiggles$2449                   Squiggles
-C:   0000063A  A$Squiggles$2450                   Squiggles
-C:   0000063C  A$Squiggles$2451                   Squiggles
-C:   0000063F  A$Squiggles$2452                   Squiggles
-C:   00000641  A$Squiggles$2456                   Squiggles
-C:   00000641  C$Squiggles.c$101$4$123            Squiggles
-C:   00000642  A$Squiggles$2457                   Squiggles
-C:   00000644  A$Squiggles$2458                   Squiggles
-C:   00000646  A$Squiggles$2459                   Squiggles
-C:   00000648  A$Squiggles$2460                   Squiggles
-C:   0000064A  A$Squiggles$2461                   Squiggles
-C:   0000064C  A$Squiggles$2462                   Squiggles
-C:   0000064E  A$Squiggles$2463                   Squiggles
-C:   00000650  A$Squiggles$2464                   Squiggles
-C:   00000652  A$Squiggles$2465                   Squiggles
-C:   00000655  A$Squiggles$2466                   Squiggles
-C:   00000658  A$Squiggles$2467                   Squiggles
-C:   0000065A  A$Squiggles$2471                   Squiggles
-C:   0000065A  C$Squiggles.c$102$4$123            Squiggles
-C:   0000065D  A$Squiggles$2472                   Squiggles
-C:   00000660  A$Squiggles$2476                   Squiggles
-C:   00000660  C$Squiggles.c$105$4$123            Squiggles
-C:   00000663  A$Squiggles$2479                   Squiggles
-C:   00000663  C$Squiggles.c$106$4$123            Squiggles
-C:   00000666  A$Squiggles$2480                   Squiggles
-C:   00000668  A$Squiggles$2484                   Squiggles
-C:   00000668  C$Squiggles.c$111$4$124            Squiggles
+C:   0000061D  A$Squiggles$2433                   Squiggles
+C:   0000061F  A$Squiggles$2434                   Squiggles
+C:   00000621  A$Squiggles$2435                   Squiggles
+C:   00000623  A$Squiggles$2438                   Squiggles
+C:   00000623  C$Squiggles.c$100$3$122            Squiggles
+C:   00000625  A$Squiggles$2439                   Squiggles
+C:   00000627  A$Squiggles$2440                   Squiggles
+C:   00000629  A$Squiggles$2441                   Squiggles
+C:   0000062B  A$Squiggles$2442                   Squiggles
+C:   0000062E  A$Squiggles$2443                   Squiggles
+C:   00000630  A$Squiggles$2444                   Squiggles
+C:   00000633  A$Squiggles$2445                   Squiggles
+C:   00000635  A$Squiggles$2449                   Squiggles
+C:   00000635  C$Squiggles.c$102$4$123            Squiggles
+C:   00000636  A$Squiggles$2450                   Squiggles
+C:   00000638  A$Squiggles$2451                   Squiggles
+C:   0000063A  A$Squiggles$2452                   Squiggles
+C:   0000063C  A$Squiggles$2453                   Squiggles
+C:   0000063E  A$Squiggles$2454                   Squiggles
+C:   00000640  A$Squiggles$2455                   Squiggles
+C:   00000642  A$Squiggles$2456                   Squiggles
+C:   00000644  A$Squiggles$2457                   Squiggles
+C:   00000646  A$Squiggles$2458                   Squiggles
+C:   00000649  A$Squiggles$2459                   Squiggles
+C:   0000064C  A$Squiggles$2460                   Squiggles
+C:   0000064E  A$Squiggles$2464                   Squiggles
+C:   0000064E  C$Squiggles.c$103$4$123            Squiggles
+C:   00000651  A$Squiggles$2465                   Squiggles
+C:   00000654  A$Squiggles$2469                   Squiggles
+C:   00000654  C$Squiggles.c$106$4$123            Squiggles
+C:   00000657  A$Squiggles$2470                   Squiggles
+C:   00000659  A$Squiggles$2474                   Squiggles
+C:   00000659  C$Squiggles.c$112$4$124            Squiggles
+C:   0000065A  A$Squiggles$2475                   Squiggles
+C:   0000065C  A$Squiggles$2476                   Squiggles
+C:   0000065E  A$Squiggles$2480                   Squiggles
+C:   0000065E  C$Squiggles.c$115$2$121            Squiggles
+C:   00000660  A$Squiggles$2481                   Squiggles
+C:   00000663  A$Squiggles$2484                   Squiggles
+C:   00000663  C$Squiggles.c$117$3$125            Squiggles
 ASxxxx Linker V03.00 + NoICE + sdld,  page 48.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000C9    000013ED =        5101. bytes (REL,CON,CODE)
+CSEG                                000000C9    0000140E =        5134. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   00000669  A$Squiggles$2485                   Squiggles
-C:   0000066B  A$Squiggles$2486                   Squiggles
-C:   0000066D  A$Squiggles$2490                   Squiggles
-C:   0000066D  C$Squiggles.c$114$2$121            Squiggles
-C:   0000066F  A$Squiggles$2491                   Squiggles
-C:   00000672  A$Squiggles$2494                   Squiggles
-C:   00000672  C$Squiggles.c$116$3$125            Squiggles
-C:   00000675  A$Squiggles$2495                   Squiggles
-C:   00000678  A$Squiggles$2498                   Squiggles
-C:   00000678  C$Squiggles.c$117$1$120            Squiggles
-C:   0000067B  A$Squiggles$2499                   Squiggles
-C:   0000067E  A$Squiggles$2500                   Squiggles
-C:   00000680  A$Squiggles$2501                   Squiggles
-C:   00000682  A$Squiggles$2502                   Squiggles
-C:   00000684  A$Squiggles$2503                   Squiggles
-C:   00000685  A$Squiggles$2504                   Squiggles
-C:   00000687  A$Squiggles$2505                   Squiggles
-C:   00000689  A$Squiggles$2506                   Squiggles
-C:   0000068B  A$Squiggles$2507                   Squiggles
-C:   0000068D  A$Squiggles$2508                   Squiggles
-C:   00000690  A$Squiggles$2509                   Squiggles
-C:   00000693  A$Squiggles$2510                   Squiggles
-C:   00000695  A$Squiggles$2511                   Squiggles
-C:   00000698  A$Squiggles$2512                   Squiggles
-C:   0000069A  A$Squiggles$2513                   Squiggles
-C:   0000069C  A$Squiggles$2514                   Squiggles
-C:   0000069E  A$Squiggles$2515                   Squiggles
-C:   0000069F  A$Squiggles$2516                   Squiggles
-C:   000006A1  A$Squiggles$2517                   Squiggles
+C:   00000666  A$Squiggles$2485                   Squiggles
+C:   00000669  A$Squiggles$2488                   Squiggles
+C:   00000669  C$Squiggles.c$118$1$120            Squiggles
+C:   0000066C  A$Squiggles$2489                   Squiggles
+C:   0000066F  A$Squiggles$2490                   Squiggles
+C:   00000671  A$Squiggles$2491                   Squiggles
+C:   00000673  A$Squiggles$2492                   Squiggles
+C:   00000675  A$Squiggles$2493                   Squiggles
+C:   00000676  A$Squiggles$2494                   Squiggles
+C:   00000678  A$Squiggles$2495                   Squiggles
+C:   0000067A  A$Squiggles$2496                   Squiggles
+C:   0000067C  A$Squiggles$2497                   Squiggles
+C:   0000067E  A$Squiggles$2498                   Squiggles
+C:   00000681  A$Squiggles$2499                   Squiggles
+C:   00000684  A$Squiggles$2500                   Squiggles
+C:   00000686  A$Squiggles$2501                   Squiggles
+C:   00000689  A$Squiggles$2502                   Squiggles
+C:   0000068B  A$Squiggles$2503                   Squiggles
+C:   0000068D  A$Squiggles$2504                   Squiggles
+C:   0000068F  A$Squiggles$2505                   Squiggles
+C:   00000690  A$Squiggles$2506                   Squiggles
+C:   00000692  A$Squiggles$2507                   Squiggles
+C:   00000694  A$Squiggles$2508                   Squiggles
+C:   00000696  A$Squiggles$2509                   Squiggles
+C:   00000698  A$Squiggles$2510                   Squiggles
+C:   0000069A  A$Squiggles$2511                   Squiggles
+C:   0000069C  A$Squiggles$2512                   Squiggles
+C:   0000069D  A$Squiggles$2513                   Squiggles
+C:   000006A0  A$Squiggles$2514                   Squiggles
 C:   000006A3  A$Squiggles$2518                   Squiggles
+C:   000006A3  C$Squiggles.c$121$2$121            Squiggles
 C:   000006A5  A$Squiggles$2519                   Squiggles
 C:   000006A7  A$Squiggles$2520                   Squiggles
-C:   000006A9  A$Squiggles$2521                   Squiggles
-C:   000006AB  A$Squiggles$2522                   Squiggles
-C:   000006AC  A$Squiggles$2523                   Squiggles
-C:   000006AF  A$Squiggles$2524                   Squiggles
-C:   000006B2  A$Squiggles$2528                   Squiggles
-C:   000006B2  C$Squiggles.c$120$2$121            Squiggles
-C:   000006B4  A$Squiggles$2529                   Squiggles
-C:   000006B6  A$Squiggles$2530                   Squiggles
-C:   000006B9  A$Squiggles$2534                   Squiggles
-C:   000006B9  C$Squiggles.c$122$3$126            Squiggles
-C:   000006BB  A$Squiggles$2535                   Squiggles
-C:   000006BD  A$Squiggles$2536                   Squiggles
-C:   000006BF  A$Squiggles$2537                   Squiggles
-C:   000006C2  A$Squiggles$2538                   Squiggles
-C:   000006C5  A$Squiggles$2539                   Squiggles
-C:   000006C8  A$Squiggles$2543                   Squiggles
-C:   000006C8  C$Squiggles.c$124$3$126            Squiggles
-C:   000006CB  A$Squiggles$2546                   Squiggles
-C:   000006CB  C$Squiggles.c$125$3$126            Squiggles
+C:   000006AA  A$Squiggles$2524                   Squiggles
+C:   000006AA  C$Squiggles.c$123$3$126            Squiggles
+C:   000006AC  A$Squiggles$2525                   Squiggles
+C:   000006AF  A$Squiggles$2526                   Squiggles
+C:   000006B2  A$Squiggles$2527                   Squiggles
+C:   000006B5  A$Squiggles$2528                   Squiggles
+C:   000006B8  A$Squiggles$2532                   Squiggles
+C:   000006B8  C$Squiggles.c$124$1$120            Squiggles
+C:   000006BB  A$Squiggles$2533                   Squiggles
+C:   000006BE  A$Squiggles$2534                   Squiggles
+C:   000006C1  A$Squiggles$2535                   Squiggles
+C:   000006C4  A$Squiggles$2536                   Squiggles
+C:   000006C7  A$Squiggles$2537                   Squiggles
+C:   000006C9  A$Squiggles$2538                   Squiggles
+C:   000006CB  A$Squiggles$2539                   Squiggles
+C:   000006CD  A$Squiggles$2540                   Squiggles
+C:   000006CF  A$Squiggles$2541                   Squiggles
+C:   000006D1  A$Squiggles$2542                   Squiggles
 ASxxxx Linker V03.00 + NoICE + sdld,  page 49.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000C9    000013ED =        5101. bytes (REL,CON,CODE)
+CSEG                                000000C9    0000140E =        5134. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   000006CD  A$Squiggles$2547                   Squiggles
-C:   000006CE  A$Squiggles$2548                   Squiggles
-C:   000006D0  A$Squiggles$2549                   Squiggles
-C:   000006D2  A$Squiggles$2550                   Squiggles
-C:   000006D4  A$Squiggles$2551                   Squiggles
-C:   000006D6  A$Squiggles$2552                   Squiggles
-C:   000006D8  A$Squiggles$2555                   Squiggles
-C:   000006D8  C$Squiggles.c$126$3$126            Squiggles
-C:   000006DB  A$Squiggles$2556                   Squiggles
-C:   000006DE  A$Squiggles$2559                   Squiggles
-C:   000006DE  C$Squiggles.c$130$1$120            Squiggles
-C:   000006DE  XG$main$0$0                        Squiggles
-C:   000006DF  A$Squiggles$2572                   Squiggles
-C:   000006DF  C$Squiggles.c$135$1$120            Squiggles
-C:   000006DF  C$Squiggles.c$137$1$128            Squiggles
-C:   000006DF  G$Port_Init$0$0                    Squiggles
-C:   000006DF  _Port_Init                         Squiggles
-C:   000006E2  A$Squiggles$2575                   Squiggles
-C:   000006E2  C$Squiggles.c$138$1$128            Squiggles
-C:   000006E5  A$Squiggles$2578                   Squiggles
-C:   000006E5  C$Squiggles.c$139$1$128            Squiggles
-C:   000006E8  A$Squiggles$2581                   Squiggles
-C:   000006E8  C$Squiggles.c$140$1$128            Squiggles
-C:   000006EB  A$Squiggles$2584                   Squiggles
-C:   000006EB  C$Squiggles.c$141$1$128            Squiggles
-C:   000006ED  A$Squiggles$2585                   Squiggles
-C:   000006EF  A$Squiggles$2586                   Squiggles
-C:   000006F0  A$Squiggles$2587                   Squiggles
-C:   000006F2  A$Squiggles$2590                   Squiggles
-C:   000006F2  C$Squiggles.c$142$1$128            Squiggles
-C:   000006F5  A$Squiggles$2593                   Squiggles
-C:   000006F5  C$Squiggles.c$143$1$128            Squiggles
-C:   000006F7  A$Squiggles$2594                   Squiggles
-C:   000006F9  A$Squiggles$2595                   Squiggles
-C:   000006FA  A$Squiggles$2596                   Squiggles
-C:   000006FC  A$Squiggles$2599                   Squiggles
-C:   000006FC  C$Squiggles.c$145$1$128            Squiggles
-C:   000006FC  XG$Port_Init$0$0                   Squiggles
-C:   000006FD  A$Squiggles$2612                   Squiggles
-C:   000006FD  C$Squiggles.c$149$1$128            Squiggles
-C:   000006FD  C$Squiggles.c$151$1$130            Squiggles
-C:   000006FD  G$Interrupt_Init$0$0               Squiggles
-C:   000006FD  _Interrupt_Init                    Squiggles
-C:   00000700  A$Squiggles$2615                   Squiggles
-C:   00000700  C$Squiggles.c$152$1$130            Squiggles
-C:   00000703  A$Squiggles$2618                   Squiggles
-C:   00000703  C$Squiggles.c$153$1$130            Squiggles
-C:   00000705  A$Squiggles$2621                   Squiggles
-C:   00000705  C$Squiggles.c$154$1$130            Squiggles
-C:   00000705  XG$Interrupt_Init$0$0              Squiggles
-C:   00000706  A$Squiggles$2634                   Squiggles
+C:   000006D3  A$Squiggles$2543                   Squiggles
+C:   000006D5  A$Squiggles$2544                   Squiggles
+C:   000006D7  A$Squiggles$2545                   Squiggles
+C:   000006D9  A$Squiggles$2546                   Squiggles
+C:   000006DB  A$Squiggles$2547                   Squiggles
+C:   000006DE  A$Squiggles$2548                   Squiggles
+C:   000006E0  A$Squiggles$2549                   Squiggles
+C:   000006E2  A$Squiggles$2550                   Squiggles
+C:   000006E4  A$Squiggles$2553                   Squiggles
+C:   000006E4  C$Squiggles.c$125$3$126            Squiggles
+C:   000006E7  A$Squiggles$2556                   Squiggles
+C:   000006E7  C$Squiggles.c$127$3$126            Squiggles
+C:   000006EA  A$Squiggles$2557                   Squiggles
+C:   000006ED  A$Squiggles$2560                   Squiggles
+C:   000006ED  C$Squiggles.c$136$1$120            Squiggles
+C:   000006ED  XG$main$0$0                        Squiggles
+C:   000006EE  A$Squiggles$2573                   Squiggles
+C:   000006EE  C$Squiggles.c$141$1$120            Squiggles
+C:   000006EE  C$Squiggles.c$143$1$128            Squiggles
+C:   000006EE  G$Port_Init$0$0                    Squiggles
+C:   000006EE  _Port_Init                         Squiggles
+C:   000006F1  A$Squiggles$2576                   Squiggles
+C:   000006F1  C$Squiggles.c$144$1$128            Squiggles
+C:   000006F4  A$Squiggles$2579                   Squiggles
+C:   000006F4  C$Squiggles.c$145$1$128            Squiggles
+C:   000006F7  A$Squiggles$2582                   Squiggles
+C:   000006F7  C$Squiggles.c$146$1$128            Squiggles
+C:   000006FA  A$Squiggles$2585                   Squiggles
+C:   000006FA  C$Squiggles.c$147$1$128            Squiggles
+C:   000006FC  A$Squiggles$2586                   Squiggles
+C:   000006FE  A$Squiggles$2587                   Squiggles
+C:   000006FF  A$Squiggles$2588                   Squiggles
+C:   00000701  A$Squiggles$2591                   Squiggles
+C:   00000701  C$Squiggles.c$148$1$128            Squiggles
+C:   00000704  A$Squiggles$2594                   Squiggles
+C:   00000704  C$Squiggles.c$149$1$128            Squiggles
+C:   00000706  A$Squiggles$2595                   Squiggles
+C:   00000708  A$Squiggles$2596                   Squiggles
+C:   00000709  A$Squiggles$2597                   Squiggles
+C:   0000070B  A$Squiggles$2600                   Squiggles
+C:   0000070B  C$Squiggles.c$151$1$128            Squiggles
+C:   0000070B  XG$Port_Init$0$0                   Squiggles
+C:   0000070C  A$Squiggles$2613                   Squiggles
+C:   0000070C  C$Squiggles.c$155$1$128            Squiggles
+C:   0000070C  C$Squiggles.c$157$1$130            Squiggles
+C:   0000070C  G$Interrupt_Init$0$0               Squiggles
+C:   0000070C  _Interrupt_Init                    Squiggles
+C:   0000070F  A$Squiggles$2616                   Squiggles
+C:   0000070F  C$Squiggles.c$158$1$130            Squiggles
+C:   00000712  A$Squiggles$2619                   Squiggles
+C:   00000712  C$Squiggles.c$159$1$130            Squiggles
 ASxxxx Linker V03.00 + NoICE + sdld,  page 50.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000C9    000013ED =        5101. bytes (REL,CON,CODE)
+CSEG                                000000C9    0000140E =        5134. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   00000706  C$Squiggles.c$158$1$130            Squiggles
-C:   00000706  C$Squiggles.c$160$1$132            Squiggles
-C:   00000706  G$PCA_Init$0$0                     Squiggles
-C:   00000706  _PCA_Init                          Squiggles
-C:   00000709  A$Squiggles$2637                   Squiggles
-C:   00000709  C$Squiggles.c$161$1$132            Squiggles
-C:   0000070C  A$Squiggles$2640                   Squiggles
-C:   0000070C  C$Squiggles.c$162$1$132            Squiggles
-C:   0000070F  A$Squiggles$2643                   Squiggles
-C:   0000070F  C$Squiggles.c$163$1$132            Squiggles
-C:   00000712  A$Squiggles$2646                   Squiggles
-C:   00000712  C$Squiggles.c$164$1$132            Squiggles
-C:   00000712  XG$PCA_Init$0$0                    Squiggles
-C:   00000713  A$Squiggles$2659                   Squiggles
-C:   00000713  C$Squiggles.c$168$1$132            Squiggles
-C:   00000713  C$Squiggles.c$170$1$134            Squiggles
-C:   00000713  G$SMB0_Init$0$0                    Squiggles
-C:   00000713  _SMB0_Init                         Squiggles
-C:   00000716  A$Squiggles$2662                   Squiggles
-C:   00000716  C$Squiggles.c$171$1$134            Squiggles
-C:   00000718  A$Squiggles$2665                   Squiggles
-C:   00000718  C$Squiggles.c$172$1$134            Squiggles
-C:   00000718  XG$SMB0_Init$0$0                   Squiggles
-C:   00000719  A$Squiggles$2676                   Squiggles
-C:   00000719  C$Squiggles.c$176$1$134            Squiggles
-C:   00000719  G$PCA_ISR$0$0                      Squiggles
-C:   00000719  _PCA_ISR                           Squiggles
-C:   0000071B  A$Squiggles$2677                   Squiggles
-C:   0000071D  A$Squiggles$2682                   Squiggles
-C:   0000071D  C$Squiggles.c$178$1$136            Squiggles
-C:   0000071D  C$Squiggles.c$180$2$137            Squiggles
-C:   00000720  A$Squiggles$2683                   Squiggles
-C:   00000722  A$Squiggles$2687                   Squiggles
-C:   00000722  C$Squiggles.c$182$2$137            Squiggles
-C:   00000724  A$Squiggles$2688                   Squiggles
-C:   00000725  A$Squiggles$2689                   Squiggles
-C:   00000728  A$Squiggles$2690                   Squiggles
-C:   0000072A  A$Squiggles$2694                   Squiggles
-C:   0000072A  C$Squiggles.c$183$2$137            Squiggles
-C:   0000072D  A$Squiggles$2695                   Squiggles
-C:   00000730  A$Squiggles$2698                   Squiggles
-C:   00000730  C$Squiggles.c$184$2$137            Squiggles
-C:   00000731  A$Squiggles$2699                   Squiggles
-C:   00000733  A$Squiggles$2700                   Squiggles
-C:   00000735  A$Squiggles$2701                   Squiggles
-C:   00000736  A$Squiggles$2702                   Squiggles
-C:   00000738  A$Squiggles$2703                   Squiggles
-C:   0000073A  A$Squiggles$2706                   Squiggles
-C:   0000073A  C$Squiggles.c$186$3$138            Squiggles
-C:   0000073B  A$Squiggles$2707                   Squiggles
-C:   0000073D  A$Squiggles$2708                   Squiggles
+C:   00000714  A$Squiggles$2622                   Squiggles
+C:   00000714  C$Squiggles.c$160$1$130            Squiggles
+C:   00000714  XG$Interrupt_Init$0$0              Squiggles
+C:   00000715  A$Squiggles$2635                   Squiggles
+C:   00000715  C$Squiggles.c$164$1$130            Squiggles
+C:   00000715  C$Squiggles.c$166$1$132            Squiggles
+C:   00000715  G$PCA_Init$0$0                     Squiggles
+C:   00000715  _PCA_Init                          Squiggles
+C:   00000718  A$Squiggles$2638                   Squiggles
+C:   00000718  C$Squiggles.c$167$1$132            Squiggles
+C:   0000071B  A$Squiggles$2641                   Squiggles
+C:   0000071B  C$Squiggles.c$168$1$132            Squiggles
+C:   0000071E  A$Squiggles$2644                   Squiggles
+C:   0000071E  C$Squiggles.c$169$1$132            Squiggles
+C:   00000721  A$Squiggles$2647                   Squiggles
+C:   00000721  C$Squiggles.c$170$1$132            Squiggles
+C:   00000721  XG$PCA_Init$0$0                    Squiggles
+C:   00000722  A$Squiggles$2660                   Squiggles
+C:   00000722  C$Squiggles.c$174$1$132            Squiggles
+C:   00000722  C$Squiggles.c$176$1$134            Squiggles
+C:   00000722  G$SMB0_Init$0$0                    Squiggles
+C:   00000722  _SMB0_Init                         Squiggles
+C:   00000725  A$Squiggles$2663                   Squiggles
+C:   00000725  C$Squiggles.c$177$1$134            Squiggles
+C:   00000727  A$Squiggles$2666                   Squiggles
+C:   00000727  C$Squiggles.c$178$1$134            Squiggles
+C:   00000727  XG$SMB0_Init$0$0                   Squiggles
+C:   00000728  A$Squiggles$2677                   Squiggles
+C:   00000728  C$Squiggles.c$182$1$134            Squiggles
+C:   00000728  G$PCA_ISR$0$0                      Squiggles
+C:   00000728  _PCA_ISR                           Squiggles
+C:   0000072A  A$Squiggles$2678                   Squiggles
+C:   0000072C  A$Squiggles$2683                   Squiggles
+C:   0000072C  C$Squiggles.c$184$1$136            Squiggles
+C:   0000072C  C$Squiggles.c$186$2$137            Squiggles
+C:   0000072F  A$Squiggles$2684                   Squiggles
+C:   00000731  A$Squiggles$2688                   Squiggles
+C:   00000731  C$Squiggles.c$188$2$137            Squiggles
+C:   00000733  A$Squiggles$2689                   Squiggles
+C:   00000734  A$Squiggles$2690                   Squiggles
+C:   00000737  A$Squiggles$2691                   Squiggles
+C:   00000739  A$Squiggles$2695                   Squiggles
+C:   00000739  C$Squiggles.c$189$2$137            Squiggles
+C:   0000073C  A$Squiggles$2696                   Squiggles
+C:   0000073F  A$Squiggles$2699                   Squiggles
+C:   0000073F  C$Squiggles.c$190$2$137            Squiggles
+C:   00000740  A$Squiggles$2700                   Squiggles
+C:   00000742  A$Squiggles$2701                   Squiggles
+C:   00000744  A$Squiggles$2702                   Squiggles
+C:   00000745  A$Squiggles$2703                   Squiggles
+C:   00000747  A$Squiggles$2704                   Squiggles
 ASxxxx Linker V03.00 + NoICE + sdld,  page 51.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000C9    000013ED =        5101. bytes (REL,CON,CODE)
+CSEG                                000000C9    0000140E =        5134. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   0000073F  A$Squiggles$2711                   Squiggles
-C:   0000073F  C$Squiggles.c$187$3$138            Squiggles
-C:   00000741  A$Squiggles$2713                   Squiggles
-C:   00000744  A$Squiggles$2714                   Squiggles
-C:   00000746  A$Squiggles$2719                   Squiggles
-C:   00000746  C$Squiggles.c$189$2$137            Squiggles
-C:   00000748  A$Squiggles$2722                   Squiggles
-C:   00000748  C$Squiggles.c$190$2$137            Squiggles
-C:   0000074A  A$Squiggles$2723                   Squiggles
-C:   0000074C  A$Squiggles$2724                   Squiggles
-C:   0000074E  A$Squiggles$2727                   Squiggles
-C:   0000074E  C$Squiggles.c$192$3$139            Squiggles
-C:   00000751  A$Squiggles$2730                   Squiggles
-C:   00000751  C$Squiggles.c$193$3$139            Squiggles
-C:   00000754  A$Squiggles$2734                   Squiggles
-C:   00000754  C$Squiggles.c$195$2$137            Squiggles
-C:   00000756  A$Squiggles$2737                   Squiggles
-C:   00000756  C$Squiggles.c$196$2$137            Squiggles
-C:   00000758  A$Squiggles$2738                   Squiggles
-C:   0000075B  A$Squiggles$2739                   Squiggles
-C:   0000075E  A$Squiggles$2743                   Squiggles
-C:   0000075E  C$Squiggles.c$197$2$137            Squiggles
-C:   00000760  A$Squiggles$2746                   Squiggles
-C:   00000760  C$Squiggles.c$198$2$137            Squiggles
-C:   00000762  A$Squiggles$2747                   Squiggles
-C:   00000764  A$Squiggles$2748                   Squiggles
-C:   00000766  A$Squiggles$2751                   Squiggles
-C:   00000766  C$Squiggles.c$200$3$140            Squiggles
-C:   00000769  A$Squiggles$2754                   Squiggles
-C:   00000769  C$Squiggles.c$201$3$140            Squiggles
-C:   0000076C  A$Squiggles$2755                   Squiggles
-C:   0000076E  A$Squiggles$2759                   Squiggles
-C:   0000076E  C$Squiggles.c$204$1$136            Squiggles
-C:   00000771  A$Squiggles$2761                   Squiggles
-C:   00000773  A$Squiggles$2762                   Squiggles
-C:   00000775  A$Squiggles$2765                   Squiggles
-C:   00000775  C$Squiggles.c$205$1$136            Squiggles
-C:   00000775  XG$PCA_ISR$0$0                     Squiggles
-C:   00000776  A$Squiggles$2782                   Squiggles
-C:   00000776  C$Squiggles.c$210$1$136            Squiggles
-C:   00000776  C$Squiggles.c$212$1$142            Squiggles
-C:   00000776  G$ADC_Init$0$0                     Squiggles
-C:   00000776  _ADC_Init                          Squiggles
-C:   00000779  A$Squiggles$2785                   Squiggles
-C:   00000779  C$Squiggles.c$213$1$142            Squiggles
-C:   0000077C  A$Squiggles$2788                   Squiggles
-C:   0000077C  C$Squiggles.c$214$1$142            Squiggles
-C:   0000077F  A$Squiggles$2791                   Squiggles
-C:   0000077F  C$Squiggles.c$215$1$142            Squiggles
-C:   0000077F  XG$ADC_Init$0$0                    Squiggles
-C:   00000780  A$Squiggles$2804                   Squiggles
+C:   00000749  A$Squiggles$2707                   Squiggles
+C:   00000749  C$Squiggles.c$192$3$138            Squiggles
+C:   0000074A  A$Squiggles$2708                   Squiggles
+C:   0000074C  A$Squiggles$2709                   Squiggles
+C:   0000074E  A$Squiggles$2712                   Squiggles
+C:   0000074E  C$Squiggles.c$193$3$138            Squiggles
+C:   00000750  A$Squiggles$2714                   Squiggles
+C:   00000753  A$Squiggles$2715                   Squiggles
+C:   00000755  A$Squiggles$2720                   Squiggles
+C:   00000755  C$Squiggles.c$195$2$137            Squiggles
+C:   00000757  A$Squiggles$2723                   Squiggles
+C:   00000757  C$Squiggles.c$196$2$137            Squiggles
+C:   00000759  A$Squiggles$2724                   Squiggles
+C:   0000075B  A$Squiggles$2725                   Squiggles
+C:   0000075D  A$Squiggles$2728                   Squiggles
+C:   0000075D  C$Squiggles.c$198$3$139            Squiggles
+C:   00000760  A$Squiggles$2731                   Squiggles
+C:   00000760  C$Squiggles.c$199$3$139            Squiggles
+C:   00000763  A$Squiggles$2735                   Squiggles
+C:   00000763  C$Squiggles.c$201$2$137            Squiggles
+C:   00000765  A$Squiggles$2738                   Squiggles
+C:   00000765  C$Squiggles.c$202$2$137            Squiggles
+C:   00000767  A$Squiggles$2739                   Squiggles
+C:   0000076A  A$Squiggles$2740                   Squiggles
+C:   0000076D  A$Squiggles$2744                   Squiggles
+C:   0000076D  C$Squiggles.c$203$2$137            Squiggles
+C:   0000076F  A$Squiggles$2747                   Squiggles
+C:   0000076F  C$Squiggles.c$204$2$137            Squiggles
+C:   00000771  A$Squiggles$2748                   Squiggles
+C:   00000773  A$Squiggles$2749                   Squiggles
+C:   00000775  A$Squiggles$2752                   Squiggles
+C:   00000775  C$Squiggles.c$206$3$140            Squiggles
+C:   00000778  A$Squiggles$2755                   Squiggles
+C:   00000778  C$Squiggles.c$207$3$140            Squiggles
+C:   0000077B  A$Squiggles$2756                   Squiggles
+C:   0000077D  A$Squiggles$2760                   Squiggles
+C:   0000077D  C$Squiggles.c$210$1$136            Squiggles
+C:   00000780  A$Squiggles$2762                   Squiggles
+C:   00000782  A$Squiggles$2763                   Squiggles
+C:   00000784  A$Squiggles$2766                   Squiggles
+C:   00000784  C$Squiggles.c$211$1$136            Squiggles
+C:   00000784  XG$PCA_ISR$0$0                     Squiggles
+C:   00000785  A$Squiggles$2783                   Squiggles
+C:   00000785  C$Squiggles.c$216$1$136            Squiggles
+C:   00000785  C$Squiggles.c$218$1$142            Squiggles
+C:   00000785  G$ADC_Init$0$0                     Squiggles
+C:   00000785  _ADC_Init                          Squiggles
+C:   00000788  A$Squiggles$2786                   Squiggles
+C:   00000788  C$Squiggles.c$219$1$142            Squiggles
+C:   0000078B  A$Squiggles$2789                   Squiggles
+C:   0000078B  C$Squiggles.c$220$1$142            Squiggles
 ASxxxx Linker V03.00 + NoICE + sdld,  page 52.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000C9    000013ED =        5101. bytes (REL,CON,CODE)
+CSEG                                000000C9    0000140E =        5134. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   00000780  C$Squiggles.c$219$1$142            Squiggles
-C:   00000780  G$read_AD_input$0$0                Squiggles
-C:   00000780  _read_AD_input                     Squiggles
-C:   00000783  A$Squiggles$2807                   Squiggles
-C:   00000783  C$Squiggles.c$222$1$144            Squiggles
-C:   00000785  A$Squiggles$2808                   Squiggles
-C:   00000787  A$Squiggles$2809                   Squiggles
-C:   00000788  A$Squiggles$2810                   Squiggles
-C:   0000078A  A$Squiggles$2813                   Squiggles
-C:   0000078A  C$Squiggles.c$223$1$144            Squiggles
-C:   0000078D  A$Squiggles$2817                   Squiggles
-C:   0000078D  C$Squiggles.c$225$1$144            Squiggles
-C:   0000078F  A$Squiggles$2818                   Squiggles
-C:   00000792  A$Squiggles$2821                   Squiggles
-C:   00000792  C$Squiggles.c$227$1$144            Squiggles
-C:   00000795  A$Squiggles$2824                   Squiggles
-C:   00000795  C$Squiggles.c$228$1$144            Squiggles
-C:   00000795  XG$read_AD_input$0$0               Squiggles
-C:   00000796  A$Squiggles$2839                   Squiggles
-C:   00000796  C$Squiggles.c$232$1$144            Squiggles
-C:   00000796  C$Squiggles.c$235$1$146            Squiggles
-C:   00000796  G$Pick_Heading$0$0                 Squiggles
-C:   00000796  _Pick_Heading                      Squiggles
-C:   00000799  A$Squiggles$2842                   Squiggles
-C:   00000799  C$Squiggles.c$236$1$146            Squiggles
-C:   0000079B  A$Squiggles$2843                   Squiggles
-C:   0000079D  A$Squiggles$2844                   Squiggles
-C:   0000079F  A$Squiggles$2845                   Squiggles
-C:   000007A1  A$Squiggles$2846                   Squiggles
-C:   000007A3  A$Squiggles$2847                   Squiggles
-C:   000007A5  A$Squiggles$2848                   Squiggles
-C:   000007A8  A$Squiggles$2849                   Squiggles
-C:   000007AA  A$Squiggles$2850                   Squiggles
-C:   000007AC  A$Squiggles$2851                   Squiggles
-C:   000007AE  A$Squiggles$2854                   Squiggles
-C:   000007AE  C$Squiggles.c$237$1$146            Squiggles
-C:   000007B1  A$Squiggles$2855                   Squiggles
-C:   000007B4  A$Squiggles$2856                   Squiggles
-C:   000007B6  A$Squiggles$2857                   Squiggles
-C:   000007B8  A$Squiggles$2860                   Squiggles
-C:   000007B8  C$Squiggles.c$238$1$146            Squiggles
-C:   000007BA  A$Squiggles$2861                   Squiggles
-C:   000007BC  A$Squiggles$2863                   Squiggles
-C:   000007BD  A$Squiggles$2864                   Squiggles
-C:   000007BF  A$Squiggles$2865                   Squiggles
-C:   000007C0  A$Squiggles$2866                   Squiggles
-C:   000007C2  A$Squiggles$2867                   Squiggles
-C:   000007C4  A$Squiggles$2868                   Squiggles
-C:   000007C7  A$Squiggles$2869                   Squiggles
-C:   000007C9  A$Squiggles$2870                   Squiggles
-C:   000007CB  A$Squiggles$2873                   Squiggles
+C:   0000078E  A$Squiggles$2792                   Squiggles
+C:   0000078E  C$Squiggles.c$221$1$142            Squiggles
+C:   0000078E  XG$ADC_Init$0$0                    Squiggles
+C:   0000078F  A$Squiggles$2805                   Squiggles
+C:   0000078F  C$Squiggles.c$225$1$142            Squiggles
+C:   0000078F  G$read_AD_input$0$0                Squiggles
+C:   0000078F  _read_AD_input                     Squiggles
+C:   00000792  A$Squiggles$2808                   Squiggles
+C:   00000792  C$Squiggles.c$228$1$144            Squiggles
+C:   00000794  A$Squiggles$2809                   Squiggles
+C:   00000796  A$Squiggles$2810                   Squiggles
+C:   00000797  A$Squiggles$2811                   Squiggles
+C:   00000799  A$Squiggles$2814                   Squiggles
+C:   00000799  C$Squiggles.c$229$1$144            Squiggles
+C:   0000079C  A$Squiggles$2818                   Squiggles
+C:   0000079C  C$Squiggles.c$231$1$144            Squiggles
+C:   0000079E  A$Squiggles$2819                   Squiggles
+C:   000007A1  A$Squiggles$2822                   Squiggles
+C:   000007A1  C$Squiggles.c$233$1$144            Squiggles
+C:   000007A4  A$Squiggles$2825                   Squiggles
+C:   000007A4  C$Squiggles.c$234$1$144            Squiggles
+C:   000007A4  XG$read_AD_input$0$0               Squiggles
+C:   000007A5  A$Squiggles$2840                   Squiggles
+C:   000007A5  C$Squiggles.c$238$1$144            Squiggles
+C:   000007A5  C$Squiggles.c$241$1$146            Squiggles
+C:   000007A5  G$Pick_Heading$0$0                 Squiggles
+C:   000007A5  _Pick_Heading                      Squiggles
+C:   000007A8  A$Squiggles$2843                   Squiggles
+C:   000007A8  C$Squiggles.c$242$1$146            Squiggles
+C:   000007AA  A$Squiggles$2844                   Squiggles
+C:   000007AC  A$Squiggles$2845                   Squiggles
+C:   000007AE  A$Squiggles$2846                   Squiggles
+C:   000007B0  A$Squiggles$2847                   Squiggles
+C:   000007B2  A$Squiggles$2848                   Squiggles
+C:   000007B4  A$Squiggles$2849                   Squiggles
+C:   000007B7  A$Squiggles$2850                   Squiggles
+C:   000007B9  A$Squiggles$2851                   Squiggles
+C:   000007BB  A$Squiggles$2852                   Squiggles
+C:   000007BD  A$Squiggles$2855                   Squiggles
+C:   000007BD  C$Squiggles.c$243$1$146            Squiggles
+C:   000007C0  A$Squiggles$2856                   Squiggles
+C:   000007C3  A$Squiggles$2857                   Squiggles
+C:   000007C5  A$Squiggles$2858                   Squiggles
+C:   000007C7  A$Squiggles$2861                   Squiggles
+C:   000007C7  C$Squiggles.c$244$1$146            Squiggles
+C:   000007C9  A$Squiggles$2862                   Squiggles
+C:   000007CB  A$Squiggles$2864                   Squiggles
+C:   000007CC  A$Squiggles$2865                   Squiggles
+C:   000007CE  A$Squiggles$2866                   Squiggles
+C:   000007CF  A$Squiggles$2867                   Squiggles
+C:   000007D1  A$Squiggles$2868                   Squiggles
 ASxxxx Linker V03.00 + NoICE + sdld,  page 53.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000C9    000013ED =        5101. bytes (REL,CON,CODE)
+CSEG                                000000C9    0000140E =        5134. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   000007CB  C$Squiggles.c$240$2$147            Squiggles
-C:   000007CC  A$Squiggles$2874                   Squiggles
-C:   000007CE  A$Squiggles$2875                   Squiggles
-C:   000007CF  A$Squiggles$2876                   Squiggles
-C:   000007D0  A$Squiggles$2877                   Squiggles
-C:   000007D2  A$Squiggles$2878                   Squiggles
-C:   000007D3  A$Squiggles$2881                   Squiggles
-C:   000007D3  C$Squiggles.c$242$1$146            Squiggles
-C:   000007D5  A$Squiggles$2883                   Squiggles
-C:   000007D7  A$Squiggles$2884                   Squiggles
-C:   000007D9  A$Squiggles$2885                   Squiggles
-C:   000007DB  A$Squiggles$2886                   Squiggles
-C:   000007DD  A$Squiggles$2888                   Squiggles
-C:   000007DE  A$Squiggles$2889                   Squiggles
-C:   000007E1  A$Squiggles$2892                   Squiggles
-C:   000007E1  C$Squiggles.c$244$2$148            Squiggles
-C:   000007E3  A$Squiggles$2893                   Squiggles
-C:   000007E4  A$Squiggles$2894                   Squiggles
-C:   000007E5  A$Squiggles$2895                   Squiggles
-C:   000007E7  A$Squiggles$2896                   Squiggles
-C:   000007E8  A$Squiggles$2897                   Squiggles
-C:   000007E9  A$Squiggles$2898                   Squiggles
-C:   000007EB  A$Squiggles$2900                   Squiggles
-C:   000007ED  A$Squiggles$2901                   Squiggles
-C:   000007EF  A$Squiggles$2904                   Squiggles
-C:   000007EF  C$Squiggles.c$246$1$146            Squiggles
-C:   000007F1  A$Squiggles$2905                   Squiggles
-C:   000007F3  A$Squiggles$2906                   Squiggles
-C:   000007F6  A$Squiggles$2907                   Squiggles
-C:   000007F8  A$Squiggles$2908                   Squiggles
-C:   000007FA  A$Squiggles$2911                   Squiggles
-C:   000007FA  C$Squiggles.c$247$1$146            Squiggles
-C:   000007FC  A$Squiggles$2912                   Squiggles
-C:   000007FE  A$Squiggles$2915                   Squiggles
-C:   000007FE  C$Squiggles.c$248$1$146            Squiggles
-C:   00000800  A$Squiggles$2916                   Squiggles
-C:   00000802  A$Squiggles$2917                   Squiggles
-C:   00000804  A$Squiggles$2918                   Squiggles
-C:   00000806  A$Squiggles$2919                   Squiggles
-C:   00000808  A$Squiggles$2920                   Squiggles
-C:   0000080A  A$Squiggles$2921                   Squiggles
-C:   0000080D  A$Squiggles$2922                   Squiggles
-C:   0000080F  A$Squiggles$2923                   Squiggles
-C:   00000811  A$Squiggles$2924                   Squiggles
-C:   00000813  A$Squiggles$2927                   Squiggles
-C:   00000813  C$Squiggles.c$249$1$146            Squiggles
-C:   00000813  XG$Pick_Heading$0$0                Squiggles
-C:   00000814  A$Squiggles$2942                   Squiggles
-C:   00000814  C$Squiggles.c$252$1$146            Squiggles
-C:   00000814  C$Squiggles.c$255$1$150            Squiggles
-C:   00000814  G$Pick_Compass_Gain$0$0            Squiggles
+C:   000007D3  A$Squiggles$2869                   Squiggles
+C:   000007D6  A$Squiggles$2870                   Squiggles
+C:   000007D8  A$Squiggles$2871                   Squiggles
+C:   000007DA  A$Squiggles$2874                   Squiggles
+C:   000007DA  C$Squiggles.c$246$2$147            Squiggles
+C:   000007DB  A$Squiggles$2875                   Squiggles
+C:   000007DD  A$Squiggles$2876                   Squiggles
+C:   000007DE  A$Squiggles$2877                   Squiggles
+C:   000007DF  A$Squiggles$2878                   Squiggles
+C:   000007E1  A$Squiggles$2879                   Squiggles
+C:   000007E2  A$Squiggles$2882                   Squiggles
+C:   000007E2  C$Squiggles.c$248$1$146            Squiggles
+C:   000007E4  A$Squiggles$2884                   Squiggles
+C:   000007E6  A$Squiggles$2885                   Squiggles
+C:   000007E8  A$Squiggles$2886                   Squiggles
+C:   000007EA  A$Squiggles$2887                   Squiggles
+C:   000007EC  A$Squiggles$2889                   Squiggles
+C:   000007ED  A$Squiggles$2890                   Squiggles
+C:   000007F0  A$Squiggles$2893                   Squiggles
+C:   000007F0  C$Squiggles.c$250$2$148            Squiggles
+C:   000007F2  A$Squiggles$2894                   Squiggles
+C:   000007F3  A$Squiggles$2895                   Squiggles
+C:   000007F4  A$Squiggles$2896                   Squiggles
+C:   000007F6  A$Squiggles$2897                   Squiggles
+C:   000007F7  A$Squiggles$2898                   Squiggles
+C:   000007F8  A$Squiggles$2899                   Squiggles
+C:   000007FA  A$Squiggles$2901                   Squiggles
+C:   000007FC  A$Squiggles$2902                   Squiggles
+C:   000007FE  A$Squiggles$2905                   Squiggles
+C:   000007FE  C$Squiggles.c$252$1$146            Squiggles
+C:   00000800  A$Squiggles$2906                   Squiggles
+C:   00000802  A$Squiggles$2907                   Squiggles
+C:   00000805  A$Squiggles$2908                   Squiggles
+C:   00000807  A$Squiggles$2909                   Squiggles
+C:   00000809  A$Squiggles$2912                   Squiggles
+C:   00000809  C$Squiggles.c$253$1$146            Squiggles
+C:   0000080B  A$Squiggles$2913                   Squiggles
+C:   0000080D  A$Squiggles$2916                   Squiggles
+C:   0000080D  C$Squiggles.c$254$1$146            Squiggles
+C:   0000080F  A$Squiggles$2917                   Squiggles
+C:   00000811  A$Squiggles$2918                   Squiggles
+C:   00000813  A$Squiggles$2919                   Squiggles
+C:   00000815  A$Squiggles$2920                   Squiggles
+C:   00000817  A$Squiggles$2921                   Squiggles
+C:   00000819  A$Squiggles$2922                   Squiggles
+C:   0000081C  A$Squiggles$2923                   Squiggles
+C:   0000081E  A$Squiggles$2924                   Squiggles
+C:   00000820  A$Squiggles$2925                   Squiggles
+C:   00000822  A$Squiggles$2928                   Squiggles
+C:   00000822  C$Squiggles.c$255$1$146            Squiggles
+C:   00000822  XG$Pick_Heading$0$0                Squiggles
 ASxxxx Linker V03.00 + NoICE + sdld,  page 54.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000C9    000013ED =        5101. bytes (REL,CON,CODE)
+CSEG                                000000C9    0000140E =        5134. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   00000814  _Pick_Compass_Gain                 Squiggles
-C:   00000817  A$Squiggles$2945                   Squiggles
-C:   00000817  C$Squiggles.c$256$1$150            Squiggles
-C:   00000819  A$Squiggles$2946                   Squiggles
-C:   0000081B  A$Squiggles$2947                   Squiggles
-C:   0000081D  A$Squiggles$2948                   Squiggles
-C:   0000081F  A$Squiggles$2949                   Squiggles
-C:   00000821  A$Squiggles$2950                   Squiggles
-C:   00000823  A$Squiggles$2951                   Squiggles
-C:   00000826  A$Squiggles$2952                   Squiggles
-C:   00000828  A$Squiggles$2953                   Squiggles
-C:   0000082A  A$Squiggles$2954                   Squiggles
-C:   0000082C  A$Squiggles$2957                   Squiggles
-C:   0000082C  C$Squiggles.c$257$1$150            Squiggles
-C:   0000082F  A$Squiggles$2958                   Squiggles
-C:   00000832  A$Squiggles$2959                   Squiggles
-C:   00000834  A$Squiggles$2960                   Squiggles
-C:   00000836  A$Squiggles$2963                   Squiggles
-C:   00000836  C$Squiggles.c$258$1$150            Squiggles
-C:   00000838  A$Squiggles$2964                   Squiggles
-C:   0000083A  A$Squiggles$2965                   Squiggles
-C:   0000083D  A$Squiggles$2966                   Squiggles
-C:   0000083F  A$Squiggles$2967                   Squiggles
-C:   00000841  A$Squiggles$2970                   Squiggles
-C:   00000841  C$Squiggles.c$259$1$150            Squiggles
-C:   00000844  A$Squiggles$2971                   Squiggles
-C:   00000847  A$Squiggles$2972                   Squiggles
-C:   00000849  A$Squiggles$2973                   Squiggles
-C:   0000084B  A$Squiggles$2974                   Squiggles
-C:   0000084E  A$Squiggles$2975                   Squiggles
-C:   00000851  A$Squiggles$2976                   Squiggles
-C:   00000854  A$Squiggles$2977                   Squiggles
-C:   00000857  A$Squiggles$2978                   Squiggles
-C:   0000085A  A$Squiggles$2979                   Squiggles
-C:   0000085C  A$Squiggles$2982                   Squiggles
-C:   0000085C  C$Squiggles.c$260$1$150            Squiggles
-C:   0000085E  A$Squiggles$2983                   Squiggles
-C:   00000860  A$Squiggles$2984                   Squiggles
-C:   00000862  A$Squiggles$2985                   Squiggles
-C:   00000864  A$Squiggles$2986                   Squiggles
-C:   00000866  A$Squiggles$2987                   Squiggles
-C:   00000868  A$Squiggles$2988                   Squiggles
-C:   0000086B  A$Squiggles$2989                   Squiggles
-C:   0000086D  A$Squiggles$2990                   Squiggles
-C:   0000086F  A$Squiggles$2991                   Squiggles
-C:   00000871  A$Squiggles$2994                   Squiggles
-C:   00000871  C$Squiggles.c$261$1$150            Squiggles
-C:   00000871  XG$Pick_Compass_Gain$0$0           Squiggles
-C:   00000872  A$Squiggles$3011                   Squiggles
-C:   00000872  C$Squiggles.c$265$1$150            Squiggles
-C:   00000872  C$Squiggles.c$270$1$152            Squiggles
+C:   00000823  A$Squiggles$2943                   Squiggles
+C:   00000823  C$Squiggles.c$258$1$146            Squiggles
+C:   00000823  C$Squiggles.c$261$1$150            Squiggles
+C:   00000823  G$Pick_Compass_Gain$0$0            Squiggles
+C:   00000823  _Pick_Compass_Gain                 Squiggles
+C:   00000826  A$Squiggles$2946                   Squiggles
+C:   00000826  C$Squiggles.c$262$1$150            Squiggles
+C:   00000828  A$Squiggles$2947                   Squiggles
+C:   0000082A  A$Squiggles$2948                   Squiggles
+C:   0000082C  A$Squiggles$2949                   Squiggles
+C:   0000082E  A$Squiggles$2950                   Squiggles
+C:   00000830  A$Squiggles$2951                   Squiggles
+C:   00000832  A$Squiggles$2952                   Squiggles
+C:   00000835  A$Squiggles$2953                   Squiggles
+C:   00000837  A$Squiggles$2954                   Squiggles
+C:   00000839  A$Squiggles$2955                   Squiggles
+C:   0000083B  A$Squiggles$2958                   Squiggles
+C:   0000083B  C$Squiggles.c$263$1$150            Squiggles
+C:   0000083E  A$Squiggles$2959                   Squiggles
+C:   00000841  A$Squiggles$2960                   Squiggles
+C:   00000843  A$Squiggles$2961                   Squiggles
+C:   00000845  A$Squiggles$2964                   Squiggles
+C:   00000845  C$Squiggles.c$264$1$150            Squiggles
+C:   00000847  A$Squiggles$2965                   Squiggles
+C:   00000849  A$Squiggles$2966                   Squiggles
+C:   0000084C  A$Squiggles$2967                   Squiggles
+C:   0000084E  A$Squiggles$2968                   Squiggles
+C:   00000850  A$Squiggles$2971                   Squiggles
+C:   00000850  C$Squiggles.c$265$1$150            Squiggles
+C:   00000853  A$Squiggles$2972                   Squiggles
+C:   00000856  A$Squiggles$2973                   Squiggles
+C:   00000858  A$Squiggles$2974                   Squiggles
+C:   0000085A  A$Squiggles$2975                   Squiggles
+C:   0000085D  A$Squiggles$2976                   Squiggles
+C:   00000860  A$Squiggles$2977                   Squiggles
+C:   00000863  A$Squiggles$2978                   Squiggles
+C:   00000866  A$Squiggles$2979                   Squiggles
+C:   00000869  A$Squiggles$2980                   Squiggles
+C:   0000086B  A$Squiggles$2983                   Squiggles
+C:   0000086B  C$Squiggles.c$266$1$150            Squiggles
+C:   0000086D  A$Squiggles$2984                   Squiggles
+C:   0000086F  A$Squiggles$2985                   Squiggles
+C:   00000871  A$Squiggles$2986                   Squiggles
+C:   00000873  A$Squiggles$2987                   Squiggles
+C:   00000875  A$Squiggles$2988                   Squiggles
+C:   00000877  A$Squiggles$2989                   Squiggles
+C:   0000087A  A$Squiggles$2990                   Squiggles
+C:   0000087C  A$Squiggles$2991                   Squiggles
+C:   0000087E  A$Squiggles$2992                   Squiggles
+C:   00000880  A$Squiggles$2995                   Squiggles
+C:   00000880  C$Squiggles.c$267$1$150            Squiggles
 ASxxxx Linker V03.00 + NoICE + sdld,  page 55.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000C9    000013ED =        5101. bytes (REL,CON,CODE)
+CSEG                                000000C9    0000140E =        5134. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   00000872  G$read_compass$0$0                 Squiggles
-C:   00000872  _read_compass                      Squiggles
-C:   00000875  A$Squiggles$3012                   Squiggles
-C:   00000878  A$Squiggles$3013                   Squiggles
-C:   0000087B  A$Squiggles$3014                   Squiggles
-C:   0000087E  A$Squiggles$3015                   Squiggles
-C:   00000881  A$Squiggles$3016                   Squiggles
-C:   00000884  A$Squiggles$3017                   Squiggles
-C:   00000887  A$Squiggles$3020                   Squiggles
-C:   00000887  C$Squiggles.c$271$1$152            Squiggles
-C:   00000889  A$Squiggles$3021                   Squiggles
-C:   0000088B  A$Squiggles$3022                   Squiggles
-C:   0000088D  A$Squiggles$3023                   Squiggles
-C:   0000088F  A$Squiggles$3024                   Squiggles
-C:   00000890  A$Squiggles$3025                   Squiggles
-C:   00000891  A$Squiggles$3026                   Squiggles
-C:   00000893  A$Squiggles$3027                   Squiggles
-C:   00000894  A$Squiggles$3028                   Squiggles
-C:   00000895  A$Squiggles$3029                   Squiggles
-C:   00000897  A$Squiggles$3034                   Squiggles
-C:   00000897  C$Squiggles.c$272$1$152            Squiggles
-C:   00000897  C$Squiggles.c$273$1$152            Squiggles
-C:   00000897  XG$read_compass$0$0                Squiggles
-C:   00000898  A$Squiggles$3050                   Squiggles
-C:   00000898  C$Squiggles.c$277$1$152            Squiggles
-C:   00000898  C$Squiggles.c$281$1$154            Squiggles
-C:   00000898  G$read_ranger$0$0                  Squiggles
-C:   00000898  _read_ranger                       Squiggles
-C:   0000089B  A$Squiggles$3051                   Squiggles
-C:   0000089E  A$Squiggles$3052                   Squiggles
-C:   000008A1  A$Squiggles$3053                   Squiggles
-C:   000008A4  A$Squiggles$3054                   Squiggles
-C:   000008A7  A$Squiggles$3055                   Squiggles
-C:   000008AA  A$Squiggles$3056                   Squiggles
-C:   000008AD  A$Squiggles$3059                   Squiggles
-C:   000008AD  C$Squiggles.c$282$1$154            Squiggles
-C:   000008AF  A$Squiggles$3060                   Squiggles
-C:   000008B1  A$Squiggles$3061                   Squiggles
-C:   000008B3  A$Squiggles$3062                   Squiggles
-C:   000008B5  A$Squiggles$3063                   Squiggles
-C:   000008B6  A$Squiggles$3064                   Squiggles
-C:   000008B8  A$Squiggles$3065                   Squiggles
-C:   000008B9  A$Squiggles$3066                   Squiggles
-C:   000008BB  A$Squiggles$3069                   Squiggles
-C:   000008BB  C$Squiggles.c$284$1$154            Squiggles
-C:   000008BE  A$Squiggles$3072                   Squiggles
-C:   000008BE  C$Squiggles.c$285$1$154            Squiggles
-C:   000008C1  A$Squiggles$3073                   Squiggles
-C:   000008C4  A$Squiggles$3074                   Squiggles
-C:   000008C7  A$Squiggles$3075                   Squiggles
-C:   000008CA  A$Squiggles$3076                   Squiggles
+C:   00000880  XG$Pick_Compass_Gain$0$0           Squiggles
+C:   00000881  A$Squiggles$3012                   Squiggles
+C:   00000881  C$Squiggles.c$271$1$150            Squiggles
+C:   00000881  C$Squiggles.c$276$1$152            Squiggles
+C:   00000881  G$read_compass$0$0                 Squiggles
+C:   00000881  _read_compass                      Squiggles
+C:   00000884  A$Squiggles$3013                   Squiggles
+C:   00000887  A$Squiggles$3014                   Squiggles
+C:   0000088A  A$Squiggles$3015                   Squiggles
+C:   0000088D  A$Squiggles$3016                   Squiggles
+C:   00000890  A$Squiggles$3017                   Squiggles
+C:   00000893  A$Squiggles$3018                   Squiggles
+C:   00000896  A$Squiggles$3021                   Squiggles
+C:   00000896  C$Squiggles.c$277$1$152            Squiggles
+C:   00000898  A$Squiggles$3022                   Squiggles
+C:   0000089A  A$Squiggles$3023                   Squiggles
+C:   0000089C  A$Squiggles$3024                   Squiggles
+C:   0000089E  A$Squiggles$3025                   Squiggles
+C:   0000089F  A$Squiggles$3026                   Squiggles
+C:   000008A0  A$Squiggles$3027                   Squiggles
+C:   000008A2  A$Squiggles$3028                   Squiggles
+C:   000008A3  A$Squiggles$3029                   Squiggles
+C:   000008A4  A$Squiggles$3030                   Squiggles
+C:   000008A6  A$Squiggles$3035                   Squiggles
+C:   000008A6  C$Squiggles.c$278$1$152            Squiggles
+C:   000008A6  C$Squiggles.c$279$1$152            Squiggles
+C:   000008A6  XG$read_compass$0$0                Squiggles
+C:   000008A7  A$Squiggles$3051                   Squiggles
+C:   000008A7  C$Squiggles.c$283$1$152            Squiggles
+C:   000008A7  C$Squiggles.c$287$1$154            Squiggles
+C:   000008A7  G$read_ranger$0$0                  Squiggles
+C:   000008A7  _read_ranger                       Squiggles
+C:   000008AA  A$Squiggles$3052                   Squiggles
+C:   000008AD  A$Squiggles$3053                   Squiggles
+C:   000008B0  A$Squiggles$3054                   Squiggles
+C:   000008B3  A$Squiggles$3055                   Squiggles
+C:   000008B6  A$Squiggles$3056                   Squiggles
+C:   000008B9  A$Squiggles$3057                   Squiggles
+C:   000008BC  A$Squiggles$3060                   Squiggles
+C:   000008BC  C$Squiggles.c$288$1$154            Squiggles
+C:   000008BE  A$Squiggles$3061                   Squiggles
+C:   000008C0  A$Squiggles$3062                   Squiggles
+C:   000008C2  A$Squiggles$3063                   Squiggles
+C:   000008C4  A$Squiggles$3064                   Squiggles
+C:   000008C5  A$Squiggles$3065                   Squiggles
+C:   000008C7  A$Squiggles$3066                   Squiggles
+C:   000008C8  A$Squiggles$3067                   Squiggles
+C:   000008CA  A$Squiggles$3070                   Squiggles
+C:   000008CA  C$Squiggles.c$290$1$154            Squiggles
+C:   000008CD  A$Squiggles$3073                   Squiggles
+C:   000008CD  C$Squiggles.c$291$1$154            Squiggles
 ASxxxx Linker V03.00 + NoICE + sdld,  page 56.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000C9    000013ED =        5101. bytes (REL,CON,CODE)
+CSEG                                000000C9    0000140E =        5134. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   000008CD  A$Squiggles$3077                   Squiggles
-C:   000008D0  A$Squiggles$3078                   Squiggles
-C:   000008D2  A$Squiggles$3079                   Squiggles
-C:   000008D4  A$Squiggles$3080                   Squiggles
-C:   000008D7  A$Squiggles$3081                   Squiggles
-C:   000008D9  A$Squiggles$3082                   Squiggles
-C:   000008DB  A$Squiggles$3085                   Squiggles
-C:   000008DB  C$Squiggles.c$286$1$154            Squiggles
-C:   000008DD  A$Squiggles$3086                   Squiggles
-C:   000008DF  A$Squiggles$3089                   Squiggles
-C:   000008DF  C$Squiggles.c$287$1$154            Squiggles
-C:   000008DF  XG$read_ranger$0$0                 Squiggles
-C:   000008E0  A$Squiggles$3102                   Squiggles
-C:   000008E0  C$Squiggles.c$291$1$154            Squiggles
-C:   000008E0  C$Squiggles.c$296$1$156            Squiggles
-C:   000008E0  G$set_range_adj$0$0                Squiggles
-C:   000008E0  _set_range_adj                     Squiggles
-C:   000008E1  A$Squiggles$3103                   Squiggles
-C:   000008E3  A$Squiggles$3104                   Squiggles
-C:   000008E5  A$Squiggles$3105                   Squiggles
-C:   000008E6  A$Squiggles$3106                   Squiggles
-C:   000008E8  A$Squiggles$3107                   Squiggles
-C:   000008EA  A$Squiggles$3110                   Squiggles
-C:   000008EA  C$Squiggles.c$299$2$157            Squiggles
-C:   000008EB  A$Squiggles$3111                   Squiggles
-C:   000008ED  A$Squiggles$3112                   Squiggles
-C:   000008EF  A$Squiggles$3113                   Squiggles
-C:   000008F1  A$Squiggles$3117                   Squiggles
-C:   000008F1  C$Squiggles.c$304$2$158            Squiggles
-C:   000008F3  A$Squiggles$3118                   Squiggles
-C:   000008F4  A$Squiggles$3119                   Squiggles
-C:   000008F6  A$Squiggles$3120                   Squiggles
-C:   000008F8  A$Squiggles$3121                   Squiggles
-C:   000008F9  A$Squiggles$3122                   Squiggles
-C:   000008FB  A$Squiggles$3123                   Squiggles
-C:   000008FD  A$Squiggles$3124                   Squiggles
-C:   000008FF  A$Squiggles$3125                   Squiggles
-C:   00000901  A$Squiggles$3126                   Squiggles
-C:   00000903  A$Squiggles$3127                   Squiggles
-C:   00000905  A$Squiggles$3128                   Squiggles
-C:   00000908  A$Squiggles$3129                   Squiggles
-C:   0000090A  A$Squiggles$3130                   Squiggles
-C:   0000090C  A$Squiggles$3131                   Squiggles
-C:   0000090E  A$Squiggles$3132                   Squiggles
-C:   00000910  A$Squiggles$3136                   Squiggles
-C:   00000910  C$Squiggles.c$306$1$156            Squiggles
-C:   00000910  XG$set_range_adj$0$0               Squiggles
-C:   00000911  A$Squiggles$3151                   Squiggles
-C:   00000911  C$Squiggles.c$368$1$156            Squiggles
-C:   00000911  C$Squiggles.c$372$1$160            Squiggles
-C:   00000911  G$set_COMPASS_PW$0$0               Squiggles
+C:   000008D0  A$Squiggles$3074                   Squiggles
+C:   000008D3  A$Squiggles$3075                   Squiggles
+C:   000008D6  A$Squiggles$3076                   Squiggles
+C:   000008D9  A$Squiggles$3077                   Squiggles
+C:   000008DC  A$Squiggles$3078                   Squiggles
+C:   000008DF  A$Squiggles$3079                   Squiggles
+C:   000008E1  A$Squiggles$3080                   Squiggles
+C:   000008E3  A$Squiggles$3081                   Squiggles
+C:   000008E6  A$Squiggles$3082                   Squiggles
+C:   000008E8  A$Squiggles$3083                   Squiggles
+C:   000008EA  A$Squiggles$3086                   Squiggles
+C:   000008EA  C$Squiggles.c$292$1$154            Squiggles
+C:   000008EC  A$Squiggles$3087                   Squiggles
+C:   000008EE  A$Squiggles$3090                   Squiggles
+C:   000008EE  C$Squiggles.c$293$1$154            Squiggles
+C:   000008EE  XG$read_ranger$0$0                 Squiggles
+C:   000008EF  A$Squiggles$3103                   Squiggles
+C:   000008EF  C$Squiggles.c$297$1$154            Squiggles
+C:   000008EF  C$Squiggles.c$302$1$156            Squiggles
+C:   000008EF  G$set_range_adj$0$0                Squiggles
+C:   000008EF  _set_range_adj                     Squiggles
+C:   000008F0  A$Squiggles$3104                   Squiggles
+C:   000008F2  A$Squiggles$3105                   Squiggles
+C:   000008F4  A$Squiggles$3106                   Squiggles
+C:   000008F5  A$Squiggles$3107                   Squiggles
+C:   000008F7  A$Squiggles$3108                   Squiggles
+C:   000008F9  A$Squiggles$3111                   Squiggles
+C:   000008F9  C$Squiggles.c$305$2$157            Squiggles
+C:   000008FA  A$Squiggles$3112                   Squiggles
+C:   000008FC  A$Squiggles$3113                   Squiggles
+C:   000008FE  A$Squiggles$3114                   Squiggles
+C:   00000900  A$Squiggles$3118                   Squiggles
+C:   00000900  C$Squiggles.c$310$2$158            Squiggles
+C:   00000902  A$Squiggles$3119                   Squiggles
+C:   00000903  A$Squiggles$3120                   Squiggles
+C:   00000905  A$Squiggles$3121                   Squiggles
+C:   00000907  A$Squiggles$3122                   Squiggles
+C:   00000908  A$Squiggles$3123                   Squiggles
+C:   0000090A  A$Squiggles$3124                   Squiggles
+C:   0000090C  A$Squiggles$3125                   Squiggles
+C:   0000090E  A$Squiggles$3126                   Squiggles
+C:   00000910  A$Squiggles$3127                   Squiggles
+C:   00000912  A$Squiggles$3128                   Squiggles
+C:   00000914  A$Squiggles$3129                   Squiggles
+C:   00000917  A$Squiggles$3130                   Squiggles
+C:   00000919  A$Squiggles$3131                   Squiggles
+C:   0000091B  A$Squiggles$3132                   Squiggles
+C:   0000091D  A$Squiggles$3133                   Squiggles
+C:   0000091F  A$Squiggles$3137                   Squiggles
+C:   0000091F  C$Squiggles.c$312$1$156            Squiggles
+C:   0000091F  XG$set_range_adj$0$0               Squiggles
 ASxxxx Linker V03.00 + NoICE + sdld,  page 57.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000C9    000013ED =        5101. bytes (REL,CON,CODE)
+CSEG                                000000C9    0000140E =        5134. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   00000911  _set_COMPASS_PW                    Squiggles
-C:   00000913  A$Squiggles$3152                   Squiggles
-C:   00000914  A$Squiggles$3153                   Squiggles
-C:   00000916  A$Squiggles$3154                   Squiggles
-C:   00000917  A$Squiggles$3155                   Squiggles
-C:   00000919  A$Squiggles$3156                   Squiggles
-C:   0000091B  A$Squiggles$3157                   Squiggles
-C:   0000091C  A$Squiggles$3160                   Squiggles
-C:   0000091C  C$Squiggles.c$378$1$160            Squiggles
-C:   0000091D  A$Squiggles$3161                   Squiggles
-C:   0000091E  A$Squiggles$3162                   Squiggles
-C:   00000920  A$Squiggles$3163                   Squiggles
-C:   00000921  A$Squiggles$3164                   Squiggles
-C:   00000923  A$Squiggles$3165                   Squiggles
-C:   00000925  A$Squiggles$3166                   Squiggles
-C:   00000927  A$Squiggles$3167                   Squiggles
-C:   00000929  A$Squiggles$3168                   Squiggles
-C:   0000092A  A$Squiggles$3169                   Squiggles
-C:   0000092B  A$Squiggles$3170                   Squiggles
-C:   0000092D  A$Squiggles$3171                   Squiggles
-C:   0000092E  A$Squiggles$3172                   Squiggles
-C:   0000092F  A$Squiggles$3176                   Squiggles
-C:   0000092F  C$Squiggles.c$379$1$160            Squiggles
-C:   00000930  A$Squiggles$3177                   Squiggles
-C:   00000932  A$Squiggles$3178                   Squiggles
-C:   00000933  A$Squiggles$3179                   Squiggles
-C:   00000935  A$Squiggles$3180                   Squiggles
-C:   00000937  A$Squiggles$3181                   Squiggles
-C:   0000093A  A$Squiggles$3182                   Squiggles
-C:   0000093C  A$Squiggles$3183                   Squiggles
-C:   0000093E  A$Squiggles$3184                   Squiggles
-C:   0000093F  A$Squiggles$3185                   Squiggles
-C:   00000941  A$Squiggles$3186                   Squiggles
-C:   00000942  A$Squiggles$3187                   Squiggles
-C:   00000943  A$Squiggles$3188                   Squiggles
-C:   00000945  A$Squiggles$3189                   Squiggles
-C:   00000946  A$Squiggles$3193                   Squiggles
-C:   00000946  C$Squiggles.c$381$1$160            Squiggles
-C:   00000947  A$Squiggles$3194                   Squiggles
-C:   00000949  A$Squiggles$3195                   Squiggles
-C:   0000094B  A$Squiggles$3196                   Squiggles
-C:   0000094C  A$Squiggles$3197                   Squiggles
-C:   0000094E  A$Squiggles$3198                   Squiggles
-C:   00000950  A$Squiggles$3199                   Squiggles
-C:   00000951  A$Squiggles$3200                   Squiggles
-C:   00000953  A$Squiggles$3201                   Squiggles
-C:   00000955  A$Squiggles$3202                   Squiggles
-C:   00000957  A$Squiggles$3206                   Squiggles
-C:   00000957  C$Squiggles.c$382$2$162            Squiggles
-C:   00000959  A$Squiggles$3207                   Squiggles
-C:   0000095A  A$Squiggles$3208                   Squiggles
+C:   00000920  A$Squiggles$3152                   Squiggles
+C:   00000920  C$Squiggles.c$374$1$156            Squiggles
+C:   00000920  C$Squiggles.c$378$1$160            Squiggles
+C:   00000920  G$set_COMPASS_PW$0$0               Squiggles
+C:   00000920  _set_COMPASS_PW                    Squiggles
+C:   00000922  A$Squiggles$3153                   Squiggles
+C:   00000923  A$Squiggles$3154                   Squiggles
+C:   00000925  A$Squiggles$3155                   Squiggles
+C:   00000926  A$Squiggles$3156                   Squiggles
+C:   00000928  A$Squiggles$3157                   Squiggles
+C:   0000092A  A$Squiggles$3158                   Squiggles
+C:   0000092B  A$Squiggles$3161                   Squiggles
+C:   0000092B  C$Squiggles.c$384$1$160            Squiggles
+C:   0000092C  A$Squiggles$3162                   Squiggles
+C:   0000092D  A$Squiggles$3163                   Squiggles
+C:   0000092F  A$Squiggles$3164                   Squiggles
+C:   00000930  A$Squiggles$3165                   Squiggles
+C:   00000932  A$Squiggles$3166                   Squiggles
+C:   00000934  A$Squiggles$3167                   Squiggles
+C:   00000936  A$Squiggles$3168                   Squiggles
+C:   00000938  A$Squiggles$3169                   Squiggles
+C:   00000939  A$Squiggles$3170                   Squiggles
+C:   0000093A  A$Squiggles$3171                   Squiggles
+C:   0000093C  A$Squiggles$3172                   Squiggles
+C:   0000093D  A$Squiggles$3173                   Squiggles
+C:   0000093E  A$Squiggles$3177                   Squiggles
+C:   0000093E  C$Squiggles.c$385$1$160            Squiggles
+C:   0000093F  A$Squiggles$3178                   Squiggles
+C:   00000941  A$Squiggles$3179                   Squiggles
+C:   00000942  A$Squiggles$3180                   Squiggles
+C:   00000944  A$Squiggles$3181                   Squiggles
+C:   00000946  A$Squiggles$3182                   Squiggles
+C:   00000949  A$Squiggles$3183                   Squiggles
+C:   0000094B  A$Squiggles$3184                   Squiggles
+C:   0000094D  A$Squiggles$3185                   Squiggles
+C:   0000094E  A$Squiggles$3186                   Squiggles
+C:   00000950  A$Squiggles$3187                   Squiggles
+C:   00000951  A$Squiggles$3188                   Squiggles
+C:   00000952  A$Squiggles$3189                   Squiggles
+C:   00000954  A$Squiggles$3190                   Squiggles
+C:   00000955  A$Squiggles$3194                   Squiggles
+C:   00000955  C$Squiggles.c$387$1$160            Squiggles
+C:   00000956  A$Squiggles$3195                   Squiggles
+C:   00000958  A$Squiggles$3196                   Squiggles
+C:   0000095A  A$Squiggles$3197                   Squiggles
+C:   0000095B  A$Squiggles$3198                   Squiggles
+C:   0000095D  A$Squiggles$3199                   Squiggles
+C:   0000095F  A$Squiggles$3202                   Squiggles
+C:   0000095F  C$Squiggles.c$389$2$161            Squiggles
+C:   00000960  A$Squiggles$3203                   Squiggles
+C:   00000962  A$Squiggles$3204                   Squiggles
 ASxxxx Linker V03.00 + NoICE + sdld,  page 58.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000C9    000013ED =        5101. bytes (REL,CON,CODE)
+CSEG                                000000C9    0000140E =        5134. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   0000095C  A$Squiggles$3209                   Squiggles
-C:   0000095E  A$Squiggles$3210                   Squiggles
-C:   0000095F  A$Squiggles$3211                   Squiggles
-C:   00000961  A$Squiggles$3212                   Squiggles
-C:   00000963  A$Squiggles$3213                   Squiggles
-C:   00000965  A$Squiggles$3214                   Squiggles
-C:   00000967  A$Squiggles$3215                   Squiggles
-C:   00000969  A$Squiggles$3216                   Squiggles
-C:   0000096B  A$Squiggles$3217                   Squiggles
-C:   0000096D  A$Squiggles$3218                   Squiggles
-C:   0000096F  A$Squiggles$3219                   Squiggles
-C:   00000972  A$Squiggles$3220                   Squiggles
-C:   00000974  A$Squiggles$3221                   Squiggles
-C:   00000976  A$Squiggles$3222                   Squiggles
-C:   00000978  A$Squiggles$3223                   Squiggles
-C:   0000097A  A$Squiggles$3224                   Squiggles
-C:   0000097C  A$Squiggles$3225                   Squiggles
-C:   0000097E  A$Squiggles$3229                   Squiggles
-C:   0000097E  C$Squiggles.c$385$1$160            Squiggles
-C:   00000980  A$Squiggles$3230                   Squiggles
-C:   00000982  A$Squiggles$3231                   Squiggles
-C:   00000983  A$Squiggles$3232                   Squiggles
-C:   00000985  A$Squiggles$3233                   Squiggles
-C:   00000987  A$Squiggles$3234                   Squiggles
-C:   00000988  A$Squiggles$3235                   Squiggles
-C:   0000098A  A$Squiggles$3236                   Squiggles
-C:   0000098C  A$Squiggles$3237                   Squiggles
-C:   0000098E  A$Squiggles$3238                   Squiggles
-C:   00000990  A$Squiggles$3239                   Squiggles
-C:   00000993  A$Squiggles$3240                   Squiggles
-C:   00000995  A$Squiggles$3241                   Squiggles
-C:   00000997  A$Squiggles$3242                   Squiggles
-C:   00000999  A$Squiggles$3243                   Squiggles
-C:   0000099A  A$Squiggles$3244                   Squiggles
-C:   0000099C  A$Squiggles$3245                   Squiggles
-C:   0000099E  A$Squiggles$3246                   Squiggles
-C:   000009A0  A$Squiggles$3247                   Squiggles
-C:   000009A2  A$Squiggles$3248                   Squiggles
-C:   000009A5  A$Squiggles$3249                   Squiggles
-C:   000009A8  A$Squiggles$3250                   Squiggles
-C:   000009AB  A$Squiggles$3251                   Squiggles
-C:   000009AD  A$Squiggles$3252                   Squiggles
-C:   000009B0  A$Squiggles$3253                   Squiggles
-C:   000009B2  A$Squiggles$3254                   Squiggles
-C:   000009B4  A$Squiggles$3255                   Squiggles
-C:   000009B6  A$Squiggles$3256                   Squiggles
-C:   000009B7  A$Squiggles$3257                   Squiggles
-C:   000009B9  A$Squiggles$3258                   Squiggles
-C:   000009BB  A$Squiggles$3259                   Squiggles
-C:   000009BD  A$Squiggles$3260                   Squiggles
-C:   000009BF  A$Squiggles$3261                   Squiggles
+C:   00000964  A$Squiggles$3205                   Squiggles
+C:   00000966  A$Squiggles$3209                   Squiggles
+C:   00000966  C$Squiggles.c$393$2$162            Squiggles
+C:   00000968  A$Squiggles$3210                   Squiggles
+C:   00000969  A$Squiggles$3211                   Squiggles
+C:   0000096B  A$Squiggles$3212                   Squiggles
+C:   0000096D  A$Squiggles$3213                   Squiggles
+C:   0000096E  A$Squiggles$3214                   Squiggles
+C:   00000970  A$Squiggles$3215                   Squiggles
+C:   00000972  A$Squiggles$3216                   Squiggles
+C:   00000974  A$Squiggles$3217                   Squiggles
+C:   00000976  A$Squiggles$3218                   Squiggles
+C:   00000978  A$Squiggles$3219                   Squiggles
+C:   0000097A  A$Squiggles$3220                   Squiggles
+C:   0000097C  A$Squiggles$3221                   Squiggles
+C:   0000097E  A$Squiggles$3222                   Squiggles
+C:   00000981  A$Squiggles$3223                   Squiggles
+C:   00000983  A$Squiggles$3224                   Squiggles
+C:   00000985  A$Squiggles$3225                   Squiggles
+C:   00000987  A$Squiggles$3226                   Squiggles
+C:   00000989  A$Squiggles$3227                   Squiggles
+C:   0000098B  A$Squiggles$3228                   Squiggles
+C:   0000098D  A$Squiggles$3232                   Squiggles
+C:   0000098D  C$Squiggles.c$397$1$160            Squiggles
+C:   0000098F  A$Squiggles$3233                   Squiggles
+C:   00000991  A$Squiggles$3234                   Squiggles
+C:   00000992  A$Squiggles$3235                   Squiggles
+C:   00000994  A$Squiggles$3236                   Squiggles
+C:   00000996  A$Squiggles$3237                   Squiggles
+C:   00000997  A$Squiggles$3238                   Squiggles
+C:   00000999  A$Squiggles$3239                   Squiggles
+C:   0000099B  A$Squiggles$3240                   Squiggles
+C:   0000099D  A$Squiggles$3241                   Squiggles
+C:   0000099F  A$Squiggles$3242                   Squiggles
+C:   000009A2  A$Squiggles$3243                   Squiggles
+C:   000009A4  A$Squiggles$3244                   Squiggles
+C:   000009A6  A$Squiggles$3245                   Squiggles
+C:   000009A8  A$Squiggles$3246                   Squiggles
+C:   000009A9  A$Squiggles$3247                   Squiggles
+C:   000009AB  A$Squiggles$3248                   Squiggles
+C:   000009AD  A$Squiggles$3249                   Squiggles
+C:   000009AF  A$Squiggles$3250                   Squiggles
+C:   000009B1  A$Squiggles$3251                   Squiggles
+C:   000009B4  A$Squiggles$3252                   Squiggles
+C:   000009B7  A$Squiggles$3253                   Squiggles
+C:   000009BA  A$Squiggles$3254                   Squiggles
+C:   000009BC  A$Squiggles$3255                   Squiggles
+C:   000009BF  A$Squiggles$3256                   Squiggles
+C:   000009C1  A$Squiggles$3257                   Squiggles
+C:   000009C3  A$Squiggles$3258                   Squiggles
+C:   000009C5  A$Squiggles$3259                   Squiggles
 ASxxxx Linker V03.00 + NoICE + sdld,  page 59.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000C9    000013ED =        5101. bytes (REL,CON,CODE)
+CSEG                                000000C9    0000140E =        5134. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   000009C1  A$Squiggles$3262                   Squiggles
-C:   000009C3  A$Squiggles$3263                   Squiggles
-C:   000009C5  A$Squiggles$3264                   Squiggles
-C:   000009C7  A$Squiggles$3265                   Squiggles
-C:   000009C9  A$Squiggles$3266                   Squiggles
-C:   000009CB  A$Squiggles$3267                   Squiggles
-C:   000009CD  A$Squiggles$3268                   Squiggles
-C:   000009D0  A$Squiggles$3269                   Squiggles
-C:   000009D2  A$Squiggles$3270                   Squiggles
-C:   000009D4  A$Squiggles$3271                   Squiggles
-C:   000009D6  A$Squiggles$3272                   Squiggles
-C:   000009D7  A$Squiggles$3273                   Squiggles
-C:   000009D9  A$Squiggles$3274                   Squiggles
-C:   000009DB  A$Squiggles$3275                   Squiggles
-C:   000009DD  A$Squiggles$3276                   Squiggles
-C:   000009DF  A$Squiggles$3277                   Squiggles
-C:   000009E1  A$Squiggles$3278                   Squiggles
-C:   000009E3  A$Squiggles$3279                   Squiggles
-C:   000009E5  A$Squiggles$3280                   Squiggles
-C:   000009E7  A$Squiggles$3281                   Squiggles
-C:   000009E9  A$Squiggles$3282                   Squiggles
-C:   000009EB  A$Squiggles$3283                   Squiggles
-C:   000009ED  A$Squiggles$3284                   Squiggles
-C:   000009EE  A$Squiggles$3285                   Squiggles
-C:   000009F1  A$Squiggles$3286                   Squiggles
-C:   000009F3  A$Squiggles$3287                   Squiggles
-C:   000009F5  A$Squiggles$3288                   Squiggles
-C:   000009F7  A$Squiggles$3289                   Squiggles
-C:   000009F8  A$Squiggles$3290                   Squiggles
-C:   000009FA  A$Squiggles$3291                   Squiggles
-C:   000009FC  A$Squiggles$3292                   Squiggles
-C:   000009FE  A$Squiggles$3293                   Squiggles
-C:   00000A00  A$Squiggles$3294                   Squiggles
-C:   00000A02  A$Squiggles$3295                   Squiggles
-C:   00000A04  A$Squiggles$3296                   Squiggles
-C:   00000A05  A$Squiggles$3297                   Squiggles
-C:   00000A08  A$Squiggles$3298                   Squiggles
-C:   00000A0B  A$Squiggles$3299                   Squiggles
-C:   00000A0E  A$Squiggles$3302                   Squiggles
-C:   00000A0E  C$Squiggles.c$387$1$160            Squiggles
-C:   00000A0F  A$Squiggles$3303                   Squiggles
-C:   00000A11  A$Squiggles$3304                   Squiggles
-C:   00000A13  A$Squiggles$3305                   Squiggles
-C:   00000A15  A$Squiggles$3306                   Squiggles
-C:   00000A17  A$Squiggles$3307                   Squiggles
-C:   00000A19  A$Squiggles$3310                   Squiggles
-C:   00000A19  C$Squiggles.c$389$2$163            Squiggles
-C:   00000A1C  A$Squiggles$3311                   Squiggles
-C:   00000A1F  A$Squiggles$3315                   Squiggles
-C:   00000A1F  C$Squiggles.c$391$1$160            Squiggles
-C:   00000A20  A$Squiggles$3316                   Squiggles
+C:   000009C6  A$Squiggles$3260                   Squiggles
+C:   000009C8  A$Squiggles$3261                   Squiggles
+C:   000009CA  A$Squiggles$3262                   Squiggles
+C:   000009CC  A$Squiggles$3263                   Squiggles
+C:   000009CE  A$Squiggles$3264                   Squiggles
+C:   000009D0  A$Squiggles$3265                   Squiggles
+C:   000009D2  A$Squiggles$3266                   Squiggles
+C:   000009D4  A$Squiggles$3267                   Squiggles
+C:   000009D6  A$Squiggles$3268                   Squiggles
+C:   000009D8  A$Squiggles$3269                   Squiggles
+C:   000009DA  A$Squiggles$3270                   Squiggles
+C:   000009DC  A$Squiggles$3271                   Squiggles
+C:   000009DF  A$Squiggles$3272                   Squiggles
+C:   000009E1  A$Squiggles$3273                   Squiggles
+C:   000009E3  A$Squiggles$3274                   Squiggles
+C:   000009E5  A$Squiggles$3275                   Squiggles
+C:   000009E6  A$Squiggles$3276                   Squiggles
+C:   000009E8  A$Squiggles$3277                   Squiggles
+C:   000009EA  A$Squiggles$3278                   Squiggles
+C:   000009EC  A$Squiggles$3279                   Squiggles
+C:   000009EE  A$Squiggles$3280                   Squiggles
+C:   000009F0  A$Squiggles$3281                   Squiggles
+C:   000009F2  A$Squiggles$3282                   Squiggles
+C:   000009F4  A$Squiggles$3283                   Squiggles
+C:   000009F6  A$Squiggles$3284                   Squiggles
+C:   000009F8  A$Squiggles$3285                   Squiggles
+C:   000009FA  A$Squiggles$3286                   Squiggles
+C:   000009FC  A$Squiggles$3287                   Squiggles
+C:   000009FD  A$Squiggles$3288                   Squiggles
+C:   00000A00  A$Squiggles$3289                   Squiggles
+C:   00000A02  A$Squiggles$3290                   Squiggles
+C:   00000A04  A$Squiggles$3291                   Squiggles
+C:   00000A06  A$Squiggles$3292                   Squiggles
+C:   00000A07  A$Squiggles$3293                   Squiggles
+C:   00000A09  A$Squiggles$3294                   Squiggles
+C:   00000A0B  A$Squiggles$3295                   Squiggles
+C:   00000A0D  A$Squiggles$3296                   Squiggles
+C:   00000A0F  A$Squiggles$3297                   Squiggles
+C:   00000A11  A$Squiggles$3298                   Squiggles
+C:   00000A13  A$Squiggles$3299                   Squiggles
+C:   00000A14  A$Squiggles$3300                   Squiggles
+C:   00000A17  A$Squiggles$3301                   Squiggles
+C:   00000A1A  A$Squiggles$3302                   Squiggles
+C:   00000A1D  A$Squiggles$3305                   Squiggles
+C:   00000A1D  C$Squiggles.c$399$1$160            Squiggles
+C:   00000A1E  A$Squiggles$3306                   Squiggles
+C:   00000A20  A$Squiggles$3307                   Squiggles
+C:   00000A22  A$Squiggles$3308                   Squiggles
+C:   00000A24  A$Squiggles$3309                   Squiggles
+C:   00000A26  A$Squiggles$3310                   Squiggles
+C:   00000A28  A$Squiggles$3313                   Squiggles
 ASxxxx Linker V03.00 + NoICE + sdld,  page 60.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                000000C9    000013ED =        5101. bytes (REL,CON,CODE)
+CSEG                                000000C9    0000140E =        5134. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   00000A22  A$Squiggles$3317                   Squiggles
-C:   00000A24  A$Squiggles$3318                   Squiggles
-C:   00000A26  A$Squiggles$3319                   Squiggles
-C:   00000A28  A$Squiggles$3320                   Squiggles
-C:   00000A2A  A$Squiggles$3323                   Squiggles
-C:   00000A2A  C$Squiggles.c$393$2$164            Squiggles
-C:   00000A2D  A$Squiggles$3324                   Squiggles
-C:   00000A30  A$Squiggles$3328                   Squiggles
-C:   00000A30  C$Squiggles.c$402$1$160            Squiggles
-C:   00000A30  XG$set_COMPASS_PW$0$0              Squiggles
-C:   00000A31  ___fsmul                           _fsmul
-C:   00000AD4  fsgetargs                          _fsget2args
-C:   00000B02  fs_normalize_a                     _fsnormalize
-C:   00000B35  __gptrput                          _gptrput
-C:   00000B50  __mulint                           _mulint
-C:   00000B50  __mulint_dummy                     _mulint
-C:   00000BDD  _vsprintf                          sprintf
-C:   00000C1A  _sprintf                           sprintf
-C:   00000C68  __divuint                          _divuint
-C:   00000C91  ___fsadd                           _fsadd
-C:   00000C94  fsadd_direct_entry                 _fsadd
-C:   00000CEA  ___sint2fs                         _sint2fs
-C:   00000CF7  ___uint2fs                         _uint2fs
-C:   00000D03  ___fs2uint                         _fs2uint
-C:   00000D0E  fs_round_and_return                _fsreturnval
-C:   00000D26  fs_zerocheck_return                _fsreturnval
-C:   00000D2F  fs_return_zero                     _fsreturnval
-C:   00000D37  fs_direct_return                   _fsreturnval
-C:   00000D45  fs_return_inf                      _fsreturnval
-C:   00000D52  fs_return_nan                      _fsreturnval
-C:   00000D68  _vprintf                           vprintf
-C:   00000D81  _printf                            vprintf
-C:   00000E53  __print_format                     printf_large
-C:   0000135D  fs_swap_a_b                        _fsswapargs
-C:   00001377  _strlen                            _strlen
-C:   0000138F  __gptrget                          _gptrget
-C:   000013AB  ___uchar2fs                        _uchar2fs
-C:   000013B6  ___fs2uchar                        _fs2uchar
-C:   000013BE  ___slong2fs                        _slong2fs
-C:   000013C7  slong2fs_doit                      _slong2fs
-C:   000013EB  ___ulong2fs                        _ulong2fs
-C:   000013F4  ulong2fs_doit                      _ulong2fs
-C:   000013FE  __divsint                          _divsint
-C:   00001436  fs_rshift_a                        _fsrshift
-C:   00001479  __sdcc_external_startup            _startup
-C:   0000147D  ___fs2ulong                        _fs2ulong
-C:   0000147F  fs2ulong_begin                     _fs2ulong
-C:   000014A4  fsgetarg                           _fsget1arg
-
+C:   00000A28  C$Squiggles.c$401$2$163            Squiggles
+C:   00000A2B  A$Squiggles$3314                   Squiggles
+C:   00000A2E  A$Squiggles$3318                   Squiggles
+C:   00000A2E  C$Squiggles.c$403$1$160            Squiggles
+C:   00000A2F  A$Squiggles$3319                   Squiggles
+C:   00000A31  A$Squiggles$3320                   Squiggles
+C:   00000A33  A$Squiggles$3321                   Squiggles
+C:   00000A35  A$Squiggles$3322                   Squiggles
+C:   00000A37  A$Squiggles$3323                   Squiggles
+C:   00000A39  A$Squiggles$3326                   Squiggles
+C:   00000A39  C$Squiggles.c$405$2$164            Squiggles
+C:   00000A3C  A$Squiggles$3327                   Squiggles
+C:   00000A3F  A$Squiggles$3331                   Squiggles
+C:   00000A3F  C$Squiggles.c$407$1$160            Squiggles
+C:   00000A41  A$Squiggles$3332                   Squiggles
+C:   00000A44  A$Squiggles$3335                   Squiggles
+C:   00000A44  C$Squiggles.c$409$2$165            Squiggles
+C:   00000A46  A$Squiggles$3336                   Squiggles
+C:   00000A47  A$Squiggles$3337                   Squiggles
+C:   00000A49  A$Squiggles$3338                   Squiggles
+C:   00000A4B  A$Squiggles$3339                   Squiggles
+C:   00000A4D  A$Squiggles$3340                   Squiggles
+C:   00000A4F  A$Squiggles$3341                   Squiggles
+C:   00000A51  A$Squiggles$3345                   Squiggles
+C:   00000A51  C$Squiggles.c$418$1$160            Squiggles
+C:   00000A51  XG$set_COMPASS_PW$0$0              Squiggles
+C:   00000A52  __divuint                          _divuint
+C:   00000A7B  ___fsmul                           _fsmul
+C:   00000B1E  fsgetargs                          _fsget2args
+C:   00000B4C  fs_normalize_a                     _fsnormalize
+C:   00000B7F  __gptrput                          _gptrput
+C:   00000B9A  __mulint                           _mulint
+C:   00000B9A  __mulint_dummy                     _mulint
+C:   00000C27  _vsprintf                          sprintf
+C:   00000C64  _sprintf                           sprintf
+C:   00000CB2  ___fsadd                           _fsadd
+C:   00000CB5  fsadd_direct_entry                 _fsadd
+C:   00000D0B  ___sint2fs                         _sint2fs
+C:   00000D18  ___uint2fs                         _uint2fs
+C:   00000D24  ___fs2uint                         _fs2uint
+C:   00000D2F  fs_round_and_return                _fsreturnval
+C:   00000D47  fs_zerocheck_return                _fsreturnval
+C:   00000D50  fs_return_zero                     _fsreturnval
+C:   00000D58  fs_direct_return                   _fsreturnval
+C:   00000D66  fs_return_inf                      _fsreturnval
+C:   00000D73  fs_return_nan                      _fsreturnval
+C:   00000D89  _vprintf                           vprintf
+C:   00000DA2  _printf                            vprintf
+C:   00000E74  __print_format                     printf_large
+C:   0000137E  fs_swap_a_b                        _fsswapargs
+C:   00001398  _strlen                            _strlen
 ASxxxx Linker V03.00 + NoICE + sdld,  page 61.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CONST                               000014B6    000000F8 =         248. bytes (REL,CON,CODE)
+CSEG                                000000C9    0000140E =        5134. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   000014B6  FSquiggles$__str_0$0$0             Squiggles
-C:   000014CC  FSquiggles$__str_1$0$0             Squiggles
-C:   000014DC  FSquiggles$__str_2$0$0             Squiggles
-C:   000014DF  FSquiggles$__str_3$0$0             Squiggles
-C:   000014E8  FSquiggles$__str_4$0$0             Squiggles
-C:   00001513  FSquiggles$__str_5$0$0             Squiggles
-C:   0000151F  FSquiggles$__str_6$0$0             Squiggles
-C:   00001548  FSquiggles$__str_7$0$0             Squiggles
-C:   00001560  FSquiggles$__str_8$0$0             Squiggles
-C:   00001586  FSquiggles$__str_9$0$0             Squiggles
-
+C:   000013B0  __gptrget                          _gptrget
+C:   000013CC  ___uchar2fs                        _uchar2fs
+C:   000013D7  ___fs2uchar                        _fs2uchar
+C:   000013DF  ___slong2fs                        _slong2fs
+C:   000013E8  slong2fs_doit                      _slong2fs
+C:   0000140C  ___ulong2fs                        _ulong2fs
+C:   00001415  ulong2fs_doit                      _ulong2fs
+C:   0000141F  __divsint                          _divsint
+C:   00001457  fs_rshift_a                        _fsrshift
+C:   0000149A  __sdcc_external_startup            _startup
+C:   0000149E  ___fs2ulong                        _fs2ulong
+C:   000014A0  fs2ulong_begin                     _fs2ulong
+C:   000014C5  fsgetarg                           _fsget1arg
 ASxxxx Linker V03.00 + NoICE + sdld,  page 62.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CONST                               000014D7    00000116 =         278. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   000014D7  FSquiggles$__str_0$0$0             Squiggles
+C:   000014ED  FSquiggles$__str_1$0$0             Squiggles
+C:   000014FD  FSquiggles$__str_2$0$0             Squiggles
+C:   00001500  FSquiggles$__str_3$0$0             Squiggles
+C:   00001509  FSquiggles$__str_4$0$0             Squiggles
+C:   00001534  FSquiggles$__str_5$0$0             Squiggles
+C:   00001540  FSquiggles$__str_6$0$0             Squiggles
+C:   0000155E  FSquiggles$__str_7$0$0             Squiggles
+C:   00001587  FSquiggles$__str_8$0$0             Squiggles
+C:   0000159F  FSquiggles$__str_9$0$0             Squiggles
+C:   000015C5  FSquiggles$__str_10$0$0            Squiggles
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 63.
 
 Files Linked                              [ module(s) ]
 
@@ -2906,6 +2931,8 @@ C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.rel
 
 Libraries Linked                          [ object file ]
 
+C:\Program Files (x86)\SDCC\bin\..\lib\small/libint.lib
+                                          [ _divuint.rel ]
 C:\Program Files (x86)\SDCC\bin\..\lib\small/libfloat.lib
                                           [ _fsmul.rel ]
 C:\Program Files (x86)\SDCC\bin\..\lib\small/libfloat.lib
@@ -2924,8 +2951,6 @@ C:\Program Files (x86)\SDCC\bin\..\lib\small/libsdcc.lib
                                           [ sprintf.rel ]
 C:\Program Files (x86)\SDCC\bin\..\lib\small/mcs51.lib
                                           [ crtxclear.rel ]
-C:\Program Files (x86)\SDCC\bin\..\lib\small/libint.lib
-                                          [ _divuint.rel ]
 C:\Program Files (x86)\SDCC\bin\..\lib\small/libfloat.lib
                                           [ _fsadd.rel ]
 C:\Program Files (x86)\SDCC\bin\..\lib\small/libfloat.lib
@@ -2969,7 +2994,7 @@ C:\Program Files (x86)\SDCC\bin\..\lib\small/libfloat.lib
 C:\Program Files (x86)\SDCC\bin\..\lib\small/libfloat.lib
                                           [ _fsget1arg.rel ]
 
-ASxxxx Linker V03.00 + NoICE + sdld,  page 63.
+ASxxxx Linker V03.00 + NoICE + sdld,  page 64.
 
 User Base Address Definitions
 

@@ -431,7 +431,8 @@ S:FSquiggles$__str_2$0$0({3}DA3d,SC:S),D,0,0
 S:FSquiggles$__str_3$0$0({9}DA9d,SC:S),D,0,0
 S:FSquiggles$__str_4$0$0({43}DA43d,SC:S),D,0,0
 S:FSquiggles$__str_5$0$0({12}DA12d,SC:S),D,0,0
-S:FSquiggles$__str_6$0$0({41}DA41d,SC:S),D,0,0
-S:FSquiggles$__str_7$0$0({24}DA24d,SC:S),D,0,0
-S:FSquiggles$__str_8$0$0({38}DA38d,SC:S),D,0,0
-S:FSquiggles$__str_9$0$0({29}DA29d,SC:S),D,0,0
+S:FSquiggles$__str_6$0$0({30}DA30d,SC:S),D,0,0
+S:FSquiggles$__str_7$0$0({41}DA41d,SC:S),D,0,0
+S:FSquiggles$__str_8$0$0({24}DA24d,SC:S),D,0,0
+S:FSquiggles$__str_9$0$0({38}DA38d,SC:S),D,0,0
+S:FSquiggles$__str_10$0$0({29}DA29d,SC:S),D,0,0
