@@ -13,7 +13,7 @@
 #include <c8051_SDCC.h> // Include files. This file is available online in LMS
 #include <i2c.h>        // Get from LMS, THIS MUST BE INCLUDED AFTER stdio.h
 #define PCA_START 28672 // 28672 for exactly 20ms
-#define MAX_RANGE 60
+#define MAX_RANGE 55
 #define COMPASS_CENTER 2760
 #define COMPASS_MAX 3500
 #define COMPASS_MIN 2030
@@ -41,8 +41,8 @@ unsigned char read_AD_input(unsigned char n);
 //unsigned int compass_error;
 //unsigned int PWMe;
 unsigned int Counts, nCounts, nOverflows;
-unsigned int desired_heading = 1500;
-float compass_gain = 1;
+unsigned int desired_heading = 410;
+float compass_gain = 0.1;
 unsigned char h_count;
 unsigned char r_count;
 unsigned char delay;
@@ -76,7 +76,7 @@ void main(void)
 	PCA0CP0 = 0xFFFF - COMPASS_CENTER;
 	PCA0CP2 = 0xFFFF - COMPASS_CENTER; //Car isn't moving to start
 	//lcd_clear();
-	//printf("\rWe cleared it\n");
+	printf("\rWe cleared it\n");
 	Counts = 0;
     while (Counts < 1); //{ printf("\r%u\n", nCounts); } // Wait a long time (1s) for keypad & LCD to initialize
     //lcd_clear();
@@ -92,49 +92,55 @@ void main(void)
 	//	printf("\r::::::HI:::::::\n");
 	//	printf("\rDelay: %u\n", delay);
 	//	printf("\r----------------------------------Range: %u\n", range);
-		if ((new_range)) // enough overflow for a new range
+		while(!RANGER_SWITCH && !COMPASS_SWITCH)
 		{
-			range = read_ranger();
-			printf("\rRange: %u\n", range);
-			//if(range != 0xFFFF) printf("\rRange: %u\n", range);
-			if ((range != 0) && (range != 0xFFFF))
+			if ((new_range)) // enough overflow for a new range
 			{
-				if((range < 15) && (range != 0)) PCA0CP2 = 0xFFFF - COMPASS_CENTER; //Stop if near an object
-				else PCA0CP2 = 0xFFFF - 3200;
-				// read_range must start a new ping after a read	
-				//set_range_adj(); // if new data, set value to adjust steering PWM
-				new_range = 0;
-				//r_count = 0;
+				range = read_ranger();
+				printf("\rRange: %u\n", range);
+				//if(range != 0xFFFF) printf("\rRange: %u\n", range);
+				if ((range != 0) && (range != 0xFFFF))
+				{
+					if((range < 15) && (range != 0)) PCA0CP2 = 0xFFFF - COMPASS_CENTER; //Stop if near an object
+					else PCA0CP2 = 0xFFFF - 2900;
+					// read_range must start a new ping after a read	
+					//set_range_adj(); // if new data, set value to adjust steering PWM
+					new_range = 0;
+					//r_count = 0;
+				}
+				else   // extraneous value read in; ignore and keep moving
+				{
+					//PCA0CP2 = 0xFFFF - 3200; //Car has a constant speed once it starts
+					range_adj = 0;
+				}
 			}
-			else   // extraneous value read in; ignore and keep moving
+			if(delay == 10) 	//delay so that we don't get spammed with print messages
 			{
-				//PCA0CP2 = 0xFFFF - 3200; //Car has a constant speed once it starts
-				range_adj = 0;
+				AD_Result = read_AD_input(5); //Read analog input on pin 1.5
+				voltage = ((14.4/255)*AD_Result); //Convert back to input voltage
+				printf("\rBattery Voltage is %u\n", voltage);
 			}
-		}
-		if(delay == 10) 	//delay so that we don't get spammed with print messages
+			if((new_heading))
+			{
+				if(delay == 10) heading = read_compass();
+				printf("\rThe current direction is %u\n", heading);
+				set_COMPASS_PW(); // Adjust pulsewidth based on error function
+				new_heading = 0;
+			}
+			/*if(delay == 10)
+			{
+				printf("\rRange: %u", range);
+				printf("\rHeading: %u", heading/10);
+			}*/
+			// Output the results for transfer into excel
+	    }
+		if(RANGER_SWITCH || COMPASS_SWITCH)
 		{
-			AD_Result = read_AD_input(5); //Read analog input on pin 1.5
-			voltage = ((14.4/255)*AD_Result); //Convert back to input voltage
-			//printf("\rBattery Voltage is %u\n", voltage);
+			PCA0CP0 = 0xFFFF - COMPASS_CENTER;
+			PCA0CP2 = 0xFFFF - COMPASS_CENTER;
 		}
-		if((new_heading))
-		{
-			if(delay == 10) heading = read_compass();
-			printf("\rThe current direction is %u\n", heading/10);
-			set_COMPASS_PW(); // Adjust pulsewidth based on error function
-
-			new_heading = 0;
-		}
-		/*if(delay == 10)
-		{
-			printf("\rRange: %u", range);
-			printf("\rHeading: %u", heading/10);
-		}*/
-		// Output the results for transfer into excel
-    }
 }
-
+}
 //*****************************************************************************
 //-----------------------------------------------------------------------------
 // Set up ports for input and output

@@ -22,15 +22,15 @@ Symbol Table
  16 A$Squiggles$1142                                               000000 GR
  16 A$Squiggles$1143                                               000003 GR
  16 A$Squiggles$1146                                               000006 GR
- 16 A$Squiggles$1147                                               000007 GR
- 16 A$Squiggles$1148                                               000009 GR
- 16 A$Squiggles$1149                                               00000B GR
- 16 A$Squiggles$1150                                               00000E GR
- 16 A$Squiggles$1153                                               000011 GR
- 16 A$Squiggles$1154                                               000013 GR
- 16 A$Squiggles$1157                                               000015 GR
- 16 A$Squiggles$1158                                               000017 GR
- 16 A$Squiggles$1161                                               000019 GR
+ 16 A$Squiggles$1147                                               000009 GR
+ 16 A$Squiggles$1148                                               00000C GR
+ 16 A$Squiggles$1149                                               00000F GR
+ 16 A$Squiggles$1152                                               000012 GR
+ 16 A$Squiggles$1153                                               000013 GR
+ 16 A$Squiggles$1154                                               000015 GR
+ 16 A$Squiggles$1157                                               000017 GR
+ 16 A$Squiggles$1158                                               000019 GR
+ 16 A$Squiggles$1161                                               00001B GR
  17 A$Squiggles$1163                                               000000 GR
   F A$Squiggles$1170                                               00004E GR
  18 A$Squiggles$1198                                               000000 GR
@@ -724,605 +724,634 @@ Hexadecimal [24-Bits]
 Symbol Table
 
  18 A$Squiggles$2386                                               00050F GR
- 18 A$Squiggles$2387                                               000510 GR
- 18 A$Squiggles$2388                                               000512 GR
- 18 A$Squiggles$2392                                               000514 GR
- 18 A$Squiggles$2393                                               000515 GR
- 18 A$Squiggles$2394                                               000517 GR
- 18 A$Squiggles$2395                                               000519 GR
- 18 A$Squiggles$2396                                               00051B GR
- 18 A$Squiggles$2397                                               00051D GR
- 18 A$Squiggles$2400                                               00051F GR
- 18 A$Squiggles$2401                                               000521 GR
- 18 A$Squiggles$2402                                               000523 GR
- 18 A$Squiggles$2403                                               000525 GR
- 18 A$Squiggles$2404                                               000527 GR
- 18 A$Squiggles$2405                                               000529 GR
- 18 A$Squiggles$2406                                               00052B GR
+ 18 A$Squiggles$2387                                               000511 GR
+ 18 A$Squiggles$2388                                               000513 GR
+ 18 A$Squiggles$2389                                               000515 GR
+ 18 A$Squiggles$2390                                               000517 GR
+ 18 A$Squiggles$2391                                               000519 GR
+ 18 A$Squiggles$2392                                               00051B GR
+ 18 A$Squiggles$2393                                               00051E GR
+ 18 A$Squiggles$2394                                               000520 GR
+ 18 A$Squiggles$2395                                               000522 GR
+ 18 A$Squiggles$2398                                               000524 GR
+ 18 A$Squiggles$2399                                               000525 GR
+ 18 A$Squiggles$2400                                               000527 GR
+ 18 A$Squiggles$2404                                               000529 GR
+ 18 A$Squiggles$2405                                               00052A GR
+ 18 A$Squiggles$2406                                               00052C GR
  18 A$Squiggles$2407                                               00052E GR
  18 A$Squiggles$2408                                               000530 GR
  18 A$Squiggles$2409                                               000532 GR
- 18 A$Squiggles$2415                                               000534 GR
- 18 A$Squiggles$2416                                               000536 GR
- 18 A$Squiggles$2419                                               000538 GR
- 18 A$Squiggles$2420                                               00053B GR
- 18 A$Squiggles$2421                                               00053E GR
- 18 A$Squiggles$2424                                               000541 GR
- 18 A$Squiggles$2425                                               000543 GR
- 18 A$Squiggles$2426                                               000545 GR
- 18 A$Squiggles$2427                                               000547 GR
- 18 A$Squiggles$2428                                               000549 GR
- 18 A$Squiggles$2429                                               00054B GR
- 18 A$Squiggles$2430                                               00054D GR
- 18 A$Squiggles$2431                                               00054F GR
- 18 A$Squiggles$2432                                               000551 GR
- 18 A$Squiggles$2433                                               000554 GR
- 18 A$Squiggles$2434                                               000556 GR
- 18 A$Squiggles$2435                                               000558 GR
- 18 A$Squiggles$2438                                               00055A GR
- 18 A$Squiggles$2439                                               00055C GR
- 18 A$Squiggles$2440                                               00055E GR
- 18 A$Squiggles$2441                                               000560 GR
+ 18 A$Squiggles$2412                                               000534 GR
+ 18 A$Squiggles$2413                                               000536 GR
+ 18 A$Squiggles$2414                                               000538 GR
+ 18 A$Squiggles$2415                                               00053A GR
+ 18 A$Squiggles$2416                                               00053C GR
+ 18 A$Squiggles$2417                                               00053E GR
+ 18 A$Squiggles$2418                                               000540 GR
+ 18 A$Squiggles$2419                                               000543 GR
+ 18 A$Squiggles$2420                                               000545 GR
+ 18 A$Squiggles$2421                                               000547 GR
+ 18 A$Squiggles$2425                                               000549 GR
+ 18 A$Squiggles$2426                                               00054C GR
+ 18 A$Squiggles$2428                                               00054F GR
+ 18 A$Squiggles$2429                                               000552 GR
+ 18 A$Squiggles$2433                                               000555 GR
+ 18 A$Squiggles$2434                                               000557 GR
+ 18 A$Squiggles$2437                                               000559 GR
+ 18 A$Squiggles$2438                                               00055C GR
+ 18 A$Squiggles$2439                                               00055F GR
  18 A$Squiggles$2442                                               000562 GR
- 18 A$Squiggles$2443                                               000565 GR
- 18 A$Squiggles$2444                                               000567 GR
- 18 A$Squiggles$2445                                               00056A GR
- 18 A$Squiggles$2449                                               00056C GR
- 18 A$Squiggles$2450                                               00056D GR
- 18 A$Squiggles$2451                                               00056F GR
- 18 A$Squiggles$2452                                               000571 GR
- 18 A$Squiggles$2453                                               000573 GR
- 18 A$Squiggles$2454                                               000575 GR
- 18 A$Squiggles$2455                                               000577 GR
- 18 A$Squiggles$2456                                               000579 GR
- 18 A$Squiggles$2457                                               00057B GR
- 18 A$Squiggles$2458                                               00057D GR
- 18 A$Squiggles$2459                                               000580 GR
+ 18 A$Squiggles$2443                                               000564 GR
+ 18 A$Squiggles$2444                                               000566 GR
+ 18 A$Squiggles$2445                                               000568 GR
+ 18 A$Squiggles$2446                                               00056A GR
+ 18 A$Squiggles$2447                                               00056C GR
+ 18 A$Squiggles$2448                                               00056E GR
+ 18 A$Squiggles$2449                                               000570 GR
+ 18 A$Squiggles$2450                                               000572 GR
+ 18 A$Squiggles$2451                                               000575 GR
+ 18 A$Squiggles$2452                                               000577 GR
+ 18 A$Squiggles$2453                                               000579 GR
+ 18 A$Squiggles$2456                                               00057B GR
+ 18 A$Squiggles$2457                                               00057D GR
+ 18 A$Squiggles$2458                                               00057F GR
+ 18 A$Squiggles$2459                                               000581 GR
+ 18 A$Squiggles$2460                                               000583 GR
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 14.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
- 18 A$Squiggles$2460                                               000583 GR
- 18 A$Squiggles$2464                                               000585 GR
- 18 A$Squiggles$2465                                               000588 GR
- 18 A$Squiggles$2469                                               00058B GR
- 18 A$Squiggles$2470                                               00058E GR
- 18 A$Squiggles$2474                                               000590 GR
- 18 A$Squiggles$2475                                               000591 GR
- 18 A$Squiggles$2476                                               000593 GR
- 18 A$Squiggles$2480                                               000595 GR
- 18 A$Squiggles$2481                                               000597 GR
- 18 A$Squiggles$2484                                               00059A GR
- 18 A$Squiggles$2485                                               00059D GR
- 18 A$Squiggles$2488                                               0005A0 GR
- 18 A$Squiggles$2489                                               0005A3 GR
- 18 A$Squiggles$2490                                               0005A6 GR
- 18 A$Squiggles$2491                                               0005A8 GR
- 18 A$Squiggles$2492                                               0005AA GR
- 18 A$Squiggles$2493                                               0005AC GR
- 18 A$Squiggles$2494                                               0005AD GR
- 18 A$Squiggles$2495                                               0005AF GR
- 18 A$Squiggles$2496                                               0005B1 GR
- 18 A$Squiggles$2497                                               0005B3 GR
- 18 A$Squiggles$2498                                               0005B5 GR
+ 18 A$Squiggles$2461                                               000586 GR
+ 18 A$Squiggles$2462                                               000588 GR
+ 18 A$Squiggles$2463                                               00058B GR
+ 18 A$Squiggles$2467                                               00058D GR
+ 18 A$Squiggles$2468                                               00058E GR
+ 18 A$Squiggles$2469                                               000590 GR
+ 18 A$Squiggles$2470                                               000592 GR
+ 18 A$Squiggles$2471                                               000594 GR
+ 18 A$Squiggles$2472                                               000596 GR
+ 18 A$Squiggles$2473                                               000598 GR
+ 18 A$Squiggles$2474                                               00059A GR
+ 18 A$Squiggles$2475                                               00059C GR
+ 18 A$Squiggles$2476                                               00059E GR
+ 18 A$Squiggles$2477                                               0005A1 GR
+ 18 A$Squiggles$2478                                               0005A4 GR
+ 18 A$Squiggles$2482                                               0005A6 GR
+ 18 A$Squiggles$2483                                               0005A9 GR
+ 18 A$Squiggles$2487                                               0005AC GR
+ 18 A$Squiggles$2488                                               0005AF GR
+ 18 A$Squiggles$2492                                               0005B1 GR
+ 18 A$Squiggles$2493                                               0005B2 GR
+ 18 A$Squiggles$2494                                               0005B4 GR
+ 18 A$Squiggles$2498                                               0005B6 GR
  18 A$Squiggles$2499                                               0005B8 GR
- 18 A$Squiggles$2500                                               0005BB GR
- 18 A$Squiggles$2501                                               0005BD GR
- 18 A$Squiggles$2502                                               0005C0 GR
- 18 A$Squiggles$2503                                               0005C2 GR
- 18 A$Squiggles$2504                                               0005C4 GR
- 18 A$Squiggles$2505                                               0005C6 GR
- 18 A$Squiggles$2506                                               0005C7 GR
- 18 A$Squiggles$2507                                               0005C9 GR
- 18 A$Squiggles$2508                                               0005CB GR
- 18 A$Squiggles$2509                                               0005CD GR
- 18 A$Squiggles$2510                                               0005CF GR
- 18 A$Squiggles$2511                                               0005D1 GR
- 18 A$Squiggles$2512                                               0005D3 GR
- 18 A$Squiggles$2513                                               0005D4 GR
- 18 A$Squiggles$2514                                               0005D7 GR
- 18 A$Squiggles$2518                                               0005DA GR
- 18 A$Squiggles$2519                                               0005DC GR
- 18 A$Squiggles$2520                                               0005DE GR
- 18 A$Squiggles$2524                                               0005E1 GR
- 18 A$Squiggles$2525                                               0005E3 GR
- 18 A$Squiggles$2526                                               0005E6 GR
- 18 A$Squiggles$2527                                               0005E9 GR
- 18 A$Squiggles$2528                                               0005EC GR
- 18 A$Squiggles$2532                                               0005EF GR
- 18 A$Squiggles$2533                                               0005F2 GR
- 18 A$Squiggles$2534                                               0005F5 GR
- 18 A$Squiggles$2535                                               0005F8 GR
- 18 A$Squiggles$2536                                               0005FB GR
- 18 A$Squiggles$2537                                               0005FE GR
- 18 A$Squiggles$2538                                               000600 GR
- 18 A$Squiggles$2539                                               000602 GR
+ 18 A$Squiggles$2502                                               0005BB GR
+ 18 A$Squiggles$2503                                               0005BE GR
+ 18 A$Squiggles$2506                                               0005C1 GR
+ 18 A$Squiggles$2507                                               0005C4 GR
+ 18 A$Squiggles$2508                                               0005C7 GR
+ 18 A$Squiggles$2509                                               0005C9 GR
+ 18 A$Squiggles$2510                                               0005CB GR
+ 18 A$Squiggles$2511                                               0005CD GR
+ 18 A$Squiggles$2512                                               0005CE GR
+ 18 A$Squiggles$2513                                               0005D0 GR
+ 18 A$Squiggles$2514                                               0005D2 GR
+ 18 A$Squiggles$2515                                               0005D4 GR
+ 18 A$Squiggles$2516                                               0005D6 GR
+ 18 A$Squiggles$2517                                               0005D9 GR
+ 18 A$Squiggles$2518                                               0005DC GR
+ 18 A$Squiggles$2519                                               0005DE GR
+ 18 A$Squiggles$2520                                               0005E1 GR
+ 18 A$Squiggles$2521                                               0005E3 GR
+ 18 A$Squiggles$2522                                               0005E5 GR
+ 18 A$Squiggles$2523                                               0005E7 GR
+ 18 A$Squiggles$2524                                               0005E8 GR
+ 18 A$Squiggles$2525                                               0005EA GR
+ 18 A$Squiggles$2526                                               0005EC GR
+ 18 A$Squiggles$2527                                               0005EE GR
+ 18 A$Squiggles$2528                                               0005F0 GR
+ 18 A$Squiggles$2529                                               0005F2 GR
+ 18 A$Squiggles$2530                                               0005F4 GR
+ 18 A$Squiggles$2531                                               0005F5 GR
+ 18 A$Squiggles$2532                                               0005F8 GR
+ 18 A$Squiggles$2535                                               0005FB GR
+ 18 A$Squiggles$2536                                               0005FD GR
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 15.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
- 18 A$Squiggles$2540                                               000604 GR
- 18 A$Squiggles$2541                                               000606 GR
- 18 A$Squiggles$2542                                               000608 GR
- 18 A$Squiggles$2543                                               00060A GR
- 18 A$Squiggles$2544                                               00060C GR
- 18 A$Squiggles$2545                                               00060E GR
- 18 A$Squiggles$2546                                               000610 GR
- 18 A$Squiggles$2547                                               000612 GR
- 18 A$Squiggles$2548                                               000615 GR
- 18 A$Squiggles$2549                                               000617 GR
- 18 A$Squiggles$2550                                               000619 GR
- 18 A$Squiggles$2553                                               00061B GR
- 18 A$Squiggles$2556                                               00061E GR
- 18 A$Squiggles$2557                                               000621 GR
+ 18 A$Squiggles$2537                                               0005FF GR
+ 18 A$Squiggles$2538                                               000601 GR
+ 18 A$Squiggles$2539                                               000603 GR
+ 18 A$Squiggles$2540                                               000605 GR
+ 18 A$Squiggles$2541                                               000607 GR
+ 18 A$Squiggles$2542                                               000609 GR
+ 18 A$Squiggles$2543                                               00060B GR
+ 18 A$Squiggles$2544                                               00060D GR
+ 18 A$Squiggles$2545                                               00060F GR
+ 18 A$Squiggles$2546                                               000612 GR
+ 18 A$Squiggles$2547                                               000614 GR
+ 18 A$Squiggles$2548                                               000616 GR
+ 18 A$Squiggles$2552                                               000618 GR
+ 18 A$Squiggles$2553                                               00061A GR
+ 18 A$Squiggles$2554                                               00061C GR
+ 18 A$Squiggles$2558                                               00061F GR
+ 18 A$Squiggles$2559                                               000621 GR
  18 A$Squiggles$2560                                               000624 GR
- 18 A$Squiggles$2573                                               000625 GR
- 18 A$Squiggles$2576                                               000628 GR
- 18 A$Squiggles$2579                                               00062B GR
- 18 A$Squiggles$2582                                               00062E GR
- 18 A$Squiggles$2585                                               000631 GR
- 18 A$Squiggles$2586                                               000633 GR
- 18 A$Squiggles$2587                                               000635 GR
- 18 A$Squiggles$2588                                               000636 GR
- 18 A$Squiggles$2591                                               000638 GR
- 18 A$Squiggles$2594                                               00063B GR
- 18 A$Squiggles$2595                                               00063D GR
- 18 A$Squiggles$2596                                               00063F GR
- 18 A$Squiggles$2597                                               000640 GR
- 18 A$Squiggles$2600                                               000642 GR
- 18 A$Squiggles$2613                                               000643 GR
- 18 A$Squiggles$2616                                               000646 GR
- 18 A$Squiggles$2619                                               000649 GR
- 18 A$Squiggles$2622                                               00064B GR
- 18 A$Squiggles$2635                                               00064C GR
- 18 A$Squiggles$2638                                               00064F GR
- 18 A$Squiggles$2641                                               000652 GR
- 18 A$Squiggles$2644                                               000655 GR
- 18 A$Squiggles$2647                                               000658 GR
- 18 A$Squiggles$2660                                               000659 GR
- 18 A$Squiggles$2663                                               00065C GR
- 18 A$Squiggles$2666                                               00065E GR
- 18 A$Squiggles$2677                                               00065F GR
- 18 A$Squiggles$2678                                               000661 GR
- 18 A$Squiggles$2683                                               000663 GR
- 18 A$Squiggles$2684                                               000666 GR
- 18 A$Squiggles$2688                                               000668 GR
- 18 A$Squiggles$2689                                               00066A GR
- 18 A$Squiggles$2690                                               00066B GR
- 18 A$Squiggles$2691                                               00066E GR
- 18 A$Squiggles$2695                                               000670 GR
- 18 A$Squiggles$2696                                               000673 GR
- 18 A$Squiggles$2699                                               000676 GR
- 18 A$Squiggles$2700                                               000677 GR
- 18 A$Squiggles$2701                                               000679 GR
- 18 A$Squiggles$2702                                               00067B GR
+ 18 A$Squiggles$2561                                               000627 GR
+ 18 A$Squiggles$2562                                               00062A GR
+ 18 A$Squiggles$2566                                               00062D GR
+ 18 A$Squiggles$2567                                               00062F GR
+ 18 A$Squiggles$2568                                               000631 GR
+ 18 A$Squiggles$2569                                               000633 GR
+ 18 A$Squiggles$2570                                               000635 GR
+ 18 A$Squiggles$2571                                               000637 GR
+ 18 A$Squiggles$2572                                               000639 GR
+ 18 A$Squiggles$2573                                               00063B GR
+ 18 A$Squiggles$2574                                               00063D GR
+ 18 A$Squiggles$2575                                               000640 GR
+ 18 A$Squiggles$2576                                               000642 GR
+ 18 A$Squiggles$2577                                               000644 GR
+ 18 A$Squiggles$2580                                               000646 GR
+ 18 A$Squiggles$2583                                               000649 GR
+ 18 A$Squiggles$2584                                               00064C GR
+ 18 A$Squiggles$2588                                               00064F GR
+ 18 A$Squiggles$2589                                               000652 GR
+ 18 A$Squiggles$2590                                               000655 GR
+ 18 A$Squiggles$2595                                               000658 GR
+ 18 A$Squiggles$2596                                               00065B GR
+ 18 A$Squiggles$2599                                               00065E GR
+ 18 A$Squiggles$2600                                               000661 GR
+ 18 A$Squiggles$2601                                               000664 GR
+ 18 A$Squiggles$2604                                               000667 GR
+ 18 A$Squiggles$2617                                               000668 GR
+ 18 A$Squiggles$2620                                               00066B GR
+ 18 A$Squiggles$2623                                               00066E GR
+ 18 A$Squiggles$2626                                               000671 GR
+ 18 A$Squiggles$2629                                               000674 GR
+ 18 A$Squiggles$2630                                               000676 GR
+ 18 A$Squiggles$2631                                               000678 GR
+ 18 A$Squiggles$2632                                               000679 GR
+ 18 A$Squiggles$2635                                               00067B GR
+ 18 A$Squiggles$2638                                               00067E GR
+ 18 A$Squiggles$2639                                               000680 GR
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 16.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
- 18 A$Squiggles$2703                                               00067C GR
- 18 A$Squiggles$2704                                               00067E GR
- 18 A$Squiggles$2707                                               000680 GR
- 18 A$Squiggles$2708                                               000681 GR
- 18 A$Squiggles$2709                                               000683 GR
- 18 A$Squiggles$2712                                               000685 GR
- 18 A$Squiggles$2714                                               000687 GR
- 18 A$Squiggles$2715                                               00068A GR
- 18 A$Squiggles$2720                                               00068C GR
- 18 A$Squiggles$2723                                               00068E GR
- 18 A$Squiggles$2724                                               000690 GR
- 18 A$Squiggles$2725                                               000692 GR
- 18 A$Squiggles$2728                                               000694 GR
- 18 A$Squiggles$2731                                               000697 GR
- 18 A$Squiggles$2735                                               00069A GR
- 18 A$Squiggles$2738                                               00069C GR
- 18 A$Squiggles$2739                                               00069E GR
- 18 A$Squiggles$2740                                               0006A1 GR
- 18 A$Squiggles$2744                                               0006A4 GR
- 18 A$Squiggles$2747                                               0006A6 GR
- 18 A$Squiggles$2748                                               0006A8 GR
- 18 A$Squiggles$2749                                               0006AA GR
- 18 A$Squiggles$2752                                               0006AC GR
- 18 A$Squiggles$2755                                               0006AF GR
- 18 A$Squiggles$2756                                               0006B2 GR
- 18 A$Squiggles$2760                                               0006B4 GR
- 18 A$Squiggles$2762                                               0006B7 GR
- 18 A$Squiggles$2763                                               0006B9 GR
- 18 A$Squiggles$2766                                               0006BB GR
- 18 A$Squiggles$2783                                               0006BC GR
- 18 A$Squiggles$2786                                               0006BF GR
- 18 A$Squiggles$2789                                               0006C2 GR
- 18 A$Squiggles$2792                                               0006C5 GR
- 18 A$Squiggles$2805                                               0006C6 GR
- 18 A$Squiggles$2808                                               0006C9 GR
- 18 A$Squiggles$2809                                               0006CB GR
- 18 A$Squiggles$2810                                               0006CD GR
- 18 A$Squiggles$2811                                               0006CE GR
- 18 A$Squiggles$2814                                               0006D0 GR
- 18 A$Squiggles$2818                                               0006D3 GR
- 18 A$Squiggles$2819                                               0006D5 GR
- 18 A$Squiggles$2822                                               0006D8 GR
- 18 A$Squiggles$2825                                               0006DB GR
- 18 A$Squiggles$2840                                               0006DC GR
- 18 A$Squiggles$2843                                               0006DF GR
- 18 A$Squiggles$2844                                               0006E1 GR
- 18 A$Squiggles$2845                                               0006E3 GR
- 18 A$Squiggles$2846                                               0006E5 GR
- 18 A$Squiggles$2847                                               0006E7 GR
- 18 A$Squiggles$2848                                               0006E9 GR
- 18 A$Squiggles$2849                                               0006EB GR
- 18 A$Squiggles$2850                                               0006EE GR
- 18 A$Squiggles$2851                                               0006F0 GR
- 18 A$Squiggles$2852                                               0006F2 GR
- 18 A$Squiggles$2855                                               0006F4 GR
+ 18 A$Squiggles$2640                                               000682 GR
+ 18 A$Squiggles$2641                                               000683 GR
+ 18 A$Squiggles$2644                                               000685 GR
+ 18 A$Squiggles$2657                                               000686 GR
+ 18 A$Squiggles$2660                                               000689 GR
+ 18 A$Squiggles$2663                                               00068C GR
+ 18 A$Squiggles$2666                                               00068E GR
+ 18 A$Squiggles$2679                                               00068F GR
+ 18 A$Squiggles$2682                                               000692 GR
+ 18 A$Squiggles$2685                                               000695 GR
+ 18 A$Squiggles$2688                                               000698 GR
+ 18 A$Squiggles$2691                                               00069B GR
+ 18 A$Squiggles$2704                                               00069C GR
+ 18 A$Squiggles$2707                                               00069F GR
+ 18 A$Squiggles$2710                                               0006A1 GR
+ 18 A$Squiggles$2721                                               0006A2 GR
+ 18 A$Squiggles$2722                                               0006A4 GR
+ 18 A$Squiggles$2727                                               0006A6 GR
+ 18 A$Squiggles$2728                                               0006A9 GR
+ 18 A$Squiggles$2732                                               0006AB GR
+ 18 A$Squiggles$2733                                               0006AD GR
+ 18 A$Squiggles$2734                                               0006AE GR
+ 18 A$Squiggles$2735                                               0006B1 GR
+ 18 A$Squiggles$2739                                               0006B3 GR
+ 18 A$Squiggles$2740                                               0006B6 GR
+ 18 A$Squiggles$2743                                               0006B9 GR
+ 18 A$Squiggles$2744                                               0006BA GR
+ 18 A$Squiggles$2745                                               0006BC GR
+ 18 A$Squiggles$2746                                               0006BE GR
+ 18 A$Squiggles$2747                                               0006BF GR
+ 18 A$Squiggles$2748                                               0006C1 GR
+ 18 A$Squiggles$2751                                               0006C3 GR
+ 18 A$Squiggles$2752                                               0006C4 GR
+ 18 A$Squiggles$2753                                               0006C6 GR
+ 18 A$Squiggles$2756                                               0006C8 GR
+ 18 A$Squiggles$2758                                               0006CA GR
+ 18 A$Squiggles$2759                                               0006CD GR
+ 18 A$Squiggles$2764                                               0006CF GR
+ 18 A$Squiggles$2767                                               0006D1 GR
+ 18 A$Squiggles$2768                                               0006D3 GR
+ 18 A$Squiggles$2769                                               0006D5 GR
+ 18 A$Squiggles$2772                                               0006D7 GR
+ 18 A$Squiggles$2775                                               0006DA GR
+ 18 A$Squiggles$2779                                               0006DD GR
+ 18 A$Squiggles$2782                                               0006DF GR
+ 18 A$Squiggles$2783                                               0006E1 GR
+ 18 A$Squiggles$2784                                               0006E4 GR
+ 18 A$Squiggles$2788                                               0006E7 GR
+ 18 A$Squiggles$2791                                               0006E9 GR
+ 18 A$Squiggles$2792                                               0006EB GR
+ 18 A$Squiggles$2793                                               0006ED GR
+ 18 A$Squiggles$2796                                               0006EF GR
+ 18 A$Squiggles$2799                                               0006F2 GR
+ 18 A$Squiggles$2800                                               0006F5 GR
+ 18 A$Squiggles$2804                                               0006F7 GR
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 17.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
- 18 A$Squiggles$2856                                               0006F7 GR
- 18 A$Squiggles$2857                                               0006FA GR
- 18 A$Squiggles$2858                                               0006FC GR
- 18 A$Squiggles$2861                                               0006FE GR
- 18 A$Squiggles$2862                                               000700 GR
- 18 A$Squiggles$2864                                               000702 GR
- 18 A$Squiggles$2865                                               000703 GR
- 18 A$Squiggles$2866                                               000705 GR
- 18 A$Squiggles$2867                                               000706 GR
- 18 A$Squiggles$2868                                               000708 GR
- 18 A$Squiggles$2869                                               00070A GR
- 18 A$Squiggles$2870                                               00070D GR
- 18 A$Squiggles$2871                                               00070F GR
- 18 A$Squiggles$2874                                               000711 GR
- 18 A$Squiggles$2875                                               000712 GR
- 18 A$Squiggles$2876                                               000714 GR
- 18 A$Squiggles$2877                                               000715 GR
- 18 A$Squiggles$2878                                               000716 GR
- 18 A$Squiggles$2879                                               000718 GR
- 18 A$Squiggles$2882                                               000719 GR
- 18 A$Squiggles$2884                                               00071B GR
- 18 A$Squiggles$2885                                               00071D GR
- 18 A$Squiggles$2886                                               00071F GR
- 18 A$Squiggles$2887                                               000721 GR
- 18 A$Squiggles$2889                                               000723 GR
- 18 A$Squiggles$2890                                               000724 GR
- 18 A$Squiggles$2893                                               000727 GR
- 18 A$Squiggles$2894                                               000729 GR
- 18 A$Squiggles$2895                                               00072A GR
- 18 A$Squiggles$2896                                               00072B GR
- 18 A$Squiggles$2897                                               00072D GR
- 18 A$Squiggles$2898                                               00072E GR
- 18 A$Squiggles$2899                                               00072F GR
- 18 A$Squiggles$2901                                               000731 GR
- 18 A$Squiggles$2902                                               000733 GR
- 18 A$Squiggles$2905                                               000735 GR
- 18 A$Squiggles$2906                                               000737 GR
- 18 A$Squiggles$2907                                               000739 GR
- 18 A$Squiggles$2908                                               00073C GR
- 18 A$Squiggles$2909                                               00073E GR
- 18 A$Squiggles$2912                                               000740 GR
- 18 A$Squiggles$2913                                               000742 GR
- 18 A$Squiggles$2916                                               000744 GR
- 18 A$Squiggles$2917                                               000746 GR
- 18 A$Squiggles$2918                                               000748 GR
- 18 A$Squiggles$2919                                               00074A GR
- 18 A$Squiggles$2920                                               00074C GR
- 18 A$Squiggles$2921                                               00074E GR
- 18 A$Squiggles$2922                                               000750 GR
- 18 A$Squiggles$2923                                               000753 GR
- 18 A$Squiggles$2924                                               000755 GR
- 18 A$Squiggles$2925                                               000757 GR
- 18 A$Squiggles$2928                                               000759 GR
- 18 A$Squiggles$2943                                               00075A GR
- 18 A$Squiggles$2946                                               00075D GR
+ 18 A$Squiggles$2806                                               0006FA GR
+ 18 A$Squiggles$2807                                               0006FC GR
+ 18 A$Squiggles$2810                                               0006FE GR
+ 18 A$Squiggles$2827                                               0006FF GR
+ 18 A$Squiggles$2830                                               000702 GR
+ 18 A$Squiggles$2833                                               000705 GR
+ 18 A$Squiggles$2836                                               000708 GR
+ 18 A$Squiggles$2849                                               000709 GR
+ 18 A$Squiggles$2852                                               00070C GR
+ 18 A$Squiggles$2853                                               00070E GR
+ 18 A$Squiggles$2854                                               000710 GR
+ 18 A$Squiggles$2855                                               000711 GR
+ 18 A$Squiggles$2858                                               000713 GR
+ 18 A$Squiggles$2862                                               000716 GR
+ 18 A$Squiggles$2863                                               000718 GR
+ 18 A$Squiggles$2866                                               00071B GR
+ 18 A$Squiggles$2869                                               00071E GR
+ 18 A$Squiggles$2884                                               00071F GR
+ 18 A$Squiggles$2887                                               000722 GR
+ 18 A$Squiggles$2888                                               000724 GR
+ 18 A$Squiggles$2889                                               000726 GR
+ 18 A$Squiggles$2890                                               000728 GR
+ 18 A$Squiggles$2891                                               00072A GR
+ 18 A$Squiggles$2892                                               00072C GR
+ 18 A$Squiggles$2893                                               00072E GR
+ 18 A$Squiggles$2894                                               000731 GR
+ 18 A$Squiggles$2895                                               000733 GR
+ 18 A$Squiggles$2896                                               000735 GR
+ 18 A$Squiggles$2899                                               000737 GR
+ 18 A$Squiggles$2900                                               00073A GR
+ 18 A$Squiggles$2901                                               00073D GR
+ 18 A$Squiggles$2902                                               00073F GR
+ 18 A$Squiggles$2905                                               000741 GR
+ 18 A$Squiggles$2906                                               000743 GR
+ 18 A$Squiggles$2908                                               000745 GR
+ 18 A$Squiggles$2909                                               000746 GR
+ 18 A$Squiggles$2910                                               000748 GR
+ 18 A$Squiggles$2911                                               000749 GR
+ 18 A$Squiggles$2912                                               00074B GR
+ 18 A$Squiggles$2913                                               00074D GR
+ 18 A$Squiggles$2914                                               000750 GR
+ 18 A$Squiggles$2915                                               000752 GR
+ 18 A$Squiggles$2918                                               000754 GR
+ 18 A$Squiggles$2919                                               000755 GR
+ 18 A$Squiggles$2920                                               000757 GR
+ 18 A$Squiggles$2921                                               000758 GR
+ 18 A$Squiggles$2922                                               000759 GR
+ 18 A$Squiggles$2923                                               00075B GR
+ 18 A$Squiggles$2926                                               00075C GR
+ 18 A$Squiggles$2928                                               00075E GR
+ 18 A$Squiggles$2929                                               000760 GR
+ 18 A$Squiggles$2930                                               000762 GR
+ 18 A$Squiggles$2931                                               000764 GR
+ 18 A$Squiggles$2933                                               000766 GR
+ 18 A$Squiggles$2934                                               000767 GR
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 18.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
- 18 A$Squiggles$2947                                               00075F GR
- 18 A$Squiggles$2948                                               000761 GR
- 18 A$Squiggles$2949                                               000763 GR
- 18 A$Squiggles$2950                                               000765 GR
- 18 A$Squiggles$2951                                               000767 GR
- 18 A$Squiggles$2952                                               000769 GR
- 18 A$Squiggles$2953                                               00076C GR
- 18 A$Squiggles$2954                                               00076E GR
- 18 A$Squiggles$2955                                               000770 GR
- 18 A$Squiggles$2958                                               000772 GR
- 18 A$Squiggles$2959                                               000775 GR
- 18 A$Squiggles$2960                                               000778 GR
- 18 A$Squiggles$2961                                               00077A GR
- 18 A$Squiggles$2964                                               00077C GR
- 18 A$Squiggles$2965                                               00077E GR
- 18 A$Squiggles$2966                                               000780 GR
- 18 A$Squiggles$2967                                               000783 GR
- 18 A$Squiggles$2968                                               000785 GR
- 18 A$Squiggles$2971                                               000787 GR
- 18 A$Squiggles$2972                                               00078A GR
- 18 A$Squiggles$2973                                               00078D GR
- 18 A$Squiggles$2974                                               00078F GR
- 18 A$Squiggles$2975                                               000791 GR
- 18 A$Squiggles$2976                                               000794 GR
- 18 A$Squiggles$2977                                               000797 GR
- 18 A$Squiggles$2978                                               00079A GR
- 18 A$Squiggles$2979                                               00079D GR
- 18 A$Squiggles$2980                                               0007A0 GR
- 18 A$Squiggles$2983                                               0007A2 GR
- 18 A$Squiggles$2984                                               0007A4 GR
- 18 A$Squiggles$2985                                               0007A6 GR
- 18 A$Squiggles$2986                                               0007A8 GR
- 18 A$Squiggles$2987                                               0007AA GR
- 18 A$Squiggles$2988                                               0007AC GR
- 18 A$Squiggles$2989                                               0007AE GR
- 18 A$Squiggles$2990                                               0007B1 GR
- 18 A$Squiggles$2991                                               0007B3 GR
- 18 A$Squiggles$2992                                               0007B5 GR
- 18 A$Squiggles$2995                                               0007B7 GR
- 18 A$Squiggles$3012                                               0007B8 GR
- 18 A$Squiggles$3013                                               0007BB GR
- 18 A$Squiggles$3014                                               0007BE GR
- 18 A$Squiggles$3015                                               0007C1 GR
- 18 A$Squiggles$3016                                               0007C4 GR
- 18 A$Squiggles$3017                                               0007C7 GR
- 18 A$Squiggles$3018                                               0007CA GR
- 18 A$Squiggles$3021                                               0007CD GR
- 18 A$Squiggles$3022                                               0007CF GR
- 18 A$Squiggles$3023                                               0007D1 GR
- 18 A$Squiggles$3024                                               0007D3 GR
- 18 A$Squiggles$3025                                               0007D5 GR
- 18 A$Squiggles$3026                                               0007D6 GR
- 18 A$Squiggles$3027                                               0007D7 GR
- 18 A$Squiggles$3028                                               0007D9 GR
- 18 A$Squiggles$3029                                               0007DA GR
+ 18 A$Squiggles$2937                                               00076A GR
+ 18 A$Squiggles$2938                                               00076C GR
+ 18 A$Squiggles$2939                                               00076D GR
+ 18 A$Squiggles$2940                                               00076E GR
+ 18 A$Squiggles$2941                                               000770 GR
+ 18 A$Squiggles$2942                                               000771 GR
+ 18 A$Squiggles$2943                                               000772 GR
+ 18 A$Squiggles$2945                                               000774 GR
+ 18 A$Squiggles$2946                                               000776 GR
+ 18 A$Squiggles$2949                                               000778 GR
+ 18 A$Squiggles$2950                                               00077A GR
+ 18 A$Squiggles$2951                                               00077C GR
+ 18 A$Squiggles$2952                                               00077F GR
+ 18 A$Squiggles$2953                                               000781 GR
+ 18 A$Squiggles$2956                                               000783 GR
+ 18 A$Squiggles$2957                                               000785 GR
+ 18 A$Squiggles$2960                                               000787 GR
+ 18 A$Squiggles$2961                                               000789 GR
+ 18 A$Squiggles$2962                                               00078B GR
+ 18 A$Squiggles$2963                                               00078D GR
+ 18 A$Squiggles$2964                                               00078F GR
+ 18 A$Squiggles$2965                                               000791 GR
+ 18 A$Squiggles$2966                                               000793 GR
+ 18 A$Squiggles$2967                                               000796 GR
+ 18 A$Squiggles$2968                                               000798 GR
+ 18 A$Squiggles$2969                                               00079A GR
+ 18 A$Squiggles$2972                                               00079C GR
+ 18 A$Squiggles$2987                                               00079D GR
+ 18 A$Squiggles$2990                                               0007A0 GR
+ 18 A$Squiggles$2991                                               0007A2 GR
+ 18 A$Squiggles$2992                                               0007A4 GR
+ 18 A$Squiggles$2993                                               0007A6 GR
+ 18 A$Squiggles$2994                                               0007A8 GR
+ 18 A$Squiggles$2995                                               0007AA GR
+ 18 A$Squiggles$2996                                               0007AC GR
+ 18 A$Squiggles$2997                                               0007AF GR
+ 18 A$Squiggles$2998                                               0007B1 GR
+ 18 A$Squiggles$2999                                               0007B3 GR
+ 18 A$Squiggles$3002                                               0007B5 GR
+ 18 A$Squiggles$3003                                               0007B8 GR
+ 18 A$Squiggles$3004                                               0007BB GR
+ 18 A$Squiggles$3005                                               0007BD GR
+ 18 A$Squiggles$3008                                               0007BF GR
+ 18 A$Squiggles$3009                                               0007C1 GR
+ 18 A$Squiggles$3010                                               0007C3 GR
+ 18 A$Squiggles$3011                                               0007C6 GR
+ 18 A$Squiggles$3012                                               0007C8 GR
+ 18 A$Squiggles$3015                                               0007CA GR
+ 18 A$Squiggles$3016                                               0007CD GR
+ 18 A$Squiggles$3017                                               0007D0 GR
+ 18 A$Squiggles$3018                                               0007D2 GR
+ 18 A$Squiggles$3019                                               0007D4 GR
+ 18 A$Squiggles$3020                                               0007D7 GR
+ 18 A$Squiggles$3021                                               0007DA GR
+ 18 A$Squiggles$3022                                               0007DD GR
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 19.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
- 18 A$Squiggles$3030                                               0007DB GR
- 18 A$Squiggles$3035                                               0007DD GR
- 18 A$Squiggles$3051                                               0007DE GR
- 18 A$Squiggles$3052                                               0007E1 GR
- 18 A$Squiggles$3053                                               0007E4 GR
- 18 A$Squiggles$3054                                               0007E7 GR
- 18 A$Squiggles$3055                                               0007EA GR
- 18 A$Squiggles$3056                                               0007ED GR
- 18 A$Squiggles$3057                                               0007F0 GR
- 18 A$Squiggles$3060                                               0007F3 GR
- 18 A$Squiggles$3061                                               0007F5 GR
- 18 A$Squiggles$3062                                               0007F7 GR
- 18 A$Squiggles$3063                                               0007F9 GR
- 18 A$Squiggles$3064                                               0007FB GR
- 18 A$Squiggles$3065                                               0007FC GR
- 18 A$Squiggles$3066                                               0007FE GR
- 18 A$Squiggles$3067                                               0007FF GR
- 18 A$Squiggles$3070                                               000801 GR
- 18 A$Squiggles$3073                                               000804 GR
- 18 A$Squiggles$3074                                               000807 GR
- 18 A$Squiggles$3075                                               00080A GR
- 18 A$Squiggles$3076                                               00080D GR
- 18 A$Squiggles$3077                                               000810 GR
- 18 A$Squiggles$3078                                               000813 GR
- 18 A$Squiggles$3079                                               000816 GR
- 18 A$Squiggles$3080                                               000818 GR
- 18 A$Squiggles$3081                                               00081A GR
- 18 A$Squiggles$3082                                               00081D GR
- 18 A$Squiggles$3083                                               00081F GR
- 18 A$Squiggles$3086                                               000821 GR
- 18 A$Squiggles$3087                                               000823 GR
- 18 A$Squiggles$3090                                               000825 GR
- 18 A$Squiggles$3103                                               000826 GR
- 18 A$Squiggles$3104                                               000827 GR
- 18 A$Squiggles$3105                                               000829 GR
- 18 A$Squiggles$3106                                               00082B GR
- 18 A$Squiggles$3107                                               00082C GR
- 18 A$Squiggles$3108                                               00082E GR
- 18 A$Squiggles$3111                                               000830 GR
- 18 A$Squiggles$3112                                               000831 GR
- 18 A$Squiggles$3113                                               000833 GR
- 18 A$Squiggles$3114                                               000835 GR
- 18 A$Squiggles$3118                                               000837 GR
- 18 A$Squiggles$3119                                               000839 GR
- 18 A$Squiggles$3120                                               00083A GR
- 18 A$Squiggles$3121                                               00083C GR
- 18 A$Squiggles$3122                                               00083E GR
- 18 A$Squiggles$3123                                               00083F GR
- 18 A$Squiggles$3124                                               000841 GR
- 18 A$Squiggles$3125                                               000843 GR
- 18 A$Squiggles$3126                                               000845 GR
- 18 A$Squiggles$3127                                               000847 GR
- 18 A$Squiggles$3128                                               000849 GR
- 18 A$Squiggles$3129                                               00084B GR
- 18 A$Squiggles$3130                                               00084E GR
+ 18 A$Squiggles$3023                                               0007E0 GR
+ 18 A$Squiggles$3024                                               0007E3 GR
+ 18 A$Squiggles$3027                                               0007E5 GR
+ 18 A$Squiggles$3028                                               0007E7 GR
+ 18 A$Squiggles$3029                                               0007E9 GR
+ 18 A$Squiggles$3030                                               0007EB GR
+ 18 A$Squiggles$3031                                               0007ED GR
+ 18 A$Squiggles$3032                                               0007EF GR
+ 18 A$Squiggles$3033                                               0007F1 GR
+ 18 A$Squiggles$3034                                               0007F4 GR
+ 18 A$Squiggles$3035                                               0007F6 GR
+ 18 A$Squiggles$3036                                               0007F8 GR
+ 18 A$Squiggles$3039                                               0007FA GR
+ 18 A$Squiggles$3056                                               0007FB GR
+ 18 A$Squiggles$3057                                               0007FE GR
+ 18 A$Squiggles$3058                                               000801 GR
+ 18 A$Squiggles$3059                                               000804 GR
+ 18 A$Squiggles$3060                                               000807 GR
+ 18 A$Squiggles$3061                                               00080A GR
+ 18 A$Squiggles$3062                                               00080D GR
+ 18 A$Squiggles$3065                                               000810 GR
+ 18 A$Squiggles$3066                                               000812 GR
+ 18 A$Squiggles$3067                                               000814 GR
+ 18 A$Squiggles$3068                                               000816 GR
+ 18 A$Squiggles$3069                                               000818 GR
+ 18 A$Squiggles$3070                                               000819 GR
+ 18 A$Squiggles$3071                                               00081A GR
+ 18 A$Squiggles$3072                                               00081C GR
+ 18 A$Squiggles$3073                                               00081D GR
+ 18 A$Squiggles$3074                                               00081E GR
+ 18 A$Squiggles$3079                                               000820 GR
+ 18 A$Squiggles$3095                                               000821 GR
+ 18 A$Squiggles$3096                                               000824 GR
+ 18 A$Squiggles$3097                                               000827 GR
+ 18 A$Squiggles$3098                                               00082A GR
+ 18 A$Squiggles$3099                                               00082D GR
+ 18 A$Squiggles$3100                                               000830 GR
+ 18 A$Squiggles$3101                                               000833 GR
+ 18 A$Squiggles$3104                                               000836 GR
+ 18 A$Squiggles$3105                                               000838 GR
+ 18 A$Squiggles$3106                                               00083A GR
+ 18 A$Squiggles$3107                                               00083C GR
+ 18 A$Squiggles$3108                                               00083E GR
+ 18 A$Squiggles$3109                                               00083F GR
+ 18 A$Squiggles$3110                                               000841 GR
+ 18 A$Squiggles$3111                                               000842 GR
+ 18 A$Squiggles$3114                                               000844 GR
+ 18 A$Squiggles$3117                                               000847 GR
+ 18 A$Squiggles$3118                                               00084A GR
+ 18 A$Squiggles$3119                                               00084D GR
+ 18 A$Squiggles$3120                                               000850 GR
+ 18 A$Squiggles$3121                                               000853 GR
+ 18 A$Squiggles$3122                                               000856 GR
+ 18 A$Squiggles$3123                                               000859 GR
+ 18 A$Squiggles$3124                                               00085B GR
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 20.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
- 18 A$Squiggles$3131                                               000850 GR
- 18 A$Squiggles$3132                                               000852 GR
- 18 A$Squiggles$3133                                               000854 GR
- 18 A$Squiggles$3137                                               000856 GR
- 18 A$Squiggles$3152                                               000857 GR
- 18 A$Squiggles$3153                                               000859 GR
- 18 A$Squiggles$3154                                               00085A GR
- 18 A$Squiggles$3155                                               00085C GR
- 18 A$Squiggles$3156                                               00085D GR
- 18 A$Squiggles$3157                                               00085F GR
- 18 A$Squiggles$3158                                               000861 GR
- 18 A$Squiggles$3161                                               000862 GR
- 18 A$Squiggles$3162                                               000863 GR
- 18 A$Squiggles$3163                                               000864 GR
- 18 A$Squiggles$3164                                               000866 GR
- 18 A$Squiggles$3165                                               000867 GR
- 18 A$Squiggles$3166                                               000869 GR
- 18 A$Squiggles$3167                                               00086B GR
- 18 A$Squiggles$3168                                               00086D GR
- 18 A$Squiggles$3169                                               00086F GR
- 18 A$Squiggles$3170                                               000870 GR
- 18 A$Squiggles$3171                                               000871 GR
- 18 A$Squiggles$3172                                               000873 GR
- 18 A$Squiggles$3173                                               000874 GR
- 18 A$Squiggles$3177                                               000875 GR
- 18 A$Squiggles$3178                                               000876 GR
- 18 A$Squiggles$3179                                               000878 GR
- 18 A$Squiggles$3180                                               000879 GR
- 18 A$Squiggles$3181                                               00087B GR
- 18 A$Squiggles$3182                                               00087D GR
- 18 A$Squiggles$3183                                               000880 GR
- 18 A$Squiggles$3184                                               000882 GR
- 18 A$Squiggles$3185                                               000884 GR
- 18 A$Squiggles$3186                                               000885 GR
- 18 A$Squiggles$3187                                               000887 GR
- 18 A$Squiggles$3188                                               000888 GR
- 18 A$Squiggles$3189                                               000889 GR
- 18 A$Squiggles$3190                                               00088B GR
- 18 A$Squiggles$3194                                               00088C GR
- 18 A$Squiggles$3195                                               00088D GR
- 18 A$Squiggles$3196                                               00088F GR
- 18 A$Squiggles$3197                                               000891 GR
- 18 A$Squiggles$3198                                               000892 GR
- 18 A$Squiggles$3199                                               000894 GR
- 18 A$Squiggles$3202                                               000896 GR
- 18 A$Squiggles$3203                                               000897 GR
- 18 A$Squiggles$3204                                               000899 GR
- 18 A$Squiggles$3205                                               00089B GR
- 18 A$Squiggles$3209                                               00089D GR
- 18 A$Squiggles$3210                                               00089F GR
- 18 A$Squiggles$3211                                               0008A0 GR
- 18 A$Squiggles$3212                                               0008A2 GR
- 18 A$Squiggles$3213                                               0008A4 GR
- 18 A$Squiggles$3214                                               0008A5 GR
- 18 A$Squiggles$3215                                               0008A7 GR
+ 18 A$Squiggles$3125                                               00085D GR
+ 18 A$Squiggles$3126                                               000860 GR
+ 18 A$Squiggles$3127                                               000862 GR
+ 18 A$Squiggles$3130                                               000864 GR
+ 18 A$Squiggles$3131                                               000866 GR
+ 18 A$Squiggles$3134                                               000868 GR
+ 18 A$Squiggles$3147                                               000869 GR
+ 18 A$Squiggles$3148                                               00086A GR
+ 18 A$Squiggles$3149                                               00086C GR
+ 18 A$Squiggles$3150                                               00086E GR
+ 18 A$Squiggles$3151                                               00086F GR
+ 18 A$Squiggles$3152                                               000871 GR
+ 18 A$Squiggles$3155                                               000873 GR
+ 18 A$Squiggles$3156                                               000874 GR
+ 18 A$Squiggles$3157                                               000876 GR
+ 18 A$Squiggles$3158                                               000878 GR
+ 18 A$Squiggles$3162                                               00087A GR
+ 18 A$Squiggles$3163                                               00087C GR
+ 18 A$Squiggles$3164                                               00087D GR
+ 18 A$Squiggles$3165                                               00087F GR
+ 18 A$Squiggles$3166                                               000881 GR
+ 18 A$Squiggles$3167                                               000882 GR
+ 18 A$Squiggles$3168                                               000884 GR
+ 18 A$Squiggles$3169                                               000886 GR
+ 18 A$Squiggles$3170                                               000888 GR
+ 18 A$Squiggles$3171                                               00088A GR
+ 18 A$Squiggles$3172                                               00088C GR
+ 18 A$Squiggles$3173                                               00088E GR
+ 18 A$Squiggles$3174                                               000891 GR
+ 18 A$Squiggles$3175                                               000893 GR
+ 18 A$Squiggles$3176                                               000895 GR
+ 18 A$Squiggles$3177                                               000897 GR
+ 18 A$Squiggles$3181                                               000899 GR
+ 18 A$Squiggles$3196                                               00089A GR
+ 18 A$Squiggles$3197                                               00089C GR
+ 18 A$Squiggles$3198                                               00089D GR
+ 18 A$Squiggles$3199                                               00089F GR
+ 18 A$Squiggles$3200                                               0008A0 GR
+ 18 A$Squiggles$3201                                               0008A2 GR
+ 18 A$Squiggles$3202                                               0008A4 GR
+ 18 A$Squiggles$3205                                               0008A5 GR
+ 18 A$Squiggles$3206                                               0008A6 GR
+ 18 A$Squiggles$3207                                               0008A7 GR
+ 18 A$Squiggles$3208                                               0008A9 GR
+ 18 A$Squiggles$3209                                               0008AA GR
+ 18 A$Squiggles$3210                                               0008AC GR
+ 18 A$Squiggles$3211                                               0008AE GR
+ 18 A$Squiggles$3212                                               0008B0 GR
+ 18 A$Squiggles$3213                                               0008B2 GR
+ 18 A$Squiggles$3214                                               0008B3 GR
+ 18 A$Squiggles$3215                                               0008B4 GR
+ 18 A$Squiggles$3216                                               0008B6 GR
+ 18 A$Squiggles$3217                                               0008B7 GR
+ 18 A$Squiggles$3221                                               0008B8 GR
+ 18 A$Squiggles$3222                                               0008B9 GR
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 21.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
- 18 A$Squiggles$3216                                               0008A9 GR
- 18 A$Squiggles$3217                                               0008AB GR
- 18 A$Squiggles$3218                                               0008AD GR
- 18 A$Squiggles$3219                                               0008AF GR
- 18 A$Squiggles$3220                                               0008B1 GR
- 18 A$Squiggles$3221                                               0008B3 GR
- 18 A$Squiggles$3222                                               0008B5 GR
- 18 A$Squiggles$3223                                               0008B8 GR
- 18 A$Squiggles$3224                                               0008BA GR
- 18 A$Squiggles$3225                                               0008BC GR
- 18 A$Squiggles$3226                                               0008BE GR
- 18 A$Squiggles$3227                                               0008C0 GR
- 18 A$Squiggles$3228                                               0008C2 GR
- 18 A$Squiggles$3232                                               0008C4 GR
- 18 A$Squiggles$3233                                               0008C6 GR
- 18 A$Squiggles$3234                                               0008C8 GR
- 18 A$Squiggles$3235                                               0008C9 GR
- 18 A$Squiggles$3236                                               0008CB GR
- 18 A$Squiggles$3237                                               0008CD GR
- 18 A$Squiggles$3238                                               0008CE GR
+ 18 A$Squiggles$3223                                               0008BB GR
+ 18 A$Squiggles$3224                                               0008BC GR
+ 18 A$Squiggles$3225                                               0008BE GR
+ 18 A$Squiggles$3226                                               0008C0 GR
+ 18 A$Squiggles$3227                                               0008C3 GR
+ 18 A$Squiggles$3228                                               0008C5 GR
+ 18 A$Squiggles$3229                                               0008C7 GR
+ 18 A$Squiggles$3230                                               0008C8 GR
+ 18 A$Squiggles$3231                                               0008CA GR
+ 18 A$Squiggles$3232                                               0008CB GR
+ 18 A$Squiggles$3233                                               0008CC GR
+ 18 A$Squiggles$3234                                               0008CE GR
+ 18 A$Squiggles$3238                                               0008CF GR
  18 A$Squiggles$3239                                               0008D0 GR
  18 A$Squiggles$3240                                               0008D2 GR
  18 A$Squiggles$3241                                               0008D4 GR
- 18 A$Squiggles$3242                                               0008D6 GR
- 18 A$Squiggles$3243                                               0008D9 GR
- 18 A$Squiggles$3244                                               0008DB GR
- 18 A$Squiggles$3245                                               0008DD GR
- 18 A$Squiggles$3246                                               0008DF GR
- 18 A$Squiggles$3247                                               0008E0 GR
- 18 A$Squiggles$3248                                               0008E2 GR
- 18 A$Squiggles$3249                                               0008E4 GR
- 18 A$Squiggles$3250                                               0008E6 GR
- 18 A$Squiggles$3251                                               0008E8 GR
- 18 A$Squiggles$3252                                               0008EB GR
- 18 A$Squiggles$3253                                               0008EE GR
- 18 A$Squiggles$3254                                               0008F1 GR
- 18 A$Squiggles$3255                                               0008F3 GR
- 18 A$Squiggles$3256                                               0008F6 GR
- 18 A$Squiggles$3257                                               0008F8 GR
- 18 A$Squiggles$3258                                               0008FA GR
- 18 A$Squiggles$3259                                               0008FC GR
- 18 A$Squiggles$3260                                               0008FD GR
- 18 A$Squiggles$3261                                               0008FF GR
- 18 A$Squiggles$3262                                               000901 GR
- 18 A$Squiggles$3263                                               000903 GR
- 18 A$Squiggles$3264                                               000905 GR
- 18 A$Squiggles$3265                                               000907 GR
- 18 A$Squiggles$3266                                               000909 GR
- 18 A$Squiggles$3267                                               00090B GR
- 18 A$Squiggles$3268                                               00090D GR
- 18 A$Squiggles$3269                                               00090F GR
- 18 A$Squiggles$3270                                               000911 GR
- 18 A$Squiggles$3271                                               000913 GR
- 18 A$Squiggles$3272                                               000916 GR
- 18 A$Squiggles$3273                                               000918 GR
+ 18 A$Squiggles$3242                                               0008D5 GR
+ 18 A$Squiggles$3243                                               0008D7 GR
+ 18 A$Squiggles$3246                                               0008D9 GR
+ 18 A$Squiggles$3247                                               0008DA GR
+ 18 A$Squiggles$3248                                               0008DC GR
+ 18 A$Squiggles$3249                                               0008DE GR
+ 18 A$Squiggles$3253                                               0008E0 GR
+ 18 A$Squiggles$3254                                               0008E2 GR
+ 18 A$Squiggles$3255                                               0008E3 GR
+ 18 A$Squiggles$3256                                               0008E5 GR
+ 18 A$Squiggles$3257                                               0008E7 GR
+ 18 A$Squiggles$3258                                               0008E8 GR
+ 18 A$Squiggles$3259                                               0008EA GR
+ 18 A$Squiggles$3260                                               0008EC GR
+ 18 A$Squiggles$3261                                               0008EE GR
+ 18 A$Squiggles$3262                                               0008F0 GR
+ 18 A$Squiggles$3263                                               0008F2 GR
+ 18 A$Squiggles$3264                                               0008F4 GR
+ 18 A$Squiggles$3265                                               0008F6 GR
+ 18 A$Squiggles$3266                                               0008F8 GR
+ 18 A$Squiggles$3267                                               0008FB GR
+ 18 A$Squiggles$3268                                               0008FD GR
+ 18 A$Squiggles$3269                                               0008FF GR
+ 18 A$Squiggles$3270                                               000901 GR
+ 18 A$Squiggles$3271                                               000903 GR
+ 18 A$Squiggles$3272                                               000905 GR
+ 18 A$Squiggles$3276                                               000907 GR
+ 18 A$Squiggles$3277                                               000909 GR
+ 18 A$Squiggles$3278                                               00090B GR
+ 18 A$Squiggles$3279                                               00090C GR
+ 18 A$Squiggles$3280                                               00090E GR
+ 18 A$Squiggles$3281                                               000910 GR
+ 18 A$Squiggles$3282                                               000911 GR
+ 18 A$Squiggles$3283                                               000913 GR
+ 18 A$Squiggles$3284                                               000915 GR
+ 18 A$Squiggles$3285                                               000917 GR
+ 18 A$Squiggles$3286                                               000919 GR
+ 18 A$Squiggles$3287                                               00091C GR
+ 18 A$Squiggles$3288                                               00091E GR
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 22.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
- 18 A$Squiggles$3274                                               00091A GR
- 18 A$Squiggles$3275                                               00091C GR
- 18 A$Squiggles$3276                                               00091D GR
- 18 A$Squiggles$3277                                               00091F GR
- 18 A$Squiggles$3278                                               000921 GR
- 18 A$Squiggles$3279                                               000923 GR
- 18 A$Squiggles$3280                                               000925 GR
- 18 A$Squiggles$3281                                               000927 GR
- 18 A$Squiggles$3282                                               000929 GR
- 18 A$Squiggles$3283                                               00092B GR
- 18 A$Squiggles$3284                                               00092D GR
- 18 A$Squiggles$3285                                               00092F GR
- 18 A$Squiggles$3286                                               000931 GR
- 18 A$Squiggles$3287                                               000933 GR
- 18 A$Squiggles$3288                                               000934 GR
- 18 A$Squiggles$3289                                               000937 GR
- 18 A$Squiggles$3290                                               000939 GR
- 18 A$Squiggles$3291                                               00093B GR
- 18 A$Squiggles$3292                                               00093D GR
- 18 A$Squiggles$3293                                               00093E GR
- 18 A$Squiggles$3294                                               000940 GR
- 18 A$Squiggles$3295                                               000942 GR
- 18 A$Squiggles$3296                                               000944 GR
- 18 A$Squiggles$3297                                               000946 GR
- 18 A$Squiggles$3298                                               000948 GR
- 18 A$Squiggles$3299                                               00094A GR
- 18 A$Squiggles$3300                                               00094B GR
- 18 A$Squiggles$3301                                               00094E GR
- 18 A$Squiggles$3302                                               000951 GR
- 18 A$Squiggles$3305                                               000954 GR
- 18 A$Squiggles$3306                                               000955 GR
- 18 A$Squiggles$3307                                               000957 GR
- 18 A$Squiggles$3308                                               000959 GR
- 18 A$Squiggles$3309                                               00095B GR
- 18 A$Squiggles$3310                                               00095D GR
- 18 A$Squiggles$3313                                               00095F GR
- 18 A$Squiggles$3314                                               000962 GR
- 18 A$Squiggles$3318                                               000965 GR
- 18 A$Squiggles$3319                                               000966 GR
- 18 A$Squiggles$3320                                               000968 GR
- 18 A$Squiggles$3321                                               00096A GR
- 18 A$Squiggles$3322                                               00096C GR
- 18 A$Squiggles$3323                                               00096E GR
- 18 A$Squiggles$3326                                               000970 GR
- 18 A$Squiggles$3327                                               000973 GR
+ 18 A$Squiggles$3289                                               000920 GR
+ 18 A$Squiggles$3290                                               000922 GR
+ 18 A$Squiggles$3291                                               000923 GR
+ 18 A$Squiggles$3292                                               000925 GR
+ 18 A$Squiggles$3293                                               000927 GR
+ 18 A$Squiggles$3294                                               000929 GR
+ 18 A$Squiggles$3295                                               00092B GR
+ 18 A$Squiggles$3296                                               00092E GR
+ 18 A$Squiggles$3297                                               000931 GR
+ 18 A$Squiggles$3298                                               000934 GR
+ 18 A$Squiggles$3299                                               000936 GR
+ 18 A$Squiggles$3300                                               000939 GR
+ 18 A$Squiggles$3301                                               00093B GR
+ 18 A$Squiggles$3302                                               00093D GR
+ 18 A$Squiggles$3303                                               00093F GR
+ 18 A$Squiggles$3304                                               000940 GR
+ 18 A$Squiggles$3305                                               000942 GR
+ 18 A$Squiggles$3306                                               000944 GR
+ 18 A$Squiggles$3307                                               000946 GR
+ 18 A$Squiggles$3308                                               000948 GR
+ 18 A$Squiggles$3309                                               00094A GR
+ 18 A$Squiggles$3310                                               00094C GR
+ 18 A$Squiggles$3311                                               00094E GR
+ 18 A$Squiggles$3312                                               000950 GR
+ 18 A$Squiggles$3313                                               000952 GR
+ 18 A$Squiggles$3314                                               000954 GR
+ 18 A$Squiggles$3315                                               000956 GR
+ 18 A$Squiggles$3316                                               000959 GR
+ 18 A$Squiggles$3317                                               00095B GR
+ 18 A$Squiggles$3318                                               00095D GR
+ 18 A$Squiggles$3319                                               00095F GR
+ 18 A$Squiggles$3320                                               000960 GR
+ 18 A$Squiggles$3321                                               000962 GR
+ 18 A$Squiggles$3322                                               000964 GR
+ 18 A$Squiggles$3323                                               000966 GR
+ 18 A$Squiggles$3324                                               000968 GR
+ 18 A$Squiggles$3325                                               00096A GR
+ 18 A$Squiggles$3326                                               00096C GR
+ 18 A$Squiggles$3327                                               00096E GR
+ 18 A$Squiggles$3328                                               000970 GR
+ 18 A$Squiggles$3329                                               000972 GR
+ 18 A$Squiggles$3330                                               000974 GR
  18 A$Squiggles$3331                                               000976 GR
- 18 A$Squiggles$3332                                               000978 GR
- 18 A$Squiggles$3335                                               00097B GR
- 18 A$Squiggles$3336                                               00097D GR
- 18 A$Squiggles$3337                                               00097E GR
- 18 A$Squiggles$3338                                               000980 GR
- 18 A$Squiggles$3339                                               000982 GR
- 18 A$Squiggles$3340                                               000984 GR
- 18 A$Squiggles$3341                                               000986 GR
- 18 A$Squiggles$3345                                               000988 GR
+ 18 A$Squiggles$3332                                               000977 GR
+ 18 A$Squiggles$3333                                               00097A GR
+ 18 A$Squiggles$3334                                               00097C GR
+ 18 A$Squiggles$3335                                               00097E GR
+ 18 A$Squiggles$3336                                               000980 GR
+ 18 A$Squiggles$3337                                               000981 GR
+ 18 A$Squiggles$3338                                               000983 GR
+ 18 A$Squiggles$3339                                               000985 GR
+ 18 A$Squiggles$3340                                               000987 GR
+ 18 A$Squiggles$3341                                               000989 GR
+ 18 A$Squiggles$3342                                               00098B GR
+ 18 A$Squiggles$3343                                               00098D GR
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 23.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
+ 18 A$Squiggles$3344                                               00098E GR
+ 18 A$Squiggles$3345                                               000991 GR
+ 18 A$Squiggles$3346                                               000994 GR
+ 18 A$Squiggles$3349                                               000997 GR
+ 18 A$Squiggles$3350                                               000998 GR
+ 18 A$Squiggles$3351                                               00099A GR
+ 18 A$Squiggles$3352                                               00099C GR
+ 18 A$Squiggles$3353                                               00099E GR
+ 18 A$Squiggles$3354                                               0009A0 GR
+ 18 A$Squiggles$3357                                               0009A2 GR
+ 18 A$Squiggles$3358                                               0009A5 GR
+ 18 A$Squiggles$3362                                               0009A8 GR
+ 18 A$Squiggles$3363                                               0009A9 GR
+ 18 A$Squiggles$3364                                               0009AB GR
+ 18 A$Squiggles$3365                                               0009AD GR
+ 18 A$Squiggles$3366                                               0009AF GR
+ 18 A$Squiggles$3367                                               0009B1 GR
+ 18 A$Squiggles$3370                                               0009B3 GR
+ 18 A$Squiggles$3371                                               0009B6 GR
+ 18 A$Squiggles$3375                                               0009B9 GR
+ 18 A$Squiggles$3376                                               0009BB GR
+ 18 A$Squiggles$3379                                               0009BE GR
+ 18 A$Squiggles$3380                                               0009C0 GR
+ 18 A$Squiggles$3381                                               0009C1 GR
+ 18 A$Squiggles$3382                                               0009C3 GR
+ 18 A$Squiggles$3383                                               0009C5 GR
+ 18 A$Squiggles$3384                                               0009C7 GR
+ 18 A$Squiggles$3385                                               0009C9 GR
+ 18 A$Squiggles$3389                                               0009CB GR
     A.0                                                         =  0000E0 L
     A.1                                                         =  0000E1 L
     A.2                                                         =  0000E2 L
@@ -1349,143 +1378,153 @@ Symbol Table
     B.4                                                         =  0000F4 L
     B.5                                                         =  0000F5 L
     B.6                                                         =  0000F6 L
-    B.7                                                         =  0000F7 L
- 18 C$Squiggles.c$100$3$122                                     =  00055A GR
- 18 C$Squiggles.c$102$4$123                                     =  00056C GR
- 18 C$Squiggles.c$103$4$123                                     =  000585 GR
- 18 C$Squiggles.c$106$4$123                                     =  00058B GR
- 18 C$Squiggles.c$112$4$124                                     =  000590 GR
- 18 C$Squiggles.c$115$2$121                                     =  000595 GR
- 18 C$Squiggles.c$117$3$125                                     =  00059A GR
- 18 C$Squiggles.c$118$1$120                                     =  0005A0 GR
- 18 C$Squiggles.c$121$2$121                                     =  0005DA GR
- 18 C$Squiggles.c$123$3$126                                     =  0005E1 GR
- 18 C$Squiggles.c$124$1$120                                     =  0005EF GR
- 18 C$Squiggles.c$125$3$126                                     =  00061B GR
- 18 C$Squiggles.c$127$3$126                                     =  00061E GR
- 18 C$Squiggles.c$136$1$120                                     =  000624 GR
- 18 C$Squiggles.c$141$1$120                                     =  000625 GR
- 18 C$Squiggles.c$143$1$128                                     =  000625 GR
- 18 C$Squiggles.c$144$1$128                                     =  000628 GR
- 18 C$Squiggles.c$145$1$128                                     =  00062B GR
- 18 C$Squiggles.c$146$1$128                                     =  00062E GR
- 18 C$Squiggles.c$147$1$128                                     =  000631 GR
- 18 C$Squiggles.c$148$1$128                                     =  000638 GR
- 18 C$Squiggles.c$149$1$128                                     =  00063B GR
- 18 C$Squiggles.c$151$1$128                                     =  000642 GR
- 18 C$Squiggles.c$155$1$128                                     =  000643 GR
- 18 C$Squiggles.c$157$1$130                                     =  000643 GR
- 18 C$Squiggles.c$158$1$130                                     =  000646 GR
- 18 C$Squiggles.c$159$1$130                                     =  000649 GR
- 18 C$Squiggles.c$160$1$130                                     =  00064B GR
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 24.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
- 18 C$Squiggles.c$164$1$130                                     =  00064C GR
- 18 C$Squiggles.c$166$1$132                                     =  00064C GR
- 18 C$Squiggles.c$167$1$132                                     =  00064F GR
- 18 C$Squiggles.c$168$1$132                                     =  000652 GR
- 18 C$Squiggles.c$169$1$132                                     =  000655 GR
- 18 C$Squiggles.c$170$1$132                                     =  000658 GR
- 18 C$Squiggles.c$174$1$132                                     =  000659 GR
- 18 C$Squiggles.c$176$1$134                                     =  000659 GR
- 18 C$Squiggles.c$177$1$134                                     =  00065C GR
- 18 C$Squiggles.c$178$1$134                                     =  00065E GR
- 18 C$Squiggles.c$182$1$134                                     =  00065F GR
- 18 C$Squiggles.c$184$1$136                                     =  000663 GR
- 18 C$Squiggles.c$186$2$137                                     =  000663 GR
- 18 C$Squiggles.c$188$2$137                                     =  000668 GR
- 18 C$Squiggles.c$189$2$137                                     =  000670 GR
- 18 C$Squiggles.c$190$2$137                                     =  000676 GR
- 18 C$Squiggles.c$192$3$138                                     =  000680 GR
- 18 C$Squiggles.c$193$3$138                                     =  000685 GR
- 18 C$Squiggles.c$195$2$137                                     =  00068C GR
- 18 C$Squiggles.c$196$2$137                                     =  00068E GR
- 18 C$Squiggles.c$198$3$139                                     =  000694 GR
- 18 C$Squiggles.c$199$3$139                                     =  000697 GR
- 18 C$Squiggles.c$201$2$137                                     =  00069A GR
- 18 C$Squiggles.c$202$2$137                                     =  00069C GR
- 18 C$Squiggles.c$203$2$137                                     =  0006A4 GR
- 18 C$Squiggles.c$204$2$137                                     =  0006A6 GR
- 18 C$Squiggles.c$206$3$140                                     =  0006AC GR
- 18 C$Squiggles.c$207$3$140                                     =  0006AF GR
- 18 C$Squiggles.c$210$1$136                                     =  0006B4 GR
- 18 C$Squiggles.c$211$1$136                                     =  0006BB GR
- 18 C$Squiggles.c$216$1$136                                     =  0006BC GR
- 18 C$Squiggles.c$218$1$142                                     =  0006BC GR
- 18 C$Squiggles.c$219$1$142                                     =  0006BF GR
- 18 C$Squiggles.c$220$1$142                                     =  0006C2 GR
- 18 C$Squiggles.c$221$1$142                                     =  0006C5 GR
- 18 C$Squiggles.c$225$1$142                                     =  0006C6 GR
- 18 C$Squiggles.c$228$1$144                                     =  0006C9 GR
- 18 C$Squiggles.c$229$1$144                                     =  0006D0 GR
- 18 C$Squiggles.c$231$1$144                                     =  0006D3 GR
- 18 C$Squiggles.c$233$1$144                                     =  0006D8 GR
- 18 C$Squiggles.c$234$1$144                                     =  0006DB GR
- 18 C$Squiggles.c$238$1$144                                     =  0006DC GR
- 18 C$Squiggles.c$241$1$146                                     =  0006DC GR
- 18 C$Squiggles.c$242$1$146                                     =  0006DF GR
- 18 C$Squiggles.c$243$1$146                                     =  0006F4 GR
- 18 C$Squiggles.c$244$1$146                                     =  0006FE GR
- 18 C$Squiggles.c$246$2$147                                     =  000711 GR
- 18 C$Squiggles.c$248$1$146                                     =  000719 GR
- 18 C$Squiggles.c$250$2$148                                     =  000727 GR
- 18 C$Squiggles.c$252$1$146                                     =  000735 GR
- 18 C$Squiggles.c$253$1$146                                     =  000740 GR
- 18 C$Squiggles.c$254$1$146                                     =  000744 GR
- 18 C$Squiggles.c$255$1$146                                     =  000759 GR
- 18 C$Squiggles.c$258$1$146                                     =  00075A GR
- 18 C$Squiggles.c$261$1$150                                     =  00075A GR
+    B.7                                                         =  0000F7 L
+ 18 C$Squiggles.c$100$4$123                                     =  000562 GR
+ 18 C$Squiggles.c$102$4$123                                     =  00057B GR
+ 18 C$Squiggles.c$104$5$124                                     =  00058D GR
+ 18 C$Squiggles.c$105$5$124                                     =  0005A6 GR
+ 18 C$Squiggles.c$108$5$124                                     =  0005AC GR
+ 18 C$Squiggles.c$114$5$125                                     =  0005B1 GR
+ 18 C$Squiggles.c$117$3$122                                     =  0005B6 GR
+ 18 C$Squiggles.c$119$4$126                                     =  0005BB GR
+ 18 C$Squiggles.c$120$1$120                                     =  0005C1 GR
+ 18 C$Squiggles.c$121$4$126                                     =  0005FB GR
+ 18 C$Squiggles.c$123$3$122                                     =  000618 GR
+ 18 C$Squiggles.c$125$4$127                                     =  00061F GR
+ 18 C$Squiggles.c$126$4$127                                     =  00062D GR
+ 18 C$Squiggles.c$127$4$127                                     =  000646 GR
+ 18 C$Squiggles.c$128$4$127                                     =  000649 GR
+ 18 C$Squiggles.c$137$2$121                                     =  00064F GR
+ 18 C$Squiggles.c$139$3$128                                     =  000658 GR
+ 18 C$Squiggles.c$140$3$128                                     =  00065E GR
+ 18 C$Squiggles.c$143$1$120                                     =  000667 GR
+ 18 C$Squiggles.c$147$1$120                                     =  000668 GR
+ 18 C$Squiggles.c$149$1$130                                     =  000668 GR
+ 18 C$Squiggles.c$150$1$130                                     =  00066B GR
+ 18 C$Squiggles.c$151$1$130                                     =  00066E GR
+ 18 C$Squiggles.c$152$1$130                                     =  000671 GR
+ 18 C$Squiggles.c$153$1$130                                     =  000674 GR
+ 18 C$Squiggles.c$154$1$130                                     =  00067B GR
+ 18 C$Squiggles.c$155$1$130                                     =  00067E GR
+ 18 C$Squiggles.c$157$1$130                                     =  000685 GR
+ 18 C$Squiggles.c$161$1$130                                     =  000686 GR
+ 18 C$Squiggles.c$163$1$132                                     =  000686 GR
+ 18 C$Squiggles.c$164$1$132                                     =  000689 GR
+ 18 C$Squiggles.c$165$1$132                                     =  00068C GR
+ 18 C$Squiggles.c$166$1$132                                     =  00068E GR
+ 18 C$Squiggles.c$170$1$132                                     =  00068F GR
+ 18 C$Squiggles.c$172$1$134                                     =  00068F GR
+ 18 C$Squiggles.c$173$1$134                                     =  000692 GR
+ 18 C$Squiggles.c$174$1$134                                     =  000695 GR
+ 18 C$Squiggles.c$175$1$134                                     =  000698 GR
+ 18 C$Squiggles.c$176$1$134                                     =  00069B GR
+ 18 C$Squiggles.c$180$1$134                                     =  00069C GR
+ 18 C$Squiggles.c$182$1$136                                     =  00069C GR
+ 18 C$Squiggles.c$183$1$136                                     =  00069F GR
+ 18 C$Squiggles.c$184$1$136                                     =  0006A1 GR
+ 18 C$Squiggles.c$188$1$136                                     =  0006A2 GR
+ 18 C$Squiggles.c$190$1$138                                     =  0006A6 GR
+ 18 C$Squiggles.c$192$2$139                                     =  0006A6 GR
+ 18 C$Squiggles.c$194$2$139                                     =  0006AB GR
+ 18 C$Squiggles.c$195$2$139                                     =  0006B3 GR
+ 18 C$Squiggles.c$196$2$139                                     =  0006B9 GR
+ 18 C$Squiggles.c$198$3$140                                     =  0006C3 GR
+ 18 C$Squiggles.c$199$3$140                                     =  0006C8 GR
+ 18 C$Squiggles.c$201$2$139                                     =  0006CF GR
+ 18 C$Squiggles.c$202$2$139                                     =  0006D1 GR
+ 18 C$Squiggles.c$204$3$141                                     =  0006D7 GR
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 25.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
- 18 C$Squiggles.c$262$1$150                                     =  00075D GR
- 18 C$Squiggles.c$263$1$150                                     =  000772 GR
- 18 C$Squiggles.c$264$1$150                                     =  00077C GR
- 18 C$Squiggles.c$265$1$150                                     =  000787 GR
- 18 C$Squiggles.c$266$1$150                                     =  0007A2 GR
- 18 C$Squiggles.c$267$1$150                                     =  0007B7 GR
- 18 C$Squiggles.c$271$1$150                                     =  0007B8 GR
- 18 C$Squiggles.c$276$1$152                                     =  0007B8 GR
- 18 C$Squiggles.c$277$1$152                                     =  0007CD GR
- 18 C$Squiggles.c$278$1$152                                     =  0007DD GR
- 18 C$Squiggles.c$279$1$152                                     =  0007DD GR
- 18 C$Squiggles.c$283$1$152                                     =  0007DE GR
- 18 C$Squiggles.c$287$1$154                                     =  0007DE GR
- 18 C$Squiggles.c$288$1$154                                     =  0007F3 GR
- 18 C$Squiggles.c$290$1$154                                     =  000801 GR
- 18 C$Squiggles.c$291$1$154                                     =  000804 GR
- 18 C$Squiggles.c$292$1$154                                     =  000821 GR
- 18 C$Squiggles.c$293$1$154                                     =  000825 GR
- 18 C$Squiggles.c$297$1$154                                     =  000826 GR
- 18 C$Squiggles.c$302$1$156                                     =  000826 GR
- 18 C$Squiggles.c$305$2$157                                     =  000830 GR
- 18 C$Squiggles.c$310$2$158                                     =  000837 GR
- 18 C$Squiggles.c$312$1$156                                     =  000856 GR
- 18 C$Squiggles.c$374$1$156                                     =  000857 GR
- 18 C$Squiggles.c$378$1$160                                     =  000857 GR
- 18 C$Squiggles.c$384$1$160                                     =  000862 GR
- 18 C$Squiggles.c$385$1$160                                     =  000875 GR
- 18 C$Squiggles.c$387$1$160                                     =  00088C GR
- 18 C$Squiggles.c$389$2$161                                     =  000896 GR
- 18 C$Squiggles.c$393$2$162                                     =  00089D GR
- 18 C$Squiggles.c$397$1$160                                     =  0008C4 GR
- 18 C$Squiggles.c$399$1$160                                     =  000954 GR
- 18 C$Squiggles.c$401$2$163                                     =  00095F GR
- 18 C$Squiggles.c$403$1$160                                     =  000965 GR
- 18 C$Squiggles.c$405$2$164                                     =  000970 GR
- 18 C$Squiggles.c$407$1$160                                     =  000976 GR
- 18 C$Squiggles.c$409$2$165                                     =  00097B GR
- 18 C$Squiggles.c$418$1$160                                     =  000988 GR
- 16 C$Squiggles.c$44$1$160                                      =  000000 GR
- 16 C$Squiggles.c$45$1$160                                      =  000006 GR
- 16 C$Squiggles.c$56$1$160                                      =  000011 GR
- 16 C$Squiggles.c$57$1$160                                      =  000015 GR
- 16 C$Squiggles.c$58$1$160                                      =  000019 GR
+ 18 C$Squiggles.c$205$3$141                                     =  0006DA GR
+ 18 C$Squiggles.c$207$2$139                                     =  0006DD GR
+ 18 C$Squiggles.c$208$2$139                                     =  0006DF GR
+ 18 C$Squiggles.c$209$2$139                                     =  0006E7 GR
+ 18 C$Squiggles.c$210$2$139                                     =  0006E9 GR
+ 18 C$Squiggles.c$212$3$142                                     =  0006EF GR
+ 18 C$Squiggles.c$213$3$142                                     =  0006F2 GR
+ 18 C$Squiggles.c$216$1$138                                     =  0006F7 GR
+ 18 C$Squiggles.c$217$1$138                                     =  0006FE GR
+ 18 C$Squiggles.c$222$1$138                                     =  0006FF GR
+ 18 C$Squiggles.c$224$1$144                                     =  0006FF GR
+ 18 C$Squiggles.c$225$1$144                                     =  000702 GR
+ 18 C$Squiggles.c$226$1$144                                     =  000705 GR
+ 18 C$Squiggles.c$227$1$144                                     =  000708 GR
+ 18 C$Squiggles.c$231$1$144                                     =  000709 GR
+ 18 C$Squiggles.c$234$1$146                                     =  00070C GR
+ 18 C$Squiggles.c$235$1$146                                     =  000713 GR
+ 18 C$Squiggles.c$237$1$146                                     =  000716 GR
+ 18 C$Squiggles.c$239$1$146                                     =  00071B GR
+ 18 C$Squiggles.c$240$1$146                                     =  00071E GR
+ 18 C$Squiggles.c$244$1$146                                     =  00071F GR
+ 18 C$Squiggles.c$247$1$148                                     =  00071F GR
+ 18 C$Squiggles.c$248$1$148                                     =  000722 GR
+ 18 C$Squiggles.c$249$1$148                                     =  000737 GR
+ 18 C$Squiggles.c$250$1$148                                     =  000741 GR
+ 18 C$Squiggles.c$252$2$149                                     =  000754 GR
+ 18 C$Squiggles.c$254$1$148                                     =  00075C GR
+ 18 C$Squiggles.c$256$2$150                                     =  00076A GR
+ 18 C$Squiggles.c$258$1$148                                     =  000778 GR
+ 18 C$Squiggles.c$259$1$148                                     =  000783 GR
+ 18 C$Squiggles.c$260$1$148                                     =  000787 GR
+ 18 C$Squiggles.c$261$1$148                                     =  00079C GR
+ 18 C$Squiggles.c$264$1$148                                     =  00079D GR
+ 18 C$Squiggles.c$267$1$152                                     =  00079D GR
+ 18 C$Squiggles.c$268$1$152                                     =  0007A0 GR
+ 18 C$Squiggles.c$269$1$152                                     =  0007B5 GR
+ 18 C$Squiggles.c$270$1$152                                     =  0007BF GR
+ 18 C$Squiggles.c$271$1$152                                     =  0007CA GR
+ 18 C$Squiggles.c$272$1$152                                     =  0007E5 GR
+ 18 C$Squiggles.c$273$1$152                                     =  0007FA GR
+ 18 C$Squiggles.c$277$1$152                                     =  0007FB GR
+ 18 C$Squiggles.c$282$1$154                                     =  0007FB GR
+ 18 C$Squiggles.c$283$1$154                                     =  000810 GR
+ 18 C$Squiggles.c$284$1$154                                     =  000820 GR
+ 18 C$Squiggles.c$285$1$154                                     =  000820 GR
+ 18 C$Squiggles.c$289$1$154                                     =  000821 GR
+ 18 C$Squiggles.c$293$1$156                                     =  000821 GR
+ 18 C$Squiggles.c$294$1$156                                     =  000836 GR
+ 18 C$Squiggles.c$296$1$156                                     =  000844 GR
+ 18 C$Squiggles.c$297$1$156                                     =  000847 GR
+ 18 C$Squiggles.c$298$1$156                                     =  000864 GR
+ 18 C$Squiggles.c$299$1$156                                     =  000868 GR
+ 18 C$Squiggles.c$303$1$156                                     =  000869 GR
+ 18 C$Squiggles.c$308$1$158                                     =  000869 GR
+ 18 C$Squiggles.c$311$2$159                                     =  000873 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 26.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+ 18 C$Squiggles.c$316$2$160                                     =  00087A GR
+ 18 C$Squiggles.c$318$1$158                                     =  000899 GR
+ 18 C$Squiggles.c$380$1$158                                     =  00089A GR
+ 18 C$Squiggles.c$384$1$162                                     =  00089A GR
+ 18 C$Squiggles.c$390$1$162                                     =  0008A5 GR
+ 18 C$Squiggles.c$391$1$162                                     =  0008B8 GR
+ 18 C$Squiggles.c$393$1$162                                     =  0008CF GR
+ 18 C$Squiggles.c$395$2$163                                     =  0008D9 GR
+ 18 C$Squiggles.c$399$2$164                                     =  0008E0 GR
+ 18 C$Squiggles.c$403$1$162                                     =  000907 GR
+ 18 C$Squiggles.c$405$1$162                                     =  000997 GR
+ 18 C$Squiggles.c$407$2$165                                     =  0009A2 GR
+ 18 C$Squiggles.c$409$1$162                                     =  0009A8 GR
+ 18 C$Squiggles.c$411$2$166                                     =  0009B3 GR
+ 18 C$Squiggles.c$413$1$162                                     =  0009B9 GR
+ 18 C$Squiggles.c$415$2$167                                     =  0009BE GR
+ 18 C$Squiggles.c$424$1$162                                     =  0009CB GR
+ 16 C$Squiggles.c$44$1$162                                      =  000000 GR
+ 16 C$Squiggles.c$45$1$162                                      =  000006 GR
+ 16 C$Squiggles.c$56$1$162                                      =  000012 GR
+ 16 C$Squiggles.c$57$1$162                                      =  000017 GR
+ 16 C$Squiggles.c$58$1$162                                      =  00001B GR
  18 C$Squiggles.c$66$1$103                                      =  0004D6 GR
  18 C$Squiggles.c$68$1$120                                      =  0004D6 GR
  18 C$Squiggles.c$69$1$120                                      =  0004D9 GR
@@ -1497,18 +1536,13 @@ Symbol Table
  18 C$Squiggles.c$75$1$120                                      =  0004EE GR
  18 C$Squiggles.c$76$1$120                                      =  000503 GR
  18 C$Squiggles.c$77$1$120                                      =  000509 GR
- 18 C$Squiggles.c$80$1$120                                      =  00050F GR
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 26.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
- 18 C$Squiggles.c$81$1$120                                      =  000514 GR
- 18 C$Squiggles.c$88$1$120                                      =  00051F GR
- 18 C$Squiggles.c$90$1$120                                      =  000534 GR
- 18 C$Squiggles.c$95$2$121                                      =  000534 GR
- 18 C$Squiggles.c$97$3$122                                      =  000538 GR
- 18 C$Squiggles.c$98$3$122                                      =  000541 GR
+ 18 C$Squiggles.c$79$1$120                                      =  00050F GR
+ 18 C$Squiggles.c$80$1$120                                      =  000524 GR
+ 18 C$Squiggles.c$81$1$120                                      =  000529 GR
+ 18 C$Squiggles.c$88$1$120                                      =  000534 GR
+ 18 C$Squiggles.c$95$2$121                                      =  000549 GR
+ 18 C$Squiggles.c$97$3$122                                      =  000555 GR
+ 18 C$Squiggles.c$99$4$123                                      =  000559 GR
  18 C$c8051_SDCC.h$100$1$37                                     =  000045 GR
  18 C$c8051_SDCC.h$101$1$37                                     =  000045 GR
  18 C$c8051_SDCC.h$102$1$37                                     =  00004A GR
@@ -1524,6 +1558,11 @@ Symbol Table
  18 C$c8051_SDCC.h$46$1$31                                      =  000000 GR
  18 C$c8051_SDCC.h$49$1$31                                      =  000003 GR
  18 C$c8051_SDCC.h$51$1$31                                      =  000010 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 27.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
  18 C$c8051_SDCC.h$53$1$31                                      =  000015 GR
  18 C$c8051_SDCC.h$56$1$31                                      =  000018 GR
  18 C$c8051_SDCC.h$64$1$31                                      =  000019 GR
@@ -1558,11 +1597,6 @@ Symbol Table
  18 C$i2c.h$121$1$78                                            =  000165 GR
  18 C$i2c.h$123$2$79                                            =  00013D GR
  18 C$i2c.h$124$2$79                                            =  00015E GR
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 27.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
  18 C$i2c.h$127$1$78                                            =  00016D GR
  18 C$i2c.h$129$1$78                                            =  000177 GR
  18 C$i2c.h$131$1$78                                            =  000181 GR
@@ -1584,6 +1618,11 @@ Symbol Table
  18 C$i2c.h$176$3$84                                            =  0002C8 GR
  18 C$i2c.h$179$1$81                                            =  000308 GR
  18 C$i2c.h$180$1$81                                            =  00030C GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 28.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
  18 C$i2c.h$189$1$81                                            =  00030D GR
  18 C$i2c.h$192$1$86                                            =  000314 GR
  18 C$i2c.h$193$1$86                                            =  000336 GR
@@ -1618,11 +1657,6 @@ Symbol Table
  18 C$i2c.h$241$1$96                                            =  00036A GR
  18 C$i2c.h$242$1$96                                            =  00036F GR
  18 C$i2c.h$243$1$96                                            =  000371 GR
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 28.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
  18 C$i2c.h$246$1$96                                            =  000372 GR
  18 C$i2c.h$250$1$98                                            =  000374 GR
  18 C$i2c.h$251$1$98                                            =  00037B GR
@@ -1644,6 +1678,11 @@ Symbol Table
  18 C$i2c.h$273$1$100                                           =  00045E GR
  18 C$i2c.h$274$1$100                                           =  00048C GR
  18 C$i2c.h$283$1$100                                           =  00048D GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 29.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
  18 C$i2c.h$287$1$103                                           =  00048D GR
  18 C$i2c.h$289$1$103                                           =  000490 GR
  18 C$i2c.h$290$1$103                                           =  0004A5 GR
@@ -1676,20 +1715,17 @@ Symbol Table
     F0                                                          =  0000D5 L
  19 FSquiggles$__str_0$0$0                                      =  000000 GR
  19 FSquiggles$__str_1$0$0                                      =  000016 GR
- 19 FSquiggles$__str_10$0$0                                     =  0000EE GR
+ 19 FSquiggles$__str_10$0$0                                     =  0000D8 GR
+ 19 FSquiggles$__str_11$0$0                                     =  0000F0 GR
+ 19 FSquiggles$__str_12$0$0                                     =  000116 GR
  19 FSquiggles$__str_2$0$0                                      =  000026 GR
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 29.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
  19 FSquiggles$__str_3$0$0                                      =  000029 GR
  19 FSquiggles$__str_4$0$0                                      =  000032 GR
- 19 FSquiggles$__str_5$0$0                                      =  00005D GR
- 19 FSquiggles$__str_6$0$0                                      =  000069 GR
- 19 FSquiggles$__str_7$0$0                                      =  000087 GR
- 19 FSquiggles$__str_8$0$0                                      =  0000B0 GR
- 19 FSquiggles$__str_9$0$0                                      =  0000C8 GR
+ 19 FSquiggles$__str_5$0$0                                      =  000042 GR
+ 19 FSquiggles$__str_6$0$0                                      =  00006D GR
+ 19 FSquiggles$__str_7$0$0                                      =  000079 GR
+ 19 FSquiggles$__str_8$0$0                                      =  000091 GR
+ 19 FSquiggles$__str_9$0$0                                      =  0000AF GR
     G$AA$0$0                                                    =  0000C2 G
     G$AC$0$0                                                    =  0000D6 G
     G$ACC$0$0                                                   =  0000E0 G
@@ -1702,6 +1738,11 @@ Symbol Table
     G$AD0TM$0$0                                                 =  0000EE G
     G$AD0WINT$0$0                                               =  0000E9 G
     G$ADBUSY$0$0                                                =  0000EC G
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 30.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
     G$ADC0$0$0                                                  =  00BFBE G
     G$ADC0CF$0$0                                                =  0000BC G
     G$ADC0CN$0$0                                                =  0000E8 G
@@ -1719,7 +1760,7 @@ Symbol Table
     G$ADCEN$0$0                                                 =  0000EF G
     G$ADCINT$0$0                                                =  0000ED G
     G$ADCTM$0$0                                                 =  0000EE G
- 18 G$ADC_Init$0$0                                              =  0006BC GR
+ 18 G$ADC_Init$0$0                                              =  0006FF GR
     G$ADLJST$0$0                                                =  0000E8 G
     G$ADSTM0$0$0                                                =  0000EA G
     G$ADSTM1$0$0                                                =  0000EB G
@@ -1738,11 +1779,6 @@ Symbol Table
     G$BUS_INT$0$0                                               =  0000C3 G
     G$BUS_SCL$0$0                                               =  000083 G
     G$BUS_START$0$0                                             =  0000C5 G
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 30.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
     G$BUS_STOP$0$0                                              =  0000C4 G
     G$BUS_TOE$0$0                                               =  0000C0 G
     G$CCF0$0$0                                                  =  0000D8 G
@@ -1762,6 +1798,11 @@ Symbol Table
     G$CY$0$0                                                    =  0000D7 G
   5 G$Counts$0$0                                                =  000010 GR
     G$DAC0$0$0                                                  =  00D3D2 G
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 31.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
     G$DAC0CN$0$0                                                =  0000D4 G
     G$DAC0H$0$0                                                 =  0000D3 G
     G$DAC0L$0$0                                                 =  0000D2 G
@@ -1798,14 +1839,9 @@ Symbol Table
     G$IE0$0$0                                                   =  000089 G
     G$IE1$0$0                                                   =  00008B G
     G$IP$0$0                                                    =  0000B8 G
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 31.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
     G$IT0$0$0                                                   =  000088 G
     G$IT1$0$0                                                   =  00008A G
- 18 G$Interrupt_Init$0$0                                        =  000643 GR
+ 18 G$Interrupt_Init$0$0                                        =  000686 GR
     G$MCE0$0$0                                                  =  00009D G
     G$MODF$0$0                                                  =  0000FD G
     G$MSTEN$0$0                                                 =  0000F9 G
@@ -1822,6 +1858,11 @@ Symbol Table
     G$P0_4$0$0                                                  =  000084 G
     G$P0_5$0$0                                                  =  000085 G
     G$P0_6$0$0                                                  =  000086 G
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 32.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
     G$P0_7$0$0                                                  =  000087 G
     G$P1$0$0                                                    =  000090 G
     G$P1MDIN$0$0                                                =  0000BD G
@@ -1858,11 +1899,6 @@ Symbol Table
     G$P4$0$0                                                    =  000084 G
     G$P5$0$0                                                    =  000085 G
     G$P6$0$0                                                    =  000086 G
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 32.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
     G$P7$0$0                                                    =  000096 G
     G$P74OUT$0$0                                                =  0000B5 G
     G$PCA0$0$0                                                  =  00F9E9 G
@@ -1882,6 +1918,11 @@ Symbol Table
     G$PCA0CPL2$0$0                                              =  0000EC G
     G$PCA0CPL3$0$0                                              =  0000ED G
     G$PCA0CPL4$0$0                                              =  0000EE G
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 33.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
     G$PCA0CPM0$0$0                                              =  0000DA G
     G$PCA0CPM1$0$0                                              =  0000DB G
     G$PCA0CPM2$0$0                                              =  0000DC G
@@ -1890,8 +1931,8 @@ Symbol Table
     G$PCA0H$0$0                                                 =  0000F9 G
     G$PCA0L$0$0                                                 =  0000E9 G
     G$PCA0MD$0$0                                                =  0000D9 G
- 18 G$PCA_ISR$0$0                                               =  00065F GR
- 18 G$PCA_Init$0$0                                              =  00064C GR
+ 18 G$PCA_ISR$0$0                                               =  0006A2 GR
+ 18 G$PCA_Init$0$0                                              =  00068F GR
     G$PCON$0$0                                                  =  000087 G
     G$PRT0CF$0$0                                                =  0000A4 G
     G$PRT1CF$0$0                                                =  0000A5 G
@@ -1906,9 +1947,9 @@ Symbol Table
     G$PT2$0$0                                                   =  0000BD G
     G$PX0$0$0                                                   =  0000B8 G
     G$PX1$0$0                                                   =  0000BA G
- 18 G$Pick_Compass_Gain$0$0                                     =  00075A GR
- 18 G$Pick_Heading$0$0                                          =  0006DC GR
- 18 G$Port_Init$0$0                                             =  000625 GR
+ 18 G$Pick_Compass_Gain$0$0                                     =  00079D GR
+ 18 G$Pick_Heading$0$0                                          =  00071F GR
+ 18 G$Port_Init$0$0                                             =  000668 GR
     G$RANGER_SWITCH$0$0                                         =  0000B6 G
     G$RB8$0$0                                                   =  00009A G
     G$RB80$0$0                                                  =  00009A G
@@ -1918,11 +1959,6 @@ Symbol Table
     G$RCAP4$0$0                                                 =  00E5E4 G
     G$RCAP4H$0$0                                                =  0000E5 G
     G$RCAP4L$0$0                                                =  0000E4 G
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 33.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
     G$RCLK$0$0                                                  =  0000CD G
     G$REF0CN$0$0                                                =  0000D1 G
     G$REN$0$0                                                   =  00009C G
@@ -1942,6 +1978,11 @@ Symbol Table
     G$SBUF0$0$0                                                 =  000099 G
     G$SBUF1$0$0                                                 =  0000F2 G
     G$SCON$0$0                                                  =  000098 G
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 34.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
     G$SCON0$0$0                                                 =  000098 G
     G$SCON1$0$0                                                 =  0000F1 G
     G$SI$0$0                                                    =  0000C3 G
@@ -1957,7 +1998,7 @@ Symbol Table
     G$SMB0CR$0$0                                                =  0000CF G
     G$SMB0DAT$0$0                                               =  0000C2 G
     G$SMB0STA$0$0                                               =  0000C1 G
- 18 G$SMB0_Init$0$0                                             =  000659 GR
+ 18 G$SMB0_Init$0$0                                             =  00069C GR
     G$SMBFTE$0$0                                                =  0000C1 G
     G$SMBTOE$0$0                                                =  0000C0 G
     G$SP$0$0                                                    =  000081 G
@@ -1978,11 +2019,6 @@ Symbol Table
     G$TCLK$0$0                                                  =  0000CC G
     G$TCON$0$0                                                  =  000088 G
     G$TF0$0$0                                                   =  00008D G
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 34.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
     G$TF1$0$0                                                   =  00008F G
     G$TF2$0$0                                                   =  0000CF G
     G$TH0$0$0                                                   =  00008C G
@@ -2002,6 +2038,11 @@ Symbol Table
     G$TMR3$0$0                                                  =  009594 G
     G$TMR3CN$0$0                                                =  000091 G
     G$TMR3H$0$0                                                 =  000095 G
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 35.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
     G$TMR3L$0$0                                                 =  000094 G
     G$TMR3RL$0$0                                                =  009392 G
     G$TMR3RLH$0$0                                               =  000093 G
@@ -2038,11 +2079,6 @@ Symbol Table
  18 G$lcd_print$0$0                                             =  00005C GR
  18 G$main$0$0                                                  =  0004D6 GR
   5 G$nCounts$0$0                                               =  000012 GR
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 35.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
   5 G$nOverflows$0$0                                            =  000014 GR
   5 G$new_heading$0$0                                           =  00001F GR
   5 G$new_range$0$0                                             =  000020 GR
@@ -2051,17 +2087,22 @@ Symbol Table
   5 G$range$0$0                                                 =  000023 GR
   5 G$range_adj$0$0                                             =  000027 GR
   5 G$ranger_gain$0$0                                           =  00002B GR
- 18 G$read_AD_input$0$0                                         =  0006C6 GR
- 18 G$read_compass$0$0                                          =  0007B8 GR
+ 18 G$read_AD_input$0$0                                         =  000709 GR
+ 18 G$read_compass$0$0                                          =  0007FB GR
  18 G$read_keypad$0$0                                           =  00011A GR
- 18 G$read_ranger$0$0                                           =  0007DE GR
- 18 G$set_COMPASS_PW$0$0                                        =  000857 GR
- 18 G$set_range_adj$0$0                                         =  000826 GR
+ 18 G$read_ranger$0$0                                           =  000821 GR
+ 18 G$set_COMPASS_PW$0$0                                        =  00089A GR
+ 18 G$set_range_adj$0$0                                         =  000869 GR
   5 G$voltage$0$0                                               =  00002D GR
     IE                                                          =  0000A8 L
     IE.0                                                        =  0000A8 L
     IE.1                                                        =  0000A9 L
     IE.2                                                        =  0000AA L
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 36.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
     IE.3                                                        =  0000AB L
     IE.4                                                        =  0000AC L
     IE.5                                                        =  0000AD L
@@ -2089,7 +2130,7 @@ Symbol Table
   5 LSquiggles.lcd_clear$Cmd$1$77                               =  000001 GR
   5 LSquiggles.lcd_clear$NumBytes$1$77                          =  000000 GR
   C LSquiggles.lcd_print$text$1$73                              =  000000 GR
-  5 LSquiggles.read_compass$Data$1$152                          =  000030 GR
+  5 LSquiggles.read_compass$Data$1$154                          =  000030 GR
   5 LSquiggles.read_keypad$Data$1$78                            =  000003 GR
     OV                                                          =  0000D2 L
     P                                                           =  0000D0 L
@@ -2098,11 +2139,6 @@ Symbol Table
     P0.1                                                        =  000081 L
     P0.2                                                        =  000082 L
     P0.3                                                        =  000083 L
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 36.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
     P0.4                                                        =  000084 L
     P0.5                                                        =  000085 L
     P0.6                                                        =  000086 L
@@ -2122,6 +2158,11 @@ Symbol Table
     P2.2                                                        =  0000A2 L
     P2.3                                                        =  0000A3 L
     P2.4                                                        =  0000A4 L
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 37.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
     P2.5                                                        =  0000A5 L
     P2.6                                                        =  0000A6 L
     P2.7                                                        =  0000A7 L
@@ -2158,11 +2199,6 @@ Symbol Table
     RI                                                          =  000098 L
     RS0                                                         =  0000D3 L
     RS1                                                         =  0000D4 L
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 37.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
     RXD                                                         =  0000B0 L
     SBUF                                                        =  000099 L
     SCON                                                        =  000098 L
@@ -2182,6 +2218,11 @@ Symbol Table
     T2CON.0                                                     =  0000C8 L
     T2CON.1                                                     =  0000C9 L
     T2CON.2                                                     =  0000CA L
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 38.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
     T2CON.3                                                     =  0000CB L
     T2CON.4                                                     =  0000CC L
     T2CON.5                                                     =  0000CD L
@@ -2213,20 +2254,15 @@ Symbol Table
     TR1                                                         =  00008E L
     TR2                                                         =  0000CA L
     TXD                                                         =  0000B1 L
- 18 XG$ADC_Init$0$0                                             =  0006C5 GR
+ 18 XG$ADC_Init$0$0                                             =  000708 GR
  18 XG$Accel_Init$0$0                                           =  0004D5 GR
- 18 XG$Interrupt_Init$0$0                                       =  00064B GR
- 18 XG$PCA_ISR$0$0                                              =  0006BB GR
- 18 XG$PCA_Init$0$0                                             =  000658 GR
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 38.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
- 18 XG$Pick_Compass_Gain$0$0                                    =  0007B7 GR
- 18 XG$Pick_Heading$0$0                                         =  000759 GR
- 18 XG$Port_Init$0$0                                            =  000642 GR
- 18 XG$SMB0_Init$0$0                                            =  00065E GR
+ 18 XG$Interrupt_Init$0$0                                       =  00068E GR
+ 18 XG$PCA_ISR$0$0                                              =  0006FE GR
+ 18 XG$PCA_Init$0$0                                             =  00069B GR
+ 18 XG$Pick_Compass_Gain$0$0                                    =  0007FA GR
+ 18 XG$Pick_Heading$0$0                                         =  00079C GR
+ 18 XG$Port_Init$0$0                                            =  000685 GR
+ 18 XG$SMB0_Init$0$0                                            =  0006A1 GR
  18 XG$SYSCLK_Init$0$0                                          =  000018 GR
  18 XG$Sys_Init$0$0                                             =  000042 GR
  18 XG$UART0_Init$0$0                                           =  00002F GR
@@ -2242,14 +2278,19 @@ Symbol Table
  18 XG$kpd_input$0$0                                            =  00030C GR
  18 XG$lcd_clear$0$0                                            =  000119 GR
  18 XG$lcd_print$0$0                                            =  0000E0 GR
- 18 XG$main$0$0                                                 =  000624 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 39.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+ 18 XG$main$0$0                                                 =  000667 GR
  18 XG$putchar$0$0                                              =  00004C GR
- 18 XG$read_AD_input$0$0                                        =  0006DB GR
- 18 XG$read_compass$0$0                                         =  0007DD GR
+ 18 XG$read_AD_input$0$0                                        =  00071E GR
+ 18 XG$read_compass$0$0                                         =  000820 GR
  18 XG$read_keypad$0$0                                          =  000198 GR
- 18 XG$read_ranger$0$0                                          =  000825 GR
- 18 XG$set_COMPASS_PW$0$0                                       =  000988 GR
- 18 XG$set_range_adj$0$0                                        =  000856 GR
+ 18 XG$read_ranger$0$0                                          =  000868 GR
+ 18 XG$set_COMPASS_PW$0$0                                       =  0009CB GR
+ 18 XG$set_range_adj$0$0                                        =  000899 GR
     _AA                                                         =  0000C2 G
     _AC                                                         =  0000D6 G
     _ACC                                                        =  0000E0 G
@@ -2278,13 +2319,8 @@ Symbol Table
     _ADC1CN                                                     =  0000AA G
     _ADCEN                                                      =  0000EF G
     _ADCINT                                                     =  0000ED G
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 39.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
     _ADCTM                                                      =  0000EE G
- 18 _ADC_Init                                                      0006BC GR
+ 18 _ADC_Init                                                      0006FF GR
     _ADLJST                                                     =  0000E8 G
     _ADSTM0                                                     =  0000EA G
     _ADSTM1                                                     =  0000EB G
@@ -2302,6 +2338,11 @@ Symbol Table
     _BUS_EN                                                     =  0000C6 G
     _BUS_FTE                                                    =  0000C1 G
     _BUS_INT                                                    =  0000C3 G
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 40.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
     _BUS_SCL                                                    =  000083 G
     _BUS_START                                                  =  0000C5 G
     _BUS_STOP                                                   =  0000C4 G
@@ -2338,11 +2379,6 @@ Symbol Table
     _EIE2                                                       =  0000E7 G
     _EIP1                                                       =  0000F6 G
     _EIP2                                                       =  0000F7 G
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 40.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
     _EMI0CF                                                     =  0000A3 G
     _EMI0CN                                                     =  0000AF G
     _EMI0TC                                                     =  0000A1 G
@@ -2362,11 +2398,16 @@ Symbol Table
     _FLSCL                                                      =  0000B6 G
     _IE                                                         =  0000A8 G
     _IE0                                                        =  000089 G
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 41.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
     _IE1                                                        =  00008B G
     _IP                                                         =  0000B8 G
     _IT0                                                        =  000088 G
     _IT1                                                        =  00008A G
- 18 _Interrupt_Init                                                000643 GR
+ 18 _Interrupt_Init                                                000686 GR
     _MCE0                                                       =  00009D G
     _MODF                                                       =  0000FD G
     _MSTEN                                                      =  0000F9 G
@@ -2398,11 +2439,6 @@ Symbol Table
     _P2                                                         =  0000A0 G
     _P2MDOUT                                                    =  0000A6 G
     _P2_0                                                       =  0000A0 G
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 41.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
     _P2_1                                                       =  0000A1 G
     _P2_2                                                       =  0000A2 G
     _P2_3                                                       =  0000A3 G
@@ -2422,6 +2458,11 @@ Symbol Table
     _P3_6                                                       =  0000B6 G
     _P3_7                                                       =  0000B7 G
     _P4                                                         =  000084 G
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 42.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
     _P5                                                         =  000085 G
     _P6                                                         =  000086 G
     _P7                                                         =  000096 G
@@ -2451,18 +2492,13 @@ Symbol Table
     _PCA0H                                                      =  0000F9 G
     _PCA0L                                                      =  0000E9 G
     _PCA0MD                                                     =  0000D9 G
- 18 _PCA_ISR                                                       00065F GR
- 18 _PCA_Init                                                      00064C GR
+ 18 _PCA_ISR                                                       0006A2 GR
+ 18 _PCA_Init                                                      00068F GR
     _PCON                                                       =  000087 G
     _PRT0CF                                                     =  0000A4 G
     _PRT1CF                                                     =  0000A5 G
     _PRT2CF                                                     =  0000A6 G
     _PRT3CF                                                     =  0000A7 G
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 42.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
     _PS                                                         =  0000BC G
     _PS0                                                        =  0000BC G
     _PSCTL                                                      =  00008F G
@@ -2472,9 +2508,9 @@ Symbol Table
     _PT2                                                        =  0000BD G
     _PX0                                                        =  0000B8 G
     _PX1                                                        =  0000BA G
- 18 _Pick_Compass_Gain                                             00075A GR
- 18 _Pick_Heading                                                  0006DC GR
- 18 _Port_Init                                                     000625 GR
+ 18 _Pick_Compass_Gain                                             00079D GR
+ 18 _Pick_Heading                                                  00071F GR
+ 18 _Port_Init                                                     000668 GR
     _RANGER_SWITCH                                              =  0000B6 G
     _RB8                                                        =  00009A G
     _RB80                                                       =  00009A G
@@ -2482,6 +2518,11 @@ Symbol Table
     _RCAP2H                                                     =  0000CB G
     _RCAP2L                                                     =  0000CA G
     _RCAP4                                                      =  00E5E4 G
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 43.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
     _RCAP4H                                                     =  0000E5 G
     _RCAP4L                                                     =  0000E4 G
     _RCLK                                                       =  0000CD G
@@ -2518,12 +2559,7 @@ Symbol Table
     _SMB0CR                                                     =  0000CF G
     _SMB0DAT                                                    =  0000C2 G
     _SMB0STA                                                    =  0000C1 G
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 43.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
- 18 _SMB0_Init                                                     000659 GR
+ 18 _SMB0_Init                                                     00069C GR
     _SMBFTE                                                     =  0000C1 G
     _SMBTOE                                                     =  0000C0 G
     _SP                                                         =  000081 G
@@ -2542,6 +2578,11 @@ Symbol Table
     _TB8                                                        =  00009B G
     _TB80                                                       =  00009B G
     _TCLK                                                       =  0000CC G
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 44.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
     _TCON                                                       =  000088 G
     _TF0                                                        =  00008D G
     _TF1                                                        =  00008F G
@@ -2578,11 +2619,6 @@ Symbol Table
     _XBR0                                                       =  0000E1 G
     _XBR1                                                       =  0000E2 G
     _XBR2                                                       =  0000E3 G
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 44.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
     __XPAGE                                                     =  0000AF G
     ___fs2uchar                                                    ****** GX
     ___fs2uint                                                     ****** GX
@@ -2591,21 +2627,26 @@ Symbol Table
     ___sint2fs                                                     ****** GX
  19 ___str_0                                                       000000 R
  19 ___str_1                                                       000016 R
- 19 ___str_10                                                      0000EE R
+ 19 ___str_10                                                      0000D8 R
+ 19 ___str_11                                                      0000F0 R
+ 19 ___str_12                                                      000116 R
  19 ___str_2                                                       000026 R
  19 ___str_3                                                       000029 R
  19 ___str_4                                                       000032 R
- 19 ___str_5                                                       00005D R
- 19 ___str_6                                                       000069 R
- 19 ___str_7                                                       000087 R
- 19 ___str_8                                                       0000B0 R
- 19 ___str_9                                                       0000C8 R
+ 19 ___str_5                                                       000042 R
+ 19 ___str_6                                                       00006D R
+ 19 ___str_7                                                       000079 R
+ 19 ___str_8                                                       000091 R
+ 19 ___str_9                                                       0000AF R
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 45.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
     ___uchar2fs                                                    ****** GX
     ___uint2fs                                                     ****** GX
     __divsint                                                      ****** GX
     __divsint_PARM_2                                               ****** GX
-    __divuint                                                      ****** GX
-    __divuint_PARM_2                                               ****** GX
     __gptrget                                                      ****** GX
     __gptrput                                                      ****** GX
   F __interrupt_vect                                               000000 R
@@ -2638,11 +2679,6 @@ Symbol Table
  18 _i2c_write_data                                                000372 GR
   5 _i2c_write_data_PARM_2                                         000005 GR
   5 _i2c_write_data_PARM_3                                         000006 GR
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 45.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
   5 _i2c_write_data_PARM_4                                         000009 GR
  18 _kpd_input                                                     000199 GR
  18 _lcd_clear                                                     0000E1 GR
@@ -2661,14 +2697,19 @@ Symbol Table
   5 _range                                                         000023 GR
   5 _range_adj                                                     000027 GR
   5 _ranger_gain                                                   00002B GR
- 18 _read_AD_input                                                 0006C6 GR
- 18 _read_compass                                                  0007B8 GR
-  5 _read_compass_Data_1_152                                       000030 R
+ 18 _read_AD_input                                                 000709 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 46.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+ 18 _read_compass                                                  0007FB GR
+  5 _read_compass_Data_1_154                                       000030 R
  18 _read_keypad                                                   00011A GR
   5 _read_keypad_Data_1_78                                         000003 R
- 18 _read_ranger                                                   0007DE GR
- 18 _set_COMPASS_PW                                                000857 GR
- 18 _set_range_adj                                                 000826 GR
+ 18 _read_ranger                                                   000821 GR
+ 18 _set_COMPASS_PW                                                00089A GR
+ 18 _set_range_adj                                                 000869 GR
     _strlen                                                        ****** GX
   5 _voltage                                                       00002D GR
     _vsprintf                                                      ****** GX
@@ -2698,11 +2739,6 @@ Symbol Table
     ar2                                                         =  000002 
     ar3                                                         =  000003 
     ar4                                                         =  000004 
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 46.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
     ar5                                                         =  000005 
     ar6                                                         =  000006 
     ar7                                                         =  000007 
@@ -2722,6 +2758,11 @@ Symbol Table
     dpl                                                         =  000082 L
     ea                                                          =  0000AF L
     es                                                          =  0000AC L
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 47.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
     et0                                                         =  0000A9 L
     et1                                                         =  0000AB L
     et2                                                         =  0000AD L
@@ -2758,11 +2799,6 @@ Symbol Table
     p0.1                                                        =  000081 L
     p0.2                                                        =  000082 L
     p0.3                                                        =  000083 L
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 47.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
     p0.4                                                        =  000084 L
     p0.5                                                        =  000085 L
     p0.6                                                        =  000086 L
@@ -2782,6 +2818,11 @@ Symbol Table
     p2.2                                                        =  0000A2 L
     p2.3                                                        =  0000A3 L
     p2.4                                                        =  0000A4 L
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 48.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
     p2.5                                                        =  0000A5 L
     p2.6                                                        =  0000A6 L
     p2.7                                                        =  0000A7 L
@@ -2818,11 +2859,6 @@ Symbol Table
     ri                                                          =  000098 L
     rs0                                                         =  0000D3 L
     rs1                                                         =  0000D4 L
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 48.
-Hexadecimal [24-Bits]
-
-Symbol Table
-
     rxd                                                         =  0000B0 L
     sbuf                                                        =  000099 L
     scon                                                        =  000098 L
@@ -2842,6 +2878,11 @@ Symbol Table
     t2con.0                                                     =  0000C8 L
     t2con.1                                                     =  0000C9 L
     t2con.2                                                     =  0000CA L
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 49.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
     t2con.3                                                     =  0000CB L
     t2con.4                                                     =  0000CC L
     t2con.5                                                     =  0000CD L
@@ -2875,7 +2916,7 @@ Symbol Table
     txd                                                         =  0000B1 L
 
 
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 49.
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 50.
 Hexadecimal [24-Bits]
 
 Area Table
@@ -2902,10 +2943,10 @@ Area Table
   13 GSINIT3                                    size      0   flags   20
   14 GSINIT4                                    size      0   flags   20
   15 GSINIT5                                    size      0   flags   20
-  16 GSINIT                                     size     1C   flags   20
+  16 GSINIT                                     size     1E   flags   20
   17 GSFINAL                                    size      3   flags   20
-  18 CSEG                                       size    989   flags   20
-  19 CONST                                      size    10B   flags   20
+  18 CSEG                                       size    9CC   flags   20
+  19 CONST                                      size    133   flags   20
   1A XINIT                                      size      0   flags   20
   1B CABS                                       size      0   flags   28
 
