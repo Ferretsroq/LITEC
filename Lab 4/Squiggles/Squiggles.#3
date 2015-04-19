@@ -41,7 +41,7 @@ unsigned char read_AD_input(unsigned char n);
 //unsigned int compass_error;
 //unsigned int PWMe;
 unsigned int Counts, nCounts, nOverflows;
-unsigned int desired_heading = 0;
+unsigned int desired_heading = 1500;
 float compass_gain = 1;
 unsigned char h_count;
 unsigned char r_count;
@@ -92,40 +92,42 @@ void main(void)
 	//	printf("\r::::::HI:::::::\n");
 	//	printf("\rDelay: %u\n", delay);
 	//	printf("\r----------------------------------Range: %u\n", range);
-		if (new_range) // enough overflow for a new range
+		if ((new_range)) // enough overflow for a new range
 		{
 			range = read_ranger();
-			if(range < 15) PCA0CP2 = 0xFFFF - COMPASS_CENTER; //Stop if near an object
-			else PCA0CP2 = 0xFFFF - 3200; //Car has a constant speed once it starts
-			printf("\rRange: %u\n", range);
-			// read_range must start a new ping after a read
-			//printf("\rhere goes nothing\n");	
-			set_range_adj(); // if new data, set value to adjust steering PWM
-			//printf("\rmission successful\n");
-			new_range = 0;
-			r_count = 0;
+			if(range != 0xFFFF) printf("\rRange: %u\n", range);
+			if ((range != 0) && (range != 0xFFFF))
+			{
+				//while(range >= 100) range = read_ranger();
+				if((range < 15) && (range != 0)) PCA0CP2 = 0xFFFF - COMPASS_CENTER; //Stop if near an object
+				else PCA0CP2 = 0xFFFF - 3200;
+				// read_range must start a new ping after a read
+				//printf("\rhere goes nothing\n");	
+				//set_range_adj(); // if new data, set value to adjust steering PWM
+				//printf("\rmission successful\n");
+				new_range = 0;
+				r_count = 0;
+			}
+			else   // extraneous value read in; ignore and keep moving
+			{
+				//PCA0CP2 = 0xFFFF - 3200; //Car has a constant speed once it starts
+				range_adj = 0;
+			}
 		}
 		if(delay == 10) 	//delay so that we don't get spammed with print messages
 		{
 			AD_Result = read_AD_input(5); //Read analog input on pin 1.5
 			voltage = ((14.4/255)*AD_Result); //Convert back to input voltage
-			printf("\rBattery Voltage is %u\n", voltage);
-			if(new_heading)
-			{
-				heading = read_compass();
-				printf("\rThe current direction is %u\n", heading/10);
-				//printf("\rayyy lmao\n");
-				set_COMPASS_PW(); // Adjust pulsewidth based on error function
-				//printf("\rayyyyyyyyyyyyyyyyyyyy lmaooooooooo\n");
-				PCA0CP0 = 0xFFFF - COMPASS_PW; // Change pulse width
-				//printf("\rNAILED IT\n");
-				new_heading = 0;
-				//printf("\rSUCH PRO\n");
-			}		
-
+			//printf("\rBattery Voltage is %u\n", voltage);
 		}
-//		printf("\rGood thing this no longer nonexistant code works okay\n");
-		
+		if((new_heading))
+			{
+				if(delay >= 10) heading = read_compass();
+				//printf("\rThe current direction is %u\n", heading/10);
+				set_COMPASS_PW(); // Adjust pulsewidth based on error function
+				PCA0CP0 = 0xFFFF - COMPASS_PW; // Change pulse width
+				new_heading = 0;
+			}	
 		/*
 		if(new_heading && (delay == 5))
 		{
@@ -202,7 +204,7 @@ void PCA_ISR(void) __interrupt 9
     if (CF)
     {
         CF = 0;                     // clear the interrupt flag
-        nOverflows++;               // continuous overflow counter
+        //nOverflows++;               // continuous overflow counter
         nCounts++;
         PCA0 = PCA_START;
         if (nCounts > 50)
@@ -219,7 +221,7 @@ void PCA_ISR(void) __interrupt 9
 		delay++;
 		if(delay == 11) delay=0;
 		r_count++;
-		if (r_count>=10)
+		if (r_count>=4)
 		{
 			new_range = 1;
 			r_count = 0;
