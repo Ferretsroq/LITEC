@@ -36,6 +36,7 @@ void set_COMPASS_PW(void);
 void set_range_adj(void);
 signed int compass_error(unsigned int heading);
 unsigned char read_AD_input(unsigned char n);
+int Update_Value(int Constant, unsigned char incr, int maxval, int minval);
 
 // Global variables
 unsigned int Counts, nCounts, nOverflows;
@@ -130,6 +131,9 @@ void main(void)
 		{
 			PCA0CP0 = 0xFFFF - COMPASS_CENTER;
 			PCA0CP2 = 0xFFFF - COMPASS_CENTER;
+			printf("\rWould you like to edit the compass_gain?\n");
+			printf("\r'c' - no, 'i' - increment by 1, 'd' - decrement by 1, 'u' - update and return\n");
+			compass_gain = (Update_Value(compass_gain, 10, 100, 2)/10);		// gain is between 0.2 and 10
 		}
 }
 }
@@ -290,6 +294,31 @@ int read_ranger(void)
 	Data[0] = 0x51 ; // write 0x51 to reg 0 of the ranger:
 	i2c_write_data(addr, 0, Data, 1) ; // write one byte of data to reg 0 at addr
 	return st_range;
+}
+
+//-----------------------------------------------------------------------------
+int Update_Value(int Constant, unsigned char incr, int maxval, int minval)
+{
+	int deflt;
+	char input;
+	// 'c' - default, 'i' - increment, 'd' - decrement, 'u' - update and return
+	deflt = (Constant*10);
+	while(1)
+	{
+		input = getchar();
+		if (input == 'c') Constant = deflt;
+		if (input == 'i')
+		{
+			Constant += incr;
+			if (Constant > maxval) Constant = maxval;
+		}
+		if (input == 'd')
+		{
+			Constant -= incr;
+			if (Constant < minval) Constant = minval;
+		}
+		if (input == 'u') return Constant;
+	}
 }
 
 //-----------------------------------------------------------------------------
