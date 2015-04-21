@@ -340,7 +340,7 @@ void set_COMPASS_PW(void)
 		range_adj = (int)(ranger_gain * (MAX_RANGE - range)); //weight adjustment by distance
 	} 
 	// actual calculation for the pulse width
-	COMPASS_PW = COMPASS_CENTER + range_adj + (compass_gain*Error);
+	COMPASS_PW = COMPASS_CENTER - range_adj + (compass_gain*Error);
 	//Stay within limits of the servo
 	if(COMPASS_PW < COMPASS_MIN)
 	{
