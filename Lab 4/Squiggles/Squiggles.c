@@ -94,7 +94,7 @@ void main(void)
 				if ((range != 0) && (range != 0xFFFF)) //Ignores dummy values from the ranger
 				{
 					if((range < 15) && (range != 0)) PCA0CP2 = 0xFFFF - COMPASS_CENTER; //Stop if near an object
-					else PCA0CP2 = 0xFFFF - 3200; //Car moves at a constant speed otherwise
+					else PCA0CP2 = 0xFFFF - 2900; //Car moves at a constant speed otherwise
 					// read_range must start a new ping after a read	
 					new_range = 0;	//Clear and wait for next signal
 				}
@@ -132,9 +132,8 @@ void main(void)
 			PCA0CP0 = 0xFFFF - COMPASS_CENTER;
 			PCA0CP2 = 0xFFFF - COMPASS_CENTER;
 			printf("\rWould you like to edit the compass_gain?\n");
-			printf("\r'c' - no, 'i' - increment by 1, 'd' - decrement by 1, 'u' - update and return");
+			printf("\r'c' - no, 'i' - increment by 1, 'd' - decrement by 1, 'u' - update and return\n");
 			compass_gain = (Update_Value(compass_gain, 10, 100, 2)/10);		// gain is between 0.2 and 10
-			printf("\r-----------------Current gain: %d\n", compass_gain);
 		}
 }
 }
@@ -307,11 +306,7 @@ int Update_Value(int Constant, unsigned char incr, int maxval, int minval)
 	while(1)
 	{
 		input = getchar();
-		if (input == 'c')
-		{
-			Constant = deflt;
-			return Constant;
-		}
+		if (input == 'c') Constant = deflt;
 		if (input == 'i')
 		{
 			Constant += incr;
@@ -345,7 +340,7 @@ void set_COMPASS_PW(void)
 		range_adj = (int)(ranger_gain * (MAX_RANGE - range)); //weight adjustment by distance
 	} 
 	// actual calculation for the pulse width
-	COMPASS_PW = COMPASS_CENTER - range_adj - (compass_gain*Error);
+	COMPASS_PW = COMPASS_CENTER + range_adj + (compass_gain*Error);
 	//Stay within limits of the servo
 	if(COMPASS_PW < COMPASS_MIN)
 	{
