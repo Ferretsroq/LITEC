@@ -1,4 +1,4 @@
-/*  Names: Kathryn DiPippo, Rebecca Halzack, Seth Rutman
+\/*  Names: Kathryn DiPippo, Rebecca Halzack, Seth Rutman
 	Section: 4B
 	Date: 4/7/2015
 	File name: Lab 4
@@ -29,7 +29,6 @@ void Interrupt_Init(void);
 void PCA_ISR(void) __interrupt 9;
 void Pick_Heading(void);
 void Pick_Compass_Gain(void);
-char Pick_Ranger_Gain(void);
 int read_compass(void);
 int read_ranger(void);
 void set_COMPASS_PW(void);
@@ -39,26 +38,28 @@ unsigned char read_AD_input(unsigned char n);
 int Update_Value(int Constant, unsigned char incr, int maxval, int minval);
 
 // Global variables
-unsigned int Counts, nCounts, nOverflows;
+unsigned int Counts, nCounts;
 unsigned int desired_heading;
 float compass_gain = 1;
-unsigned char h_count;
-unsigned char r_count;
-unsigned char delay;
-unsigned char new_heading;
-unsigned char new_range;
-unsigned int heading;
-unsigned int range;
-unsigned int COMPASS_PW;
+unsigned char h_count = 0;
+unsigned char r_count = 0;
+unsigned char delay = 0;
+unsigned char new_heading = 0;
+unsigned char new_range = 0;
+unsigned int heading = 0;
+unsigned int range = 0;
+unsigned int COMPASS_PW = 2760;
 __sbit __at 0xB7 COMPASS_SWITCH;
 __sbit __at 0xB6 RANGER_SWITCH;
 unsigned int range_adj = 0;
 unsigned int compass_adj = 0;
-unsigned char ranger_gain = 40;		// between 30 and 150
-unsigned char AD_Result;
-unsigned char voltage;
+unsigned char ranger_gain = 30;		// between 30 and 150
+unsigned char AD_Result = 0;
+unsigned char voltage = 0;
 unsigned char Data[2]; // Data is an array with a length of 2
-unsigned char print_delay;
+unsigned char print_delay = 0;
+signed int Error = 0;
+
 //=============================================================================
 //-----------------------------------------------------------------------------
 // Main Function
@@ -80,7 +81,7 @@ void main(void)
     //lcd_clear();
 	printf("\n\rPlease input data on the LCD.\n");
 	Pick_Heading();
-	//Pick_Compass_Gain();
+	Pick_Compass_Gain();
 	printf("\n\r------------DATA COLLECTION------------\n");
 	while (1)
     {
@@ -95,6 +96,8 @@ void main(void)
 				{
 					if(range < 15) PCA0CP2 = 0xFFFF - COMPASS_CENTER; //Stop if near an object
 					else PCA0CP2 = 0xFFFF - 3000; //Car moves at a constant speed otherwise
+					//range_offset = 55 - range;
+
 					// read_range must start a new ping after a read	
 					//printf("\r%u\n", range);
 				}
@@ -104,8 +107,8 @@ void main(void)
 				}
 			}
 			
-		//	AD_Result = read_AD_input(5); //Read analog input on pin 1.5
-		//	voltage = ((14.4/255)*AD_Result); //Convert back to input voltage
+			AD_Result = read_AD_input(5); //Read analog input on pin 1.5
+			voltage = ((14.4/255)*AD_Result); //Convert back to input voltage
 			
 			if((new_heading))	// enough overflow for a new heading
 			{
@@ -117,8 +120,12 @@ void main(void)
 			if(print_delay == 20)
 			{
 				printf("\rRange: %u\n", range);
+				//printf("\rRange Adjust: %u\n", range_adj);
 				printf("\rHeading: %u\n", heading/10);
-				printf("\rVoltage is %u\n", voltage);
+				printf("\rVoltage: %u\n", voltage);
+				//printf("\rOverflows: %u\n", nCounts);
+				//printf("\rHeading Error: %u\n", Error);
+				printf("\rSteering Pulsewidth: %u\n", COMPASS_PW);
 				print_delay = 0;
 				//lcd_print("\rRange: %u\n", range);
 				//lcd_print("\rHeading: %u\n", heading/10);
@@ -131,9 +138,10 @@ void main(void)
 		{
 			PCA0CP0 = 0xFFFF - 2760;
 			PCA0CP2 = 0xFFFF - 2760;
-			printf("\rWould you like to edit the compass_gain?\n");
-			printf("\r'c' - no, 'i' - increment by 1, 'd' - decrement by 1, 'u' - update and return\n");
-			compass_gain = (Update_Value(compass_gain, 10, 100, 2)/10);		// gain is between 0.2 and 10
+		//	printf("\rWould you like to edit the compass_gain?\n");
+			//printf("\r'c' - no, 'i' - increment by 1, 'd' - decrement by 1, 'u' - update and return\n");
+			//compass_gain = (Update_Value(compass_gain, 10, 100, 2)/10);		// gain is between 0.2 and 10
+			Pick_Compass_Gain();
 		}
 }
 }
@@ -190,7 +198,7 @@ void PCA_ISR(void) __interrupt 9
         PCA0 = PCA_START;
         if (nCounts > 50)
         {
-            nCounts = 0;
+            //nCounts = 0;
             Counts++;               // seconds counter
         }
 		h_count++;					// delay 
@@ -263,23 +271,38 @@ void Pick_Heading(void)
 		if(input == 'u') desired_heading += 50;
 		if(input == 'd') desired_heading -= 50;
 		if(input == 'f') return;
-		printf("\rDesired heading: %u\n", desired_heading/10);
+		if(desired_heading >= 3600) desired_heading = 3600;
+		printf("\rDesired heading: %u\n", desired_heading);
 	}
 
 }
 
-/*//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
 //Selecting the compass gain function
 void Pick_Compass_Gain(void)
 {
-	int user_gain;
+	/*int user_gain;
 	lcd_clear();
 	lcd_print("\rEnter desired gain for the compass.\n");
 	user_gain = kpd_input(1);	// Obtain the gain from the user
 	lcd_clear();
 	compass_gain = (float)((user_gain)/1000); //Decimal value
-	printf("\rPick_Compass_Gain verified\n");
-}*/
+	printf("\rPick_Compass_Gain verified\n");*/
+	char input;
+	printf("\rPlease select a desired compass gain.\n");
+	printf("\r'u' will increment by 0.1. 'd' will decrement by 0.1.\n");
+	printf("\r'f' when finished\n");
+	while(1)
+	{
+		input = getchar();
+		if(input == 'u') compass_gain += 0.1;
+		if(input == 'd') compass_gain -= 0.1;
+		if(input == 'f') return;
+		if(compass_gain >= 1.5) compass_gain = 1.5;
+		if(compass_gain <= 0) compass_gain = 0;
+		printf_fast_f("\rDesired compass gain: %2.1f\n", compass_gain);
+	}
+}
 
 //-------------------------------------------------------------------------------
 // Compass Reading Function
@@ -337,7 +360,7 @@ int Update_Value(int Constant, unsigned char incr, int maxval, int minval)
 void set_COMPASS_PW(void)
 {
 	// compass error equations (stored as Error)
-	signed int Error = 0;
+
 	Error = (desired_heading) - heading;	//Calculate the error
 	if(Error < -1800) Error = Error + 3600; //Adjust error so that we turn efficiently
 	if(Error > 1800) Error = Error - 3600;
@@ -345,21 +368,24 @@ void set_COMPASS_PW(void)
 	if (range > MAX_RANGE) 
 	{
 		 range_adj = 0; //no obstacle in range, no change
+		 //range_offset = 0;
 	} 
 	else 
 	{ 
-		range_adj = (int)(ranger_gain * (MAX_RANGE - range)); //weight adjustment by distance
+		range_adj = (int)(ranger_gain * (55 - range)); //weight adjustment by distance
+		//range_offset = 55 - range;
 	}
 	// actual calculation for the pulse width
 	COMPASS_PW = 2760 + (int)(compass_gain*Error) - range_adj;
 	//Stay within limits of the servo
-	if(COMPASS_PW < 2030)
+	//Depending on the car, these numbers may need to be determined using Lab 3-1 - Steering
+	if(COMPASS_PW < 2300)
 	{
-		COMPASS_PW = 2030;
+		COMPASS_PW = 2300;
 	}
-	if(COMPASS_PW > 3500)
+	if(COMPASS_PW > 3400)
 	{
-		COMPASS_PW = 3500;
+		COMPASS_PW = 3400;
 	}
 	PCA0CP0 = 0xFFFF - COMPASS_PW; // Change pulse width
 }
