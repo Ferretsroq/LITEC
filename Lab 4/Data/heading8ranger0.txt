@@ -1,0 +1,554 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Start
+
+Please input data on the LCD.
+Please enter a desired heading.
+'u' will increment by 5 degrees. 'd' will decrement by 5 degrees.
+'f' when finished.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Start
+
+Please input data on the LCD.
+Please enter a desired heading.
+'u' will increment by 5 degrees. 'd' will decrement by 5 degrees.
+'f' when finished.
+
+Start
+
+Please input data on the LCD.
+Please enter a desired heading.
+'u' will increment by 5 degrees. 'd' will decrement by 5 degrees.
+'f' when finished.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Start
+
+Please input data on the LCD.
+Please enter a desired heading.
+'u' will increment by 5 degrees. 'd' will decrement by 5 degrees.
+'f' when finished.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Start
+
+Please input data on the LCD.
+Please enter a desired heading.
+'u' will increment by 5 degrees. 'd' will decrement by 5 degrees.
+'f' when finished.
+Desired heading: 3600
+Desired heading: 3550d
+Desired heading: 3500d
+Desired heading: 3450d
+Desired heading: 3400d
+Desired heading: 3350d
+Desired heading: 3300d
+Desired heading: 3250d
+Desired heading: 3200d
+Desired heading: 3150d
+Please select a desired compass gain.
+'u' will increment by 0.1. 'd' will decrement by 0.1.
+'f' when finished
+Desired compass gain: 1.1
+Desired compass gain: 1.2u
+Desired compass gain: 1.3u
+Desired compass gain: 1.4u
+Desired compass gain: 1.5u
+Desired compass gain: 1.6u
+Desired compass gain: 1.7u
+Desired compass gain: 1.8u
+Desired compass gain: 1.9u
+Desired compass gain: 2.0u
+Desired compass gain: 2.1u
+Desired compass gain: 2.2u
+Desired compass gain: 2.3u
+Desired compass gain: 2.4u
+Desired compass gain: 2.5u
+Desired compass gain: 2.6u
+Desired compass gain: 2.7u
+Desired compass gain: 2.8u
+Desired compass gain: 2.9u
+Desired compass gain: 3.0u
+Desired compass gain: 3.1u
+Desired compass gain: 3.2u
+Desired compass gain: 3.3u
+Desired compass gain: 3.4u
+Desired compass gain: 3.5u
+Desired compass gain: 3.6u
+Desired compass gain: 3.7u
+Desired compass gain: 3.8u
+Desired compass gain: 3.9u
+Desired compass gain: 4.0u
+Desired compass gain: 4.1u
+Desired compass gain: 4.2u
+Desired compass gain: 4.3u
+Desired compass gain: 4.4u
+Desired compass gain: 4.5u
+Desired compass gain: 4.6u
+Desired compass gain: 4.7u
+Desired compass gain: 4.8u
+Desired compass gain: 4.9u
+Desired compass gain: 5.0u
+Desired compass gain: 5.1u
+Desired compass gain: 5.2u
+Desired compass gain: 5.3u
+Desired compass gain: 5.4u
+Desired compass gain: 5.5u
+Desired compass gain: 5.6u
+Desired compass gain: 5.7u
+Desired compass gain: 5.8u
+Desired compass gain: 5.9u
+Desired compass gain: 6.0u
+Desired compass gain: 6.1u
+Desired compass gain: 6.2u
+Desired compass gain: 6.3u
+Desired compass gain: 6.4u
+Desired compass gain: 6.5u
+Desired compass gain: 6.6u
+Desired compass gain: 6.7u
+Desired compass gain: 6.8u
+Desired compass gain: 6.9u
+Desired compass gain: 7.0u
+Desired compass gain: 7.1u
+Desired compass gain: 7.2u
+Desired compass gain: 7.3u
+Desired compass gain: 7.4u
+Desired compass gain: 7.5u
+Desired compass gain: 7.6u
+Desired compass gain: 7.7u
+Desired compass gain: 7.8u
+Desired compass gain: 7.9u
+Desired compass gain: 8.0u
+                         f
+------------DATA COLLECTION------------
+Heading: 316
+Overflows: 1044
+Heading Error: -16
+Steering Pulsewidth: 2633
+Heading: 307
+Overflows: 1065
+Heading Error: 73
+Steering Pulsewidth: 3343
+Heading: 308
+Overflows: 1085
+Heading Error: 64
+Steering Pulsewidth: 3271
+Heading: 314
+Overflows: 1105
+Heading Error: 1
+Steering Pulsewidth: 2767
+Heading: 318
+Overflows: 1125
+Heading Error: -31
+Steering Pulsewidth: 2513
+Heading: 316
+Overflows: 1146
+Heading Error: -19
+Steering Pulsewidth: 2609
+Heading: 317
+Overflows: 1167
+Heading Error: -28
+Steering Pulsewidth: 2537
+Heading: 316
+Overflows: 1188
+Heading Error: -12
+Steering Pulsewidth: 2665
+Heading: 317
+Overflows: 1209
+Heading Error: -29
+Steering Pulsewidth: 2529
+Heading: 317
+Overflows: 1230
+Heading Error: -28
+Steering Pulsewidth: 2537
+Heading: 317
+Overflows: 1251
+Heading Error: -23
+Steering Pulsewidth: 2577
+Heading: 317
+Overflows: 1272
+Heading Error: -23
+Steering Pulsewidth: 2577
+Heading: 317
+Overflows: 1293
+Heading Error: -23
+Steering Pulsewidth: 2577
+Heading: 317
+Overflows: 1314
+Heading Error: -23
+Steering Pulsewidth: 2577
+Heading: 317
+Overflows: 1335
+Heading Error: -23
+Steering Pulsewidth: 2577
+Heading: 317
+Overflows: 1356
+Heading Error: -23
+Steering Pulsewidth: 2577
+Heading: 317
+Overflows: 1377
+Heading Error: -23
+Steering Pulsewidth: 2577
+Heading: 317
+Overflows: 1398
+Heading Error: -23
+Steering Pulsewidth: 2577
+Heading: 317
+Overflows: 1419
+Heading Error: -23
+Steering Pulsewidth: 2577
