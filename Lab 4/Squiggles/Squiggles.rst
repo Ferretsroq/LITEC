@@ -1,7 +1,7 @@
                                       1 ;--------------------------------------------------------
                                       2 ; File Created by SDCC : free open source ANSI-C Compiler
                                       3 ; Version 3.4.0 #8981 (Apr  5 2014) (MINGW32)
-                                      4 ; This file was generated Thu Apr 23 19:13:58 2015
+                                      4 ; This file was generated Thu Apr 23 19:16:41 2015
                                       5 ;--------------------------------------------------------
                                       6 	.module Squiggles
                                       7 	.optsdcc -mmcs51 --model-small
@@ -1202,8 +1202,8 @@
       0000D1 F5 4A            [12] 1202 	mov	_compass_adj,a
       0000D3 F5 4B            [12] 1203 	mov	(_compass_adj + 1),a
                            00002B  1204 	C$Squiggles.c$56$1$163 ==.
-                                   1205 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:56: unsigned char ranger_gain = 30;		// between 30 and 150
-      0000D5 75 4C 1E         [24] 1206 	mov	_ranger_gain,#0x1E
+                                   1205 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:56: unsigned char ranger_gain = 60;		// between 30 and 150
+      0000D5 75 4C 3C         [24] 1206 	mov	_ranger_gain,#0x3C
                            00002E  1207 	C$Squiggles.c$57$1$163 ==.
                                    1208 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 4\Squiggles\Squiggles.c:57: unsigned char AD_Result = 0;
                                    1209 ;	1-genFromRTrack replaced	mov	_AD_Result,#0x00
