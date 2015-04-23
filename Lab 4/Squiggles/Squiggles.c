@@ -53,7 +53,7 @@ __sbit __at 0xB7 COMPASS_SWITCH;
 __sbit __at 0xB6 RANGER_SWITCH;
 unsigned int range_adj = 0;
 unsigned int compass_adj = 0;
-unsigned char ranger_gain = 0;		// between 30 and 150
+unsigned char ranger_gain = 30;		// between 30 and 150
 unsigned char AD_Result = 0;
 unsigned char voltage = 0;
 unsigned char Data[2]; // Data is an array with a length of 2

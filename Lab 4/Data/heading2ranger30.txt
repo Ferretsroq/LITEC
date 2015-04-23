@@ -1,0 +1,215 @@
+
+Start
+
+Please input data on the LCD.
+Please enter a desired heading.
+'u' will increment by 5 degrees. 'd' will decrement by 5 degrees.
+'f' when finished.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Start
+
+Please input data on the LCD.
+Please enter a desired heading.
+'u' will increment by 5 degrees. 'd' will decrement by 5 degrees.
+'f' when finished.
+Desired heading: 3600
+Desired heading: 3550d
+Desired heading: 3500d
+Desired heading: 3450d
+Desired heading: 3400d
+Desired heading: 3350d
+Desired heading: 3300d
+Desired heading: 3250d
+Desired heading: 3200d
+Desired heading: 3150d
+Please select a desired compass gain.
+'u' will increment by 0.1. 'd' will decrement by 0.1.
+'f' when finished
+Desired compass gain: 1.1
+Desired compass gain: 1.2u
+Desired compass gain: 1.3u
+Desired compass gain: 1.4u
+Desired compass gain: 1.5u
+Desired compass gain: 1.6u
+Desired compass gain: 1.7u
+Desired compass gain: 1.8u
+Desired compass gain: 1.9u
+Desired compass gain: 2.0u
+                         f
+------------DATA COLLECTION------------
+Heading: 265
+Overflows: 532
+Heading Error: 495
+Steering Pulsewidth: 2100
+Heading: 267
+Overflows: 552
+Heading Error: 473
+Steering Pulsewidth: 3400
+Heading: 278
+Overflows: 573
+Heading Error: 362
+Steering Pulsewidth: 3400
+Heading: 295
+Overflows: 593
+Heading Error: 196
+Steering Pulsewidth: 3152
+Heading: 302
+Overflows: 613
+Heading Error: 126
+Steering Pulsewidth: 3012
+Heading: 301
+Overflows: 633
+Heading Error: 140
+Steering Pulsewidth: 3040
+Heading: 298
+Overflows: 653
+Heading Error: 165
+Steering Pulsewidth: 3090
+Heading: 300
+Overflows: 673
+Heading Error: 146
+Steering Pulsewidth: 3052
+Heading: 303
+Overflows: 693
+Heading Error: 117
+Steering Pulsewidth: 2994
+Heading: 308
+Overflows: 713
+Heading Error: 64
+Steering Pulsewidth: 2888
+Heading: 315
+Overflows: 733
+Heading Error: -7
+Steering Pulsewidth: 2746
+Heading: 323
+Overflows: 753
+Heading Error: -81
+Steering Pulsewidth: 2598
+Heading: 323
+Overflows: 773
+Heading Error: -89
+Steering Pulsewidth: 2582
+Heading: 322
+Overflows: 793
+Heading Error: -71
+Steering Pulsewidth: 2288
+Heading: 315
+Overflows: 813
+Heading Error: -8
+Steering Pulsewidth: 2114
+Heading: 308
+Overflows: 833
+Heading Error: 69
+Steering Pulsewidth: 2898
+Heading: 306
+Overflows: 853
+Heading Error: 85
+Steering Pulsewidth: 2780
+Heading: 310
+Overflows: 873
+Heading Error: 45
+Steering Pulsewidth: 2280
+Heading: 310
+Overflows: 893
+Heading Error: 50
+Steering Pulsewidth: 2200
+Heading: 305
+Overflows: 913
+Heading Error: 100
+Steering Pulsewidth: 2330
+Heading: 302
+Overflows: 933
+Heading Error: 127
+Steering Pulsewidth: 2234
+Heading: 295
+Overflows: 953
+Heading Error: 192
+Steering Pulsewidth: 2514
+Heading: 289
+Overflows: 973
+Heading Error: 255
+Steering Pulsewidth: 3180
+Heading: 283
+Overflows: 993
+Heading Error: 313
+Steering Pulsewidth: 3326
+Heading: 283
+Overflows: 1013
+Heading Error: 312
+Steering Pulsewidth: 3144
+Heading: 283
+Overflows: 1034
+Heading Error: 315
+Steering Pulsewidth: 3330
+Heading: 283
+Overflows: 1055
+Heading Error: 314
+Steering Pulsewidth: 3388
+Heading: 283
+Overflows: 1076
+Heading Error: 313
+Steering Pulsewidth: 3116
+Heading: 283
+Overflows: 1097
+Heading Error: 316
+Steering Pulsewidth: 3392
+Heading: 283
+Overflows: 1118
+Heading Error: 311
+Steering Pulsewidth: 3112
+Heading: 283
+Overflows: 1139
+Heading Error: 313
+Steering Pulsewidth: 3386
+Heading: 283
+Overflows: 1160
+Heading Error: 314
+Steering Pulsewidth: 3118
