@@ -53,7 +53,7 @@ __sbit __at 0xB7 COMPASS_SWITCH;
 __sbit __at 0xB6 RANGER_SWITCH;
 unsigned int range_adj = 0;
 unsigned int compass_adj = 0;
-unsigned char ranger_gain = 30;		// between 30 and 150
+unsigned char ranger_gain = 0;		// between 30 and 150
 unsigned char AD_Result = 0;
 unsigned char voltage = 0;
 unsigned char Data[2]; // Data is an array with a length of 2
@@ -94,8 +94,8 @@ void main(void)
 				//printf("\rRange: %u\n", range);
 				if (range != 0xFFFF) //Ignores dummy values from the ranger
 				{
-					if(range < 15) PCA0CP2 = 0xFFFF - COMPASS_CENTER; //Stop if near an object
-					else PCA0CP2 = 0xFFFF - 3000; //Car moves at a constant speed otherwise
+					if(range < 18) PCA0CP2 = 0xFFFF - COMPASS_CENTER; //Stop if near an object
+					else PCA0CP2 = 0xFFFF - 3300; //Car moves at a constant speed otherwise
 					//range_offset = 55 - range;
 
 					// read_range must start a new ping after a read	
@@ -106,10 +106,8 @@ void main(void)
 					range_adj = 0;
 				}
 			}
-			
 			AD_Result = read_AD_input(5); //Read analog input on pin 1.5
 			voltage = ((14.4/255)*AD_Result); //Convert back to input voltage
-			
 			if((new_heading))	// enough overflow for a new heading
 			{
 				new_heading = 0;
@@ -119,12 +117,12 @@ void main(void)
 			}
 			if(print_delay == 20)
 			{
-				printf("\rRange: %u\n", range);
+			//	printf("\rRange: %u\n", range);
 				//printf("\rRange Adjust: %u\n", range_adj);
 				printf("\rHeading: %u\n", heading/10);
-				printf("\rVoltage: %u\n", voltage);
-				//printf("\rOverflows: %u\n", nCounts);
-				//printf("\rHeading Error: %u\n", Error);
+			//	printf("\rVoltage: %u\n", voltage);
+				printf("\rOverflows: %u\n", nCounts);
+				printf("\rHeading Error: %d\n", Error);
 				printf("\rSteering Pulsewidth: %u\n", COMPASS_PW);
 				print_delay = 0;
 				//lcd_print("\rRange: %u\n", range);
@@ -202,7 +200,7 @@ void PCA_ISR(void) __interrupt 9
             Counts++;               // seconds counter
         }
 		h_count++;					// delay 
-		if (h_count>=2)
+		if (h_count>=8)
 		{
 			new_heading=1;
 			h_count = 0;
@@ -210,7 +208,7 @@ void PCA_ISR(void) __interrupt 9
 		print_delay++;
 		//if(print_delay == 21) print_delay = 0;
 		r_count++;
-		if (r_count>=4)
+		if (r_count>=12)
 		{
 			new_range = 1;
 			r_count = 0;
@@ -298,7 +296,7 @@ void Pick_Compass_Gain(void)
 		if(input == 'u') compass_gain += 0.1;
 		if(input == 'd') compass_gain -= 0.1;
 		if(input == 'f') return;
-		if(compass_gain >= 1.5) compass_gain = 1.5;
+		if(compass_gain >= 11.5) compass_gain = 11.5;
 		if(compass_gain <= 0) compass_gain = 0;
 		printf_fast_f("\rDesired compass gain: %2.1f\n", compass_gain);
 	}
@@ -379,9 +377,9 @@ void set_COMPASS_PW(void)
 	COMPASS_PW = 2760 + (int)(compass_gain*Error) - range_adj;
 	//Stay within limits of the servo
 	//Depending on the car, these numbers may need to be determined using Lab 3-1 - Steering
-	if(COMPASS_PW < 2300)
+	if(COMPASS_PW < 2100)
 	{
-		COMPASS_PW = 2300;
+		COMPASS_PW = 2100;
 	}
 	if(COMPASS_PW > 3400)
 	{
