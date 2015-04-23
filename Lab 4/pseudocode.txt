@@ -1,0 +1,136 @@
+compiler directives
+	...
+declare global variables
+unsigned int Counts, nCounts;
+unsigned int desired_heading;
+float compass_gain = 1;
+unsigned char h_count = 0;
+unsigned char r_count = 0;
+unsigned char delay = 0;
+unsigned char new_heading = 0;
+unsigned char new_range = 0;
+unsigned int heading = 0;
+unsigned int range = 0;
+unsigned int COMPASS_PW = 2760;
+Initialize the switch on 3.6 and 3.7
+unsigned int range_adj = 0;
+unsigned int compass_adj = 0;
+unsigned char ranger_gain = 60;		// between 30 and 150
+unsigned char AD_Result = 0;
+unsigned char voltage = 0;
+unsigned char Data[2]; // Data is an array with a length of 2
+unsigned char print_delay = 0;
+signed int Error = 0;
+
+function prototypes
+void Port_Init(void);   // Initialize ports for input and output
+void PCA_Init(void);
+void SMB0_Init(void);
+void ADC_Init(void);
+void Interrupt_Init(void);
+void PCA_ISR(void) __interrupt 9;
+void Pick_Heading(void);
+void Pick_Compass_Gain(void);
+int read_compass(void);
+int read_ranger(void);
+void set_COMPASS_PW(void);
+void set_range_adj(void);
+signed int compass_error(unsigned int heading);
+unsigned char read_AD_input(unsigned char n);
+
+//------------------------------------------------------------------------------
+main function
+	initialize system
+	initialize ports
+	initialize PCA board
+	initialize the SMBus
+	initialize interrupts
+	Set initial pulsewidths to neutral positions
+	Obtain desired heading
+	Obtain compass gain
+	while true
+		while switches are off
+			get range
+				if range is large, move
+				if range is small, stop moving
+			Perform ADC on battery voltage
+			get heading
+			set steering pulsewidth
+			print information every 400 ms
+		if switches are on
+			prompt to adjust gain
+			stop moving
+			reset pulsewidths
+	end while
+end main
+
+//------------------------------------------------------------------------------
+//functions
+
+Port_Init
+	set output pin for CEX0 and CEX2 in push-pull mode
+	set input pin for 3.6,7 to open-drain
+	set input pin for 3.6,7 to high impedence
+	set XBR0 to enable CEX0, 1, 2, 3, UART0EN, SPI0EN, SMB0EN
+	set ADC pins
+	
+Interrupt_Init
+	Enable global interrupts
+	Enable PCA interrupts
+
+PCA_Init
+	SYSCLK/12, enable CF interrupts, suspend when idle
+	Set CPA0CPM0 and CPA0CPM2 to 16-bit comparator mode
+	Enable PCA
+
+SMB0_Init
+	Set SCL to 100 kHz
+	Enable SMBUS0
+
+PCA_ISR __interrupt 9
+	if(CF)
+		increment r_count, h_count
+		set new_range, new_heading when appropriate
+		increment overflows and seconds
+
+ADC_Init
+	set to use Vref
+	enable ADC1
+	set AD gain to 1
+
+AD_Result
+	set appropriate pin for ADC
+	clear conversion complete flag
+	initiate A/D conversion
+	wait for conversion complete
+	return
+	
+Pick_Heading
+	increment desired heading
+
+Pick_Compass_Gain
+	increment desired compass gain
+
+read_compass
+	set addr as the address of the sensor, 0xC0 for the compass
+	initialize Data as an array with a length of 2
+	initialize read_heading as the heading returned in degrees between 0 and 3599
+	read two byte, starting at reg 2
+	combine the two values and store in read_heading
+	return read_heading
+	
+read_ranger
+	set the address of the sensor, 0xC0 for the compass
+	initialize Data as an array with a length of 2
+	set the range to be equal to 0 as default
+	read two byte, starting at reg 2, using i2c header file
+	set range to be the combination of the two values
+	write 0x51 to reg 0 of the ranger:
+	write one byte of data to reg 0 at addr
+	return range
+	
+set_COMPASS_PW
+	determine heading error
+	determine range_adj based on range
+	calculate new steering pulsewidth
+	set servo pulsewidth
