@@ -119,7 +119,7 @@ void main(void)
 			{
 			//	printf("\rRange: %u\n", range);
 				//printf("\rRange Adjust: %u\n", range_adj);
-		//		printf("\rHeading: %u\n", heading/10);
+				printf("\rHeading: %u\n", heading/10);
 			//	printf("\rVoltage: %u\n", voltage);
 				printf("\rOverflows: %u\n", nCounts);
 				printf("\rHeading Error: %d\n", Error);
