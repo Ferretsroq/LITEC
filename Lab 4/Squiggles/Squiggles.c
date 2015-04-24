@@ -53,7 +53,7 @@ __sbit __at 0xB7 COMPASS_SWITCH;
 __sbit __at 0xB6 RANGER_SWITCH;
 unsigned int range_adj = 0;
 unsigned int compass_adj = 0;
-unsigned char ranger_gain = 60;		// between 30 and 150
+unsigned char ranger_gain = 30;		// between 30 and 150
 unsigned char AD_Result = 0;
 unsigned char voltage = 0;
 unsigned char Data[2]; // Data is an array with a length of 2
@@ -102,7 +102,7 @@ void main(void)
 				}
 			}
 			AD_Result = read_AD_input(5); //Read analog input on pin 1.5
-			voltage = ((14.4/255)*AD_Result); //Convert back to input voltage
+			voltage = ((12.8/255)*(AD_Result)); //Convert back to input voltage
 			if((new_heading))	// enough overflow for a new heading
 			{
 				new_heading = 0;
@@ -115,7 +115,7 @@ void main(void)
 				printf("\rRange: %u\n", range);
 				//printf("\rRange Adjust: %u\n", range_adj);
 				printf("\rHeading: %u\n", heading/10);
-				printf("\rVoltage: %u\n", voltage);
+			//	printf("\rVoltage: %u\n", voltage);
 				printf("\rOverflows: %u\n", nCounts);
 				printf("\rHeading Error: %d\n", Error);
 				printf("\rSteering Pulsewidth: %u\n", COMPASS_PW);
