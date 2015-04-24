@@ -115,7 +115,7 @@ void main(void)
 				printf("\rRange: %u\n", range);
 				//printf("\rRange Adjust: %u\n", range_adj);
 				printf("\rHeading: %u\n", heading/10);
-			//	printf("\rVoltage: %u\n", voltage);
+				printf("\rVoltage: %u\n", voltage);
 				printf("\rOverflows: %u\n", nCounts);
 				printf("\rHeading Error: %d\n", Error);
 				printf("\rSteering Pulsewidth: %u\n", COMPASS_PW);
@@ -138,12 +138,12 @@ void main(void)
 void Port_Init(void)	
 {
     XBR0 = 0x27;
-	P1MDIN 	&= 0xDF;	// set pin 1.3 for analog input	
-	P1MDOUT |= 0x05;	//set output pin for CEX0 in push-pull mode
-	P1MDOUT &= 0xDF;	// set input pin for 1.3 to open-drain
-	P1		|= ~0xDF;	// set input pin for 1.3 to high impedence
-	P3MDOUT &= 0x7F;	// set input pin for 3.7 to open-drain
-	P3		|= ~0x7F;	// set input pin for 3.7 to high impedence
+	P1MDIN 	&= 0xDF;	// set pin 1.5 for analog input	
+	P1MDOUT |= 0x05;	//set output pin for CEX0/2 in push-pull mode
+	P1MDOUT &= 0xDF;	// set input pin for 1.5 to open-drain
+	P1		|= ~0xDF;	// set input pin for 1.5 to high impedence
+	P3MDOUT &= 0x7F;	// set input pin for 3.6/7 to open-drain
+	P3		|= ~0x7F;	// set input pin for 3.6/7 to high impedence
 	
 }                   
 
