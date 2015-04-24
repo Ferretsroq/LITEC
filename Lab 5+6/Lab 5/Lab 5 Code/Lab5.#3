@@ -36,7 +36,7 @@ void set_PW(void);
 void set_range_adj(void);
 signed int compass_error(unsigned int heading);
 unsigned char read_AD_input(unsigned char n);
-int Update_Value(int Constant, unsigned char incr, int maxval, int minval);
+void read_accel(void);
 
 // Global variables
 unsigned int avg_gx = 0;
