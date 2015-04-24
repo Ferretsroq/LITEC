@@ -75,10 +75,8 @@ void main(void)
     printf("\nStart\r\n");
 	PCA0CP0 = 0xFFFF - COMPASS_CENTER;
 	PCA0CP2 = 0xFFFF - COMPASS_CENTER; //Car isn't moving to start
-	//lcd_clear();
 	Counts = 0;
-    while (Counts < 1); //{ printf("\r%u\n", nCounts); } // Wait a long time (1s) for keypad & LCD to initialize
-    //lcd_clear();
+    while (Counts < 1);  // Wait a long time (1s) for keypad & LCD to initialize
 	printf("\n\rPlease input data on the LCD.\n");
 	Pick_Heading();
 	Pick_Compass_Gain();
@@ -91,15 +89,12 @@ void main(void)
 			{
 				new_range = 0;	//clear and wait for next ping
 				range = read_ranger();	// Read the distance
-				//printf("\rRange: %u\n", range);
 				if (range != 0xFFFF) //Ignores dummy values from the ranger
 				{
 					if(range < 18) PCA0CP2 = 0xFFFF - COMPASS_CENTER; //Stop if near an object
 					else PCA0CP2 = 0xFFFF - 3300; //Car moves at a constant speed otherwise
-					//range_offset = 55 - range;
 
 					// read_range must start a new ping after a read	
-					//printf("\r%u\n", range);
 				}
 				else   // extraneous value read in; ignore and keep moving
 				{
@@ -117,7 +112,7 @@ void main(void)
 			}
 			if(print_delay == 20)
 			{
-			//	printf("\rRange: %u\n", range);
+				printf("\rRange: %u\n", range);
 				//printf("\rRange Adjust: %u\n", range_adj);
 				printf("\rHeading: %u\n", heading/10);
 			//	printf("\rVoltage: %u\n", voltage);
@@ -125,9 +120,6 @@ void main(void)
 				printf("\rHeading Error: %d\n", Error);
 				printf("\rSteering Pulsewidth: %u\n", COMPASS_PW);
 				print_delay = 0;
-				//lcd_print("\rRange: %u\n", range);
-				//lcd_print("\rHeading: %u\n", heading/10);
-				//lcd_print("\rVoltage: %u\n", voltage);
 
 			}
 			// Output the results for transfer into excel
@@ -136,9 +128,6 @@ void main(void)
 		{
 			PCA0CP0 = 0xFFFF - 2760;
 			PCA0CP2 = 0xFFFF - 2760;
-		//	printf("\rWould you like to edit the compass_gain?\n");
-			//printf("\r'c' - no, 'i' - increment by 1, 'd' - decrement by 1, 'u' - update and return\n");
-			//compass_gain = (Update_Value(compass_gain, 10, 100, 2)/10);		// gain is between 0.2 and 10
 			Pick_Compass_Gain();
 		}
 }
@@ -194,21 +183,20 @@ void PCA_ISR(void) __interrupt 9
         CF = 0;                     // clear the interrupt flag
         nCounts++;					// Counts overflows for initial delay
         PCA0 = PCA_START;
-        if (nCounts > 50)
+        if (nCounts > 50)			//Initial one second delay
         {
             //nCounts = 0;
             Counts++;               // seconds counter
         }
-		h_count++;					// delay 
+		h_count++;					// delay for compass reading
 		if (h_count>=8)
 		{
 			new_heading=1;
 			h_count = 0;
 		}
-		print_delay++;
-		//if(print_delay == 21) print_delay = 0;
+		print_delay++;				// delay for print statements
 		r_count++;
-		if (r_count>=12)
+		if (r_count>=12)			//delay for ranger reading
 		{
 			new_range = 1;
 			r_count = 0;
@@ -244,21 +232,6 @@ unsigned char read_AD_input(unsigned char n)
 // function which allow operator to pick desired heading
 void Pick_Heading(void)
 {
-	/*int user_heading;
-	lcd_clear();
-	lcd_print("\rEnter desired heading for the compass.\n");
-	user_heading = kpd_input(1);
-	while(user_heading > 3600) //Headings must be between 0 and 3600
-	{
-		user_heading -= 3600;
-	}
-	while(user_heading < 0)
-	{
-		user_heading += 3600;
-	}
-	lcd_clear();
-	desired_heading = user_heading;
-	printf("\rPick_Heading verified\n");*/
 	char input;
 	printf("\rPlease enter a desired heading.\n");
 	printf("\r'u' will increment by 5 degrees. 'd' will decrement by 5 degrees.\n");
@@ -279,13 +252,6 @@ void Pick_Heading(void)
 //Selecting the compass gain function
 void Pick_Compass_Gain(void)
 {
-	/*int user_gain;
-	lcd_clear();
-	lcd_print("\rEnter desired gain for the compass.\n");
-	user_gain = kpd_input(1);	// Obtain the gain from the user
-	lcd_clear();
-	compass_gain = (float)((user_gain)/1000); //Decimal value
-	printf("\rPick_Compass_Gain verified\n");*/
 	char input;
 	printf("\rPlease select a desired compass gain.\n");
 	printf("\r'u' will increment by 0.1. 'd' will decrement by 0.1.\n");
@@ -326,31 +292,6 @@ int read_ranger(void)
 	Data[0] = 0x51 ; // write 0x51 to reg 0 of the ranger:
 	i2c_write_data(addr, 0, Data, 1) ; // write one byte of data to reg 0 at addr
 	return st_range;
-}
-
-//-----------------------------------------------------------------------------
-int Update_Value(int Constant, unsigned char incr, int maxval, int minval)
-{
-	int deflt;
-	char input;
-	// 'c' - default, 'i' - increment, 'd' - decrement, 'u' - update and return
-	deflt = (Constant*10);
-	while(1)
-	{
-		input = getchar();
-		if (input == 'c') Constant = deflt;
-		if (input == 'i')
-		{
-			Constant += incr;
-			if (Constant > maxval) Constant = maxval;
-		}
-		if (input == 'd')
-		{
-			Constant -= incr;
-			if (Constant < minval) Constant = minval;
-		}
-		if (input == 'u') return Constant;
-	}
 }
 
 //-----------------------------------------------------------------------------
