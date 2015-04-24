@@ -1,0 +1,24 @@
+(LAB NOTEBOOK)
+Make comments about the car performance with both high and low gains.
+
+High gains have much more sensitive steering across the board. A high ranger gain will cause the car to swerve harshly away from an object, which points it quickly away. This has the effect of removing the object from view of the ranger, making it adjust back to using the compass gain. A higher compass gain makes the car quickly adjust back towards the wall, making it have steery jerking between the ranger and compass fighting each other. Low gains have much more gradual steering adjustments, with the tradeoff of requiring longer to stabilize. Higher gains will result in jerkier steering, while lower gains have smoother steering.
+
+(MEMO)
+Include a discussion of how the code performs the desired control by adjusting the steering to correct the heading error.
+
+The steering pulsewidth is a function of the compass_adj and ranger_adj variables. The compass_adj steers the car towards a desired heading by subtracting the current measured heading from the current heading. This adjusts the pulsewidth with a specified compass gain to direct the steering. range_adj has a much higher gain constant, and gradually adjusts the steering as the car approaches an object to avoid a collision. The closer the car gets to an object, the more it will adjust the steering. The range_adj variable is intentionally larger than compass_adj to force the car to avoid an object, even over adjusting to the desired heading. Once an object has been successfully avoided, range_adj goes to 0 and compass_adj will slowly adjust the car back to its desired heading.
+
+(LAB NOTEBOOK)
+Lab 4 - Introduction
+
+The goal of Lab 4 is to combine the steering and speed control elements of both halves of Lab 3 to drive the car along a predefined track. This requires integration of both SMBus devices, and using the PCA to configure both steering and speed simultaneously. Lab 4 also combines these with A/D Conversion to measure the car battery's voltage, and gathers data to plot and analyze.
+
+(LAB NOTEBOOK)
+Include a discussion of how the code meets the required timing of the sensors.
+
+We used interrupts to space out when the car sends pings to prevent the SMBus from overloading. The ranger requires a minimum of an 80 ms delay while the compass requires a minimum of 40 ms delay. However, attempting to ping these devices as often as possible results in the SMBus crashing. We resolved the issue by adjusting the timing delays until the SMBus could continue functioning.
+
+(LAB NOTEBOOK)
+Lab 4 - Conclusion
+
+The objectives of the lab have been met. The car successfully accesses all required devices and navigates the track. Gains for the compass and ranger can be edited, and function as intended. Data collection from the track can be accessed from the secureCRT. 
