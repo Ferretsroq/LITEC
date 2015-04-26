@@ -1,4 +1,4 @@
-\/*  Names: Kathryn DiPippo, Rebecca Halzack, Seth Rutman
+/*  Names: Kathryn DiPippo, Rebecca Halzack, Seth Rutman
 	Section: 4B
 	Date: 4/7/2015
 	File name: Lab 4

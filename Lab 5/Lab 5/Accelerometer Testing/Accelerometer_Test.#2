@@ -1,0 +1,252 @@
+/*  Names: Kathryn DiPippo, Rebecca Halzack, Seth Rutman
+	Section: 4B
+	Date: 4/26/2015
+	File name: Accelerometer Testing
+	Description:
+	A test file to verify that we can read the accelerometer
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <c8051_SDCC.h> // Include files. This file is available online in LMS
+#include <i2c.h>        // Get from LMS, THIS MUST BE INCLUDED AFTER stdio.
+#define PCA_START 28672
+
+//-----------------------------------------------------------------------------
+// Function Prototypes
+//-----------------------------------------------------------------------------
+void Port_Init(void);   // Initialize ports for input and output
+void PCA_Init(void);
+void SMB0_Init(void);
+void Interrupt_Init(void);
+void accelerometer_adjustment(void);
+void PCA_ISR(void) __interrupt 9;
+void read_accel(void);
+
+// Global variables
+unsigned int avg_gx = 0;
+unsigned int avg_gy = 0;
+unsigned int Counts;
+unsigned int nCounts;
+unsigned char a_count = 0;
+unsigned char delay = 0;
+unsigned char new_accel = 0;
+
+//unsigned char Data[2]; // Data is an array with a length of 2
+unsigned char print_delay = 0;
+signed int gx = 0;
+signed int gy = 0;
+signed char gx_adj = 0;
+signed char gy_adj = 0;
+
+
+//=============================================================================
+//-----------------------------------------------------------------------------
+// Main Function
+void main(void)
+{
+    Sys_Init();     // System Initialization - MUST BE 1st EXECUTABLE STATEMENT
+	Port_Init();    
+    Interrupt_Init();   
+    PCA_Init();
+    SMB0_Init();
+	Accel_Init();
+    putchar('\r');  // Dummy write to serial port
+    printf("\nStart\r\n");
+	Counts = 0;
+    while (Counts < 1);  // Wait a long time (1s) for keypad & LCD to initialize
+	printf("\n\r------------DATA COLLECTION------------\n");
+	printf("\n\rX-Accel		|	Y-Accel\n\r");
+	while (1)
+    {
+			if(new_accel)
+			{
+				new_accel = 0;
+				read_accel();
+			}
+			if(print_delay == 20)
+			{
+			//	printf("\rx-acceleration: %d\n", gx);
+			//	printf("\ry-acceleration: %d\n", gy);
+				printf("\rX:		|	Y:\n");
+				printf("\r%d 		|	%d\n", gx, gy);
+				print_delay = 0;
+
+			}
+			
+	}
+}
+
+//*****************************************************************************
+//-----------------------------------------------------------------------------
+// Set up ports for input and output
+void Port_Init(void)	
+{
+    XBR0 = 0x27;
+}                   
+
+//-----------------------------------------------------------------------------
+// Set up interrupts
+void Interrupt_Init(void)
+{
+    IE |= 0x02;
+    EIE1 |= 0x08;
+    EA = 1;
+}
+
+//-----------------------------------------------------------------------------
+// Set up Programmable Counter Array
+void PCA_Init(void)
+{
+    PCA0MD = 0x81;      // SYSCLK/12, enable CF interrupts, suspend when idle
+    PCA0CPM0 = 0xC2;    // 16 bit, enable compare, enable PWM; NOT USED HERE
+	PCA0CPM2 = 0xC2;
+    PCA0CN = 0x40;     // enable PCA
+}
+
+//-----------------------------------------------------------------------------
+// Set up the SMB
+void SMB0_Init(void)    // This was at the top, moved it here to call wait()
+{
+    SMB0CR = 0x93;      // Set SCL to 100KHz
+    ENSMB = 1;          // Enable SMBUS0
+}
+
+//-----------------------------------------------------------------------------
+// PCA_ISR: Interrupt Service Routine for Programmable Counter Array Overflow Interrupt
+void PCA_ISR(void) __interrupt 9
+{
+    if (CF)
+    {
+        CF = 0;                     // clear the interrupt flag
+        nCounts++;					// Counts overflows for initial delay
+        PCA0 = PCA_START;
+        if (nCounts > 50)			//Initial one second delay
+        {
+            //nCounts = 0;
+            Counts++;               // seconds counter
+        }
+		print_delay++;				// delay for print statements
+		a_count++;
+		if (a_count>=1)
+		{
+			a_count = 0;
+			new_accel = 1;
+		}
+     }
+     else PCA0CN &= 0xC0;           // clear all other 9-type interrupts
+}
+
+// =============================================================================
+// Revise the C code used in Lab 4. Write a function that first calls the
+// accelerometer initialization routine and then calls a read_accel() function
+// and sets the PWM for the steering servo based on the side-to-side tilt of the
+// car so that is turns in the direction of the upward slope. Both the
+// side-to-side tilt and the front-to-back tilt will be used to determine a PWM
+// for the drive motor. The main code will also need to average 4 to 8 samples
+// from the accelerometer each time, since there is noise on the signal.
+void accelerometer_adjustment(void)
+{
+	
+	//calls the accelerometer initialization routine
+	read_accel();
+	gx_adj = 0;
+}
+// returns 1 if the accelerometer is ready to be read
+unsigned char status_reg_a(void)
+{
+	unsigned char Data[2];
+	unsigned char addr = 0x30; // the address of the sensor, 0x30 for the accelerometer
+	i2c_read_data(addr, 0x27, Data, 2); // read two byte, starting at reg 0x27
+	if (Data[0] && Data[1])
+	{	
+		//printf("\rReady to read\n");
+		return 1;
+	
+	} 
+	else 
+	{
+		//printf("\rNot ready to read\n");
+		return 0;
+		
+	}
+}
+
+void read_accel(void)
+{
+	//Note that the accelerometer gives values in tenths of g. i.e. 980 = g
+	signed char Data[4];
+	unsigned char addr = 0x30;
+	signed int x_value;
+	signed int y_value;
+	int i;
+	unsigned char j = 0;
+	//Wait one 20ms cycle to avoid hitting the SMB too frequently and locking it up - included in PCA_ISR
+	new_accel = 0;
+	j = 0;
+	//Clear the averages
+	avg_gx = 0;
+	avg_gy = 0;
+	//printf("\rIteration start\n");
+	for (i=0; i<4; i++) //For 4 iterations (or maybe 8)
+	{
+		//Read status_reg_a into Data[0] (register 0x27, status_reg_a, indicates when data is ready)
+		//Make sure the 2 LSbits are high: (Data[0] & 0x03) == 0x03
+		//if((Data[0] & 0x03) == 0x03)
+	
+		if(status_reg_a())
+		{
+			//Read 4 registers starting with 0x28. NOTE: this SMB device follows a modified protocol. To
+			//read multiple registers the MSbit of the first register value must be high:
+			i2c_read_data(addr, (0x28|0x80), Data, 4); //assert MSB to read mult. Bytes
+				//Discard the low byte, and extend the high byte sign to form a 16-bit acceleration
+				//value and then shift value to the low 12 bits of the 16-bit integer.
+				//Accumulate sum for averaging.
+			//read_heading =((Data[0] << 24) | Data[1] << 16 | Data[2] << 8 | Data[3]); //combine the four values
+			x_value = ((Data[1] << 8)>>4);
+			y_value = ((Data[3] << 8)>>4);
+			//These lines convert the value from the registers into a 12-bit integer
+			//The logic statements preserve the sign
+			//if(Data[1] >=0) x_value = (((int)Data[1] << 8)>>4);
+		//	x_value = (int)Data[1] * (2^4);
+			//if(Data[3] >=0) y_value = (((int)Data[3] << 8)>>4);
+		//	y_value = (int)Data[3] * (2^4);
+		//	printf("\rX:	|	Y:\n");
+		//	printf("\r%d	|	%d\n", x_value, y_value);
+			avg_gx += x_value; //a simple >>4 WILL NOT WORK;
+			avg_gy += y_value; //it will not set the sign bit correctly
+			j++;
+			//printf("\ravg_gx:	|	avg_gy:\n");
+			//printf("\r%d	|	%d\n", avg_gx, avg_gy);
+			//printf("\ravg_gx	|	avg_gy\n	|	i");
+			//printf("\r%d	|	%d	|	%u\n", avg_gx, avg_gy, i);
+		}
+	}
+	//printf("\rIteration end\n");
+		 //Done with 4 iterations
+		//Finish calculating averages.
+		//avg_gx = (avg_gx >> 2);
+		//avg_gy = (avg_gy >> 2);
+		//avg_gx = (avg_gx)/4;
+		//avg_gy = (avg_gy)/4;
+		//printf("\ravg_gx:	|	avg_gy:\n");
+		//printf("\r%d	|	%d\n", avg_gx, avg_gy);
+		//printf("\ravg_gx	|	avg_gy\n");
+		//printf("\r%d	|	%d\n", avg_gx, avg_gy);
+		//Set global variables and remove constant offset, if known.
+		if(j > 0)
+		{
+			gx = (avg_gx)/(j); //(or = avg_gx - x0 if nominal gx offset is known)
+			gy = (avg_gy)/(j); //(or = avg_gy - y0 if nominal gy offset is known)
+		}
+}
+
+// =============================================================================
+// Continue to use routines to output parameter and settings on both the LCD
+// display and SecureCRT terminal to aid in troubleshooting.
+
+// =============================================================================
+// As in Lab 4, there will be parameters to adjust affecting the behavior of
+// the system. This time there are 3 different adjustable proportional gain
+// feedback constants that must be optimized to give the car the best performance.
+// Write C code to allow user entry of gain constants using the keypad or terminal.
