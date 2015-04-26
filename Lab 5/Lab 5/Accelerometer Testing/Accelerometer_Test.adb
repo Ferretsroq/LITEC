@@ -50,8 +50,8 @@ S:LAccelerometer_Test.i2c_read_data$num_bytes$1$99({1}SC:U),E,0,0
 S:LAccelerometer_Test.i2c_read_data$addr$1$99({1}SC:U),R,0,0,[r7]
 S:LAccelerometer_Test.i2c_read_data$j$1$100({1}SC:U),R,0,0,[]
 S:LAccelerometer_Test.Accel_Init$Data2$1$103({1}DA1d,SC:U),E,0,0
-S:G$avg_gx$0$0({2}SI:U),E,0,0
-S:G$avg_gy$0$0({2}SI:U),E,0,0
+S:G$avg_gx$0$0({2}SI:S),E,0,0
+S:G$avg_gy$0$0({2}SI:S),E,0,0
 S:G$Counts$0$0({2}SI:U),E,0,0
 S:G$nCounts$0$0({2}SI:U),E,0,0
 S:G$a_count$0$0({1}SC:U),E,0,0
@@ -67,7 +67,7 @@ S:LAccelerometer_Test.status_reg_a$addr$1$132({1}SC:U),R,0,0,[]
 S:LAccelerometer_Test.read_accel$Data$1$136({4}DA4d,SC:S),E,0,0
 S:LAccelerometer_Test.read_accel$addr$1$136({1}SC:U),E,0,0
 S:LAccelerometer_Test.read_accel$x_value$1$136({2}SI:S),E,0,0
-S:LAccelerometer_Test.read_accel$y_value$1$136({2}SI:S),E,0,0
+S:LAccelerometer_Test.read_accel$y_value$1$136({2}SI:S),R,0,0,[r2,r7]
 S:LAccelerometer_Test.read_accel$i$1$136({2}SI:S),R,0,0,[]
 S:LAccelerometer_Test.read_accel$j$1$136({1}SC:U),R,0,0,[r6]
 S:LAccelerometer_Test.lcd_print$text$1$73({80}DA80d,SC:U),F,0,0

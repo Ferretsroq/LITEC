@@ -66,8 +66,6 @@ void main(void)
 			}
 			if(print_delay == 20)
 			{
-			//	printf("\rx-acceleration: %d\n", gx);
-			//	printf("\ry-acceleration: %d\n", gy);
 				printf("\rX:		|	Y:\n");
 				printf("\r%d 		|	%d\n", gx, gy);
 				print_delay = 0;
@@ -160,13 +158,11 @@ unsigned char status_reg_a(void)
 	i2c_read_data(addr, 0x27, Data, 2); // read two byte, starting at reg 0x27
 	if (Data[0] && Data[1])
 	{	
-		//printf("\rReady to read\n");
 		return 1;
 	
 	} 
 	else 
 	{
-		//printf("\rNot ready to read\n");
 		return 0;
 		
 	}
@@ -187,13 +183,10 @@ void read_accel(void)
 	//Clear the averages
 	avg_gx = 0;
 	avg_gy = 0;
-	//printf("\rIteration start\n");
-	for (i=0; i<4; i++) //For 4 iterations (or maybe 8)
+	for (i=0; i<8; i++) //For 4 iterations (or maybe 8)
 	{
 		//Read status_reg_a into Data[0] (register 0x27, status_reg_a, indicates when data is ready)
 		//Make sure the 2 LSbits are high: (Data[0] & 0x03) == 0x03
-		//if((Data[0] & 0x03) == 0x03)
-	
 		if(status_reg_a())
 		{
 			//Read 4 registers starting with 0x28. NOTE: this SMB device follows a modified protocol. To
@@ -202,39 +195,16 @@ void read_accel(void)
 				//Discard the low byte, and extend the high byte sign to form a 16-bit acceleration
 				//value and then shift value to the low 12 bits of the 16-bit integer.
 				//Accumulate sum for averaging.
-			//read_heading =((Data[0] << 24) | Data[1] << 16 | Data[2] << 8 | Data[3]); //combine the four values
 			x_value = ((Data[1] << 8)>>4);
 			y_value = ((Data[3] << 8)>>4);
 			//These lines convert the value from the registers into a 12-bit integer
-			//The logic statements preserve the sign
-			//if(Data[1] >=0) x_value = (((int)Data[1] << 8)>>4);
-		//	x_value = (int)Data[1] * (2^4);
-			//if(Data[3] >=0) y_value = (((int)Data[3] << 8)>>4);
-		//	y_value = (int)Data[3] * (2^4);
-		//	printf("\rX:	|	Y:\n");
-		//	printf("\r%d	|	%d\n", x_value, y_value);
 			avg_gx += x_value; //a simple >>4 WILL NOT WORK;
 			avg_gy += y_value; //it will not set the sign bit correctly
 			j++;
-			//printf("\ravg_gx:	|	avg_gy:\n");
-			//printf("\r%d	|	%d\n", avg_gx, avg_gy);
-			//printf("\ravg_gx	|	avg_gy\n	|	i");
-			//printf("\r%d	|	%d	|	%u\n", avg_gx, avg_gy, i);
 		}
 	}
-	//printf("\rIteration end\n");
-		 //Done with 4 iterations
-		//Finish calculating averages.
-		//avg_gx = (avg_gx >> 2);
-		//avg_gy = (avg_gy >> 2);
-		//avg_gx = (avg_gx)/4;
-		//avg_gy = (avg_gy)/4;
-		//printf("\ravg_gx:	|	avg_gy:\n");
-		//printf("\r%d	|	%d\n", avg_gx, avg_gy);
-		//printf("\ravg_gx	|	avg_gy\n");
-		//printf("\r%d	|	%d\n", avg_gx, avg_gy);
 		//Set global variables and remove constant offset, if known.
-		if(j > 0)
+		if(j > 0) //This averages based on how many values we actually measured
 		{
 			gx = (avg_gx)/(j); //(or = avg_gx - x0 if nominal gx offset is known)
 			gy = (avg_gy)/(j); //(or = avg_gy - y0 if nominal gy offset is known)

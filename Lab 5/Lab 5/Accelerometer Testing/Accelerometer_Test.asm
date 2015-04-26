@@ -1,7 +1,7 @@
 ;--------------------------------------------------------
 ; File Created by SDCC : free open source ANSI-C Compiler
 ; Version 3.4.0 #8981 (Apr  5 2014) (MINGW32)
-; This file was generated Sun Apr 26 16:41:06 2015
+; This file was generated Sun Apr 26 17:35:15 2015
 ;--------------------------------------------------------
 	.module Accelerometer_Test
 	.optsdcc -mmcs51 --model-small
@@ -1009,9 +1009,6 @@ _read_accel_addr_1_136:
 LAccelerometer_Test.read_accel$x_value$1$136==.
 _read_accel_x_value_1_136:
 	.ds 2
-LAccelerometer_Test.read_accel$y_value$1$136==.
-_read_accel_y_value_1_136:
-	.ds 2
 ;--------------------------------------------------------
 ; overlayable items in internal ram 
 ;--------------------------------------------------------
@@ -1110,12 +1107,12 @@ __interrupt_vect:
 	.globl __mcs51_genXRAMCLEAR
 	.globl __mcs51_genRAMCLEAR
 	C$Accelerometer_Test.c$27$1$136 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:27: unsigned int avg_gx = 0;
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:27: signed int avg_gx = 0;
 	clr	a
 	mov	_avg_gx,a
 	mov	(_avg_gx + 1),a
 	C$Accelerometer_Test.c$28$1$136 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:28: unsigned int avg_gy = 0;
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:28: signed int avg_gy = 0;
 	mov	_avg_gy,a
 	mov	(_avg_gy + 1),a
 	C$Accelerometer_Test.c$31$1$136 ==.
@@ -2420,8 +2417,8 @@ _main:
 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:67: if(print_delay == 20)
 	mov	a,#0x14
 	cjne	a,_print_delay,00109$
-	C$Accelerometer_Test.c$71$3$115 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:71: printf("\rX:		|	Y:\n");
+	C$Accelerometer_Test.c$69$3$115 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:69: printf("\rX:		|	Y:\n");
 	mov	a,#___str_6
 	push	acc
 	mov	a,#(___str_6 >> 8)
@@ -2432,8 +2429,8 @@ _main:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$Accelerometer_Test.c$72$3$115 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:72: printf("\r%d 		|	%d\n", gx, gy);
+	C$Accelerometer_Test.c$70$3$115 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:70: printf("\r%d 		|	%d\n", gx, gy);
 	push	_gy
 	push	(_gy + 1)
 	push	_gx
@@ -2448,167 +2445,167 @@ _main:
 	mov	a,sp
 	add	a,#0xf9
 	mov	sp,a
-	C$Accelerometer_Test.c$73$3$115 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:73: print_delay = 0;
+	C$Accelerometer_Test.c$71$3$115 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:71: print_delay = 0;
 	mov	_print_delay,#0x00
 	sjmp	00109$
-	C$Accelerometer_Test.c$78$1$112 ==.
+	C$Accelerometer_Test.c$76$1$112 ==.
 	XG$main$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'Port_Init'
 ;------------------------------------------------------------
 	G$Port_Init$0$0 ==.
-	C$Accelerometer_Test.c$83$1$112 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:83: void Port_Init(void)	
+	C$Accelerometer_Test.c$81$1$112 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:81: void Port_Init(void)	
 ;	-----------------------------------------
 ;	 function Port_Init
 ;	-----------------------------------------
 _Port_Init:
-	C$Accelerometer_Test.c$85$1$117 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:85: XBR0 = 0x27;
+	C$Accelerometer_Test.c$83$1$117 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:83: XBR0 = 0x27;
 	mov	_XBR0,#0x27
-	C$Accelerometer_Test.c$86$1$117 ==.
+	C$Accelerometer_Test.c$84$1$117 ==.
 	XG$Port_Init$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'Interrupt_Init'
 ;------------------------------------------------------------
 	G$Interrupt_Init$0$0 ==.
-	C$Accelerometer_Test.c$90$1$117 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:90: void Interrupt_Init(void)
+	C$Accelerometer_Test.c$88$1$117 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:88: void Interrupt_Init(void)
 ;	-----------------------------------------
 ;	 function Interrupt_Init
 ;	-----------------------------------------
 _Interrupt_Init:
-	C$Accelerometer_Test.c$92$1$119 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:92: IE |= 0x02;
+	C$Accelerometer_Test.c$90$1$119 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:90: IE |= 0x02;
 	orl	_IE,#0x02
-	C$Accelerometer_Test.c$93$1$119 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:93: EIE1 |= 0x08;
+	C$Accelerometer_Test.c$91$1$119 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:91: EIE1 |= 0x08;
 	orl	_EIE1,#0x08
-	C$Accelerometer_Test.c$94$1$119 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:94: EA = 1;
+	C$Accelerometer_Test.c$92$1$119 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:92: EA = 1;
 	setb	_EA
-	C$Accelerometer_Test.c$95$1$119 ==.
+	C$Accelerometer_Test.c$93$1$119 ==.
 	XG$Interrupt_Init$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'PCA_Init'
 ;------------------------------------------------------------
 	G$PCA_Init$0$0 ==.
-	C$Accelerometer_Test.c$99$1$119 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:99: void PCA_Init(void)
+	C$Accelerometer_Test.c$97$1$119 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:97: void PCA_Init(void)
 ;	-----------------------------------------
 ;	 function PCA_Init
 ;	-----------------------------------------
 _PCA_Init:
-	C$Accelerometer_Test.c$101$1$121 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:101: PCA0MD = 0x81;      // SYSCLK/12, enable CF interrupts, suspend when idle
+	C$Accelerometer_Test.c$99$1$121 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:99: PCA0MD = 0x81;      // SYSCLK/12, enable CF interrupts, suspend when idle
 	mov	_PCA0MD,#0x81
-	C$Accelerometer_Test.c$102$1$121 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:102: PCA0CPM0 = 0xC2;    // 16 bit, enable compare, enable PWM; NOT USED HERE
+	C$Accelerometer_Test.c$100$1$121 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:100: PCA0CPM0 = 0xC2;    // 16 bit, enable compare, enable PWM; NOT USED HERE
 	mov	_PCA0CPM0,#0xC2
-	C$Accelerometer_Test.c$103$1$121 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:103: PCA0CPM2 = 0xC2;
+	C$Accelerometer_Test.c$101$1$121 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:101: PCA0CPM2 = 0xC2;
 	mov	_PCA0CPM2,#0xC2
-	C$Accelerometer_Test.c$104$1$121 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:104: PCA0CN = 0x40;     // enable PCA
+	C$Accelerometer_Test.c$102$1$121 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:102: PCA0CN = 0x40;     // enable PCA
 	mov	_PCA0CN,#0x40
-	C$Accelerometer_Test.c$105$1$121 ==.
+	C$Accelerometer_Test.c$103$1$121 ==.
 	XG$PCA_Init$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'SMB0_Init'
 ;------------------------------------------------------------
 	G$SMB0_Init$0$0 ==.
-	C$Accelerometer_Test.c$109$1$121 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:109: void SMB0_Init(void)    // This was at the top, moved it here to call wait()
+	C$Accelerometer_Test.c$107$1$121 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:107: void SMB0_Init(void)    // This was at the top, moved it here to call wait()
 ;	-----------------------------------------
 ;	 function SMB0_Init
 ;	-----------------------------------------
 _SMB0_Init:
-	C$Accelerometer_Test.c$111$1$123 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:111: SMB0CR = 0x93;      // Set SCL to 100KHz
+	C$Accelerometer_Test.c$109$1$123 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:109: SMB0CR = 0x93;      // Set SCL to 100KHz
 	mov	_SMB0CR,#0x93
-	C$Accelerometer_Test.c$112$1$123 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:112: ENSMB = 1;          // Enable SMBUS0
+	C$Accelerometer_Test.c$110$1$123 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:110: ENSMB = 1;          // Enable SMBUS0
 	setb	_ENSMB
-	C$Accelerometer_Test.c$113$1$123 ==.
+	C$Accelerometer_Test.c$111$1$123 ==.
 	XG$SMB0_Init$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'PCA_ISR'
 ;------------------------------------------------------------
 	G$PCA_ISR$0$0 ==.
-	C$Accelerometer_Test.c$117$1$123 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:117: void PCA_ISR(void) __interrupt 9
+	C$Accelerometer_Test.c$115$1$123 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:115: void PCA_ISR(void) __interrupt 9
 ;	-----------------------------------------
 ;	 function PCA_ISR
 ;	-----------------------------------------
 _PCA_ISR:
 	push	acc
 	push	psw
-	C$Accelerometer_Test.c$119$1$125 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:119: if (CF)
-	C$Accelerometer_Test.c$121$2$126 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:121: CF = 0;                     // clear the interrupt flag
+	C$Accelerometer_Test.c$117$1$125 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:117: if (CF)
+	C$Accelerometer_Test.c$119$2$126 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:119: CF = 0;                     // clear the interrupt flag
 	jbc	_CF,00119$
 	sjmp	00106$
 00119$:
-	C$Accelerometer_Test.c$122$2$126 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:122: nCounts++;					// Counts overflows for initial delay
+	C$Accelerometer_Test.c$120$2$126 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:120: nCounts++;					// Counts overflows for initial delay
 	inc	_nCounts
 	clr	a
 	cjne	a,_nCounts,00120$
 	inc	(_nCounts + 1)
 00120$:
-	C$Accelerometer_Test.c$123$2$126 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:123: PCA0 = PCA_START;
+	C$Accelerometer_Test.c$121$2$126 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:121: PCA0 = PCA_START;
 	mov	((_PCA0 >> 0) & 0xFF),#0x00
 	mov	((_PCA0 >> 8) & 0xFF),#0x70
-	C$Accelerometer_Test.c$124$2$126 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:124: if (nCounts > 50)			//Initial one second delay
+	C$Accelerometer_Test.c$122$2$126 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:122: if (nCounts > 50)			//Initial one second delay
 	clr	c
 	mov	a,#0x32
 	subb	a,_nCounts
 	clr	a
 	subb	a,(_nCounts + 1)
 	jnc	00102$
-	C$Accelerometer_Test.c$127$3$127 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:127: Counts++;               // seconds counter
+	C$Accelerometer_Test.c$125$3$127 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:125: Counts++;               // seconds counter
 	inc	_Counts
 	clr	a
 	cjne	a,_Counts,00122$
 	inc	(_Counts + 1)
 00122$:
 00102$:
-	C$Accelerometer_Test.c$129$2$126 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:129: print_delay++;				// delay for print statements
+	C$Accelerometer_Test.c$127$2$126 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:127: print_delay++;				// delay for print statements
 	inc	_print_delay
-	C$Accelerometer_Test.c$130$2$126 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:130: a_count++;
+	C$Accelerometer_Test.c$128$2$126 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:128: a_count++;
 	inc	_a_count
-	C$Accelerometer_Test.c$131$2$126 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:131: if (a_count>=1)
+	C$Accelerometer_Test.c$129$2$126 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:129: if (a_count>=1)
 	mov	a,#0x100 - 0x01
 	add	a,_a_count
 	jnc	00108$
-	C$Accelerometer_Test.c$133$3$128 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:133: a_count = 0;
+	C$Accelerometer_Test.c$131$3$128 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:131: a_count = 0;
 	mov	_a_count,#0x00
-	C$Accelerometer_Test.c$134$3$128 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:134: new_accel = 1;
+	C$Accelerometer_Test.c$132$3$128 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:132: new_accel = 1;
 	mov	_new_accel,#0x01
 	sjmp	00108$
 00106$:
-	C$Accelerometer_Test.c$137$1$125 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:137: else PCA0CN &= 0xC0;           // clear all other 9-type interrupts
+	C$Accelerometer_Test.c$135$1$125 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:135: else PCA0CN &= 0xC0;           // clear all other 9-type interrupts
 	anl	_PCA0CN,#0xC0
 00108$:
 	pop	psw
 	pop	acc
-	C$Accelerometer_Test.c$138$1$125 ==.
+	C$Accelerometer_Test.c$136$1$125 ==.
 	XG$PCA_ISR$0$0 ==.
 	reti
 ;	eliminated unneeded mov psw,# (no regs used in bank)
@@ -2619,19 +2616,19 @@ _PCA_ISR:
 ;Allocation info for local variables in function 'accelerometer_adjustment'
 ;------------------------------------------------------------
 	G$accelerometer_adjustment$0$0 ==.
-	C$Accelerometer_Test.c$148$1$125 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:148: void accelerometer_adjustment(void)
+	C$Accelerometer_Test.c$146$1$125 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:146: void accelerometer_adjustment(void)
 ;	-----------------------------------------
 ;	 function accelerometer_adjustment
 ;	-----------------------------------------
 _accelerometer_adjustment:
-	C$Accelerometer_Test.c$152$1$130 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:152: read_accel();
+	C$Accelerometer_Test.c$150$1$130 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:150: read_accel();
 	lcall	_read_accel
-	C$Accelerometer_Test.c$153$1$130 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:153: gx_adj = 0;
+	C$Accelerometer_Test.c$151$1$130 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:151: gx_adj = 0;
 	mov	_gx_adj,#0x00
-	C$Accelerometer_Test.c$154$1$130 ==.
+	C$Accelerometer_Test.c$152$1$130 ==.
 	XG$accelerometer_adjustment$0$0 ==.
 	ret
 ;------------------------------------------------------------
@@ -2641,14 +2638,14 @@ _accelerometer_adjustment:
 ;addr                      Allocated to registers 
 ;------------------------------------------------------------
 	G$status_reg_a$0$0 ==.
-	C$Accelerometer_Test.c$156$1$130 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:156: unsigned char status_reg_a(void)
+	C$Accelerometer_Test.c$154$1$130 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:154: unsigned char status_reg_a(void)
 ;	-----------------------------------------
 ;	 function status_reg_a
 ;	-----------------------------------------
 _status_reg_a:
-	C$Accelerometer_Test.c$160$1$132 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:160: i2c_read_data(addr, 0x27, Data, 2); // read two byte, starting at reg 0x27
+	C$Accelerometer_Test.c$158$1$132 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:158: i2c_read_data(addr, 0x27, Data, 2); // read two byte, starting at reg 0x27
 	mov	_i2c_read_data_PARM_3,#_status_reg_a_Data_1_132
 	mov	(_i2c_read_data_PARM_3 + 1),#0x00
 	mov	(_i2c_read_data_PARM_3 + 2),#0x40
@@ -2656,22 +2653,22 @@ _status_reg_a:
 	mov	_i2c_read_data_PARM_4,#0x02
 	mov	dpl,#0x30
 	lcall	_i2c_read_data
-	C$Accelerometer_Test.c$161$1$132 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:161: if (Data[0] && Data[1])
+	C$Accelerometer_Test.c$159$1$132 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:159: if (Data[0] && Data[1])
 	mov	a,_status_reg_a_Data_1_132
 	jz	00102$
 	mov	a,(_status_reg_a_Data_1_132 + 0x0001)
 	jz	00102$
-	C$Accelerometer_Test.c$164$2$133 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:164: return 1;
+	C$Accelerometer_Test.c$161$2$133 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:161: return 1;
 	mov	dpl,#0x01
 	sjmp	00105$
 00102$:
-	C$Accelerometer_Test.c$170$2$134 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:170: return 0;
+	C$Accelerometer_Test.c$166$2$134 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:166: return 0;
 	mov	dpl,#0x00
 00105$:
-	C$Accelerometer_Test.c$173$1$132 ==.
+	C$Accelerometer_Test.c$169$1$132 ==.
 	XG$status_reg_a$0$0 ==.
 	ret
 ;------------------------------------------------------------
@@ -2680,43 +2677,43 @@ _status_reg_a:
 ;Data                      Allocated with name '_read_accel_Data_1_136'
 ;addr                      Allocated with name '_read_accel_addr_1_136'
 ;x_value                   Allocated with name '_read_accel_x_value_1_136'
-;y_value                   Allocated with name '_read_accel_y_value_1_136'
+;y_value                   Allocated to registers r2 r7 
 ;i                         Allocated to registers 
 ;j                         Allocated to registers r6 
 ;------------------------------------------------------------
 	G$read_accel$0$0 ==.
-	C$Accelerometer_Test.c$175$1$132 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:175: void read_accel(void)
+	C$Accelerometer_Test.c$171$1$132 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:171: void read_accel(void)
 ;	-----------------------------------------
 ;	 function read_accel
 ;	-----------------------------------------
 _read_accel:
-	C$Accelerometer_Test.c$178$1$132 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:178: unsigned char addr = 0x30;
+	C$Accelerometer_Test.c$175$1$132 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:175: unsigned char addr = 0x30;
 	mov	_read_accel_addr_1_136,#0x30
+	C$Accelerometer_Test.c$181$1$136 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:181: new_accel = 0;
+	C$Accelerometer_Test.c$182$1$136 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:182: j = 0;
 	C$Accelerometer_Test.c$184$1$136 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:184: new_accel = 0;
-	C$Accelerometer_Test.c$185$1$136 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:185: j = 0;
-	C$Accelerometer_Test.c$187$1$136 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:187: avg_gx = 0;
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:184: avg_gx = 0;
 	clr	a
 	mov	_new_accel,a
 	mov	r6,a
 	mov	_avg_gx,a
 	mov	(_avg_gx + 1),a
-	C$Accelerometer_Test.c$188$1$136 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:188: avg_gy = 0;
+	C$Accelerometer_Test.c$185$1$136 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:185: avg_gy = 0;
 	mov	_avg_gy,a
 	mov	(_avg_gy + 1),a
-	C$Accelerometer_Test.c$190$1$136 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:190: for (i=0; i<4; i++) //For 4 iterations (or maybe 8)
+	C$Accelerometer_Test.c$186$1$136 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:186: for (i=0; i<8; i++) //For 4 iterations (or maybe 8)
 	mov	r4,#0x00
 	mov	r5,#0x00
 	mov	ar3,r6
 00106$:
-	C$Accelerometer_Test.c$196$2$137 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:196: if(status_reg_a())
+	C$Accelerometer_Test.c$190$2$137 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:190: if(status_reg_a())
 	push	ar5
 	push	ar4
 	push	ar3
@@ -2728,8 +2725,8 @@ _read_accel:
 	jnz	00123$
 	ljmp	00107$
 00123$:
-	C$Accelerometer_Test.c$200$3$138 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:200: i2c_read_data(addr, (0x28|0x80), Data, 4); //assert MSB to read mult. Bytes
+	C$Accelerometer_Test.c$194$3$138 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:194: i2c_read_data(addr, (0x28|0x80), Data, 4); //assert MSB to read mult. Bytes
 	mov	_i2c_read_data_PARM_3,#_read_accel_Data_1_136
 	mov	(_i2c_read_data_PARM_3 + 1),#0x00
 	mov	(_i2c_read_data_PARM_3 + 2),#0x40
@@ -2743,8 +2740,8 @@ _read_accel:
 	pop	ar3
 	pop	ar4
 	pop	ar5
-	C$Accelerometer_Test.c$205$3$138 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:205: x_value = ((Data[1] << 8)>>4);
+	C$Accelerometer_Test.c$198$3$138 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:198: x_value = ((Data[1] << 8)>>4);
 	mov	r2,(_read_accel_Data_1_136 + 0x0001)
 	mov	a,(_read_accel_Data_1_136 + 0x0001)
 	rlc	a
@@ -2767,99 +2764,94 @@ _read_accel:
 	orl	a,#0xF0
 00124$:
 	mov	(_read_accel_x_value_1_136 + 1),a
-	C$Accelerometer_Test.c$206$3$138 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:206: y_value = ((Data[3] << 8)>>4);
+	C$Accelerometer_Test.c$199$3$138 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:199: y_value = ((Data[3] << 8)>>4);
 	mov	r2,(_read_accel_Data_1_136 + 0x0003)
 	mov	a,(_read_accel_Data_1_136 + 0x0003)
 	rlc	a
 	subb	a,acc
 	mov	ar7,r2
 	mov	r2,#0x00
-	mov	_read_accel_y_value_1_136,r2
 	mov	a,r7
 	swap	a
-	xch	a,_read_accel_y_value_1_136
+	xch	a,r2
 	swap	a
 	anl	a,#0x0F
-	xrl	a,_read_accel_y_value_1_136
-	xch	a,_read_accel_y_value_1_136
+	xrl	a,r2
+	xch	a,r2
 	anl	a,#0x0F
-	xch	a,_read_accel_y_value_1_136
-	xrl	a,_read_accel_y_value_1_136
-	xch	a,_read_accel_y_value_1_136
+	xch	a,r2
+	xrl	a,r2
+	xch	a,r2
 	jnb	acc.3,00125$
 	orl	a,#0xF0
 00125$:
-	mov	(_read_accel_y_value_1_136 + 1),a
-	C$Accelerometer_Test.c$215$3$138 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:215: avg_gx += x_value; //a simple >>4 WILL NOT WORK;
-	mov	r2,_read_accel_x_value_1_136
-	mov	r7,(_read_accel_x_value_1_136 + 1)
-	mov	a,r2
+	mov	r7,a
+	C$Accelerometer_Test.c$201$3$138 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:201: avg_gx += x_value; //a simple >>4 WILL NOT WORK;
+	mov	a,_read_accel_x_value_1_136
 	add	a,_avg_gx
 	mov	_avg_gx,a
-	mov	a,r7
+	mov	a,(_read_accel_x_value_1_136 + 1)
 	addc	a,(_avg_gx + 1)
 	mov	(_avg_gx + 1),a
-	C$Accelerometer_Test.c$216$3$138 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:216: avg_gy += y_value; //it will not set the sign bit correctly
-	mov	r2,_read_accel_y_value_1_136
-	mov	r7,(_read_accel_y_value_1_136 + 1)
+	C$Accelerometer_Test.c$202$3$138 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:202: avg_gy += y_value; //it will not set the sign bit correctly
 	mov	a,r2
 	add	a,_avg_gy
 	mov	_avg_gy,a
 	mov	a,r7
 	addc	a,(_avg_gy + 1)
 	mov	(_avg_gy + 1),a
-	C$Accelerometer_Test.c$217$3$138 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:217: j++;
+	C$Accelerometer_Test.c$203$3$138 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:203: j++;
 	inc	r3
 00107$:
-	C$Accelerometer_Test.c$190$1$136 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:190: for (i=0; i<4; i++) //For 4 iterations (or maybe 8)
+	C$Accelerometer_Test.c$186$1$136 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:186: for (i=0; i<8; i++) //For 4 iterations (or maybe 8)
 	inc	r4
 	cjne	r4,#0x00,00126$
 	inc	r5
 00126$:
 	clr	c
 	mov	a,r4
-	subb	a,#0x04
+	subb	a,#0x08
 	mov	a,r5
 	xrl	a,#0x80
 	subb	a,#0x80
 	jnc	00127$
 	ljmp	00106$
 00127$:
-	C$Accelerometer_Test.c$236$1$136 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:236: if(j > 0)
+	C$Accelerometer_Test.c$207$1$136 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:207: if(j > 0) //This averages based on how many values we actually measured
 	mov	ar6,r3
 	mov	a,r6
 	jz	00108$
-	C$Accelerometer_Test.c$238$2$139 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:238: gx = (avg_gx)/(j); //(or = avg_gx - x0 if nominal gx offset is known)
+	C$Accelerometer_Test.c$209$2$139 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:209: gx = (avg_gx)/(j); //(or = avg_gx - x0 if nominal gx offset is known)
 	mov	r7,#0x00
-	mov	__divuint_PARM_2,r6
-	mov	(__divuint_PARM_2 + 1),r7
+	mov	__divsint_PARM_2,r6
+	mov	(__divsint_PARM_2 + 1),r7
 	mov	dpl,_avg_gx
 	mov	dph,(_avg_gx + 1)
 	push	ar7
 	push	ar6
-	lcall	__divuint
+	lcall	__divsint
 	mov	_gx,dpl
 	mov	(_gx + 1),dph
 	pop	ar6
 	pop	ar7
-	C$Accelerometer_Test.c$239$1$136 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:239: gy = (avg_gy)/(j); //(or = avg_gy - y0 if nominal gy offset is known)
-	mov	__divuint_PARM_2,r6
-	mov	(__divuint_PARM_2 + 1),r7
+	C$Accelerometer_Test.c$210$1$136 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Accelerometer Testing\Accelerometer_Test.c:210: gy = (avg_gy)/(j); //(or = avg_gy - y0 if nominal gy offset is known)
+	mov	__divsint_PARM_2,r6
+	mov	(__divsint_PARM_2 + 1),r7
 	mov	dpl,_avg_gy
 	mov	dph,(_avg_gy + 1)
-	lcall	__divuint
+	lcall	__divsint
 	mov	_gy,dpl
 	mov	(_gy + 1),dph
 00108$:
-	C$Accelerometer_Test.c$241$1$136 ==.
+	C$Accelerometer_Test.c$212$1$136 ==.
 	XG$read_accel$0$0 ==.
 	ret
 	.area CSEG    (CODE)

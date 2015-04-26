@@ -1,7 +1,7 @@
 ;--------------------------------------------------------
 ; File Created by SDCC : free open source ANSI-C Compiler
 ; Version 3.4.0 #8981 (Apr  5 2014) (MINGW32)
-; This file was generated Sat Apr 25 14:09:42 2015
+; This file was generated Sun Apr 26 18:15:16 2015
 ;--------------------------------------------------------
 	.module Lab5
 	.optsdcc -mmcs51 --model-small
@@ -10,13 +10,13 @@
 ; Public variables in this module
 ;--------------------------------------------------------
 	.globl _status_reg_a
-	.globl _Pick_Drive_Gain
 	.globl _main
 	.globl _read_keypad
 	.globl _strlen
 	.globl _Sys_Init
 	.globl _UART0_Init
 	.globl _SYSCLK_Init
+	.globl _printf_fast_f
 	.globl _vsprintf
 	.globl _printf
 	.globl _RANGER_SWITCH
@@ -306,6 +306,7 @@
 	.globl _DPL
 	.globl _SP
 	.globl _P0
+	.globl _new_AD
 	.globl _drive_gain
 	.globl _steer_gain
 	.globl _gy_adj
@@ -352,6 +353,7 @@
 	.globl _ADC_Init
 	.globl _read_AD_input
 	.globl _Pick_Steering_Gain
+	.globl _Pick_Drive_Gain
 	.globl _set_PW
 	.globl _accelerometer_adjustment
 	.globl _read_accel
@@ -1022,25 +1024,31 @@ _gy::
 	.ds 2
 G$gx_adj$0$0==.
 _gx_adj::
-	.ds 1
+	.ds 2
 G$gy_adj$0$0==.
 _gy_adj::
-	.ds 1
+	.ds 2
 G$steer_gain$0$0==.
 _steer_gain::
-	.ds 1
+	.ds 4
 G$drive_gain$0$0==.
 _drive_gain::
-	.ds 1
-LLab5.status_reg_a$Data$1$152==.
-_status_reg_a_Data_1_152:
-	.ds 2
-LLab5.read_accel$Data$1$156==.
-_read_accel_Data_1_156:
 	.ds 4
-LLab5.read_accel$addr$1$156==.
-_read_accel_addr_1_156:
+G$new_AD$0$0==.
+_new_AD::
 	.ds 1
+LLab5.status_reg_a$Data$1$153==.
+_status_reg_a_Data_1_153:
+	.ds 2
+LLab5.read_accel$Data$1$157==.
+_read_accel_Data_1_157:
+	.ds 4
+LLab5.read_accel$addr$1$157==.
+_read_accel_addr_1_157:
+	.ds 1
+LLab5.read_accel$x_value$1$157==.
+_read_accel_x_value_1_157:
+	.ds 2
 ;--------------------------------------------------------
 ; overlayable items in internal ram 
 ;--------------------------------------------------------
@@ -1139,71 +1147,79 @@ __interrupt_vect:
 	.globl __mcs51_genXINIT
 	.globl __mcs51_genXRAMCLEAR
 	.globl __mcs51_genRAMCLEAR
-	C$Lab5.c$37$1$156 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:37: unsigned int avg_gx = 0;
+	C$Lab5.c$38$1$157 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:38: signed int avg_gx = 0;
 	clr	a
 	mov	_avg_gx,a
 	mov	(_avg_gx + 1),a
-	C$Lab5.c$38$1$156 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:38: unsigned int avg_gy = 0;
+	C$Lab5.c$39$1$157 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:39: signed int avg_gy = 0;
 	mov	_avg_gy,a
 	mov	(_avg_gy + 1),a
-	C$Lab5.c$40$1$156 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:40: unsigned char a_count = 0;
+	C$Lab5.c$41$1$157 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:41: unsigned char a_count = 0;
 ;	1-genFromRTrack replaced	mov	_a_count,#0x00
 	mov	_a_count,a
-	C$Lab5.c$41$1$156 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:41: unsigned char delay = 0;
+	C$Lab5.c$42$1$157 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:42: unsigned char delay = 0;
 ;	1-genFromRTrack replaced	mov	_delay,#0x00
 	mov	_delay,a
-	C$Lab5.c$42$1$156 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:42: unsigned char new_accel = 0;
+	C$Lab5.c$43$1$157 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:43: unsigned char new_accel = 0;
 ;	1-genFromRTrack replaced	mov	_new_accel,#0x00
 	mov	_new_accel,a
-	C$Lab5.c$43$1$156 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:43: unsigned int DRIVE_PW = 2760;
+	C$Lab5.c$44$1$157 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:44: unsigned int DRIVE_PW = 2760;
 	mov	_DRIVE_PW,#0xC8
 	mov	(_DRIVE_PW + 1),#0x0A
-	C$Lab5.c$44$1$156 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:44: unsigned int STEER_PW = 2760;
+	C$Lab5.c$45$1$157 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:45: unsigned int STEER_PW = 2760;
 	mov	_STEER_PW,#0xC8
 	mov	(_STEER_PW + 1),#0x0A
-	C$Lab5.c$47$1$156 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:47: unsigned char AD_Result = 0;
+	C$Lab5.c$48$1$157 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:48: unsigned char AD_Result = 0;
 ;	1-genFromRTrack replaced	mov	_AD_Result,#0x00
 	mov	_AD_Result,a
-	C$Lab5.c$48$1$156 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:48: unsigned char voltage = 0;
+	C$Lab5.c$49$1$157 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:49: unsigned char voltage = 0;
 ;	1-genFromRTrack replaced	mov	_voltage,#0x00
 	mov	_voltage,a
-	C$Lab5.c$50$1$156 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:50: unsigned char print_delay = 0;
+	C$Lab5.c$51$1$157 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:51: unsigned char print_delay = 0;
 ;	1-genFromRTrack replaced	mov	_print_delay,#0x00
 	mov	_print_delay,a
-	C$Lab5.c$51$1$156 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:51: signed int gx = 0;
+	C$Lab5.c$52$1$157 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:52: signed int gx = 0;
 	mov	_gx,a
 	mov	(_gx + 1),a
-	C$Lab5.c$52$1$156 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:52: signed int gy = 0;
+	C$Lab5.c$53$1$157 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:53: signed int gy = 0;
 	mov	_gy,a
 	mov	(_gy + 1),a
-	C$Lab5.c$53$1$156 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:53: signed char gx_adj = 0;
-;	1-genFromRTrack replaced	mov	_gx_adj,#0x00
+	C$Lab5.c$54$1$157 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:54: signed int gx_adj = 0;
 	mov	_gx_adj,a
-	C$Lab5.c$54$1$156 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:54: signed char gy_adj = 0;
-;	1-genFromRTrack replaced	mov	_gy_adj,#0x00
+	mov	(_gx_adj + 1),a
+	C$Lab5.c$55$1$157 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:55: signed int gy_adj = 0;
 	mov	_gy_adj,a
-	C$Lab5.c$55$1$156 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:55: unsigned char steer_gain = 0;
-;	1-genFromRTrack replaced	mov	_steer_gain,#0x00
+	mov	(_gy_adj + 1),a
+	C$Lab5.c$56$1$157 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:56: float steer_gain = 0;
 	mov	_steer_gain,a
-	C$Lab5.c$56$1$156 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:56: unsigned char drive_gain = 0;
-;	1-genFromRTrack replaced	mov	_drive_gain,#0x00
+	mov	(_steer_gain + 1),a
+	mov	(_steer_gain + 2),a
+	mov	(_steer_gain + 3),a
+	C$Lab5.c$57$1$157 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:57: float drive_gain = 0;
 	mov	_drive_gain,a
+	mov	(_drive_gain + 1),a
+	mov	(_drive_gain + 2),a
+	mov	(_drive_gain + 3),a
+	C$Lab5.c$58$1$157 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:58: unsigned char new_AD = 0;
+;	1-genFromRTrack replaced	mov	_new_AD,#0x00
+	mov	_new_AD,a
 	.area GSFINAL (CODE)
 	ljmp	__sdcc_program_startup
 ;--------------------------------------------------------
@@ -2378,39 +2394,39 @@ _Accel_Init:
 ;Allocation info for local variables in function 'main'
 ;------------------------------------------------------------
 	G$main$0$0 ==.
-	C$Lab5.c$61$1$103 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:61: void main(void)
+	C$Lab5.c$63$1$103 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:63: void main(void)
 ;	-----------------------------------------
 ;	 function main
 ;	-----------------------------------------
 _main:
-	C$Lab5.c$63$1$116 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:63: Sys_Init();     // System Initialization - MUST BE 1st EXECUTABLE STATEMENT
+	C$Lab5.c$65$1$117 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:65: Sys_Init();     // System Initialization - MUST BE 1st EXECUTABLE STATEMENT
 	lcall	_Sys_Init
-	C$Lab5.c$64$1$116 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:64: Port_Init();    
+	C$Lab5.c$66$1$117 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:66: Port_Init();    
 	lcall	_Port_Init
-	C$Lab5.c$65$1$116 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:65: Interrupt_Init();   
+	C$Lab5.c$67$1$117 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:67: Interrupt_Init();   
 	lcall	_Interrupt_Init
-	C$Lab5.c$66$1$116 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:66: PCA_Init();
+	C$Lab5.c$68$1$117 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:68: PCA_Init();
 	lcall	_PCA_Init
-	C$Lab5.c$67$1$116 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:67: ADC_Init();
+	C$Lab5.c$69$1$117 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:69: ADC_Init();
 	lcall	_ADC_Init
-	C$Lab5.c$68$1$116 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:68: SMB0_Init();
+	C$Lab5.c$70$1$117 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:70: SMB0_Init();
 	lcall	_SMB0_Init
-	C$Lab5.c$69$1$116 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:69: Accel_Init();
+	C$Lab5.c$71$1$117 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:71: Accel_Init();
 	lcall	_Accel_Init
-	C$Lab5.c$70$1$116 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:70: putchar('\r');  // Dummy write to serial port
+	C$Lab5.c$72$1$117 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:72: putchar('\r');  // Dummy write to serial port
 	mov	dpl,#0x0D
 	lcall	_putchar
-	C$Lab5.c$71$1$116 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:71: printf("\nStart\r\n");
+	C$Lab5.c$73$1$117 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:73: printf("\nStart\r\n");
 	mov	a,#___str_3
 	push	acc
 	mov	a,#(___str_3 >> 8)
@@ -2421,21 +2437,21 @@ _main:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$Lab5.c$72$1$116 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:72: PCA0CP0 = 0xFFFF - PW_CENTER;
+	C$Lab5.c$74$1$117 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:74: PCA0CP0 = 0xFFFF - PW_CENTER;
 	mov	((_PCA0CP0 >> 0) & 0xFF),#0x37
 	mov	((_PCA0CP0 >> 8) & 0xFF),#0xF5
-	C$Lab5.c$73$1$116 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:73: PCA0CP2 = 0xFFFF - PW_CENTER; //Car isn't moving to start
+	C$Lab5.c$75$1$117 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:75: PCA0CP2 = 0xFFFF - PW_CENTER; //Car isn't moving to start
 	mov	((_PCA0CP2 >> 0) & 0xFF),#0x37
 	mov	((_PCA0CP2 >> 8) & 0xFF),#0xF5
-	C$Lab5.c$74$1$116 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:74: Counts = 0;
+	C$Lab5.c$76$1$117 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:76: Counts = 0;
 	clr	a
 	mov	_Counts,a
 	mov	(_Counts + 1),a
-	C$Lab5.c$75$1$116 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:75: while (Counts < 1);  // Wait a long time (1s) for keypad & LCD to initialize
+	C$Lab5.c$77$1$117 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:77: while (Counts < 1);  // Wait a long time (1s) for keypad & LCD to initialize
 00101$:
 	clr	c
 	mov	a,_Counts
@@ -2443,11 +2459,14 @@ _main:
 	mov	a,(_Counts + 1)
 	subb	a,#0x00
 	jc	00101$
-	C$Lab5.c$76$1$116 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:76: Pick_Steering_Gain();
+	C$Lab5.c$78$1$117 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:78: Pick_Steering_Gain();
 	lcall	_Pick_Steering_Gain
-	C$Lab5.c$77$1$116 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:77: printf("\n\r------------DATA COLLECTION------------\n");
+	C$Lab5.c$79$1$117 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:79: Pick_Drive_Gain();
+	lcall	_Pick_Drive_Gain
+	C$Lab5.c$80$1$117 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:80: printf("\n\r------------DATA COLLECTION------------\n");
 	mov	a,#___str_4
 	push	acc
 	mov	a,#(___str_4 >> 8)
@@ -2458,27 +2477,8 @@ _main:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$Lab5.c$80$2$117 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:80: while(!RANGER_SWITCH && !COMPASS_SWITCH)
-00109$:
-	jnb	_RANGER_SWITCH,00145$
-	ljmp	00111$
-00145$:
-	jnb	_COMPASS_SWITCH,00146$
-	ljmp	00111$
-00146$:
-	C$Lab5.c$108$3$118 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:108: if(print_delay == 20)
-	mov	a,#0x14
-	cjne	a,_print_delay,00147$
-	sjmp	00148$
-00147$:
-	ljmp	00105$
-00148$:
-	C$Lab5.c$110$4$119 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:110: printf("\rX-Acceleration: %u\n", gx);
-	push	_gx
-	push	(_gx + 1)
+	C$Lab5.c$81$1$117 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:81: printf("\n\rX-Accel		|	Y-Accel		|	STEER_PW	|	DRIVE_PW\n\r");
 	mov	a,#___str_5
 	push	acc
 	mov	a,#(___str_5 >> 8)
@@ -2486,13 +2486,42 @@ _main:
 	mov	a,#0x80
 	push	acc
 	lcall	_printf
-	mov	a,sp
-	add	a,#0xfb
-	mov	sp,a
-	C$Lab5.c$111$4$119 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:111: printf("\rY-Acceleration: %u\n", gy);
+	dec	sp
+	dec	sp
+	dec	sp
+	C$Lab5.c$84$2$118 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:84: while(!RANGER_SWITCH && !COMPASS_SWITCH)	//These two switches act as run/stop switches
+00109$:
+	jb	_RANGER_SWITCH,00111$
+	jb	_COMPASS_SWITCH,00111$
+	C$Lab5.c$86$3$119 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:86: if(new_accel)	//If the accelerometer is ready to be read
+	mov	a,_new_accel
+	jz	00105$
+	C$Lab5.c$88$4$120 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:88: new_accel = 0;
+	mov	_new_accel,#0x00
+	C$Lab5.c$89$4$120 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:89: read_accel();
+	lcall	_read_accel
+	C$Lab5.c$90$4$120 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:90: set_PW();
+	lcall	_set_PW
+00105$:
+	C$Lab5.c$98$3$119 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:98: if(print_delay == 20)
+	mov	a,#0x14
+	cjne	a,_print_delay,00109$
+	C$Lab5.c$100$4$121 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:100: printf("\r%d		|	%d		|	%d		|	%d\n", gx, gy, STEER_PW, DRIVE_PW);
+	push	_DRIVE_PW
+	push	(_DRIVE_PW + 1)
+	push	_STEER_PW
+	push	(_STEER_PW + 1)
 	push	_gy
 	push	(_gy + 1)
+	push	_gx
+	push	(_gx + 1)
 	mov	a,#___str_6
 	push	acc
 	mov	a,#(___str_6 >> 8)
@@ -2501,313 +2530,211 @@ _main:
 	push	acc
 	lcall	_printf
 	mov	a,sp
-	add	a,#0xfb
+	add	a,#0xf5
 	mov	sp,a
-	C$Lab5.c$112$4$119 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:112: printf("\rSteering Gain: %u\n", steer_gain);
-	mov	r6,_steer_gain
-	mov	r7,#0x00
-	push	ar6
-	push	ar7
-	mov	a,#___str_7
-	push	acc
-	mov	a,#(___str_7 >> 8)
-	push	acc
-	mov	a,#0x80
-	push	acc
-	lcall	_printf
-	mov	a,sp
-	add	a,#0xfb
-	mov	sp,a
-	C$Lab5.c$113$4$119 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:113: printf("\rDrive Gain: %u\n", drive_gain);
-	mov	r6,_drive_gain
-	mov	r7,#0x00
-	push	ar6
-	push	ar7
-	mov	a,#___str_8
-	push	acc
-	mov	a,#(___str_8 >> 8)
-	push	acc
-	mov	a,#0x80
-	push	acc
-	lcall	_printf
-	mov	a,sp
-	add	a,#0xfb
-	mov	sp,a
-	C$Lab5.c$114$4$119 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:114: printf("\rVoltage: %u\n", voltage);
-	mov	r6,_voltage
-	mov	r7,#0x00
-	push	ar6
-	push	ar7
-	mov	a,#___str_9
-	push	acc
-	mov	a,#(___str_9 >> 8)
-	push	acc
-	mov	a,#0x80
-	push	acc
-	lcall	_printf
-	mov	a,sp
-	add	a,#0xfb
-	mov	sp,a
-	C$Lab5.c$115$4$119 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:115: printf("\rOverflows: %u\n", nCounts);
-	push	_nCounts
-	push	(_nCounts + 1)
-	mov	a,#___str_10
-	push	acc
-	mov	a,#(___str_10 >> 8)
-	push	acc
-	mov	a,#0x80
-	push	acc
-	lcall	_printf
-	mov	a,sp
-	add	a,#0xfb
-	mov	sp,a
-	C$Lab5.c$116$4$119 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:116: printf("\rSteering Pulsewidth: %u\n", STEER_PW);
-	push	_STEER_PW
-	push	(_STEER_PW + 1)
-	mov	a,#___str_11
-	push	acc
-	mov	a,#(___str_11 >> 8)
-	push	acc
-	mov	a,#0x80
-	push	acc
-	lcall	_printf
-	mov	a,sp
-	add	a,#0xfb
-	mov	sp,a
-	C$Lab5.c$117$4$119 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:117: printf("\rMotor Pulsewidth: %u\n", DRIVE_PW);
-	push	_DRIVE_PW
-	push	(_DRIVE_PW + 1)
-	mov	a,#___str_12
-	push	acc
-	mov	a,#(___str_12 >> 8)
-	push	acc
-	mov	a,#0x80
-	push	acc
-	lcall	_printf
-	mov	a,sp
-	add	a,#0xfb
-	mov	sp,a
-	C$Lab5.c$118$4$119 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:118: print_delay = 0;
+	C$Lab5.c$102$4$121 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:102: print_delay = 0;
 	mov	_print_delay,#0x00
-00105$:
-	C$Lab5.c$121$3$118 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:121: if(new_accel)
-	mov	a,_new_accel
-	jnz	00149$
-	ljmp	00109$
-00149$:
-	C$Lab5.c$123$4$120 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:123: new_accel = 0;
-	mov	_new_accel,#0x00
-	C$Lab5.c$124$4$120 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:124: read_accel();
-	lcall	_read_accel
-	ljmp	00109$
+	sjmp	00109$
 00111$:
-	C$Lab5.c$128$2$117 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:128: if(RANGER_SWITCH || COMPASS_SWITCH)
+	C$Lab5.c$108$2$118 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:108: if(RANGER_SWITCH || COMPASS_SWITCH)
 	jb	_RANGER_SWITCH,00112$
-	jb	_COMPASS_SWITCH,00151$
-	ljmp	00109$
-00151$:
+	jnb	_COMPASS_SWITCH,00109$
 00112$:
-	C$Lab5.c$130$3$121 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:130: PCA0CP0 = 0xFFFF - 2760;
+	C$Lab5.c$110$3$122 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:110: PCA0CP0 = 0xFFFF - 2760;
 	mov	((_PCA0CP0 >> 0) & 0xFF),#0x37
 	mov	((_PCA0CP0 >> 8) & 0xFF),#0xF5
-	C$Lab5.c$131$3$121 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:131: PCA0CP2 = 0xFFFF - 2760;
+	C$Lab5.c$111$3$122 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:111: PCA0CP2 = 0xFFFF - 2760;
 	mov	((_PCA0CP2 >> 0) & 0xFF),#0x37
 	mov	((_PCA0CP2 >> 8) & 0xFF),#0xF5
-	ljmp	00109$
-	C$Lab5.c$134$1$116 ==.
+	sjmp	00109$
+	C$Lab5.c$114$1$117 ==.
 	XG$main$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'Port_Init'
 ;------------------------------------------------------------
 	G$Port_Init$0$0 ==.
-	C$Lab5.c$138$1$116 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:138: void Port_Init(void)	
+	C$Lab5.c$118$1$117 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:118: void Port_Init(void)	
 ;	-----------------------------------------
 ;	 function Port_Init
 ;	-----------------------------------------
 _Port_Init:
-	C$Lab5.c$140$1$123 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:140: XBR0 = 0x27;
+	C$Lab5.c$120$1$124 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:120: XBR0 = 0x27;
 	mov	_XBR0,#0x27
-	C$Lab5.c$141$1$123 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:141: P1MDIN 	&= 0xDF;	// set pin 1.5 for analog input	
+	C$Lab5.c$121$1$124 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:121: P1MDIN 	&= 0xDF;	// set pin 1.5 for analog input	
 	anl	_P1MDIN,#0xDF
-	C$Lab5.c$142$1$123 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:142: P1MDOUT |= 0x05;	//set output pin for CEX0/2 in push-pull mode
+	C$Lab5.c$122$1$124 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:122: P1MDOUT |= 0x05;	//set output pin for CEX0/2 in push-pull mode
 	orl	_P1MDOUT,#0x05
-	C$Lab5.c$143$1$123 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:143: P1MDOUT &= 0xDF;	// set input pin for 1.5 to open-drain
+	C$Lab5.c$123$1$124 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:123: P1MDOUT &= 0xDF;	// set input pin for 1.5 to open-drain
 	anl	_P1MDOUT,#0xDF
-	C$Lab5.c$144$1$123 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:144: P1		|= ~0xDF;	// set input pin for 1.5 to high impedence
+	C$Lab5.c$124$1$124 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:124: P1		|= ~0xDF;	// set input pin for 1.5 to high impedence
 	mov	r7,_P1
 	mov	a,#0x20
 	orl	a,r7
 	mov	_P1,a
-	C$Lab5.c$145$1$123 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:145: P3MDOUT &= 0x7F;	// set input pin for 3.6/7 to open-drain
+	C$Lab5.c$125$1$124 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:125: P3MDOUT &= 0x7F;	// set input pin for 3.6/7 to open-drain
 	anl	_P3MDOUT,#0x7F
-	C$Lab5.c$146$1$123 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:146: P3		|= ~0x7F;	// set input pin for 3.6/7 to high impedence
+	C$Lab5.c$126$1$124 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:126: P3		|= ~0x7F;	// set input pin for 3.6/7 to high impedence
 	mov	r7,_P3
 	mov	a,#0x80
 	orl	a,r7
 	mov	_P3,a
-	C$Lab5.c$148$1$123 ==.
+	C$Lab5.c$128$1$124 ==.
 	XG$Port_Init$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'Interrupt_Init'
 ;------------------------------------------------------------
 	G$Interrupt_Init$0$0 ==.
-	C$Lab5.c$152$1$123 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:152: void Interrupt_Init(void)
+	C$Lab5.c$132$1$124 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:132: void Interrupt_Init(void)
 ;	-----------------------------------------
 ;	 function Interrupt_Init
 ;	-----------------------------------------
 _Interrupt_Init:
-	C$Lab5.c$154$1$125 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:154: IE |= 0x02;
+	C$Lab5.c$134$1$126 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:134: IE |= 0x02;
 	orl	_IE,#0x02
-	C$Lab5.c$155$1$125 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:155: EIE1 |= 0x08;
+	C$Lab5.c$135$1$126 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:135: EIE1 |= 0x08;
 	orl	_EIE1,#0x08
-	C$Lab5.c$156$1$125 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:156: EA = 1;
+	C$Lab5.c$136$1$126 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:136: EA = 1;
 	setb	_EA
-	C$Lab5.c$157$1$125 ==.
+	C$Lab5.c$137$1$126 ==.
 	XG$Interrupt_Init$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'PCA_Init'
 ;------------------------------------------------------------
 	G$PCA_Init$0$0 ==.
-	C$Lab5.c$161$1$125 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:161: void PCA_Init(void)
+	C$Lab5.c$141$1$126 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:141: void PCA_Init(void)
 ;	-----------------------------------------
 ;	 function PCA_Init
 ;	-----------------------------------------
 _PCA_Init:
-	C$Lab5.c$163$1$127 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:163: PCA0MD = 0x81;      // SYSCLK/12, enable CF interrupts, suspend when idle
+	C$Lab5.c$143$1$128 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:143: PCA0MD = 0x81;      // SYSCLK/12, enable CF interrupts, suspend when idle
 	mov	_PCA0MD,#0x81
-	C$Lab5.c$164$1$127 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:164: PCA0CPM0 = 0xC2;    // 16 bit, enable compare, enable PWM; NOT USED HERE
+	C$Lab5.c$144$1$128 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:144: PCA0CPM0 = 0xC2;    // 16 bit, enable compare, enable PWM; NOT USED HERE
 	mov	_PCA0CPM0,#0xC2
-	C$Lab5.c$165$1$127 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:165: PCA0CPM2 = 0xC2;
+	C$Lab5.c$145$1$128 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:145: PCA0CPM2 = 0xC2;
 	mov	_PCA0CPM2,#0xC2
-	C$Lab5.c$166$1$127 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:166: PCA0CN = 0x40;     // enable PCA
+	C$Lab5.c$146$1$128 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:146: PCA0CN = 0x40;     // enable PCA
 	mov	_PCA0CN,#0x40
-	C$Lab5.c$167$1$127 ==.
+	C$Lab5.c$147$1$128 ==.
 	XG$PCA_Init$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'SMB0_Init'
 ;------------------------------------------------------------
 	G$SMB0_Init$0$0 ==.
-	C$Lab5.c$171$1$127 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:171: void SMB0_Init(void)    // This was at the top, moved it here to call wait()
+	C$Lab5.c$151$1$128 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:151: void SMB0_Init(void)    // This was at the top, moved it here to call wait()
 ;	-----------------------------------------
 ;	 function SMB0_Init
 ;	-----------------------------------------
 _SMB0_Init:
-	C$Lab5.c$173$1$129 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:173: SMB0CR = 0x93;      // Set SCL to 100KHz
+	C$Lab5.c$153$1$130 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:153: SMB0CR = 0x93;      // Set SCL to 100KHz
 	mov	_SMB0CR,#0x93
-	C$Lab5.c$174$1$129 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:174: ENSMB = 1;          // Enable SMBUS0
+	C$Lab5.c$154$1$130 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:154: ENSMB = 1;          // Enable SMBUS0
 	setb	_ENSMB
-	C$Lab5.c$175$1$129 ==.
+	C$Lab5.c$155$1$130 ==.
 	XG$SMB0_Init$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'PCA_ISR'
 ;------------------------------------------------------------
 	G$PCA_ISR$0$0 ==.
-	C$Lab5.c$179$1$129 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:179: void PCA_ISR(void) __interrupt 9
+	C$Lab5.c$159$1$130 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:159: void PCA_ISR(void) __interrupt 9
 ;	-----------------------------------------
 ;	 function PCA_ISR
 ;	-----------------------------------------
 _PCA_ISR:
 	push	acc
 	push	psw
-	C$Lab5.c$181$1$131 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:181: if (CF)
-	C$Lab5.c$183$2$132 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:183: CF = 0;                     // clear the interrupt flag
+	C$Lab5.c$161$1$132 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:161: if (CF)
+	C$Lab5.c$163$2$133 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:163: CF = 0;                     // clear the interrupt flag
 	jbc	_CF,00119$
 	sjmp	00106$
 00119$:
-	C$Lab5.c$184$2$132 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:184: nCounts++;					// Counts overflows for initial delay
+	C$Lab5.c$164$2$133 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:164: nCounts++;					// Counts overflows for initial delay
 	inc	_nCounts
 	clr	a
 	cjne	a,_nCounts,00120$
 	inc	(_nCounts + 1)
 00120$:
-	C$Lab5.c$185$2$132 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:185: PCA0 = PCA_START;
+	C$Lab5.c$165$2$133 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:165: PCA0 = PCA_START;
 	mov	((_PCA0 >> 0) & 0xFF),#0x00
 	mov	((_PCA0 >> 8) & 0xFF),#0x70
-	C$Lab5.c$186$2$132 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:186: if (nCounts > 50)			//Initial one second delay
+	C$Lab5.c$166$2$133 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:166: if (nCounts > 50)			//Initial one second delay
 	clr	c
 	mov	a,#0x32
 	subb	a,_nCounts
 	clr	a
 	subb	a,(_nCounts + 1)
 	jnc	00102$
-	C$Lab5.c$189$3$133 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:189: Counts++;               // seconds counter
+	C$Lab5.c$169$3$134 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:169: Counts++;               // seconds counter
 	inc	_Counts
 	clr	a
 	cjne	a,_Counts,00122$
 	inc	(_Counts + 1)
 00122$:
 00102$:
-	C$Lab5.c$191$2$132 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:191: print_delay++;				// delay for print statements
+	C$Lab5.c$171$2$133 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:171: print_delay++;				// delay for print statements
 	inc	_print_delay
-	C$Lab5.c$192$2$132 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:192: a_count++;
+	C$Lab5.c$172$2$133 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:172: a_count++;
 	inc	_a_count
-	C$Lab5.c$193$2$132 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:193: if (a_count>=1)
+	C$Lab5.c$173$2$133 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:173: if (a_count>=1)
 	mov	a,#0x100 - 0x01
 	add	a,_a_count
 	jnc	00108$
-	C$Lab5.c$195$3$134 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:195: a_count = 0;
+	C$Lab5.c$175$3$135 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:175: a_count = 0;
 	mov	_a_count,#0x00
-	C$Lab5.c$196$3$134 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:196: new_accel = 1;
+	C$Lab5.c$176$3$135 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:176: new_accel = 1;
 	mov	_new_accel,#0x01
+	C$Lab5.c$177$3$135 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:177: new_AD = 1;
+	mov	_new_AD,#0x01
 	sjmp	00108$
 00106$:
-	C$Lab5.c$199$1$131 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:199: else PCA0CN &= 0xC0;           // clear all other 9-type interrupts
+	C$Lab5.c$180$1$132 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:180: else PCA0CN &= 0xC0;           // clear all other 9-type interrupts
 	anl	_PCA0CN,#0xC0
 00108$:
 	pop	psw
 	pop	acc
-	C$Lab5.c$200$1$131 ==.
+	C$Lab5.c$181$1$132 ==.
 	XG$PCA_ISR$0$0 ==.
 	reti
 ;	eliminated unneeded mov psw,# (no regs used in bank)
@@ -2818,22 +2745,22 @@ _PCA_ISR:
 ;Allocation info for local variables in function 'ADC_Init'
 ;------------------------------------------------------------
 	G$ADC_Init$0$0 ==.
-	C$Lab5.c$205$1$131 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:205: void ADC_Init(void)
+	C$Lab5.c$186$1$132 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:186: void ADC_Init(void)
 ;	-----------------------------------------
 ;	 function ADC_Init
 ;	-----------------------------------------
 _ADC_Init:
-	C$Lab5.c$207$1$136 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:207: REF0CN = 0x03; // Set Vref to use internal reference voltage (2.4 V)
+	C$Lab5.c$188$1$137 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:188: REF0CN = 0x03; // Set Vref to use internal reference voltage (2.4 V)
 	mov	_REF0CN,#0x03
-	C$Lab5.c$208$1$136 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:208: ADC1CN = 0x80; // Enable A/D converter (ADC1)
+	C$Lab5.c$189$1$137 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:189: ADC1CN = 0x80; // Enable A/D converter (ADC1)
 	mov	_ADC1CN,#0x80
-	C$Lab5.c$209$1$136 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:209: ADC1CF |= 0x01; // Set A/D converter gain to 1
+	C$Lab5.c$190$1$137 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:190: ADC1CF |= 0x01; // Set A/D converter gain to 1
 	orl	_ADC1CF,#0x01
-	C$Lab5.c$210$1$136 ==.
+	C$Lab5.c$191$1$137 ==.
 	XG$ADC_Init$0$0 ==.
 	ret
 ;------------------------------------------------------------
@@ -2842,31 +2769,31 @@ _ADC_Init:
 ;n                         Allocated to registers 
 ;------------------------------------------------------------
 	G$read_AD_input$0$0 ==.
-	C$Lab5.c$214$1$136 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:214: unsigned char read_AD_input(unsigned char n)
+	C$Lab5.c$195$1$137 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:195: unsigned char read_AD_input(unsigned char n)
 ;	-----------------------------------------
 ;	 function read_AD_input
 ;	-----------------------------------------
 _read_AD_input:
 	mov	_AMX1SL,dpl
-	C$Lab5.c$217$1$138 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:217: ADC1CN = ADC1CN & ~0x20; // Clear the "Conversion Completed" flag
+	C$Lab5.c$198$1$139 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:198: ADC1CN = ADC1CN & ~0x20; // Clear the "Conversion Completed" flag
 	mov	r7,_ADC1CN
 	mov	a,#0xDF
 	anl	a,r7
 	mov	_ADC1CN,a
-	C$Lab5.c$218$1$138 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:218: ADC1CN = ADC1CN | 0x10; // Initiate A/D conversion
+	C$Lab5.c$199$1$139 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:199: ADC1CN = ADC1CN | 0x10; // Initiate A/D conversion
 	orl	_ADC1CN,#0x10
-	C$Lab5.c$220$1$138 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:220: while ((ADC1CN & 0x20) == 0x00);// Wait for conversion to complete
+	C$Lab5.c$201$1$139 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:201: while ((ADC1CN & 0x20) == 0x00);// Wait for conversion to complete
 00101$:
 	mov	a,_ADC1CN
 	jnb	acc.5,00101$
-	C$Lab5.c$222$1$138 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:222: return ADC1; // Return digital value in ADC1 register
+	C$Lab5.c$203$1$139 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:203: return ADC1; // Return digital value in ADC1 register
 	mov	dpl,_ADC1
-	C$Lab5.c$223$1$138 ==.
+	C$Lab5.c$204$1$139 ==.
 	XG$read_AD_input$0$0 ==.
 	ret
 ;------------------------------------------------------------
@@ -2875,29 +2802,17 @@ _read_AD_input:
 ;input                     Allocated to registers r7 
 ;------------------------------------------------------------
 	G$Pick_Steering_Gain$0$0 ==.
-	C$Lab5.c$227$1$138 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:227: void Pick_Steering_Gain(void)
+	C$Lab5.c$208$1$139 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:208: void Pick_Steering_Gain(void)
 ;	-----------------------------------------
 ;	 function Pick_Steering_Gain
 ;	-----------------------------------------
 _Pick_Steering_Gain:
-	C$Lab5.c$230$1$140 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:230: printf("\rPlease select a desired steering gain.\n");
-	mov	a,#___str_13
+	C$Lab5.c$211$1$141 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:211: printf("\rPlease select a desired steering gain.\n");
+	mov	a,#___str_7
 	push	acc
-	mov	a,#(___str_13 >> 8)
-	push	acc
-	mov	a,#0x80
-	push	acc
-	lcall	_printf
-	dec	sp
-	dec	sp
-	dec	sp
-	C$Lab5.c$231$1$140 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:231: printf("\r'u' will increment by 1. 'd' will decrement by 1.\n");
-	mov	a,#___str_14
-	push	acc
-	mov	a,#(___str_14 >> 8)
+	mov	a,#(___str_7 >> 8)
 	push	acc
 	mov	a,#0x80
 	push	acc
@@ -2905,11 +2820,11 @@ _Pick_Steering_Gain:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$Lab5.c$232$1$140 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:232: printf("\r'f' when finished\n");
-	mov	a,#___str_15
+	C$Lab5.c$212$1$141 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:212: printf("\r'u' will increment by 0.1. 'd' will decrement by 0.1.\n");
+	mov	a,#___str_8
 	push	acc
-	mov	a,#(___str_15 >> 8)
+	mov	a,#(___str_8 >> 8)
 	push	acc
 	mov	a,#0x80
 	push	acc
@@ -2917,60 +2832,145 @@ _Pick_Steering_Gain:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$Lab5.c$233$2$141 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:233: while(1)
+	C$Lab5.c$213$1$141 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:213: printf("\r'f' when finished\n");
+	mov	a,#___str_9
+	push	acc
+	mov	a,#(___str_9 >> 8)
+	push	acc
+	mov	a,#0x80
+	push	acc
+	lcall	_printf
+	dec	sp
+	dec	sp
+	dec	sp
+	C$Lab5.c$214$1$141 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:214: while(1)
 00112$:
-	C$Lab5.c$235$2$141 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:235: input = getchar();
+	C$Lab5.c$216$2$142 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:216: input = getchar();
 	lcall	_getchar
 	mov	r7,dpl
-	C$Lab5.c$236$2$141 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:236: if(input == 'u') steer_gain += 1;
+	C$Lab5.c$217$2$142 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:217: if(input == 'u') steer_gain += 0.1;
 	cjne	r7,#0x75,00102$
-	inc	_steer_gain
+	push	ar7
+	mov	a,#0xCD
+	push	acc
+	dec	a
+	push	acc
+	push	acc
+	mov	a,#0x3D
+	push	acc
+	mov	dpl,_steer_gain
+	mov	dph,(_steer_gain + 1)
+	mov	b,(_steer_gain + 2)
+	mov	a,(_steer_gain + 3)
+	lcall	___fsadd
+	mov	_steer_gain,dpl
+	mov	(_steer_gain + 1),dph
+	mov	(_steer_gain + 2),b
+	mov	(_steer_gain + 3),a
+	mov	a,sp
+	add	a,#0xfc
+	mov	sp,a
+	pop	ar7
 00102$:
-	C$Lab5.c$237$2$141 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:237: if(input == 'd') steer_gain -= 1;
+	C$Lab5.c$218$2$142 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:218: if(input == 'd') steer_gain -= 0.1;
 	cjne	r7,#0x64,00104$
-	dec	_steer_gain
+	push	ar7
+	mov	a,#0xCD
+	push	acc
+	dec	a
+	push	acc
+	push	acc
+	mov	a,#0x3D
+	push	acc
+	mov	dpl,_steer_gain
+	mov	dph,(_steer_gain + 1)
+	mov	b,(_steer_gain + 2)
+	mov	a,(_steer_gain + 3)
+	lcall	___fssub
+	mov	_steer_gain,dpl
+	mov	(_steer_gain + 1),dph
+	mov	(_steer_gain + 2),b
+	mov	(_steer_gain + 3),a
+	mov	a,sp
+	add	a,#0xfc
+	mov	sp,a
+	pop	ar7
 00104$:
-	C$Lab5.c$238$2$141 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:238: if(input == 'f') return;
+	C$Lab5.c$219$2$142 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:219: if(input == 'f') return;
 	cjne	r7,#0x66,00106$
 	sjmp	00114$
 00106$:
-	C$Lab5.c$239$2$141 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:239: if(steer_gain >= 10) steer_gain = 10;
-	mov	a,#0x100 - 0x0A
-	add	a,_steer_gain
-	jnc	00108$
-	mov	_steer_gain,#0x0A
-00108$:
-	C$Lab5.c$240$2$141 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:240: if(steer_gain <= 0) steer_gain = 0;
-	mov	a,_steer_gain
-	jnz	00110$
-	mov	_steer_gain,a
-00110$:
-	C$Lab5.c$241$2$141 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:241: printf("\rDesired steering gain: %u\n", steer_gain);
-	mov	r6,_steer_gain
-	mov	r7,#0x00
-	push	ar6
-	push	ar7
-	mov	a,#___str_16
+	C$Lab5.c$220$1$141 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:220: if(steer_gain >= 1) steer_gain = 1;
+	clr	a
 	push	acc
-	mov	a,#(___str_16 >> 8)
 	push	acc
 	mov	a,#0x80
 	push	acc
-	lcall	_printf
+	mov	a,#0x3F
+	push	acc
+	mov	dpl,_steer_gain
+	mov	dph,(_steer_gain + 1)
+	mov	b,(_steer_gain + 2)
+	mov	a,(_steer_gain + 3)
+	lcall	___fslt
+	mov	r7,dpl
 	mov	a,sp
-	add	a,#0xfb
+	add	a,#0xfc
 	mov	sp,a
-	sjmp	00112$
+	mov	a,r7
+	jnz	00108$
+	mov	_steer_gain,a
+	mov	(_steer_gain + 1),a
+	mov	(_steer_gain + 2),#0x80
+	mov	(_steer_gain + 3),#0x3F
+00108$:
+	C$Lab5.c$221$1$141 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:221: if(steer_gain <= 0) steer_gain = 0;
+	clr	a
+	push	acc
+	push	acc
+	push	acc
+	push	acc
+	mov	dpl,_steer_gain
+	mov	dph,(_steer_gain + 1)
+	mov	b,(_steer_gain + 2)
+	mov	a,(_steer_gain + 3)
+	lcall	___fsgt
+	mov	r7,dpl
+	mov	a,sp
+	add	a,#0xfc
+	mov	sp,a
+	mov	a,r7
+	jnz	00110$
+	mov	_steer_gain,a
+	mov	(_steer_gain + 1),a
+	mov	(_steer_gain + 2),a
+	mov	(_steer_gain + 3),a
+00110$:
+	C$Lab5.c$222$2$142 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:222: printf_fast_f("\rDesired steering gain: %2.1f\n", steer_gain);
+	push	_steer_gain
+	push	(_steer_gain + 1)
+	push	(_steer_gain + 2)
+	push	(_steer_gain + 3)
+	mov	a,#___str_10
+	push	acc
+	mov	a,#(___str_10 >> 8)
+	push	acc
+	lcall	_printf_fast_f
+	mov	a,sp
+	add	a,#0xfa
+	mov	sp,a
+	ljmp	00112$
 00114$:
-	C$Lab5.c$243$1$140 ==.
+	C$Lab5.c$224$1$141 ==.
 	XG$Pick_Steering_Gain$0$0 ==.
 	ret
 ;------------------------------------------------------------
@@ -2979,29 +2979,17 @@ _Pick_Steering_Gain:
 ;input                     Allocated to registers r7 
 ;------------------------------------------------------------
 	G$Pick_Drive_Gain$0$0 ==.
-	C$Lab5.c$246$1$140 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:246: void Pick_Drive_Gain(void)
+	C$Lab5.c$227$1$141 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:227: void Pick_Drive_Gain(void)
 ;	-----------------------------------------
 ;	 function Pick_Drive_Gain
 ;	-----------------------------------------
 _Pick_Drive_Gain:
-	C$Lab5.c$249$1$143 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:249: printf("\rPlease select a desired drive gain.\n");
-	mov	a,#___str_17
+	C$Lab5.c$230$1$144 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:230: printf("\rPlease select a desired drive gain.\n");
+	mov	a,#___str_11
 	push	acc
-	mov	a,#(___str_17 >> 8)
-	push	acc
-	mov	a,#0x80
-	push	acc
-	lcall	_printf
-	dec	sp
-	dec	sp
-	dec	sp
-	C$Lab5.c$250$1$143 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:250: printf("\r'u' will increment by 1. 'd' will decrement by 1.\n");
-	mov	a,#___str_14
-	push	acc
-	mov	a,#(___str_14 >> 8)
+	mov	a,#(___str_11 >> 8)
 	push	acc
 	mov	a,#0x80
 	push	acc
@@ -3009,11 +2997,11 @@ _Pick_Drive_Gain:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$Lab5.c$251$1$143 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:251: printf("\r'f' when finished\n");
-	mov	a,#___str_15
+	C$Lab5.c$231$1$144 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:231: printf("\r'u' will increment by 0.1. 'd' will decrement by 0.1.\n");
+	mov	a,#___str_8
 	push	acc
-	mov	a,#(___str_15 >> 8)
+	mov	a,#(___str_8 >> 8)
 	push	acc
 	mov	a,#0x80
 	push	acc
@@ -3021,91 +3009,227 @@ _Pick_Drive_Gain:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$Lab5.c$252$2$144 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:252: while(1)
+	C$Lab5.c$232$1$144 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:232: printf("\r'f' when finished\n");
+	mov	a,#___str_9
+	push	acc
+	mov	a,#(___str_9 >> 8)
+	push	acc
+	mov	a,#0x80
+	push	acc
+	lcall	_printf
+	dec	sp
+	dec	sp
+	dec	sp
+	C$Lab5.c$233$1$144 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:233: while(1)
 00112$:
-	C$Lab5.c$254$2$144 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:254: input = getchar();
+	C$Lab5.c$235$2$145 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:235: input = getchar();
 	lcall	_getchar
 	mov	r7,dpl
-	C$Lab5.c$255$2$144 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:255: if(input == 'u') drive_gain += 1;
+	C$Lab5.c$236$2$145 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:236: if(input == 'u') drive_gain += 0.1;
 	cjne	r7,#0x75,00102$
-	inc	_drive_gain
+	push	ar7
+	mov	a,#0xCD
+	push	acc
+	dec	a
+	push	acc
+	push	acc
+	mov	a,#0x3D
+	push	acc
+	mov	dpl,_drive_gain
+	mov	dph,(_drive_gain + 1)
+	mov	b,(_drive_gain + 2)
+	mov	a,(_drive_gain + 3)
+	lcall	___fsadd
+	mov	_drive_gain,dpl
+	mov	(_drive_gain + 1),dph
+	mov	(_drive_gain + 2),b
+	mov	(_drive_gain + 3),a
+	mov	a,sp
+	add	a,#0xfc
+	mov	sp,a
+	pop	ar7
 00102$:
-	C$Lab5.c$256$2$144 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:256: if(input == 'd') drive_gain -= 1;
+	C$Lab5.c$237$2$145 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:237: if(input == 'd') drive_gain -= 0.1;
 	cjne	r7,#0x64,00104$
-	dec	_drive_gain
+	push	ar7
+	mov	a,#0xCD
+	push	acc
+	dec	a
+	push	acc
+	push	acc
+	mov	a,#0x3D
+	push	acc
+	mov	dpl,_drive_gain
+	mov	dph,(_drive_gain + 1)
+	mov	b,(_drive_gain + 2)
+	mov	a,(_drive_gain + 3)
+	lcall	___fssub
+	mov	_drive_gain,dpl
+	mov	(_drive_gain + 1),dph
+	mov	(_drive_gain + 2),b
+	mov	(_drive_gain + 3),a
+	mov	a,sp
+	add	a,#0xfc
+	mov	sp,a
+	pop	ar7
 00104$:
-	C$Lab5.c$257$2$144 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:257: if(input == 'f') return;
+	C$Lab5.c$238$2$145 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:238: if(input == 'f') return;
 	cjne	r7,#0x66,00106$
 	sjmp	00114$
 00106$:
-	C$Lab5.c$258$2$144 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:258: if(drive_gain >= 10) drive_gain = 10;
-	mov	a,#0x100 - 0x0A
-	add	a,_drive_gain
-	jnc	00108$
-	mov	_drive_gain,#0x0A
-00108$:
-	C$Lab5.c$259$2$144 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:259: if(drive_gain <= 0) drive_gain = 0;
-	mov	a,_drive_gain
-	jnz	00110$
-	mov	_drive_gain,a
-00110$:
-	C$Lab5.c$260$2$144 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:260: printf("\rDesired drive gain: %u\n", drive_gain);
-	mov	r6,_drive_gain
-	mov	r7,#0x00
-	push	ar6
-	push	ar7
-	mov	a,#___str_18
+	C$Lab5.c$239$1$144 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:239: if(drive_gain >= 1) drive_gain = 1;
+	clr	a
 	push	acc
-	mov	a,#(___str_18 >> 8)
 	push	acc
 	mov	a,#0x80
 	push	acc
-	lcall	_printf
+	mov	a,#0x3F
+	push	acc
+	mov	dpl,_drive_gain
+	mov	dph,(_drive_gain + 1)
+	mov	b,(_drive_gain + 2)
+	mov	a,(_drive_gain + 3)
+	lcall	___fslt
+	mov	r7,dpl
 	mov	a,sp
-	add	a,#0xfb
+	add	a,#0xfc
 	mov	sp,a
-	sjmp	00112$
+	mov	a,r7
+	jnz	00108$
+	mov	_drive_gain,a
+	mov	(_drive_gain + 1),a
+	mov	(_drive_gain + 2),#0x80
+	mov	(_drive_gain + 3),#0x3F
+00108$:
+	C$Lab5.c$240$1$144 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:240: if(drive_gain <= 0) drive_gain = 0;
+	clr	a
+	push	acc
+	push	acc
+	push	acc
+	push	acc
+	mov	dpl,_drive_gain
+	mov	dph,(_drive_gain + 1)
+	mov	b,(_drive_gain + 2)
+	mov	a,(_drive_gain + 3)
+	lcall	___fsgt
+	mov	r7,dpl
+	mov	a,sp
+	add	a,#0xfc
+	mov	sp,a
+	mov	a,r7
+	jnz	00110$
+	mov	_drive_gain,a
+	mov	(_drive_gain + 1),a
+	mov	(_drive_gain + 2),a
+	mov	(_drive_gain + 3),a
+00110$:
+	C$Lab5.c$241$2$145 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:241: printf_fast_f("\rDesired drive gain: %2.1f\n", drive_gain);
+	push	_drive_gain
+	push	(_drive_gain + 1)
+	push	(_drive_gain + 2)
+	push	(_drive_gain + 3)
+	mov	a,#___str_12
+	push	acc
+	mov	a,#(___str_12 >> 8)
+	push	acc
+	lcall	_printf_fast_f
+	mov	a,sp
+	add	a,#0xfa
+	mov	sp,a
+	ljmp	00112$
 00114$:
-	C$Lab5.c$262$1$143 ==.
+	C$Lab5.c$243$1$144 ==.
 	XG$Pick_Drive_Gain$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'set_PW'
 ;------------------------------------------------------------
 	G$set_PW$0$0 ==.
-	C$Lab5.c$266$1$143 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:266: void set_PW(void)
+	C$Lab5.c$247$1$144 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:247: void set_PW(void)
 ;	-----------------------------------------
 ;	 function set_PW
 ;	-----------------------------------------
 _set_PW:
-	C$Lab5.c$268$1$146 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:268: STEER_PW = 2760;
-	mov	_STEER_PW,#0xC8
-	mov	(_STEER_PW + 1),#0x0A
-	C$Lab5.c$275$1$146 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:275: if(STEER_PW > 3400)
+	C$Lab5.c$249$1$147 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:249: accelerometer_adjustment();
+	lcall	_accelerometer_adjustment
+	C$Lab5.c$250$1$147 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:250: STEER_PW = 2760 - (gx_adj);
+	mov	a,#0xC8
+	clr	c
+	subb	a,_gx_adj
+	mov	_STEER_PW,a
+	mov	a,#0x0A
+	subb	a,(_gx_adj + 1)
+	mov	(_STEER_PW + 1),a
+	C$Lab5.c$253$1$147 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:253: if(STEER_PW < 2100)
+	clr	c
+	mov	a,_STEER_PW
+	subb	a,#0x34
+	mov	a,(_STEER_PW + 1)
+	subb	a,#0x08
+	jnc	00102$
+	C$Lab5.c$255$2$148 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:255: STEER_PW = 2100;
+	mov	_STEER_PW,#0x34
+	mov	(_STEER_PW + 1),#0x08
+00102$:
+	C$Lab5.c$257$1$147 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:257: if(STEER_PW > 3400)
 	clr	c
 	mov	a,#0x48
 	subb	a,_STEER_PW
 	mov	a,#0x0D
 	subb	a,(_STEER_PW + 1)
 	jnc	00104$
-	C$Lab5.c$277$2$148 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:277: STEER_PW = 3400;
+	C$Lab5.c$259$2$149 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:259: STEER_PW = 3400;
 	mov	_STEER_PW,#0x48
 	mov	(_STEER_PW + 1),#0x0D
 00104$:
-	C$Lab5.c$279$1$146 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:279: PCA0CP0 = 0xFFFF - STEER_PW; // Change pulse width
+	C$Lab5.c$261$1$147 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:261: DRIVE_PW = 2760 + (gy_adj);
+	mov	a,#0xC8
+	add	a,_gy_adj
+	mov	_DRIVE_PW,a
+	mov	a,#0x0A
+	addc	a,(_gy_adj + 1)
+	mov	(_DRIVE_PW + 1),a
+	C$Lab5.c$262$1$147 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:262: if(DRIVE_PW < 2760) DRIVE_PW = 2760;
+	clr	c
+	mov	a,_DRIVE_PW
+	subb	a,#0xC8
+	mov	a,(_DRIVE_PW + 1)
+	subb	a,#0x0A
+	jnc	00106$
+	mov	_DRIVE_PW,#0xC8
+	mov	(_DRIVE_PW + 1),#0x0A
+00106$:
+	C$Lab5.c$263$1$147 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:263: if(DRIVE_PW > 3200) DRIVE_PW = 3200;
+	clr	c
+	mov	a,#0x80
+	subb	a,_DRIVE_PW
+	mov	a,#0x0C
+	subb	a,(_DRIVE_PW + 1)
+	jnc	00108$
+	mov	_DRIVE_PW,#0x80
+	mov	(_DRIVE_PW + 1),#0x0C
+00108$:
+	C$Lab5.c$264$1$147 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:264: PCA0CP0 = 0xFFFF - STEER_PW; // Change pulse width
 	mov	a,#0xFF
 	clr	c
 	subb	a,_STEER_PW
@@ -3113,152 +3237,235 @@ _set_PW:
 	mov	a,#0xFF
 	subb	a,(_STEER_PW + 1)
 	mov	((_PCA0CP0 >> 8) & 0xFF),a
-	C$Lab5.c$280$1$146 ==.
+	C$Lab5.c$265$1$147 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:265: PCA0CP2 = 0xFFFF - DRIVE_PW;
+	mov	a,#0xFF
+	clr	c
+	subb	a,_DRIVE_PW
+	mov	((_PCA0CP2 >> 0) & 0xFF),a
+	mov	a,#0xFF
+	subb	a,(_DRIVE_PW + 1)
+	mov	((_PCA0CP2 >> 8) & 0xFF),a
+	C$Lab5.c$266$1$147 ==.
 	XG$set_PW$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'accelerometer_adjustment'
 ;------------------------------------------------------------
 	G$accelerometer_adjustment$0$0 ==.
-	C$Lab5.c$290$1$146 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:290: void accelerometer_adjustment(void)
+	C$Lab5.c$276$1$147 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:276: void accelerometer_adjustment(void)
 ;	-----------------------------------------
 ;	 function accelerometer_adjustment
 ;	-----------------------------------------
 _accelerometer_adjustment:
-	C$Lab5.c$294$1$150 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:294: read_accel();
-	lcall	_read_accel
-	C$Lab5.c$295$1$150 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:295: gx_adj = 0;
-	mov	_gx_adj,#0x00
-	C$Lab5.c$296$1$150 ==.
+	C$Lab5.c$278$1$151 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:278: gx_adj = (int)((steer_gain)*(gx));
+	mov	dpl,_gx
+	mov	dph,(_gx + 1)
+	lcall	___sint2fs
+	mov	r4,dpl
+	mov	r5,dph
+	mov	r6,b
+	mov	r7,a
+	push	ar4
+	push	ar5
+	push	ar6
+	push	ar7
+	mov	dpl,_steer_gain
+	mov	dph,(_steer_gain + 1)
+	mov	b,(_steer_gain + 2)
+	mov	a,(_steer_gain + 3)
+	lcall	___fsmul
+	mov	r4,dpl
+	mov	r5,dph
+	mov	r6,b
+	mov	r7,a
+	mov	a,sp
+	add	a,#0xfc
+	mov	sp,a
+	mov	dpl,r4
+	mov	dph,r5
+	mov	b,r6
+	mov	a,r7
+	lcall	___fs2sint
+	mov	_gx_adj,dpl
+	mov	(_gx_adj + 1),dph
+	C$Lab5.c$279$1$151 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:279: gy_adj = (int)((drive_gain)*(gy));
+	mov	dpl,_gy
+	mov	dph,(_gy + 1)
+	lcall	___sint2fs
+	mov	r4,dpl
+	mov	r5,dph
+	mov	r6,b
+	mov	r7,a
+	push	ar4
+	push	ar5
+	push	ar6
+	push	ar7
+	mov	dpl,_drive_gain
+	mov	dph,(_drive_gain + 1)
+	mov	b,(_drive_gain + 2)
+	mov	a,(_drive_gain + 3)
+	lcall	___fsmul
+	mov	r4,dpl
+	mov	r5,dph
+	mov	r6,b
+	mov	r7,a
+	mov	a,sp
+	add	a,#0xfc
+	mov	sp,a
+	mov	dpl,r4
+	mov	dph,r5
+	mov	b,r6
+	mov	a,r7
+	lcall	___fs2sint
+	mov	_gy_adj,dpl
+	mov	(_gy_adj + 1),dph
+	C$Lab5.c$280$1$151 ==.
 	XG$accelerometer_adjustment$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'status_reg_a'
 ;------------------------------------------------------------
-;Data                      Allocated with name '_status_reg_a_Data_1_152'
+;Data                      Allocated with name '_status_reg_a_Data_1_153'
 ;addr                      Allocated to registers 
 ;------------------------------------------------------------
 	G$status_reg_a$0$0 ==.
-	C$Lab5.c$298$1$150 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:298: unsigned char status_reg_a(void)
+	C$Lab5.c$282$1$151 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:282: unsigned char status_reg_a(void)
 ;	-----------------------------------------
 ;	 function status_reg_a
 ;	-----------------------------------------
 _status_reg_a:
-	C$Lab5.c$302$1$152 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:302: i2c_read_data(addr, 0x27, Data, 2); // read two byte, starting at reg 0x27
-	mov	_i2c_read_data_PARM_3,#_status_reg_a_Data_1_152
+	C$Lab5.c$286$1$153 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:286: i2c_read_data(addr, 0x27, Data, 2); // read two byte, starting at reg 0x27
+	mov	_i2c_read_data_PARM_3,#_status_reg_a_Data_1_153
 	mov	(_i2c_read_data_PARM_3 + 1),#0x00
 	mov	(_i2c_read_data_PARM_3 + 2),#0x40
 	mov	_i2c_read_data_PARM_2,#0x27
 	mov	_i2c_read_data_PARM_4,#0x02
 	mov	dpl,#0x30
 	lcall	_i2c_read_data
-	C$Lab5.c$303$1$152 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:303: if (Data[0] && Data[1])
-	mov	a,_status_reg_a_Data_1_152
+	C$Lab5.c$287$1$153 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:287: if (Data[0] && Data[1])
+	mov	a,_status_reg_a_Data_1_153
 	jz	00102$
-	mov	a,(_status_reg_a_Data_1_152 + 0x0001)
+	mov	a,(_status_reg_a_Data_1_153 + 0x0001)
 	jz	00102$
-	C$Lab5.c$305$2$153 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:305: return 1;
+	C$Lab5.c$289$2$154 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:289: return 1;
 	mov	dpl,#0x01
 	sjmp	00105$
 00102$:
-	C$Lab5.c$309$2$154 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:309: return 0;
+	C$Lab5.c$293$2$155 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:293: return 0;
 	mov	dpl,#0x00
 00105$:
-	C$Lab5.c$311$1$152 ==.
+	C$Lab5.c$295$1$153 ==.
 	XG$status_reg_a$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'read_accel'
 ;------------------------------------------------------------
-;Data                      Allocated with name '_read_accel_Data_1_156'
-;addr                      Allocated with name '_read_accel_addr_1_156'
-;x_value                   Allocated to registers r3 r4 
+;Data                      Allocated with name '_read_accel_Data_1_157'
+;addr                      Allocated with name '_read_accel_addr_1_157'
+;x_value                   Allocated with name '_read_accel_x_value_1_157'
 ;y_value                   Allocated to registers r2 r7 
 ;i                         Allocated to registers 
+;j                         Allocated to registers r6 
 ;------------------------------------------------------------
 	G$read_accel$0$0 ==.
-	C$Lab5.c$313$1$152 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:313: void read_accel(void)
+	C$Lab5.c$297$1$153 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:297: void read_accel(void)
 ;	-----------------------------------------
 ;	 function read_accel
 ;	-----------------------------------------
 _read_accel:
-	C$Lab5.c$316$1$152 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:316: unsigned char addr = 0x30;
-	mov	_read_accel_addr_1_156,#0x30
-	C$Lab5.c$320$1$156 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:320: new_accel = 0;
-	C$Lab5.c$322$1$156 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:322: avg_gx = 0;
+	C$Lab5.c$301$1$153 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:301: unsigned char addr = 0x30;
+	mov	_read_accel_addr_1_157,#0x30
+	C$Lab5.c$307$1$157 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:307: new_accel = 0;
+	C$Lab5.c$308$1$157 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:308: j = 0;
+	C$Lab5.c$310$1$157 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:310: avg_gx = 0;
 	clr	a
 	mov	_new_accel,a
+	mov	r6,a
 	mov	_avg_gx,a
 	mov	(_avg_gx + 1),a
-	C$Lab5.c$323$1$156 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:323: avg_gy = 0;
+	C$Lab5.c$311$1$157 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:311: avg_gy = 0;
 	mov	_avg_gy,a
 	mov	(_avg_gy + 1),a
-	C$Lab5.c$324$1$156 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:324: if(status_reg_a())
+	C$Lab5.c$312$1$157 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:312: for (i=0; i<8; i++) //For 4 iterations (or maybe 8)
+	mov	r4,#0x00
+	mov	r5,#0x00
+	mov	ar3,r6
+00106$:
+	C$Lab5.c$316$2$158 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:316: if(status_reg_a())
+	push	ar5
+	push	ar4
+	push	ar3
 	lcall	_status_reg_a
 	mov	a,dpl
+	pop	ar3
+	pop	ar4
+	pop	ar5
 	jnz	00123$
-	ljmp	00108$
+	ljmp	00107$
 00123$:
-	C$Lab5.c$327$2$157 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:327: for (i=0; i<4; i++) //For 4 iterations (or maybe 8)
-	mov	r5,#0x00
-	mov	r6,#0x00
-00106$:
-	C$Lab5.c$331$3$158 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:331: if((Data[0] & 0x03) == 0x03)
-	mov	a,#0x03
-	anl	a,_read_accel_Data_1_156
-	mov	r4,a
-	cjne	r4,#0x03,00107$
-	C$Lab5.c$335$4$159 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:335: i2c_read_data(addr, 0x28|0x80, Data, 4); //assert MSB to read mult. Bytes
-	mov	_i2c_read_data_PARM_3,#_read_accel_Data_1_156
+	C$Lab5.c$320$3$159 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:320: i2c_read_data(addr, (0x28|0x80), Data, 4); //assert MSB to read mult. Bytes
+	mov	_i2c_read_data_PARM_3,#_read_accel_Data_1_157
 	mov	(_i2c_read_data_PARM_3 + 1),#0x00
 	mov	(_i2c_read_data_PARM_3 + 2),#0x40
 	mov	_i2c_read_data_PARM_2,#0xA8
 	mov	_i2c_read_data_PARM_4,#0x04
-	mov	dpl,_read_accel_addr_1_156
-	push	ar6
+	mov	dpl,_read_accel_addr_1_157
 	push	ar5
+	push	ar4
+	push	ar3
 	lcall	_i2c_read_data
+	pop	ar3
+	pop	ar4
 	pop	ar5
-	pop	ar6
-	C$Lab5.c$340$4$159 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:340: x_value = ((Data[1] << 8)>>4);
-	mov	r4,(_read_accel_Data_1_156 + 0x0001)
-	mov	r3,#0x00
-	mov	a,r4
+	C$Lab5.c$324$3$159 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:324: x_value = ((Data[1] << 8)>>4);
+	mov	r2,(_read_accel_Data_1_157 + 0x0001)
+	mov	a,(_read_accel_Data_1_157 + 0x0001)
+	rlc	a
+	subb	a,acc
+	mov	ar7,r2
+	mov	r2,#0x00
+	mov	_read_accel_x_value_1_157,r2
+	mov	a,r7
 	swap	a
-	xch	a,r3
+	xch	a,_read_accel_x_value_1_157
 	swap	a
 	anl	a,#0x0F
-	xrl	a,r3
-	xch	a,r3
+	xrl	a,_read_accel_x_value_1_157
+	xch	a,_read_accel_x_value_1_157
 	anl	a,#0x0F
-	xch	a,r3
-	xrl	a,r3
-	xch	a,r3
-	jnb	acc.3,00126$
+	xch	a,_read_accel_x_value_1_157
+	xrl	a,_read_accel_x_value_1_157
+	xch	a,_read_accel_x_value_1_157
+	jnb	acc.3,00124$
 	orl	a,#0xF0
-00126$:
-	mov	r4,a
-	C$Lab5.c$341$4$159 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:341: y_value = ((Data[3] << 8)>>4);
-	mov	r7,(_read_accel_Data_1_156 + 0x0003)
+00124$:
+	mov	(_read_accel_x_value_1_157 + 1),a
+	C$Lab5.c$325$3$159 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:325: y_value = ((Data[3] << 8)>>4);
+	mov	r2,(_read_accel_Data_1_157 + 0x0003)
+	mov	a,(_read_accel_Data_1_157 + 0x0003)
+	rlc	a
+	subb	a,acc
+	mov	ar7,r2
 	mov	r2,#0x00
 	mov	a,r7
 	swap	a
@@ -3271,80 +3478,75 @@ _read_accel:
 	xch	a,r2
 	xrl	a,r2
 	xch	a,r2
-	jnb	acc.3,00127$
+	jnb	acc.3,00125$
 	orl	a,#0xF0
-00127$:
+00125$:
 	mov	r7,a
-	C$Lab5.c$343$4$159 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:343: avg_gx += x_value; //a simple >>4 WILL NOT WORK;
-	mov	a,r3
+	C$Lab5.c$327$3$159 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:327: avg_gx += x_value; //a simple >>4 WILL NOT WORK;
+	mov	a,_read_accel_x_value_1_157
 	add	a,_avg_gx
 	mov	_avg_gx,a
-	mov	a,r4
+	mov	a,(_read_accel_x_value_1_157 + 1)
 	addc	a,(_avg_gx + 1)
 	mov	(_avg_gx + 1),a
-	C$Lab5.c$344$4$159 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:344: avg_gy += y_value; //it will not set the sign bit correctly
+	C$Lab5.c$328$3$159 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:328: avg_gy += y_value; //it will not set the sign bit correctly
 	mov	a,r2
 	add	a,_avg_gy
 	mov	_avg_gy,a
 	mov	a,r7
 	addc	a,(_avg_gy + 1)
 	mov	(_avg_gy + 1),a
+	C$Lab5.c$329$3$159 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:329: j++;
+	inc	r3
 00107$:
-	C$Lab5.c$327$2$157 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:327: for (i=0; i<4; i++) //For 4 iterations (or maybe 8)
+	C$Lab5.c$312$1$157 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:312: for (i=0; i<8; i++) //For 4 iterations (or maybe 8)
+	inc	r4
+	cjne	r4,#0x00,00126$
 	inc	r5
-	cjne	r5,#0x00,00128$
-	inc	r6
-00128$:
+00126$:
 	clr	c
+	mov	a,r4
+	subb	a,#0x08
 	mov	a,r5
-	subb	a,#0x04
-	mov	a,r6
 	xrl	a,#0x80
 	subb	a,#0x80
-	jnc	00129$
+	jnc	00127$
 	ljmp	00106$
-00129$:
-	C$Lab5.c$348$2$157 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:348: avg_gx = (avg_gx >> 2);
-	mov	a,(_avg_gx + 1)
-	clr	c
-	rrc	a
-	xch	a,_avg_gx
-	rrc	a
-	xch	a,_avg_gx
-	clr	c
-	rrc	a
-	xch	a,_avg_gx
-	rrc	a
-	xch	a,_avg_gx
-	mov	(_avg_gx + 1),a
-	C$Lab5.c$349$2$157 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:349: avg_gy = (avg_gy >> 2);
-	mov	a,(_avg_gy + 1)
-	clr	c
-	rrc	a
-	xch	a,_avg_gy
-	rrc	a
-	xch	a,_avg_gy
-	clr	c
-	rrc	a
-	xch	a,_avg_gy
-	rrc	a
-	xch	a,_avg_gy
-	mov	(_avg_gy + 1),a
-	C$Lab5.c$351$2$157 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:351: gx = avg_gx; //(or = avg_gx - x0 if nominal gx offset is known)
-	mov	_gx,_avg_gx
-	mov	(_gx + 1),(_avg_gx + 1)
-	C$Lab5.c$352$2$157 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5+6\Lab 5\Lab 5 Code\Lab5.c:352: gy = avg_gy; //(or = avg_gy - y0 if nominal gy offset is known)
-	mov	_gy,_avg_gy
-	mov	(_gy + 1),(_avg_gy + 1)
+00127$:
+	C$Lab5.c$333$1$157 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:333: if(j > 0) //This averages based on how many values we actually measured
+	mov	ar6,r3
+	mov	a,r6
+	jz	00108$
+	C$Lab5.c$335$2$160 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:335: gx = (avg_gx)/(j); //(or = avg_gx - x0 if nominal gx offset is known)
+	mov	r7,#0x00
+	mov	__divsint_PARM_2,r6
+	mov	(__divsint_PARM_2 + 1),r7
+	mov	dpl,_avg_gx
+	mov	dph,(_avg_gx + 1)
+	push	ar7
+	push	ar6
+	lcall	__divsint
+	mov	_gx,dpl
+	mov	(_gx + 1),dph
+	pop	ar6
+	pop	ar7
+	C$Lab5.c$336$1$157 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:336: gy = (avg_gy)/(j); //(or = avg_gy - y0 if nominal gy offset is known)
+	mov	__divsint_PARM_2,r6
+	mov	(__divsint_PARM_2 + 1),r7
+	mov	dpl,_avg_gy
+	mov	dph,(_avg_gy + 1)
+	lcall	__divsint
+	mov	_gy,dpl
+	mov	(_gy + 1),dph
 00108$:
-	C$Lab5.c$354$1$156 ==.
+	C$Lab5.c$338$1$157 ==.
 	XG$read_accel$0$0 ==.
 	ret
 	.area CSEG    (CODE)
@@ -3378,86 +3580,81 @@ ___str_4:
 	.db 0x00
 FLab5$__str_5$0$0 == .
 ___str_5:
-	.db 0x0D
-	.ascii "X-Acceleration: %u"
 	.db 0x0A
+	.db 0x0D
+	.ascii "X-Accel"
+	.db 0x09
+	.db 0x09
+	.ascii "|"
+	.db 0x09
+	.ascii "Y-Accel"
+	.db 0x09
+	.db 0x09
+	.ascii "|"
+	.db 0x09
+	.ascii "STEER_PW"
+	.db 0x09
+	.ascii "|"
+	.db 0x09
+	.ascii "DRIVE_PW"
+	.db 0x0A
+	.db 0x0D
 	.db 0x00
 FLab5$__str_6$0$0 == .
 ___str_6:
 	.db 0x0D
-	.ascii "Y-Acceleration: %u"
+	.ascii "%d"
+	.db 0x09
+	.db 0x09
+	.ascii "|"
+	.db 0x09
+	.ascii "%d"
+	.db 0x09
+	.db 0x09
+	.ascii "|"
+	.db 0x09
+	.ascii "%d"
+	.db 0x09
+	.db 0x09
+	.ascii "|"
+	.db 0x09
+	.ascii "%d"
 	.db 0x0A
 	.db 0x00
 FLab5$__str_7$0$0 == .
 ___str_7:
 	.db 0x0D
-	.ascii "Steering Gain: %u"
+	.ascii "Please select a desired steering gain."
 	.db 0x0A
 	.db 0x00
 FLab5$__str_8$0$0 == .
 ___str_8:
 	.db 0x0D
-	.ascii "Drive Gain: %u"
+	.ascii "'u' will increment by 0.1. 'd' will decrement by 0.1."
 	.db 0x0A
 	.db 0x00
 FLab5$__str_9$0$0 == .
 ___str_9:
 	.db 0x0D
-	.ascii "Voltage: %u"
+	.ascii "'f' when finished"
 	.db 0x0A
 	.db 0x00
 FLab5$__str_10$0$0 == .
 ___str_10:
 	.db 0x0D
-	.ascii "Overflows: %u"
+	.ascii "Desired steering gain: %2.1f"
 	.db 0x0A
 	.db 0x00
 FLab5$__str_11$0$0 == .
 ___str_11:
 	.db 0x0D
-	.ascii "Steering Pulsewidth: %u"
+	.ascii "Please select a desired drive gain."
 	.db 0x0A
 	.db 0x00
 FLab5$__str_12$0$0 == .
 ___str_12:
 	.db 0x0D
-	.ascii "Motor Pulsewidth: %u"
-	.db 0x0A
-	.db 0x00
-FLab5$__str_13$0$0 == .
-___str_13:
-	.db 0x0D
-	.ascii "Please select a desired steering gain."
-	.db 0x0A
-	.db 0x00
-FLab5$__str_14$0$0 == .
-___str_14:
-	.db 0x0D
-	.ascii "'u' will increment by 1. 'd' will decrement by 1."
-	.db 0x0A
-	.db 0x00
-FLab5$__str_15$0$0 == .
-___str_15:
-	.db 0x0D
-	.ascii "'f' when finished"
-	.db 0x0A
-	.db 0x00
-FLab5$__str_16$0$0 == .
-___str_16:
-	.db 0x0D
-	.ascii "Desired steering gain: %u"
-	.db 0x0A
-	.db 0x00
-FLab5$__str_17$0$0 == .
-___str_17:
-	.db 0x0D
-	.ascii "Please select a desired drive gain."
-	.db 0x0A
-	.db 0x00
-FLab5$__str_18$0$0 == .
-___str_18:
-	.db 0x0D
-	.ascii "Desired drive gain: %u"
+	.ascii "Desired drive gain: %2.1f"
 	.db 0x0A
 	.db 0x00
 	.area XINIT   (CODE)

@@ -32,10 +32,11 @@ void set_PW(void);
 unsigned char read_AD_input(unsigned char n);
 void read_accel(void);
 void Pick_Steering_Gain(void);
+void Pick_Drive_Gain(void);
 
 // Global variables
-unsigned int avg_gx = 0;
-unsigned int avg_gy = 0;
+signed int avg_gx = 0;
+signed int avg_gy = 0;
 unsigned int Counts, nCounts;
 unsigned char a_count = 0;
 unsigned char delay = 0;
@@ -50,10 +51,11 @@ unsigned char voltage = 0;
 unsigned char print_delay = 0;
 signed int gx = 0;
 signed int gy = 0;
-signed char gx_adj = 0;
-signed char gy_adj = 0;
-unsigned char steer_gain = 0;
-unsigned char drive_gain = 0;
+signed int gx_adj = 0;
+signed int gy_adj = 0;
+float steer_gain = 0;
+float drive_gain = 0;
+unsigned char new_AD = 0;
 
 //=============================================================================
 //-----------------------------------------------------------------------------
@@ -74,55 +76,33 @@ void main(void)
 	Counts = 0;
     while (Counts < 1);  // Wait a long time (1s) for keypad & LCD to initialize
 	Pick_Steering_Gain();
+	Pick_Drive_Gain();
 	printf("\n\r------------DATA COLLECTION------------\n");
+	printf("\n\rX-Accel		|	Y-Accel		|	STEER_PW	|	DRIVE_PW\n\r");
 	while (1)
     {
-		while(!RANGER_SWITCH && !COMPASS_SWITCH)
+		while(!RANGER_SWITCH && !COMPASS_SWITCH)	//These two switches act as run/stop switches
 		{
-			/*if ((new_range)) // enough overflow for a new range
-			{
-				new_range = 0;	//clear and wait for next ping
-				range = read_ranger();	// Read the distance
-				if (range != 0xFFFF) //Ignores dummy values from the ranger
-				{
-					if(range < 18) PCA0CP2 = 0xFFFF - PW_CENTER; //Stop if near an object
-					else PCA0CP2 = 0xFFFF - 3300; //Car moves at a constant speed otherwise
-
-					// read_range must start a new ping after a read	
-				}
-				else   // extraneous value read in; ignore and keep moving
-				{
-					range_adj = 0;
-				}
-			}
-			AD_Result = read_AD_input(5); //Read analog input on pin 1.5
-			voltage = ((12.8/255)*(AD_Result)); //Convert back to input voltage
-			if((new_heading))	// enough overflow for a new heading
-			{
-				new_heading = 0;
-				heading = read_compass();	
-				//printf("\rThe current direction is %u\n", heading);
-				set_PW(); // Adjust pulsewidth based on error function
-			}
-			*/
-			if(print_delay == 20)
-			{
-				printf("\rX-Acceleration: %u\n", gx);
-				printf("\rY-Acceleration: %u\n", gy);
-				printf("\rSteering Gain: %u\n", steer_gain);
-				printf("\rDrive Gain: %u\n", drive_gain);
-				printf("\rVoltage: %u\n", voltage);
-				printf("\rOverflows: %u\n", nCounts);
-				printf("\rSteering Pulsewidth: %u\n", STEER_PW);
-				printf("\rMotor Pulsewidth: %u\n", DRIVE_PW);
-				print_delay = 0;
-
-			}
-			if(new_accel)
+			if(new_accel)	//If the accelerometer is ready to be read
 			{
 				new_accel = 0;
 				read_accel();
+				set_PW();
 			}
+		/*	if(new_AD)
+			{
+				new_AD = 0;
+				AD_Result = read_AD_input(5); //Read analog input on pin 1.5
+				voltage = ((12.8/255)*(AD_Result)); //Convert back to input voltage
+			}*/
+			if(print_delay == 20)
+			{
+				printf("\r%d		|	%d		|	%d		|	%d\n", gx, gy, STEER_PW, DRIVE_PW);
+
+				print_delay = 0;
+
+			}
+			
 			// Output the results for transfer into excel
 	    }
 		if(RANGER_SWITCH || COMPASS_SWITCH)
@@ -194,6 +174,7 @@ void PCA_ISR(void) __interrupt 9
 		{
 			a_count = 0;
 			new_accel = 1;
+			new_AD = 1;
 		}
      }
      else PCA0CN &= 0xC0;           // clear all other 9-type interrupts
@@ -228,17 +209,17 @@ void Pick_Steering_Gain(void)
 {
 	char input;
 	printf("\rPlease select a desired steering gain.\n");
-	printf("\r'u' will increment by 1. 'd' will decrement by 1.\n");
+	printf("\r'u' will increment by 0.1. 'd' will decrement by 0.1.\n");
 	printf("\r'f' when finished\n");
 	while(1)
 	{
 		input = getchar();
-		if(input == 'u') steer_gain += 1;
-		if(input == 'd') steer_gain -= 1;
+		if(input == 'u') steer_gain += 0.1;
+		if(input == 'd') steer_gain -= 0.1;
 		if(input == 'f') return;
-		if(steer_gain >= 10) steer_gain = 10;
+		if(steer_gain >= 1) steer_gain = 1;
 		if(steer_gain <= 0) steer_gain = 0;
-		printf("\rDesired steering gain: %u\n", steer_gain);
+		printf_fast_f("\rDesired steering gain: %2.1f\n", steer_gain);
 	}
 }
 //-----------------------------------------------------------------------------
@@ -247,17 +228,17 @@ void Pick_Drive_Gain(void)
 {
 	char input;
 	printf("\rPlease select a desired drive gain.\n");
-	printf("\r'u' will increment by 1. 'd' will decrement by 1.\n");
+	printf("\r'u' will increment by 0.1. 'd' will decrement by 0.1.\n");
 	printf("\r'f' when finished\n");
 	while(1)
 	{
 		input = getchar();
-		if(input == 'u') drive_gain += 1;
-		if(input == 'd') drive_gain -= 1;
+		if(input == 'u') drive_gain += 0.1;
+		if(input == 'd') drive_gain -= 0.1;
 		if(input == 'f') return;
-		if(drive_gain >= 10) drive_gain = 10;
+		if(drive_gain >= 1) drive_gain = 1;
 		if(drive_gain <= 0) drive_gain = 0;
-		printf("\rDesired drive gain: %u\n", drive_gain);
+		printf_fast_f("\rDesired drive gain: %2.1f\n", drive_gain);
 	}
 }
 
@@ -265,7 +246,8 @@ void Pick_Drive_Gain(void)
 //Adjusting the motor speed
 void set_PW(void)
 {
-	STEER_PW = 2760;
+	accelerometer_adjustment();
+	STEER_PW = 2760 - (gx_adj);
 	//Stay within limits of the servo
 	//Depending on the car, these numbers may need to be determined using Lab 3-1 - Steering
 	if(STEER_PW < 2100)
@@ -276,12 +258,16 @@ void set_PW(void)
 	{
 		STEER_PW = 3400;
 	}
+	DRIVE_PW = 2760 + (gy_adj);
+	if(DRIVE_PW < 2760) DRIVE_PW = 2760;
+	if(DRIVE_PW > 3200) DRIVE_PW = 3200;
 	PCA0CP0 = 0xFFFF - STEER_PW; // Change pulse width
+	PCA0CP2 = 0xFFFF - DRIVE_PW;
 }
 
 // =============================================================================
-// Revise the C code used in Lab 4. Write a function that first calls the
-// accelerometer initialization routine and then calls a read_accel() function
+// Revise the C code used in Lab 4. Write a  that first calls the
+// accelerometer initialization routine and then calls a refunctionad_accel() function
 // and sets the PWM for the steering servo based on the side-to-side tilt of the
 // car so that is turns in the direction of the upward slope. Both the
 // side-to-side tilt and the front-to-back tilt will be used to determine a PWM
@@ -289,10 +275,8 @@ void set_PW(void)
 // from the accelerometer each time, since there is noise on the signal.
 void accelerometer_adjustment(void)
 {
-	
-	//calls the accelerometer initialization routine
-	read_accel();
-	gx_adj = 0;
+	gx_adj = (int)((steer_gain)*(gx));
+	gy_adj = (int)((drive_gain)*(gy));
 }
 // returns 1 if the accelerometer is ready to be read
 unsigned char status_reg_a(void)
@@ -312,45 +296,45 @@ unsigned char status_reg_a(void)
 
 void read_accel(void)
 {
-	unsigned char Data[4];
+	//Note that the accelerometer gives values in tenths of g. i.e. 980 = g
+	signed char Data[4];
 	unsigned char addr = 0x30;
 	signed int x_value;
 	signed int y_value;
+	int i;
+	unsigned char j = 0;
 	//Wait one 20ms cycle to avoid hitting the SMB too frequently and locking it up - included in PCA_ISR
 	new_accel = 0;
+	j = 0;
 	//Clear the averages
 	avg_gx = 0;
 	avg_gy = 0;
-	if(status_reg_a())
+	for (i=0; i<8; i++) //For 4 iterations (or maybe 8)
 	{
-		int i;
-		for (i=0; i<4; i++) //For 4 iterations (or maybe 8)
+		//Read status_reg_a into Data[0] (register 0x27, status_reg_a, indicates when data is ready)
+		//Make sure the 2 LSbits are high: (Data[0] & 0x03) == 0x03
+		if(status_reg_a())
 		{
-			//Read status_reg_a into Data[0] (register 0x27, status_reg_a, indicates when data is ready)
-			//Make sure the 2 LSbits are high: (Data[0] & 0x03) == 0x03
-			if((Data[0] & 0x03) == 0x03)
-			{
-				//Read 4 registers starting with 0x28. NOTE: this SMB device follows a modified protocol. To
-				//read multiple registers the MSbit of the first register value must be high:
-				i2c_read_data(addr, 0x28|0x80, Data, 4); //assert MSB to read mult. Bytes
-					//Discard the low byte, and extend the high byte sign to form a 16-bit acceleration
-					//value and then shift value to the low 12 bits of the 16-bit integer.
-					//Accumulate sum for averaging.
-				//read_heading =((Data[0] << 24) | Data[1] << 16 | Data[2] << 8 | Data[3]); //combine the four values
-				x_value = ((Data[1] << 8)>>4);
-				y_value = ((Data[3] << 8)>>4);
-
-				avg_gx += x_value; //a simple >>4 WILL NOT WORK;
-				avg_gy += y_value; //it will not set the sign bit correctly
-			}
-		} //Done with 4 iterations
-		//Finish calculating averages.
-		avg_gx = (avg_gx >> 2);
-		avg_gy = (avg_gy >> 2);
-		//Set global variables and remove constant offset, if known.
-		gx = avg_gx; //(or = avg_gx - x0 if nominal gx offset is known)
-		gy = avg_gy; //(or = avg_gy - y0 if nominal gy offset is known)
+			//Read 4 registers starting with 0x28. NOTE: this SMB device follows a modified protocol. To
+			//read multiple registers the MSbit of the first register value must be high:
+			i2c_read_data(addr, (0x28|0x80), Data, 4); //assert MSB to read mult. Bytes
+				//Discard the low byte, and extend the high byte sign to form a 16-bit acceleration
+				//value and then shift value to the low 12 bits of the 16-bit integer.
+				//Accumulate sum for averaging.
+			x_value = ((Data[1] << 8)>>4);
+			y_value = ((Data[3] << 8)>>4);
+			//These lines convert the value from the registers into a 12-bit integer
+			avg_gx += x_value; //a simple >>4 WILL NOT WORK;
+			avg_gy += y_value; //it will not set the sign bit correctly
+			j++;
+		}
 	}
+		//Set global variables and remove constant offset, if known.
+		if(j > 0) //This averages based on how many values we actually measured
+		{
+			gx = (avg_gx)/(j); //(or = avg_gx - x0 if nominal gx offset is known)
+			gy = (avg_gy)/(j); //(or = avg_gy - y0 if nominal gy offset is known)
+		}
 }
 
 // =============================================================================
