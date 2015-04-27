@@ -39,6 +39,7 @@ signed int avg_gx = 0;
 signed int avg_gy = 0;
 unsigned int Counts, nCounts;
 unsigned char a_count = 0;
+unsigned char adc_count = 0;
 unsigned char delay = 0;
 unsigned char new_accel = 0;
 unsigned int DRIVE_PW = 2760;
@@ -74,11 +75,15 @@ void main(void)
 	PCA0CP0 = 0xFFFF - PW_CENTER;
 	PCA0CP2 = 0xFFFF - PW_CENTER; //Car isn't moving to start
 	Counts = 0;
-    while (Counts < 1);  // Wait a long time (1s) for keypad & LCD to initialize
+    while (Counts < 1);  // Wait a long time (1s) for motors to initialize
 	Pick_Steering_Gain();
 	Pick_Drive_Gain();
+	printf("\rThe car will move quickly at first to move up the ramp\n");
+	Counts = 0;
+	nCounts = 0;
+	while(Counts <=1) PCA0CP2 = 0xFFFF - 3200;
 	printf("\n\r------------DATA COLLECTION------------\n");
-	printf("\n\rX-Accel		|	Y-Accel		|	STEER_PW	|	DRIVE_PW\n\r");
+	printf("\n\rX-Accel		|	Y-Accel		|	STEER_PW	|	DRIVE_PW	|	ADC\n\r");
 	while (1)
     {
 		while(!RANGER_SWITCH && !COMPASS_SWITCH)	//These two switches act as run/stop switches
@@ -89,15 +94,15 @@ void main(void)
 				read_accel();
 				set_PW();
 			}
-		/*	if(new_AD)
+			if(new_AD)
 			{
 				new_AD = 0;
-				AD_Result = read_AD_input(5); //Read analog input on pin 1.5
+				AD_Result = read_AD_input(7); //Read analog input on pin 1.5
 				voltage = ((12.8/255)*(AD_Result)); //Convert back to input voltage
-			}*/
+			}
 			if(print_delay == 20)
 			{
-				printf("\r%d		|	%d		|	%d		|	%d\n", gx, gy, STEER_PW, DRIVE_PW);
+				printf("\r%d		|	%d		|	%d		|	%d		|	%d\n", gx, gy, STEER_PW, DRIVE_PW, AD_Result);
 
 				print_delay = 0;
 
@@ -109,6 +114,8 @@ void main(void)
 		{
 			PCA0CP0 = 0xFFFF - 2760;
 			PCA0CP2 = 0xFFFF - 2760;
+			Pick_Steering_Gain();
+			Pick_Drive_Gain();
 		}
 }
 }
@@ -118,10 +125,10 @@ void main(void)
 void Port_Init(void)	
 {
     XBR0 = 0x27;
-	P1MDIN 	&= 0xDF;	// set pin 1.5 for analog input	
+	P1MDIN 	&= 0x7F;	// set pin 1.5 for analog input	
 	P1MDOUT |= 0x05;	//set output pin for CEX0/2 in push-pull mode
-	P1MDOUT &= 0xDF;	// set input pin for 1.5 to open-drain
-	P1		|= ~0xDF;	// set input pin for 1.5 to high impedence
+	P1MDOUT &= 0x7F;	// set input pin for 1.5 to open-drain
+	P1		|= ~0x7F;	// set input pin for 1.5 to high impedence
 	P3MDOUT &= 0x7F;	// set input pin for 3.6/7 to open-drain
 	P3		|= ~0x7F;	// set input pin for 3.6/7 to high impedence
 	
@@ -174,6 +181,11 @@ void PCA_ISR(void) __interrupt 9
 		{
 			a_count = 0;
 			new_accel = 1;
+		}
+		adc_count++;
+		if(adc_count >=10)
+		{
+			adc_count = 0;
 			new_AD = 1;
 		}
      }
@@ -195,11 +207,11 @@ void ADC_Init(void)
 unsigned char read_AD_input(unsigned char n)
 {
 	AMX1SL = n; // Set P1.n as the analog input for ADC1
-	ADC1CN = ADC1CN & ~0x20; // Clear the "Conversion Completed" flag
+	ADC1CN = ADC1CN & ~0x20; // Clear the "Conversion Completed" flag
 	ADC1CN = ADC1CN | 0x10; // Initiate A/D conversion
 
 	while ((ADC1CN & 0x20) == 0x00);// Wait for conversion to complete
-
+	
 	return ADC1; // Return digital value in ADC1 register
 }
 
@@ -275,7 +287,8 @@ void set_PW(void)
 // from the accelerometer each time, since there is noise on the signal.
 void accelerometer_adjustment(void)
 {
-	gx_adj = (int)((steer_gain)*(gx));
+	if((gx > -100) && (gx < 100)) gx_adj = 0;
+	else gx_adj = (int)((steer_gain)*(gx));
 	gy_adj = (int)((drive_gain)*(gy));
 }
 // returns 1 if the accelerometer is ready to be read
@@ -296,7 +309,7 @@ unsigned char status_reg_a(void)
 
 void read_accel(void)
 {
-	//Note that the accelerometer gives values in tenths of g. i.e. 980 = g
+	//Note that the accelerometer gives values in hundredths of g. i.e. 980 = g
 	signed char Data[4];
 	unsigned char addr = 0x30;
 	signed int x_value;
