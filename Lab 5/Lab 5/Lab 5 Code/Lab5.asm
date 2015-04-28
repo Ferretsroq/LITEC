@@ -1,7 +1,7 @@
 ;--------------------------------------------------------
 ; File Created by SDCC : free open source ANSI-C Compiler
 ; Version 3.4.0 #8981 (Apr  5 2014) (MINGW32)
-; This file was generated Sun Apr 26 20:06:02 2015
+; This file was generated Tue Apr 28 12:50:31 2015
 ;--------------------------------------------------------
 	.module Lab5
 	.optsdcc -mmcs51 --model-small
@@ -2495,16 +2495,16 @@ _main:
 	mov	_nCounts,a
 	mov	(_nCounts + 1),a
 	C$Lab5.c$84$1$117 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:84: while(Counts <=1) PCA0CP2 = 0xFFFF - 3200;
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:84: while(Counts <=2) PCA0CP2 = 0xFFFF - 3500;
 00104$:
 	clr	c
-	mov	a,#0x01
+	mov	a,#0x02
 	subb	a,_Counts
 	clr	a
 	subb	a,(_Counts + 1)
 	jc	00106$
-	mov	((_PCA0CP2 >> 0) & 0xFF),#0x7F
-	mov	((_PCA0CP2 >> 8) & 0xFF),#0xF3
+	mov	((_PCA0CP2 >> 0) & 0xFF),#0x53
+	mov	((_PCA0CP2 >> 8) & 0xFF),#0xF2
 	sjmp	00104$
 00106$:
 	C$Lab5.c$85$1$117 ==.
@@ -2520,7 +2520,7 @@ _main:
 	dec	sp
 	dec	sp
 	C$Lab5.c$86$1$117 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:86: printf("\n\rX-Accel		|	Y-Accel		|	STEER_PW	|	DRIVE_PW	|	ADC\n\r");
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:86: printf("\n\rX-Accel		|	Y-Accel		|	STEER_PW	|	DRIVE_PW\n\r");
 	mov	a,#___str_6
 	push	acc
 	mov	a,#(___str_6 >> 8)
@@ -2600,11 +2600,7 @@ _main:
 	mov	a,#0x14
 	cjne	a,_print_delay,00114$
 	C$Lab5.c$105$4$122 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:105: printf("\r%d		|	%d		|	%d		|	%d		|	%d\n", gx, gy, STEER_PW, DRIVE_PW, AD_Result);
-	mov	r6,_AD_Result
-	mov	r7,#0x00
-	push	ar6
-	push	ar7
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:105: printf("\r%d		|	%d		|	%d		|	%d\n", gx, gy, STEER_PW, DRIVE_PW);
 	push	_DRIVE_PW
 	push	(_DRIVE_PW + 1)
 	push	_STEER_PW
@@ -2621,7 +2617,7 @@ _main:
 	push	acc
 	lcall	_printf
 	mov	a,sp
-	add	a,#0xf3
+	add	a,#0xf5
 	mov	sp,a
 	C$Lab5.c$107$4$122 ==.
 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:107: print_delay = 0;
@@ -3018,13 +3014,13 @@ _Pick_Steering_Gain:
 	sjmp	00114$
 00106$:
 	C$Lab5.c$232$1$143 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:232: if(steer_gain >= 1) steer_gain = 1;
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:232: if(steer_gain >= 10) steer_gain = 10;
 	clr	a
 	push	acc
 	push	acc
-	mov	a,#0x80
+	mov	a,#0x20
 	push	acc
-	mov	a,#0x3F
+	mov	a,#0x41
 	push	acc
 	mov	dpl,_steer_gain
 	mov	dph,(_steer_gain + 1)
@@ -3039,8 +3035,8 @@ _Pick_Steering_Gain:
 	jnz	00108$
 	mov	_steer_gain,a
 	mov	(_steer_gain + 1),a
-	mov	(_steer_gain + 2),#0x80
-	mov	(_steer_gain + 3),#0x3F
+	mov	(_steer_gain + 2),#0x20
+	mov	(_steer_gain + 3),#0x41
 00108$:
 	C$Lab5.c$233$1$143 ==.
 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:233: if(steer_gain <= 0) steer_gain = 0;
@@ -3195,13 +3191,13 @@ _Pick_Drive_Gain:
 	sjmp	00114$
 00106$:
 	C$Lab5.c$251$1$146 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:251: if(drive_gain >= 1) drive_gain = 1;
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:251: if(drive_gain >= 10) drive_gain = 10;
 	clr	a
 	push	acc
 	push	acc
-	mov	a,#0x80
+	mov	a,#0x20
 	push	acc
-	mov	a,#0x3F
+	mov	a,#0x41
 	push	acc
 	mov	dpl,_drive_gain
 	mov	dph,(_drive_gain + 1)
@@ -3216,8 +3212,8 @@ _Pick_Drive_Gain:
 	jnz	00108$
 	mov	_drive_gain,a
 	mov	(_drive_gain + 1),a
-	mov	(_drive_gain + 2),#0x80
-	mov	(_drive_gain + 3),#0x3F
+	mov	(_drive_gain + 2),#0x20
+	mov	(_drive_gain + 3),#0x41
 00108$:
 	C$Lab5.c$252$1$146 ==.
 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:252: if(drive_gain <= 0) drive_gain = 0;
@@ -3297,16 +3293,16 @@ _set_PW:
 	mov	(_STEER_PW + 1),#0x08
 00102$:
 	C$Lab5.c$269$1$149 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:269: if(STEER_PW > 3400)
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:269: if(STEER_PW > 3500)
 	clr	c
-	mov	a,#0x48
+	mov	a,#0xAC
 	subb	a,_STEER_PW
 	mov	a,#0x0D
 	subb	a,(_STEER_PW + 1)
 	jnc	00104$
 	C$Lab5.c$271$2$151 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:271: STEER_PW = 3400;
-	mov	_STEER_PW,#0x48
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:271: STEER_PW = 3500;
+	mov	_STEER_PW,#0xAC
 	mov	(_STEER_PW + 1),#0x0D
 00104$:
 	C$Lab5.c$273$1$149 ==.
@@ -3329,15 +3325,15 @@ _set_PW:
 	mov	(_DRIVE_PW + 1),#0x0A
 00106$:
 	C$Lab5.c$275$1$149 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:275: if(DRIVE_PW > 3200) DRIVE_PW = 3200;
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:275: if(DRIVE_PW > 3500) DRIVE_PW = 3500;
 	clr	c
-	mov	a,#0x80
+	mov	a,#0xAC
 	subb	a,_DRIVE_PW
-	mov	a,#0x0C
+	mov	a,#0x0D
 	subb	a,(_DRIVE_PW + 1)
 	jnc	00108$
-	mov	_DRIVE_PW,#0x80
-	mov	(_DRIVE_PW + 1),#0x0C
+	mov	_DRIVE_PW,#0xAC
+	mov	(_DRIVE_PW + 1),#0x0D
 00108$:
 	C$Lab5.c$276$1$149 ==.
 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:276: PCA0CP0 = 0xFFFF - STEER_PW; // Change pulse width
@@ -3737,21 +3733,12 @@ ___str_6:
 	.ascii "|"
 	.db 0x09
 	.ascii "DRIVE_PW"
-	.db 0x09
-	.ascii "|"
-	.db 0x09
-	.ascii "ADC"
 	.db 0x0A
 	.db 0x0D
 	.db 0x00
 FLab5$__str_7$0$0 == .
 ___str_7:
 	.db 0x0D
-	.ascii "%d"
-	.db 0x09
-	.db 0x09
-	.ascii "|"
-	.db 0x09
 	.ascii "%d"
 	.db 0x09
 	.db 0x09

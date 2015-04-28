@@ -433,8 +433,8 @@ S:FLab5$__str_2$0$0({3}DA3d,SC:S),D,0,0
 S:FLab5$__str_3$0$0({9}DA9d,SC:S),D,0,0
 S:FLab5$__str_4$0$0({57}DA57d,SC:S),D,0,0
 S:FLab5$__str_5$0$0({43}DA43d,SC:S),D,0,0
-S:FLab5$__str_6$0$0({52}DA52d,SC:S),D,0,0
-S:FLab5$__str_7$0$0({29}DA29d,SC:S),D,0,0
+S:FLab5$__str_6$0$0({46}DA46d,SC:S),D,0,0
+S:FLab5$__str_7$0$0({23}DA23d,SC:S),D,0,0
 S:FLab5$__str_8$0$0({41}DA41d,SC:S),D,0,0
 S:FLab5$__str_9$0$0({56}DA56d,SC:S),D,0,0
 S:FLab5$__str_10$0$0({20}DA20d,SC:S),D,0,0
