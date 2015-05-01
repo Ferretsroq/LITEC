@@ -30,10 +30,11 @@ void PCA_ISR(void) __interrupt 9;
 void set_PW(void);
 unsigned char read_AD_input(unsigned char n);
 void read_accel(void);
-void Pick_Steering_Gain(void);
-void Pick_Drive_Gain(void);
+void Pick_Heading(void);
 int read_ranger(void);
 char Hand_Check(void);
+void Set_Desired_Heading(void);
+int read_compass(void);
 
 // Global variables
 signed long temp_motorpw = 0;
@@ -41,18 +42,24 @@ unsigned char new_range = 0;
 signed int prev_error = 0;
 signed int Error = 0;
 unsigned int Counts, nCounts;
+unsigned char r_count = 0;
 unsigned char a_count = 0;
 unsigned char adc_count = 0;
 unsigned char delay = 0;
 unsigned int DRIVE_PW = 2760;
 unsigned int STEER_PW = 2760;
-//unsigned char Data[2]; // Data is an array with a length of 2
+unsigned char Data[2]; // Data is an array with a length of 2
 unsigned char print_delay = 0;
 float steer_gain = 0;
 float drive_gain = 0;
 unsigned char new_AD = 0;
 unsigned char AD_Result = 0;
 unsigned char voltage = 0;
+unsigned int desired_heading;
+unsigned int heading = 0;
+unsigned int range = 0;
+unsigned char h_count;
+unsigned char new_heading;
 
 //=============================================================================
 //-----------------------------------------------------------------------------
@@ -68,28 +75,27 @@ void main(void)
     putchar('\r');  // Dummy write to serial port
     printf("\nStart\r\n");
 	PCA0CP0 = 0xFFFF - PW_CENTER;
-	PCA0CP2 = 0xFFFF - PW_CENTER; //Car isn't moving to start
+	PCA0CP1 = 0xFFFF - PW_CENTER;
+	PCA0CP2 = 0xFFFF - PW_CENTER; 
+	PCA0CP3 = 0xFFFF - PW_CENTER;
 	Counts = 0;
 	while (Counts < 1);  // Wait a long time (1s) for motors to initialize
 	
 	// Read the number pad or SecureCRT terminal to set the initial desired heading
 	// Be able to alter data by raising or lowering hand over the ranger
-	Pick_Steering_Gain();
-	Pick_Drive_Gain();
+	Pick_Heading();
 	Counts = 0;
 	nCounts = 0;
-	while(Counts <=2) PCA0CP2 = 0xFFFF - 3500;
 	// printf("\n\r------------DATA COLLECTION------------\n");
 	// printf("\n\rX-Accel		|	Y-Accel		|	STEER_PW	|	DRIVE_PW\n\r");
 	while (1)
     {
-		while(!Hand_Check())	//check to see if a hand is present
-		{
 			if ((new_range)) // enough overflow for a new range
 			{
 				new_range = 0;	//clear and wait for next ping
-				read_ranger();
-				set_PW();
+				range = read_ranger();
+				if(Hand_Check()) Set_Desired_Heading();
+				//set_PW();
 				
 				//range = read_ranger();	// Read the distance
 				/*if (range != 0xFFFF) //Ignores dummy values from the ranger
@@ -103,6 +109,12 @@ void main(void)
 					range_adj = 0;
 				}*/
 			}
+			
+			if(new_heading)
+			{
+				new_heading = 0;
+				heading = read_compass();
+			}
 			if(new_AD)
 			{
 				new_AD = 0;
@@ -111,16 +123,11 @@ void main(void)
 			}
 			if(print_delay == 20)
 			{
-				printf("\r%d		|	%d		|	%d		|	%d\n", gx, gy, STEER_PW, DRIVE_PW);
+				//printf("\r%d		|	%d		|	%d		|	%d\n", gx, gy, STEER_PW, DRIVE_PW);
 				print_delay = 0;
 			}
 			
 			// Output the results for transfer into excel
-	    }
-		PCA0CP0 = 0xFFFF - 2760;
-		PCA0CP2 = 0xFFFF - 2760;
-		Pick_Steering_Gain();
-		Pick_Drive_Gain();
 	}
 }
 //*****************************************************************************
@@ -130,7 +137,7 @@ void Port_Init(void)
 {
     XBR0 = 0x27;
 	P1MDIN 	&= 0x7F;	// set pin 1.5 for analog input	
-	P1MDOUT |= 0x05;	//set output pin for CEX0/2 in push-pull mode
+	P1MDOUT |= 0x0F;	//set output pin for CEX0-3 in push-pull mode
 	P1MDOUT &= 0x7F;	// set input pin for 1.5 to open-drain
 	P1		|= ~0x7F;	// set input pin for 1.5 to high impedence
 	P3MDOUT &= 0x7F;	// set input pin for 3.6/7 to open-drain
@@ -152,8 +159,10 @@ void Interrupt_Init(void)
 void PCA_Init(void)
 {
     PCA0MD = 0x81;      // SYSCLK/12, enable CF interrupts, suspend when idle
-    PCA0CPM0 = 0xC2;    // 16 bit, enable compare, enable PWM; NOT USED HERE
+    PCA0CPM0 = 0xC2;    // 16 bit, enable compare, enable PWM
+	PCA0CPM1 = 0xC2;
 	PCA0CPM2 = 0xC2;
+	PCA0CPM3 = 0xC2;
     PCA0CN = 0x40;     // enable PCA
 }
 
@@ -180,11 +189,17 @@ void PCA_ISR(void) __interrupt 9
             Counts++;               // seconds counter
         }
 		print_delay++;				// delay for print statements
-		a_count++;
-		if (a_count>=1)
+		r_count++;
+		if (r_count>=12)			//delay for ranger reading
 		{
-			a_count = 0;
-			new_accel = 1;
+			new_range = 1;
+			r_count = 0;
+		}
+		h_count++;
+		if (h_count >=8)
+		{
+			new_heading = 1;
+			h_count = 0;
 		}
 		adc_count++;
 		if(adc_count >=10)
@@ -243,7 +258,7 @@ void Pick_Steering_Gain(void)
 char Hand_Check(void)
 {
 	int temp_int = read_ranger();
-	if(temp_int < 18)
+	if(temp_int < 90)
 	{
 		return 1;
 	}
@@ -252,22 +267,34 @@ char Hand_Check(void)
 
 //-----------------------------------------------------------------------------
 //Selecting the drive gain function
-void Pick_Drive_Gain(void)
+void Pick_Heading(void)
 {
 	char input;
-	printf("\rPlease select a desired drive gain.\n");
-	printf("\r'u' will increment by 0.1. 'd' will decrement by 0.1.\n");
+	printf("\rPlease select a desired heading.\n");
+	printf("\r'u' will increment by 5 degrees. 'd' will decrement by 5 degrees.\n");
 	printf("\r'f' when finished\n");
 	while(1)
 	{
 		input = getchar();
-		if(input == 'u') drive_gain += 0.1;
-		if(input == 'd') drive_gain -= 0.1;
+		if(input == 'u') heading += 50;
+		if(input == 'd') heading -= 50;
 		if(input == 'f') return;
-		if(drive_gain >= 10) drive_gain = 10;
-		if(drive_gain <= 0) drive_gain = 0;
-		printf_fast_f("\rDesired drive gain: %2.1f\n", drive_gain);
+		if(heading >= 3600) heading = 3600;
+		if(heading <= 0) heading = 0;
+		printf("\rDesired heading: %u\n", heading);
 	}
+}
+
+//-------------------------------------------------------------------------------
+// Compass Reading Function
+int read_compass(void)
+{
+	unsigned char addr = 0xC0; // the address of the sensor, 0xC0 for the compass
+	unsigned char Data[2]; // Data is an array with a length of 2
+	unsigned int read_heading; // the heading returned in degrees between 0 and 3599
+	i2c_read_data(addr, 2, Data, 2); // read two byte, starting at reg 2
+	read_heading =((Data[0] << 8) | Data[1]); //combine the two values
+	return read_heading; // the heading returned in degrees between 0 and 3599
 }
 
 //-------------------------------------------------------------------------------
@@ -302,4 +329,10 @@ void set_PW(void)
 	if(temp_motorpw > 3400) { temp_motorpw = 3400; } // max
 		
 	PCA0CP0 = 0xFFFF - temp_motorpw; // Change pulse width
+}
+//-----------------------------------------------------------------------------
+//Adjusting the desired heading
+void Set_Desired_Heading(void)
+{
+	//add code that will take the range and adjust the desired heading
 }

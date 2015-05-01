@@ -1,7 +1,7 @@
 ;--------------------------------------------------------
 ; File Created by SDCC : free open source ANSI-C Compiler
 ; Version 3.4.0 #8981 (Apr  5 2014) (MINGW32)
-; This file was generated Fri May 01 13:25:28 2015
+; This file was generated Fri May 01 13:41:55 2015
 ;--------------------------------------------------------
 	.module Lab6
 	.optsdcc -mmcs51 --model-small
@@ -304,6 +304,9 @@
 	.globl _DPL
 	.globl _SP
 	.globl _P0
+	.globl _new_heading
+	.globl _h_count
+	.globl _range
 	.globl _heading
 	.globl _desired_heading
 	.globl _voltage
@@ -354,8 +357,10 @@
 	.globl _read_AD_input
 	.globl _Hand_Check
 	.globl _Pick_Heading
+	.globl _read_compass
 	.globl _read_ranger
 	.globl _set_PW
+	.globl _Set_Desired_Heading
 ;--------------------------------------------------------
 ; special function registers
 ;--------------------------------------------------------
@@ -1038,6 +1043,18 @@ _desired_heading::
 G$heading$0$0==.
 _heading::
 	.ds 2
+G$range$0$0==.
+_range::
+	.ds 2
+G$h_count$0$0==.
+_h_count::
+	.ds 1
+G$new_heading$0$0==.
+_new_heading::
+	.ds 1
+LLab6.read_compass$Data$1$156==.
+_read_compass_Data_1_156:
+	.ds 2
 ;--------------------------------------------------------
 ; overlayable items in internal ram 
 ;--------------------------------------------------------
@@ -1136,81 +1153,85 @@ __interrupt_vect:
 	.globl __mcs51_genXINIT
 	.globl __mcs51_genXRAMCLEAR
 	.globl __mcs51_genRAMCLEAR
-	C$Lab6.c$38$1$155 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:38: signed long temp_motorpw = 0;
+	C$Lab6.c$40$1$160 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:40: signed long temp_motorpw = 0;
 	clr	a
 	mov	_temp_motorpw,a
 	mov	(_temp_motorpw + 1),a
 	mov	(_temp_motorpw + 2),a
 	mov	(_temp_motorpw + 3),a
-	C$Lab6.c$39$1$155 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:39: unsigned char new_range = 0;
+	C$Lab6.c$41$1$160 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:41: unsigned char new_range = 0;
 ;	1-genFromRTrack replaced	mov	_new_range,#0x00
 	mov	_new_range,a
-	C$Lab6.c$40$1$155 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:40: signed int prev_error = 0;
+	C$Lab6.c$42$1$160 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:42: signed int prev_error = 0;
 	mov	_prev_error,a
 	mov	(_prev_error + 1),a
-	C$Lab6.c$41$1$155 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:41: signed int Error = 0;
+	C$Lab6.c$43$1$160 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:43: signed int Error = 0;
 	mov	_Error,a
 	mov	(_Error + 1),a
-	C$Lab6.c$43$1$155 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:43: unsigned char r_count = 0;
+	C$Lab6.c$45$1$160 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:45: unsigned char r_count = 0;
 ;	1-genFromRTrack replaced	mov	_r_count,#0x00
 	mov	_r_count,a
-	C$Lab6.c$44$1$155 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:44: unsigned char a_count = 0;
+	C$Lab6.c$46$1$160 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:46: unsigned char a_count = 0;
 ;	1-genFromRTrack replaced	mov	_a_count,#0x00
 	mov	_a_count,a
-	C$Lab6.c$45$1$155 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:45: unsigned char adc_count = 0;
+	C$Lab6.c$47$1$160 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:47: unsigned char adc_count = 0;
 ;	1-genFromRTrack replaced	mov	_adc_count,#0x00
 	mov	_adc_count,a
-	C$Lab6.c$46$1$155 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:46: unsigned char delay = 0;
+	C$Lab6.c$48$1$160 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:48: unsigned char delay = 0;
 ;	1-genFromRTrack replaced	mov	_delay,#0x00
 	mov	_delay,a
-	C$Lab6.c$47$1$155 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:47: unsigned int DRIVE_PW = 2760;
+	C$Lab6.c$49$1$160 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:49: unsigned int DRIVE_PW = 2760;
 	mov	_DRIVE_PW,#0xC8
 	mov	(_DRIVE_PW + 1),#0x0A
-	C$Lab6.c$48$1$155 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:48: unsigned int STEER_PW = 2760;
+	C$Lab6.c$50$1$160 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:50: unsigned int STEER_PW = 2760;
 	mov	_STEER_PW,#0xC8
 	mov	(_STEER_PW + 1),#0x0A
-	C$Lab6.c$50$1$155 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:50: unsigned char print_delay = 0;
+	C$Lab6.c$52$1$160 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:52: unsigned char print_delay = 0;
 ;	1-genFromRTrack replaced	mov	_print_delay,#0x00
 	mov	_print_delay,a
-	C$Lab6.c$51$1$155 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:51: float steer_gain = 0;
+	C$Lab6.c$53$1$160 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:53: float steer_gain = 0;
 	mov	_steer_gain,a
 	mov	(_steer_gain + 1),a
 	mov	(_steer_gain + 2),a
 	mov	(_steer_gain + 3),a
-	C$Lab6.c$52$1$155 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:52: float drive_gain = 0;
+	C$Lab6.c$54$1$160 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:54: float drive_gain = 0;
 	mov	_drive_gain,a
 	mov	(_drive_gain + 1),a
 	mov	(_drive_gain + 2),a
 	mov	(_drive_gain + 3),a
-	C$Lab6.c$53$1$155 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:53: unsigned char new_AD = 0;
+	C$Lab6.c$55$1$160 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:55: unsigned char new_AD = 0;
 ;	1-genFromRTrack replaced	mov	_new_AD,#0x00
 	mov	_new_AD,a
-	C$Lab6.c$54$1$155 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:54: unsigned char AD_Result = 0;
+	C$Lab6.c$56$1$160 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:56: unsigned char AD_Result = 0;
 ;	1-genFromRTrack replaced	mov	_AD_Result,#0x00
 	mov	_AD_Result,a
-	C$Lab6.c$55$1$155 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:55: unsigned char voltage = 0;
+	C$Lab6.c$57$1$160 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:57: unsigned char voltage = 0;
 ;	1-genFromRTrack replaced	mov	_voltage,#0x00
 	mov	_voltage,a
-	C$Lab6.c$57$1$155 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:57: unsigned int heading = 0;
+	C$Lab6.c$59$1$160 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:59: unsigned int heading = 0;
 	mov	_heading,a
 	mov	(_heading + 1),a
+	C$Lab6.c$60$1$160 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:60: unsigned int range = 0;
+	mov	_range,a
+	mov	(_range + 1),a
 	.area GSFINAL (CODE)
 	ljmp	__sdcc_program_startup
 ;--------------------------------------------------------
@@ -2385,36 +2406,36 @@ _Accel_Init:
 ;Allocation info for local variables in function 'main'
 ;------------------------------------------------------------
 	G$main$0$0 ==.
-	C$Lab6.c$62$1$103 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:62: void main(void)
+	C$Lab6.c$67$1$103 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:67: void main(void)
 ;	-----------------------------------------
 ;	 function main
 ;	-----------------------------------------
 _main:
-	C$Lab6.c$64$1$118 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:64: Sys_Init();     // System Initialization - MUST BE 1st EXECUTABLE STATEMENT
+	C$Lab6.c$69$1$120 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:69: Sys_Init();     // System Initialization - MUST BE 1st EXECUTABLE STATEMENT
 	lcall	_Sys_Init
-	C$Lab6.c$65$1$118 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:65: Port_Init();   
+	C$Lab6.c$70$1$120 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:70: Port_Init();   
 	lcall	_Port_Init
-	C$Lab6.c$66$1$118 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:66: Interrupt_Init();   
+	C$Lab6.c$71$1$120 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:71: Interrupt_Init();   
 	lcall	_Interrupt_Init
-	C$Lab6.c$67$1$118 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:67: PCA_Init();
+	C$Lab6.c$72$1$120 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:72: PCA_Init();
 	lcall	_PCA_Init
-	C$Lab6.c$68$1$118 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:68: ADC_Init();
+	C$Lab6.c$73$1$120 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:73: ADC_Init();
 	lcall	_ADC_Init
-	C$Lab6.c$69$1$118 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:69: SMB0_Init();
+	C$Lab6.c$74$1$120 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:74: SMB0_Init();
 	lcall	_SMB0_Init
-	C$Lab6.c$70$1$118 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:70: putchar('\r');  // Dummy write to serial port
+	C$Lab6.c$75$1$120 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:75: putchar('\r');  // Dummy write to serial port
 	mov	dpl,#0x0D
 	lcall	_putchar
-	C$Lab6.c$71$1$118 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:71: printf("\nStart\r\n");
+	C$Lab6.c$76$1$120 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:76: printf("\nStart\r\n");
 	mov	a,#___str_3
 	push	acc
 	mov	a,#(___str_3 >> 8)
@@ -2425,21 +2446,29 @@ _main:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$Lab6.c$72$1$118 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:72: PCA0CP0 = 0xFFFF - PW_CENTER;
+	C$Lab6.c$77$1$120 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:77: PCA0CP0 = 0xFFFF - PW_CENTER;
 	mov	((_PCA0CP0 >> 0) & 0xFF),#0x37
 	mov	((_PCA0CP0 >> 8) & 0xFF),#0xF5
-	C$Lab6.c$73$1$118 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:73: PCA0CP2 = 0xFFFF - PW_CENTER; //Car isn't moving to start
+	C$Lab6.c$78$1$120 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:78: PCA0CP1 = 0xFFFF - PW_CENTER;
+	mov	((_PCA0CP1 >> 0) & 0xFF),#0x37
+	mov	((_PCA0CP1 >> 8) & 0xFF),#0xF5
+	C$Lab6.c$79$1$120 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:79: PCA0CP2 = 0xFFFF - PW_CENTER; 
 	mov	((_PCA0CP2 >> 0) & 0xFF),#0x37
 	mov	((_PCA0CP2 >> 8) & 0xFF),#0xF5
-	C$Lab6.c$74$1$118 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:74: Counts = 0;
+	C$Lab6.c$80$1$120 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:80: PCA0CP3 = 0xFFFF - PW_CENTER;
+	mov	((_PCA0CP3 >> 0) & 0xFF),#0x37
+	mov	((_PCA0CP3 >> 8) & 0xFF),#0xF5
+	C$Lab6.c$81$1$120 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:81: Counts = 0;
 	clr	a
 	mov	_Counts,a
 	mov	(_Counts + 1),a
-	C$Lab6.c$75$1$118 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:75: while (Counts < 1);  // Wait a long time (1s) for motors to initialize
+	C$Lab6.c$82$1$120 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:82: while (Counts < 1);  // Wait a long time (1s) for motors to initialize
 00101$:
 	clr	c
 	mov	a,_Counts
@@ -2447,65 +2476,66 @@ _main:
 	mov	a,(_Counts + 1)
 	subb	a,#0x00
 	jc	00101$
-	C$Lab6.c$79$1$118 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:79: Pick_Heading();
+	C$Lab6.c$86$1$120 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:86: Pick_Heading();
 	lcall	_Pick_Heading
-	C$Lab6.c$80$1$118 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:80: Counts = 0;
+	C$Lab6.c$87$1$120 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:87: Counts = 0;
 	clr	a
 	mov	_Counts,a
 	mov	(_Counts + 1),a
-	C$Lab6.c$81$1$118 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:81: nCounts = 0;
+	C$Lab6.c$88$1$120 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:88: nCounts = 0;
 	mov	_nCounts,a
 	mov	(_nCounts + 1),a
-	C$Lab6.c$82$1$118 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:82: while(Counts <=2) PCA0CP2 = 0xFFFF - 3500;
-00104$:
-	clr	c
-	mov	a,#0x02
-	subb	a,_Counts
-	clr	a
-	subb	a,(_Counts + 1)
-	jc	00113$
-	mov	((_PCA0CP2 >> 0) & 0xFF),#0x53
-	mov	((_PCA0CP2 >> 8) & 0xFF),#0xF2
-	C$Lab6.c$87$2$119 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:87: while(!Hand_Check())	//check to see if a hand is present
-	sjmp	00104$
-00113$:
+	C$Lab6.c$91$1$120 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:91: while (1)
+00115$:
+	C$Lab6.c$93$2$121 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:93: if ((new_range)) // enough overflow for a new range
+	mov	a,_new_range
+	jz	00107$
+	C$Lab6.c$95$3$122 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:95: new_range = 0;	//clear and wait for next ping
+	mov	_new_range,#0x00
+	C$Lab6.c$96$3$122 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:96: range = read_ranger();
+	lcall	_read_ranger
+	mov	_range,dpl
+	mov	(_range + 1),dph
+	C$Lab6.c$97$3$122 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:97: if(Hand_Check()) Set_Desired_Heading();
 	lcall	_Hand_Check
 	mov	a,dpl
-	jnz	00115$
-	C$Lab6.c$89$3$120 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:89: if ((new_range)) // enough overflow for a new range
-	mov	a,_new_range
-	jz	00108$
-	C$Lab6.c$91$4$121 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:91: new_range = 0;	//clear and wait for next ping
-	mov	_new_range,#0x00
-	C$Lab6.c$92$4$121 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:92: heading = read_ranger();
-	lcall	_read_ranger
+	jz	00107$
+	lcall	_Set_Desired_Heading
+00107$:
+	C$Lab6.c$113$2$121 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:113: if(new_heading)
+	mov	a,_new_heading
+	jz	00109$
+	C$Lab6.c$115$3$123 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:115: new_heading = 0;
+	mov	_new_heading,#0x00
+	C$Lab6.c$116$3$123 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:116: heading = read_compass();
+	lcall	_read_compass
 	mov	_heading,dpl
 	mov	(_heading + 1),dph
-	C$Lab6.c$93$4$121 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:93: set_PW();
-	lcall	_set_PW
-00108$:
-	C$Lab6.c$107$3$120 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:107: if(new_AD)
+00109$:
+	C$Lab6.c$118$2$121 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:118: if(new_AD)
 	mov	a,_new_AD
-	jz	00110$
-	C$Lab6.c$109$4$122 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:109: new_AD = 0;
+	jz	00111$
+	C$Lab6.c$120$3$124 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:120: new_AD = 0;
 	mov	_new_AD,#0x00
-	C$Lab6.c$110$4$122 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:110: AD_Result = read_AD_input(5); //Read analog input on pin 1.5
+	C$Lab6.c$121$3$124 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:121: AD_Result = read_AD_input(5); //Read analog input on pin 1.5
 	mov	dpl,#0x05
 	lcall	_read_AD_input
-	C$Lab6.c$111$1$118 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:111: voltage = ((12.8/255)*(AD_Result)); //Convert back to input voltage
+	C$Lab6.c$122$1$120 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:122: voltage = ((12.8/255)*(AD_Result)); //Convert back to input voltage
 	mov  _AD_Result,dpl
 	lcall	___uchar2fs
 	mov	r4,dpl
@@ -2533,224 +2563,236 @@ _main:
 	mov	a,r7
 	lcall	___fs2uchar
 	mov	_voltage,dpl
-00110$:
-	C$Lab6.c$113$3$120 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:113: if(print_delay == 20)
+00111$:
+	C$Lab6.c$124$2$121 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:124: if(print_delay == 20)
 	mov	a,#0x14
-	cjne	a,_print_delay,00113$
-	C$Lab6.c$116$4$123 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:116: print_delay = 0;
+	cjne	a,_print_delay,00148$
+	sjmp	00149$
+00148$:
+	ljmp	00115$
+00149$:
+	C$Lab6.c$127$3$125 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:127: print_delay = 0;
 	mov	_print_delay,#0x00
-	sjmp	00113$
-00115$:
-	C$Lab6.c$121$2$119 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:121: PCA0CP0 = 0xFFFF - 2760;
-	mov	((_PCA0CP0 >> 0) & 0xFF),#0x37
-	mov	((_PCA0CP0 >> 8) & 0xFF),#0xF5
-	C$Lab6.c$122$2$119 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:122: PCA0CP2 = 0xFFFF - 2760;
-	mov	((_PCA0CP2 >> 0) & 0xFF),#0x37
-	mov	((_PCA0CP2 >> 8) & 0xFF),#0xF5
-	C$Lab6.c$123$2$119 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:123: Pick_Heading();
-	lcall	_Pick_Heading
-	ljmp	00113$
-	C$Lab6.c$125$1$118 ==.
+	ljmp	00115$
+	C$Lab6.c$132$1$120 ==.
 	XG$main$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'Port_Init'
 ;------------------------------------------------------------
 	G$Port_Init$0$0 ==.
-	C$Lab6.c$129$1$118 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:129: void Port_Init(void)	
+	C$Lab6.c$136$1$120 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:136: void Port_Init(void)	
 ;	-----------------------------------------
 ;	 function Port_Init
 ;	-----------------------------------------
 _Port_Init:
-	C$Lab6.c$131$1$125 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:131: XBR0 = 0x27;
+	C$Lab6.c$138$1$127 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:138: XBR0 = 0x27;
 	mov	_XBR0,#0x27
-	C$Lab6.c$132$1$125 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:132: P1MDIN 	&= 0x7F;	// set pin 1.5 for analog input	
+	C$Lab6.c$139$1$127 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:139: P1MDIN 	&= 0x7F;	// set pin 1.5 for analog input	
 	anl	_P1MDIN,#0x7F
-	C$Lab6.c$133$1$125 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:133: P1MDOUT |= 0x05;	//set output pin for CEX0/2 in push-pull mode
-	orl	_P1MDOUT,#0x05
-	C$Lab6.c$134$1$125 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:134: P1MDOUT &= 0x7F;	// set input pin for 1.5 to open-drain
+	C$Lab6.c$140$1$127 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:140: P1MDOUT |= 0x0F;	//set output pin for CEX0-3 in push-pull mode
+	orl	_P1MDOUT,#0x0F
+	C$Lab6.c$141$1$127 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:141: P1MDOUT &= 0x7F;	// set input pin for 1.5 to open-drain
 	anl	_P1MDOUT,#0x7F
-	C$Lab6.c$135$1$125 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:135: P1		|= ~0x7F;	// set input pin for 1.5 to high impedence
+	C$Lab6.c$142$1$127 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:142: P1		|= ~0x7F;	// set input pin for 1.5 to high impedence
 	mov	r7,_P1
 	mov	a,#0x80
 	orl	a,r7
 	mov	_P1,a
-	C$Lab6.c$136$1$125 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:136: P3MDOUT &= 0x7F;	// set input pin for 3.6/7 to open-drain
+	C$Lab6.c$143$1$127 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:143: P3MDOUT &= 0x7F;	// set input pin for 3.6/7 to open-drain
 	anl	_P3MDOUT,#0x7F
-	C$Lab6.c$137$1$125 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:137: P3		|= ~0x7F;	// set input pin for 3.6/7 to high impedence
+	C$Lab6.c$144$1$127 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:144: P3		|= ~0x7F;	// set input pin for 3.6/7 to high impedence
 	mov	r7,_P3
 	mov	a,#0x80
 	orl	a,r7
 	mov	_P3,a
-	C$Lab6.c$139$1$125 ==.
+	C$Lab6.c$146$1$127 ==.
 	XG$Port_Init$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'Interrupt_Init'
 ;------------------------------------------------------------
 	G$Interrupt_Init$0$0 ==.
-	C$Lab6.c$143$1$125 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:143: void Interrupt_Init(void)
+	C$Lab6.c$150$1$127 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:150: void Interrupt_Init(void)
 ;	-----------------------------------------
 ;	 function Interrupt_Init
 ;	-----------------------------------------
 _Interrupt_Init:
-	C$Lab6.c$145$1$127 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:145: IE |= 0x02;
+	C$Lab6.c$152$1$129 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:152: IE |= 0x02;
 	orl	_IE,#0x02
-	C$Lab6.c$146$1$127 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:146: EIE1 |= 0x08;
+	C$Lab6.c$153$1$129 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:153: EIE1 |= 0x08;
 	orl	_EIE1,#0x08
-	C$Lab6.c$147$1$127 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:147: EA = 1;
+	C$Lab6.c$154$1$129 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:154: EA = 1;
 	setb	_EA
-	C$Lab6.c$148$1$127 ==.
+	C$Lab6.c$155$1$129 ==.
 	XG$Interrupt_Init$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'PCA_Init'
 ;------------------------------------------------------------
 	G$PCA_Init$0$0 ==.
-	C$Lab6.c$152$1$127 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:152: void PCA_Init(void)
+	C$Lab6.c$159$1$129 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:159: void PCA_Init(void)
 ;	-----------------------------------------
 ;	 function PCA_Init
 ;	-----------------------------------------
 _PCA_Init:
-	C$Lab6.c$154$1$129 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:154: PCA0MD = 0x81;      // SYSCLK/12, enable CF interrupts, suspend when idle
+	C$Lab6.c$161$1$131 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:161: PCA0MD = 0x81;      // SYSCLK/12, enable CF interrupts, suspend when idle
 	mov	_PCA0MD,#0x81
-	C$Lab6.c$155$1$129 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:155: PCA0CPM0 = 0xC2;    // 16 bit, enable compare, enable PWM; NOT USED HERE
+	C$Lab6.c$162$1$131 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:162: PCA0CPM0 = 0xC2;    // 16 bit, enable compare, enable PWM
 	mov	_PCA0CPM0,#0xC2
-	C$Lab6.c$156$1$129 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:156: PCA0CPM2 = 0xC2;
+	C$Lab6.c$163$1$131 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:163: PCA0CPM1 = 0xC2;
+	mov	_PCA0CPM1,#0xC2
+	C$Lab6.c$164$1$131 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:164: PCA0CPM2 = 0xC2;
 	mov	_PCA0CPM2,#0xC2
-	C$Lab6.c$157$1$129 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:157: PCA0CN = 0x40;     // enable PCA
+	C$Lab6.c$165$1$131 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:165: PCA0CPM3 = 0xC2;
+	mov	_PCA0CPM3,#0xC2
+	C$Lab6.c$166$1$131 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:166: PCA0CN = 0x40;     // enable PCA
 	mov	_PCA0CN,#0x40
-	C$Lab6.c$158$1$129 ==.
+	C$Lab6.c$167$1$131 ==.
 	XG$PCA_Init$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'SMB0_Init'
 ;------------------------------------------------------------
 	G$SMB0_Init$0$0 ==.
-	C$Lab6.c$162$1$129 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:162: void SMB0_Init(void)    // This was at the top, moved it here to call wait()
+	C$Lab6.c$171$1$131 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:171: void SMB0_Init(void)    // This was at the top, moved it here to call wait()
 ;	-----------------------------------------
 ;	 function SMB0_Init
 ;	-----------------------------------------
 _SMB0_Init:
-	C$Lab6.c$164$1$131 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:164: SMB0CR = 0x93;      // Set SCL to 100KHz
+	C$Lab6.c$173$1$133 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:173: SMB0CR = 0x93;      // Set SCL to 100KHz
 	mov	_SMB0CR,#0x93
-	C$Lab6.c$165$1$131 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:165: ENSMB = 1;          // Enable SMBUS0
+	C$Lab6.c$174$1$133 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:174: ENSMB = 1;          // Enable SMBUS0
 	setb	_ENSMB
-	C$Lab6.c$166$1$131 ==.
+	C$Lab6.c$175$1$133 ==.
 	XG$SMB0_Init$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'PCA_ISR'
 ;------------------------------------------------------------
 	G$PCA_ISR$0$0 ==.
-	C$Lab6.c$170$1$131 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:170: void PCA_ISR(void) __interrupt 9
+	C$Lab6.c$179$1$133 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:179: void PCA_ISR(void) __interrupt 9
 ;	-----------------------------------------
 ;	 function PCA_ISR
 ;	-----------------------------------------
 _PCA_ISR:
 	push	acc
 	push	psw
-	C$Lab6.c$172$1$133 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:172: if (CF)
-	C$Lab6.c$174$2$134 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:174: CF = 0;                     // clear the interrupt flag
-	jbc	_CF,00124$
-	sjmp	00108$
-00124$:
-	C$Lab6.c$175$2$134 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:175: nCounts++;					// Counts overflows for initial delay
+	C$Lab6.c$181$1$135 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:181: if (CF)
+	C$Lab6.c$183$2$136 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:183: CF = 0;                     // clear the interrupt flag
+	jbc	_CF,00129$
+	sjmp	00110$
+00129$:
+	C$Lab6.c$184$2$136 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:184: nCounts++;					// Counts overflows for initial delay
 	inc	_nCounts
 	clr	a
-	cjne	a,_nCounts,00125$
+	cjne	a,_nCounts,00130$
 	inc	(_nCounts + 1)
-00125$:
-	C$Lab6.c$176$2$134 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:176: PCA0 = PCA_START;
+00130$:
+	C$Lab6.c$185$2$136 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:185: PCA0 = PCA_START;
 	mov	((_PCA0 >> 0) & 0xFF),#0x00
 	mov	((_PCA0 >> 8) & 0xFF),#0x70
-	C$Lab6.c$177$2$134 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:177: if (nCounts > 50)			//Initial one second delay
+	C$Lab6.c$186$2$136 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:186: if (nCounts > 50)			//Initial one second delay
 	clr	c
 	mov	a,#0x32
 	subb	a,_nCounts
 	clr	a
 	subb	a,(_nCounts + 1)
 	jnc	00102$
-	C$Lab6.c$180$3$135 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:180: Counts++;               // seconds counter
+	C$Lab6.c$189$3$137 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:189: Counts++;               // seconds counter
 	inc	_Counts
 	clr	a
-	cjne	a,_Counts,00127$
+	cjne	a,_Counts,00132$
 	inc	(_Counts + 1)
-00127$:
+00132$:
 00102$:
-	C$Lab6.c$182$2$134 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:182: print_delay++;				// delay for print statements
+	C$Lab6.c$191$2$136 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:191: print_delay++;				// delay for print statements
 	inc	_print_delay
-	C$Lab6.c$183$2$134 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:183: r_count++;
+	C$Lab6.c$192$2$136 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:192: r_count++;
 	inc	_r_count
-	C$Lab6.c$184$2$134 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:184: if (r_count>=12)			//delay for ranger reading
+	C$Lab6.c$193$2$136 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:193: if (r_count>=12)			//delay for ranger reading
 	mov	a,#0x100 - 0x0C
 	add	a,_r_count
 	jnc	00104$
-	C$Lab6.c$186$3$136 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:186: new_range = 1;
+	C$Lab6.c$195$3$138 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:195: new_range = 1;
 	mov	_new_range,#0x01
-	C$Lab6.c$187$3$136 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:187: r_count = 0;
+	C$Lab6.c$196$3$138 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:196: r_count = 0;
 	mov	_r_count,#0x00
 00104$:
-	C$Lab6.c$189$2$134 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:189: adc_count++;
+	C$Lab6.c$198$2$136 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:198: h_count++;
+	inc	_h_count
+	C$Lab6.c$199$2$136 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:199: if (h_count >=8)
+	mov	a,#0x100 - 0x08
+	add	a,_h_count
+	jnc	00106$
+	C$Lab6.c$201$3$139 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:201: new_heading = 1;
+	mov	_new_heading,#0x01
+	C$Lab6.c$202$3$139 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:202: h_count = 0;
+	mov	_h_count,#0x00
+00106$:
+	C$Lab6.c$204$2$136 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:204: adc_count++;
 	inc	_adc_count
-	C$Lab6.c$190$2$134 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:190: if(adc_count >=10)
+	C$Lab6.c$205$2$136 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:205: if(adc_count >=10)
 	mov	a,#0x100 - 0x0A
 	add	a,_adc_count
-	jnc	00110$
-	C$Lab6.c$192$3$137 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:192: adc_count = 0;
+	jnc	00112$
+	C$Lab6.c$207$3$140 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:207: adc_count = 0;
 	mov	_adc_count,#0x00
-	C$Lab6.c$193$3$137 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:193: new_AD = 1;
+	C$Lab6.c$208$3$140 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:208: new_AD = 1;
 	mov	_new_AD,#0x01
-	sjmp	00110$
-00108$:
-	C$Lab6.c$196$1$133 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:196: else PCA0CN &= 0xC0;           // clear all other 9-type interrupts
-	anl	_PCA0CN,#0xC0
+	sjmp	00112$
 00110$:
+	C$Lab6.c$211$1$135 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:211: else PCA0CN &= 0xC0;           // clear all other 9-type interrupts
+	anl	_PCA0CN,#0xC0
+00112$:
 	pop	psw
 	pop	acc
-	C$Lab6.c$197$1$133 ==.
+	C$Lab6.c$212$1$135 ==.
 	XG$PCA_ISR$0$0 ==.
 	reti
 ;	eliminated unneeded mov psw,# (no regs used in bank)
@@ -2761,22 +2803,22 @@ _PCA_ISR:
 ;Allocation info for local variables in function 'ADC_Init'
 ;------------------------------------------------------------
 	G$ADC_Init$0$0 ==.
-	C$Lab6.c$201$1$133 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:201: void ADC_Init(void)
+	C$Lab6.c$216$1$135 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:216: void ADC_Init(void)
 ;	-----------------------------------------
 ;	 function ADC_Init
 ;	-----------------------------------------
 _ADC_Init:
-	C$Lab6.c$203$1$139 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:203: REF0CN = 0x03; // Set Vref to use internal reference voltage (2.4 V)
+	C$Lab6.c$218$1$142 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:218: REF0CN = 0x03; // Set Vref to use internal reference voltage (2.4 V)
 	mov	_REF0CN,#0x03
-	C$Lab6.c$204$1$139 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:204: ADC1CN = 0x80; // Enable A/D converter (ADC1)
+	C$Lab6.c$219$1$142 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:219: ADC1CN = 0x80; // Enable A/D converter (ADC1)
 	mov	_ADC1CN,#0x80
-	C$Lab6.c$205$1$139 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:205: ADC1CF |= 0x01; // Set A/D converter gain to 1
+	C$Lab6.c$220$1$142 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:220: ADC1CF |= 0x01; // Set A/D converter gain to 1
 	orl	_ADC1CF,#0x01
-	C$Lab6.c$206$1$139 ==.
+	C$Lab6.c$221$1$142 ==.
 	XG$ADC_Init$0$0 ==.
 	ret
 ;------------------------------------------------------------
@@ -2785,31 +2827,31 @@ _ADC_Init:
 ;n                         Allocated to registers 
 ;------------------------------------------------------------
 	G$read_AD_input$0$0 ==.
-	C$Lab6.c$210$1$139 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:210: unsigned char read_AD_input(unsigned char n)
+	C$Lab6.c$225$1$142 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:225: unsigned char read_AD_input(unsigned char n)
 ;	-----------------------------------------
 ;	 function read_AD_input
 ;	-----------------------------------------
 _read_AD_input:
 	mov	_AMX1SL,dpl
-	C$Lab6.c$213$1$141 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:213: ADC1CN = ADC1CN & ~0x20; // Clear the "Conversion Completed" flag
+	C$Lab6.c$228$1$144 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:228: ADC1CN = ADC1CN & ~0x20; // Clear the "Conversion Completed" flag
 	mov	r7,_ADC1CN
 	mov	a,#0xDF
 	anl	a,r7
 	mov	_ADC1CN,a
-	C$Lab6.c$214$1$141 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:214: ADC1CN = ADC1CN | 0x10; // Initiate A/D conversion
+	C$Lab6.c$229$1$144 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:229: ADC1CN = ADC1CN | 0x10; // Initiate A/D conversion
 	orl	_ADC1CN,#0x10
-	C$Lab6.c$216$1$141 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:216: while ((ADC1CN & 0x20) == 0x00);// Wait for conversion to complete
+	C$Lab6.c$231$1$144 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:231: while ((ADC1CN & 0x20) == 0x00);// Wait for conversion to complete
 00101$:
 	mov	a,_ADC1CN
 	jnb	acc.5,00101$
-	C$Lab6.c$218$1$141 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:218: return ADC1; // Return digital value in ADC1 register
+	C$Lab6.c$233$1$144 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:233: return ADC1; // Return digital value in ADC1 register
 	mov	dpl,_ADC1
-	C$Lab6.c$219$1$141 ==.
+	C$Lab6.c$234$1$144 ==.
 	XG$read_AD_input$0$0 ==.
 	ret
 ;------------------------------------------------------------
@@ -2818,14 +2860,14 @@ _read_AD_input:
 ;input                     Allocated to registers r7 
 ;------------------------------------------------------------
 	G$Pick_Steering_Gain$0$0 ==.
-	C$Lab6.c$223$1$141 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:223: void Pick_Steering_Gain(void)
+	C$Lab6.c$238$1$144 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:238: void Pick_Steering_Gain(void)
 ;	-----------------------------------------
 ;	 function Pick_Steering_Gain
 ;	-----------------------------------------
 _Pick_Steering_Gain:
-	C$Lab6.c$226$1$143 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:226: printf("\rPlease select a desired steering gain.\n");
+	C$Lab6.c$241$1$146 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:241: printf("\rPlease select a desired steering gain.\n");
 	mov	a,#___str_4
 	push	acc
 	mov	a,#(___str_4 >> 8)
@@ -2836,8 +2878,8 @@ _Pick_Steering_Gain:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$Lab6.c$227$1$143 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:227: printf("\r'u' will increment by 0.1. 'd' will decrement by 0.1.\n");
+	C$Lab6.c$242$1$146 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:242: printf("\r'u' will increment by 0.1. 'd' will decrement by 0.1.\n");
 	mov	a,#___str_5
 	push	acc
 	mov	a,#(___str_5 >> 8)
@@ -2848,8 +2890,8 @@ _Pick_Steering_Gain:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$Lab6.c$228$1$143 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:228: printf("\r'f' when finished\n");
+	C$Lab6.c$243$1$146 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:243: printf("\r'f' when finished\n");
 	mov	a,#___str_6
 	push	acc
 	mov	a,#(___str_6 >> 8)
@@ -2860,15 +2902,15 @@ _Pick_Steering_Gain:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$Lab6.c$229$1$143 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:229: while(1)
+	C$Lab6.c$244$1$146 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:244: while(1)
 00112$:
-	C$Lab6.c$231$2$144 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:231: input = getchar();
+	C$Lab6.c$246$2$147 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:246: input = getchar();
 	lcall	_getchar
 	mov	r7,dpl
-	C$Lab6.c$232$2$144 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:232: if(input == 'u') steer_gain += 0.1;
+	C$Lab6.c$247$2$147 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:247: if(input == 'u') steer_gain += 0.1;
 	cjne	r7,#0x75,00102$
 	push	ar7
 	mov	a,#0xCD
@@ -2892,8 +2934,8 @@ _Pick_Steering_Gain:
 	mov	sp,a
 	pop	ar7
 00102$:
-	C$Lab6.c$233$2$144 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:233: if(input == 'd') steer_gain -= 0.1;
+	C$Lab6.c$248$2$147 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:248: if(input == 'd') steer_gain -= 0.1;
 	cjne	r7,#0x64,00104$
 	push	ar7
 	mov	a,#0xCD
@@ -2917,13 +2959,13 @@ _Pick_Steering_Gain:
 	mov	sp,a
 	pop	ar7
 00104$:
-	C$Lab6.c$234$2$144 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:234: if(input == 'f') return;
+	C$Lab6.c$249$2$147 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:249: if(input == 'f') return;
 	cjne	r7,#0x66,00106$
 	sjmp	00114$
 00106$:
-	C$Lab6.c$235$1$143 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:235: if(steer_gain >= 10) steer_gain = 10;
+	C$Lab6.c$250$1$146 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:250: if(steer_gain >= 10) steer_gain = 10;
 	clr	a
 	push	acc
 	push	acc
@@ -2947,8 +2989,8 @@ _Pick_Steering_Gain:
 	mov	(_steer_gain + 2),#0x20
 	mov	(_steer_gain + 3),#0x41
 00108$:
-	C$Lab6.c$236$1$143 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:236: if(steer_gain <= 0) steer_gain = 0;
+	C$Lab6.c$251$1$146 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:251: if(steer_gain <= 0) steer_gain = 0;
 	clr	a
 	push	acc
 	push	acc
@@ -2970,8 +3012,8 @@ _Pick_Steering_Gain:
 	mov	(_steer_gain + 2),a
 	mov	(_steer_gain + 3),a
 00110$:
-	C$Lab6.c$237$2$144 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:237: printf_fast_f("\rDesired steering gain: %2.1f\n", steer_gain);
+	C$Lab6.c$252$2$147 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:252: printf_fast_f("\rDesired steering gain: %2.1f\n", steer_gain);
 	push	_steer_gain
 	push	(_steer_gain + 1)
 	push	(_steer_gain + 2)
@@ -2986,7 +3028,7 @@ _Pick_Steering_Gain:
 	mov	sp,a
 	ljmp	00112$
 00114$:
-	C$Lab6.c$239$1$143 ==.
+	C$Lab6.c$254$1$146 ==.
 	XG$Pick_Steering_Gain$0$0 ==.
 	ret
 ;------------------------------------------------------------
@@ -2995,36 +3037,36 @@ _Pick_Steering_Gain:
 ;temp_int                  Allocated to registers r6 r7 
 ;------------------------------------------------------------
 	G$Hand_Check$0$0 ==.
-	C$Lab6.c$243$1$143 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:243: char Hand_Check(void)
+	C$Lab6.c$258$1$146 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:258: char Hand_Check(void)
 ;	-----------------------------------------
 ;	 function Hand_Check
 ;	-----------------------------------------
 _Hand_Check:
-	C$Lab6.c$245$1$146 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:245: int temp_int = read_ranger();
+	C$Lab6.c$260$1$149 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:260: int temp_int = read_ranger();
 	lcall	_read_ranger
 	mov	r6,dpl
 	mov	r7,dph
-	C$Lab6.c$246$1$146 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:246: if(temp_int < 18)
+	C$Lab6.c$261$1$149 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:261: if(temp_int < 90)
 	clr	c
 	mov	a,r6
-	subb	a,#0x12
+	subb	a,#0x5A
 	mov	a,r7
 	xrl	a,#0x80
 	subb	a,#0x80
 	jnc	00102$
-	C$Lab6.c$248$2$147 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:248: return 1;
+	C$Lab6.c$263$2$150 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:263: return 1;
 	mov	dpl,#0x01
 	sjmp	00104$
 00102$:
-	C$Lab6.c$250$2$148 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:250: else { return 0;}
+	C$Lab6.c$265$2$151 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:265: else { return 0;}
 	mov	dpl,#0x00
 00104$:
-	C$Lab6.c$251$1$146 ==.
+	C$Lab6.c$266$1$149 ==.
 	XG$Hand_Check$0$0 ==.
 	ret
 ;------------------------------------------------------------
@@ -3033,14 +3075,14 @@ _Hand_Check:
 ;input                     Allocated to registers r7 
 ;------------------------------------------------------------
 	G$Pick_Heading$0$0 ==.
-	C$Lab6.c$255$1$146 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:255: void Pick_Heading(void)
+	C$Lab6.c$270$1$149 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:270: void Pick_Heading(void)
 ;	-----------------------------------------
 ;	 function Pick_Heading
 ;	-----------------------------------------
 _Pick_Heading:
-	C$Lab6.c$258$1$150 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:258: printf("\rPlease select a desired heading.\n");
+	C$Lab6.c$273$1$153 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:273: printf("\rPlease select a desired heading.\n");
 	mov	a,#___str_8
 	push	acc
 	mov	a,#(___str_8 >> 8)
@@ -3051,11 +3093,11 @@ _Pick_Heading:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$Lab6.c$259$1$150 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:259: printf("\r'u' will increment by 0.1. 'd' will decrement by 0.1.\n");
-	mov	a,#___str_5
+	C$Lab6.c$274$1$153 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:274: printf("\r'u' will increment by 5 degrees. 'd' will decrement by 5 degrees.\n");
+	mov	a,#___str_9
 	push	acc
-	mov	a,#(___str_5 >> 8)
+	mov	a,#(___str_9 >> 8)
 	push	acc
 	mov	a,#0x80
 	push	acc
@@ -3063,8 +3105,8 @@ _Pick_Heading:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$Lab6.c$260$1$150 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:260: printf("\r'f' when finished\n");
+	C$Lab6.c$275$1$153 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:275: printf("\r'f' when finished\n");
 	mov	a,#___str_6
 	push	acc
 	mov	a,#(___str_6 >> 8)
@@ -3075,131 +3117,115 @@ _Pick_Heading:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$Lab6.c$261$1$150 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:261: while(1)
+	C$Lab6.c$276$2$154 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:276: while(1)
 00112$:
-	C$Lab6.c$263$2$151 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:263: input = getchar();
+	C$Lab6.c$278$2$154 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:278: input = getchar();
 	lcall	_getchar
 	mov	r7,dpl
-	C$Lab6.c$264$2$151 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:264: if(input == 'u') heading += 0.1;
+	C$Lab6.c$279$2$154 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:279: if(input == 'u') heading += 50;
 	cjne	r7,#0x75,00102$
-	mov	dpl,_heading
-	mov	dph,(_heading + 1)
-	push	ar7
-	lcall	___uint2fs
-	mov	r3,dpl
-	mov	r4,dph
-	mov	r5,b
-	mov	r6,a
-	mov	a,#0xCD
-	push	acc
-	dec	a
-	push	acc
-	push	acc
-	mov	a,#0x3D
-	push	acc
-	mov	dpl,r3
-	mov	dph,r4
-	mov	b,r5
-	mov	a,r6
-	lcall	___fsadd
-	mov	r3,dpl
-	mov	r4,dph
-	mov	r5,b
-	mov	r6,a
-	mov	a,sp
-	add	a,#0xfc
-	mov	sp,a
-	mov	dpl,r3
-	mov	dph,r4
-	mov	b,r5
-	mov	a,r6
-	lcall	___fs2uint
-	mov	_heading,dpl
-	mov	(_heading + 1),dph
-	pop	ar7
+	mov	a,#0x32
+	add	a,_heading
+	mov	_heading,a
+	clr	a
+	addc	a,(_heading + 1)
+	mov	(_heading + 1),a
 00102$:
-	C$Lab6.c$265$2$151 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:265: if(input == 'd') heading -= 0.1;
+	C$Lab6.c$280$2$154 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:280: if(input == 'd') heading -= 50;
 	cjne	r7,#0x64,00104$
-	mov	dpl,_heading
-	mov	dph,(_heading + 1)
-	push	ar7
-	lcall	___uint2fs
-	mov	r3,dpl
-	mov	r4,dph
-	mov	r5,b
-	mov	r6,a
-	mov	a,#0xCD
-	push	acc
-	dec	a
-	push	acc
-	push	acc
-	mov	a,#0x3D
-	push	acc
-	mov	dpl,r3
-	mov	dph,r4
-	mov	b,r5
-	mov	a,r6
-	lcall	___fssub
-	mov	r3,dpl
-	mov	r4,dph
-	mov	r5,b
-	mov	r6,a
-	mov	a,sp
-	add	a,#0xfc
-	mov	sp,a
-	mov	dpl,r3
-	mov	dph,r4
-	mov	b,r5
-	mov	a,r6
-	lcall	___fs2uint
-	mov	_heading,dpl
-	mov	(_heading + 1),dph
-	pop	ar7
+	mov	a,_heading
+	add	a,#0xCE
+	mov	_heading,a
+	mov	a,(_heading + 1)
+	addc	a,#0xFF
+	mov	(_heading + 1),a
 00104$:
-	C$Lab6.c$266$2$151 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:266: if(input == 'f') return;
+	C$Lab6.c$281$2$154 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:281: if(input == 'f') return;
 	cjne	r7,#0x66,00106$
 	sjmp	00114$
 00106$:
-	C$Lab6.c$267$2$151 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:267: if(heading >= 10) heading = 10;
+	C$Lab6.c$282$2$154 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:282: if(heading >= 3600) heading = 3600;
 	clr	c
 	mov	a,_heading
-	subb	a,#0x0A
+	subb	a,#0x10
 	mov	a,(_heading + 1)
-	subb	a,#0x00
+	subb	a,#0x0E
 	jc	00108$
-	mov	_heading,#0x0A
-	mov	(_heading + 1),#0x00
+	mov	_heading,#0x10
+	mov	(_heading + 1),#0x0E
 00108$:
-	C$Lab6.c$268$2$151 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:268: if(heading <= 0) heading = 0;
+	C$Lab6.c$283$2$154 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:283: if(heading <= 0) heading = 0;
 	mov	a,_heading
 	orl	a,(_heading + 1)
 	jnz	00110$
 	mov	_heading,a
 	mov	(_heading + 1),a
 00110$:
-	C$Lab6.c$269$2$151 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:269: printf_fast_f("\rDesired heading: %2.1f\n", heading);
+	C$Lab6.c$284$2$154 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:284: printf("\rDesired heading: %u\n", heading);
 	push	_heading
 	push	(_heading + 1)
-	mov	a,#___str_9
+	mov	a,#___str_10
 	push	acc
-	mov	a,#(___str_9 >> 8)
+	mov	a,#(___str_10 >> 8)
 	push	acc
-	lcall	_printf_fast_f
+	mov	a,#0x80
+	push	acc
+	lcall	_printf
 	mov	a,sp
-	add	a,#0xfc
+	add	a,#0xfb
 	mov	sp,a
-	ljmp	00112$
+	sjmp	00112$
 00114$:
-	C$Lab6.c$271$1$150 ==.
+	C$Lab6.c$286$1$153 ==.
 	XG$Pick_Heading$0$0 ==.
+	ret
+;------------------------------------------------------------
+;Allocation info for local variables in function 'read_compass'
+;------------------------------------------------------------
+;addr                      Allocated to registers 
+;Data                      Allocated with name '_read_compass_Data_1_156'
+;read_heading              Allocated to registers 
+;------------------------------------------------------------
+	G$read_compass$0$0 ==.
+	C$Lab6.c$290$1$153 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:290: int read_compass(void)
+;	-----------------------------------------
+;	 function read_compass
+;	-----------------------------------------
+_read_compass:
+	C$Lab6.c$295$1$156 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:295: i2c_read_data(addr, 2, Data, 2); // read two byte, starting at reg 2
+	mov	_i2c_read_data_PARM_3,#_read_compass_Data_1_156
+	mov	(_i2c_read_data_PARM_3 + 1),#0x00
+	mov	(_i2c_read_data_PARM_3 + 2),#0x40
+	mov	_i2c_read_data_PARM_2,#0x02
+	mov	_i2c_read_data_PARM_4,#0x02
+	mov	dpl,#0xC0
+	lcall	_i2c_read_data
+	C$Lab6.c$296$1$156 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:296: read_heading =((Data[0] << 8) | Data[1]); //combine the two values
+	mov	r7,_read_compass_Data_1_156
+	mov	r6,#0x00
+	mov	r4,(_read_compass_Data_1_156 + 0x0001)
+	mov	r5,#0x00
+	mov	a,r4
+	orl	a,r6
+	mov	dpl,a
+	mov	a,r5
+	orl	a,r7
+	mov	dph,a
+	C$Lab6.c$297$1$156 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:297: return read_heading; // the heading returned in degrees between 0 and 3599
+	C$Lab6.c$298$1$156 ==.
+	XG$read_compass$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'read_ranger'
@@ -3208,14 +3234,14 @@ _Pick_Heading:
 ;st_range                  Allocated to registers r6 r7 
 ;------------------------------------------------------------
 	G$read_ranger$0$0 ==.
-	C$Lab6.c$275$1$150 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:275: int read_ranger(void)
+	C$Lab6.c$302$1$156 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:302: int read_ranger(void)
 ;	-----------------------------------------
 ;	 function read_ranger
 ;	-----------------------------------------
 _read_ranger:
-	C$Lab6.c$279$1$153 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:279: i2c_read_data(addr, 2, Data, 2); // read two byte, starting at reg 2
+	C$Lab6.c$306$1$158 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:306: i2c_read_data(addr, 2, Data, 2); // read two byte, starting at reg 2
 	mov	_i2c_read_data_PARM_3,#_Data
 	mov	(_i2c_read_data_PARM_3 + 1),#0x00
 	mov	(_i2c_read_data_PARM_3 + 2),#0x40
@@ -3223,8 +3249,8 @@ _read_ranger:
 	mov	_i2c_read_data_PARM_4,#0x02
 	mov	dpl,#0xE0
 	lcall	_i2c_read_data
-	C$Lab6.c$280$1$153 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:280: st_range =((Data[0] << 8) | Data[1]); //combine the two values
+	C$Lab6.c$307$1$158 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:307: st_range =((Data[0] << 8) | Data[1]); //combine the two values
 	mov	r7,_Data
 	mov	r6,#0x00
 	mov	r4,(_Data + 0x0001)
@@ -3233,11 +3259,11 @@ _read_ranger:
 	orl	ar6,a
 	mov	a,r5
 	orl	ar7,a
-	C$Lab6.c$282$1$153 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:282: Data[0] = 0x51 ; // write 0x51 to reg 0 of the ranger:
+	C$Lab6.c$309$1$158 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:309: Data[0] = 0x51 ; // write 0x51 to reg 0 of the ranger:
 	mov	_Data,#0x51
-	C$Lab6.c$283$1$153 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:283: i2c_write_data(addr, 0, Data, 1) ; // write one byte of data to reg 0 at addr
+	C$Lab6.c$310$1$158 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:310: i2c_write_data(addr, 0, Data, 1) ; // write one byte of data to reg 0 at addr
 	mov	_i2c_write_data_PARM_3,#_Data
 	mov	(_i2c_write_data_PARM_3 + 1),#0x00
 	mov	(_i2c_write_data_PARM_3 + 2),#0x40
@@ -3249,25 +3275,25 @@ _read_ranger:
 	lcall	_i2c_write_data
 	pop	ar6
 	pop	ar7
-	C$Lab6.c$284$1$153 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:284: return st_range;
+	C$Lab6.c$311$1$158 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:311: return st_range;
 	mov	dpl,r6
 	mov	dph,r7
-	C$Lab6.c$285$1$153 ==.
+	C$Lab6.c$312$1$158 ==.
 	XG$read_ranger$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'set_PW'
 ;------------------------------------------------------------
 	G$set_PW$0$0 ==.
-	C$Lab6.c$289$1$153 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:289: void set_PW(void)
+	C$Lab6.c$316$1$158 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:316: void set_PW(void)
 ;	-----------------------------------------
 ;	 function set_PW
 ;	-----------------------------------------
 _set_PW:
-	C$Lab6.c$292$1$155 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:292: Error = (desired_heading) - heading;	//Calculate the error
+	C$Lab6.c$319$1$160 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:319: Error = (desired_heading) - heading;	//Calculate the error
 	mov	a,_desired_heading
 	clr	c
 	subb	a,_heading
@@ -3275,8 +3301,8 @@ _set_PW:
 	mov	a,(_desired_heading + 1)
 	subb	a,(_heading + 1)
 	mov	(_Error + 1),a
-	C$Lab6.c$293$1$155 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:293: if(Error < -1800) { Error = Error + 3600; } //Adjust error so that we turn efficiently
+	C$Lab6.c$320$1$160 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:320: if(Error < -1800) { Error = Error + 3600; } //Adjust error so that we turn efficiently
 	clr	c
 	mov	a,_Error
 	subb	a,#0xF8
@@ -3291,8 +3317,8 @@ _set_PW:
 	addc	a,(_Error + 1)
 	mov	(_Error + 1),a
 00102$:
-	C$Lab6.c$294$1$155 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:294: if(Error > 1800)  { Error = Error - 3600; }
+	C$Lab6.c$321$1$160 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:321: if(Error > 1800)  { Error = Error - 3600; }
 	clr	c
 	mov	a,#0x08
 	subb	a,_Error
@@ -3308,8 +3334,8 @@ _set_PW:
 	addc	a,#0xF1
 	mov	(_Error + 1),a
 00104$:
-	C$Lab6.c$297$1$155 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:297: temp_motorpw = (long)PW_CENTER + (long)kp*(long)(Error) + (long)kd*(long)(Error-prev_error);
+	C$Lab6.c$324$1$160 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:324: temp_motorpw = (long)PW_CENTER + (long)kp*(long)(Error) + (long)kd*(long)(Error-prev_error);
 	mov	__mullong_PARM_2,_Error
 	mov	a,(_Error + 1)
 	mov	(__mullong_PARM_2 + 1),a
@@ -3379,12 +3405,12 @@ _set_PW:
 	mov	a,r3
 	addc	a,r7
 	mov	(_temp_motorpw + 3),a
-	C$Lab6.c$298$1$155 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:298: prev_error = Error;
+	C$Lab6.c$325$1$160 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:325: prev_error = Error;
 	mov	_prev_error,_Error
 	mov	(_prev_error + 1),(_Error + 1)
-	C$Lab6.c$301$1$155 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:301: if(temp_motorpw < 2100) { temp_motorpw = 2100; } // min
+	C$Lab6.c$328$1$160 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:328: if(temp_motorpw < 2100) { temp_motorpw = 2100; } // min
 	clr	c
 	mov	a,_temp_motorpw
 	subb	a,#0x34
@@ -3402,8 +3428,8 @@ _set_PW:
 	mov	(_temp_motorpw + 2),a
 	mov	(_temp_motorpw + 3),a
 00106$:
-	C$Lab6.c$302$1$155 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:302: if(temp_motorpw > 3400) { temp_motorpw = 3400; } // max
+	C$Lab6.c$329$1$160 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:329: if(temp_motorpw > 3400) { temp_motorpw = 3400; } // max
 	clr	c
 	mov	a,#0x48
 	subb	a,_temp_motorpw
@@ -3422,8 +3448,8 @@ _set_PW:
 	mov	(_temp_motorpw + 2),a
 	mov	(_temp_motorpw + 3),a
 00108$:
-	C$Lab6.c$304$1$155 ==.
-;	C:\Users\Kathryn\Dropbox\2015 Spring\LITEC\Labs\LITEC\Lab 6\Lab6.c:304: PCA0CP0 = 0xFFFF - temp_motorpw; // Change pulse width
+	C$Lab6.c$331$1$160 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:331: PCA0CP0 = 0xFFFF - temp_motorpw; // Change pulse width
 	mov	a,#0xFF
 	clr	c
 	subb	a,_temp_motorpw
@@ -3437,8 +3463,23 @@ _set_PW:
 	subb	a,(_temp_motorpw + 3)
 	mov	((_PCA0CP0 >> 0) & 0xFF),r4
 	mov	((_PCA0CP0 >> 8) & 0xFF),r5
-	C$Lab6.c$305$1$155 ==.
+	C$Lab6.c$332$1$160 ==.
 	XG$set_PW$0$0 ==.
+	ret
+;------------------------------------------------------------
+;Allocation info for local variables in function 'Set_Desired_Heading'
+;------------------------------------------------------------
+	G$Set_Desired_Heading$0$0 ==.
+	C$Lab6.c$335$1$160 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:335: void Set_Desired_Heading(void)
+;	-----------------------------------------
+;	 function Set_Desired_Heading
+;	-----------------------------------------
+_Set_Desired_Heading:
+	C$Lab6.c$338$1$160 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:338: }
+	C$Lab6.c$338$1$160 ==.
+	XG$Set_Desired_Heading$0$0 ==.
 	ret
 	.area CSEG    (CODE)
 	.area CONST   (CODE)
@@ -3495,7 +3536,14 @@ ___str_8:
 FLab6$__str_9$0$0 == .
 ___str_9:
 	.db 0x0D
-	.ascii "Desired heading: %2.1f"
+	.ascii "'u' will increment by 5 degrees. 'd' will decrement by 5 de"
+	.ascii "grees."
+	.db 0x0A
+	.db 0x00
+FLab6$__str_10$0$0 == .
+___str_10:
+	.db 0x0D
+	.ascii "Desired heading: %u"
 	.db 0x0A
 	.db 0x00
 	.area XINIT   (CODE)
