@@ -54,6 +54,7 @@ signed int gx = 0;
 signed int gy = 0;
 signed int gx_adj = 0;
 signed int gy_adj = 0;
+signed int gx_motor_adj = 0;
 float steer_gain = 0;
 float drive_gain = 0;
 unsigned char new_AD = 0;
@@ -94,12 +95,12 @@ void main(void)
 				read_accel();
 				set_PW();
 			}
-			if(new_AD)
+		/*	if(new_AD)
 			{
 				new_AD = 0;
 				AD_Result = read_AD_input(7); //Read analog input on pin 1.5
 				voltage = ((12.8/255)*(AD_Result)); //Convert back to input voltage
-			}
+			}*/
 			if(print_delay == 20)
 			{
 				printf("\r%d		|	%d		|	%d		|	%d\n", gx, gy, STEER_PW, DRIVE_PW);
@@ -290,6 +291,11 @@ void accelerometer_adjustment(void)
 	if((gx > -100) && (gx < 100)) gx_adj = 0;
 	else gx_adj = (int)((steer_gain)*(gx));
 	gy_adj = (int)((drive_gain)*(gy));
+	if((gx > -100) && (gx < 100))
+	{
+		gx_motor_adj = 0;
+	}
+	else gx_motor_adj = abs((int)((drive_gain)*(gx)));
 }
 // returns 1 if the accelerometer is ready to be read
 unsigned char status_reg_a(void)

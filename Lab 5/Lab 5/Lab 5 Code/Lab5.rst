@@ -1,7 +1,7 @@
                                       1 ;--------------------------------------------------------
                                       2 ; File Created by SDCC : free open source ANSI-C Compiler
                                       3 ; Version 3.4.0 #8981 (Apr  5 2014) (MINGW32)
-                                      4 ; This file was generated Fri May 01 10:09:57 2015
+                                      4 ; This file was generated Fri May 01 11:06:52 2015
                                       5 ;--------------------------------------------------------
                                       6 	.module Lab5
                                       7 	.optsdcc -mmcs51 --model-small
@@ -3477,54 +3477,54 @@
       000B53 85 47 F0         [24] 3477 	mov	b,(_gx + 1)
       000B56 63 F0 80         [24] 3478 	xrl	b,#0x80
       000B59 95 F0            [12] 3479 	subb	a,b
-      000B5B 50 55            [24] 3480 	jnc	00106$
+      000B5B 50 14            [24] 3480 	jnc	00106$
       000B5D C3               [12] 3481 	clr	c
       000B5E E5 46            [12] 3482 	mov	a,_gx
       000B60 94 64            [12] 3483 	subb	a,#0x64
       000B62 E5 47            [12] 3484 	mov	a,(_gx + 1)
       000B64 64 80            [12] 3485 	xrl	a,#0x80
       000B66 94 80            [12] 3486 	subb	a,#0x80
-      000B68 50 48            [24] 3487 	jnc	00106$
-                           000A74  3488 	C$Lab5.c$296$1$153 ==.
-                                   3489 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:296: gx_motor_adj = abs((int)((drive_gain)*(gx)));
-      000B6A 85 46 82         [24] 3490 	mov	dpl,_gx
-      000B6D 85 47 83         [24] 3491 	mov	dph,(_gx + 1)
-      000B70 12 15 0D         [24] 3492 	lcall	___sint2fs
-      000B73 AC 82            [24] 3493 	mov	r4,dpl
-      000B75 AD 83            [24] 3494 	mov	r5,dph
-      000B77 AE F0            [24] 3495 	mov	r6,b
-      000B79 FF               [12] 3496 	mov	r7,a
-      000B7A C0 04            [24] 3497 	push	ar4
-      000B7C C0 05            [24] 3498 	push	ar5
-      000B7E C0 06            [24] 3499 	push	ar6
-      000B80 C0 07            [24] 3500 	push	ar7
-      000B82 85 54 82         [24] 3501 	mov	dpl,_drive_gain
-      000B85 85 55 83         [24] 3502 	mov	dph,(_drive_gain + 1)
-      000B88 85 56 F0         [24] 3503 	mov	b,(_drive_gain + 2)
-      000B8B E5 57            [12] 3504 	mov	a,(_drive_gain + 3)
-      000B8D 12 11 5B         [24] 3505 	lcall	___fsmul
-      000B90 AC 82            [24] 3506 	mov	r4,dpl
-      000B92 AD 83            [24] 3507 	mov	r5,dph
-      000B94 AE F0            [24] 3508 	mov	r6,b
-      000B96 FF               [12] 3509 	mov	r7,a
-      000B97 E5 81            [12] 3510 	mov	a,sp
-      000B99 24 FC            [12] 3511 	add	a,#0xfc
-      000B9B F5 81            [12] 3512 	mov	sp,a
-      000B9D 8C 82            [24] 3513 	mov	dpl,r4
-      000B9F 8D 83            [24] 3514 	mov	dph,r5
-      000BA1 8E F0            [24] 3515 	mov	b,r6
-      000BA3 EF               [12] 3516 	mov	a,r7
-      000BA4 12 15 1A         [24] 3517 	lcall	___fs2sint
-      000BA7 12 12 ED         [24] 3518 	lcall	_abs
-      000BAA 85 82 4E         [24] 3519 	mov	_gx_motor_adj,dpl
-      000BAD 85 83 4F         [24] 3520 	mov	(_gx_motor_adj + 1),dph
-      000BB0 80 05            [24] 3521 	sjmp	00109$
-      000BB2                       3522 00106$:
-                           000ABC  3523 	C$Lab5.c$298$1$153 ==.
-                                   3524 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:298: else gx_motor_adj = 0;
-      000BB2 E4               [12] 3525 	clr	a
-      000BB3 F5 4E            [12] 3526 	mov	_gx_motor_adj,a
-      000BB5 F5 4F            [12] 3527 	mov	(_gx_motor_adj + 1),a
+      000B68 50 07            [24] 3487 	jnc	00106$
+                           000A74  3488 	C$Lab5.c$296$2$154 ==.
+                                   3489 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:296: gx_motor_adj = 0;
+      000B6A E4               [12] 3490 	clr	a
+      000B6B F5 4E            [12] 3491 	mov	_gx_motor_adj,a
+      000B6D F5 4F            [12] 3492 	mov	(_gx_motor_adj + 1),a
+      000B6F 80 46            [24] 3493 	sjmp	00109$
+      000B71                       3494 00106$:
+                           000A7B  3495 	C$Lab5.c$298$1$153 ==.
+                                   3496 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:298: else gx_motor_adj = abs((int)((drive_gain)*(gx)));
+      000B71 85 46 82         [24] 3497 	mov	dpl,_gx
+      000B74 85 47 83         [24] 3498 	mov	dph,(_gx + 1)
+      000B77 12 15 0D         [24] 3499 	lcall	___sint2fs
+      000B7A AC 82            [24] 3500 	mov	r4,dpl
+      000B7C AD 83            [24] 3501 	mov	r5,dph
+      000B7E AE F0            [24] 3502 	mov	r6,b
+      000B80 FF               [12] 3503 	mov	r7,a
+      000B81 C0 04            [24] 3504 	push	ar4
+      000B83 C0 05            [24] 3505 	push	ar5
+      000B85 C0 06            [24] 3506 	push	ar6
+      000B87 C0 07            [24] 3507 	push	ar7
+      000B89 85 54 82         [24] 3508 	mov	dpl,_drive_gain
+      000B8C 85 55 83         [24] 3509 	mov	dph,(_drive_gain + 1)
+      000B8F 85 56 F0         [24] 3510 	mov	b,(_drive_gain + 2)
+      000B92 E5 57            [12] 3511 	mov	a,(_drive_gain + 3)
+      000B94 12 11 5B         [24] 3512 	lcall	___fsmul
+      000B97 AC 82            [24] 3513 	mov	r4,dpl
+      000B99 AD 83            [24] 3514 	mov	r5,dph
+      000B9B AE F0            [24] 3515 	mov	r6,b
+      000B9D FF               [12] 3516 	mov	r7,a
+      000B9E E5 81            [12] 3517 	mov	a,sp
+      000BA0 24 FC            [12] 3518 	add	a,#0xfc
+      000BA2 F5 81            [12] 3519 	mov	sp,a
+      000BA4 8C 82            [24] 3520 	mov	dpl,r4
+      000BA6 8D 83            [24] 3521 	mov	dph,r5
+      000BA8 8E F0            [24] 3522 	mov	b,r6
+      000BAA EF               [12] 3523 	mov	a,r7
+      000BAB 12 15 1A         [24] 3524 	lcall	___fs2sint
+      000BAE 12 12 ED         [24] 3525 	lcall	_abs
+      000BB1 85 82 4E         [24] 3526 	mov	_gx_motor_adj,dpl
+      000BB4 85 83 4F         [24] 3527 	mov	(_gx_motor_adj + 1),dph
       000BB7                       3528 00109$:
                            000AC1  3529 	C$Lab5.c$299$1$153 ==.
                            000AC1  3530 	XG$accelerometer_adjustment$0$0 ==.

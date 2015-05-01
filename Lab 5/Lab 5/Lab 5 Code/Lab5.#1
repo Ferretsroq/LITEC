@@ -293,9 +293,9 @@ void accelerometer_adjustment(void)
 	gy_adj = (int)((drive_gain)*(gy));
 	if((gx > -100) && (gx < 100))
 	{
-		gx_motor_adj = abs((int)((drive_gain)*(gx)));
+		gx_motor_adj = 0;
 	}
-	else gx_motor_adj = 0;
+	else gx_motor_adj = abs((int)((drive_gain)*(gx)));
 }
 // returns 1 if the accelerometer is ready to be read
 unsigned char status_reg_a(void)

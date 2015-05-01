@@ -1,7 +1,7 @@
 ;--------------------------------------------------------
 ; File Created by SDCC : free open source ANSI-C Compiler
 ; Version 3.4.0 #8981 (Apr  5 2014) (MINGW32)
-; This file was generated Fri May 01 10:09:57 2015
+; This file was generated Fri May 01 11:06:52 2015
 ;--------------------------------------------------------
 	.module Lab5
 	.optsdcc -mmcs51 --model-small
@@ -3485,8 +3485,15 @@ _accelerometer_adjustment:
 	xrl	a,#0x80
 	subb	a,#0x80
 	jnc	00106$
-	C$Lab5.c$296$1$153 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:296: gx_motor_adj = abs((int)((drive_gain)*(gx)));
+	C$Lab5.c$296$2$154 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:296: gx_motor_adj = 0;
+	clr	a
+	mov	_gx_motor_adj,a
+	mov	(_gx_motor_adj + 1),a
+	sjmp	00109$
+00106$:
+	C$Lab5.c$298$1$153 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:298: else gx_motor_adj = abs((int)((drive_gain)*(gx)));
 	mov	dpl,_gx
 	mov	dph,(_gx + 1)
 	lcall	___sint2fs
@@ -3518,13 +3525,6 @@ _accelerometer_adjustment:
 	lcall	_abs
 	mov	_gx_motor_adj,dpl
 	mov	(_gx_motor_adj + 1),dph
-	sjmp	00109$
-00106$:
-	C$Lab5.c$298$1$153 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 5\Lab 5\Lab 5 Code\Lab5.c:298: else gx_motor_adj = 0;
-	clr	a
-	mov	_gx_motor_adj,a
-	mov	(_gx_motor_adj + 1),a
 00109$:
 	C$Lab5.c$299$1$153 ==.
 	XG$accelerometer_adjustment$0$0 ==.
