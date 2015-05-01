@@ -54,6 +54,7 @@ signed int gx = 0;
 signed int gy = 0;
 signed int gx_adj = 0;
 signed int gy_adj = 0;
+signed int gx_motor_adj = 0;
 float steer_gain = 0;
 float drive_gain = 0;
 unsigned char new_AD = 0;
@@ -270,7 +271,7 @@ void set_PW(void)
 	{
 		STEER_PW = 3500;
 	}
-	DRIVE_PW = 2760 + (gy_adj);
+	DRIVE_PW = 2760 + (gy_adj) + (gx_motor_adj);
 	if(DRIVE_PW < 2760) DRIVE_PW = 2760;
 	if(DRIVE_PW > 3500) DRIVE_PW = 3500;
 	PCA0CP0 = 0xFFFF - STEER_PW; // Change pulse width
@@ -290,6 +291,11 @@ void accelerometer_adjustment(void)
 	if((gx > -100) && (gx < 100)) gx_adj = 0;
 	else gx_adj = (int)((steer_gain)*(gx));
 	gy_adj = (int)((drive_gain)*(gy));
+	if((gx > -100) && (gx < 100))
+	{
+		gx_motor_adj = abs((int)((drive_gain)*(gx)));
+	}
+	else gx_motor_adj = 0;
 }
 // returns 1 if the accelerometer is ready to be read
 unsigned char status_reg_a(void)

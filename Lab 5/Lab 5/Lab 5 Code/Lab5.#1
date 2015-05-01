@@ -54,6 +54,7 @@ signed int gx = 0;
 signed int gy = 0;
 signed int gx_adj = 0;
 signed int gy_adj = 0;
+signed int gx_motor_adj = 0;
 float steer_gain = 0;
 float drive_gain = 0;
 unsigned char new_AD = 0;
@@ -81,7 +82,7 @@ void main(void)
 	printf("\rThe car will move quickly at first to move up the ramp\n");
 	Counts = 0;
 	nCounts = 0;
-	while(Counts <=1) PCA0CP2 = 0xFFFF - 3500;
+	while(Counts <=2) PCA0CP2 = 0xFFFF - 3500;
 	printf("\n\r------------DATA COLLECTION------------\n");
 	printf("\n\rX-Accel		|	Y-Accel		|	STEER_PW	|	DRIVE_PW\n\r");
 	while (1)
@@ -290,6 +291,11 @@ void accelerometer_adjustment(void)
 	if((gx > -100) && (gx < 100)) gx_adj = 0;
 	else gx_adj = (int)((steer_gain)*(gx));
 	gy_adj = (int)((drive_gain)*(gy));
+	if((gx > -100) && (gx < 100))
+	{
+		gx_motor_adj = abs((int)((drive_gain)*(gx)));
+	}
+	else gx_motor_adj = 0;
 }
 // returns 1 if the accelerometer is ready to be read
 unsigned char status_reg_a(void)

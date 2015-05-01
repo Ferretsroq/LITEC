@@ -81,7 +81,7 @@ void main(void)
 	printf("\rThe car will move quickly at first to move up the ramp\n");
 	Counts = 0;
 	nCounts = 0;
-	while(Counts <=1) PCA0CP2 = 0xFFFF - 3500;
+	while(Counts <=2) PCA0CP2 = 0xFFFF - 3500;
 	printf("\n\r------------DATA COLLECTION------------\n");
 	printf("\n\rX-Accel		|	Y-Accel		|	STEER_PW	|	DRIVE_PW\n\r");
 	while (1)
@@ -270,7 +270,7 @@ void set_PW(void)
 	{
 		STEER_PW = 3500;
 	}
-	DRIVE_PW = 2760 + abs((gy_adj));
+	DRIVE_PW = 2760 + (gy_adj);
 	if(DRIVE_PW < 2760) DRIVE_PW = 2760;
 	if(DRIVE_PW > 3500) DRIVE_PW = 3500;
 	PCA0CP0 = 0xFFFF - STEER_PW; // Change pulse width

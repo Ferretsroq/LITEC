@@ -81,7 +81,7 @@ void main(void)
 	printf("\rThe car will move quickly at first to move up the ramp\n");
 	Counts = 0;
 	nCounts = 0;
-	while(Counts <=1) PCA0CP2 = 0xFFFF - 3500;
+	while(Counts <=2) PCA0CP2 = 0xFFFF - 3500;
 	printf("\n\r------------DATA COLLECTION------------\n");
 	printf("\n\rX-Accel		|	Y-Accel		|	STEER_PW	|	DRIVE_PW\n\r");
 	while (1)
