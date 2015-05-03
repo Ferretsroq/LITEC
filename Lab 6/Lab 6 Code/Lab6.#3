@@ -10,12 +10,10 @@
 #include <c8051_SDCC.h>
 #include <i2c.h>
 #define PCA_START 28672
-#define MAX_RANGE 55
-#define PW_CENTER 2760
+#define PW_CENTER 2765
 #define PW_MAX 3500
 #define PW_MIN 2030
-#define kd	1000000 // bitch queen
-#define kp	1000000
+
 
 //-----------------------------------------------------------------------------
 // Function Prototypes
@@ -35,31 +33,40 @@ int read_ranger(void);
 char Hand_Check(void);
 void Set_Desired_Heading(void);
 int read_compass(void);
+void Pick_Heading_kp(void);
+void Pick_Heading_kd(void);
+//void Pick_Altitude_kp(void);
+//void Pick_Altitude_kd(void);
+void Set_Fan_Angle(void);
 
 // Global variables
-signed long temp_motorpw = 0;
-unsigned char new_range = 0;
-signed int prev_error = 0;
+//signed long temp_motorpw = 0;
+signed int left_pw;
+signed int right_pw;
 signed int Error = 0;
-unsigned int Counts, nCounts;
+signed int prev_error = 0;
+unsigned char Counts, nCounts;
+unsigned char new_range = 0;
+unsigned char new_AD = 0;
+unsigned char new_heading;
+unsigned char h_count;
 unsigned char r_count = 0;
-unsigned char a_count = 0;
 unsigned char adc_count = 0;
-unsigned char delay = 0;
+float steer_gain = 0;
+float drive_gain = 0;
 unsigned int DRIVE_PW = 2760;
 unsigned int STEER_PW = 2760;
 unsigned char Data[2]; // Data is an array with a length of 2
 unsigned char print_delay = 0;
-float steer_gain = 0;
-float drive_gain = 0;
-unsigned char new_AD = 0;
 unsigned char AD_Result = 0;
 unsigned char voltage = 0;
-unsigned int desired_heading;
 unsigned int heading = 0;
 unsigned int range = 0;
-unsigned char h_count;
-unsigned char new_heading;
+unsigned int desired_heading;
+unsigned char heading_kp;
+unsigned char heading_kd;
+//char altitude_kp;
+//char altitude_kd;
 
 //=============================================================================
 //-----------------------------------------------------------------------------
@@ -75,29 +82,33 @@ void main(void)
     putchar('\r');  // Dummy write to serial port
     printf("\nStart\r\n");
 	PCA0CP0 = 0xFFFF - PW_CENTER;
-	PCa0CP1 = 0xFFFF - PW_CENTER;
+	PCA0CP1 = 0xFFFF - PW_CENTER;
 	PCA0CP2 = 0xFFFF - PW_CENTER; 
 	PCA0CP3 = 0xFFFF - PW_CENTER;
 	Counts = 0;
 	while (Counts < 1);  // Wait a long time (1s) for motors to initialize
 	
 	// Read the number pad or SecureCRT terminal to set the initial desired heading
-	// Be able to alter data by raising or lowering hand over the ranger
+	// Be able to alter data by raising or lowering hand over the 
+	Set_Fan_Angle();
 	Pick_Heading();
+	Pick_Heading_kp();
+	Pick_Heading_kd();
+//	Pick_Altitude_kp();
+//	Pick_Altitude_kd();
+	printf("\rhkp: %u\n\rhkd: %u", heading_kp, heading_kd);
 	Counts = 0;
 	nCounts = 0;
-	// printf("\n\r------------DATA COLLECTION------------\n");
-	// printf("\n\rX-Accel		|	Y-Accel		|	STEER_PW	|	DRIVE_PW\n\r");
+	 printf("\n\r------------DATA COLLECTION------------\n");
+	 printf("\n\rHeading		|	temp_motorpw		|	Error\n\r");
 	while (1)
     {
-		while(Hand_Check())	//check to see if a hand is present
-		{
 			if ((new_range)) // enough overflow for a new range
 			{
 				new_range = 0;	//clear and wait for next ping
 				range = read_ranger();
-				Set_Desired_Heading();
-				//set_PW();
+				//if(Hand_Check()) Set_Desired_Heading();
+				set_PW();
 				
 				//range = read_ranger();	// Read the distance
 				/*if (range != 0xFFFF) //Ignores dummy values from the ranger
@@ -125,12 +136,11 @@ void main(void)
 			}
 			if(print_delay == 20)
 			{
-				//printf("\r%d		|	%d		|	%d		|	%d\n", gx, gy, STEER_PW, DRIVE_PW);
+				printf("\r%u		|	%u			|	%u\n", heading, left_pw, right_pw);
 				print_delay = 0;
 			}
 			
 			// Output the results for transfer into excel
-	    }
 	}
 }
 //*****************************************************************************
@@ -265,7 +275,7 @@ char Hand_Check(void)
 	{
 		return 1;
 	}
-	else { return 0;}
+	else  return 0;
 }
 
 //-----------------------------------------------------------------------------
@@ -279,12 +289,12 @@ void Pick_Heading(void)
 	while(1)
 	{
 		input = getchar();
-		if(input == 'u') heading += 50;
-		if(input == 'd') heading -= 50;
+		if(input == 'u') desired_heading += 50;
+		if(input == 'd') desired_heading -= 50;
 		if(input == 'f') return;
-		if(heading >= 3600) heading = 3600;
-		if(heading <= 0) heading = 0;
-		printf("\rDesired heading: %u\n", heading);
+		if(desired_heading >= 3600) desired_heading = 3600;
+		if(desired_heading <= 0) desired_heading = 0;
+		printf("\rDesired heading: %u\n", desired_heading);
 	}
 }
 
@@ -318,24 +328,123 @@ int read_ranger(void)
 //Adjusting the steering servo
 void set_PW(void)
 {
+	signed long temp_motorpw;
 	// compass error equations (stored as Error)
 	Error = (desired_heading) - heading;	//Calculate the error
-	if(Error < -1800) { Error = Error + 3600; } //Adjust error so that we turn efficiently
-	if(Error > 1800)  { Error = Error - 3600; }
+	if(Error < -1800)  Error = Error + 3600;  //Adjust error so that we turn efficiently
+	if(Error > 1800)   Error = Error - 3600; 
 	
 	// actual calculation for the pulse width
-	temp_motorpw = (long)PW_CENTER + (long)kp*(long)(Error) + (long)kd*(long)(Error-prev_error);
+	temp_motorpw = ((long)(heading_kp)*(long)(Error)) + ((long)(heading_kd)*(long)(Error-prev_error));
 	prev_error = Error;
-	
+	left_pw = PW_CENTER - temp_motorpw;
+	right_pw = PW_CENTER + temp_motorpw;
 	//Stay within limits of the servo
-	if(temp_motorpw < 2100) { temp_motorpw = 2100; } // min
-	if(temp_motorpw > 3400) { temp_motorpw = 3400; } // max
+	if(left_pw < 2000) left_pw = 2000;  // min
+	if(left_pw > 3500) left_pw = 3500;  // max
+	if(right_pw < 2000) right_pw = 2000;
+	if(right_pw > 3500) right_pw = 3500;
 		
-	PCA0CP0 = 0xFFFF - temp_motorpw; // Change pulse width
+//	PCA0CP0 = 0xFFFF - temp_motorpw; // Change pulse width
+	PCA0CP2 = 0xFFFF - pw_left;
+	PCA0CP3 = 0xFFFF - pw_right;
 }
 //-----------------------------------------------------------------------------
 //Adjusting the desired heading
 void Set_Desired_Heading(void)
 {
 	//add code that will take the range and adjust the desired heading
+}
+
+
+//-----------------------------------------------------------------------------
+//Picking initial control constants
+void Pick_Heading_kp(void)
+{
+	char input;
+	printf("\rPlease select a desired heading kp.\n");
+	printf("\r'u' will increment by 1. 'd' will decrement by 1.\n");
+	printf("\r'f' when finished\n");
+	while(1)
+	{
+		input = getchar();
+		if(input == 'u') heading_kp += 1;
+		if(input == 'd') heading_kp -= 1;
+		if(input == 'f') return;
+		if(heading_kp >= 15) heading_kp = 15;
+		if(heading_kp <= 0) heading_kp = 0;
+		printf("\rDesired heading kp: %u\n", heading_kp);
+	}
+}
+void Pick_Heading_kd(void)
+{
+	char input;
+	printf("\rPlease select a desired heading kd.\n");
+	printf("\r'u' will increment by 10. 'd' will decrement by 10.\n");
+	printf("\r'f' when finished\n");
+	while(1)
+	{
+		input = getchar();
+		if(input == 'u') heading_kd += 10;
+		if(input == 'd') heading_kd -= 10;
+		if(input == 'f') return;
+		if(heading_kd >= 200) heading_kd = 200;
+		if(heading_kd <= 0) heading_kd = 0;
+		printf("\rDesired heading kd: %u\n", heading_kd);
+	}
+}
+/*void Pick_Altitude_kp(void)
+{
+	char input;
+	printf("\rPlease select a desired altitude kp.\n");
+	printf("\r'u' will increment by 1. 'd' will decrement by 1.\n");
+	printf("\r'f' when finished\n");
+	while(1)
+	{
+		input = getchar();
+		if(input == 'u') altitude_kp += 1;
+		if(input == 'd') altitude_kp -= 1;
+		if(input == 'f') return;
+		if(altitude_kp >= 100) altitude_kp = 100;
+		if(altitude_kp <= 0) altitude_kp = 0;
+		printf("\rDesired altitude kp: %u\n", altitude_kp);
+	}
+}
+void Pick_Altitude_kd(void)
+{
+	char input;
+	printf("\rPlease select a desired altitude kd.\n");
+	printf("\r'u' will increment by 1. 'd' will decrement by 1.\n");
+	printf("\r'f' when finished\n");
+	while(1)
+	{
+		input = getchar();
+		if(input == 'u') altitude_kd += 1;
+		if(input == 'd') altitude_kd -= 1;
+		if(input == 'f') return;
+		if(altitude_kd >= 100) altitude_kd = 100;
+		if(altitude_kd <= 0) altitude_kd = 0;
+		printf("\rDesired altitude kd: %u\n", altitude_kd);
+	}
+}
+*/
+//-----------------------------------------------------------------------------
+//Setting the fan angle to start
+void Set_Fan_Angle(void)
+{
+	char input;
+	PCA0CP1 = 0xFFFF - 2300;
+	printf("\rAdjust fan angle. 'u' for up, 'd' for down, 'f' when finished.\n");
+	while(1)
+	{
+		input = getchar();
+		if(input == 'u') PCA0CP1 -= 10;
+		if(input == 'd') PCA0CP1 += 10;
+		if(input == 'f') return;
+		if(PCA0CP1 > (0xFFFF - 2000)) PCA0CP1 = (0xFFFF - 2000);
+		if(PCA0CP1 < (0xFFFF - 3500)) PCA0CP1 = (0xFFFF - 3500);
+		printf("\rPW: %u\n", (0xFFFF - PCA0CP1));
+	}
+	
+	
 }
