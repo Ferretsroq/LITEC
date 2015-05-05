@@ -52,8 +52,8 @@ unsigned char new_heading;
 unsigned char h_count;
 unsigned char r_count = 0;
 unsigned char adc_count = 0;
-float steer_gain = 0;
-float drive_gain = 0;
+//float steer_gain = 0;
+//long drive_gain = 0;
 unsigned int DRIVE_PW = 2760;
 unsigned int STEER_PW = 2760;
 unsigned char Data[2]; // Data is an array with a length of 2
@@ -62,9 +62,10 @@ unsigned char AD_Result = 0;
 unsigned char voltage = 0;
 unsigned int heading = 0;
 unsigned int range = 0;
-unsigned int desired_heading;
-unsigned char heading_kp;
-unsigned char heading_kd;
+unsigned int desired_heading = 0;
+float heading_kp = 0;
+unsigned char heading_kd = 0;
+int print_error = 0;
 //char altitude_kp;
 //char altitude_kd;
 
@@ -87,7 +88,7 @@ void main(void)
 	PCA0CP3 = 0xFFFF - PW_CENTER;
 	Counts = 0;
 	while (Counts < 1);  // Wait a long time (1s) for motors to initialize
-	
+
 	// Read the number pad or SecureCRT terminal to set the initial desired heading
 	// Be able to alter data by raising or lowering hand over the 
 	Set_Fan_Angle();
@@ -96,11 +97,13 @@ void main(void)
 	Pick_Heading_kd();
 //	Pick_Altitude_kp();
 //	Pick_Altitude_kd();
-	printf("\rhkp: %u\n\rhkd: %u", heading_kp, heading_kd);
+//	drive_gain = (long)heading_kp;
+//	printf("\rDrive gain: %u\n", drive_gain);
+	printf_fast_f("\rhkp: %2.1f \n\rhkd: %u", heading_kp, heading_kd);
 	Counts = 0;
 	nCounts = 0;
 	 printf("\n\r------------DATA COLLECTION------------\n");
-	 printf("\n\rHeading		|	temp_motorpw		|	Error\n\r");
+	 printf("\n\rHeading	|	Left PW	|	Right PW|	Error	|	prev_error\n\r");
 	while (1)
     {
 			if ((new_range)) // enough overflow for a new range
@@ -108,7 +111,7 @@ void main(void)
 				new_range = 0;	//clear and wait for next ping
 				range = read_ranger();
 				//if(Hand_Check()) Set_Desired_Heading();
-				set_PW();
+			
 				
 				//range = read_ranger();	// Read the distance
 				/*if (range != 0xFFFF) //Ignores dummy values from the ranger
@@ -127,6 +130,7 @@ void main(void)
 			{
 				new_heading = 0;
 				heading = read_compass();
+				set_PW();
 			}
 			if(new_AD)
 			{
@@ -136,7 +140,7 @@ void main(void)
 			}
 			if(print_delay == 20)
 			{
-				printf("\r%u		|	%u			|	%u\n", heading, left_pw, right_pw);
+				printf("\r%u	|	%u	|	%u	|	%d	|	%d\n", (heading), left_pw, right_pw, Error, print_error);
 				print_delay = 0;
 			}
 			
@@ -248,7 +252,7 @@ unsigned char read_AD_input(unsigned char n)
 
 //-----------------------------------------------------------------------------
 //Selecting the steering gain function
-void Pick_Steering_Gain(void)
+/*void Pick_Steering_Gain(void)
 {
 	char input;
 	printf("\rPlease select a desired steering gain.\n");
@@ -264,7 +268,7 @@ void Pick_Steering_Gain(void)
 		if(steer_gain <= 0) steer_gain = 0;
 		printf_fast_f("\rDesired steering gain: %2.1f\n", steer_gain);
 	}
-}
+}*/
 
 //-----------------------------------------------------------------------------
 // detects whether there is a hand in front of the gondola
@@ -294,7 +298,7 @@ void Pick_Heading(void)
 		if(input == 'f') return;
 		if(desired_heading >= 3600) desired_heading = 3600;
 		if(desired_heading <= 0) desired_heading = 0;
-		printf("\rDesired heading: %u\n", desired_heading);
+		printf("\rDesired heading: %u\n", (desired_heading)/10);
 	}
 }
 
@@ -329,25 +333,36 @@ int read_ranger(void)
 void set_PW(void)
 {
 	signed long temp_motorpw;
+//	signed int error_difference = 0;
 	// compass error equations (stored as Error)
 	Error = (desired_heading) - heading;	//Calculate the error
 	if(Error < -1800)  Error = Error + 3600;  //Adjust error so that we turn efficiently
 	if(Error > 1800)   Error = Error - 3600; 
-	
+/*	if(((Error - prev_error) > -5) && ((Error - prev_error) < 5))
+	{
+		error_difference = 0;
+	}*/
+//	else error_difference = (Error - prev_error);
 	// actual calculation for the pulse width
-	temp_motorpw = ((long)(heading_kp)*(long)(Error)) + ((long)(heading_kd)*(long)(Error-prev_error));
+//	temp_motorpw = (long)((heading_kp)*(long)(Error)) + ((long)(heading_kd)*(long)(error_difference));
+	temp_motorpw = (long)((heading_kp)*(long)(Error)) + ((long)(heading_kd)*(long)(Error - prev_error));
+	if(temp_motorpw > 800) temp_motorpw = 800;
+	if(temp_motorpw < -800) temp_motorpw = -800;
+	print_error = prev_error;
 	prev_error = Error;
-	left_pw = PW_CENTER - temp_motorpw;
-	right_pw = PW_CENTER + temp_motorpw;
+	left_pw = PW_CENTER - (int)temp_motorpw;
+	right_pw = PW_CENTER + (int)temp_motorpw;
 	//Stay within limits of the servo
-	if(left_pw < 2000) left_pw = 2000;  // min
-	if(left_pw > 3500) left_pw = 3500;  // max
-	if(right_pw < 2000) right_pw = 2000;
-	if(right_pw > 3500) right_pw = 3500;
+	if(left_pw < 2200) left_pw = 2200;  // min
+	if(left_pw > 3300) left_pw = 3300;  // max
+	if(right_pw < 2200) right_pw = 2200;
+	if(right_pw > 3300) right_pw = 3300;
 		
-//	PCA0CP0 = 0xFFFF - temp_motorpw; // Change pulse width
-	PCA0CP2 = 0xFFFF - pw_left;
-	PCA0CP3 = 0xFFFF - pw_right;
+	PCA0CP0 = 0xFFFF - (PW_CENTER + (int)temp_motorpw); // Change pulse width
+	PCA0CP2 = 0xFFFF - right_pw;
+	PCA0CP3 = 0xFFFF - left_pw;
+
+	
 }
 //-----------------------------------------------------------------------------
 //Adjusting the desired heading
@@ -363,30 +378,30 @@ void Pick_Heading_kp(void)
 {
 	char input;
 	printf("\rPlease select a desired heading kp.\n");
-	printf("\r'u' will increment by 1. 'd' will decrement by 1.\n");
+	printf("\r'u' will increment by 0.1. 'd' will decrement by 0.1.\n");
 	printf("\r'f' when finished\n");
 	while(1)
 	{
 		input = getchar();
-		if(input == 'u') heading_kp += 1;
-		if(input == 'd') heading_kp -= 1;
+		if(input == 'u') heading_kp += 0.1;
+		if(input == 'd') heading_kp -= 0.1;
 		if(input == 'f') return;
 		if(heading_kp >= 15) heading_kp = 15;
 		if(heading_kp <= 0) heading_kp = 0;
-		printf("\rDesired heading kp: %u\n", heading_kp);
+		printf_fast_f("\rDesired heading kp: %2.1f\n", heading_kp);
 	}
 }
 void Pick_Heading_kd(void)
 {
 	char input;
 	printf("\rPlease select a desired heading kd.\n");
-	printf("\r'u' will increment by 10. 'd' will decrement by 10.\n");
+	printf("\r'u' will increment by 1. 'd' will decrement by 1.\n");
 	printf("\r'f' when finished\n");
 	while(1)
 	{
 		input = getchar();
-		if(input == 'u') heading_kd += 10;
-		if(input == 'd') heading_kd -= 10;
+		if(input == 'u') heading_kd += 1;
+		if(input == 'd') heading_kd -= 1;
 		if(input == 'f') return;
 		if(heading_kd >= 200) heading_kd = 200;
 		if(heading_kd <= 0) heading_kd = 0;
