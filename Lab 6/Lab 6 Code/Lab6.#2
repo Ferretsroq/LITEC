@@ -52,8 +52,6 @@ unsigned char new_heading;
 unsigned char h_count;
 unsigned char r_count = 0;
 unsigned char adc_count = 0;
-//float steer_gain = 0;
-//long drive_gain = 0;
 unsigned int DRIVE_PW = 2760;
 unsigned int STEER_PW = 2760;
 unsigned char Data[2]; // Data is an array with a length of 2
@@ -66,8 +64,7 @@ unsigned int desired_heading = 0;
 float heading_kp = 0;
 unsigned char heading_kd = 0;
 int print_error = 0;
-//char altitude_kp;
-//char altitude_kd;
+signed int init_heading = 0;
 
 //=============================================================================
 //-----------------------------------------------------------------------------
@@ -109,7 +106,7 @@ void main(void)
 			if ((new_range)) // enough overflow for a new range
 			{
 				new_range = 0;	//clear and wait for next ping
-				range = read_ranger();
+				Set_Desired_Heading();
 				//if(Hand_Check()) Set_Desired_Heading();
 			
 				
@@ -140,7 +137,7 @@ void main(void)
 			}
 			if(print_delay == 20)
 			{
-				printf("\r%u	|	%u	|	%u	|	%d	|	%d\n", (heading), left_pw, right_pw, Error, print_error);
+				printf("\r%u	|	%u	|	%u	|	%u	|	%u\n", (heading), left_pw, right_pw, range, desired_heading);
 				print_delay = 0;
 			}
 			
@@ -295,7 +292,11 @@ void Pick_Heading(void)
 		input = getchar();
 		if(input == 'u') desired_heading += 50;
 		if(input == 'd') desired_heading -= 50;
-		if(input == 'f') return;
+		if(input == 'f')
+		{
+			init_heading = desired_heading;
+			return;
+		}
 		if(desired_heading >= 3600) desired_heading = 3600;
 		if(desired_heading <= 0) desired_heading = 0;
 		printf("\rDesired heading: %u\n", (desired_heading)/10);
@@ -368,7 +369,11 @@ void set_PW(void)
 //Adjusting the desired heading
 void Set_Desired_Heading(void)
 {
-	//add code that will take the range and adjust the desired heading
+	range = read_ranger();
+	if(range > 100) range = 100;
+	desired_heading = (init_heading) + ((50 - range)*(36));
+	while(desired_heading >= 3600) desired_heading -= 3600;
+	while(desired_heading <= 0) desired_heading += 3600;
 }
 
 
