@@ -30,13 +30,10 @@ unsigned char read_AD_input(unsigned char n);
 void read_accel(void);
 void Pick_Heading(void);
 int read_ranger(void);
-char Hand_Check(void);
 void Set_Desired_Heading(void);
 int read_compass(void);
 void Pick_Heading_kp(void);
 void Pick_Heading_kd(void);
-//void Pick_Altitude_kp(void);
-//void Pick_Altitude_kd(void);
 void Set_Fan_Angle(void);
 
 // Global variables
@@ -65,6 +62,7 @@ float heading_kp = 0;
 unsigned char heading_kd = 0;
 int print_error = 0;
 signed int init_heading = 0;
+unsigned int time = 0;
 
 //=============================================================================
 //-----------------------------------------------------------------------------
@@ -100,27 +98,13 @@ void main(void)
 	Counts = 0;
 	nCounts = 0;
 	 printf("\n\r------------DATA COLLECTION------------\n");
-	 printf("\n\rHeading	|	Left PW	|	Right PW|	Error	|	prev_error\n\r");
+	 printf("\n\rDesired Heading	|	Actual Heading	|	Time (ms)\n\r");
 	while (1)
     {
 			if ((new_range)) // enough overflow for a new range
 			{
 				new_range = 0;	//clear and wait for next ping
-				Set_Desired_Heading();
-				//if(Hand_Check()) Set_Desired_Heading();
-			
-				
-				//range = read_ranger();	// Read the distance
-				/*if (range != 0xFFFF) //Ignores dummy values from the ranger
-				{
-					if(range < 18) PCA0CP2 = 0xFFFF - COMPASS_CENTER; //Stop if near an object
-					else PCA0CP2 = 0xFFFF - 3300; //Car moves at a constant speed otherwise
-					// read_range must start a new ping after a read	
-				}
-				else   // extraneous value read in; ignore and keep moving
-				{
-					range_adj = 0;
-				}*/
+				//Set_Desired_Heading();
 			}
 			
 			if(new_heading)
@@ -137,7 +121,8 @@ void main(void)
 			}
 			if(print_delay == 20)
 			{
-				printf("\r%u	|	%u	|	%u	|	%u	|	%u\n", (heading), left_pw, right_pw, range, desired_heading);
+				time += 400;
+				printf("\r%u	|	%u		|	%u\n", (desired_heading/10), (heading/10), time);
 				print_delay = 0;
 			}
 			
@@ -248,38 +233,6 @@ unsigned char read_AD_input(unsigned char n)
 }
 
 //-----------------------------------------------------------------------------
-//Selecting the steering gain function
-/*void Pick_Steering_Gain(void)
-{
-	char input;
-	printf("\rPlease select a desired steering gain.\n");
-	printf("\r'u' will increment by 0.1. 'd' will decrement by 0.1.\n");
-	printf("\r'f' when finished\n");
-	while(1)
-	{
-		input = getchar();
-		if(input == 'u') steer_gain += 0.1;
-		if(input == 'd') steer_gain -= 0.1;
-		if(input == 'f') return;
-		if(steer_gain >= 10) steer_gain = 10;
-		if(steer_gain <= 0) steer_gain = 0;
-		printf_fast_f("\rDesired steering gain: %2.1f\n", steer_gain);
-	}
-}*/
-
-//-----------------------------------------------------------------------------
-// detects whether there is a hand in front of the gondola
-char Hand_Check(void)
-{
-	int temp_int = read_ranger();
-	if(temp_int < 90)
-	{
-		return 1;
-	}
-	else  return 0;
-}
-
-//-----------------------------------------------------------------------------
 //Selecting the drive gain function
 void Pick_Heading(void)
 {
@@ -334,18 +287,10 @@ int read_ranger(void)
 void set_PW(void)
 {
 	signed long temp_motorpw;
-//	signed int error_difference = 0;
 	// compass error equations (stored as Error)
 	Error = (desired_heading) - heading;	//Calculate the error
 	if(Error < -1800)  Error = Error + 3600;  //Adjust error so that we turn efficiently
 	if(Error > 1800)   Error = Error - 3600; 
-/*	if(((Error - prev_error) > -5) && ((Error - prev_error) < 5))
-	{
-		error_difference = 0;
-	}*/
-//	else error_difference = (Error - prev_error);
-	// actual calculation for the pulse width
-//	temp_motorpw = (long)((heading_kp)*(long)(Error)) + ((long)(heading_kd)*(long)(error_difference));
 	temp_motorpw = (long)((heading_kp)*(long)(Error)) + ((long)(heading_kd)*(long)(Error - prev_error));
 	if(temp_motorpw > 800) temp_motorpw = 800;
 	if(temp_motorpw < -800) temp_motorpw = -800;
@@ -369,11 +314,13 @@ void set_PW(void)
 //Adjusting the desired heading
 void Set_Desired_Heading(void)
 {
+	int temp_heading = 0;
 	range = read_ranger();
 	if(range > 100) range = 100;
-	desired_heading = (init_heading) + ((50 - range)*(36));
-	while(desired_heading >= 3600) desired_heading -= 3600;
-	while(desired_heading <= 0) desired_heading += 3600;
+	temp_heading = (init_heading) + ((50 - range)*(36));
+	while(temp_heading >= 3600) temp_heading -= 3600;
+	while(temp_heading <= 0) temp_heading += 3600;
+	desired_heading = temp_heading;
 }
 
 
@@ -413,41 +360,6 @@ void Pick_Heading_kd(void)
 		printf("\rDesired heading kd: %u\n", heading_kd);
 	}
 }
-/*void Pick_Altitude_kp(void)
-{
-	char input;
-	printf("\rPlease select a desired altitude kp.\n");
-	printf("\r'u' will increment by 1. 'd' will decrement by 1.\n");
-	printf("\r'f' when finished\n");
-	while(1)
-	{
-		input = getchar();
-		if(input == 'u') altitude_kp += 1;
-		if(input == 'd') altitude_kp -= 1;
-		if(input == 'f') return;
-		if(altitude_kp >= 100) altitude_kp = 100;
-		if(altitude_kp <= 0) altitude_kp = 0;
-		printf("\rDesired altitude kp: %u\n", altitude_kp);
-	}
-}
-void Pick_Altitude_kd(void)
-{
-	char input;
-	printf("\rPlease select a desired altitude kd.\n");
-	printf("\r'u' will increment by 1. 'd' will decrement by 1.\n");
-	printf("\r'f' when finished\n");
-	while(1)
-	{
-		input = getchar();
-		if(input == 'u') altitude_kd += 1;
-		if(input == 'd') altitude_kd -= 1;
-		if(input == 'f') return;
-		if(altitude_kd >= 100) altitude_kd = 100;
-		if(altitude_kd <= 0) altitude_kd = 0;
-		printf("\rDesired altitude kd: %u\n", altitude_kd);
-	}
-}
-*/
 //-----------------------------------------------------------------------------
 //Setting the fan angle to start
 void Set_Fan_Angle(void)
@@ -465,6 +377,4 @@ void Set_Fan_Angle(void)
 		if(PCA0CP1 < (0xFFFF - 3500)) PCA0CP1 = (0xFFFF - 3500);
 		printf("\rPW: %u\n", (0xFFFF - PCA0CP1));
 	}
-	
-	
 }

@@ -1,7 +1,7 @@
 ;--------------------------------------------------------
 ; File Created by SDCC : free open source ANSI-C Compiler
 ; Version 3.4.0 #8981 (Apr  5 2014) (MINGW32)
-; This file was generated Tue May 05 12:59:22 2015
+; This file was generated Tue May 05 13:16:18 2015
 ;--------------------------------------------------------
 	.module Lab6
 	.optsdcc -mmcs51 --model-small
@@ -303,6 +303,7 @@
 	.globl _DPL
 	.globl _SP
 	.globl _P0
+	.globl _time
 	.globl _init_heading
 	.globl _print_error
 	.globl _heading_kd
@@ -355,7 +356,6 @@
 	.globl _PCA_ISR
 	.globl _ADC_Init
 	.globl _read_AD_input
-	.globl _Hand_Check
 	.globl _Pick_Heading
 	.globl _read_compass
 	.globl _read_ranger
@@ -1058,8 +1058,11 @@ _print_error::
 G$init_heading$0$0==.
 _init_heading::
 	.ds 2
-LLab6.read_compass$Data$1$156==.
-_read_compass_Data_1_156:
+G$time$0$0==.
+_time::
+	.ds 2
+LLab6.read_compass$Data$1$152==.
+_read_compass_Data_1_152:
 	.ds 2
 LLab6.set_PW$sloc0$1$0==.
 _set_PW_sloc0_1_0:
@@ -1162,81 +1165,85 @@ __interrupt_vect:
 	.globl __mcs51_genXINIT
 	.globl __mcs51_genXRAMCLEAR
 	.globl __mcs51_genRAMCLEAR
-	C$Lab6.c$46$1$170 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:46: signed int Error = 0;
+	C$Lab6.c$43$1$166 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:43: signed int Error = 0;
 	clr	a
 	mov	_Error,a
 	mov	(_Error + 1),a
-	C$Lab6.c$47$1$170 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:47: signed int prev_error = 0;
+	C$Lab6.c$44$1$166 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:44: signed int prev_error = 0;
 	mov	_prev_error,a
 	mov	(_prev_error + 1),a
-	C$Lab6.c$49$1$170 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:49: unsigned char new_range = 0;
+	C$Lab6.c$46$1$166 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:46: unsigned char new_range = 0;
 ;	1-genFromRTrack replaced	mov	_new_range,#0x00
 	mov	_new_range,a
-	C$Lab6.c$50$1$170 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:50: unsigned char new_AD = 0;
+	C$Lab6.c$47$1$166 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:47: unsigned char new_AD = 0;
 ;	1-genFromRTrack replaced	mov	_new_AD,#0x00
 	mov	_new_AD,a
-	C$Lab6.c$53$1$170 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:53: unsigned char r_count = 0;
+	C$Lab6.c$50$1$166 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:50: unsigned char r_count = 0;
 ;	1-genFromRTrack replaced	mov	_r_count,#0x00
 	mov	_r_count,a
-	C$Lab6.c$54$1$170 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:54: unsigned char adc_count = 0;
+	C$Lab6.c$51$1$166 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:51: unsigned char adc_count = 0;
 ;	1-genFromRTrack replaced	mov	_adc_count,#0x00
 	mov	_adc_count,a
-	C$Lab6.c$55$1$170 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:55: unsigned int DRIVE_PW = 2760;
+	C$Lab6.c$52$1$166 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:52: unsigned int DRIVE_PW = 2760;
 	mov	_DRIVE_PW,#0xC8
 	mov	(_DRIVE_PW + 1),#0x0A
-	C$Lab6.c$56$1$170 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:56: unsigned int STEER_PW = 2760;
+	C$Lab6.c$53$1$166 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:53: unsigned int STEER_PW = 2760;
 	mov	_STEER_PW,#0xC8
 	mov	(_STEER_PW + 1),#0x0A
-	C$Lab6.c$58$1$170 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:58: unsigned char print_delay = 0;
+	C$Lab6.c$55$1$166 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:55: unsigned char print_delay = 0;
 ;	1-genFromRTrack replaced	mov	_print_delay,#0x00
 	mov	_print_delay,a
-	C$Lab6.c$59$1$170 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:59: unsigned char AD_Result = 0;
+	C$Lab6.c$56$1$166 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:56: unsigned char AD_Result = 0;
 ;	1-genFromRTrack replaced	mov	_AD_Result,#0x00
 	mov	_AD_Result,a
-	C$Lab6.c$60$1$170 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:60: unsigned char voltage = 0;
+	C$Lab6.c$57$1$166 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:57: unsigned char voltage = 0;
 ;	1-genFromRTrack replaced	mov	_voltage,#0x00
 	mov	_voltage,a
-	C$Lab6.c$61$1$170 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:61: unsigned int heading = 0;
+	C$Lab6.c$58$1$166 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:58: unsigned int heading = 0;
 	mov	_heading,a
 	mov	(_heading + 1),a
-	C$Lab6.c$62$1$170 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:62: unsigned int range = 0;
+	C$Lab6.c$59$1$166 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:59: unsigned int range = 0;
 	mov	_range,a
 	mov	(_range + 1),a
-	C$Lab6.c$63$1$170 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:63: unsigned int desired_heading = 0;
+	C$Lab6.c$60$1$166 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:60: unsigned int desired_heading = 0;
 	mov	_desired_heading,a
 	mov	(_desired_heading + 1),a
-	C$Lab6.c$64$1$170 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:64: float heading_kp = 0;
+	C$Lab6.c$61$1$166 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:61: float heading_kp = 0;
 	mov	_heading_kp,a
 	mov	(_heading_kp + 1),a
 	mov	(_heading_kp + 2),a
 	mov	(_heading_kp + 3),a
-	C$Lab6.c$65$1$170 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:65: unsigned char heading_kd = 0;
+	C$Lab6.c$62$1$166 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:62: unsigned char heading_kd = 0;
 ;	1-genFromRTrack replaced	mov	_heading_kd,#0x00
 	mov	_heading_kd,a
-	C$Lab6.c$66$1$170 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:66: int print_error = 0;
+	C$Lab6.c$63$1$166 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:63: int print_error = 0;
 	mov	_print_error,a
 	mov	(_print_error + 1),a
-	C$Lab6.c$67$1$170 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:67: signed int init_heading = 0;
+	C$Lab6.c$64$1$166 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:64: signed int init_heading = 0;
 	mov	_init_heading,a
 	mov	(_init_heading + 1),a
+	C$Lab6.c$65$1$166 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:65: unsigned int time = 0;
+	mov	_time,a
+	mov	(_time + 1),a
 	.area GSFINAL (CODE)
 	ljmp	__sdcc_program_startup
 ;--------------------------------------------------------
@@ -2411,36 +2418,36 @@ _Accel_Init:
 ;Allocation info for local variables in function 'main'
 ;------------------------------------------------------------
 	G$main$0$0 ==.
-	C$Lab6.c$72$1$103 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:72: void main(void)
+	C$Lab6.c$70$1$103 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:70: void main(void)
 ;	-----------------------------------------
 ;	 function main
 ;	-----------------------------------------
 _main:
-	C$Lab6.c$74$1$123 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:74: Sys_Init();     // System Initialization - MUST BE 1st EXECUTABLE STATEMENT
+	C$Lab6.c$72$1$122 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:72: Sys_Init();     // System Initialization - MUST BE 1st EXECUTABLE STATEMENT
 	lcall	_Sys_Init
-	C$Lab6.c$75$1$123 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:75: Port_Init();   
+	C$Lab6.c$73$1$122 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:73: Port_Init();   
 	lcall	_Port_Init
-	C$Lab6.c$76$1$123 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:76: Interrupt_Init();   
+	C$Lab6.c$74$1$122 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:74: Interrupt_Init();   
 	lcall	_Interrupt_Init
-	C$Lab6.c$77$1$123 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:77: PCA_Init();
+	C$Lab6.c$75$1$122 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:75: PCA_Init();
 	lcall	_PCA_Init
-	C$Lab6.c$78$1$123 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:78: ADC_Init();
+	C$Lab6.c$76$1$122 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:76: ADC_Init();
 	lcall	_ADC_Init
-	C$Lab6.c$79$1$123 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:79: SMB0_Init();
+	C$Lab6.c$77$1$122 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:77: SMB0_Init();
 	lcall	_SMB0_Init
-	C$Lab6.c$80$1$123 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:80: putchar('\r');  // Dummy write to serial port
+	C$Lab6.c$78$1$122 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:78: putchar('\r');  // Dummy write to serial port
 	mov	dpl,#0x0D
 	lcall	_putchar
-	C$Lab6.c$81$1$123 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:81: printf("\nStart\r\n");
+	C$Lab6.c$79$1$122 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:79: printf("\nStart\r\n");
 	mov	a,#___str_3
 	push	acc
 	mov	a,#(___str_3 >> 8)
@@ -2451,45 +2458,45 @@ _main:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$Lab6.c$82$1$123 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:82: PCA0CP0 = 0xFFFF - PW_CENTER;
+	C$Lab6.c$80$1$122 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:80: PCA0CP0 = 0xFFFF - PW_CENTER;
 	mov	((_PCA0CP0 >> 0) & 0xFF),#0x32
 	mov	((_PCA0CP0 >> 8) & 0xFF),#0xF5
-	C$Lab6.c$83$1$123 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:83: PCA0CP1 = 0xFFFF - PW_CENTER;
+	C$Lab6.c$81$1$122 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:81: PCA0CP1 = 0xFFFF - PW_CENTER;
 	mov	((_PCA0CP1 >> 0) & 0xFF),#0x32
 	mov	((_PCA0CP1 >> 8) & 0xFF),#0xF5
-	C$Lab6.c$84$1$123 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:84: PCA0CP2 = 0xFFFF - PW_CENTER; 
+	C$Lab6.c$82$1$122 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:82: PCA0CP2 = 0xFFFF - PW_CENTER; 
 	mov	((_PCA0CP2 >> 0) & 0xFF),#0x32
 	mov	((_PCA0CP2 >> 8) & 0xFF),#0xF5
-	C$Lab6.c$85$1$123 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:85: PCA0CP3 = 0xFFFF - PW_CENTER;
+	C$Lab6.c$83$1$122 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:83: PCA0CP3 = 0xFFFF - PW_CENTER;
 	mov	((_PCA0CP3 >> 0) & 0xFF),#0x32
 	mov	((_PCA0CP3 >> 8) & 0xFF),#0xF5
-	C$Lab6.c$86$1$123 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:86: Counts = 0;
+	C$Lab6.c$84$1$122 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:84: Counts = 0;
 	mov	_Counts,#0x00
-	C$Lab6.c$87$1$123 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:87: while (Counts < 1);  // Wait a long time (1s) for motors to initialize
+	C$Lab6.c$85$1$122 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:85: while (Counts < 1);  // Wait a long time (1s) for motors to initialize
 00101$:
 	mov	a,#0x100 - 0x01
 	add	a,_Counts
 	jnc	00101$
-	C$Lab6.c$91$1$123 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:91: Set_Fan_Angle();
+	C$Lab6.c$89$1$122 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:89: Set_Fan_Angle();
 	lcall	_Set_Fan_Angle
-	C$Lab6.c$92$1$123 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:92: Pick_Heading();
+	C$Lab6.c$90$1$122 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:90: Pick_Heading();
 	lcall	_Pick_Heading
-	C$Lab6.c$93$1$123 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:93: Pick_Heading_kp();
+	C$Lab6.c$91$1$122 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:91: Pick_Heading_kp();
 	lcall	_Pick_Heading_kp
-	C$Lab6.c$94$1$123 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:94: Pick_Heading_kd();
+	C$Lab6.c$92$1$122 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:92: Pick_Heading_kd();
 	lcall	_Pick_Heading_kd
-	C$Lab6.c$99$1$123 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:99: printf_fast_f("\rhkp: %2.1f \n\rhkd: %u", heading_kp, heading_kd);
+	C$Lab6.c$97$1$122 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:97: printf_fast_f("\rhkp: %2.1f \n\rhkd: %u", heading_kp, heading_kd);
 	mov	r6,_heading_kd
 	mov	r7,#0x00
 	push	ar6
@@ -2506,12 +2513,12 @@ _main:
 	mov	a,sp
 	add	a,#0xf8
 	mov	sp,a
-	C$Lab6.c$100$1$123 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:100: Counts = 0;
-	C$Lab6.c$101$1$123 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:101: nCounts = 0;
-	C$Lab6.c$102$1$123 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:102: printf("\n\r------------DATA COLLECTION------------\n");
+	C$Lab6.c$98$1$122 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:98: Counts = 0;
+	C$Lab6.c$99$1$122 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:99: nCounts = 0;
+	C$Lab6.c$100$1$122 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:100: printf("\n\r------------DATA COLLECTION------------\n");
 	clr	a
 	mov	_Counts,a
 	mov	_nCounts,a
@@ -2525,8 +2532,8 @@ _main:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$Lab6.c$103$1$123 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:103: printf("\n\rHeading	|	Left PW	|	Right PW|	Error	|	prev_error\n\r");
+	C$Lab6.c$101$1$122 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:101: printf("\n\rDesired Heading	|	Actual Heading	|	Time (ms)\n\r");
 	mov	a,#___str_6
 	push	acc
 	mov	a,#(___str_6 >> 8)
@@ -2537,49 +2544,46 @@ _main:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$Lab6.c$104$1$123 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:104: while (1)
+	C$Lab6.c$102$1$122 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:102: while (1)
 00113$:
-	C$Lab6.c$106$2$124 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:106: if ((new_range)) // enough overflow for a new range
+	C$Lab6.c$104$2$123 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:104: if ((new_range)) // enough overflow for a new range
 	mov	a,_new_range
 	jz	00105$
-	C$Lab6.c$108$3$125 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:108: new_range = 0;	//clear and wait for next ping
+	C$Lab6.c$106$3$124 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:106: new_range = 0;	//clear and wait for next ping
 	mov	_new_range,#0x00
-	C$Lab6.c$109$3$125 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:109: Set_Desired_Heading();
-	lcall	_Set_Desired_Heading
 00105$:
-	C$Lab6.c$126$2$124 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:126: if(new_heading)
+	C$Lab6.c$110$2$123 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:110: if(new_heading)
 	mov	a,_new_heading
 	jz	00107$
-	C$Lab6.c$128$3$126 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:128: new_heading = 0;
+	C$Lab6.c$112$3$125 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:112: new_heading = 0;
 	mov	_new_heading,#0x00
-	C$Lab6.c$129$3$126 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:129: heading = read_compass();
+	C$Lab6.c$113$3$125 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:113: heading = read_compass();
 	lcall	_read_compass
 	mov	_heading,dpl
 	mov	(_heading + 1),dph
-	C$Lab6.c$130$3$126 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:130: set_PW();
+	C$Lab6.c$114$3$125 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:114: set_PW();
 	lcall	_set_PW
 00107$:
-	C$Lab6.c$132$2$124 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:132: if(new_AD)
+	C$Lab6.c$116$2$123 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:116: if(new_AD)
 	mov	a,_new_AD
 	jz	00109$
-	C$Lab6.c$134$3$127 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:134: new_AD = 0;
+	C$Lab6.c$118$3$126 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:118: new_AD = 0;
 	mov	_new_AD,#0x00
-	C$Lab6.c$135$3$127 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:135: AD_Result = read_AD_input(5); //Read analog input on pin 1.5
+	C$Lab6.c$119$3$126 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:119: AD_Result = read_AD_input(5); //Read analog input on pin 1.5
 	mov	dpl,#0x05
 	lcall	_read_AD_input
-	C$Lab6.c$136$1$123 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:136: voltage = ((12.8/255)*(AD_Result)); //Convert back to input voltage
+	C$Lab6.c$120$1$122 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:120: voltage = ((12.8/255)*(AD_Result)); //Convert back to input voltage
 	mov  _AD_Result,dpl
 	lcall	___uchar2fs
 	mov	r4,dpl
@@ -2608,22 +2612,44 @@ _main:
 	lcall	___fs2uchar
 	mov	_voltage,dpl
 00109$:
-	C$Lab6.c$138$2$124 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:138: if(print_delay == 20)
+	C$Lab6.c$122$2$123 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:122: if(print_delay == 20)
 	mov	a,#0x14
 	cjne	a,_print_delay,00113$
-	C$Lab6.c$140$3$128 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:140: printf("\r%u	|	%u	|	%u	|	%u	|	%u\n", (heading), left_pw, right_pw, range, desired_heading);
-	push	_desired_heading
-	push	(_desired_heading + 1)
-	push	_range
-	push	(_range + 1)
-	push	_right_pw
-	push	(_right_pw + 1)
-	push	_left_pw
-	push	(_left_pw + 1)
-	push	_heading
-	push	(_heading + 1)
+	C$Lab6.c$124$3$127 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:124: time += 400;
+	mov	a,#0x90
+	add	a,_time
+	mov	_time,a
+	mov	a,#0x01
+	addc	a,(_time + 1)
+	mov	(_time + 1),a
+	C$Lab6.c$125$1$122 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:125: printf("\r%u		|	%u		|	%u\n", (desired_heading/10), (heading/10), time);
+	mov	__divuint_PARM_2,#0x0A
+	mov	(__divuint_PARM_2 + 1),#0x00
+	mov	dpl,_heading
+	mov	dph,(_heading + 1)
+	lcall	__divuint
+	mov	r6,dpl
+	mov	r7,dph
+	mov	__divuint_PARM_2,#0x0A
+	mov	(__divuint_PARM_2 + 1),#0x00
+	mov	dpl,_desired_heading
+	mov	dph,(_desired_heading + 1)
+	push	ar7
+	push	ar6
+	lcall	__divuint
+	mov	r4,dpl
+	mov	r5,dph
+	pop	ar6
+	pop	ar7
+	push	_time
+	push	(_time + 1)
+	push	ar6
+	push	ar7
+	push	ar4
+	push	ar5
 	mov	a,#___str_7
 	push	acc
 	mov	a,#(___str_7 >> 8)
@@ -2632,218 +2658,218 @@ _main:
 	push	acc
 	lcall	_printf
 	mov	a,sp
-	add	a,#0xf3
+	add	a,#0xf7
 	mov	sp,a
-	C$Lab6.c$141$3$128 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:141: print_delay = 0;
+	C$Lab6.c$126$3$127 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:126: print_delay = 0;
 	mov	_print_delay,#0x00
 	ljmp	00113$
-	C$Lab6.c$146$1$123 ==.
+	C$Lab6.c$131$1$122 ==.
 	XG$main$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'Port_Init'
 ;------------------------------------------------------------
 	G$Port_Init$0$0 ==.
-	C$Lab6.c$150$1$123 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:150: void Port_Init(void)	
+	C$Lab6.c$135$1$122 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:135: void Port_Init(void)	
 ;	-----------------------------------------
 ;	 function Port_Init
 ;	-----------------------------------------
 _Port_Init:
-	C$Lab6.c$152$1$130 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:152: XBR0 = 0x27;
+	C$Lab6.c$137$1$129 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:137: XBR0 = 0x27;
 	mov	_XBR0,#0x27
-	C$Lab6.c$153$1$130 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:153: P1MDIN 	&= 0x7F;	// set pin 1.5 for analog input	
+	C$Lab6.c$138$1$129 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:138: P1MDIN 	&= 0x7F;	// set pin 1.5 for analog input	
 	anl	_P1MDIN,#0x7F
-	C$Lab6.c$154$1$130 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:154: P1MDOUT |= 0x0F;	//set output pin for CEX0-3 in push-pull mode
+	C$Lab6.c$139$1$129 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:139: P1MDOUT |= 0x0F;	//set output pin for CEX0-3 in push-pull mode
 	orl	_P1MDOUT,#0x0F
-	C$Lab6.c$155$1$130 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:155: P1MDOUT &= 0x7F;	// set input pin for 1.5 to open-drain
+	C$Lab6.c$140$1$129 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:140: P1MDOUT &= 0x7F;	// set input pin for 1.5 to open-drain
 	anl	_P1MDOUT,#0x7F
-	C$Lab6.c$156$1$130 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:156: P1		|= ~0x7F;	// set input pin for 1.5 to high impedence
+	C$Lab6.c$141$1$129 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:141: P1		|= ~0x7F;	// set input pin for 1.5 to high impedence
 	mov	r7,_P1
 	mov	a,#0x80
 	orl	a,r7
 	mov	_P1,a
-	C$Lab6.c$157$1$130 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:157: P3MDOUT &= 0x7F;	// set input pin for 3.6/7 to open-drain
+	C$Lab6.c$142$1$129 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:142: P3MDOUT &= 0x7F;	// set input pin for 3.6/7 to open-drain
 	anl	_P3MDOUT,#0x7F
-	C$Lab6.c$158$1$130 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:158: P3		|= ~0x7F;	// set input pin for 3.6/7 to high impedence
+	C$Lab6.c$143$1$129 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:143: P3		|= ~0x7F;	// set input pin for 3.6/7 to high impedence
 	mov	r7,_P3
 	mov	a,#0x80
 	orl	a,r7
 	mov	_P3,a
-	C$Lab6.c$160$1$130 ==.
+	C$Lab6.c$145$1$129 ==.
 	XG$Port_Init$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'Interrupt_Init'
 ;------------------------------------------------------------
 	G$Interrupt_Init$0$0 ==.
-	C$Lab6.c$164$1$130 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:164: void Interrupt_Init(void)
+	C$Lab6.c$149$1$129 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:149: void Interrupt_Init(void)
 ;	-----------------------------------------
 ;	 function Interrupt_Init
 ;	-----------------------------------------
 _Interrupt_Init:
-	C$Lab6.c$166$1$132 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:166: IE |= 0x02;
+	C$Lab6.c$151$1$131 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:151: IE |= 0x02;
 	orl	_IE,#0x02
-	C$Lab6.c$167$1$132 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:167: EIE1 |= 0x08;
+	C$Lab6.c$152$1$131 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:152: EIE1 |= 0x08;
 	orl	_EIE1,#0x08
-	C$Lab6.c$168$1$132 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:168: EA = 1;
+	C$Lab6.c$153$1$131 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:153: EA = 1;
 	setb	_EA
-	C$Lab6.c$169$1$132 ==.
+	C$Lab6.c$154$1$131 ==.
 	XG$Interrupt_Init$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'PCA_Init'
 ;------------------------------------------------------------
 	G$PCA_Init$0$0 ==.
-	C$Lab6.c$173$1$132 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:173: void PCA_Init(void)
+	C$Lab6.c$158$1$131 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:158: void PCA_Init(void)
 ;	-----------------------------------------
 ;	 function PCA_Init
 ;	-----------------------------------------
 _PCA_Init:
-	C$Lab6.c$175$1$134 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:175: PCA0MD = 0x81;      // SYSCLK/12, enable CF interrupts, suspend when idle
+	C$Lab6.c$160$1$133 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:160: PCA0MD = 0x81;      // SYSCLK/12, enable CF interrupts, suspend when idle
 	mov	_PCA0MD,#0x81
-	C$Lab6.c$176$1$134 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:176: PCA0CPM0 = 0xC2;    // 16 bit, enable compare, enable PWM
+	C$Lab6.c$161$1$133 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:161: PCA0CPM0 = 0xC2;    // 16 bit, enable compare, enable PWM
 	mov	_PCA0CPM0,#0xC2
-	C$Lab6.c$177$1$134 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:177: PCA0CPM1 = 0xC2;
+	C$Lab6.c$162$1$133 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:162: PCA0CPM1 = 0xC2;
 	mov	_PCA0CPM1,#0xC2
-	C$Lab6.c$178$1$134 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:178: PCA0CPM2 = 0xC2;
+	C$Lab6.c$163$1$133 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:163: PCA0CPM2 = 0xC2;
 	mov	_PCA0CPM2,#0xC2
-	C$Lab6.c$179$1$134 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:179: PCA0CPM3 = 0xC2;
+	C$Lab6.c$164$1$133 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:164: PCA0CPM3 = 0xC2;
 	mov	_PCA0CPM3,#0xC2
-	C$Lab6.c$180$1$134 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:180: PCA0CN = 0x40;     // enable PCA
+	C$Lab6.c$165$1$133 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:165: PCA0CN = 0x40;     // enable PCA
 	mov	_PCA0CN,#0x40
-	C$Lab6.c$181$1$134 ==.
+	C$Lab6.c$166$1$133 ==.
 	XG$PCA_Init$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'SMB0_Init'
 ;------------------------------------------------------------
 	G$SMB0_Init$0$0 ==.
-	C$Lab6.c$185$1$134 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:185: void SMB0_Init(void)    // This was at the top, moved it here to call wait()
+	C$Lab6.c$170$1$133 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:170: void SMB0_Init(void)    // This was at the top, moved it here to call wait()
 ;	-----------------------------------------
 ;	 function SMB0_Init
 ;	-----------------------------------------
 _SMB0_Init:
-	C$Lab6.c$187$1$136 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:187: SMB0CR = 0x93;      // Set SCL to 100KHz
+	C$Lab6.c$172$1$135 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:172: SMB0CR = 0x93;      // Set SCL to 100KHz
 	mov	_SMB0CR,#0x93
-	C$Lab6.c$188$1$136 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:188: ENSMB = 1;          // Enable SMBUS0
+	C$Lab6.c$173$1$135 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:173: ENSMB = 1;          // Enable SMBUS0
 	setb	_ENSMB
-	C$Lab6.c$189$1$136 ==.
+	C$Lab6.c$174$1$135 ==.
 	XG$SMB0_Init$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'PCA_ISR'
 ;------------------------------------------------------------
 	G$PCA_ISR$0$0 ==.
-	C$Lab6.c$193$1$136 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:193: void PCA_ISR(void) __interrupt 9
+	C$Lab6.c$178$1$135 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:178: void PCA_ISR(void) __interrupt 9
 ;	-----------------------------------------
 ;	 function PCA_ISR
 ;	-----------------------------------------
 _PCA_ISR:
 	push	acc
 	push	psw
-	C$Lab6.c$195$1$138 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:195: if (CF)
-	C$Lab6.c$197$2$139 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:197: CF = 0;                     // clear the interrupt flag
+	C$Lab6.c$180$1$137 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:180: if (CF)
+	C$Lab6.c$182$2$138 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:182: CF = 0;                     // clear the interrupt flag
 	jbc	_CF,00129$
 	sjmp	00110$
 00129$:
-	C$Lab6.c$198$2$139 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:198: nCounts++;					// Counts overflows for initial delay
+	C$Lab6.c$183$2$138 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:183: nCounts++;					// Counts overflows for initial delay
 	inc	_nCounts
-	C$Lab6.c$199$2$139 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:199: PCA0 = PCA_START;
+	C$Lab6.c$184$2$138 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:184: PCA0 = PCA_START;
 	mov	((_PCA0 >> 0) & 0xFF),#0x00
 	mov	((_PCA0 >> 8) & 0xFF),#0x70
-	C$Lab6.c$200$2$139 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:200: if (nCounts > 50)			//Initial one second delay
+	C$Lab6.c$185$2$138 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:185: if (nCounts > 50)			//Initial one second delay
 	mov	a,_nCounts
 	add	a,#0xff - 0x32
 	jnc	00102$
-	C$Lab6.c$203$3$140 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:203: Counts++;               // seconds counter
+	C$Lab6.c$188$3$139 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:188: Counts++;               // seconds counter
 	inc	_Counts
 00102$:
-	C$Lab6.c$205$2$139 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:205: print_delay++;				// delay for print statements
+	C$Lab6.c$190$2$138 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:190: print_delay++;				// delay for print statements
 	inc	_print_delay
-	C$Lab6.c$206$2$139 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:206: r_count++;
+	C$Lab6.c$191$2$138 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:191: r_count++;
 	inc	_r_count
-	C$Lab6.c$207$2$139 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:207: if (r_count>=12)			//delay for ranger reading
+	C$Lab6.c$192$2$138 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:192: if (r_count>=12)			//delay for ranger reading
 	mov	a,#0x100 - 0x0C
 	add	a,_r_count
 	jnc	00104$
-	C$Lab6.c$209$3$141 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:209: new_range = 1;
+	C$Lab6.c$194$3$140 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:194: new_range = 1;
 	mov	_new_range,#0x01
-	C$Lab6.c$210$3$141 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:210: r_count = 0;
+	C$Lab6.c$195$3$140 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:195: r_count = 0;
 	mov	_r_count,#0x00
 00104$:
-	C$Lab6.c$212$2$139 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:212: h_count++;
+	C$Lab6.c$197$2$138 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:197: h_count++;
 	inc	_h_count
-	C$Lab6.c$213$2$139 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:213: if (h_count >=8)
+	C$Lab6.c$198$2$138 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:198: if (h_count >=8)
 	mov	a,#0x100 - 0x08
 	add	a,_h_count
 	jnc	00106$
-	C$Lab6.c$215$3$142 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:215: new_heading = 1;
+	C$Lab6.c$200$3$141 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:200: new_heading = 1;
 	mov	_new_heading,#0x01
-	C$Lab6.c$216$3$142 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:216: h_count = 0;
+	C$Lab6.c$201$3$141 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:201: h_count = 0;
 	mov	_h_count,#0x00
 00106$:
-	C$Lab6.c$218$2$139 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:218: adc_count++;
+	C$Lab6.c$203$2$138 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:203: adc_count++;
 	inc	_adc_count
-	C$Lab6.c$219$2$139 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:219: if(adc_count >=10)
+	C$Lab6.c$204$2$138 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:204: if(adc_count >=10)
 	mov	a,#0x100 - 0x0A
 	add	a,_adc_count
 	jnc	00112$
-	C$Lab6.c$221$3$143 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:221: adc_count = 0;
+	C$Lab6.c$206$3$142 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:206: adc_count = 0;
 	mov	_adc_count,#0x00
-	C$Lab6.c$222$3$143 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:222: new_AD = 1;
+	C$Lab6.c$207$3$142 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:207: new_AD = 1;
 	mov	_new_AD,#0x01
 	sjmp	00112$
 00110$:
-	C$Lab6.c$225$1$138 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:225: else PCA0CN &= 0xC0;           // clear all other 9-type interrupts
+	C$Lab6.c$210$1$137 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:210: else PCA0CN &= 0xC0;           // clear all other 9-type interrupts
 	anl	_PCA0CN,#0xC0
 00112$:
 	pop	psw
 	pop	acc
-	C$Lab6.c$226$1$138 ==.
+	C$Lab6.c$211$1$137 ==.
 	XG$PCA_ISR$0$0 ==.
 	reti
 ;	eliminated unneeded mov psw,# (no regs used in bank)
@@ -2854,22 +2880,22 @@ _PCA_ISR:
 ;Allocation info for local variables in function 'ADC_Init'
 ;------------------------------------------------------------
 	G$ADC_Init$0$0 ==.
-	C$Lab6.c$230$1$138 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:230: void ADC_Init(void)
+	C$Lab6.c$215$1$137 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:215: void ADC_Init(void)
 ;	-----------------------------------------
 ;	 function ADC_Init
 ;	-----------------------------------------
 _ADC_Init:
-	C$Lab6.c$232$1$145 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:232: REF0CN = 0x03; // Set Vref to use internal reference voltage (2.4 V)
+	C$Lab6.c$217$1$144 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:217: REF0CN = 0x03; // Set Vref to use internal reference voltage (2.4 V)
 	mov	_REF0CN,#0x03
-	C$Lab6.c$233$1$145 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:233: ADC1CN = 0x80; // Enable A/D converter (ADC1)
+	C$Lab6.c$218$1$144 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:218: ADC1CN = 0x80; // Enable A/D converter (ADC1)
 	mov	_ADC1CN,#0x80
-	C$Lab6.c$234$1$145 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:234: ADC1CF |= 0x01; // Set A/D converter gain to 1
+	C$Lab6.c$219$1$144 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:219: ADC1CF |= 0x01; // Set A/D converter gain to 1
 	orl	_ADC1CF,#0x01
-	C$Lab6.c$235$1$145 ==.
+	C$Lab6.c$220$1$144 ==.
 	XG$ADC_Init$0$0 ==.
 	ret
 ;------------------------------------------------------------
@@ -2878,70 +2904,32 @@ _ADC_Init:
 ;n                         Allocated to registers 
 ;------------------------------------------------------------
 	G$read_AD_input$0$0 ==.
-	C$Lab6.c$239$1$145 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:239: unsigned char read_AD_input(unsigned char n)
+	C$Lab6.c$224$1$144 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:224: unsigned char read_AD_input(unsigned char n)
 ;	-----------------------------------------
 ;	 function read_AD_input
 ;	-----------------------------------------
 _read_AD_input:
 	mov	_AMX1SL,dpl
-	C$Lab6.c$242$1$147 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:242: ADC1CN = ADC1CN & ~0x20; // Clear the "Conversion Completed" flag
+	C$Lab6.c$227$1$146 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:227: ADC1CN = ADC1CN & ~0x20; // Clear the "Conversion Completed" flag
 	mov	r7,_ADC1CN
 	mov	a,#0xDF
 	anl	a,r7
 	mov	_ADC1CN,a
-	C$Lab6.c$243$1$147 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:243: ADC1CN = ADC1CN | 0x10; // Initiate A/D conversion
+	C$Lab6.c$228$1$146 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:228: ADC1CN = ADC1CN | 0x10; // Initiate A/D conversion
 	orl	_ADC1CN,#0x10
-	C$Lab6.c$245$1$147 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:245: while ((ADC1CN & 0x20) == 0x00);// Wait for conversion to complete
+	C$Lab6.c$230$1$146 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:230: while ((ADC1CN & 0x20) == 0x00);// Wait for conversion to complete
 00101$:
 	mov	a,_ADC1CN
 	jnb	acc.5,00101$
-	C$Lab6.c$247$1$147 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:247: return ADC1; // Return digital value in ADC1 register
+	C$Lab6.c$232$1$146 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:232: return ADC1; // Return digital value in ADC1 register
 	mov	dpl,_ADC1
-	C$Lab6.c$248$1$147 ==.
+	C$Lab6.c$233$1$146 ==.
 	XG$read_AD_input$0$0 ==.
-	ret
-;------------------------------------------------------------
-;Allocation info for local variables in function 'Hand_Check'
-;------------------------------------------------------------
-;temp_int                  Allocated to registers r6 r7 
-;------------------------------------------------------------
-	G$Hand_Check$0$0 ==.
-	C$Lab6.c$272$1$147 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:272: char Hand_Check(void)
-;	-----------------------------------------
-;	 function Hand_Check
-;	-----------------------------------------
-_Hand_Check:
-	C$Lab6.c$274$1$149 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:274: int temp_int = read_ranger();
-	lcall	_read_ranger
-	mov	r6,dpl
-	mov	r7,dph
-	C$Lab6.c$275$1$149 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:275: if(temp_int < 90)
-	clr	c
-	mov	a,r6
-	subb	a,#0x5A
-	mov	a,r7
-	xrl	a,#0x80
-	subb	a,#0x80
-	jnc	00102$
-	C$Lab6.c$277$2$150 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:277: return 1;
-	mov	dpl,#0x01
-	sjmp	00104$
-00102$:
-	C$Lab6.c$279$1$149 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:279: else  return 0;
-	mov	dpl,#0x00
-00104$:
-	C$Lab6.c$280$1$149 ==.
-	XG$Hand_Check$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'Pick_Heading'
@@ -2949,14 +2937,14 @@ _Hand_Check:
 ;input                     Allocated to registers r7 
 ;------------------------------------------------------------
 	G$Pick_Heading$0$0 ==.
-	C$Lab6.c$284$1$149 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:284: void Pick_Heading(void)
+	C$Lab6.c$237$1$146 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:237: void Pick_Heading(void)
 ;	-----------------------------------------
 ;	 function Pick_Heading
 ;	-----------------------------------------
 _Pick_Heading:
-	C$Lab6.c$287$1$152 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:287: printf("\rPlease select a desired heading.\n");
+	C$Lab6.c$240$1$148 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:240: printf("\rPlease select a desired heading.\n");
 	mov	a,#___str_8
 	push	acc
 	mov	a,#(___str_8 >> 8)
@@ -2967,8 +2955,8 @@ _Pick_Heading:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$Lab6.c$288$1$152 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:288: printf("\r'u' will increment by 5 degrees. 'd' will decrement by 5 degrees.\n");
+	C$Lab6.c$241$1$148 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:241: printf("\r'u' will increment by 5 degrees. 'd' will decrement by 5 degrees.\n");
 	mov	a,#___str_9
 	push	acc
 	mov	a,#(___str_9 >> 8)
@@ -2979,8 +2967,8 @@ _Pick_Heading:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$Lab6.c$289$1$152 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:289: printf("\r'f' when finished\n");
+	C$Lab6.c$242$1$148 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:242: printf("\r'f' when finished\n");
 	mov	a,#___str_10
 	push	acc
 	mov	a,#(___str_10 >> 8)
@@ -2991,15 +2979,15 @@ _Pick_Heading:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$Lab6.c$290$2$153 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:290: while(1)
+	C$Lab6.c$243$2$149 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:243: while(1)
 00112$:
-	C$Lab6.c$292$2$153 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:292: input = getchar();
+	C$Lab6.c$245$2$149 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:245: input = getchar();
 	lcall	_getchar
 	mov	r7,dpl
-	C$Lab6.c$293$2$153 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:293: if(input == 'u') desired_heading += 50;
+	C$Lab6.c$246$2$149 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:246: if(input == 'u') desired_heading += 50;
 	cjne	r7,#0x75,00102$
 	mov	a,#0x32
 	add	a,_desired_heading
@@ -3008,8 +2996,8 @@ _Pick_Heading:
 	addc	a,(_desired_heading + 1)
 	mov	(_desired_heading + 1),a
 00102$:
-	C$Lab6.c$294$2$153 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:294: if(input == 'd') desired_heading -= 50;
+	C$Lab6.c$247$2$149 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:247: if(input == 'd') desired_heading -= 50;
 	cjne	r7,#0x64,00104$
 	mov	a,_desired_heading
 	add	a,#0xCE
@@ -3018,19 +3006,19 @@ _Pick_Heading:
 	addc	a,#0xFF
 	mov	(_desired_heading + 1),a
 00104$:
-	C$Lab6.c$295$2$153 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:295: if(input == 'f')
+	C$Lab6.c$248$2$149 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:248: if(input == 'f')
 	cjne	r7,#0x66,00106$
-	C$Lab6.c$297$3$154 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:297: init_heading = (int)desired_heading;
+	C$Lab6.c$250$3$150 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:250: init_heading = (int)desired_heading;
 	mov	_init_heading,_desired_heading
 	mov	(_init_heading + 1),(_desired_heading + 1)
-	C$Lab6.c$298$3$154 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:298: return;
+	C$Lab6.c$251$3$150 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:251: return;
 	sjmp	00114$
 00106$:
-	C$Lab6.c$300$2$153 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:300: if(desired_heading >= 3600) desired_heading = 3600;
+	C$Lab6.c$253$2$149 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:253: if(desired_heading >= 3600) desired_heading = 3600;
 	clr	c
 	mov	a,_desired_heading
 	subb	a,#0x10
@@ -3040,16 +3028,16 @@ _Pick_Heading:
 	mov	_desired_heading,#0x10
 	mov	(_desired_heading + 1),#0x0E
 00108$:
-	C$Lab6.c$301$2$153 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:301: if(desired_heading <= 0) desired_heading = 0;
+	C$Lab6.c$254$2$149 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:254: if(desired_heading <= 0) desired_heading = 0;
 	mov	a,_desired_heading
 	orl	a,(_desired_heading + 1)
 	jnz	00110$
 	mov	_desired_heading,a
 	mov	(_desired_heading + 1),a
 00110$:
-	C$Lab6.c$302$1$152 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:302: printf("\rDesired heading: %u\n", (desired_heading)/10);
+	C$Lab6.c$255$1$148 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:255: printf("\rDesired heading: %u\n", (desired_heading)/10);
 	mov	__divuint_PARM_2,#0x0A
 	mov	(__divuint_PARM_2 + 1),#0x00
 	mov	dpl,_desired_heading
@@ -3071,37 +3059,37 @@ _Pick_Heading:
 	mov	sp,a
 	ljmp	00112$
 00114$:
-	C$Lab6.c$304$1$152 ==.
+	C$Lab6.c$257$1$148 ==.
 	XG$Pick_Heading$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'read_compass'
 ;------------------------------------------------------------
 ;addr                      Allocated to registers 
-;Data                      Allocated with name '_read_compass_Data_1_156'
+;Data                      Allocated with name '_read_compass_Data_1_152'
 ;read_heading              Allocated to registers 
 ;------------------------------------------------------------
 	G$read_compass$0$0 ==.
-	C$Lab6.c$308$1$152 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:308: int read_compass(void)
+	C$Lab6.c$261$1$148 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:261: int read_compass(void)
 ;	-----------------------------------------
 ;	 function read_compass
 ;	-----------------------------------------
 _read_compass:
-	C$Lab6.c$313$1$156 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:313: i2c_read_data(addr, 2, Data, 2); // read two byte, starting at reg 2
-	mov	_i2c_read_data_PARM_3,#_read_compass_Data_1_156
+	C$Lab6.c$266$1$152 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:266: i2c_read_data(addr, 2, Data, 2); // read two byte, starting at reg 2
+	mov	_i2c_read_data_PARM_3,#_read_compass_Data_1_152
 	mov	(_i2c_read_data_PARM_3 + 1),#0x00
 	mov	(_i2c_read_data_PARM_3 + 2),#0x40
 	mov	_i2c_read_data_PARM_2,#0x02
 	mov	_i2c_read_data_PARM_4,#0x02
 	mov	dpl,#0xC0
 	lcall	_i2c_read_data
-	C$Lab6.c$314$1$156 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:314: read_heading =((Data[0] << 8) | Data[1]); //combine the two values
-	mov	r7,_read_compass_Data_1_156
+	C$Lab6.c$267$1$152 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:267: read_heading =((Data[0] << 8) | Data[1]); //combine the two values
+	mov	r7,_read_compass_Data_1_152
 	mov	r6,#0x00
-	mov	r4,(_read_compass_Data_1_156 + 0x0001)
+	mov	r4,(_read_compass_Data_1_152 + 0x0001)
 	mov	r5,#0x00
 	mov	a,r4
 	orl	a,r6
@@ -3109,9 +3097,9 @@ _read_compass:
 	mov	a,r5
 	orl	a,r7
 	mov	dph,a
-	C$Lab6.c$315$1$156 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:315: return read_heading; // the heading returned in degrees between 0 and 3599
-	C$Lab6.c$316$1$156 ==.
+	C$Lab6.c$268$1$152 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:268: return read_heading; // the heading returned in degrees between 0 and 3599
+	C$Lab6.c$269$1$152 ==.
 	XG$read_compass$0$0 ==.
 	ret
 ;------------------------------------------------------------
@@ -3121,14 +3109,14 @@ _read_compass:
 ;st_range                  Allocated to registers r6 r7 
 ;------------------------------------------------------------
 	G$read_ranger$0$0 ==.
-	C$Lab6.c$320$1$156 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:320: int read_ranger(void)
+	C$Lab6.c$273$1$152 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:273: int read_ranger(void)
 ;	-----------------------------------------
 ;	 function read_ranger
 ;	-----------------------------------------
 _read_ranger:
-	C$Lab6.c$324$1$158 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:324: i2c_read_data(addr, 2, Data, 2); // read two byte, starting at reg 2
+	C$Lab6.c$277$1$154 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:277: i2c_read_data(addr, 2, Data, 2); // read two byte, starting at reg 2
 	mov	_i2c_read_data_PARM_3,#_Data
 	mov	(_i2c_read_data_PARM_3 + 1),#0x00
 	mov	(_i2c_read_data_PARM_3 + 2),#0x40
@@ -3136,8 +3124,8 @@ _read_ranger:
 	mov	_i2c_read_data_PARM_4,#0x02
 	mov	dpl,#0xE0
 	lcall	_i2c_read_data
-	C$Lab6.c$325$1$158 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:325: st_range =((Data[0] << 8) | Data[1]); //combine the two values
+	C$Lab6.c$278$1$154 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:278: st_range =((Data[0] << 8) | Data[1]); //combine the two values
 	mov	r7,_Data
 	mov	r6,#0x00
 	mov	r4,(_Data + 0x0001)
@@ -3146,11 +3134,11 @@ _read_ranger:
 	orl	ar6,a
 	mov	a,r5
 	orl	ar7,a
-	C$Lab6.c$327$1$158 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:327: Data[0] = 0x51 ; // write 0x51 to reg 0 of the ranger:
+	C$Lab6.c$280$1$154 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:280: Data[0] = 0x51 ; // write 0x51 to reg 0 of the ranger:
 	mov	_Data,#0x51
-	C$Lab6.c$328$1$158 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:328: i2c_write_data(addr, 0, Data, 1) ; // write one byte of data to reg 0 at addr
+	C$Lab6.c$281$1$154 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:281: i2c_write_data(addr, 0, Data, 1) ; // write one byte of data to reg 0 at addr
 	mov	_i2c_write_data_PARM_3,#_Data
 	mov	(_i2c_write_data_PARM_3 + 1),#0x00
 	mov	(_i2c_write_data_PARM_3 + 2),#0x40
@@ -3162,11 +3150,11 @@ _read_ranger:
 	lcall	_i2c_write_data
 	pop	ar6
 	pop	ar7
-	C$Lab6.c$329$1$158 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:329: return st_range;
+	C$Lab6.c$282$1$154 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:282: return st_range;
 	mov	dpl,r6
 	mov	dph,r7
-	C$Lab6.c$330$1$158 ==.
+	C$Lab6.c$283$1$154 ==.
 	XG$read_ranger$0$0 ==.
 	ret
 ;------------------------------------------------------------
@@ -3176,14 +3164,14 @@ _read_ranger:
 ;sloc0                     Allocated with name '_set_PW_sloc0_1_0'
 ;------------------------------------------------------------
 	G$set_PW$0$0 ==.
-	C$Lab6.c$334$1$158 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:334: void set_PW(void)
+	C$Lab6.c$287$1$154 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:287: void set_PW(void)
 ;	-----------------------------------------
 ;	 function set_PW
 ;	-----------------------------------------
 _set_PW:
-	C$Lab6.c$339$1$160 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:339: Error = (desired_heading) - heading;	//Calculate the error
+	C$Lab6.c$291$1$156 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:291: Error = (desired_heading) - heading;	//Calculate the error
 	mov	a,_desired_heading
 	clr	c
 	subb	a,_heading
@@ -3191,8 +3179,8 @@ _set_PW:
 	mov	a,(_desired_heading + 1)
 	subb	a,(_heading + 1)
 	mov	(_Error + 1),a
-	C$Lab6.c$340$1$160 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:340: if(Error < -1800)  Error = Error + 3600;  //Adjust error so that we turn efficiently
+	C$Lab6.c$292$1$156 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:292: if(Error < -1800)  Error = Error + 3600;  //Adjust error so that we turn efficiently
 	clr	c
 	mov	a,_Error
 	subb	a,#0xF8
@@ -3207,8 +3195,8 @@ _set_PW:
 	addc	a,(_Error + 1)
 	mov	(_Error + 1),a
 00102$:
-	C$Lab6.c$341$1$160 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:341: if(Error > 1800)   Error = Error - 3600; 
+	C$Lab6.c$293$1$156 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:293: if(Error > 1800)   Error = Error - 3600; 
 	clr	c
 	mov	a,#0x08
 	subb	a,_Error
@@ -3224,8 +3212,8 @@ _set_PW:
 	addc	a,#0xF1
 	mov	(_Error + 1),a
 00104$:
-	C$Lab6.c$349$1$160 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:349: temp_motorpw = (long)((heading_kp)*(long)(Error)) + ((long)(heading_kd)*(long)(Error - prev_error));
+	C$Lab6.c$294$1$156 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:294: temp_motorpw = (long)((heading_kp)*(long)(Error)) + ((long)(heading_kd)*(long)(Error - prev_error));
 	mov	r4,_Error
 	mov	a,(_Error + 1)
 	mov	r5,a
@@ -3311,8 +3299,8 @@ _set_PW:
 	mov	a,r3
 	addc	a,r7
 	mov	r7,a
-	C$Lab6.c$350$1$160 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:350: if(temp_motorpw > 800) temp_motorpw = 800;
+	C$Lab6.c$295$1$156 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:295: if(temp_motorpw > 800) temp_motorpw = 800;
 	clr	c
 	mov	a,#0x20
 	subb	a,r4
@@ -3330,8 +3318,8 @@ _set_PW:
 	mov	r6,#0x00
 	mov	r7,#0x00
 00106$:
-	C$Lab6.c$351$1$160 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:351: if(temp_motorpw < -800) temp_motorpw = -800;
+	C$Lab6.c$296$1$156 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:296: if(temp_motorpw < -800) temp_motorpw = -800;
 	clr	c
 	mov	a,r4
 	subb	a,#0xE0
@@ -3348,16 +3336,16 @@ _set_PW:
 	mov	r6,#0xFF
 	mov	r7,#0xFF
 00108$:
-	C$Lab6.c$352$1$160 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:352: print_error = prev_error;
+	C$Lab6.c$297$1$156 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:297: print_error = prev_error;
 	mov	_print_error,_prev_error
 	mov	(_print_error + 1),(_prev_error + 1)
-	C$Lab6.c$353$1$160 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:353: prev_error = Error;
+	C$Lab6.c$298$1$156 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:298: prev_error = Error;
 	mov	_prev_error,_Error
 	mov	(_prev_error + 1),(_Error + 1)
-	C$Lab6.c$354$1$160 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:354: left_pw = PW_CENTER - (int)temp_motorpw;
+	C$Lab6.c$299$1$156 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:299: left_pw = PW_CENTER - (int)temp_motorpw;
 	mov	ar2,r4
 	mov	ar3,r5
 	mov	a,#0xCD
@@ -3367,16 +3355,16 @@ _set_PW:
 	mov	a,#0x0A
 	subb	a,r3
 	mov	(_left_pw + 1),a
-	C$Lab6.c$355$1$160 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:355: right_pw = PW_CENTER + (int)temp_motorpw;
+	C$Lab6.c$300$1$156 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:300: right_pw = PW_CENTER + (int)temp_motorpw;
 	mov	a,#0xCD
 	add	a,r2
 	mov	_right_pw,a
 	mov	a,#0x0A
 	addc	a,r3
 	mov	(_right_pw + 1),a
-	C$Lab6.c$357$1$160 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:357: if(left_pw < 2200) left_pw = 2200;  // min
+	C$Lab6.c$302$1$156 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:302: if(left_pw < 2200) left_pw = 2200;  // min
 	clr	c
 	mov	a,_left_pw
 	subb	a,#0x98
@@ -3387,8 +3375,8 @@ _set_PW:
 	mov	_left_pw,#0x98
 	mov	(_left_pw + 1),#0x08
 00110$:
-	C$Lab6.c$358$1$160 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:358: if(left_pw > 3300) left_pw = 3300;  // max
+	C$Lab6.c$303$1$156 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:303: if(left_pw > 3300) left_pw = 3300;  // max
 	clr	c
 	mov	a,#0xE4
 	subb	a,_left_pw
@@ -3400,8 +3388,8 @@ _set_PW:
 	mov	_left_pw,#0xE4
 	mov	(_left_pw + 1),#0x0C
 00112$:
-	C$Lab6.c$359$1$160 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:359: if(right_pw < 2200) right_pw = 2200;
+	C$Lab6.c$304$1$156 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:304: if(right_pw < 2200) right_pw = 2200;
 	clr	c
 	mov	a,_right_pw
 	subb	a,#0x98
@@ -3412,8 +3400,8 @@ _set_PW:
 	mov	_right_pw,#0x98
 	mov	(_right_pw + 1),#0x08
 00114$:
-	C$Lab6.c$360$1$160 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:360: if(right_pw > 3300) right_pw = 3300;
+	C$Lab6.c$305$1$156 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:305: if(right_pw > 3300) right_pw = 3300;
 	clr	c
 	mov	a,#0xE4
 	subb	a,_right_pw
@@ -3425,8 +3413,8 @@ _set_PW:
 	mov	_right_pw,#0xE4
 	mov	(_right_pw + 1),#0x0C
 00116$:
-	C$Lab6.c$362$1$160 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:362: PCA0CP0 = 0xFFFF - (PW_CENTER + (int)temp_motorpw); // Change pulse width
+	C$Lab6.c$307$1$156 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:307: PCA0CP0 = 0xFFFF - (PW_CENTER + (int)temp_motorpw); // Change pulse width
 	mov	a,#0xCD
 	add	a,r4
 	mov	r4,a
@@ -3440,8 +3428,8 @@ _set_PW:
 	mov	a,#0xFF
 	subb	a,r5
 	mov	((_PCA0CP0 >> 8) & 0xFF),a
-	C$Lab6.c$363$1$160 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:363: PCA0CP2 = 0xFFFF - right_pw;
+	C$Lab6.c$308$1$156 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:308: PCA0CP2 = 0xFFFF - right_pw;
 	mov	r6,_right_pw
 	mov	r7,(_right_pw + 1)
 	mov	a,#0xFF
@@ -3451,8 +3439,8 @@ _set_PW:
 	mov	a,#0xFF
 	subb	a,r7
 	mov	((_PCA0CP2 >> 8) & 0xFF),a
-	C$Lab6.c$364$1$160 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:364: PCA0CP3 = 0xFFFF - left_pw;
+	C$Lab6.c$309$1$156 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:309: PCA0CP3 = 0xFFFF - left_pw;
 	mov	r6,_left_pw
 	mov	r7,(_left_pw + 1)
 	mov	a,#0xFF
@@ -3462,7 +3450,7 @@ _set_PW:
 	mov	a,#0xFF
 	subb	a,r7
 	mov	((_PCA0CP3 >> 8) & 0xFF),a
-	C$Lab6.c$367$1$160 ==.
+	C$Lab6.c$312$1$156 ==.
 	XG$set_PW$0$0 ==.
 	ret
 ;------------------------------------------------------------
@@ -3471,19 +3459,19 @@ _set_PW:
 ;temp_heading              Allocated to registers r6 r7 
 ;------------------------------------------------------------
 	G$Set_Desired_Heading$0$0 ==.
-	C$Lab6.c$370$1$160 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:370: void Set_Desired_Heading(void)
+	C$Lab6.c$315$1$156 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:315: void Set_Desired_Heading(void)
 ;	-----------------------------------------
 ;	 function Set_Desired_Heading
 ;	-----------------------------------------
 _Set_Desired_Heading:
-	C$Lab6.c$373$1$162 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:373: range = read_ranger();
+	C$Lab6.c$318$1$158 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:318: range = read_ranger();
 	lcall	_read_ranger
 	mov	_range,dpl
 	mov	(_range + 1),dph
-	C$Lab6.c$374$1$162 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:374: if(range > 100) range = 100;
+	C$Lab6.c$319$1$158 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:319: if(range > 100) range = 100;
 	clr	c
 	mov	a,#0x64
 	subb	a,_range
@@ -3493,8 +3481,8 @@ _Set_Desired_Heading:
 	mov	_range,#0x64
 	mov	(_range + 1),#0x00
 00102$:
-	C$Lab6.c$375$1$162 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:375: temp_heading = (init_heading) + ((50 - range)*(36));
+	C$Lab6.c$320$1$158 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:320: temp_heading = (init_heading) + ((50 - range)*(36));
 	mov	a,#0x32
 	clr	c
 	subb	a,_range
@@ -3514,8 +3502,8 @@ _Set_Desired_Heading:
 	mov	a,r7
 	addc	a,r5
 	mov	r7,a
-	C$Lab6.c$376$1$162 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:376: while(temp_heading >= 3600) temp_heading -= 3600;
+	C$Lab6.c$321$1$158 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:321: while(temp_heading >= 3600) temp_heading -= 3600;
 	mov	ar4,r6
 	mov	ar5,r7
 00103$:
@@ -3532,8 +3520,8 @@ _Set_Desired_Heading:
 	mov	a,r5
 	addc	a,#0xF1
 	mov	r5,a
-	C$Lab6.c$377$1$162 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:377: while(temp_heading <= 0) temp_heading += 3600;
+	C$Lab6.c$322$1$158 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:322: while(temp_heading <= 0) temp_heading += 3600;
 	sjmp	00103$
 00116$:
 	mov	ar6,r4
@@ -3557,9 +3545,9 @@ _Set_Desired_Heading:
 00117$:
 	mov	_desired_heading,r6
 	mov	(_desired_heading + 1),r7
-	C$Lab6.c$378$1$162 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:378: desired_heading = temp_heading;
-	C$Lab6.c$379$1$162 ==.
+	C$Lab6.c$323$1$158 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:323: desired_heading = temp_heading;
+	C$Lab6.c$324$1$158 ==.
 	XG$Set_Desired_Heading$0$0 ==.
 	ret
 ;------------------------------------------------------------
@@ -3568,14 +3556,14 @@ _Set_Desired_Heading:
 ;input                     Allocated to registers r7 
 ;------------------------------------------------------------
 	G$Pick_Heading_kp$0$0 ==.
-	C$Lab6.c$384$1$162 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:384: void Pick_Heading_kp(void)
+	C$Lab6.c$329$1$158 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:329: void Pick_Heading_kp(void)
 ;	-----------------------------------------
 ;	 function Pick_Heading_kp
 ;	-----------------------------------------
 _Pick_Heading_kp:
-	C$Lab6.c$387$1$164 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:387: printf("\rPlease select a desired heading kp.\n");
+	C$Lab6.c$332$1$160 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:332: printf("\rPlease select a desired heading kp.\n");
 	mov	a,#___str_12
 	push	acc
 	mov	a,#(___str_12 >> 8)
@@ -3586,8 +3574,8 @@ _Pick_Heading_kp:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$Lab6.c$388$1$164 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:388: printf("\r'u' will increment by 0.1. 'd' will decrement by 0.1.\n");
+	C$Lab6.c$333$1$160 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:333: printf("\r'u' will increment by 0.1. 'd' will decrement by 0.1.\n");
 	mov	a,#___str_13
 	push	acc
 	mov	a,#(___str_13 >> 8)
@@ -3598,8 +3586,8 @@ _Pick_Heading_kp:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$Lab6.c$389$1$164 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:389: printf("\r'f' when finished\n");
+	C$Lab6.c$334$1$160 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:334: printf("\r'f' when finished\n");
 	mov	a,#___str_10
 	push	acc
 	mov	a,#(___str_10 >> 8)
@@ -3610,15 +3598,15 @@ _Pick_Heading_kp:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$Lab6.c$390$1$164 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:390: while(1)
+	C$Lab6.c$335$1$160 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:335: while(1)
 00112$:
-	C$Lab6.c$392$2$165 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:392: input = getchar();
+	C$Lab6.c$337$2$161 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:337: input = getchar();
 	lcall	_getchar
 	mov	r7,dpl
-	C$Lab6.c$393$2$165 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:393: if(input == 'u') heading_kp += 0.1;
+	C$Lab6.c$338$2$161 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:338: if(input == 'u') heading_kp += 0.1;
 	cjne	r7,#0x75,00102$
 	push	ar7
 	mov	a,#0xCD
@@ -3642,8 +3630,8 @@ _Pick_Heading_kp:
 	mov	sp,a
 	pop	ar7
 00102$:
-	C$Lab6.c$394$2$165 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:394: if(input == 'd') heading_kp -= 0.1;
+	C$Lab6.c$339$2$161 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:339: if(input == 'd') heading_kp -= 0.1;
 	cjne	r7,#0x64,00104$
 	push	ar7
 	mov	a,#0xCD
@@ -3667,13 +3655,13 @@ _Pick_Heading_kp:
 	mov	sp,a
 	pop	ar7
 00104$:
-	C$Lab6.c$395$2$165 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:395: if(input == 'f') return;
+	C$Lab6.c$340$2$161 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:340: if(input == 'f') return;
 	cjne	r7,#0x66,00106$
 	sjmp	00114$
 00106$:
-	C$Lab6.c$396$1$164 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:396: if(heading_kp >= 15) heading_kp = 15;
+	C$Lab6.c$341$1$160 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:341: if(heading_kp >= 15) heading_kp = 15;
 	clr	a
 	push	acc
 	push	acc
@@ -3697,8 +3685,8 @@ _Pick_Heading_kp:
 	mov	(_heading_kp + 2),#0x70
 	mov	(_heading_kp + 3),#0x41
 00108$:
-	C$Lab6.c$397$1$164 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:397: if(heading_kp <= 0) heading_kp = 0;
+	C$Lab6.c$342$1$160 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:342: if(heading_kp <= 0) heading_kp = 0;
 	clr	a
 	push	acc
 	push	acc
@@ -3720,8 +3708,8 @@ _Pick_Heading_kp:
 	mov	(_heading_kp + 2),a
 	mov	(_heading_kp + 3),a
 00110$:
-	C$Lab6.c$398$2$165 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:398: printf_fast_f("\rDesired heading kp: %2.1f\n", heading_kp);
+	C$Lab6.c$343$2$161 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:343: printf_fast_f("\rDesired heading kp: %2.1f\n", heading_kp);
 	push	_heading_kp
 	push	(_heading_kp + 1)
 	push	(_heading_kp + 2)
@@ -3736,7 +3724,7 @@ _Pick_Heading_kp:
 	mov	sp,a
 	ljmp	00112$
 00114$:
-	C$Lab6.c$400$1$164 ==.
+	C$Lab6.c$345$1$160 ==.
 	XG$Pick_Heading_kp$0$0 ==.
 	ret
 ;------------------------------------------------------------
@@ -3745,14 +3733,14 @@ _Pick_Heading_kp:
 ;input                     Allocated to registers r7 
 ;------------------------------------------------------------
 	G$Pick_Heading_kd$0$0 ==.
-	C$Lab6.c$401$1$164 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:401: void Pick_Heading_kd(void)
+	C$Lab6.c$346$1$160 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:346: void Pick_Heading_kd(void)
 ;	-----------------------------------------
 ;	 function Pick_Heading_kd
 ;	-----------------------------------------
 _Pick_Heading_kd:
-	C$Lab6.c$404$1$167 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:404: printf("\rPlease select a desired heading kd.\n");
+	C$Lab6.c$349$1$163 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:349: printf("\rPlease select a desired heading kd.\n");
 	mov	a,#___str_15
 	push	acc
 	mov	a,#(___str_15 >> 8)
@@ -3763,8 +3751,8 @@ _Pick_Heading_kd:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$Lab6.c$405$1$167 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:405: printf("\r'u' will increment by 1. 'd' will decrement by 1.\n");
+	C$Lab6.c$350$1$163 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:350: printf("\r'u' will increment by 1. 'd' will decrement by 1.\n");
 	mov	a,#___str_16
 	push	acc
 	mov	a,#(___str_16 >> 8)
@@ -3775,8 +3763,8 @@ _Pick_Heading_kd:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$Lab6.c$406$1$167 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:406: printf("\r'f' when finished\n");
+	C$Lab6.c$351$1$163 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:351: printf("\r'f' when finished\n");
 	mov	a,#___str_10
 	push	acc
 	mov	a,#(___str_10 >> 8)
@@ -3787,43 +3775,43 @@ _Pick_Heading_kd:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$Lab6.c$407$2$168 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:407: while(1)
+	C$Lab6.c$352$2$164 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:352: while(1)
 00112$:
-	C$Lab6.c$409$2$168 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:409: input = getchar();
+	C$Lab6.c$354$2$164 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:354: input = getchar();
 	lcall	_getchar
 	mov	r7,dpl
-	C$Lab6.c$410$2$168 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:410: if(input == 'u') heading_kd += 1;
+	C$Lab6.c$355$2$164 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:355: if(input == 'u') heading_kd += 1;
 	cjne	r7,#0x75,00102$
 	inc	_heading_kd
 00102$:
-	C$Lab6.c$411$2$168 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:411: if(input == 'd') heading_kd -= 1;
+	C$Lab6.c$356$2$164 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:356: if(input == 'd') heading_kd -= 1;
 	cjne	r7,#0x64,00104$
 	dec	_heading_kd
 00104$:
-	C$Lab6.c$412$2$168 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:412: if(input == 'f') return;
+	C$Lab6.c$357$2$164 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:357: if(input == 'f') return;
 	cjne	r7,#0x66,00106$
 	sjmp	00114$
 00106$:
-	C$Lab6.c$413$2$168 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:413: if(heading_kd >= 200) heading_kd = 200;
+	C$Lab6.c$358$2$164 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:358: if(heading_kd >= 200) heading_kd = 200;
 	mov	a,#0x100 - 0xC8
 	add	a,_heading_kd
 	jnc	00108$
 	mov	_heading_kd,#0xC8
 00108$:
-	C$Lab6.c$414$2$168 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:414: if(heading_kd <= 0) heading_kd = 0;
+	C$Lab6.c$359$2$164 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:359: if(heading_kd <= 0) heading_kd = 0;
 	mov	a,_heading_kd
 	jnz	00110$
 	mov	_heading_kd,a
 00110$:
-	C$Lab6.c$415$2$168 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:415: printf("\rDesired heading kd: %u\n", heading_kd);
+	C$Lab6.c$360$2$164 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:360: printf("\rDesired heading kd: %u\n", heading_kd);
 	mov	r6,_heading_kd
 	mov	r7,#0x00
 	push	ar6
@@ -3840,7 +3828,7 @@ _Pick_Heading_kd:
 	mov	sp,a
 	sjmp	00112$
 00114$:
-	C$Lab6.c$417$1$167 ==.
+	C$Lab6.c$362$1$163 ==.
 	XG$Pick_Heading_kd$0$0 ==.
 	ret
 ;------------------------------------------------------------
@@ -3849,18 +3837,18 @@ _Pick_Heading_kd:
 ;input                     Allocated to registers r7 
 ;------------------------------------------------------------
 	G$Set_Fan_Angle$0$0 ==.
-	C$Lab6.c$455$1$167 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:455: void Set_Fan_Angle(void)
+	C$Lab6.c$365$1$163 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:365: void Set_Fan_Angle(void)
 ;	-----------------------------------------
 ;	 function Set_Fan_Angle
 ;	-----------------------------------------
 _Set_Fan_Angle:
-	C$Lab6.c$458$1$170 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:458: PCA0CP1 = 0xFFFF - 2300;
+	C$Lab6.c$368$1$166 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:368: PCA0CP1 = 0xFFFF - 2300;
 	mov	((_PCA0CP1 >> 0) & 0xFF),#0x03
 	mov	((_PCA0CP1 >> 8) & 0xFF),#0xF7
-	C$Lab6.c$459$1$170 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:459: printf("\rAdjust fan angle. 'u' for up, 'd' for down, 'f' when finished.\n");
+	C$Lab6.c$369$1$166 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:369: printf("\rAdjust fan angle. 'u' for up, 'd' for down, 'f' when finished.\n");
 	mov	a,#___str_18
 	push	acc
 	mov	a,#(___str_18 >> 8)
@@ -3871,15 +3859,15 @@ _Set_Fan_Angle:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$Lab6.c$460$2$171 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:460: while(1)
+	C$Lab6.c$370$2$167 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:370: while(1)
 00112$:
-	C$Lab6.c$462$2$171 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:462: input = getchar();
+	C$Lab6.c$372$2$167 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:372: input = getchar();
 	lcall	_getchar
 	mov	r7,dpl
-	C$Lab6.c$463$2$171 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:463: if(input == 'u') PCA0CP1 -= 10;
+	C$Lab6.c$373$2$167 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:373: if(input == 'u') PCA0CP1 -= 10;
 	cjne	r7,#0x75,00102$
 	mov	a,((_PCA0CP1 >> 0) & 0xFF)
 	add	a,#0xF6
@@ -3888,8 +3876,8 @@ _Set_Fan_Angle:
 	addc	a,#0xFF
 	mov	((_PCA0CP1 >> 8) & 0xFF),a
 00102$:
-	C$Lab6.c$464$2$171 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:464: if(input == 'd') PCA0CP1 += 10;
+	C$Lab6.c$374$2$167 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:374: if(input == 'd') PCA0CP1 += 10;
 	cjne	r7,#0x64,00104$
 	mov	a,#0x0A
 	add	a,((_PCA0CP1 >> 0) & 0xFF)
@@ -3898,13 +3886,13 @@ _Set_Fan_Angle:
 	addc	a,((_PCA0CP1 >> 8) & 0xFF)
 	mov	((_PCA0CP1 >> 8) & 0xFF),a
 00104$:
-	C$Lab6.c$465$2$171 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:465: if(input == 'f') return;
+	C$Lab6.c$375$2$167 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:375: if(input == 'f') return;
 	cjne	r7,#0x66,00106$
 	sjmp	00114$
 00106$:
-	C$Lab6.c$466$2$171 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:466: if(PCA0CP1 > (0xFFFF - 2000)) PCA0CP1 = (0xFFFF - 2000);
+	C$Lab6.c$376$2$167 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:376: if(PCA0CP1 > (0xFFFF - 2000)) PCA0CP1 = (0xFFFF - 2000);
 	clr	c
 	mov	a,#0x2F
 	subb	a,((_PCA0CP1 >> 0) & 0xFF)
@@ -3914,8 +3902,8 @@ _Set_Fan_Angle:
 	mov	((_PCA0CP1 >> 0) & 0xFF),#0x2F
 	mov	((_PCA0CP1 >> 8) & 0xFF),#0xF8
 00108$:
-	C$Lab6.c$467$2$171 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:467: if(PCA0CP1 < (0xFFFF - 3500)) PCA0CP1 = (0xFFFF - 3500);
+	C$Lab6.c$377$2$167 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:377: if(PCA0CP1 < (0xFFFF - 3500)) PCA0CP1 = (0xFFFF - 3500);
 	clr	c
 	mov	a,((_PCA0CP1 >> 0) & 0xFF)
 	subb	a,#0x53
@@ -3925,8 +3913,8 @@ _Set_Fan_Angle:
 	mov	((_PCA0CP1 >> 0) & 0xFF),#0x53
 	mov	((_PCA0CP1 >> 8) & 0xFF),#0xF2
 00110$:
-	C$Lab6.c$468$2$171 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:468: printf("\rPW: %u\n", (0xFFFF - PCA0CP1));
+	C$Lab6.c$378$2$167 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:378: printf("\rPW: %u\n", (0xFFFF - PCA0CP1));
 	mov	a,#0xFF
 	clr	c
 	subb	a,((_PCA0CP1 >> 0) & 0xFF)
@@ -3948,7 +3936,7 @@ _Set_Fan_Angle:
 	mov	sp,a
 	sjmp	00112$
 00114$:
-	C$Lab6.c$472$1$170 ==.
+	C$Lab6.c$380$1$166 ==.
 	XG$Set_Fan_Angle$0$0 ==.
 	ret
 	.area CSEG    (CODE)
@@ -3992,21 +3980,15 @@ FLab6$__str_6$0$0 == .
 ___str_6:
 	.db 0x0A
 	.db 0x0D
-	.ascii "Heading"
+	.ascii "Desired Heading"
 	.db 0x09
 	.ascii "|"
 	.db 0x09
-	.ascii "Left PW"
+	.ascii "Actual Heading"
 	.db 0x09
 	.ascii "|"
 	.db 0x09
-	.ascii "Right PW|"
-	.db 0x09
-	.ascii "Error"
-	.db 0x09
-	.ascii "|"
-	.db 0x09
-	.ascii "prev_error"
+	.ascii "Time (ms)"
 	.db 0x0A
 	.db 0x0D
 	.db 0x00
@@ -4015,17 +3997,11 @@ ___str_7:
 	.db 0x0D
 	.ascii "%u"
 	.db 0x09
-	.ascii "|"
-	.db 0x09
-	.ascii "%u"
 	.db 0x09
 	.ascii "|"
 	.db 0x09
 	.ascii "%u"
 	.db 0x09
-	.ascii "|"
-	.db 0x09
-	.ascii "%u"
 	.db 0x09
 	.ascii "|"
 	.db 0x09
