@@ -1,0 +1,163 @@
+compiler directives
+	...
+declare global variables
+signed int left_pw;
+signed int right_pw;
+signed int Error = 0;
+signed int prev_error = 0;
+unsigned char Counts, nCounts;
+unsigned char new_range = 0;
+unsigned char new_AD = 0;
+unsigned char new_heading;
+unsigned char h_count;
+unsigned char r_count = 0;
+unsigned char adc_count = 0;
+unsigned int DRIVE_PW = 2760;
+unsigned int STEER_PW = 2760;
+unsigned char Data[2]; // Data is an array with a length of 2
+unsigned char print_delay = 0;
+unsigned char AD_Result = 0;
+unsigned char voltage = 0;
+unsigned int heading = 0;
+unsigned int range = 0;
+unsigned int desired_heading = 0;
+float heading_kp = 0;
+unsigned char heading_kd = 0;
+int print_error = 0;
+signed int init_heading = 0;
+unsigned int time = 0;
+
+function prototypes
+void Port_Init(void);   
+void PCA_Init(void);
+void SMB0_Init(void);
+void ADC_Init(void);
+void Interrupt_Init(void);
+void accelerometer_adjustment(void);
+void PCA_ISR(void) __interrupt 9;
+void set_PW(void);
+unsigned char read_AD_input(unsigned char n);
+void read_accel(void);
+void Pick_Heading(void);
+int read_ranger(void);
+void Set_Desired_Heading(void);
+int read_compass(void);
+void Pick_Heading_kp(void);
+void Pick_Heading_kd(void);
+void Set_Fan_Angle(void);
+
+//------------------------------------------------------------------------------
+main function
+initialize system
+	initialize ports
+	initialize PCA board
+	initialize the SMBus
+	initialize interrupts
+	initialize ADC
+	Set initial pulsewidths to neutral positions
+	Set fan angle
+	Obtain desired heading
+	Obtain proportional gain
+	Obtain derivative gain
+	while(1)
+		if(new_range)
+			read the ranger
+			adjust the desired heading
+		if(new_heading)
+			read the compass
+			adjust the pulsewidths
+		if(new_AD)
+			perform ADC
+			calculate battery voltage
+		if(print_delay == 20) //so 400 ms has passed
+			print relevant information
+	end while
+end main
+
+//------------------------------------------------------------------------------
+//functions
+
+Port_Init
+	set output pin for CEX0, CEX1, CEX2, CEX3 in push-pull mode
+	set input pin for 3.6,7 to open-drain
+	set input pin for 3.6,7 to high impedence
+	set XBR0 to enable CEX0, 1, 2, 3, UART0EN, SPI0EN, SMB0EN
+	set ADC pins
+
+Interrupt_Init
+	Enable global interrupts
+	Enable PCA interrupts
+
+PCA_Init
+	SYSCLK/12, enable CF interrupts, suspend when idle
+	Set CPA0CPM0 and CPA0CPM2 to 16-bit comparator mode
+	Enable PCA
+
+SMB0_Init
+	Set SCL to 100 kHz
+	Enable SMBUS0
+	
+PCA_ISR __interrupt 9
+	if(CF)
+		increment print_delay, r_count, h_count, adc_count
+		set new_range, new_heading, new_AD when appropriate
+		increment overflows and seconds
+ADC_Init
+	set to use Vref
+	enable ADC1
+	set AD gain to 1
+
+AD_Result
+	set appropriate pin for ADC
+	clear conversion complete flag
+	initiate A/D conversion
+	wait for conversion complete
+	return
+	
+Pick_Heading
+	increment desired heading using secureCRT
+	loop heading to avoid impossible angles
+
+read_compass
+	set addr as the address of the sensor, 0xC0 for the compass
+	initialize Data as an array with a length of 2
+	initialize read_heading as the heading returned in degrees between 0 and 3599
+	read two byte, starting at reg 2
+	combine the two values and store in read_heading
+	return read_heading
+	
+read_ranger
+	set the address of the sensor, 0xC0 for the compass
+	initialize Data as an array with a length of 2
+	set the range to be equal to 0 as default
+	read two byte, starting at reg 2, using i2c header file
+	set range to be the combination of the two values
+	write 0x51 to reg 0 of the ranger:
+	write one byte of data to reg 0 at addr
+	return range
+
+set_PW
+	Error = desired_heading - heading
+	adjust error to stay within -1800 to 1800
+	calculate PW based on proportional and derivative gains
+	calculate left_pw and right_pw to opposite sides of neutral
+	keep servos within mechanical constraints
+	adjust pulsewidths
+
+Set_Desired_Heading
+	read ranger
+	calculate new desired heading based on range
+	adjust new desired heading to stay within real values
+
+Pick_Heading_kp
+	increment desired heading kp using secureCRT
+	bound it to useful values
+
+Pick_Heading_kd
+	increment desired heading kd using secureCRT
+	bound it to useful values
+
+Set_Fan_Angle
+	increment angle pulsewidth using secureCRT
+	adjust pulsewidth with each increment
+	end when desired orientation is reached

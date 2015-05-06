@@ -104,7 +104,7 @@ void main(void)
 			if ((new_range)) // enough overflow for a new range
 			{
 				new_range = 0;	//clear and wait for next ping
-				//Set_Desired_Heading();
+				Set_Desired_Heading();
 			}
 			
 			if(new_heading)
