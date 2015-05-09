@@ -62,6 +62,7 @@ float heading_kp = 0;
 unsigned char heading_kd = 0;
 int print_error = 0;
 signed int init_heading = 0;
+unsigned int time = 0;
 
 //=============================================================================
 //-----------------------------------------------------------------------------
@@ -97,13 +98,13 @@ void main(void)
 	Counts = 0;
 	nCounts = 0;
 	 printf("\n\r------------DATA COLLECTION------------\n");
-	 printf("\n\rHeading	|	Left PW	|	Right PW|	Error	|	prev_error\n\r");
+	 printf("\n\rDesired Heading	|	Actual Heading	|	Time (ms)\n\r");
 	while (1)
     {
 			if ((new_range)) // enough overflow for a new range
 			{
 				new_range = 0;	//clear and wait for next ping
-				//Set_Desired_Heading();
+				Set_Desired_Heading();
 			}
 			
 			if(new_heading)
@@ -120,7 +121,8 @@ void main(void)
 			}
 			if(print_delay == 20)
 			{
-				printf("\r%u	|	%u	|	%u	|	%u	|	%u\n", (heading), left_pw, right_pw, range, desired_heading);
+				time += 400;
+				printf("\r%u		|	%u		|	%u\n", (desired_heading/10), (heading/10), time);
 				print_delay = 0;
 			}
 			
@@ -316,6 +318,7 @@ void Set_Desired_Heading(void)
 	range = read_ranger();
 	if(range > 100) range = 100;
 	temp_heading = (init_heading) + ((50 - range)*(36));
+	if(range >= 95) temp_heading = (init_heading) + 1800;
 	while(temp_heading >= 3600) temp_heading -= 3600;
 	while(temp_heading <= 0) temp_heading += 3600;
 	desired_heading = temp_heading;

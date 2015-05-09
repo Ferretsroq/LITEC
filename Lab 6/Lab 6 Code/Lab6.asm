@@ -1,7 +1,7 @@
 ;--------------------------------------------------------
 ; File Created by SDCC : free open source ANSI-C Compiler
 ; Version 3.4.0 #8981 (Apr  5 2014) (MINGW32)
-; This file was generated Tue May 05 13:16:18 2015
+; This file was generated Fri May 08 12:46:06 2015
 ;--------------------------------------------------------
 	.module Lab6
 	.optsdcc -mmcs51 --model-small
@@ -2554,6 +2554,9 @@ _main:
 	C$Lab6.c$106$3$124 ==.
 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:106: new_range = 0;	//clear and wait for next ping
 	mov	_new_range,#0x00
+	C$Lab6.c$107$3$124 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:107: Set_Desired_Heading();
+	lcall	_Set_Desired_Heading
 00105$:
 	C$Lab6.c$110$2$123 ==.
 ;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:110: if(new_heading)
@@ -3471,14 +3474,14 @@ _Set_Desired_Heading:
 	mov	_range,dpl
 	mov	(_range + 1),dph
 	C$Lab6.c$319$1$158 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:319: if(range > 100) range = 100;
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:319: if(range > 70) range = 70;
 	clr	c
-	mov	a,#0x64
+	mov	a,#0x46
 	subb	a,_range
 	clr	a
 	subb	a,(_range + 1)
 	jnc	00102$
-	mov	_range,#0x64
+	mov	_range,#0x46
 	mov	(_range + 1),#0x00
 00102$:
 	C$Lab6.c$320$1$158 ==.
@@ -3502,8 +3505,8 @@ _Set_Desired_Heading:
 	mov	a,r7
 	addc	a,r5
 	mov	r7,a
-	C$Lab6.c$321$1$158 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:321: while(temp_heading >= 3600) temp_heading -= 3600;
+	C$Lab6.c$322$1$158 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:322: while(temp_heading >= 3600) temp_heading -= 3600;
 	mov	ar4,r6
 	mov	ar5,r7
 00103$:
@@ -3520,8 +3523,8 @@ _Set_Desired_Heading:
 	mov	a,r5
 	addc	a,#0xF1
 	mov	r5,a
-	C$Lab6.c$322$1$158 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:322: while(temp_heading <= 0) temp_heading += 3600;
+	C$Lab6.c$323$1$158 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:323: while(temp_heading <= 0) temp_heading += 3600;
 	sjmp	00103$
 00116$:
 	mov	ar6,r4
@@ -3545,9 +3548,9 @@ _Set_Desired_Heading:
 00117$:
 	mov	_desired_heading,r6
 	mov	(_desired_heading + 1),r7
-	C$Lab6.c$323$1$158 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:323: desired_heading = temp_heading;
 	C$Lab6.c$324$1$158 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:324: desired_heading = temp_heading;
+	C$Lab6.c$325$1$158 ==.
 	XG$Set_Desired_Heading$0$0 ==.
 	ret
 ;------------------------------------------------------------
@@ -3556,14 +3559,14 @@ _Set_Desired_Heading:
 ;input                     Allocated to registers r7 
 ;------------------------------------------------------------
 	G$Pick_Heading_kp$0$0 ==.
-	C$Lab6.c$329$1$158 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:329: void Pick_Heading_kp(void)
+	C$Lab6.c$330$1$158 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:330: void Pick_Heading_kp(void)
 ;	-----------------------------------------
 ;	 function Pick_Heading_kp
 ;	-----------------------------------------
 _Pick_Heading_kp:
-	C$Lab6.c$332$1$160 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:332: printf("\rPlease select a desired heading kp.\n");
+	C$Lab6.c$333$1$160 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:333: printf("\rPlease select a desired heading kp.\n");
 	mov	a,#___str_12
 	push	acc
 	mov	a,#(___str_12 >> 8)
@@ -3574,8 +3577,8 @@ _Pick_Heading_kp:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$Lab6.c$333$1$160 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:333: printf("\r'u' will increment by 0.1. 'd' will decrement by 0.1.\n");
+	C$Lab6.c$334$1$160 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:334: printf("\r'u' will increment by 0.1. 'd' will decrement by 0.1.\n");
 	mov	a,#___str_13
 	push	acc
 	mov	a,#(___str_13 >> 8)
@@ -3586,8 +3589,8 @@ _Pick_Heading_kp:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$Lab6.c$334$1$160 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:334: printf("\r'f' when finished\n");
+	C$Lab6.c$335$1$160 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:335: printf("\r'f' when finished\n");
 	mov	a,#___str_10
 	push	acc
 	mov	a,#(___str_10 >> 8)
@@ -3598,15 +3601,15 @@ _Pick_Heading_kp:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$Lab6.c$335$1$160 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:335: while(1)
+	C$Lab6.c$336$1$160 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:336: while(1)
 00112$:
-	C$Lab6.c$337$2$161 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:337: input = getchar();
+	C$Lab6.c$338$2$161 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:338: input = getchar();
 	lcall	_getchar
 	mov	r7,dpl
-	C$Lab6.c$338$2$161 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:338: if(input == 'u') heading_kp += 0.1;
+	C$Lab6.c$339$2$161 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:339: if(input == 'u') heading_kp += 0.1;
 	cjne	r7,#0x75,00102$
 	push	ar7
 	mov	a,#0xCD
@@ -3630,8 +3633,8 @@ _Pick_Heading_kp:
 	mov	sp,a
 	pop	ar7
 00102$:
-	C$Lab6.c$339$2$161 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:339: if(input == 'd') heading_kp -= 0.1;
+	C$Lab6.c$340$2$161 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:340: if(input == 'd') heading_kp -= 0.1;
 	cjne	r7,#0x64,00104$
 	push	ar7
 	mov	a,#0xCD
@@ -3655,13 +3658,13 @@ _Pick_Heading_kp:
 	mov	sp,a
 	pop	ar7
 00104$:
-	C$Lab6.c$340$2$161 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:340: if(input == 'f') return;
+	C$Lab6.c$341$2$161 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:341: if(input == 'f') return;
 	cjne	r7,#0x66,00106$
 	sjmp	00114$
 00106$:
-	C$Lab6.c$341$1$160 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:341: if(heading_kp >= 15) heading_kp = 15;
+	C$Lab6.c$342$1$160 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:342: if(heading_kp >= 15) heading_kp = 15;
 	clr	a
 	push	acc
 	push	acc
@@ -3685,8 +3688,8 @@ _Pick_Heading_kp:
 	mov	(_heading_kp + 2),#0x70
 	mov	(_heading_kp + 3),#0x41
 00108$:
-	C$Lab6.c$342$1$160 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:342: if(heading_kp <= 0) heading_kp = 0;
+	C$Lab6.c$343$1$160 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:343: if(heading_kp <= 0) heading_kp = 0;
 	clr	a
 	push	acc
 	push	acc
@@ -3708,8 +3711,8 @@ _Pick_Heading_kp:
 	mov	(_heading_kp + 2),a
 	mov	(_heading_kp + 3),a
 00110$:
-	C$Lab6.c$343$2$161 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:343: printf_fast_f("\rDesired heading kp: %2.1f\n", heading_kp);
+	C$Lab6.c$344$2$161 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:344: printf_fast_f("\rDesired heading kp: %2.1f\n", heading_kp);
 	push	_heading_kp
 	push	(_heading_kp + 1)
 	push	(_heading_kp + 2)
@@ -3724,7 +3727,7 @@ _Pick_Heading_kp:
 	mov	sp,a
 	ljmp	00112$
 00114$:
-	C$Lab6.c$345$1$160 ==.
+	C$Lab6.c$346$1$160 ==.
 	XG$Pick_Heading_kp$0$0 ==.
 	ret
 ;------------------------------------------------------------
@@ -3733,14 +3736,14 @@ _Pick_Heading_kp:
 ;input                     Allocated to registers r7 
 ;------------------------------------------------------------
 	G$Pick_Heading_kd$0$0 ==.
-	C$Lab6.c$346$1$160 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:346: void Pick_Heading_kd(void)
+	C$Lab6.c$347$1$160 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:347: void Pick_Heading_kd(void)
 ;	-----------------------------------------
 ;	 function Pick_Heading_kd
 ;	-----------------------------------------
 _Pick_Heading_kd:
-	C$Lab6.c$349$1$163 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:349: printf("\rPlease select a desired heading kd.\n");
+	C$Lab6.c$350$1$163 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:350: printf("\rPlease select a desired heading kd.\n");
 	mov	a,#___str_15
 	push	acc
 	mov	a,#(___str_15 >> 8)
@@ -3751,8 +3754,8 @@ _Pick_Heading_kd:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$Lab6.c$350$1$163 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:350: printf("\r'u' will increment by 1. 'd' will decrement by 1.\n");
+	C$Lab6.c$351$1$163 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:351: printf("\r'u' will increment by 1. 'd' will decrement by 1.\n");
 	mov	a,#___str_16
 	push	acc
 	mov	a,#(___str_16 >> 8)
@@ -3763,8 +3766,8 @@ _Pick_Heading_kd:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$Lab6.c$351$1$163 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:351: printf("\r'f' when finished\n");
+	C$Lab6.c$352$1$163 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:352: printf("\r'f' when finished\n");
 	mov	a,#___str_10
 	push	acc
 	mov	a,#(___str_10 >> 8)
@@ -3775,43 +3778,43 @@ _Pick_Heading_kd:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$Lab6.c$352$2$164 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:352: while(1)
+	C$Lab6.c$353$2$164 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:353: while(1)
 00112$:
-	C$Lab6.c$354$2$164 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:354: input = getchar();
+	C$Lab6.c$355$2$164 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:355: input = getchar();
 	lcall	_getchar
 	mov	r7,dpl
-	C$Lab6.c$355$2$164 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:355: if(input == 'u') heading_kd += 1;
+	C$Lab6.c$356$2$164 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:356: if(input == 'u') heading_kd += 1;
 	cjne	r7,#0x75,00102$
 	inc	_heading_kd
 00102$:
-	C$Lab6.c$356$2$164 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:356: if(input == 'd') heading_kd -= 1;
+	C$Lab6.c$357$2$164 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:357: if(input == 'd') heading_kd -= 1;
 	cjne	r7,#0x64,00104$
 	dec	_heading_kd
 00104$:
-	C$Lab6.c$357$2$164 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:357: if(input == 'f') return;
+	C$Lab6.c$358$2$164 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:358: if(input == 'f') return;
 	cjne	r7,#0x66,00106$
 	sjmp	00114$
 00106$:
-	C$Lab6.c$358$2$164 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:358: if(heading_kd >= 200) heading_kd = 200;
+	C$Lab6.c$359$2$164 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:359: if(heading_kd >= 200) heading_kd = 200;
 	mov	a,#0x100 - 0xC8
 	add	a,_heading_kd
 	jnc	00108$
 	mov	_heading_kd,#0xC8
 00108$:
-	C$Lab6.c$359$2$164 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:359: if(heading_kd <= 0) heading_kd = 0;
+	C$Lab6.c$360$2$164 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:360: if(heading_kd <= 0) heading_kd = 0;
 	mov	a,_heading_kd
 	jnz	00110$
 	mov	_heading_kd,a
 00110$:
-	C$Lab6.c$360$2$164 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:360: printf("\rDesired heading kd: %u\n", heading_kd);
+	C$Lab6.c$361$2$164 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:361: printf("\rDesired heading kd: %u\n", heading_kd);
 	mov	r6,_heading_kd
 	mov	r7,#0x00
 	push	ar6
@@ -3828,7 +3831,7 @@ _Pick_Heading_kd:
 	mov	sp,a
 	sjmp	00112$
 00114$:
-	C$Lab6.c$362$1$163 ==.
+	C$Lab6.c$363$1$163 ==.
 	XG$Pick_Heading_kd$0$0 ==.
 	ret
 ;------------------------------------------------------------
@@ -3837,18 +3840,18 @@ _Pick_Heading_kd:
 ;input                     Allocated to registers r7 
 ;------------------------------------------------------------
 	G$Set_Fan_Angle$0$0 ==.
-	C$Lab6.c$365$1$163 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:365: void Set_Fan_Angle(void)
+	C$Lab6.c$366$1$163 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:366: void Set_Fan_Angle(void)
 ;	-----------------------------------------
 ;	 function Set_Fan_Angle
 ;	-----------------------------------------
 _Set_Fan_Angle:
-	C$Lab6.c$368$1$166 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:368: PCA0CP1 = 0xFFFF - 2300;
+	C$Lab6.c$369$1$166 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:369: PCA0CP1 = 0xFFFF - 2300;
 	mov	((_PCA0CP1 >> 0) & 0xFF),#0x03
 	mov	((_PCA0CP1 >> 8) & 0xFF),#0xF7
-	C$Lab6.c$369$1$166 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:369: printf("\rAdjust fan angle. 'u' for up, 'd' for down, 'f' when finished.\n");
+	C$Lab6.c$370$1$166 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:370: printf("\rAdjust fan angle. 'u' for up, 'd' for down, 'f' when finished.\n");
 	mov	a,#___str_18
 	push	acc
 	mov	a,#(___str_18 >> 8)
@@ -3859,15 +3862,15 @@ _Set_Fan_Angle:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$Lab6.c$370$2$167 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:370: while(1)
+	C$Lab6.c$371$2$167 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:371: while(1)
 00112$:
-	C$Lab6.c$372$2$167 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:372: input = getchar();
+	C$Lab6.c$373$2$167 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:373: input = getchar();
 	lcall	_getchar
 	mov	r7,dpl
-	C$Lab6.c$373$2$167 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:373: if(input == 'u') PCA0CP1 -= 10;
+	C$Lab6.c$374$2$167 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:374: if(input == 'u') PCA0CP1 -= 10;
 	cjne	r7,#0x75,00102$
 	mov	a,((_PCA0CP1 >> 0) & 0xFF)
 	add	a,#0xF6
@@ -3876,8 +3879,8 @@ _Set_Fan_Angle:
 	addc	a,#0xFF
 	mov	((_PCA0CP1 >> 8) & 0xFF),a
 00102$:
-	C$Lab6.c$374$2$167 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:374: if(input == 'd') PCA0CP1 += 10;
+	C$Lab6.c$375$2$167 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:375: if(input == 'd') PCA0CP1 += 10;
 	cjne	r7,#0x64,00104$
 	mov	a,#0x0A
 	add	a,((_PCA0CP1 >> 0) & 0xFF)
@@ -3886,13 +3889,13 @@ _Set_Fan_Angle:
 	addc	a,((_PCA0CP1 >> 8) & 0xFF)
 	mov	((_PCA0CP1 >> 8) & 0xFF),a
 00104$:
-	C$Lab6.c$375$2$167 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:375: if(input == 'f') return;
+	C$Lab6.c$376$2$167 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:376: if(input == 'f') return;
 	cjne	r7,#0x66,00106$
 	sjmp	00114$
 00106$:
-	C$Lab6.c$376$2$167 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:376: if(PCA0CP1 > (0xFFFF - 2000)) PCA0CP1 = (0xFFFF - 2000);
+	C$Lab6.c$377$2$167 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:377: if(PCA0CP1 > (0xFFFF - 2000)) PCA0CP1 = (0xFFFF - 2000);
 	clr	c
 	mov	a,#0x2F
 	subb	a,((_PCA0CP1 >> 0) & 0xFF)
@@ -3902,8 +3905,8 @@ _Set_Fan_Angle:
 	mov	((_PCA0CP1 >> 0) & 0xFF),#0x2F
 	mov	((_PCA0CP1 >> 8) & 0xFF),#0xF8
 00108$:
-	C$Lab6.c$377$2$167 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:377: if(PCA0CP1 < (0xFFFF - 3500)) PCA0CP1 = (0xFFFF - 3500);
+	C$Lab6.c$378$2$167 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:378: if(PCA0CP1 < (0xFFFF - 3500)) PCA0CP1 = (0xFFFF - 3500);
 	clr	c
 	mov	a,((_PCA0CP1 >> 0) & 0xFF)
 	subb	a,#0x53
@@ -3913,8 +3916,8 @@ _Set_Fan_Angle:
 	mov	((_PCA0CP1 >> 0) & 0xFF),#0x53
 	mov	((_PCA0CP1 >> 8) & 0xFF),#0xF2
 00110$:
-	C$Lab6.c$378$2$167 ==.
-;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:378: printf("\rPW: %u\n", (0xFFFF - PCA0CP1));
+	C$Lab6.c$379$2$167 ==.
+;	C:\Users\rutmas\Documents\LITEC\LITEC\Lab 6\Lab 6 Code\Lab6.c:379: printf("\rPW: %u\n", (0xFFFF - PCA0CP1));
 	mov	a,#0xFF
 	clr	c
 	subb	a,((_PCA0CP1 >> 0) & 0xFF)
@@ -3936,7 +3939,7 @@ _Set_Fan_Angle:
 	mov	sp,a
 	sjmp	00112$
 00114$:
-	C$Lab6.c$380$1$166 ==.
+	C$Lab6.c$381$1$166 ==.
 	XG$Set_Fan_Angle$0$0 ==.
 	ret
 	.area CSEG    (CODE)

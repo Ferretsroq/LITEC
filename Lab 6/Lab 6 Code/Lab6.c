@@ -316,8 +316,9 @@ void Set_Desired_Heading(void)
 {
 	int temp_heading = 0;
 	range = read_ranger();
-	if(range > 100) range = 100;
+	if(range > 70) range = 70;
 	temp_heading = (init_heading) + ((50 - range)*(36));
+//	if(range >= 70) temp_heading = (init_heading) + 1800;
 	while(temp_heading >= 3600) temp_heading -= 3600;
 	while(temp_heading <= 0) temp_heading += 3600;
 	desired_heading = temp_heading;
